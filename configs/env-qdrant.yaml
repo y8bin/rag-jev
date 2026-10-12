@@ -1,0 +1,17 @@
+# Search the existing collection on QDRANT_BASE_URL using QDRANT_API_KEY.
+# QDRANT_COLLECTION selects the exact name; if unset, use the single non-test collection.
+# EMBEDDING_LOCAL_MODEL must match the model used to index the collection.
+qdrant_source: existing
+qdrant_mode: remote
+embedding_backend: local
+ce_backend: local
+jev_backend: http
+generation_backend: http
+judge_backend: http
+methods: [vector, ce_r, jev_r]
+top_k: 20
+top_n: 5
+cache_dir: .cache/env-qdrant
+apply_metadata_filters: false # Existing payload metadata has not been mapped/validated.
+max_output_tokens: 1000
+temperature: null

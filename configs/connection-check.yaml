@@ -1,0 +1,28 @@
+# Connectivity check with synthetic examples, NOT research evidence.
+# Uses real models/APIs and the Qdrant server configured in .env.
+# Model/API calls can incur costs; no thresholds are needed for these 3 methods.
+documents: data/connection-check/documents.jsonl
+chunks: data/connection-check/chunks.jsonl
+queries: examples/queries.jsonl
+index_dir: indexes/connection-check-v1
+index_backend: qdrant
+qdrant_mode: remote
+qdrant_collection: legal_rag_connection_check
+output_dir: results/connection-check
+cache_dir: .cache/connection-check
+embedding_backend: local
+ce_backend: local
+jev_backend: http
+generation_backend: http
+judge_backend: http
+top_k: 5
+top_n: 2
+methods: [vector, ce_r, jev_r]
+generate: true
+token_encoding: cl100k_base
+max_output_tokens: 1000
+temperature: null # omit for models with active reasoning
+concurrency: 4
+timeout_seconds: 60
+max_retries: 3
+seed: 20261009

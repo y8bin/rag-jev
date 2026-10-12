@@ -1,0 +1,129 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "doc_id": {
+      "minLength": 1,
+      "title": "Doc Id",
+      "type": "string"
+    },
+    "version_id": {
+      "minLength": 1,
+      "title": "Version Id",
+      "type": "string"
+    },
+    "group_id": {
+      "minLength": 1,
+      "title": "Group Id",
+      "type": "string"
+    },
+    "text": {
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    },
+    "title": {
+      "default": "",
+      "title": "Title",
+      "type": "string"
+    },
+    "doc_type": {
+      "default": "other",
+      "title": "Doc Type",
+      "type": "string"
+    },
+    "jurisdiction": {
+      "default": "",
+      "title": "Jurisdiction",
+      "type": "string"
+    },
+    "citation_key": {
+      "default": "",
+      "title": "Citation Key",
+      "type": "string"
+    },
+    "source_uri": {
+      "default": "",
+      "title": "Source Uri",
+      "type": "string"
+    },
+    "source_hash": {
+      "default": "",
+      "title": "Source Hash",
+      "type": "string"
+    },
+    "collected_at": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Collected At"
+    },
+    "effective_from": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Effective From"
+    },
+    "effective_to": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Effective To"
+    },
+    "chunk_id": {
+      "title": "Chunk Id",
+      "type": "string"
+    },
+    "start": {
+      "minimum": 0,
+      "title": "Start",
+      "type": "integer"
+    },
+    "end": {
+      "exclusiveMinimum": 0,
+      "title": "End",
+      "type": "integer"
+    },
+    "text_hash": {
+      "title": "Text Hash",
+      "type": "string"
+    },
+    "chunking_version": {
+      "default": "structure-v1",
+      "title": "Chunking Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "doc_id",
+    "version_id",
+    "group_id",
+    "text",
+    "chunk_id",
+    "start",
+    "end",
+    "text_hash"
+  ],
+  "title": "Chunk",
+  "type": "object"
+}

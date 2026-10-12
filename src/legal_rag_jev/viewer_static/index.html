@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jev 실험 뷰어</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="rail">
+    <div class="brand">
+      <strong>Jev 실험 뷰어</strong>
+    </div>
+    <a class="new-ask" href="#/ask" id="new-ask">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
+      새 질문
+    </a>
+    <div class="rail-scroll">
+      <section aria-labelledby="h-asks">
+        <h2 id="h-asks">탐색 기록</h2>
+        <nav id="asks"><div class="skeleton-list"><i></i><i></i></div></nav>
+      </section>
+      <section aria-labelledby="h-runs">
+        <h2 id="h-runs">실행 기록</h2>
+        <nav id="runs"><div class="skeleton-list"><i></i><i></i><i></i></div></nav>
+      </section>
+    </div>
+    <div class="rail-foot">
+      <a href="#/configs" id="configs-link">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 5h12M4 10h12M4 15h12"/><circle cx="7" cy="5" r="1.6"/><circle cx="13" cy="10" r="1.6"/><circle cx="9" cy="15" r="1.6"/></svg>
+        설정 비교
+      </a>
+      <button type="button" id="refresh" title="results 폴더와 설정을 다시 읽습니다">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10a6 6 0 1 1-1.8-4.3M16 3v4h-4"/></svg>
+        새로고침
+      </button>
+    </div>
+  </aside>
+  <main id="main" tabindex="-1"></main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+{
+  "$defs": {
+    "EvidenceUnit": {
+      "additionalProperties": false,
+      "properties": {
+        "unit_id": {
+          "title": "Unit Id",
+          "type": "string"
+        },
+        "chunk_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Chunk Ids",
+          "type": "array"
+        },
+        "doc_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Doc Id"
+        },
+        "version_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version Id"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        }
+      },
+      "required": [
+        "unit_id"
+      ],
+      "title": "EvidenceUnit",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "query_id": {
+      "minLength": 1,
+      "title": "Query Id",
+      "type": "string"
+    },
+    "group_id": {
+      "minLength": 1,
+      "title": "Group Id",
+      "type": "string"
+    },
+    "question": {
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "pilot",
+        "dev",
+        "test"
+      ],
+      "title": "Split",
+      "type": "string"
+    },
+    "answerable": {
+      "title": "Answerable",
+      "type": "boolean"
+    },
+    "as_of_date": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "As Of Date"
+    },
+    "jurisdiction": {
+      "default": "",
+      "title": "Jurisdiction",
+      "type": "string"
+    },
+    "task_type": {
+      "default": "legal_qa",
+      "title": "Task Type",
+      "type": "string"
+    },
+    "reference_answer": {
+      "default": "",
+      "title": "Reference Answer",
+      "type": "string"
+    },
+    "evidence_units": {
+      "items": {
+        "$ref": "#/$defs/EvidenceUnit"
+      },
+      "title": "Evidence Units",
+      "type": "array"
+    },
+    "sufficient_sets": {
+      "items": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "title": "Sufficient Sets",
+      "type": "array"
+    },
+    "relevance": {
+      "additionalProperties": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer"
+      },
+      "title": "Relevance",
+      "type": "object"
+    },
+    "annotation_version": {
+      "default": "v1",
+      "title": "Annotation Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "query_id",
+    "group_id",
+    "question",
+    "split",
+    "answerable"
+  ],
+  "title": "Query",
+  "type": "object"
+}

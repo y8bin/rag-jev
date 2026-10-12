@@ -1,0 +1,40 @@
+documents: data/processed/documents.jsonl
+chunks: data/processed/chunks.jsonl
+queries: data/processed/queries.jsonl
+index_dir: indexes/main
+index_backend: qdrant
+qdrant_mode: local # remote uses QDRANT_BASE_URL and optional QDRANT_API_KEY
+qdrant_collection: legal_rag
+output_dir: results
+cache_dir: .cache
+embedding_backend: local
+ce_backend: local
+jev_backend: http
+generation_backend: http
+judge_backend: http
+embedding_dimension: 512 # mock only; real dimension comes from embeddings
+chunk_max_chars: 1800
+embedding_batch_size: 32
+query_prefix: ''
+document_prefix: ''
+top_k: 20
+top_n: 5
+ce_threshold: null
+jev_threshold: null
+methods: [vector, ce_r, ce_fr, jev_r, jev_fr]
+jev_instruction: applicability # relevance for ablation
+token_budget: null
+token_encoding: cl100k_base
+max_output_tokens: 1000
+temperature: null # omit for reasoning models; set a number only if the model supports it
+timeout_seconds: 60
+max_retries: 3
+concurrency: 4
+ce_max_length: 512
+common_input_chars: null
+unknown_temporal_policy: exclude
+apply_metadata_filters: true
+generate: true
+seed: 20261009
+bootstrap_repetitions: 2000
+quality_delta: 0.02

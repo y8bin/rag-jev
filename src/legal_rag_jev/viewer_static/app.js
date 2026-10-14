@@ -165,7 +165,8 @@ function costLine(info) {
   if (mock) return { cls: "", text: `mock · 비용 없음${skipped}`, ok: true };
   const remote = Object.entries(info.backends || {}).filter(([, b]) => b === "http" || b === "openai").map(([k]) => ({ embedding: "임베딩", ce: "CE", jev: "Jev", generation: "생성" })[k]);
   const source = info.existing_collection ? " · .env의 Qdrant 기존 컬렉션 검색 · 효력·관할 필터 미적용" : "";
-  return { cls: "live", text: `${remote.length ? `${remote.join("·")} API 호출 · 비용 발생` : "로컬 모델"}${source}${skipped}`, ok: true };
+  const model = info.generation_model ? ` · ${info.generation_model}${info.generation_model_source === "process" ? " (프로세스 환경)" : ""}` : "";
+  return { cls: "live", text: `${remote.length ? `${remote.join("·")} API 호출 · 비용 발생` : "로컬 모델"}${model}${source}${skipped}`, ok: true };
 }
 
 function renderComposer(prefill) {

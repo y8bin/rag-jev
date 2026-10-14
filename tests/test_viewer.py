@@ -76,3 +76,117 @@ def test_asker_runs_exploration_question_and_logs_it_apart_from_runs(corpus, tmp
         asker.ask({"config": "../x.yaml", "question": "q"})
     with pytest.raises(ValueError):
         asker.ask({"config": "mock.yaml", "question": "  "})
+
+
+def test_model_and_key_edits_apply_to_next_ask_without_restart(corpus, tmp_path, monkeypatch):
+    import asyncio
+    import json
+    import os
+    import httpx
+    import yaml
+    from legal_rag_jev.index import build_index
+    from legal_rag_jev.providers import Providers
+    from legal_rag_jev.viewer import Asker
+
+    monkeypatch.delenv("OPENAI_MODEL", raising=False)
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    cfg, _, chunks, _ = corpus
+    async def build():
+        p = Providers(cfg)
+        try:
+            await build_index(cfg, chunks, p)
+        finally:
+            await p.close()
+    asyncio.run(build())
+    cfg = cfg.model_copy(update={"generation_backend": "openai", "methods": ["vector"]})
+    configs = tmp_path / "configs"
+    configs.mkdir()
+    config_path = configs / "test.yaml"
+    config_path.write_text(yaml.safe_dump(cfg.model_dump()))
+    original_yaml = config_path.read_bytes()
+    env_path = tmp_path / ".env"
+    env_path.write_text("OPENAI_MODEL=gpt-6.1-luna\nOPENAI_API_KEY=old-private-key\n")
+    requests = []
+    def handle(request):
+        body = json.loads(request.content)
+        requests.append((body["model"], request.headers["Authorization"]))
+        if body["model"] == "gpt-6.1-luna":
+            return httpx.Response(404, json={"error": {"message": "model does not exist", "code": "model_not_found"}})
+        content = json.loads(body["input"][0]["content"])
+        cid = content["evidence"][0]["chunk_id"]
+        answer = {"answer": "fourteen days", "rationale": "evidence", "claims": [
+            {"text": "fourteen days", "evidence_ids": [cid]}], "citations": [cid], "abstained": False}
+        return httpx.Response(200, json={"model": body["model"], "status": "completed", "output": [
+            {"type": "message", "role": "assistant", "content": [{"type": "output_text", "text": json.dumps(answer)}]}]})
+    original_init = Providers.__init__
+    clients = []
+    def init(self, cfg, client=None):
+        clients.append(self)
+        original_init(self, cfg, httpx.AsyncClient(transport=httpx.MockTransport(handle)))
+    monkeypatch.setattr(Providers, "__init__", init)
+    asker = Asker(tmp_path / "results", configs, str(env_path))
+    viewer = Viewer(tmp_path / "results", configs, str(env_path))
+    question = {"config": "test.yaml", "question": "Notice deadline days?", "jurisdiction": "KR", "as_of_date": "2025-06-01"}
+    first = asker.ask(question)
+    assert first["conditions"][0]["status"] == "failed"
+    assert viewer.configs_view()["configs"][0]["generation_model"] == "gpt-6.1-luna"
+    env_path.write_text("OPENAI_MODEL=gpt-6-luna\nOPENAI_API_KEY=new-private-key\n")
+    second = asker.ask(question)
+    assert second["conditions"][0]["answer"]["answer"] == "fourteen days"
+    assert requests == [("gpt-6.1-luna", "Bearer old-private-key"), ("gpt-6-luna", "Bearer new-private-key")]
+    assert len(clients) == 1  # Local model instances survive a remote model/key switch.
+    assert config_path.read_bytes() == original_yaml
+    entry = viewer.configs_view()["configs"][0]
+    assert entry["generation_model"] == "gpt-6-luna" and entry["generation_model_source"] == "env_file"
+    assert "new-private-key" not in json.dumps(entry) + asker.log.read_text()
+    assert "OPENAI_MODEL" not in os.environ and "OPENAI_API_KEY" not in os.environ
+    # Deleted file values must not survive in the running viewer.
+    env_path.write_text("OPENAI_API_KEY=new-private-key\n")
+    assert viewer.configs_view()["configs"][0]["generation_model"] is None
+    missing = asker.ask(question)
+    assert missing["conditions"][0]["status"] == "failed"
+    assert "Set OPENAI_MODEL" in missing["conditions"][0]["error"]
+
+
+def test_environment_scope_preserves_process_priority_and_isolates_file_values(tmp_path, monkeypatch):
+    import os
+    from legal_rag_jev.config import env, environment_file_scope
+    monkeypatch.setenv("OPENAI_MODEL", "process-model")
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    path = tmp_path / ".env"
+    path.write_text("OPENAI_MODEL=file-model\nOPENAI_API_KEY=private-file-key\n")
+    inherited = dict(os.environ)
+    with environment_file_scope(str(path), inherited):
+        assert env("OPENAI_MODEL") == "process-model"
+        assert env("OPENAI_API_KEY") == "private-file-key"
+    assert env("OPENAI_MODEL") == "process-model"
+    assert not env("OPENAI_API_KEY")
+    path.write_text("OPENAI_MODEL=changed-file-model\n")
+    with environment_file_scope(str(path), inherited):
+        assert env("OPENAI_MODEL") == "process-model"
+        assert not env("OPENAI_API_KEY")
+
+
+def test_viewer_reloads_local_models_when_env_revision_changes(corpus, tmp_path, monkeypatch):
+    import asyncio
+    from legal_rag_jev.config import environment_file_scope
+    from legal_rag_jev.viewer import Asker
+    from legal_rag_jev import providers
+    cfg, *_ = corpus
+    path = tmp_path / "config.yaml"
+    path.write_text("{}")
+    env_path = tmp_path / ".env"
+    class StubProviders:
+        def __init__(self, cfg): self.closed = False
+        async def close(self): self.closed = True
+    monkeypatch.setattr(providers, "Providers", StubProviders)
+    asker = Asker(tmp_path / "results", tmp_path, str(env_path))
+    async def check():
+        env_path.write_text("EMBEDDING_LOCAL_REVISION=first\n")
+        with environment_file_scope(str(env_path), {}):
+            first = await asker._providers_for(path, cfg)
+        env_path.write_text("EMBEDDING_LOCAL_REVISION=second\n")
+        with environment_file_scope(str(env_path), {}):
+            second = await asker._providers_for(path, cfg)
+        assert first is not second and first.closed
+    asyncio.run(check())

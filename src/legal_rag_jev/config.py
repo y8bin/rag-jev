@@ -1,16 +1,30 @@
 from __future__ import annotations
 
 import os
+from contextlib import contextmanager
+from contextvars import ContextVar
 from pathlib import Path
 from typing import Literal
 from urllib.parse import urlsplit
 
 import yaml
-from dotenv import load_dotenv
+from dotenv import dotenv_values, load_dotenv
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 METHODS = ("vector", "ce_r", "ce_fr", "jev_r", "jev_fr")
+_request_environment: ContextVar[dict[str, str] | None] = ContextVar("request_environment", default=None)
+
+
+@contextmanager
+def environment_file_scope(path: str, inherited: dict[str, str]):
+    """Reload viewer settings per request without injecting file values into os.environ."""
+    values = {k: v for k, v in dotenv_values(path).items() if v is not None}
+    token = _request_environment.set({**values, **inherited})
+    try:
+        yield
+    finally:
+        _request_environment.reset(token)
 
 
 class Config(BaseModel):
@@ -92,12 +106,14 @@ class Config(BaseModel):
 
     @classmethod
     def load(cls, path: str, env_file: str = ".env") -> "Config":
-        load_dotenv(env_file, override=False)
+        if _request_environment.get() is None:
+            load_dotenv(env_file, override=False)
         return cls.model_validate(yaml.safe_load(Path(path).read_text(encoding="utf-8")) or {})
 
 
 def env(name: str, required: bool = False, default: str = "") -> str:
-    value = os.getenv(name, default).strip()
+    scoped = _request_environment.get()
+    value = (scoped.get(name, default) if scoped is not None else os.getenv(name, default)).strip()
     if required and not value:
         raise ValueError(f"Set {name} in .env or the process environment")
     return value

@@ -4,6 +4,7 @@ from __future__ import annotations
 import asyncio
 import json
 import mimetypes
+import os
 import threading
 import uuid
 from datetime import datetime, timezone
@@ -14,7 +15,8 @@ from urllib.parse import parse_qs, urlsplit
 import yaml
 
 from .cache import Cache
-from .config import Config
+from .config import Config, env, environment_file_scope, provider_identity
+from .io import digest
 
 STATIC = Path(__file__).parent / "viewer_static"
 mimetypes.add_type("font/woff2", ".woff2")
@@ -99,8 +101,10 @@ def detail(rows: list[dict], metrics: dict | None = None) -> dict:
 
 
 class Viewer:
-    def __init__(self, results: Path, configs: Path):
+    def __init__(self, results: Path, configs: Path, env_file: str = ".env", inherited: dict | None = None):
         self.results, self.configs = results.resolve(), configs.resolve()
+        self.env_file = str(Path(env_file).resolve())
+        self.inherited = dict(os.environ) if inherited is None else inherited.copy()
         self.rows = _Rows()
 
     def _run_dir(self, rel: str) -> Path:
@@ -173,6 +177,10 @@ class Viewer:
         return detail(rows, metrics)
 
     def configs_view(self) -> dict:
+        with environment_file_scope(self.env_file, self.inherited):
+            return self._configs_view()
+
+    def _configs_view(self) -> dict:
         fields = {name: f.default if f.default_factory is None else f.default_factory()
                   for name, f in Config.model_fields.items()}
         out = []
@@ -186,6 +194,12 @@ class Viewer:
                 entry["backends"] = {k: getattr(cfg, k + "_backend") for k in ("embedding", "ce", "jev", "generation")}
                 entry["index_built"] = cfg.qdrant_source == "existing" or (Path(cfg.index_dir) / "manifest.json").is_file()
                 entry["existing_collection"] = cfg.qdrant_source == "existing"
+                if cfg.generate and cfg.generation_backend == "openai":
+                    try:
+                        entry["generation_model"] = provider_identity("generation", "openai")["model"]
+                        entry["generation_model_source"] = "process" if "OPENAI_MODEL" in self.inherited else "env_file"
+                    except ValueError:
+                        entry["generation_model"] = None
                 entry["skipped"] = [m for m in cfg.methods if m.endswith("fr") and getattr(cfg, m[:-3] + "_threshold") is None]
             except Exception as e:  # show invalid configs instead of hiding them
                 entry["error"] = str(e).splitlines()[0][:300]
@@ -202,12 +216,13 @@ class Asker:
     results/_explore/asks.jsonl, apart from experiment runs, and is never research evidence."""
 
     def __init__(self, results: Path, configs: Path, env_file: str):
-        self.configs, self.env_file = configs.resolve(), env_file
+        self.configs, self.env_file = configs.resolve(), str(Path(env_file).resolve())
+        self.inherited = dict(os.environ)
         self.log = results.resolve() / "_explore" / "asks.jsonl"
         self.rows = _Rows()
         self.loop = asyncio.new_event_loop()
         threading.Thread(target=self.loop.run_forever, daemon=True).start()
-        self._providers: dict[str, tuple[float, object]] = {}
+        self._providers: dict[str, tuple[str, object]] = {}
         self._lock: asyncio.Lock | None = None
 
     def _config(self, name: str) -> Path:
@@ -218,17 +233,27 @@ class Asker:
 
     async def _providers_for(self, path: Path, cfg: Config):
         from .providers import Providers
-        mtime = path.stat().st_mtime
+        # Remote credentials/models are read inside the request scope. Rebuild local
+        # models only when their configuration changes, not for a generator switch.
+        fingerprint = digest({"config": cfg.model_dump(), "local_settings": {name: env(name) for name in (
+            "EMBEDDING_LOCAL_MODEL", "EMBEDDING_LOCAL_REVISION", "CE_LOCAL_MODEL", "CE_LOCAL_REVISION",
+            "MODEL_DEVICE", "MODEL_CACHE_DIR", "HF_TOKEN")}})
         hit = self._providers.get(str(path))
-        if hit and hit[0] == mtime:
+        if hit and hit[0] == fingerprint:
             return hit[1]
         if hit:
             await hit[1].close()
         providers = Providers(cfg)
-        self._providers[str(path)] = (mtime, providers)
+        self._providers[str(path)] = (fingerprint, providers)
         return providers
 
     async def _ask(self, name: str, question: str, as_of: str | None, jurisdiction: str) -> dict:
+        self._lock = self._lock or asyncio.Lock()
+        async with self._lock:
+            with environment_file_scope(self.env_file, self.inherited):
+                return await self._ask_scoped(name, question, as_of, jurisdiction)
+
+    async def _ask_scoped(self, name: str, question: str, as_of: str | None, jurisdiction: str) -> dict:
         from .index import VectorIndex
         from .existing_index import ExistingVectorIndex
         from .pipeline import query_rows
@@ -245,16 +270,14 @@ class Asker:
         q = {"query_id": ask_id, "group_id": "explore", "question": question, "split": "dev", "answerable": True,
              "as_of_date": as_of or None, "jurisdiction": jurisdiction, "task_type": "exploration",
              "reference_answer": "", "evidence_units": [], "sufficient_sets": [], "relevance": {}}
-        self._lock = self._lock or asyncio.Lock()
-        async with self._lock:  # a local Qdrant store admits one open client at a time
-            providers = await self._providers_for(path, cfg)
-            index_type = ExistingVectorIndex if cfg.qdrant_source == "existing" else VectorIndex
-            with index_type(cfg, providers) as idx:
-                rows = await query_rows(cfg, idx, providers, q, conditions,
-                                        Cache(cfg.cache_dir, enabled=cfg.qdrant_source != "existing"), False, ask_id)
-                source = {"mode": cfg.qdrant_mode, "kind": cfg.qdrant_source,
-                          "collection": idx.collection, "collections": getattr(idx, "collections", [idx.collection]),
-                          "metadata_filters_applied": cfg.apply_metadata_filters}
+        providers = await self._providers_for(path, cfg)
+        index_type = ExistingVectorIndex if cfg.qdrant_source == "existing" else VectorIndex
+        with index_type(cfg, providers) as idx:
+            rows = await query_rows(cfg, idx, providers, q, conditions,
+                                    Cache(cfg.cache_dir, enabled=cfg.qdrant_source != "existing"), False, ask_id)
+            source = {"mode": cfg.qdrant_mode, "kind": cfg.qdrant_source,
+                      "collection": idx.collection, "collections": getattr(idx, "collections", [idx.collection]),
+                      "metadata_filters_applied": cfg.apply_metadata_filters}
         record = {"ask_id": ask_id, "asked_at": datetime.now(timezone.utc).isoformat(), "config": path.name,
                   "exploration": True, "research_valid": False, "skipped_conditions": skipped,
                   "backends": {k: getattr(cfg, k + "_backend") for k in ("embedding", "ce", "jev", "generation")},
@@ -298,7 +321,7 @@ class Asker:
 
 
 def serve(results: str, configs: str, host: str, port: int, env_file: str = ".env") -> None:
-    viewer = Viewer(Path(results), Path(configs))
+    viewer = Viewer(Path(results), Path(configs), env_file)
     asker = Asker(Path(results), Path(configs), env_file)
 
     class Handler(BaseHTTPRequestHandler):

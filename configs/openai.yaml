@@ -1,0 +1,24 @@
+# Official OpenAI Responses API. Set OPENAI_API_KEY and OPENAI_MODEL in .env.
+# smoke-generation needs only those settings; run/viewer also need the real corpus/index and retrieval providers.
+documents: data/processed/documents.jsonl
+chunks: data/processed/chunks.jsonl
+queries: data/processed/queries_pilot.jsonl
+index_dir: indexes/research_v1
+index_backend: qdrant
+qdrant_mode: local
+qdrant_source: managed
+qdrant_collection: legal_rag_research
+output_dir: results/openai-pilot
+cache_dir: .cache/research_v1
+embedding_backend: local
+ce_backend: local
+jev_backend: http
+generation_backend: openai
+judge_backend: openai # Optional; judge command requires OPENAI_JUDGE_MODEL.
+methods: [vector, ce_r, jev_r]
+generate: true
+top_k: 20
+top_n: 5
+max_output_tokens: 4096 # Includes reasoning tokens for reasoning models.
+temperature: null # Omit sampling settings unless the chosen model supports them.
+seed: 20261009

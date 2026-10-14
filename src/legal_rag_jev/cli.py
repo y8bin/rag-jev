@@ -34,6 +34,7 @@ def parser() -> argparse.ArgumentParser:
     s.add_argument("--reuse-pilot-in-dev", action="store_true", help="Move pilot-connected groups to dev; never assign them to test")
     sub.add_parser("build-index")
     sub.add_parser("smoke")
+    sub.add_parser("smoke-generation", help="Check generator with synthetic evidence; no corpus, index, or retrieval APIs needed")
     s = sub.add_parser("schemas"); s.add_argument("--output", default="schemas")
     s = sub.add_parser("lexical-pool"); s.add_argument("--split",choices=["pilot","dev","test"],default="dev"); s.add_argument("--top-k",type=int,default=20)
     s = sub.add_parser("retrieve"); s.add_argument("--split", choices=["pilot","dev","test"], default="dev")
@@ -72,6 +73,21 @@ async def collect_candidates(cfg: Config, split: str) -> Path:
         write_json(output / "manifest.json", {"mode": "candidate_annotation", "split": split,
                                              "note": "Annotation pool only; no method performance is computed"})
         return output
+    finally:
+        await providers.close()
+
+
+async def smoke_generation(cfg: Config) -> dict:
+    providers = Providers(cfg)
+    try:
+        q = {"question": "가상 규정에서 신청 기한은 며칠인가?", "as_of_date": None, "jurisdiction": ""}
+        chunks = [{"chunk_id": "SYNTHETIC-C1", "text": "연결 확인용 가상 규정: 신청 기한은 통지를 받은 날부터 14일이다."}]
+        result = await providers.generate(q, chunks)
+        allowed = {c["chunk_id"] for c in chunks}
+        cited = result.value["citations"] + [cid for claim in result.value["claims"] for cid in claim["evidence_ids"]]
+        return {"mode": "generation_connection_check", "research_valid": False,
+                "note": "Synthetic evidence only. Real providers can incur API costs; legal quality has not been evaluated.",
+                "answer": result.value, "invalid_citations": sorted(set(cited) - allowed), "trace": result.trace}
     finally:
         await providers.close()
 
@@ -158,6 +174,7 @@ async def execute(args) -> object:
         finally:
             await providers.close()
     if command == "smoke": return await smoke(cfg)
+    if command == "smoke-generation": return await smoke_generation(cfg)
     if command == "schemas":
         for model in (Document,Chunk,Query,Answer):
             write_json(Path(args.output)/(model.__name__.lower()+".schema.json"),model.model_json_schema())

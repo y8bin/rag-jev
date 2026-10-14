@@ -30,8 +30,8 @@ class Config(BaseModel):
     qdrant_collection: str = Field(default="legal_rag", pattern=r"^[A-Za-z0-9_-]{1,100}$")
     ce_backend: Literal["local", "http", "mock"] = "local"
     jev_backend: Literal["http", "mock"] = "http"
-    generation_backend: Literal["http", "mock"] = "http"
-    judge_backend: Literal["http", "mock"] = "http"
+    generation_backend: Literal["http", "openai", "mock"] = "http"
+    judge_backend: Literal["http", "openai", "mock"] = "http"
     embedding_dimension: int = Field(default=512, ge=8)
     chunk_max_chars: int = Field(default=1800, ge=30)
     embedding_batch_size: int = Field(default=32, ge=1)
@@ -119,8 +119,27 @@ def provider_identity(kind: str, backend: str) -> dict:
     if backend == "local":
         return {"backend": "local", "model": env(prefix + "_LOCAL_MODEL", True),
                 "revision": env(prefix + "_LOCAL_REVISION", True), "device": env("MODEL_DEVICE", default="cpu")}
+    if backend == "openai":
+        if kind not in ("generation", "judge"):
+            raise ValueError("OpenAI Responses backend supports generation and judge only")
+        # Never reuse a gateway model, endpoint, or credential for the official API.
+        model_env = "OPENAI_MODEL" if kind == "generation" else "OPENAI_JUDGE_MODEL"
+        return {"backend": "openai", "api": "responses", "model": env(model_env, True),
+                "base_url": "https://api.openai.com/v1", "organization": env("OPENAI_ORG_ID") or None,
+                "project": env("OPENAI_PROJECT_ID") or None}
     name = "CE_API_MODEL" if kind == "ce" else prefix + "_MODEL"
     return {"backend": "http", "model": env(name, True), "base_url": endpoint(prefix)}
+
+
+def provider_headers(kind: str, identity: dict) -> dict[str, str]:
+    if identity.get("backend") == "openai":
+        headers = {"Authorization": "Bearer " + env("OPENAI_API_KEY", True)}
+        for field, header in (("organization", "OpenAI-Organization"), ("project", "OpenAI-Project")):
+            if identity.get(field):
+                headers[header] = identity[field]
+        return headers
+    key = env(kind.upper() + "_API_KEY", required=kind == "jev")
+    return {"Authorization": "Bearer " + key} if key else {}
 
 
 def pricing() -> dict:
@@ -128,6 +147,9 @@ def pricing() -> dict:
                      "output": rate(prefix + "_OUTPUT_USD_PER_MILLION")}
               for kind, prefix in [("embedding", "EMBEDDING"), ("ce", "CE"), ("jev", "JEV"),
                                    ("generation", "GENERATION"), ("judge", "JUDGE")]}
+    for kind in ("generation", "judge"):
+        result[kind].update({"cached_input": rate(kind.upper() + "_CACHED_INPUT_USD_PER_MILLION"),
+                             "cache_write": rate(kind.upper() + "_CACHE_WRITE_USD_PER_MILLION")})
     result["local_usd_per_hour"] = rate("LOCAL_USD_PER_HOUR")
     result["qdrant_usd_per_hour"] = rate("QDRANT_USD_PER_HOUR")
     return result
@@ -136,9 +158,15 @@ def pricing() -> dict:
 def api_cost(kind: str, usage: dict) -> float | None:
     p = pricing()[kind]
     i, o = usage.get("input_tokens"), usage.get("output_tokens")
-    if i is None or o is None or p["input"] is None or (o and p["output"] is None):
+    if any(type(n) is not int or n < 0 for n in (i, o)) or p["input"] is None or (o and p["output"] is None):
         return None
-    return (i * p["input"] + o * (p["output"] or 0)) / 1_000_000
+    cached, written = usage.get("cached_input_tokens") or 0, usage.get("cache_write_tokens") or 0
+    if any(type(n) is not int or n < 0 for n in (cached, written)) or cached + written > i:
+        return None
+    if (cached and p.get("cached_input") is None) or (written and p.get("cache_write") is None):
+        return None
+    return ((i - cached - written) * p["input"] + cached * (p.get("cached_input") or 0)
+            + written * (p.get("cache_write") or 0) + o * (p["output"] or 0)) / 1_000_000
 
 
 def local_cost(ms: float) -> float | None:

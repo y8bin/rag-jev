@@ -1,7 +1,7 @@
 """Local structural checks, never a substitute for legal review or API evidence."""
 from pathlib import Path
 
-from .config import Config, pricing, provider_identity
+from .config import Config, pricing, provider_headers, provider_identity
 from .corpus import load_documents, load_queries, validate_dataset
 from .io import environment_manifest, file_hash, read_jsonl, write_json
 from .schema import Chunk
@@ -35,10 +35,17 @@ def readiness(cfg: Config, output: str | None = None) -> dict:
     for kind in kinds:
         backend = getattr(cfg, kind + "_backend")
         try:
-            provider_identity(kind, backend)
+            identity = provider_identity(kind, backend)
             checks["providers"][kind] = {"backend": backend, "identity_configured": True}
             if backend == "mock":
                 issues.append({"code": "synthetic_provider", "item": kind})
+            if backend == "openai":
+                try:
+                    provider_headers(kind, identity)
+                    checks["providers"][kind]["credentials_configured"] = True
+                except ValueError:
+                    checks["providers"][kind]["credentials_configured"] = False
+                    issues.append({"code": "provider_credentials_missing", "item": kind})
         except ValueError:
             checks["providers"][kind] = {"backend": backend, "identity_configured": False}
             issues.append({"code": "provider_identity_missing_or_invalid", "item": kind})
@@ -49,7 +56,7 @@ def readiness(cfg: Config, output: str | None = None) -> dict:
             backend = getattr(cfg, kind + "_backend")
             if backend == "local":
                 required.add(("local_usd_per_hour", None))
-            elif backend == "http":
+            elif backend in ("http", "openai"):
                 required.add((kind, "input"))
                 if kind == "generation": required.add((kind, "output"))
         missing = [f"{kind}.{field}" if field else kind for kind,field in sorted(required, key=str)

@@ -173,10 +173,13 @@ legal-rag --config configs/pilot.yaml chunk
 |---|---|
 | `JEV_API_KEY` | 필수. `JEV_MODEL`은 가능하면 `jev-latest` 대신 고정된 모델 이름 |
 | `GENERATION_BASE_URL`, `GENERATION_MODEL`, `GENERATION_API_KEY` | 답변 생성 단계(5-7)부터 필수 |
+| `OPENAI_API_KEY`, `OPENAI_MODEL` | OpenAI 직접 연결 시 위 생성 설정 대신 사용. YAML에 `generation_backend: openai` 선택 |
 | `*_INPUT_USD_PER_MILLION` 등 단가, `LOCAL_USD_PER_HOUR` | 비용 비교에 필수. 모르면 비워 두고(=미확인), 무료일 때만 `0` |
 | `MODEL_DEVICE` | 기본 `cpu`. GPU가 있으면 `cuda` 또는 `mps` |
 
 임베딩·CE 기본값은 연결을 시작하기 위한 후보입니다. 실제 코퍼스 언어·법률 분야 적합성과 입력 길이를 확인하고, 개발에서 선정한 모델의 정확한 revision을 고정해야 합니다. 원격 Qdrant 비용에는 별도 `QDRANT_USD_PER_HOUR`와 청구·자원 배분 근거가 필요합니다.
+
+OpenAI Platform을 사용할 때는 [OpenAI 설정 안내](OPENAI_SETUP.md)에 따라 키와 모델을 설정한다. `legal-rag --config configs/openai.yaml smoke-generation`은 원문·색인·Jev 없이 가상 근거로 생성 연결만 점검한다. 실제 파일럿·뷰어에 사용할 YAML에도 `generation_backend: openai`를 선택한다.
 
 ### 5-6. 소규모 연결 확인 (실행 담당)
 

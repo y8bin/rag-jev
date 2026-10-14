@@ -27,7 +27,9 @@ HTTP 임베딩·HTTP reranker만 쓰면 `local` 추가 의존성은 생략할 �
 | HTTP CE | `ce_backend: http` | `CE_BASE_URL/API_KEY/API_MODEL`, `POST /rerank`, 응답 `results: [{index, relevance_score}]` |
 | Jev | `jev_backend: http` | `JEV_BASE_URL/API_KEY/MODEL`, 공식 `/v1/systemone`의 named `noul` 질문·응답 |
 | 생성 | `generation_backend: http` | `GENERATION_BASE_URL/API_KEY/MODEL`, `POST /chat/completions` |
+| OpenAI 생성 | `generation_backend: openai` | `OPENAI_API_KEY`, `OPENAI_MODEL`, 공식 `POST /v1/responses`, strict JSON Schema |
 | 자동 judge | `judge_backend: http` | `JUDGE_BASE_URL/API_KEY/MODEL`, 생성과 같은 HTTP 계약 |
+| OpenAI judge | `judge_backend: openai` | `OPENAI_API_KEY`, `OPENAI_JUDGE_MODEL`, 생성과 같은 Responses 계약 |
 
 BASE_URL에는 최종 endpoint를 붙이지 않는다. 예를 들어 chat/embedding 서비스가 `/v1` 아래에 있으면 BASE_URL에 `/v1`을 포함한다. Jev BASE_URL은 기본적으로 `https://api.typesafe.ai`다. 응답 구조가 다른 서비스는 `providers.py`의 해당 adapter를 수정해야 한다. API 키가 필요 없는 로컬 서버는 키를 비워둘 수 있다. Jev 키는 필수다. 로컬 모델은 revision을 입력해야 로드되므로 시험 중 모델 변경을 막을 수 있다.
 
@@ -36,6 +38,8 @@ BASE_URL에는 최종 endpoint를 붙이지 않는다. 예를 들어 chat/embedd
 가격은 `*_INPUT_USD_PER_MILLION`, `*_OUTPUT_USD_PER_MILLION`, 로컬 비용은 `LOCAL_USD_PER_HOUR`, 원격 Qdrant 시간 배분 비용은 `QDRANT_USD_PER_HOUR`로 설정한다. 원격 검색에 로컬 모델 단가를 대신 쓰지 않는다. Qdrant 시간 환산은 청구액 자동 수집이 아니므로 Cloud·저장·네트워크·유지비의 포함 범위와 배분식을 별도 기록한다. 가격 또는 billable usage가 없으면 비용은 `null`이다. 무료 단가는 명시적으로 `0`을 입력한다. 실패한 요청의 청구 여부를 확인할 수 없는 재시도에는 총비용을 `null`로 남긴다. 실제 청구 기록 확인 없이 가격을 추측하지 않는다. 비용 완결성이 없는 데이터는 문턱값 최적화에 사용할 수 없고, 일부 확인된 비용만으로 평균·paired 비용 추론을 제공하지 않는다.
 
 실제 연구의 실행 순서·완료 근거·필요 자료는 [논문 검증 실행서](PAPER_VALIDATION_RUNBOOK.md)에 정리했다. `legal-rag --config configs/pilot.yaml readiness --output results/preparation/readiness.json`은 네트워크·모델 호출 없이 입력 파일·형식·설정 누락을 확인한다. 구조 확인 통과가 법률 검토나 연구 타당성을 보증하지 않는다.
+
+OpenAI Platform 연결 절차는 [OpenAI 설정 안내](OPENAI_SETUP.md)를 따른다. `.env`에 `OPENAI_API_KEY`, `OPENAI_MODEL`을 추가하고 `legal-rag --config configs/openai.yaml smoke-generation`으로 가상 근거 기반 답변 1회를 점검한다. 원문·색인·다른 API 없이 생성 연결만 확인하며 실제 비용이 발생할 수 있다. 기존 YAML에서는 `generation_backend: openai`를 선택해야 한다. 캐시 입력/쓰기 usage가 있으면 해당 `*_CACHED_INPUT_USD_PER_MILLION`, `*_CACHE_WRITE_USD_PER_MILLION` 단가도 필요하다.
 
 ## API 없는 예제 실행
 

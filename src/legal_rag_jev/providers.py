@@ -10,8 +10,9 @@ from dataclasses import dataclass, field
 import httpx
 import numpy as np
 
-from .config import Config, api_cost, env, local_cost, provider_identity
+from .config import Config, api_cost, env, local_cost, provider_headers, provider_identity
 from .io import digest
+from .openai_responses import parse_response, response_format
 from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, JUDGE_SYSTEM, RELEVANCE, evidence_text, generation_content, json_output_content, query_text
 from .schema import Answer
 
@@ -61,10 +62,21 @@ def http_error_detail(response: httpx.Response, api_key: str = "") -> str:
 
 
 def usage_of(kind: str, data: dict) -> dict:
-    u = data.get("usage", {})
+    u = data.get("usage") or {}
+    if not isinstance(u, dict):
+        u = {}
     if kind in ("generation", "judge"):
-        return {"input_tokens": u.get("prompt_tokens", u.get("input_tokens")),
-                "output_tokens": u.get("completion_tokens", u.get("output_tokens"))}
+        usage = {"input_tokens": u.get("prompt_tokens", u.get("input_tokens")),
+                 "output_tokens": u.get("completion_tokens", u.get("output_tokens"))}
+        inputs = u.get("input_tokens_details", u.get("prompt_tokens_details")) or {}
+        outputs = u.get("output_tokens_details", u.get("completion_tokens_details")) or {}
+        if isinstance(inputs, dict):
+            for source, target in (("cached_tokens", "cached_input_tokens"), ("cache_write_tokens", "cache_write_tokens")):
+                if source in inputs:
+                    usage[target] = inputs[source]
+        if isinstance(outputs, dict) and "reasoning_tokens" in outputs:
+            usage["reasoning_tokens"] = outputs["reasoning_tokens"]
+        return usage
     if kind == "embedding":
         return {"input_tokens": u.get("prompt_tokens", u.get("input_tokens")), "output_tokens": 0}
     return {"input_tokens": u.get("input_tokens"), "output_tokens": u.get("output_tokens", 0 if kind == "ce" else None)}
@@ -80,11 +92,12 @@ class Transport:
         await self.client.aclose()
 
     async def request(self, kind: str, identity: dict, path: str, body: dict | None = None) -> Result:
-        prefix = {"embedding": "EMBEDDING", "ce": "CE", "jev": "JEV", "generation": "GENERATION", "judge": "JUDGE"}[kind]
-        key = env(prefix + "_API_KEY")
-        headers = {"Authorization": "Bearer " + key} if key else {}
-        if kind == "jev" and not key:
-            raise ProviderError("Set JEV_API_KEY")
+        try:
+            headers = provider_headers(kind, identity)
+        except ValueError as e:
+            raise ProviderError(str(e), {"identity": identity, "request_count": 0, "retry_count": 0,
+                                        "cost_usd": None, "cost_complete": False}) from e
+        key = headers.get("Authorization", "").removeprefix("Bearer ")
         start = time.perf_counter()
         attempts = []
         async with self.semaphore:
@@ -92,7 +105,8 @@ class Transport:
                 try:
                     response = await self.client.request("POST" if body is not None else "GET",
                         identity["base_url"] + path, json=body, headers=headers)
-                    attempts.append({"status": response.status_code})
+                    attempts.append({"status": response.status_code,
+                                     **({"request_id": response.headers["x-request-id"]} if "x-request-id" in response.headers else {})})
                     if response.status_code >= 400:
                         retryable = response.status_code == 429 or response.status_code >= 500
                         if retryable and attempt < self.cfg.max_retries:
@@ -108,13 +122,17 @@ class Transport:
                         data = response.json()
                     except (ValueError, TypeError) as e:
                         raise ProviderError(f"{kind}: response is not JSON") from e
+                    if not isinstance(data, dict):
+                        raise ProviderError(f"{kind}: response must be a JSON object")
                     usage = usage_of(kind, data)
                     # A preceding failed request might have been billed. Never invent its usage.
                     cost = api_cost(kind, usage) if len(attempts) == 1 else None
                     return Result(data, {"latency_ms": (time.perf_counter() - start) * 1000,
                         "attempts": attempts, "request_count": len(attempts), "retry_count": len(attempts) - 1,
                         "usage": usage, "cost_usd": cost, "cost_complete": cost is not None,
-                        "returned_model": data.get("model"), "identity": identity, "cached": False})
+                        "returned_model": data.get("model"), "identity": identity, "cached": False,
+                        **({"response_id": data.get("id"), "response_status": data.get("status"),
+                            "service_tier": data.get("service_tier")} if identity.get("backend") == "openai" else {})})
                 except httpx.TransportError:
                     attempts.append({"error": "transport_error"})
                     if attempt < self.cfg.max_retries:
@@ -294,6 +312,19 @@ class Providers:
 
     async def chat(self, kind: str, system: str, content: dict) -> Result:
         identity = self.identity(kind)
+        if identity["backend"] == "openai":
+            body = {"model": identity["model"], "instructions": system,
+                    "input": [{"role": "user", "content": json.dumps(json_output_content(content), ensure_ascii=False)}],
+                    "max_output_tokens": self.cfg.max_output_tokens,
+                    "text": {"format": response_format(kind)}, "store": False}
+            if self.cfg.temperature is not None:
+                body["temperature"] = self.cfg.temperature
+            result = await self.transport.request(kind, identity, "/responses", body)
+            try:
+                result.value = parse_response(kind, result.value)
+            except ValueError as e:
+                raise ProviderError(str(e), result.trace) from e
+            return result
         body = {"model": identity["model"],
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(json_output_content(content), ensure_ascii=False)}],
             "max_tokens": self.cfg.max_output_tokens,

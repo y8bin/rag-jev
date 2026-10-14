@@ -13,8 +13,8 @@ cache_dir: .cache/connection-check
 embedding_backend: local
 ce_backend: local
 jev_backend: http
-generation_backend: http
-judge_backend: http
+generation_backend: openai
+judge_backend: openai
 top_k: 5
 top_n: 2
 methods: [vector, ce_r, jev_r]

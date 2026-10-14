@@ -26,12 +26,13 @@ class Config(BaseModel):
     qdrant_mode: Literal["local", "remote"] = "local"
     qdrant_source: Literal["managed", "existing"] = "managed"
     qdrant_existing_collection: str | None = None
+    qdrant_existing_collections: list[str] = Field(default_factory=list)
     qdrant_vector_name: str | None = None
     qdrant_collection: str = Field(default="legal_rag", pattern=r"^[A-Za-z0-9_-]{1,100}$")
     ce_backend: Literal["local", "http", "mock"] = "local"
     jev_backend: Literal["http", "mock"] = "http"
-    generation_backend: Literal["http", "openai", "mock"] = "http"
-    judge_backend: Literal["http", "openai", "mock"] = "http"
+    generation_backend: Literal["openai", "mock"] = "openai"
+    judge_backend: Literal["openai", "mock"] = "openai"
     embedding_dimension: int = Field(default=512, ge=8)
     chunk_max_chars: int = Field(default=1800, ge=30)
     embedding_batch_size: int = Field(default=32, ge=1)
@@ -71,6 +72,14 @@ class Config(BaseModel):
 
     @model_validator(mode="after")
     def valid_methods(self):
+        self.qdrant_existing_collections = [name.strip() for name in self.qdrant_existing_collections]
+        if self.qdrant_existing_collections:
+            if self.qdrant_existing_collection:
+                raise ValueError("Set qdrant_existing_collections or qdrant_existing_collection, not both")
+            if any(not name or ',' in name for name in self.qdrant_existing_collections) or len(set(self.qdrant_existing_collections)) != len(self.qdrant_existing_collections):
+                raise ValueError("qdrant_existing_collections must contain unique nonempty collection names")
+            if self.qdrant_source != "existing":
+                raise ValueError("qdrant_existing_collections requires qdrant_source: existing")
         if self.qdrant_source == "existing" and self.qdrant_mode != "remote":
             raise ValueError("Existing collections require qdrant_mode: remote")
         if self.qdrant_source == "existing" and self.apply_metadata_filters:
@@ -116,13 +125,14 @@ def provider_identity(kind: str, backend: str) -> dict:
     prefix = {"embedding": "EMBEDDING", "ce": "CE", "jev": "JEV", "generation": "GENERATION", "judge": "JUDGE"}[kind]
     if backend == "mock":
         return {"backend": "mock", "model": f"demo-{kind}-v1", "research_valid": False}
+    if kind in ("generation", "judge") and backend != "openai":
+        raise ValueError("Generation and judge require the OpenAI Responses backend")
     if backend == "local":
         return {"backend": "local", "model": env(prefix + "_LOCAL_MODEL", True),
                 "revision": env(prefix + "_LOCAL_REVISION", True), "device": env("MODEL_DEVICE", default="cpu")}
     if backend == "openai":
         if kind not in ("generation", "judge"):
             raise ValueError("OpenAI Responses backend supports generation and judge only")
-        # Never reuse a gateway model, endpoint, or credential for the official API.
         model_env = "OPENAI_MODEL" if kind == "generation" else "OPENAI_JUDGE_MODEL"
         return {"backend": "openai", "api": "responses", "model": env(model_env, True),
                 "base_url": "https://api.openai.com/v1", "organization": env("OPENAI_ORG_ID") or None,

@@ -313,7 +313,7 @@ function renderComparison(d, opts = {}) {
     ["답변 가능", q.answerable === false ? "아니오" : "예"],
     ["충분한 근거 집합", (q.sufficient_sets || []).length ? q.sufficient_sets.map((s) => `{${s.join(", ")}}`).join(" 또는 ") : "없음"],
   ] : [["기준일", q.as_of_date || "지정 안 함"], ["관할", q.jurisdiction || "전체"], ["설정", d.config],
-    ...(d.source ? [["컬렉션", d.source.collection], ["효력·관할 필터", d.source.metadata_filters_applied ? "적용" : "미적용"]] : []),
+    ...(d.source ? [["컬렉션", (d.source.collections || [d.source.collection]).join(", ")], ["효력·관할 필터", d.source.metadata_filters_applied ? "적용" : "미적용"]] : []),
     ["기록", d.ask_id], ["시각", when(d.asked_at)]];
   const head = `<header class="qhead">
     ${opts.meta ? "" : `<p class="question">${esc(q.question)}</p>`}

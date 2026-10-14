@@ -26,18 +26,10 @@ def evidence_text(c: dict, max_chars: int | None = None) -> str:
     body = c["text"] if max_chars is None else c["text"][:max_chars]
     return json.dumps({k: c.get(k) for k in ("title", "doc_type", "jurisdiction", "citation_key", "effective_from", "effective_to")}
                       | {k: c[k] for k in ("law_name", "article", "article_title", "paragraph", "chunk_level",
-                                          "part", "n_parts", "version_conflict") if k in c}
+                                          "part", "n_parts", "version_conflict", "qdrant_collection", "source_chunk_id") if k in c}
                       | {"text": body}, ensure_ascii=False, sort_keys=True)
 
 
-def json_output_content(content: dict) -> dict:
-    # Some gateways move system messages into Responses instructions, outside
-    # the input checked by JSON mode. Keep the instruction in user input too.
-    return {**content, "output_instruction": "시스템 지침의 스키마에 맞는 JSON 객체(json)만 반환한다."}
-
-
 def generation_content(q: dict, chunks: list[dict], max_chars: int | None) -> dict:
-    # Include the instruction here so context budgets and cache keys describe
-    # the same content sent to the generator.
-    return json_output_content({"question": json.loads(query_text(q)), "evidence": [
-        {"chunk_id": c["chunk_id"], "content": json.loads(evidence_text(c, max_chars))} for c in chunks]})
+    return {"question": json.loads(query_text(q)), "evidence": [
+        {"chunk_id": c["chunk_id"], "content": json.loads(evidence_text(c, max_chars))} for c in chunks]}

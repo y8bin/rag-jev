@@ -159,13 +159,13 @@ cp .env.example .env
 | 로컬 임베딩 | `EMBEDDING_LOCAL_MODEL`, `EMBEDDING_LOCAL_REVISION` |
 | 로컬 CE | `CE_LOCAL_MODEL`, `CE_LOCAL_REVISION` |
 | Jev | `JEV_BASE_URL`, `JEV_API_KEY`, `JEV_MODEL` |
-| 생성 | `GENERATION_BASE_URL`, 서비스에 필요한 키, `GENERATION_MODEL` |
+| 생성 | `OPENAI_API_KEY`, `OPENAI_MODEL` (OpenAI Responses API) |
 | 비용 평가 | Jev·생성 입력/출력 단가, `LOCAL_USD_PER_HOUR`, remote이면 `QDRANT_USD_PER_HOUR` |
 | 실행 장치 | `MODEL_DEVICE` 및 모델 다운로드·메모리 여건 |
 
 `BAAI/bge-m3`는 `.env.example`의 임베딩 후보이며 실제 모델 선정이 끝났다는 의미는 아니다. 모델 revision은 정확한 값을 고정한다. Hugging Face 접근 제한이 있는 모델이면 접근 권한과 `HF_TOKEN`도 필요하다.
 
-HTTP 임베딩·CE를 사용할 경우 YAML의 해당 backend를 `http`로 바꾸고 각각 `EMBEDDING_BASE_URL/API_KEY/MODEL`, `CE_BASE_URL/API_KEY/API_MODEL`을 설정한다. 현재 adapter는 `/embeddings`, `/rerank`, `/chat/completions` 응답 형식을 기대한다. BASE_URL에 최종 endpoint를 중복해서 붙이지 않는다.
+HTTP 임베딩·CE를 사용할 경우 YAML의 해당 backend를 `http`로 바꾸고 각각 `EMBEDDING_BASE_URL/API_KEY/MODEL`, `CE_BASE_URL/API_KEY/API_MODEL`을 설정한다. adapter는 `/embeddings`, `/rerank` 응답 형식을 기대한다. BASE_URL에 최종 endpoint를 중복해서 붙이지 않는다. 생성·자동 judge는 OpenAI Responses API만 사용하며 자동 평가에는 `OPENAI_JUDGE_MODEL`을 별도로 지정한다.
 
 단가가 없거나 응답 usage가 없으면 비용은 `null`이다. 로컬 Qdrant 검색 비용도 포함하므로 HTTP 모델만 사용하더라도 총비용 평가에는 로컬 비용 기준이 필요하다. 무료인 경우에만 명시적으로 0을 사용한다. 재시도 청구가 불명확한 경우도 비용이 누락될 수 있다. **`tune`은 완전한 비용과 사람 답변 판정이 없으면 진행하지 않는다.**
 

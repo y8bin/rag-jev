@@ -10,8 +10,8 @@ cache_dir: .cache
 embedding_backend: local
 ce_backend: local
 jev_backend: http
-generation_backend: http
-judge_backend: http
+generation_backend: openai
+judge_backend: openai
 embedding_dimension: 512 # mock only; real dimension comes from embeddings
 chunk_max_chars: 1800
 embedding_batch_size: 32

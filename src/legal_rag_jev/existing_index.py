@@ -1,4 +1,4 @@
-"""Read-only search of an existing Qdrant collection for viewer exploration."""
+"""Read-only search of existing Qdrant collections for viewer exploration."""
 from __future__ import annotations
 
 import time
@@ -6,9 +6,10 @@ from pathlib import Path
 
 from qdrant_client import models
 
-from .config import env, endpoint, local_cost
+from .config import env, endpoint, search_cost
 from .index import open_client, unit_vectors
 from .io import digest
+from .providers import ProviderError
 
 
 def existing_chunk(point, collection: str) -> dict:
@@ -49,33 +50,54 @@ class ExistingVectorIndex:
         self.cfg, self.providers = cfg, providers
         self.client = open_client(cfg, Path(cfg.index_dir))
         try:
-            name = cfg.qdrant_existing_collection or env("QDRANT_COLLECTION")
-            if not name:
+            configured = cfg.qdrant_existing_collection or env("QDRANT_COLLECTION")
+            names = cfg.qdrant_existing_collections or ([name.strip() for name in configured.split(",")] if configured else [])
+            if not names:
                 names = [c.name for c in self.client.get_collections().collections
                          if not c.name.startswith(("legal_rag_demo", "legal_rag_connection_check"))]
                 if len(names) != 1:
-                    raise ValueError("Set QDRANT_COLLECTION in .env to the collection to search. "
+                    raise ValueError("Set QDRANT_COLLECTION in .env to comma-separated collections to search. "
                                      f"Available non-test collections: {', '.join(sorted(names)) or '(none)'}")
-                name = names[0]
-            self.collection = name
-            info = self.client.get_collection(name)
-            vectors = info.config.params.vectors
-            self.vector_name = cfg.qdrant_vector_name or env("QDRANT_VECTOR_NAME") or None
-            if isinstance(vectors, dict):
-                if self.vector_name is None and len(vectors) == 1:
-                    self.vector_name = next(iter(vectors))
-                if self.vector_name not in vectors:
-                    raise ValueError(f"Set QDRANT_VECTOR_NAME; available dense vectors: {', '.join(vectors)}")
-                params = vectors[self.vector_name]
-            else:
-                if self.vector_name:
-                    raise ValueError("QDRANT_VECTOR_NAME was set but this collection uses an unnamed vector")
-                params = vectors
-            if params is None or params.distance not in (models.Distance.COSINE, models.Distance.DOT):
-                raise ValueError("Existing collection must use a dense Cosine or Dot vector")
-            self.manifest = {"index_version": digest({"server": endpoint("QDRANT"), "collection": name,
-                "vector": self.vector_name, "embedding": providers.identity("embedding")}),
-                "collection": name, "dimension": params.size, "count": info.points_count,
+            if any(not name for name in names) or len(set(names)) != len(names):
+                raise ValueError("QDRANT_COLLECTION must contain unique nonempty comma-separated names")
+            # Canonical order also resolves equal scores independently of env/YAML ordering.
+            self.collections = sorted(names)
+            self.collection = self.collections[0] if len(self.collections) == 1 else None
+            self.vector_names = {}
+            specs = {}
+            selected_vector = cfg.qdrant_vector_name or env("QDRANT_VECTOR_NAME") or None
+            for name in self.collections:
+                try:
+                    info = self.client.get_collection(name)
+                except Exception as e:
+                    raise ValueError(f"Could not read Qdrant collection '{name}'; check its name, access, and server connection") from e
+                vectors = info.config.params.vectors
+                vector_name = selected_vector
+                if isinstance(vectors, dict):
+                    if vector_name is None and len(vectors) == 1:
+                        vector_name = next(iter(vectors))
+                    if vector_name not in vectors:
+                        raise ValueError(f"Set QDRANT_VECTOR_NAME for '{name}'; available dense vectors: {', '.join(vectors)}")
+                    params = vectors[vector_name]
+                else:
+                    if vector_name:
+                        raise ValueError(f"QDRANT_VECTOR_NAME was set but collection '{name}' uses an unnamed vector")
+                    params = vectors
+                if params is None or params.distance not in (models.Distance.COSINE, models.Distance.DOT):
+                    raise ValueError(f"Existing collection '{name}' must use a dense Cosine or Dot vector")
+                self.vector_names[name] = vector_name
+                specs[name] = {"vector": vector_name, "dimension": params.size,
+                               "distance": params.distance.value, "count": info.points_count}
+            if len({(spec["dimension"], spec["distance"]) for spec in specs.values()}) != 1:
+                raise ValueError("All selected collections must use the same dimension and distance; index them with the same embedding model")
+            self.vector_name = self.vector_names[self.collections[0]] if self.collection else None
+            first = specs[self.collections[0]]
+            self.manifest = {"index_version": digest({"server": endpoint("QDRANT"),
+                "collections": {name: {k: v for k, v in spec.items() if k != "count"} for name, spec in specs.items()},
+                "embedding": providers.identity("embedding"), "merge": "global_score_top_k_v1"}),
+                "collection": self.collection, "collections": self.collections, "collection_specs": specs,
+                "dimension": first["dimension"],
+                "count": sum(spec["count"] for spec in specs.values()) if all(spec["count"] is not None for spec in specs.values()) else None,
                 "research_valid": False, "source": "existing"}
         except BaseException:
             self.close()
@@ -100,14 +122,29 @@ class ExistingVectorIndex:
             raise ValueError(f"Query embedding dimension {vector.shape[1]} differs from collection dimension "
                              f"{self.manifest['dimension']}; use the embedding model that indexed this collection")
         search_start = time.perf_counter()
-        hits = self.client.query_points(self.collection, query=vector[0].tolist(), using=self.vector_name,
-            limit=self.cfg.top_k, with_payload=True, with_vectors=False,
-            search_params=models.SearchParams(exact=True)).points
-        items = sorted(hits, key=lambda p: (-p.score, str(p.id)))
-        candidates = [dict(existing_chunk(p, self.collection), vector_score=float(p.score), vector_rank=i + 1)
-                      for i, p in enumerate(items)]
+        hits, per_collection = [], {}
+        for name in self.collections:
+            collection_start = time.perf_counter()
+            # K per collection is sufficient to form the global K by score.
+            # A failed collection aborts the request instead of silently reducing the corpus.
+            try:
+                points = self.client.query_points(name, query=vector[0].tolist(), using=self.vector_names[name],
+                    limit=self.cfg.top_k, with_payload=True, with_vectors=False,
+                    search_params=models.SearchParams(exact=True)).points
+            except Exception as e:
+                raise ProviderError(f"Qdrant search failed for collection '{name}'; no partial candidate pool is used",
+                    {"latency_ms": (time.perf_counter() - start) * 1000, "embedding": embedded.trace,
+                     "collections": self.collections, "failed_collection": name, "per_collection": per_collection,
+                     "search_cost_usd": None, "cost_usd": None, "cached": False}) from e
+            per_collection[name] = {"returned_count": len(points),
+                                    "search_ms": (time.perf_counter() - collection_start) * 1000}
+            hits.extend((name, p) for p in points)
+        items = sorted(hits, key=lambda item: (-item[1].score, item[0], str(item[1].id)))[:self.cfg.top_k]
+        candidates = [dict(existing_chunk(p, name), vector_score=float(p.score), vector_rank=i + 1)
+                      for i, (name, p) in enumerate(items)]
         ms = (time.perf_counter() - search_start) * 1000
         return {"candidates": candidates, "index_version": self.manifest["index_version"],
                 "eligible_count": None, "trace": {"latency_ms": (time.perf_counter()-start)*1000,
-                "search_ms": ms, "embedding": embedded.trace, "search_cost_usd": local_cost(ms),
-                "cached": False, "collection": self.collection, "metadata_filters_applied": False}}
+                "search_ms": ms, "embedding": embedded.trace, "search_cost_usd": search_cost(ms, self.cfg.qdrant_mode),
+                "cached": False, "collection": self.collection, "collections": self.collections,
+                "per_collection": per_collection, "merge": "global_score_top_k_v1", "metadata_filters_applied": False}}

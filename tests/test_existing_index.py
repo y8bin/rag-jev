@@ -10,7 +10,7 @@ from qdrant_client import QdrantClient, models
 
 from legal_rag_jev.config import Config
 from legal_rag_jev.existing_index import ExistingVectorIndex, existing_chunk
-from legal_rag_jev.providers import Providers, Result
+from legal_rag_jev.providers import ProviderError, Providers, Result
 from legal_rag_jev.viewer import Asker, Viewer
 
 
@@ -34,6 +34,8 @@ def existing_server(monkeypatch):
         if parts == ["collections"]:
             result = server.get_collections().model_dump(mode="json")
         elif len(parts) == 2 and request.method == "GET":
+            if not server.collection_exists(parts[1]):
+                return httpx.Response(404, json={"status": {"error": "Collection not found"}})
             result = server.get_collection(parts[1]).model_dump(mode="json")
         elif parts[2:] == ["points", "query"]:
             query = body["query"]
@@ -223,3 +225,179 @@ def test_viewer_existing_collection_logs_source_and_refetches_live_changes(exist
     assert asker.get(second["ask_id"])["source"]["collection"] == "laws"
     assert viewer.runs()["runs"] == []
     assert not Path(cfg.cache_dir).exists()
+
+
+def search_existing(cfg):
+    async def check():
+        p = Providers(cfg)
+        async def embed(texts, query=False):
+            assert len(texts) == 1 and query
+            return Result(np.array([[1.0] + [0.0]*7]), {"latency_ms": 0.0, "cost_usd": 0.0})
+        p.embed = embed
+        try:
+            with ExistingVectorIndex(cfg, p) as idx:
+                return await idx.search({"question": "test"}), idx.manifest
+        finally:
+            await p.close()
+    return asyncio.run(check())
+
+
+def test_multi_collection_global_top_k_and_unique_citations(existing_server, tmp_path, monkeypatch):
+    server, requests = existing_server
+    add_collection(server, "legal_article", text="article")
+    add_collection(server, "legal_as_is", named=True, text="paragraph")
+    server.upsert("legal_article", [models.PointStruct(id=2, vector=[.8, .6] + [0.0]*6, payload={"text": "lower score"})])
+    monkeypatch.setenv("QDRANT_COLLECTION", " legal_as_is , legal_article ")
+    monkeypatch.setenv("QDRANT_USD_PER_HOUR", "2")
+    monkeypatch.setenv("LOCAL_USD_PER_HOUR", "999")
+    result, manifest = search_existing(config(tmp_path))
+    assert [c["qdrant_collection"] for c in result["candidates"]] == ["legal_article", "legal_as_is"]
+    assert [c["vector_rank"] for c in result["candidates"]] == [1, 2]
+    assert len({c["chunk_id"] for c in result["candidates"]}) == 2  # Same point ID in two collections.
+    assert manifest["collections"] == ["legal_article", "legal_as_is"] and manifest["count"] == 3
+    assert result["trace"]["per_collection"]["legal_article"]["returned_count"] == 2
+    assert result["trace"]["search_cost_usd"] == pytest.approx(result["trace"]["search_ms"] / 3_600_000 * 2)
+    assert manifest["collection_specs"]["legal_as_is"]["vector"] == "dense"
+    assert len([r for r in requests if r.url.path.endswith("/query")]) == 2
+    assert not any(r.method != "GET" and not r.url.path.endswith("/query") for r in requests)
+    monkeypatch.setenv("QDRANT_COLLECTION", "legal_article,legal_as_is")
+    again, again_manifest = search_existing(config(tmp_path))
+    assert manifest["index_version"] == again_manifest["index_version"]
+    assert [c["chunk_id"] for c in result["candidates"]] == [c["chunk_id"] for c in again["candidates"]]
+
+
+def test_multi_collection_merges_scores_with_global_limit(existing_server, tmp_path, monkeypatch):
+    server, _ = existing_server
+    add_collection(server, "legal_article", text="article")
+    add_collection(server, "legal_as_is", text="paragraph")
+    server.upsert("legal_as_is", [models.PointStruct(id=1, vector=[.9, .435889894] + [0.0]*6, payload={"text": "paragraph"})])
+    server.upsert("legal_article", [models.PointStruct(id=2, vector=[.8, .6] + [0.0]*6, payload={"text": "lower"})])
+    monkeypatch.setenv("QDRANT_COLLECTION", "legal_as_is,legal_article")
+    result, _ = search_existing(config(tmp_path))
+    assert [c["text"] for c in result["candidates"]] == ["article", "paragraph"]
+    assert [c["vector_score"] for c in result["candidates"]] == pytest.approx([1, .9])
+
+
+def test_collection_yaml_list_overrides_env_and_changes_identity(existing_server, tmp_path, monkeypatch):
+    server, _ = existing_server
+    for name in ("legal_article", "legal_as_is", "other"):
+        add_collection(server, name)
+    monkeypatch.setenv("QDRANT_COLLECTION", "other")
+    _, one = search_existing(config(tmp_path, qdrant_existing_collection="legal_article"))
+    _, both = search_existing(config(tmp_path, qdrant_existing_collections=["legal_as_is", "legal_article"]))
+    assert both["collections"] == ["legal_article", "legal_as_is"]
+    assert one["index_version"] != both["index_version"]
+
+
+@pytest.mark.parametrize("value", ["legal_article,", ",legal_article", "legal_article,,legal_as_is", "legal_article,legal_article"])
+def test_invalid_collection_env_is_rejected_before_queries(existing_server, tmp_path, monkeypatch, value):
+    _, requests = existing_server
+    monkeypatch.setenv("QDRANT_COLLECTION", value)
+    with pytest.raises(ValueError, match="unique nonempty"):
+        search_existing(config(tmp_path))
+    assert not any(r.url.path.endswith("/query") for r in requests)
+
+
+@pytest.mark.parametrize("names", [[""], ["legal_article", "legal_article"], ["legal_article,legal_as_is"]])
+def test_invalid_collection_yaml_is_rejected(tmp_path, names):
+    with pytest.raises(ValueError, match="unique nonempty"):
+        config(tmp_path, qdrant_existing_collections=names)
+
+
+def test_conflicting_collection_yaml_is_rejected(tmp_path):
+    with pytest.raises(ValueError, match="not both"):
+        config(tmp_path, qdrant_existing_collection="legal_article", qdrant_existing_collections=["legal_as_is"])
+
+
+@pytest.mark.parametrize("dimension,distance", [(12, models.Distance.COSINE), (8, models.Distance.DOT)])
+def test_incompatible_collections_fail_before_query(existing_server, tmp_path, monkeypatch, dimension, distance):
+    server, requests = existing_server
+    add_collection(server, "legal_article")
+    server.create_collection("legal_as_is", vectors_config=models.VectorParams(size=dimension, distance=distance))
+    monkeypatch.setenv("QDRANT_COLLECTION", "legal_article,legal_as_is")
+    with pytest.raises(ValueError, match="same dimension and distance"):
+        search_existing(config(tmp_path))
+    assert not any(r.url.path.endswith("/query") for r in requests)
+
+
+def test_missing_selected_collection_fails_whole_request(existing_server, tmp_path, monkeypatch):
+    server, requests = existing_server
+    add_collection(server, "legal_article")
+    monkeypatch.setenv("QDRANT_COLLECTION", "legal_article,legal_as_is")
+    with pytest.raises(ValueError, match="Could not read.*legal_as_is"):
+        search_existing(config(tmp_path))
+    assert not any(r.url.path.endswith("/query") for r in requests)
+
+
+def test_multi_collection_asks_feed_openai_and_log_all_sources(existing_server, tmp_path, monkeypatch):
+    server, _ = existing_server
+    add_collection(server, "legal_article", text="Article evidence")
+    add_collection(server, "legal_as_is", text="Paragraph evidence")
+    monkeypatch.setenv("QDRANT_COLLECTION", "legal_article,legal_as_is")
+    monkeypatch.setenv("OPENAI_API_KEY", "private-openai-test")
+    monkeypatch.setenv("OPENAI_MODEL", "test-platform-model")
+    cfg = config(tmp_path).model_copy(update={"generation_backend": "openai", "top_n": 2})
+    calls = []
+    def handle(request):
+        assert str(request.url) == "https://api.openai.com/v1/responses"
+        assert request.headers["Authorization"] == "Bearer private-openai-test"
+        body = json.loads(request.content)
+        evidence = json.loads(body["input"][0]["content"])["evidence"]
+        assert {e["content"]["text"] for e in evidence} == {"Article evidence", "Paragraph evidence"}
+        assert {e["content"]["qdrant_collection"] for e in evidence} == {"legal_article", "legal_as_is"}
+        citations = [e["chunk_id"] for e in evidence]
+        assert len(set(citations)) == 2
+        calls.append(body)
+        answer = {"answer": "Both sources", "rationale": "Compared sources", "claims": [
+            {"text": "Both sources", "evidence_ids": citations}], "citations": citations, "abstained": False}
+        return httpx.Response(200, json={"status": "completed", "output": [{"type": "message", "role": "assistant",
+            "content": [{"type": "output_text", "text": json.dumps(answer)}]}], "usage": {"input_tokens": 50, "output_tokens": 20}})
+    original_init = Providers.__init__
+    def init(self, cfg, client=None):
+        original_init(self, cfg, httpx.AsyncClient(transport=httpx.MockTransport(handle)))
+    async def embed(self, texts, query=False):
+        return Result(np.array([[1.0] + [0.0]*7]), {"latency_ms": 0.0, "cost_usd": 0.0})
+    monkeypatch.setattr(Providers, "__init__", init)
+    monkeypatch.setattr(Providers, "embed", embed)
+    configs = tmp_path / "configs"
+    configs.mkdir()
+    (configs / "both.yaml").write_text(yaml.safe_dump(cfg.model_dump()))
+    asker = Asker(tmp_path / "results", configs, str(tmp_path / "missing.env"))
+    result = asker.ask({"config": "both.yaml", "question": "question"})
+    assert result["source"]["collections"] == ["legal_article", "legal_as_is"]
+    assert result["conditions"][0]["answer"]["answer"] == "Both sources"
+    assert {c["qdrant_collection"] for c in result["candidates"]} == {"legal_article", "legal_as_is"}
+    assert len(calls) == 1
+    assert asker.get(result["ask_id"])["source"]["collections"] == result["source"]["collections"]
+    assert "private-openai-test" not in asker.log.read_text()
+
+
+def test_second_collection_search_failure_keeps_embedding_trace_and_no_partial_result(existing_server, tmp_path, monkeypatch):
+    server, _ = existing_server
+    for name in ("legal_article", "legal_as_is"):
+        add_collection(server, name)
+    monkeypatch.setenv("QDRANT_COLLECTION", "legal_article,legal_as_is")
+    cfg = config(tmp_path)
+    async def check():
+        p = Providers(cfg)
+        async def embed(texts, query=False):
+            return Result(np.array([[1.0] + [0.0]*7]), {"usage": {"input_tokens": 4}, "cost_usd": .001})
+        p.embed = embed
+        try:
+            with ExistingVectorIndex(cfg, p) as idx:
+                original_query = idx.client.query_points
+                def query(name, **kwargs):
+                    if name == "legal_as_is":
+                        raise RuntimeError("private server diagnostic")
+                    return original_query(name, **kwargs)
+                monkeypatch.setattr(idx.client, "query_points", query)
+                with pytest.raises(ProviderError, match="no partial candidate pool") as caught:
+                    await idx.search({"question": "test"})
+                assert caught.value.trace["failed_collection"] == "legal_as_is"
+                assert caught.value.trace["embedding"]["cost_usd"] == .001
+                assert "legal_article" in caught.value.trace["per_collection"]
+                assert caught.value.trace["search_cost_usd"] is None
+                assert "private server diagnostic" not in str(caught.value)
+        finally:
+            await p.close()
+    asyncio.run(check())

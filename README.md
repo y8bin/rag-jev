@@ -26,14 +26,12 @@ HTTP 임베딩·HTTP reranker만 쓰면 `local` 추가 의존성은 생략할 �
 | 로컬 CE | `ce_backend: local` | `CE_LOCAL_MODEL`, 정확한 `CE_LOCAL_REVISION`, `MODEL_DEVICE` |
 | HTTP CE | `ce_backend: http` | `CE_BASE_URL/API_KEY/API_MODEL`, `POST /rerank`, 응답 `results: [{index, relevance_score}]` |
 | Jev | `jev_backend: http` | `JEV_BASE_URL/API_KEY/MODEL`, 공식 `/v1/systemone`의 named `noul` 질문·응답 |
-| 생성 | `generation_backend: http` | `GENERATION_BASE_URL/API_KEY/MODEL`, `POST /chat/completions` |
 | OpenAI 생성 | `generation_backend: openai` | `OPENAI_API_KEY`, `OPENAI_MODEL`, 공식 `POST /v1/responses`, strict JSON Schema |
-| 자동 judge | `judge_backend: http` | `JUDGE_BASE_URL/API_KEY/MODEL`, 생성과 같은 HTTP 계약 |
 | OpenAI judge | `judge_backend: openai` | `OPENAI_API_KEY`, `OPENAI_JUDGE_MODEL`, 생성과 같은 Responses 계약 |
 
-BASE_URL에는 최종 endpoint를 붙이지 않는다. 예를 들어 chat/embedding 서비스가 `/v1` 아래에 있으면 BASE_URL에 `/v1`을 포함한다. Jev BASE_URL은 기본적으로 `https://api.typesafe.ai`다. 응답 구조가 다른 서비스는 `providers.py`의 해당 adapter를 수정해야 한다. API 키가 필요 없는 로컬 서버는 키를 비워둘 수 있다. Jev 키는 필수다. 로컬 모델은 revision을 입력해야 로드되므로 시험 중 모델 변경을 막을 수 있다.
+생성·자동 judge의 실제 LLM은 OpenAI Responses API만 사용한다. `mock`은 오프라인 테스트 전용이다. HTTP 임베딩·CE의 BASE_URL에는 최종 endpoint를 붙이지 않는다. `/v1` 아래의 임베딩 서비스라면 BASE_URL에 `/v1`을 포함한다. Jev BASE_URL은 기본적으로 `https://api.typesafe.ai`다. API 키가 필요 없는 로컬 임베딩·CE 서버는 키를 비워둘 수 있다. Jev·OpenAI 키는 필수다. 로컬 모델은 revision을 입력해야 로드되므로 시험 중 모델 변경을 막을 수 있다.
 
-`temperature: null`이 기본값이며 생성·judge 요청에서 이 파라미터를 생략하고 모델/서비스의 기본 동작을 따른다. 추론이 활성화된 GPT-6.1 Sol처럼 샘플링 옵션을 제한하는 모델에 사용한다. 숫자를 지정하면 해당 값을 그대로 전송하므로 모델이 지원하는지 먼저 확인한다. `null`과 `0`은 다른 설정이며 캐시와 시험 프로토콜에도 구분해 기록한다.
+`temperature: null`이 기본값이며 생성·judge 요청에서 이 파라미터를 생략하고 모델의 기본 동작을 따른다. 숫자를 지정하면 해당 값을 그대로 전송하므로 모델이 지원하는지 먼저 확인한다. `null`과 `0`은 다른 설정이며 캐시와 시험 프로토콜에도 구분해 기록한다.
 
 가격은 `*_INPUT_USD_PER_MILLION`, `*_OUTPUT_USD_PER_MILLION`, 로컬 비용은 `LOCAL_USD_PER_HOUR`, 원격 Qdrant 시간 배분 비용은 `QDRANT_USD_PER_HOUR`로 설정한다. 원격 검색에 로컬 모델 단가를 대신 쓰지 않는다. Qdrant 시간 환산은 청구액 자동 수집이 아니므로 Cloud·저장·네트워크·유지비의 포함 범위와 배분식을 별도 기록한다. 가격 또는 billable usage가 없으면 비용은 `null`이다. 무료 단가는 명시적으로 `0`을 입력한다. 실패한 요청의 청구 여부를 확인할 수 없는 재시도에는 총비용을 `null`로 남긴다. 실제 청구 기록 확인 없이 가격을 추측하지 않는다. 비용 완결성이 없는 데이터는 문턱값 최적화에 사용할 수 없고, 일부 확인된 비용만으로 평균·paired 비용 추론을 제공하지 않는다.
 
@@ -201,11 +199,15 @@ judge는 독립 환경변수의 모델을 사용하고 `auto_annotations.jsonl`�
 
 질문 화면은 `configs/env-qdrant.yaml`을 기본으로 선택한다. 이 설정은 `.env`의
 `QDRANT_BASE_URL`과 `QDRANT_API_KEY`로 서버에 연결하고 기존 컬렉션을 읽기 전용으로 검색한다.
-`QDRANT_COLLECTION`에 실제 컬렉션 이름을 지정한다. 비워두면 `legal_rag_demo`와
+`QDRANT_COLLECTION=legal_article,legal_as_is`처럼 쉼표로 여러 컬렉션을 지정할 수 있다. 비워두면 `legal_rag_demo`와
 `legal_rag_connection_check`로 시작하는 시험용 컬렉션을 제외하고 하나만 남을 때 자동 선택한다.
-여러 컬렉션이 있으면 선택 가능한 이름을 오류에 표시한다. named dense vector가 여러 개이면
-`QDRANT_VECTOR_NAME`도 지정한다. 질의 임베딩 모델은 해당 컬렉션을 구축한 모델과 같아야 한다.
-차원이 다르면 검색을 중단한다. 본문 payload는 `chunk.text`, `text`, `page_content`, `content`,
+선택이 모호하면 가능한 이름을 오류에 표시한다. YAML의 `qdrant_existing_collections: [legal_article, legal_as_is]`는 `.env`보다 우선한다. 단일 컬렉션용 `qdrant_existing_collection`과 함께 지정하지 않는다. named dense vector가 여러 개이면
+`QDRANT_VECTOR_NAME`도 지정한다. 질의 임베딩 모델은 모든 선택 컬렉션을 구축한 모델과 같아야 한다.
+차원·거리 방식이 다르면 검색 전에 중단한다. 같은 차원이라도 같은 모델로 구축했는지는 별도로 확인해야 한다.
+질의 임베딩은 한 번 생성하고 각 컬렉션에서 K개씩 검색한 뒤 점수 내림차순으로 전체 상위 K개를 선택한다.
+동점은 컬렉션 이름·point ID 순서로 정렬한다. 컬렉션별 최소 할당량은 없으며 본문이 겹쳐도 출처가 다르면 별도 근거로 유지한다.
+한 컬렉션이 실패하면 요청 전체를 실패로 처리한다. 검색 기록에는 전체 컬렉션 목록·컬렉션별 검색 시간·후보 수를 남긴다.
+본문 payload는 `chunk.text`, `text`, `page_content`, `content`,
 `document`, `chunk_text`를 지원하며 `metadata` 안의 출처 정보도 사용한다.
 `legal_article`과 `legal_as_is` payload의 `document_id`, `law_name`, `article`, `article_title`,
 `header`도 읽는다. `header`는 근거 제목·인용명, `document_id`는 문서 ID로 사용한다.

@@ -253,7 +253,8 @@ class Asker:
                 rows = await query_rows(cfg, idx, providers, q, conditions,
                                         Cache(cfg.cache_dir, enabled=cfg.qdrant_source != "existing"), False, ask_id)
                 source = {"mode": cfg.qdrant_mode, "kind": cfg.qdrant_source,
-                          "collection": idx.collection, "metadata_filters_applied": cfg.apply_metadata_filters}
+                          "collection": idx.collection, "collections": getattr(idx, "collections", [idx.collection]),
+                          "metadata_filters_applied": cfg.apply_metadata_filters}
         record = {"ask_id": ask_id, "asked_at": datetime.now(timezone.utc).isoformat(), "config": path.name,
                   "exploration": True, "research_valid": False, "skipped_conditions": skipped,
                   "backends": {k: getattr(cfg, k + "_backend") for k in ("embedding", "ce", "jev", "generation")},

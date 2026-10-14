@@ -1,6 +1,6 @@
 # OpenAI Platform으로 답변 생성하기
 
-`generation_backend: openai`는 공식 `https://api.openai.com/v1/responses`로 검색 근거를 보내 답변을 생성한다. 기존 `http` 백엔드는 Chat Completions 호환 게이트웨이·로컬 서버용으로 유지한다. 답변 생성, 실행 기록, 캐시, 뷰어의 새 질문이 같은 생성기를 사용한다.
+생성·자동 judge의 실제 LLM은 공식 `https://api.openai.com/v1/responses`만 사용한다. `generation_backend: openai`, `judge_backend: openai`가 기본값이다. `mock`은 API 없는 테스트 전용이다. 답변 생성, 실행 기록, 캐시, 뷰어의 새 질문이 같은 생성기를 사용한다.
 
 ## 1. API 키와 모델 설정
 
@@ -11,7 +11,7 @@ OPENAI_API_KEY=발급받은_API_키
 OPENAI_MODEL=계정에서_사용_가능한_모델_ID
 ```
 
-모델은 Responses API와 Structured Outputs를 지원해야 한다. ChatGPT/Codex에서 표시되는 모델 이름이나 게이트웨이의 `codex/...` ID를 그대로 복사하지 말고 Platform의 모델 ID와 프로젝트 권한을 확인한다. 모델은 자동 선택하지 않는다. 연구에서는 가능하면 고정된 snapshot을 사용한다. 특정 조직·프로젝트가 필요하면 `OPENAI_ORG_ID`, `OPENAI_PROJECT_ID`를 추가한다. 키는 서버 환경에서만 읽으며 설정·캐시·실행 기록·브라우저 응답에 저장하지 않는다.
+모델은 Responses API와 Structured Outputs를 지원해야 한다. Platform의 모델 ID와 프로젝트 권한을 확인한다. 모델은 자동 선택하지 않는다. 연구에서는 가능하면 고정된 snapshot을 사용한다. 특정 조직·프로젝트가 필요하면 `OPENAI_ORG_ID`, `OPENAI_PROJECT_ID`를 추가한다. 키는 서버 환경에서만 읽으며 설정·캐시·실행 기록·브라우저 응답에 저장하지 않는다.
 
 ## 2. 생성 연결만 확인
 
@@ -28,7 +28,13 @@ legal-rag --config configs/openai.yaml smoke-generation
 
 ## 3. 실제 검색과 뷰어에 적용
 
-기존 인덱스를 사용하는 YAML(예: `configs/env-qdrant.yaml`)에서 다음 값을 선택하면 된다. OpenAI 경로에서는 `GENERATION_BASE_URL`, `GENERATION_API_KEY`, `GENERATION_MODEL`을 사용하지 않는다. 검색 설정과 인덱스는 실제 데이터에 맞게 준비해야 한다.
+기존 인덱스를 사용하는 YAML(예: `configs/env-qdrant.yaml`)은 기본 OpenAI 생성기를 사용한다. 검색 설정과 인덱스는 실제 데이터에 맞게 준비해야 한다. 두 컬렉션을 함께 검색하려면 `.env`에 다음을 지정한다.
+
+```dotenv
+QDRANT_COLLECTION=legal_article,legal_as_is
+```
+
+모든 컬렉션은 같은 임베딩 모델·차원·거리 방식으로 구축되어야 한다. 각 컬렉션에서 K개씩 검색한 뒤 전체 상위 K개를 답변 후보로 사용한다. 재채점·선택·생성은 합쳐진 후보를 대상으로 수행한다. YAML 설정을 지정하려면 `qdrant_existing_collections: [legal_article, legal_as_is]`를 사용하며 `.env`보다 우선한다.
 
 ```yaml
 generation_backend: openai

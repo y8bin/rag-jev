@@ -7,7 +7,6 @@ import pytest
 
 from legal_rag_jev.config import Config, api_cost, provider_identity
 from legal_rag_jev.io import read_jsonl
-from legal_rag_jev.openai_responses import response_format
 from legal_rag_jev.providers import ProviderError, Providers
 
 
@@ -65,9 +64,6 @@ def assert_strict_schema(schema):
 def test_official_request_contract_and_trace(corpus, openai_env, monkeypatch, temperature):
     cfg, _, chunks, q = corpus
     cfg = cfg.model_copy(update={"generation_backend": "openai", "temperature": temperature})
-    monkeypatch.setenv("GENERATION_API_KEY", "gateway-secret")
-    monkeypatch.setenv("GENERATION_MODEL", "codex/gateway-model")
-    monkeypatch.setenv("GENERATION_BASE_URL", "https://gateway.invalid")
     monkeypatch.setenv("OPENAI_ORG_ID", "org-test")
     monkeypatch.setenv("OPENAI_PROJECT_ID", "proj-test")
     def handle(request):
@@ -88,6 +84,8 @@ def test_official_request_contract_and_trace(corpus, openai_env, monkeypatch, te
         else:
             assert body["temperature"] == temperature
         content = json.loads(body["input"][0]["content"])
+        from legal_rag_jev.prompts import generation_content
+        assert body["input"][0]["content"] == json.dumps(generation_content(q.json_record(), chunks[:1], cfg.common_input_chars), ensure_ascii=False)
         assert content["question"]["as_of_date"] == "2025-01-01"
         assert content["question"]["jurisdiction"] == "KR"
         assert content["evidence"][0]["chunk_id"] == chunks[0]["chunk_id"]
@@ -105,7 +103,6 @@ def test_official_request_contract_and_trace(corpus, openai_env, monkeypatch, te
     assert result.trace["attempts"] == [{"status": 200, "request_id": "req_test"}]
     assert result.trace["cost_usd"] is None
     assert "openai-test-secret" not in json.dumps(result.trace)
-    assert "gateway-secret" not in json.dumps(result.trace)
 
 
 def test_no_evidence_generates_valid_abstention(corpus, openai_env):
@@ -150,11 +147,9 @@ def test_unsuccessful_outputs_keep_billable_usage(corpus, openai_env, case, mess
     assert caught.value.trace["response_status"] == data["status"]
 
 
-def test_platform_key_and_model_do_not_fall_back_to_gateway(corpus, openai_env, monkeypatch):
+def test_platform_key_and_model_are_required(corpus, openai_env, monkeypatch):
     cfg, _, chunks, q = corpus
     cfg = cfg.model_copy(update={"generation_backend": "openai"})
-    monkeypatch.setenv("GENERATION_API_KEY", "gateway-secret")
-    monkeypatch.setenv("GENERATION_MODEL", "codex/gateway-model")
     monkeypatch.delenv("OPENAI_API_KEY")
     def handle(_):
         pytest.fail("Missing Platform credential must fail before network access")
@@ -167,6 +162,15 @@ def test_platform_key_and_model_do_not_fall_back_to_gateway(corpus, openai_env, 
     monkeypatch.delenv("OPENAI_JUDGE_MODEL")
     with pytest.raises(ValueError, match="Set OPENAI_JUDGE_MODEL"):
         provider_identity("judge", "openai")
+
+
+@pytest.mark.parametrize("kind", ["generation", "judge"])
+def test_only_openai_is_supported_for_real_llms(kind):
+    assert getattr(Config(), kind + "_backend") == "openai"
+    with pytest.raises(ValueError):
+        Config.model_validate({kind + "_backend": "http"})
+    with pytest.raises(ValueError, match="OpenAI Responses"):
+        provider_identity(kind, "http")
 
 
 def test_http_error_redaction_and_request_id(corpus, openai_env):

@@ -1,13 +1,13 @@
 # Search the existing collection on QDRANT_BASE_URL using QDRANT_API_KEY.
-# QDRANT_COLLECTION selects the exact name; if unset, use the single non-test collection.
-# EMBEDDING_LOCAL_MODEL must match the model used to index the collection.
+# QDRANT_COLLECTION accepts comma-separated names; YAML qdrant_existing_collections overrides env.
+# All selected collections must use the same embedding model, dimension, and distance.
 qdrant_source: existing
 qdrant_mode: remote
 embedding_backend: local
 ce_backend: local
 jev_backend: http
-generation_backend: http
-judge_backend: http
+generation_backend: openai
+judge_backend: openai
 methods: [vector, ce_r, jev_r]
 top_k: 20
 top_n: 5

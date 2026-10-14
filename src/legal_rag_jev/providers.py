@@ -13,7 +13,7 @@ import numpy as np
 from .config import Config, api_cost, env, local_cost, provider_headers, provider_identity
 from .io import digest
 from .openai_responses import parse_response, response_format
-from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, JUDGE_SYSTEM, RELEVANCE, evidence_text, generation_content, json_output_content, query_text
+from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, JUDGE_SYSTEM, RELEVANCE, evidence_text, generation_content, query_text
 from .schema import Answer
 
 
@@ -66,10 +66,9 @@ def usage_of(kind: str, data: dict) -> dict:
     if not isinstance(u, dict):
         u = {}
     if kind in ("generation", "judge"):
-        usage = {"input_tokens": u.get("prompt_tokens", u.get("input_tokens")),
-                 "output_tokens": u.get("completion_tokens", u.get("output_tokens"))}
-        inputs = u.get("input_tokens_details", u.get("prompt_tokens_details")) or {}
-        outputs = u.get("output_tokens_details", u.get("completion_tokens_details")) or {}
+        usage = {"input_tokens": u.get("input_tokens"), "output_tokens": u.get("output_tokens")}
+        inputs = u.get("input_tokens_details") or {}
+        outputs = u.get("output_tokens_details") or {}
         if isinstance(inputs, dict):
             for source, target in (("cached_tokens", "cached_input_tokens"), ("cache_write_tokens", "cache_write_tokens")):
                 if source in inputs:
@@ -310,36 +309,22 @@ class Providers:
             raise ProviderError(f"Jev failed for {len(failures)}/{len(chunks)} candidates", trace)
         return Result([r.value for r in results], trace)
 
-    async def chat(self, kind: str, system: str, content: dict) -> Result:
+    async def structured_response(self, kind: str, system: str, content: dict) -> Result:
         identity = self.identity(kind)
-        if identity["backend"] == "openai":
-            body = {"model": identity["model"], "instructions": system,
-                    "input": [{"role": "user", "content": json.dumps(json_output_content(content), ensure_ascii=False)}],
-                    "max_output_tokens": self.cfg.max_output_tokens,
-                    "text": {"format": response_format(kind)}, "store": False}
-            if self.cfg.temperature is not None:
-                body["temperature"] = self.cfg.temperature
-            result = await self.transport.request(kind, identity, "/responses", body)
-            try:
-                result.value = parse_response(kind, result.value)
-            except ValueError as e:
-                raise ProviderError(str(e), result.trace) from e
-            return result
-        body = {"model": identity["model"],
-            "messages": [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(json_output_content(content), ensure_ascii=False)}],
-            "max_tokens": self.cfg.max_output_tokens,
-            "response_format": {"type": "json_object"}}
+        if identity["backend"] != "openai":
+            raise ProviderError("Structured generation requires OpenAI")
+        body = {"model": identity["model"], "instructions": system,
+                "input": [{"role": "user", "content": json.dumps(content, ensure_ascii=False)}],
+                "max_output_tokens": self.cfg.max_output_tokens,
+                "text": {"format": response_format(kind)}, "store": False}
         if self.cfg.temperature is not None:
             body["temperature"] = self.cfg.temperature
-        result = await self.transport.request(kind, identity, "/chat/completions", body)
+        result = await self.transport.request(kind, identity, "/responses", body)
         try:
-            raw = result.value["choices"][0]["message"]["content"]
-            if raw.startswith("```"):
-                raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw)
-            result.value = json.loads(raw)
-            return result
-        except (KeyError, TypeError, ValueError, IndexError, AttributeError) as e:
-            raise ProviderError(f"Invalid {kind} JSON response", result.trace) from e
+            result.value = parse_response(kind, result.value)
+        except ValueError as e:
+            raise ProviderError(str(e), result.trace) from e
+        return result
 
     async def generate(self, q: dict, chunks: list[dict]) -> Result:
         identity = self.identity("generation")
@@ -354,7 +339,7 @@ class Providers:
             trace["usage"] = {"input_tokens": tokens(json.dumps(generation_content(q, chunks, self.cfg.common_input_chars), ensure_ascii=False), self.cfg.token_encoding),
                               "output_tokens": tokens(answer.answer, self.cfg.token_encoding)}
             return Result(answer.json_record(), trace)
-        result = await self.chat("generation", GENERATION_SYSTEM, generation_content(q, chunks, self.cfg.common_input_chars))
+        result = await self.structured_response("generation", GENERATION_SYSTEM, generation_content(q, chunks, self.cfg.common_input_chars))
         try:
             result.value = Answer.model_validate(result.value).json_record()
         except ValueError as e:
@@ -364,4 +349,4 @@ class Providers:
     async def judge(self, content: dict) -> Result:
         if self.cfg.judge_backend == "mock":
             raise ProviderError("Mock judge cannot create research judgments; fill human templates")
-        return await self.chat("judge", JUDGE_SYSTEM, content)
+        return await self.structured_response("judge", JUDGE_SYSTEM, content)

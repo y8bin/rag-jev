@@ -33,7 +33,9 @@ BASE_URL에는 최종 endpoint를 붙이지 않는다. 예를 들어 chat/embedd
 
 `temperature: null`이 기본값이며 생성·judge 요청에서 이 파라미터를 생략하고 모델/서비스의 기본 동작을 따른다. 추론이 활성화된 GPT-6.1 Sol처럼 샘플링 옵션을 제한하는 모델에 사용한다. 숫자를 지정하면 해당 값을 그대로 전송하므로 모델이 지원하는지 먼저 확인한다. `null`과 `0`은 다른 설정이며 캐시와 시험 프로토콜에도 구분해 기록한다.
 
-가격은 `*_INPUT_USD_PER_MILLION`, `*_OUTPUT_USD_PER_MILLION`, 로컬 비용은 `LOCAL_USD_PER_HOUR`로 설정한다. 가격 또는 billable usage가 없으면 비용은 `null`이다. 무료 단가는 명시적으로 `0`을 입력한다. 실패한 요청의 청구 여부를 확인할 수 없는 재시도에는 총비용을 `null`로 남긴다. 실제 청구 기록 확인 없이 가격을 추측하지 않는다. 비용 완결성이 없는 데이터는 문턱값 최적화에 사용할 수 없다.
+가격은 `*_INPUT_USD_PER_MILLION`, `*_OUTPUT_USD_PER_MILLION`, 로컬 비용은 `LOCAL_USD_PER_HOUR`, 원격 Qdrant 시간 배분 비용은 `QDRANT_USD_PER_HOUR`로 설정한다. 원격 검색에 로컬 모델 단가를 대신 쓰지 않는다. Qdrant 시간 환산은 청구액 자동 수집이 아니므로 Cloud·저장·네트워크·유지비의 포함 범위와 배분식을 별도 기록한다. 가격 또는 billable usage가 없으면 비용은 `null`이다. 무료 단가는 명시적으로 `0`을 입력한다. 실패한 요청의 청구 여부를 확인할 수 없는 재시도에는 총비용을 `null`로 남긴다. 실제 청구 기록 확인 없이 가격을 추측하지 않는다. 비용 완결성이 없는 데이터는 문턱값 최적화에 사용할 수 없고, 일부 확인된 비용만으로 평균·paired 비용 추론을 제공하지 않는다.
+
+실제 연구의 실행 순서·완료 근거·필요 자료는 [논문 검증 실행서](PAPER_VALIDATION_RUNBOOK.md)에 정리했다. `legal-rag --config configs/pilot.yaml readiness --output results/preparation/readiness.json`은 네트워크·모델 호출 없이 입력 파일·형식·설정 누락을 확인한다. 구조 확인 통과가 법률 검토나 연구 타당성을 보증하지 않는다.
 
 ## API 없는 예제 실행
 
@@ -69,7 +71,7 @@ Qdrant 컬렉션에 L2 정규화한 float32 벡터를 `Distance.DOT`으로 저�
 
 컬렉션 이름은 `qdrant_collection` 접두어와 `index_version`을 조합한다. 코퍼스·모델·저장 모드·서버 주소·접두어가 바뀌면 새 `index_dir`를 사용한다. 기존 컬렉션을 덮어쓰지 않는다. 로컬 manifest와 `chunks.jsonl` 스냅샷을 보존하며, 매 로드 시 스냅샷 해시·차원·거리·개수와 실제 Qdrant의 모든 벡터·payload 해시를 확인한다. 검색 캐시와 시험 lock도 새 인덱스 버전에 연결된다. 이전 저장 형식의 인덱스·캐시·lock은 재사용하지 않고 청크에서 새로 구축한다.
 
-정확 검색과 Top-K 경계 동점의 재현성을 위해 필터를 통과한 전체 결과를 반환받아 정렬한다. 큰 코퍼스에서는 전체 반환과 로드 무결성 검증 비용이 증가한다. 근사 검색으로 변경한다면 별도 후보 재현율 검증이 필요하다. 원격 검색 비용은 검색 요청 경과 시간에 `LOCAL_USD_PER_HOUR`를 적용한 추정치이므로 실제 서버/Cloud 비용까지 반영하려면 해당 계산 자원의 비용 기준을 설정한다.
+정확 검색과 Top-K 경계 동점의 재현성을 위해 필터를 통과한 전체 결과를 반환받아 정렬한다. 큰 코퍼스에서는 전체 반환과 로드 무결성 검증 비용이 증가한다. 근사 검색으로 변경한다면 별도 후보 재현율 검증이 필요하다. 원격 검색 비용은 별도 `QDRANT_USD_PER_HOUR`에 기반한 시간 배분 추정치이며 실제 서버/Cloud 비용·저장·네트워크 포함 범위를 별도 검증한다.
 
 질문 JSONL의 한 행:
 
@@ -86,6 +88,8 @@ legal-rag validate
 ```
 
 split은 질문 group_id와 참조 문서의 group_id를 연결해 그룹 단위로 분리한다. 여러 근거가 연결하는 그룹은 같은 분할에 둔다. 자동 분할 전에 중복/파생 사건·조문을 같은 문서 계열로 지정해야 한다. validate는 문서 계열의 분할 누출, ID, 정답 근거, 정규화본 오프셋을 확인한다.
+
+기존 pilot 문항의 연결 성분은 기본 pilot에 유지하며 test로 보내지 않는다. 개발 재사용을 사전 지정했다면 `split --reuse-pilot-in-dev`로 해당 성분 전체를 dev로 옮긴다. 미노출 dev/test 연결 성분은 최소 2개가 필요하다. 질문 파일 옆 `.split_manifest.json`에 입력·청크·출력 해시, seed, 그룹 매핑과 실제 구성 수를 기록한다.
 
 ## 공통 후보 판정
 
@@ -122,7 +126,7 @@ legal-rag export-annotations --run results/SWEEP_ID --kind answers --output resu
 
 sweep은 CE/Jev의 개발 점수 분위수로 각각 같은 수의 문턱값을 만들고, 빈 선택 조건을 포함한다. 각 선택 문맥으로 실제 답변을 생성하며 다른 문맥의 답변을 재사용하지 않는다. 동일 문맥/모델/프롬프트의 답변 캐시는 재사용한다. 생성 결과에는 주장별 evidence_ids와 답변 보류 여부가 포함된다.
 
-사람 평가자는 correctness, core_supported, 주장별 support와 citation support, reviewer를 채운다. support는 `supported/unsupported/contradicted` 중 하나다. 두 평가자의 불일치를 조정한 파일을 import한다. 질문·답변·근거를 임의로 편집하지 않는다.
+사람 평가자는 v2 양식의 correctness, core_supported, claims_complete, omitted_claims, 주장별 is_core·support·citation support, reviewer를 채운다. `answer`와 `rationale`의 검증 가능한 주장이 claims에서 빠졌는지 전체 텍스트를 확인한다. 누락 문장은 omitted_claims에 기록하고 claims_complete=false로 판정한다. support는 `supported/unsupported/contradicted` 중 하나다. 두 평가자의 불일치를 조정한 파일을 import한다. 질문·답변·근거를 임의로 편집하지 않는다. 상세 예시와 primary/strict 구분은 [평가 지침](research/annotation_guidelines.md)을 따른다. `agreement`는 인용 지지·핵심 분류·완전성 일치도와 후보 등급의 비가중/가중 kappa도 출력한다.
 
 전체 답변을 사람이 검토하기 어렵다면 `human_evaluation_limit`를 설정한다. 질문 유형/answerability별로 실행 전에 표본을 고정하고 같은 질문의 모든 조건을 평가한다. 표본 ID도 manifest에 저장되며 설정 잠금에 포함된다. 정해진 표본의 필수 판정이 끝나기 전에는 답변 주 지표의 집계와 추론을 제공하지 않는다. 검색은 전체 질문, 답변 사람 평가는 해당 표본에 대한 결과이며 각 분모를 함께 보고한다.
 
@@ -132,7 +136,7 @@ legal-rag evaluate --run results/SWEEP_ID
 legal-rag tune --run results/SWEEP_ID --output-config configs/final.yaml
 ```
 
-tune은 CE-R 대비 ESR과 근거가 있는 정답 비율의 감소가 quality_delta 이내인 문턱값 중 비용이 가장 낮은 것을 선택한다. 모든 답변 판정과 비용이 있어야 진행한다. 두 FR 중 하나라도 제약을 만족하지 못하면 보고서를 저장하고 설정을 만들지 않는다. 시험 결과로 제약을 완화하지 않는다. 후보 회수율/K, 지침, delta와 최종 문항 수는 개발 단계에서 정한다.
+tune은 CE-R 대비 ESR과 근거가 있는 정답 비율의 감소가 quality_delta 이내인 문턱값 중 비용이 가장 낮은 것을 선택한다. `esr_quality_delta`·`answer_quality_delta`로 각각 다른 허용치를 지정할 수 있다(null이면 quality_delta 사용). 모든 사전 지정 답변 판정과 비용이 있어야 진행한다. 두 FR 중 하나라도 제약을 만족하지 못하면 기본은 보고서를 저장하고 설정을 만들지 않는다. 시험 전에 불가능 분기를 정했다면 `tune --allow-infeasible`로 해당 FR만 제외하고 고정 N·가능한 FR의 final 설정을 만든다. 불가능 방법은 threshold_selection.json에 기록하며 시험 결과로 제약을 완화하지 않는다. 후보 회수율/K, 지침, margin과 최종 문항 수는 개발 단계에서 정한다.
 
 ## 잠금 시험과 결과 생성
 
@@ -148,7 +152,7 @@ legal-rag --config configs/final.yaml plot --run results/final_test
 legal-rag --config configs/final.yaml errors --run results/final_test --output results/error_sample.jsonl
 ```
 
-freeze는 설정·모델/주소·가격·질문 파일 해시·인덱스 버전·프롬프트를 잠근다. 키는 저장하지 않는다. 실제 test 실행은 lock이 필수이며 불일치하면 중단한다. lock은 로컬 불변 설정 파일로서 변경 탐지 수단이며 제3자 사전등록을 대체하지 않는다. raw 결과는 질문별로 저장하고 같은 명령에 `--resume`을 주면 누락된 조건만 수행한다. 완료된 실패 기록은 덮어쓰지 않으며 새 실험으로 재실행한다.
+freeze는 설정·모델/주소·가격·질문 파일 해시·인덱스 버전·프롬프트와 `protocol_documents`의 첨부 파일 해시를 잠근다. 키는 저장하지 않는다. 범위·판정 지침·분석 계획·split·모델/가격 명세를 첨부하면 시험 후 변경도 감지한다. 실제 test 실행은 lock이 필수이며 불일치하면 중단한다. lock은 로컬 불변 설정 파일로서 변경 탐지 수단이며 제3자 사전등록을 대체하지 않는다. raw 결과는 질문별로 저장하고 같은 명령에 `--resume`을 주면 누락된 조건만 수행한다. 완료된 실패 기록은 덮어쓰지 않으며 새 실험으로 재실행한다.
 
 출력 파일:
 
@@ -159,7 +163,9 @@ freeze는 설정·모델/주소·가격·질문 파일 해시·인덱스 버전�
 - `statistics.json`: 그룹 단위 신뢰구간, cluster sign-flip 비교, Holm 보정, FR 품질 비열등성 분석.
 - `figures/`: 표준 matplotlib PNG/PDF 그림.
 
-근거 선택 주 지표는 충분한 근거 집합 회수율이다. nDCG는 공통 후보 풀 기준이고 FR도 같은 N의 IDCG를 쓴다. 답변 주 지표는 핵심 정답과 지지된 주장·인용을 함께 요구한다. 검증 가능한 주장이 없는 답변의 지지율은 N/A다. 사람 판정이 없는 답변 지표는 누락으로 표시하며 단순 문자열 일치로 법률 서술형 정답을 확정하지 않는다. 기술 실패는 전체 태스크 성공에 실패로 포함하고 공통 성공 질문의 비교도 별도로 제공한다. 낮은 질문 수나 독립 그룹 수에서는 통계 추론이 제한된다.
+근거 선택 주 지표는 충분한 근거 집합 회수율이다. nDCG는 공통 후보 풀 기준이고 FR도 같은 N의 IDCG를 쓴다. 답변 주 지표 `grounded_correct`는 핵심 정답·필수 요건, 주장 완전성, 모든 핵심 주장의 지지와 각각의 제공 근거 지지 인용을 요구한다. 전체 생성 주장·전체 인용까지 요구하는 기존 기준은 `strict_grounded_correct`로 보존한다. 기존 v1 판정으로 새 주 지표를 추정하지 않으며 새 v2 양식으로 재검토해야 한다. 검증 가능한 주장이 없는 답변의 지지율은 N/A다. 사람 판정이 없는 답변 지표는 누락으로 표시하며 단순 문자열 일치로 법률 서술형 정답을 확정하지 않는다. 기술 실패는 전체 태스크 성공에 실패로 포함하고 공통 성공 질문의 비교도 별도로 제공한다. 낮은 질문 수나 독립 그룹 수에서는 통계 추론이 제한된다.
+
+statistics는 주 3비교와 각 FR 대 자체 R·FR 간 보조 품질/비용 차이·CI를 구분한다. Holm은 주/보조 및 공통 성공/전체 가족별로 적용한다. FR 비열등성은 공통 성공 질문에서 각 품질 제약과 공동 충족 여부를 출력하며 `noninferiority_alpha`로 단측 신뢰수준을 지정한다. 두 FR 공동 주장의 다중 비교 범위와 power는 [분석 계획](research/statistical_analysis_plan.md)에서 시험 전에 확정한다. 환경 manifest는 설치된 패키지 전체와 Git commit·dirty를 기록한다. 의존성 pin 파일의 새 환경 재설치 성공은 별도 확인해야 한다.
 
 ## 지연·ablation·자동 보조 평가
 

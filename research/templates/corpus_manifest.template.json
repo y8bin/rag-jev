@@ -1,0 +1,25 @@
+{
+  "status": "draft",
+  "snapshot_id": null,
+  "scope_version": null,
+  "collected_at": null,
+  "collection_cutoff": null,
+  "raw_location": null,
+  "raw_sha256": null,
+  "normalized_location": "data/processed/documents.jsonl",
+  "normalized_sha256": null,
+  "documents": [],
+  "required_per_document": ["doc_id", "version_id", "group_id", "source_uri", "source_hash", "collected_at", "jurisdiction", "doc_type", "effective_from", "effective_to", "source_license", "api_transfer_allowed", "redistribution_allowed", "extraction_review", "duplicate_or_version_relation"],
+  "source_coverage_and_omissions": [],
+  "extraction_checks": ["article_number", "negation", "deadline_and_amount", "exception", "table_and_footnotes", "case_reasoning"],
+  "temporal_unknown_policy_and_reasons": null,
+  "remote_export": {
+    "used": null,
+    "exported_at": null,
+    "point_ids_payload_vectors_sha256": null,
+    "vector_name_dimension_embedding_revision": null,
+    "normalized_document_reconstruction_and_offsets_review": null
+  },
+  "reviewer": null,
+  "approved_at": null
+}

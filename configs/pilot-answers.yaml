@@ -1,0 +1,16 @@
+# Same snapshot as pilot.yaml. Real generator calls incur costs.
+documents: data/processed/documents.jsonl
+chunks: data/processed/chunks.jsonl
+queries: data/processed/queries_pilot.jsonl
+index_dir: indexes/research_v1
+index_backend: qdrant
+qdrant_mode: local
+qdrant_source: managed
+qdrant_collection: legal_rag_research
+output_dir: results/pilot-answers
+cache_dir: .cache/research_v1
+methods: [vector, ce_r, jev_r]
+generate: true
+top_k: 20
+top_n: 5
+seed: 20261009

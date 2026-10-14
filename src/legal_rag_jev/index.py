@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 from qdrant_client import QdrantClient, models
 
-from .config import Config, endpoint, env, local_cost, pricing
+from .config import Config, endpoint, env, search_cost, pricing
 from .io import (digest, environment_manifest, file_hash, implementation_digest,
                  read_json, read_jsonl, write_json, write_jsonl)
 from .providers import Providers
@@ -260,5 +260,7 @@ class VectorIndex:
         ms = (time.perf_counter() - search_start) * 1000
         return {"candidates": result, "index_version": self.manifest["index_version"], "eligible_count": count,
             "trace": {"latency_ms": (time.perf_counter()-start)*1000, "search_ms": ms,
-                      "embedding": embedded.trace, "search_cost_usd": 0.0 if self.cfg.embedding_backend == "mock" else local_cost(ms),
+                      "embedding": embedded.trace, "search_cost_usd": 0.0 if self.cfg.embedding_backend == "mock" else search_cost(ms, self.cfg.qdrant_mode),
+                      "search_cost_basis": "synthetic" if self.cfg.embedding_backend == "mock" else
+                          "remote_elapsed_time_allocation" if self.cfg.qdrant_mode == "remote" else "local_elapsed_time_allocation",
                       "cached": False}}

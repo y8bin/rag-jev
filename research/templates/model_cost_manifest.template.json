@@ -1,0 +1,32 @@
+{
+  "status": "draft",
+  "models": {
+    "embedding": {"model": null, "revision": null, "dimension": null, "normalization": "L2", "prefixes": null, "max_tokens": null, "selection_evidence": null},
+    "ce": {"model": null, "revision": null, "max_length": null, "dtype": null, "batch_size": null, "device": null, "score_contract": null, "selection_evidence": null},
+    "jev": {"request_model": null, "returned_model": null, "version_pin_supported": null, "tested_at": null, "score_type": null, "input_limit": null, "rate_limit": null},
+    "generation": {"request_model": null, "returned_model": null, "version_pin_supported": null, "tested_at": null, "supported_parameters": null, "json_contract_evidence": null}
+  },
+  "hardware": {"cpu": null, "gpu": null, "memory_gb": null, "os": null, "qdrant_server_version": null},
+  "pricing": {
+    "currency": "USD",
+    "checked_at": null,
+    "price_sources": [],
+    "jev_input_per_million": null,
+    "jev_output_per_million": null,
+    "generation_input_per_million": null,
+    "generation_output_per_million": null,
+    "local_usd_per_hour": null,
+    "qdrant_usd_per_hour": null,
+    "resource_allocation_formula": null,
+    "storage_network_maintenance_inclusion": null,
+    "billing_unit_matches_adapter": null,
+    "retry_failure_cache_billing_policy": null,
+    "usage_invoice_reconciliation": null
+  },
+  "pilot_measurements": {"queries": null, "candidate_pairs": null, "usage_missing": null, "failures": null, "retries": null, "input_output_tokens": null, "actual_usd": null, "elapsed_ms": null},
+  "annotation_measurements": {"candidate_seconds": null, "answer_seconds": null, "claims_per_answer": null, "citations_per_answer": null, "adjudication_fraction": null, "adjudication_seconds": null},
+  "budget": {"api_limit_usd": null, "annotation_hours": null, "review_interval": null, "stop_conditions": null},
+  "benchmark_plan": {"query_ids": [], "warmup": null, "repeats": null, "request_rate": null, "concurrency": null, "method_order_seed": null, "network_conditions": null},
+  "reviewer": null,
+  "approved_at": null
+}

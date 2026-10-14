@@ -59,6 +59,15 @@ class Config(BaseModel):
     seed: int = 20261009
     bootstrap_repetitions: int = Field(default=2000, ge=100)
     quality_delta: float = Field(default=0.02, ge=0, le=1)
+    esr_quality_delta: float | None = Field(default=None, ge=0, le=1)
+    answer_quality_delta: float | None = Field(default=None, ge=0, le=1)
+    noninferiority_alpha: float = Field(default=0.05, gt=0, lt=0.5)
+    protocol_documents: list[str] = Field(default_factory=list)
+
+    @property
+    def quality_margins(self) -> dict[str, float]:
+        return {"esr": self.quality_delta if self.esr_quality_delta is None else self.esr_quality_delta,
+                "grounded_correct": self.quality_delta if self.answer_quality_delta is None else self.answer_quality_delta}
 
     @model_validator(mode="after")
     def valid_methods(self):
@@ -120,6 +129,7 @@ def pricing() -> dict:
               for kind, prefix in [("embedding", "EMBEDDING"), ("ce", "CE"), ("jev", "JEV"),
                                    ("generation", "GENERATION"), ("judge", "JUDGE")]}
     result["local_usd_per_hour"] = rate("LOCAL_USD_PER_HOUR")
+    result["qdrant_usd_per_hour"] = rate("QDRANT_USD_PER_HOUR")
     return result
 
 
@@ -133,4 +143,10 @@ def api_cost(kind: str, usage: dict) -> float | None:
 
 def local_cost(ms: float) -> float | None:
     price = rate("LOCAL_USD_PER_HOUR")
+    return None if price is None else ms / 3_600_000 * price
+
+
+def search_cost(ms: float, mode: str) -> float | None:
+    # Remote elapsed time is not a measurement of local model compute or a Cloud invoice.
+    price = rate("QDRANT_USD_PER_HOUR" if mode == "remote" else "LOCAL_USD_PER_HOUR")
     return None if price is None else ms / 3_600_000 * price

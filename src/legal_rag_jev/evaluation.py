@@ -60,18 +60,21 @@ def retrieval_metrics(q: dict, selected: list[dict], candidates: list[dict]) -> 
 def answer_metrics(row: dict, annotation: dict | None) -> dict:
     q = row["query"]
     a = row.get("answer")
-    result = {"grounded_correct": None, "accuracy": None, "claim_support": None,
+    result = {"grounded_correct": None, "strict_grounded_correct": None,
+        "claims_complete": None, "core_citation_coverage": None, "accuracy": None, "claim_support": None,
         "unsupported_claims": None, "contradicted_claims": None, "citation_support": None,
         "claim_citation_coverage": None, "appropriate_abstention": None, "over_abstention": None}
     if a is None or row["status"] != "ok":
         if q["answerable"]:
             result["grounded_correct"] = 0.0 # planned task success includes technical failures
+            result["strict_grounded_correct"] = 0.0
             result["accuracy"] = 0.0
         return result
     result["appropriate_abstention"] = float(a["abstained"]) if not q["answerable"] else None
     result["over_abstention"] = float(a["abstained"]) if q["answerable"] else None
     if q["answerable"] and a["abstained"]:
         result["grounded_correct"] = 0.0
+        result["strict_grounded_correct"] = 0.0
         result["accuracy"] = 0.0
     if annotation is None:
         return result
@@ -94,8 +97,21 @@ def answer_metrics(row: dict, annotation: dict | None) -> dict:
         judged_supported = {cid for cid,s in citations if s and cid in allowed}
         citation_ok = bool(citations) and all(s and cid in allowed for cid,s in citations) and used <= judged_supported and all(
             any(c["supported"] and c["evidence_id"] in allowed for c in label["citations"]) for label in labels)
-        result["grounded_correct"] = float(annotation["correctness"] and annotation["core_supported"] and
+        strict = float(annotation["correctness"] and annotation["core_supported"] and
             not a["abstained"] and bool(labels) and all(s == "supported" for s in status) and citation_ok)
+        result["strict_grounded_correct"] = strict
+        # Legacy labels do not contain a completeness review or core-claim classification.
+        # Keep their strict result available, but never infer the new primary result.
+        if annotation.get("annotation_schema_version") == 2:
+            core = [label for label in labels if label["is_core"]]
+            cited_core = [label for label in core if any(
+                c["supported"] and c["evidence_id"] in allowed for c in label["citations"])]
+            result["claims_complete"] = float(annotation["claims_complete"])
+            result["core_citation_coverage"] = len(cited_core)/len(core) if core else None
+            result["grounded_correct"] = float(annotation["correctness"] and annotation["core_supported"] and
+                annotation["claims_complete"] and not a["abstained"] and bool(core) and
+                all(label["support"] == "supported" for label in core) and len(cited_core) == len(core))
+            result["strict_grounded_correct"] = strict * float(annotation["claims_complete"])
     return result
 
 
@@ -139,10 +155,10 @@ def evaluate(run_dir: str, annotations: str | None = None) -> Path:
         annotation = human.get((q["query_id"], r["condition_id"]))
         met.update(answer_metrics(r, annotation))
         if q["query_id"] not in human_ids:
-            for key in ("grounded_correct","accuracy","claim_support","unsupported_claims","contradicted_claims","citation_support","claim_citation_coverage"):
+            for key in ("grounded_correct","strict_grounded_correct","claims_complete","core_citation_coverage","accuracy","claim_support","unsupported_claims","contradicted_claims","citation_support","claim_citation_coverage"):
                 met[key] = None
         if not manifest["protocol"]["config"]["generate"]:
-            for key in ("grounded_correct", "accuracy", "claim_support", "unsupported_claims", "contradicted_claims",
+            for key in ("grounded_correct", "strict_grounded_correct", "claims_complete", "core_citation_coverage", "accuracy", "claim_support", "unsupported_claims", "contradicted_claims",
                         "citation_support", "claim_citation_coverage", "appropriate_abstention", "over_abstention"):
                 met[key] = None
         met.update({"task_success": float(r["status"] == "ok"), "online_cost_usd": r.get("cost", {}).get("online_usd"),
@@ -163,11 +179,14 @@ def evaluate(run_dir: str, annotations: str | None = None) -> Path:
             record[key + "_n"] = len(values)
         expected = sum(r["answerable"] and r["human_evaluation_planned"] for r in subset)
         record["human_answerable_planned"] = expected
-        for metric in ("grounded_correct","accuracy"):
+        for metric in ("grounded_correct","strict_grounded_correct","accuracy"):
             complete = expected > 0 and record[metric+"_n"] == expected
             record[metric+"_complete"] = complete
             if not complete:
                 record[metric] = None
+        record["online_cost_usd_complete"] = record["online_cost_usd_n"] == len(subset)
+        if not record["online_cost_usd_complete"]:
+            record["online_cost_usd"] = None
         summary.append(record)
     write_json(directory / "summary.json", summary)
     with (directory / "summary.csv").open("w", encoding="utf-8", newline="") as f:
@@ -177,16 +196,28 @@ def evaluate(run_dir: str, annotations: str | None = None) -> Path:
     return directory / "summary.json"
 
 
-def paired_statistics(run_dir: str, repeats: int, seed: int, delta: float) -> Path:
+def paired_statistics(run_dir: str, repeats: int, seed: int, delta: float, *, margins: dict | None = None,
+                      noninferiority_alpha: float = .05) -> Path:
     directory = Path(run_dir)
     rows = read_jsonl(directory / "metrics.jsonl")
     ready = {s["condition_id"] for s in read_json(directory/"summary.json") if s.get("grounded_correct_complete")}
     comparisons = [("ce_r", "jev_r", "esr"), ("ce_r", "jev_r", "grounded_correct"),
                    ("ce_fr", "jev_fr", "online_cost_usd")]
+    primary = set(comparisons)
+    comparisons += [(baseline, treatment, metric) for baseline, treatment in
+                    (("ce_r", "ce_fr"), ("jev_r", "jev_fr"), ("ce_fr", "jev_fr"))
+                    for metric in ("esr", "grounded_correct", "online_cost_usd")
+                    if (baseline, treatment, metric) not in primary]
+    margins = margins or {"esr": delta, "grounded_correct": delta}
     report = []
     rng = np.random.default_rng(seed)
+    conditions = {r["condition_id"] for r in rows}
     for baseline, treatment, metric in comparisons:
         for complete_case in (False, True):
+            if baseline not in conditions or treatment not in conditions:
+                report.append({"baseline":baseline,"treatment":treatment,"metric":metric,"complete_case":complete_case,
+                               "n":0,"status":"condition_not_run"})
+                continue
             if metric == "grounded_correct" and (baseline not in ready or treatment not in ready):
                 report.append({"baseline":baseline,"treatment":treatment,"metric":metric,"complete_case":complete_case,
                                "n":0,"status":"human_annotations_incomplete"})
@@ -194,6 +225,7 @@ def paired_statistics(run_dir: str, repeats: int, seed: int, delta: float) -> Pa
             lookup = {(r["query_id"], r["condition_id"]): r for r in rows}
             conditions = {r["condition_id"] for r in rows}
             pairs = []
+            missing_costs = 0
             for (qid,cond), a in lookup.items():
                 if cond != baseline or (qid,treatment) not in lookup:
                     continue
@@ -203,6 +235,12 @@ def paired_statistics(run_dir: str, repeats: int, seed: int, delta: float) -> Pa
                 va,vb = a["metrics"].get(metric),b["metrics"].get(metric)
                 if va is not None and vb is not None:
                     pairs.append((a["group_id"], vb-va))
+                elif metric == "online_cost_usd":
+                    missing_costs += 1
+            if missing_costs:
+                report.append({"baseline":baseline,"treatment":treatment,"metric":metric,"complete_case":complete_case,
+                               "n":len(pairs),"missing_cost_pairs":missing_costs,"status":"costs_incomplete"})
+                continue
             if not pairs:
                 report.append({"baseline": baseline, "treatment": treatment, "metric": metric,
                     "complete_case": complete_case, "n": 0, "status": "unavailable"})
@@ -226,16 +264,26 @@ def paired_statistics(run_dir: str, repeats: int, seed: int, delta: float) -> Pa
             report.append({"baseline": baseline, "treatment": treatment, "metric": metric, "complete_case": complete_case,
                 "n": len(pairs), "groups": len(groups), "mean_difference": observed, "ci95": [low,high],
                 "p_cluster_sign_flip": p, "p_holm": None, "seed": seed, "repetitions": repeats})
+    for r in report:
+        r["comparison_family"] = "primary" if (r["baseline"], r["treatment"], r["metric"]) in primary else "secondary"
     for complete in (False,True):
-        tests = sorted([r for r in report if r.get("p_cluster_sign_flip") is not None and r["complete_case"] == complete], key=lambda r:r["p_cluster_sign_flip"])
-        maximum = 0.0
-        for i,r in enumerate(tests):
-            maximum = max(maximum, min(1, (len(tests)-i)*r["p_cluster_sign_flip"]))
-            r["p_holm"] = maximum
+        for family in ("primary", "secondary"):
+            tests = sorted([r for r in report if r.get("p_cluster_sign_flip") is not None and
+                            r["complete_case"] == complete and r["comparison_family"] == family],
+                           key=lambda r:r["p_cluster_sign_flip"])
+            family_size = len(primary) if family == "primary" else len(comparisons) - len(primary)
+            maximum = 0.0
+            for i,r in enumerate(tests):
+                maximum = max(maximum, min(1, (family_size-i)*r["p_cluster_sign_flip"]))
+                r["p_holm"] = maximum
     noninferiority = []
     lookup = {(r["query_id"], r["condition_id"]): r for r in rows}
     for treatment in ("ce_fr", "jev_fr"):
         for metric in ("esr", "grounded_correct"):
+            if "ce_r" not in conditions or treatment not in conditions:
+                noninferiority.append({"baseline":"ce_r","treatment":treatment,"metric":metric,"supported":None,
+                                      "status":"condition_not_run"})
+                continue
             if metric == "grounded_correct" and ("ce_r" not in ready or treatment not in ready):
                 noninferiority.append({"baseline":"ce_r","treatment":treatment,"metric":metric,"supported":None,
                                       "status":"human_annotations_incomplete"})
@@ -244,27 +292,44 @@ def paired_statistics(run_dir: str, repeats: int, seed: int, delta: float) -> Pa
             for (qid,cond), baseline in lookup.items():
                 if cond != "ce_r" or (qid,treatment) not in lookup:
                     continue
+                if any(lookup[(qid,c)]["status"] != "ok" for c in conditions):
+                    continue
                 a,b = baseline["metrics"].get(metric),lookup[(qid,treatment)]["metrics"].get(metric)
                 if a is not None and b is not None:
                     pairs.append((baseline["group_id"],b-a))
             groups = sorted({g for g,_ in pairs})
-            record = {"baseline":"ce_r","treatment":treatment,"metric":metric,"delta":delta,
-                      "n":len(pairs),"groups":len(groups),"supported":None}
+            record = {"baseline":"ce_r","treatment":treatment,"metric":metric,"delta":margins[metric],
+                      "n":len(pairs),"groups":len(groups),"supported":None,"complete_case":True,
+                      "one_sided_confidence":1-noninferiority_alpha}
             if len(groups) >= 2:
                 arrays = [np.array([d for g,d in pairs if g == group]) for group in groups]
                 boot = [float(np.concatenate([arrays[i] for i in rng.integers(0,len(groups),len(groups))]).mean()) for _ in range(repeats)]
-                record["one_sided_lower95"] = float(np.quantile(boot,.05))
+                record["one_sided_lower_bound"] = float(np.quantile(boot,noninferiority_alpha))
+                if noninferiority_alpha == .05:
+                    record["one_sided_lower95"] = record["one_sided_lower_bound"]
                 record["mean_difference"] = float(np.mean([d for _,d in pairs]))
-                record["supported"] = record["one_sided_lower95"] > -delta
+                record["supported"] = record["one_sided_lower_bound"] > -margins[metric]
+            else:
+                record["status"] = "insufficient_independent_groups" if pairs else "unavailable"
             noninferiority.append(record)
+    joint = []
+    for treatment in ("ce_fr", "jev_fr"):
+        results = [r["supported"] for r in noninferiority if r["treatment"] == treatment]
+        joint.append({"baseline": "ce_r", "treatment": treatment,
+                      "both_quality_constraints_supported": None if any(x is None for x in results) else all(results),
+                      "one_sided_alpha":noninferiority_alpha,
+                      "note": "Intersection of two quality constraints on common-success questions. Multiplicity across FR methods requires a prespecified alpha."})
     write_json(directory / "statistics.json", {"comparisons": report, "noninferiority": noninferiority,
-        "noninferiority_margin": delta, "note": "Quality equivalence is not inferred from a nonsignificant p-value."})
+        "noninferiority_margin": delta, "quality_margins": margins, "joint_noninferiority": joint,
+        "note": "Question-weighted paired cluster analysis. Holm is separate for primary and secondary families and all-success sensitivity. Quality equivalence is not inferred from a nonsignificant p-value."})
     intervals = []
     for condition in sorted({r["condition_id"] for r in rows}):
         for metric in ("esr","grounded_correct","context_tokens","online_cost_usd"):
             if metric == "grounded_correct" and condition not in ready:
                 continue
             values = [(r["group_id"],r["metrics"].get(metric)) for r in rows if r["condition_id"] == condition and r["metrics"].get(metric) is not None]
+            if metric == "online_cost_usd" and len(values) != sum(r["condition_id"] == condition for r in rows):
+                continue
             groups = sorted({g for g,_ in values})
             if len(groups) < 2:
                 continue
@@ -283,7 +348,11 @@ def summarize_benchmark(run_dir: str) -> Path:
     for method in sorted({r["method"] for r in rows}):
         subset = [r for r in rows if r["method"] == method]
         values = [r["timing"]["wall_clock_ms"] for r in subset if r["status"] == "ok"]
-        summary.append({"method": method, "attempts": len(subset), "failures": sum(r["status"] != "ok" for r in subset),
+        failed = [r["timing"]["wall_clock_ms"] for r in subset if r["status"] != "ok"]
+        summary.append({"method": method, "attempts": len(subset), "successes": len(values),
+            "failures": len(failed), "failure_rate": len(failed)/len(subset),
+            "failed_mean_ms": float(np.mean(failed)) if failed else None,
+            "failed_p95_ms": float(np.quantile(failed, .95)) if failed else None,
             "mean_ms": float(np.mean(values)) if values else None, "median_ms": float(np.median(values)) if values else None,
             "p95_ms": float(np.quantile(values, .95)) if values else None})
     write_json(directory / "latency_summary.json", summary)

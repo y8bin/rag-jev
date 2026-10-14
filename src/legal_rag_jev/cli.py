@@ -14,7 +14,7 @@ from .corpus import assign_splits, chunk_documents, ingest, load_documents, load
 from .evaluation import evaluate, paired_statistics, summarize_benchmark
 from .index import VectorIndex, build_index, open_client
 from .lexical import lexical_pool
-from .io import read_json, read_jsonl, write_json, write_jsonl
+from .io import file_hash, read_json, read_jsonl, write_json, write_jsonl
 from .pipeline import benchmark, freeze, run
 from .providers import ProviderError, Providers
 from .reports import agreement, calibration, error_sample, plot_results, sweep, tune
@@ -29,7 +29,9 @@ def parser() -> argparse.ArgumentParser:
     s = sub.add_parser("ingest"); s.add_argument("--input", required=True); s.add_argument("--output")
     sub.add_parser("chunk")
     sub.add_parser("validate")
+    s = sub.add_parser("readiness"); s.add_argument("--output", help="Save offline preparation report without API calls")
     s = sub.add_parser("split"); s.add_argument("--output", required=True); s.add_argument("--dev-fraction", type=float, default=.25); s.add_argument("--test-fraction", type=float, default=.75)
+    s.add_argument("--reuse-pilot-in-dev", action="store_true", help="Move pilot-connected groups to dev; never assign them to test")
     sub.add_parser("build-index")
     sub.add_parser("smoke")
     s = sub.add_parser("schemas"); s.add_argument("--output", default="schemas")
@@ -38,7 +40,7 @@ def parser() -> argparse.ArgumentParser:
     s = sub.add_parser("freeze"); s.add_argument("--output", required=True)
     s = sub.add_parser("run"); s.add_argument("--split", choices=["pilot","dev","test"], default="dev"); s.add_argument("--lock"); s.add_argument("--run-id"); s.add_argument("--fresh", action="store_true"); s.add_argument("--resume", action="store_true")
     s = sub.add_parser("sweep"); s.add_argument("--grid-size", type=int, default=5)
-    s = sub.add_parser("tune"); s.add_argument("--run", required=True); s.add_argument("--output-config", required=True)
+    s = sub.add_parser("tune"); s.add_argument("--run", required=True); s.add_argument("--output-config", required=True); s.add_argument("--allow-infeasible", action="store_true", help="Omit infeasible FR methods while preserving fixed-N methods and quality constraints")
     s = sub.add_parser("evaluate"); s.add_argument("--run", required=True); s.add_argument("--annotations")
     s = sub.add_parser("statistics"); s.add_argument("--run", required=True)
     s = sub.add_parser("benchmark"); s.add_argument("--split", choices=["pilot","dev","test"], default="dev"); s.add_argument("--repeats", type=int, default=5); s.add_argument("--warmup", type=int, default=1); s.add_argument("--limit", type=int, default=20); s.add_argument("--lock")
@@ -127,10 +129,26 @@ async def execute(args) -> object:
     if command == "validate":
         chunks = [Chunk.model_validate(x).json_record() for x in read_jsonl(cfg.chunks)]
         return validate_dataset(chunks, load_queries(cfg.queries), load_documents(cfg.documents))
+    if command == "readiness":
+        from .readiness import readiness
+        return readiness(cfg, args.output)
     if command == "split":
-        rows = assign_splits(read_jsonl(cfg.queries), read_jsonl(cfg.chunks), cfg.seed, args.dev_fraction, args.test_fraction)
+        source = read_jsonl(cfg.queries)
+        rows = assign_splits(source, read_jsonl(cfg.chunks), cfg.seed, args.dev_fraction, args.test_fraction,
+                             reuse_pilot_in_dev=args.reuse_pilot_in_dev)
+        source_hash = file_hash(cfg.queries)
         write_jsonl(args.output, rows)
         load_queries(args.output)
+        write_json(str(args.output) + ".split_manifest.json", {
+            "seed": cfg.seed, "dev_fraction": args.dev_fraction, "test_fraction": args.test_fraction,
+            "reuse_pilot_in_dev": args.reuse_pilot_in_dev, "source_sha256": source_hash,
+            "chunks_sha256": file_hash(cfg.chunks), "output_sha256": file_hash(args.output),
+            "pilot_query_ids": sorted(q["query_id"] for q in source if q["split"] == "pilot"),
+            "splits": {s: {"queries": sum(q["split"] == s for q in rows),
+                "groups": len({q["group_id"] for q in rows if q["split"] == s}),
+                "answerable": sum(q["split"] == s and q["answerable"] for q in rows)} for s in ("pilot", "dev", "test")},
+            "assignment": [{"query_id": q["query_id"], "source_group_id": original["group_id"],
+                            "group_id": q["group_id"], "split": q["split"]} for original,q in zip(source, rows)]})
         return args.output
     if command == "build-index":
         providers = Providers(cfg)
@@ -149,11 +167,13 @@ async def execute(args) -> object:
     if command == "freeze": return await freeze(cfg,args.output)
     if command == "run": return await run(cfg,args.split,lock_path=args.lock,run_id=args.run_id,fresh=args.fresh,resume=args.resume)
     if command == "sweep": return await sweep(cfg,args.grid_size)
-    if command == "tune": return tune(args.run,cfg,args.output_config)
+    if command == "tune": return tune(args.run,cfg,args.output_config,allow_infeasible=args.allow_infeasible)
     if command == "evaluate": return evaluate(args.run,args.annotations)
     if command == "statistics":
         actual = read_json(Path(args.run)/"manifest.json")["protocol"]["config"]
-        return paired_statistics(args.run,actual["bootstrap_repetitions"],actual["seed"],actual["quality_delta"])
+        return paired_statistics(args.run,actual["bootstrap_repetitions"],actual["seed"],actual["quality_delta"],
+                                 margins=Config.model_validate(actual).quality_margins,
+                                 noninferiority_alpha=actual.get("noninferiority_alpha", .05))
     if command == "benchmark": return await benchmark(cfg,args.split,args.repeats,args.warmup,args.limit,args.lock)
     if command == "summarize-benchmark": return summarize_benchmark(args.run)
     if command == "export-annotations": return export_annotations(args.run,args.kind,args.output,cfg.seed)

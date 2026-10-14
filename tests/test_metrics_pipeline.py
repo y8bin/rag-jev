@@ -51,7 +51,8 @@ def test_zero_claims_and_invalid_citations_never_grounded_correct(corpus):
     _,_,chunks,q = corpus
     row = {"query":q.json_record(),"selected":[chunks[0]],"status":"ok","answer":
         {"answer":"14","claims":[],"citations":[],"rationale":"","abstained":False}}
-    a = {"answer_hash":digest(row["answer"]),"correctness":True,"core_supported":True,"claim_labels":[]}
+    a = {"answer_hash":digest(row["answer"]),"correctness":True,"core_supported":True,"claim_labels":[],
+         "annotation_schema_version":2,"claims_complete":True,"omitted_claims":[]}
     m = answer_metrics(row,a)
     assert m["claim_support"] is None and m["grounded_correct"] == 0
 
@@ -75,7 +76,9 @@ def test_end_to_end_cache_blinding_annotations_and_lock(corpus,tmp_path):
         for t in tasks:
             t["correctness"] = True
             t["core_supported"] = True
+            t["claims_complete"] = True
             for label in t["claim_labels"]:
+                label["is_core"] = True
                 label["support"] = "supported"
                 for c in label["citations"]: c["supported"] = True
         write_jsonl(tasks_path,tasks)

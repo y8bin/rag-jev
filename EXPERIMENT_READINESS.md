@@ -1,6 +1,6 @@
 # 현재 진행 상황과 실험 시작 안내
 
-확인일: 2026-10-12, Qdrant 전환 후 재점검. 이 폴더의 Markdown, Python 구현, 설정, 입력·결과 파일을 대조하고 테스트·데모·로컬 smoke를 재실행한 기록이다. 실제 모델 API 호출, 원격 Qdrant 접속, 법률 데이터 실험은 이번 점검에서 수행하지 않았다. 기존 전환 기록에는 Qdrant 공식 문서 확인이 기재되어 있으며, 이번 재점검은 로컬 코드와 실행 결과를 기준으로 한다. 외부 서비스의 최신 사양·요금은 다시 확인하지 않았다.
+확인일: 2026-10-14. 기존 Markdown과 감사 문서를 현재 코드·파일에 대조하고, 기존 70개 테스트 통과를 확인한 뒤 논문 검증 보완 및 회귀 테스트를 진행했다. 현재 **88 passed**이며 오프라인 `readiness`에서 연구 입력·인덱스·비용 누락을 확인했다. 실제 모델 API 호출, 원격 Qdrant 접속, 법률 데이터 실험과 최신 서비스 요금 확인은 이번 작업에서 수행하지 않았다. 단계별 실행과 자료 양식은 [논문 검증 실행서](PAPER_VALIDATION_RUNBOOK.md)를 따른다.
 
 ## 1. 현재 어디까지 진행됐는가
 
@@ -11,16 +11,17 @@
 | 연구 설계 | 자체 코퍼스, 5개 비교군, 검색·답변·비용 평가 절차 작성 | 실행 기준 있음 |
 | Python CLI | ingest부터 통계·그림까지 구현 | 새 실행기를 처음부터 만들 필요 없음 |
 | 환경 | `.venv`와 Qdrant, sentence-transformers, torch, pypdf, matplotlib 등 설치 확인 | 모델 가중치·실제 추론 성공까지 확인한 것은 아님 |
-| 자동 검증 | `.venv/bin/python -m pytest -q`: **46 passed** | 현재 테스트 범위 통과; HTTP는 mock 기반 |
+| 자동 검증 | `.venv/bin/python -m pytest -q`: **88 passed** | 지표 v2·주장 완전성·인용 일치도·FR 통계/불가능 분기·pilot 보호·계획 잠금 검증; HTTP는 mock 기반 |
 | 예제 입력 | 가상 문서 6행, 질문 6행(dev 3/test 3), 청크 6개 | 연구용 원문·평가 세트 아님 |
 | 이전 산출물 | 프로젝트 밖 별도 보관 후 현재 데모 재생성 | `/private/tmp/rag-jev-before-qdrant-20261012/demo-artifacts.tar.gz` |
-| 이번 재실행 | Qdrant 로컬 영속 모드, dev 3문항 × 5방법 = 15행·실패 0 | `results/demo/20261012T081421_554c9d1b` |
-| Qdrant smoke | `status: ok`, 6 points, 256차원, 필터 후 5개 중 5개 반환 | 실제 로컬 저장소 로드·무결성 검증·검색 확인 |
+| 이번 합성 CLI 재검증 | 격리 Qdrant 로컬 영속 모드, dev 3문항 × 5방법 = 15행·실패 0 | `results/preparation/engineering_20261014/runs/20261014T022851_4764d168`, 연구 유효성 false |
+| 이전 Qdrant smoke | `status: ok`, 6 points, 256차원, 필터 후 5개 중 5개 반환 | 2026-10-12 기록; 현재 로컬 무결성·검색은 자동 테스트와 합성 CLI로 재검증 |
 | 실제 코퍼스 | `data/raw`, `data/processed` 없음 | 데이터 구축 필요 |
-| 실제 모델·API 설정 | `.env` 없음; 확인한 핵심 프로세스 환경변수도 미설정 | 인증·모델·revision·단가 설정 필요 |
+| 실제 모델·API 설정 | `.env` 있음; 임베딩·CE·Jev 식별 설정 로컬 확인 | 새 코드에서 실제 인증·계약·usage/단가 검증 필요 |
 | 실제 인덱스 | `indexes/main` 없음 | 실제 임베딩으로 새로 구축 필요 |
 | 평가·최종 시험 | 사람 판정, `configs/final.yaml`, 시험 lock 없음 | 개발·튜닝·잠금 시험 미수행 |
-| 코드 이력 | 현재 폴더는 Git 저장소가 아님 | 커밋 기반 이력 및 의존성 lockfile 보완 필요 |
+| 코드 이력 | Git 저장소 있음. 환경 manifest에 commit·dirty·패키지 전체 기록 | 실행 commit과 implementation digest 함께 보존 |
+| 준비 자료 | pilot/pilot-answers/split/dev YAML, 범위·평가·통계 초안, 입력 manifest 양식, 71개 환경 pin | 실제 데이터·사람 승인·재설치 검증은 미완료 |
 
 데모는 임베딩·CE·Jev·생성 모두 mock이며 `research_valid: false`다. 사람 답변 평가도 없다. 데모의 높은 검색 점수나 0원 비용은 Jev의 실제 성능·가격을 의미하지 않는다. 실제 Qdrant를 사용했다는 사실만으로 연구 결과가 되지 않는다.
 
@@ -107,7 +108,7 @@ Cloud라면 실제 클러스터 주소와 키를 사용한다. remote도 로컬 
 
 **대규모 실행 전 확인할 구현 한계:** 현재 검색은 필터를 통과한 전체 point의 점수와 payload를 받아 정렬한 뒤 K개를 고른다. 인덱스를 열 때도 모든 벡터와 payload를 읽어 해시를 검사한다. 따라서 Qdrant로 바뀌었다고 대규모 검색·네트워크 전송이 자동으로 최적화된 것은 아니다. 실제 코퍼스 규모에서 시작 시간·메모리·질의 지연을 측정하고, 필요하면 무결성 검증 시점과 Top-K 동점 처리 방식을 보완해야 한다. 근사 검색을 도입하면 후보 재현율을 별도로 검증한다.
 
-**원격 비용의 한계:** 현재 검색 비용은 remote에서도 요청 경과 시간에 `LOCAL_USD_PER_HOUR`를 곱한 추정치다. Cloud 청구액·저장비·서버 유지비를 자동으로 가져오지 않는다. 로컬 모델과 원격 DB의 자원이 다르면 단일 시간 단가로 각 비용을 정확하게 표현할 수 없으므로, 비용 논문 실험 전 별도 비용 기록·배분 또는 계산 코드 보완이 필요하다.
+**원격 비용의 한계:** 원격 검색은 별도 `QDRANT_USD_PER_HOUR`로 요청 경과 시간을 환산하며 미입력은 null이다. 로컬 모델 시간 단가로 대체하지 않는다. Cloud 청구액·저장·네트워크·서버 유지비를 자동 수집하지 않으므로 실제 청구와 시간 배분식을 비용 manifest에 기록·검증해야 한다.
 
 ## 4. 실제 실험 전에 필요한 준비물
 
@@ -149,9 +150,9 @@ Cloud라면 실제 클러스터 주소와 키를 사용한다. remote도 로컬 
 cp .env.example .env
 ```
 
-현재 `.env`가 없는 상태에서 한 번 복사한다. 이후 같은 명령으로 작성한 설정을 덮어쓰지 않는다. 키는 `.env`에 입력하고 YAML에는 넣지 않는다.
+현재 `.env`가 이미 있으므로 위 복사 명령을 실행하지 않는다. 새 환경에서 파일이 없을 때만 한 번 복사한다. 키는 `.env`에 입력하고 YAML에는 넣지 않는다.
 
-현재 폴더에는 `.env copy.example`도 있지만 기본 CLI가 읽는 파일은 `.env`다. 다른 파일을 의도적으로 사용하려면 전역 옵션 `--env-file '파일 경로'`를 지정한다. 파일 내용이나 키는 이번 정리에 노출하지 않았다.
+기본 CLI는 `.env`를 읽는다. 다른 파일을 의도적으로 사용하려면 전역 옵션 `--env-file '파일 경로'`를 지정한다. 파일 내용이나 키는 이 문서에 기록하지 않는다.
 
 | 역할 | 기본 설정에서 필요한 항목 |
 |---|---|
@@ -159,7 +160,7 @@ cp .env.example .env
 | 로컬 CE | `CE_LOCAL_MODEL`, `CE_LOCAL_REVISION` |
 | Jev | `JEV_BASE_URL`, `JEV_API_KEY`, `JEV_MODEL` |
 | 생성 | `GENERATION_BASE_URL`, 서비스에 필요한 키, `GENERATION_MODEL` |
-| 비용 평가 | Jev·생성 입력/출력 단가, `LOCAL_USD_PER_HOUR` |
+| 비용 평가 | Jev·생성 입력/출력 단가, `LOCAL_USD_PER_HOUR`, remote이면 `QDRANT_USD_PER_HOUR` |
 | 실행 장치 | `MODEL_DEVICE` 및 모델 다운로드·메모리 여건 |
 
 `BAAI/bge-m3`는 `.env.example`의 임베딩 후보이며 실제 모델 선정이 끝났다는 의미는 아니다. 모델 revision은 정확한 값을 고정한다. Hugging Face 접근 제한이 있는 모델이면 접근 권한과 `HF_TOKEN`도 필요하다.
@@ -264,7 +265,7 @@ legal-rag --config configs/pilot.yaml evaluate --run results/pilot/answers_001
 
 ### 6-1. 그룹 분할과 후보 라벨
 
-실제 질문 전체의 경로를 main 설정에 반영한 뒤 필요하면 `split`을 사용한다. 기본 분할은 dev 25%/test 75%이고 pilot을 별도로 확보해 주지 않는다. pilot을 이미 운영했다면 test로 재배정하지 않도록 분할을 관리한다. 자동 분할은 질문 개수가 아니라 연결된 그룹 단위이므로 목표 문항 수와 정확히 일치하지 않을 수 있다.
+실제 질문 전체의 경로를 설정에 반영한 뒤 `split`을 사용한다. 기존 pilot의 연결 성분은 기본 pilot에 유지되고 test로 재배정되지 않는다. 개발 재사용을 사전 지정하면 `--reuse-pilot-in-dev`로 dev에 포함한다. 나머지 미노출 연결 성분을 기본 dev 25%/test 75%로 분할하며 최소 2개가 필요하다. 입력·청크·출력 해시와 실제 구성은 `.split_manifest.json`에 기록된다. 그룹 단위이므로 목표 문항 비율과 다를 수 있다.
 
 ```bash
 legal-rag --config configs/main.yaml split --output data/processed/queries_split.jsonl
@@ -300,7 +301,7 @@ legal-rag --config configs/main.yaml tune --run SWEEP_PATH --output-config confi
 
 `sweep`은 CE-R·Jev-R 기준선 2조건과 각 FR 5조건, 총 12조건이다. 개발 200문항이면 최대 2,400개의 답변 판정 단위가 생긴다. 동일 문맥 답변은 캐시될 수 있어 실제 생성 API 호출 수와 같지는 않다. 전체 사람 평가가 어렵다면 실행 전에 `human_evaluation_limit`를 정한다. 같은 표본 질문의 모든 조건을 평가해야 한다.
 
-`tune`은 CE-R 대비 ESR과 근거 있는 정답 비율 하락이 delta 이내인 문턱값 중 총 온라인 비용이 가장 낮은 것을 고른다. 어느 FR이든 만족하는 값이 없으면 `threshold_selection.json`을 남기고 최종 설정을 만들지 않는다. 시험 결과를 본 뒤 기준을 완화하지 않는다.
+`tune`은 CE-R 대비 ESR과 v2 근거 있는 정답 비율 하락이 margin 이내인 문턱값 중 최소 총 온라인 비용을 고른다. 지표별 `esr_quality_delta`·`answer_quality_delta`를 지정할 수 있다. 만족값이 없으면 기본은 보고서만 남기며, 시험 전 분기를 정했다면 `--allow-infeasible`로 불가능 FR만 제외하고 고정 N·가능한 FR 설정을 만든다. 시험 결과를 본 뒤 기준을 완화하지 않는다. 새 답변 양식은 핵심 여부·주장 완전성 판정이 필요하며 기존 v1을 새 주 지표로 자동 전환하지 않는다.
 
 ### 6-3. 잠금 시험
 

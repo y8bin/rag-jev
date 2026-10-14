@@ -9,6 +9,9 @@ from .prompts import generation_content
 from .providers import Providers
 
 
+ANSWER_ANNOTATION_VERSION = 2
+
+
 def validate_answer_annotation(row: dict, a: dict) -> None:
     if a.get("answer_hash") != digest(row["answer"]):
         raise ValueError("Annotation refers to a different answer")
@@ -18,6 +21,18 @@ def validate_answer_annotation(row: dict, a: dict) -> None:
     labels = a.get("claim_labels")
     if not isinstance(labels, list) or len(labels) != len(claims):
         raise ValueError("One claim label is required for every generated claim")
+    if a.get("annotation_schema_version") == ANSWER_ANNOTATION_VERSION:
+        if type(a.get("claims_complete")) is not bool:
+            raise ValueError("Human claims_complete must be boolean")
+        omitted = a.get("omitted_claims")
+        if not isinstance(omitted, list) or any(not isinstance(x, str) or not x.strip() for x in omitted):
+            raise ValueError("omitted_claims must contain nonempty claim texts")
+        if a["claims_complete"] != (not omitted):
+            raise ValueError("claims_complete must agree with omitted_claims")
+        if any(type(label.get("is_core")) is not bool for label in labels):
+            raise ValueError("Every claim requires a human is_core judgment")
+    elif a.get("annotation_schema_version", 1) != 1:
+        raise ValueError("Unknown answer annotation schema version")
     for claim,label in zip(claims, labels):
         if label.get("support") not in ("supported", "unsupported", "contradicted"):
             raise ValueError("Invalid claim support label")
@@ -51,8 +66,10 @@ def export_annotations(run_dir: str, kind: str, output_dir: str, seed: int) -> P
                             "answer_hash": digest(row["answer"])}
             templates.append({"annotation_id": aid, "question": q["question"], "as_of_date": q.get("as_of_date"),
                 "jurisdiction": q.get("jurisdiction", ""), "reference_answer": q["reference_answer"], "answer": row["answer"], "evidence": row["selected"],
-                "correctness": None, "core_supported": None, "reviewer": "",
-                "claim_labels": [{"support": None, "citations": [{"evidence_id": cid, "supported": None}
+                "annotation_schema_version": ANSWER_ANNOTATION_VERSION,
+                "correctness": None, "core_supported": None, "claims_complete": None,
+                "omitted_claims": [], "reviewer": "", "notes": "",
+                "claim_labels": [{"is_core": None, "support": None, "citations": [{"evidence_id": cid, "supported": None}
                     for cid in claim["evidence_ids"]]} for claim in row["answer"]["claims"]]})
             # Remove method score/rank from all documents shown to annotators.
             for c in templates[-1]["evidence"]:
@@ -74,7 +91,8 @@ def export_annotations(run_dir: str, kind: str, output_dir: str, seed: int) -> P
                 mapping[aid]["task_input_hash"] = digest({k:templates[-1][k] for k in ("question","as_of_date","jurisdiction","candidate")})
     random.Random(seed).shuffle(templates)
     write_jsonl(output / "tasks.jsonl", templates)
-    write_json(output / "private_mapping.json", {"kind": kind, "run_id": raw[0]["run_id"], "mapping": mapping})
+    write_json(output / "private_mapping.json", {"kind": kind, "run_id": raw[0]["run_id"], "mapping": mapping,
+        "annotation_schema_version": ANSWER_ANNOTATION_VERSION if kind == "answers" else 1})
     return output / "tasks.jsonl"
 
 
@@ -97,7 +115,12 @@ def import_answers(run_dir: str, tasks_path: str, mapping_path: str) -> Path:
         if digest({k:t[k] for k in ("question","as_of_date","jurisdiction","reference_answer","answer","evidence")}) != m["task_input_hash"]:
             raise ValueError("Annotation question/evidence changed since export")
         a = {**m, "source": "human", "correctness": t["correctness"], "core_supported": t["core_supported"],
-             "claim_labels": t["claim_labels"], "reviewer": t.get("reviewer", "")}
+             "claim_labels": t["claim_labels"], "reviewer": t.get("reviewer", ""), "notes": t.get("notes", ""),
+             "annotation_schema_version": mapping.get("annotation_schema_version", 1)}
+        if a["annotation_schema_version"] == ANSWER_ANNOTATION_VERSION:
+            if t.get("annotation_schema_version") != ANSWER_ANNOTATION_VERSION:
+                raise ValueError("Annotation schema changed since export")
+            a.update({"claims_complete": t.get("claims_complete"), "omitted_claims": t.get("omitted_claims")})
         validate_answer_annotation(row, a)
         result.append(a)
     output = Path(run_dir) / "annotations.jsonl"

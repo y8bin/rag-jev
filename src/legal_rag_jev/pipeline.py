@@ -32,6 +32,7 @@ def protocol(cfg: Config, providers: Providers) -> dict:
     return {"config": cfg.model_dump(exclude={"output_dir", "cache_dir"}), "providers": identities(cfg, providers),
             "implementation_digest": implementation_digest(), "dependency_versions": environment_manifest()["dependencies"],
             "pricing": pricing(), "queries_sha256": file_hash(cfg.queries),
+            "protocol_documents_sha256": {path: file_hash(path) for path in cfg.protocol_documents},
             "index_version": read_json(Path(cfg.index_dir) / "manifest.json")["index_version"],
             "prompts": {"applicability": APPLICABILITY, "criteria": CRITERIA,
                         "relevance": RELEVANCE, "generator": GENERATION_SYSTEM}}
@@ -197,7 +198,8 @@ def human_sample(cfg: Config, queries: list) -> list[str]:
     for q in queries:
         buckets.setdefault((q.task_type,q.answerable), []).append(q.query_id)
     rng = random.Random(cfg.seed)
-    for bucket in buckets.values():
+    for key in sorted(buckets):
+        bucket = buckets[key]
         bucket.sort()
         rng.shuffle(bucket)
     chosen = []
@@ -243,6 +245,16 @@ async def run(cfg: Config, split: str, *, lock_path: str | None = None, run_id: 
                 "planned_queries": [q.query_id for q in queries], "environment": environment_manifest()})
             manifest = read_json(output / "manifest.json")
             manifest["human_evaluation_query_ids"] = human_sample(cfg,queries)
+            chosen_ids = set(manifest["human_evaluation_query_ids"])
+            manifest["human_evaluation_sample"] = {
+                "policy": "all_queries" if len(chosen_ids) == len(queries) else "round_robin_task_type_answerability",
+                "estimand": "unweighted_mean_in_selected_questions", "seed": cfg.seed,
+                "population_queries": len(queries), "selected_queries": len(chosen_ids),
+                "selected_groups": len({q.group_id for q in queries if q.query_id in chosen_ids}),
+                "strata": [{"task_type": task, "answerable": answerable,
+                    "population": sum(q.task_type == task and q.answerable == answerable for q in queries),
+                    "selected": sum(q.task_type == task and q.answerable == answerable and q.query_id in chosen_ids for q in queries)}
+                    for task,answerable in sorted({(q.task_type,q.answerable) for q in queries})]}
             write_json(output / "manifest.json",manifest)
         complete = {(r["query"]["query_id"], r["condition_id"]) for r in rows}
         cache = Cache(cfg.cache_dir, enabled=not fresh)

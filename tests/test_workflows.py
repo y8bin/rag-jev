@@ -23,8 +23,10 @@ def annotate(run_dir,tmp_path):
     for row in rows:
         row["correctness"] = not row["answer"]["abstained"]
         row["core_supported"] = not row["answer"]["abstained"]
+        row["claims_complete"] = True
         row["reviewer"] = "test-only synthetic labeler"
         for claim in row["claim_labels"]:
+            claim["is_core"] = True
             claim["support"] = "supported"
             for cite in claim["citations"]: cite["supported"] = True
     write_jsonl(tasks,rows)

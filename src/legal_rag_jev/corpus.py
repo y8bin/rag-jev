@@ -147,7 +147,8 @@ def validate_dataset(chunks: list[dict], queries: list[Query], documents: list[D
             "split_counts": {s: sum(q.split == s for q in queries) for s in ("pilot", "dev", "test")}}
 
 
-def assign_splits(rows: list[dict], chunks: list[dict], seed: int, dev_fraction: float, test_fraction: float) -> list[dict]:
+def assign_splits(rows: list[dict], chunks: list[dict], seed: int, dev_fraction: float, test_fraction: float,
+                  *, reuse_pilot_in_dev: bool = False) -> list[dict]:
     if dev_fraction <= 0 or test_fraction <= 0 or dev_fraction + test_fraction > 1:
         raise ValueError("Fractions must be positive with sum <= 1")
     parent: dict[str, str] = {}
@@ -157,25 +158,34 @@ def assign_splits(rows: list[dict], chunks: list[dict], seed: int, dev_fraction:
             parent[x] = find(parent[x])
         return parent[x]
     def union(a, b):
-        parent[find(b)] = find(a)
+        left, right = sorted((find(a), find(b)))
+        parent[right] = left
     lookup = {c["chunk_id"]: c for c in chunks}
-    doc_groups = {c["doc_id"]: c["group_id"] for c in chunks}
+    doc_groups: dict[str, set[str]] = {}
+    for c in chunks:
+        doc_groups.setdefault(c["doc_id"], set()).add(c["group_id"])
+    for groups in doc_groups.values():
+        for group in groups:
+            union("d:" + min(groups), "d:" + group)
     for q in rows:
         qkey = "q:" + q["group_id"]
         find(qkey)
         for u in q.get("evidence_units", []):
             if u.get("doc_id"):
-                union(qkey, "d:" + doc_groups.get(u["doc_id"], u["doc_id"]))
+                for group in doc_groups.get(u["doc_id"], {u["doc_id"]}):
+                    union(qkey, "d:" + group)
             for cid in u.get("chunk_ids", []):
                 union(qkey, "d:" + lookup[cid]["group_id"])
-    roots = sorted({find("q:" + q["group_id"]) for q in rows})
+    protected = {find("q:" + q["group_id"]) for q in rows if q.get("split") == "pilot"}
+    roots = sorted({find("q:" + q["group_id"]) for q in rows} - protected)
     random.Random(seed).shuffle(roots)
     if len(roots) < 2:
-        raise ValueError("At least two independent groups are needed for dev/test")
+        raise ValueError("At least two unexposed independent groups are needed for dev/test; pilot-connected groups are protected")
     nd = max(1, round(len(roots) * dev_fraction))
     nt = max(1, round(len(roots) * test_fraction))
     if nd + nt > len(roots):
         nd = len(roots) - nt
     assignment = {root: "dev" if i < nd else "test" if i < nd + nt else "pilot" for i, root in enumerate(roots)}
+    assignment.update({root: "dev" if reuse_pilot_in_dev else "pilot" for root in protected})
     return [{**q, "group_id": "G_" + digest(find("q:" + q["group_id"]))[:16],
              "split": assignment[find("q:" + q["group_id"])]} for q in rows]

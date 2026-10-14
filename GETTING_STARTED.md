@@ -176,7 +176,7 @@ legal-rag --config configs/pilot.yaml chunk
 | `*_INPUT_USD_PER_MILLION` 등 단가, `LOCAL_USD_PER_HOUR` | 비용 비교에 필수. 모르면 비워 두고(=미확인), 무료일 때만 `0` |
 | `MODEL_DEVICE` | 기본 `cpu`. GPU가 있으면 `cuda` 또는 `mps` |
 
-임베딩·CE 모델은 이미 기본값이 들어 있어 그대로 쓰면 됩니다.
+임베딩·CE 기본값은 연결을 시작하기 위한 후보입니다. 실제 코퍼스 언어·법률 분야 적합성과 입력 길이를 확인하고, 개발에서 선정한 모델의 정확한 revision을 고정해야 합니다. 원격 Qdrant 비용에는 별도 `QDRANT_USD_PER_HOUR`와 청구·자원 배분 근거가 필요합니다.
 
 ### 5-6. 소규모 연결 확인 (실행 담당)
 
@@ -207,7 +207,7 @@ legal-rag --config configs/pilot.yaml run --split pilot --run-id answers_001
 legal-rag --config configs/pilot.yaml export-annotations --run results/pilot/answers_001 --kind answers --output results/pilot/answer_review_001
 ```
 
-`results/pilot/answer_review_001/tasks.jsonl`을 평가자 수만큼 복사해 나눠 줍니다(`private_mapping.json`은 주지 않음). 평가자는 각 답변에 대해 정답 여부(`correctness`), 핵심 주장이 근거로 뒷받침되는지(`core_supported`), 주장별 지지 여부(`supported`/`unsupported`/`contradicted`), 인용별 지지 여부, 평가자 이름(`reviewer`)을 채웁니다. 질문·답변·근거 본문은 고치지 않습니다.
+`results/pilot/answer_review_001/tasks.jsonl`을 평가자 수만큼 복사해 나눠 줍니다(`private_mapping.json`은 주지 않음). 평가자는 정답 여부(`correctness`), 핵심 지지(`core_supported`), 주장별 핵심 여부(`is_core`)·지지, 인용별 지지, 평가자 이름(`reviewer`)을 채웁니다. `answer`와 `rationale`을 모두 읽어 빠진 주장이 있으면 `omitted_claims`에 적고 `claims_complete=false`, 빠진 것이 없으면 `[]`와 `true`로 판정합니다. 질문·답변·근거 본문은 고치지 않습니다. [평가 지침](research/annotation_guidelines.md)에 예시가 있습니다.
 
 두 평가자의 판정을 비교해 다른 부분을 조정 담당이 정리한 최종 파일 `adjudicated.jsonl`을 만든 뒤 가져옵니다.
 

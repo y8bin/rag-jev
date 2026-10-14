@@ -1,0 +1,10 @@
+# All pilot and fresh questions. Existing pilot components remain protected.
+documents: data/processed/documents.jsonl
+chunks: data/processed/chunks.jsonl
+queries: data/processed/queries_all.jsonl
+index_dir: indexes/research_v1
+qdrant_mode: local
+qdrant_collection: legal_rag_research
+methods: [vector, ce_r, jev_r]
+generate: false
+seed: 20261009

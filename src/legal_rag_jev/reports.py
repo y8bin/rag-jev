@@ -8,7 +8,7 @@ import numpy as np
 import yaml
 
 from .config import Config, pricing, provider_identity
-from .io import implementation_digest, read_json, read_jsonl, write_json, write_jsonl
+from .io import file_hash, implementation_digest, read_json, read_jsonl, write_json, write_jsonl
 from .pipeline import run
 
 
@@ -33,7 +33,7 @@ async def sweep(cfg: Config, grid_size: int) -> Path:
     return out
 
 
-def tune(run_dir: str, cfg: Config, output_config: str) -> Path:
+def tune(run_dir: str, cfg: Config, output_config: str, *, allow_infeasible: bool = False) -> Path:
     directory = Path(run_dir)
     manifest = read_json(directory / "manifest.json")
     if manifest["split"] != "dev" or not manifest["protocol"]["config"]["generate"]:
@@ -48,6 +48,11 @@ def tune(run_dir: str, cfg: Config, output_config: str) -> Path:
         raise ValueError("No answerable development queries")
     # Validate the supplied base config against the actual run, rather than attaching thresholds to another experiment.
     run_cfg = manifest["protocol"]["config"]
+    if file_hash(cfg.queries) != manifest["protocol"]["queries_sha256"]:
+        raise ValueError("Query data changed since sweep")
+    attached = {path: file_hash(path) for path in cfg.protocol_documents}
+    if attached != manifest["protocol"].get("protocol_documents_sha256", {}):
+        raise ValueError("Protocol documents changed since sweep")
     for kind,identity in manifest["protocol"]["providers"].items():
         if provider_identity(kind,getattr(cfg,kind+"_backend")) != identity:
             raise ValueError(f"Provider environment changed since sweep: {kind}")
@@ -58,21 +63,27 @@ def tune(run_dir: str, cfg: Config, output_config: str) -> Path:
         if key not in ("ce_threshold", "jev_threshold") and current[key] != run_cfg[key]:
             raise ValueError(f"Base config does not match sweep: {key}")
     for s in summary:
-        if s["grounded_correct_n"] != answered or s["online_cost_usd_n"] != s["queries"]:
+        if not s.get("grounded_correct_complete") or s["grounded_correct_n"] != answered or s["online_cost_usd_n"] != s["queries"]:
             raise ValueError("Complete human answer judgments and complete costs are required for tuning")
     selected = {}
     for method in ("ce_fr", "jev_fr"):
         feasible = [s for s in summary if s["method"] == method and
-            s["esr"] >= baseline["esr"] - cfg.quality_delta and
-            s["grounded_correct"] >= baseline["grounded_correct"] - cfg.quality_delta]
+            s["esr"] >= baseline["esr"] - cfg.quality_margins["esr"] and
+            s["grounded_correct"] >= baseline["grounded_correct"] - cfg.quality_margins["grounded_correct"]]
         if feasible:
             selected[method] = min(feasible, key=lambda s:(s["online_cost_usd"], -s["esr"], s["threshold"]))
         else:
             selected[method] = None
-    write_json(directory / "threshold_selection.json", {"baseline": "ce_r", "delta": cfg.quality_delta, "selected": selected})
-    if any(s is None for s in selected.values()):
+    infeasible = [method for method, value in selected.items() if value is None]
+    methods = [m for m in cfg.methods if m not in infeasible]
+    write_json(directory / "threshold_selection.json", {"baseline": "ce_r", "delta": cfg.quality_delta,
+        "quality_margins": cfg.quality_margins, "selected": selected, "infeasible_methods": infeasible,
+        "continuation": "omit_infeasible_fr" if allow_infeasible else "require_all_fr", "final_methods": methods})
+    if infeasible and not allow_infeasible:
         raise ValueError("No feasible threshold for one or more methods; see threshold_selection.json. Constraints were not relaxed")
-    locked_cfg = cfg.model_copy(update={"ce_threshold": selected["ce_fr"]["threshold"], "jev_threshold": selected["jev_fr"]["threshold"]})
+    locked_cfg = cfg.model_copy(update={"methods": methods,
+        "ce_threshold": selected["ce_fr"]["threshold"] if selected["ce_fr"] else None,
+        "jev_threshold": selected["jev_fr"]["threshold"] if selected["jev_fr"] else None})
     p = Path(output_config)
     p.parent.mkdir(parents=True, exist_ok=True)
     if p.exists():
@@ -152,20 +163,45 @@ def agreement(first: str, second: str, output: str) -> Path:
     common = sorted(set(a)&set(b))
     if not common:
         raise ValueError("No common annotation IDs")
-    fields = ["grade"] if "grade" in a[common[0]] else ["correctness","core_supported","claim_support"]
+    relevance = "grade" in a[common[0]]
+    fields = ["grade"] if relevance else ["correctness","core_supported","claim_support","citation_support"]
+    if not relevance and a[common[0]].get("annotation_schema_version") == 2:
+        fields += ["claims_complete", "is_core"]
+    for k in common:
+        immutable = ("question", "as_of_date", "jurisdiction", "candidate") if relevance else (
+            "question", "as_of_date", "jurisdiction", "reference_answer", "answer", "evidence", "annotation_schema_version")
+        if any(a[k].get(f) != b[k].get(f) for f in immutable):
+            raise ValueError("Reviewers must judge the same unmodified task inputs")
     reports = {}
     for field in fields:
         pairs = []
         for k in common:
-            if field == "claim_support":
+            if field in ("claim_support", "citation_support", "is_core"):
                 x,y = a[k].get("claim_labels",[]),b[k].get("claim_labels",[])
                 if len(x) != len(y):
                     raise ValueError("Reviewer claim counts differ")
-                pairs.extend((u.get("support"),v.get("support")) for u,v in zip(x,y))
+                for u,v in zip(x,y):
+                    if field == "citation_support":
+                        left, right = u.get("citations", []), v.get("citations", [])
+                        if sorted(c.get("evidence_id") for c in left) != sorted(c.get("evidence_id") for c in right):
+                            raise ValueError("Reviewer citation IDs/counts differ")
+                        # Match by ID and occurrence, rather than relying on a reviewer's array ordering.
+                        left = sorted(left, key=lambda c:c["evidence_id"])
+                        right = sorted(right, key=lambda c:c["evidence_id"])
+                        pairs.extend((c.get("supported"), d.get("supported")) for c,d in zip(left,right))
+                    else:
+                        key = "support" if field == "claim_support" else "is_core"
+                        pairs.append((u.get(key), v.get(key)))
             else:
                 pairs.append((a[k].get(field),b[k].get(field)))
         if any(x is None or y is None for x,y in pairs):
             raise ValueError("Both reviewers must complete labels")
+        if field == "grade" and any(type(v) is not int or v not in (0,1,2) for pair in pairs for v in pair):
+            raise ValueError("Relevance grades must be integers 0/1/2")
+        if field == "claim_support" and any(v not in ("supported","unsupported","contradicted") for pair in pairs for v in pair):
+            raise ValueError("Invalid claim support label")
+        if field not in ("grade", "claim_support") and any(type(v) is not bool for pair in pairs for v in pair):
+            raise ValueError("Answer and citation judgments must be booleans")
         if not pairs:
             reports[field] = {"n":0,"agreement":None,"cohen_kappa":None}
             continue
@@ -173,8 +209,14 @@ def agreement(first: str, second: str, output: str) -> Path:
         po = sum(x == y for x,y in pairs)/len(pairs)
         pe = sum(sum(x == v for x,_ in pairs)/len(pairs)*sum(y == v for _,y in pairs)/len(pairs) for v in labels)
         reports[field] = {"n":len(pairs),"agreement":po,"cohen_kappa":(po-pe)/(1-pe) if pe != 1 else None}
-    compare_fields = ["grade"] if fields == ["grade"] else ["correctness","core_supported","claim_labels"]
-    write_json(output, {"n": len(common), "fields": reports,
+        if field == "grade":
+            for power, name in ((1, "linear_weighted_kappa"), (2, "quadratic_weighted_kappa")):
+                observed = sum((abs(x-y)/2)**power for x,y in pairs)/len(pairs)
+                expected = sum((abs(x-y)/2)**power * sum(u == x for u,_ in pairs)/len(pairs) *
+                               sum(v == y for _,v in pairs)/len(pairs) for x in (0,1,2) for y in (0,1,2))
+                reports[field][name] = 1-observed/expected if expected else None
+    compare_fields = ["grade"] if relevance else ["correctness","core_supported","claim_labels","claims_complete","omitted_claims"]
+    write_json(output, {"n": len(common), "first_only": sorted(set(a)-set(b)), "second_only": sorted(set(b)-set(a)), "fields": reports,
         "conflicts": [{"annotation_id": k, "first": a[k], "second": b[k]} for k in common if any(a[k].get(f) != b[k].get(f) for f in compare_fields)],
         "note": "Conflicts require adjudication; no automatic majority label is created."})
     return Path(output)

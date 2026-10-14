@@ -57,14 +57,18 @@ def file_hash(path: str | Path) -> str:
 
 
 def environment_manifest() -> dict:
-    from importlib.metadata import version, PackageNotFoundError
-    versions = {}
-    for name in ["legal-rag-jev", "numpy", "qdrant-client", "httpx", "pydantic", "tiktoken", "sentence-transformers"]:
-        try:
-            versions[name] = version(name)
-        except PackageNotFoundError:
-            pass
-    return {"python": platform.python_version(), "platform": platform.platform(), "dependencies": versions}
+    from importlib.metadata import distributions
+    import subprocess
+    versions = dict(sorted((d.metadata["Name"].lower(), d.version) for d in distributions() if d.metadata["Name"]))
+    repo = Path(__file__).resolve().parents[2]
+    try:
+        commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=repo, capture_output=True, text=True, check=True).stdout.strip()
+        dirty = bool(subprocess.run(["git", "status", "--porcelain"], cwd=repo, capture_output=True, text=True, check=True).stdout)
+    except (OSError, subprocess.CalledProcessError):
+        commit, dirty = None, None
+    return {"python": platform.python_version(), "platform": platform.platform(), "machine": platform.machine(),
+            "processor": platform.processor(), "cpu_count": os.cpu_count(), "dependencies": versions,
+            "git_commit": commit, "git_dirty": dirty}
 
 
 @lru_cache(maxsize=1)

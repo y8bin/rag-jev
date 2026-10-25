@@ -1,0 +1,22 @@
+display_name: KBL 법령 · BM25
+retriever_backend: bm25
+query_mode: mcq
+queries: data/kbl/statq-rag-s/questions.jsonl
+benchmark_gold: data/kbl/statq-rag-s/gold.jsonl
+documents: data/kbl/statutes/documents.jsonl
+chunks: data/kbl/statutes/chunks.jsonl
+index_dir: indexes/kbl-statutes-bm25
+output_dir: results/kbl/bm25
+cache_dir: .cache/kbl/bm25
+snapshot_corpus: true
+apply_metadata_filters: true
+unknown_temporal_policy: exclude
+methods: [retrieval, ce_r, jev_r]
+top_k: 20
+top_n: 5
+ce_backend: local
+jev_backend: http
+generation_backend: openai
+chunk_max_chars: 1800
+token_budget: 12000
+max_output_tokens: 1000

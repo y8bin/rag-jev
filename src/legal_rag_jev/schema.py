@@ -103,6 +103,24 @@ class Claim(Record):
     evidence_ids: list[str] = Field(default_factory=list)
 
 
+class BenchmarkQuery(Record):
+    """Public benchmark inputs only. Gold labels never enter this model."""
+    query_id: str = Field(min_length=1)
+    group_id: str = Field(min_length=1)
+    question: str = Field(min_length=1)
+    choices: dict[str, str]
+    split: Literal["pilot", "dev", "test"] = "pilot"
+    task_type: str = "kbl_mcq"
+    jurisdiction: str = "KR"
+    as_of_date: date | None = None
+
+    @model_validator(mode="after")
+    def valid_choices(self):
+        if len(self.choices) < 2 or set(self.choices) - set("ABCDE") or any(not v.strip() for v in self.choices.values()):
+            raise ValueError("MCQ requires 2–5 nonempty A–E choices")
+        return self
+
+
 class Answer(Record):
     answer: str
     rationale: str = ""

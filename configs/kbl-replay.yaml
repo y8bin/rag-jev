@@ -1,0 +1,18 @@
+display_name: KBL · 제공 후보
+retriever_backend: replay
+query_mode: mcq
+queries: data/kbl/statq-rag-s/questions.jsonl
+benchmark_gold: data/kbl/statq-rag-s/gold.jsonl
+index_dir: data/kbl/statq-rag-s
+output_dir: results/kbl/replay
+cache_dir: .cache/kbl/replay
+snapshot_corpus: true
+apply_metadata_filters: false
+methods: [retrieval, ce_r, jev_r]
+top_k: 10
+top_n: 5
+ce_backend: local
+jev_backend: http
+generation_backend: openai
+token_budget: 12000
+max_output_tokens: 1000

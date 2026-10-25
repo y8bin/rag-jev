@@ -79,7 +79,7 @@ def detail(rows: list[dict], metrics: dict | None = None) -> dict:
     pool: dict[str, dict] = {}
     for c in rows[0].get("candidates") or []:
         pool[c["chunk_id"]] = {k: c.get(k) for k in ("chunk_id", "doc_id", "version_id", "title", "citation_key",
-            "text", "start", "end", "vector_score", "vector_rank", "effective_from", "effective_to", "jurisdiction",
+            "text", "start", "end", "vector_score", "vector_rank", "retrieval_score", "retrieval_rank", "retriever", "effective_from", "effective_to", "jurisdiction",
             "source_chunk_id", "law_name", "article", "paragraph", "chunk_level", "part", "n_parts",
             "member_chunk_ids", "version_conflict", "qdrant_point_id", "qdrant_collection")}
         pool[c["chunk_id"]]["units"] = [u["unit_id"] for u in units if _touches(u, c)]
@@ -88,6 +88,7 @@ def detail(rows: list[dict], metrics: dict | None = None) -> dict:
     for r in rows:
         cid = r.get("condition_id") or r.get("method")
         conditions.append({"condition_id": cid, "method": r.get("method"), "threshold": r.get("threshold"),
+            "retrieval_label": r.get("retrieval_label"),
             "status": r.get("status"), "error_stage": r.get("error_stage"), "error": r.get("error"),
             "ranking": [{"chunk_id": c.get("chunk_id"), "rank": c.get("rank"), "score": c.get("rerank_score")} for c in r.get("ranking") or []],
             "selected": [c.get("chunk_id") for c in r.get("selected") or []],
@@ -96,7 +97,7 @@ def detail(rows: list[dict], metrics: dict | None = None) -> dict:
             "traces": {k: _short_trace(r.get(k)) for k in ("rerank_trace", "generation_trace")},
             "metrics": (metrics.get(cid) or {}).get("metrics"),
             "human_evaluated": (metrics.get(cid) or {}).get("human_evaluated")})
-    return {"query": q, "candidates": sorted(pool.values(), key=lambda c: c.get("vector_rank") or 0),
+    return {"query": q, "candidates": sorted(pool.values(), key=lambda c: c.get("retrieval_rank") or c.get("vector_rank") or 0),
             "conditions": conditions}
 
 
@@ -191,9 +192,17 @@ class Viewer:
                 entry["explicit"] = sorted(values)
                 entry["values"] = {**fields, **values}
                 cfg = Config.model_validate(values)
+                entry["name"] = cfg.display_name or path.stem
+                entry["retriever_backend"] = cfg.retriever_backend
+                entry["snapshot_corpus"] = cfg.snapshot_corpus
                 entry["backends"] = {k: getattr(cfg, k + "_backend") for k in ("embedding", "ce", "jev", "generation")}
-                entry["index_built"] = cfg.qdrant_source == "existing" or (Path(cfg.index_dir) / "manifest.json").is_file()
-                entry["existing_collection"] = cfg.qdrant_source == "existing"
+                if cfg.retriever_backend != "vector":
+                    entry["backends"].pop("embedding")
+                entry["index_built"] = (cfg.retriever_backend == "vector" and cfg.qdrant_source == "existing") or (Path(cfg.index_dir) / "manifest.json").is_file()
+                entry["existing_collection"] = cfg.retriever_backend == "vector" and cfg.qdrant_source == "existing"
+                if cfg.retriever_backend == "replay" and entry["index_built"]:
+                    from .corpus import load_run_queries
+                    entry["questions"] = [q.json_record() for q in load_run_queries(cfg)]
                 if cfg.generate and cfg.generation_backend == "openai":
                     try:
                         entry["generation_model"] = provider_identity("generation", "openai")["model"]
@@ -247,15 +256,14 @@ class Asker:
         self._providers[str(path)] = (fingerprint, providers)
         return providers
 
-    async def _ask(self, name: str, question: str, as_of: str | None, jurisdiction: str) -> dict:
+    async def _ask(self, name: str, question: str, as_of: str | None, jurisdiction: str, query_id: str | None = None) -> dict:
         self._lock = self._lock or asyncio.Lock()
         async with self._lock:
             with environment_file_scope(self.env_file, self.inherited):
-                return await self._ask_scoped(name, question, as_of, jurisdiction)
+                return await self._ask_scoped(name, question, as_of, jurisdiction, query_id)
 
-    async def _ask_scoped(self, name: str, question: str, as_of: str | None, jurisdiction: str) -> dict:
-        from .index import VectorIndex
-        from .existing_index import ExistingVectorIndex
+    async def _ask_scoped(self, name: str, question: str, as_of: str | None, jurisdiction: str, query_id: str | None = None) -> dict:
+        from .retrievers import open_retriever
         from .pipeline import query_rows
         path = self._config(name)
         cfg = Config.load(str(path), self.env_file)
@@ -270,14 +278,24 @@ class Asker:
         q = {"query_id": ask_id, "group_id": "explore", "question": question, "split": "dev", "answerable": True,
              "as_of_date": as_of or None, "jurisdiction": jurisdiction, "task_type": "exploration",
              "reference_answer": "", "evidence_units": [], "sufficient_sets": [], "relevance": {}}
+        if cfg.retriever_backend == "replay":
+            from .corpus import load_run_queries
+            selected = next((x for x in load_run_queries(cfg) if x.query_id == query_id), None)
+            if selected is None or selected.question != question:
+                raise ValueError("제공 후보 모드에서는 준비된 KBL 문항을 선택해 주세요.")
+            if as_of or jurisdiction != selected.jurisdiction:
+                raise ValueError("KBL 문항의 기준일·관할은 변경할 수 없습니다.")
+            q = selected.json_record()
         providers = await self._providers_for(path, cfg)
-        index_type = ExistingVectorIndex if cfg.qdrant_source == "existing" else VectorIndex
-        with index_type(cfg, providers) as idx:
+        with open_retriever(cfg, providers) as idx:
             rows = await query_rows(cfg, idx, providers, q, conditions,
                                     Cache(cfg.cache_dir, enabled=cfg.qdrant_source != "existing"), False, ask_id)
-            source = {"mode": cfg.qdrant_mode, "kind": cfg.qdrant_source,
+            source = {"mode": cfg.qdrant_mode if cfg.retriever_backend == "vector" else "local",
+                      "kind": cfg.qdrant_source if cfg.retriever_backend == "vector" else cfg.retriever_backend,
+                      "retriever_backend": cfg.retriever_backend,
                       "collection": idx.collection, "collections": getattr(idx, "collections", [idx.collection]),
-                      "metadata_filters_applied": cfg.apply_metadata_filters}
+                      "metadata_filters_applied": cfg.apply_metadata_filters, "snapshot_corpus": cfg.snapshot_corpus,
+                      "retrieval_measurement": "precomputed" if cfg.retriever_backend == "replay" else "live"}
         record = {"ask_id": ask_id, "asked_at": datetime.now(timezone.utc).isoformat(), "config": path.name,
                   "exploration": True, "research_valid": False, "skipped_conditions": skipped,
                   "backends": {k: getattr(cfg, k + "_backend") for k in ("embedding", "ce", "jev", "generation")},
@@ -295,7 +313,8 @@ class Asker:
         if as_of:
             datetime.strptime(as_of, "%Y-%m-%d")
         future = asyncio.run_coroutine_threadsafe(
-            self._ask(str(body.get("config") or ""), question, as_of, str(body.get("jurisdiction") or "").strip()), self.loop)
+            self._ask(str(body.get("config") or ""), question, as_of, str(body.get("jurisdiction") or "").strip(),
+                      str(body.get("query_id") or "") or None), self.loop)
         return self.view(future.result(timeout=1800))
 
     @staticmethod

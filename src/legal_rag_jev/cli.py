@@ -10,7 +10,7 @@ from qdrant_client.http.exceptions import ApiException
 
 from .annotation import automatic_judge, export_annotations, import_answers, import_relevance
 from .config import Config, endpoint, env
-from .corpus import assign_splits, chunk_documents, ingest, load_documents, load_queries, validate_dataset
+from .corpus import assign_splits, chunk_documents, ingest, load_documents, load_queries, load_run_queries, validate_dataset
 from .evaluation import evaluate, paired_statistics, summarize_benchmark
 from .index import VectorIndex, build_index, open_client
 from .lexical import lexical_pool
@@ -19,6 +19,7 @@ from .pipeline import benchmark, freeze, run
 from .providers import ProviderError, Providers
 from .reports import agreement, calibration, error_sample, plot_results, sweep, tune
 from .schema import Answer, Chunk, Document, Query
+from .retrievers import build_bm25, open_retriever, validate_run_source
 
 
 def parser() -> argparse.ArgumentParser:
@@ -33,6 +34,15 @@ def parser() -> argparse.ArgumentParser:
     s = sub.add_parser("split"); s.add_argument("--output", required=True); s.add_argument("--dev-fraction", type=float, default=.25); s.add_argument("--test-fraction", type=float, default=.75)
     s.add_argument("--reuse-pilot-in-dev", action="store_true", help="Move pilot-connected groups to dev; never assign them to test")
     sub.add_parser("build-index")
+    s = sub.add_parser("kbl-prepare", help="Download pinned KBL question/candidate JSON and isolate gold")
+    s.add_argument("--output", default="data/kbl/statq-rag-s")
+    s.add_argument("--task", default="query_and_statute_matching_qa")
+    s.add_argument("--variant", choices=["rag_s","rag_p","rag_ps"], default="rag_s")
+    s.add_argument("--input", help="Import an already downloaded RAG JSON file offline")
+    s = sub.add_parser("kbl-corpus", help="Download and convert a pinned public legal corpus")
+    s.add_argument("--output", default="data/kbl/statutes")
+    s.add_argument("--kind", choices=["statutes","precedents"], default="statutes")
+    s.add_argument("--input", help="Import an already downloaded corpus JSONL offline")
     sub.add_parser("smoke")
     sub.add_parser("smoke-generation", help="Check generator with synthetic evidence; no corpus, index, or retrieval APIs needed")
     s = sub.add_parser("schemas"); s.add_argument("--output", default="schemas")
@@ -64,8 +74,8 @@ async def collect_candidates(cfg: Config, split: str) -> Path:
     output = Path(cfg.output_dir) / ("candidates_" + uuid.uuid4().hex[:10])
     try:
         rows = []
-        with VectorIndex(cfg, providers) as idx:
-            for q in load_queries(cfg.queries, split):
+        with open_retriever(cfg, providers, research=True) as idx:
+            for q in load_run_queries(cfg, split):
                 r = await idx.search(q.json_record())
                 rows.append({"run_id": output.name, "query": q.json_record(), "method": "candidate_pool",
                     "condition_id": "candidate_pool", "status": "ok", **r})
@@ -95,6 +105,18 @@ async def smoke_generation(cfg: Config) -> dict:
 async def smoke(cfg: Config) -> dict:
     providers = Providers(cfg)
     try:
+        if cfg.retriever_backend != "vector":
+            q = load_run_queries(cfg)[0].json_record()
+            with open_retriever(cfg,providers) as idx:
+                retrieved = await idx.search(q)
+                chunks = retrieved["candidates"][:cfg.top_n]
+                report = {"retrieval": {"backend":cfg.retriever_backend,"returned_count":len(retrieved["candidates"]),"trace":retrieved["trace"]}}
+                for kind in ("ce","jev"):
+                    if any(method.startswith(kind) for method in cfg.methods):
+                        report[kind] = (await getattr(providers,kind)(q,chunks)).trace
+                if cfg.generate:
+                    report["generation"] = (await providers.generate(q,chunks)).trace
+                return report
         q = load_queries(cfg.queries)[0].json_record()
         chunks = read_jsonl(cfg.chunks)[:1]
         if not chunks:
@@ -134,6 +156,12 @@ async def smoke(cfg: Config) -> dict:
 async def execute(args) -> object:
     cfg = Config.load(args.config, args.env_file)
     command = args.command
+    if command == "kbl-prepare":
+        from .kbl import prepare_replay
+        return prepare_replay(args.output,args.task,args.variant,source=args.input)
+    if command == "kbl-corpus":
+        from .kbl import prepare_corpus
+        return prepare_corpus(args.output,args.kind,source=args.input,max_chars=cfg.chunk_max_chars)
     if command == "ingest":
         out = args.output or cfg.documents
         rows = ingest(args.input, out)
@@ -143,6 +171,15 @@ async def execute(args) -> object:
         write_jsonl(cfg.chunks, rows)
         return {"output": cfg.chunks, "chunks": len(rows)}
     if command == "validate":
+        if cfg.query_mode == "mcq":
+            queries = load_run_queries(cfg)
+            providers = Providers(cfg)
+            try:
+                with open_retriever(cfg, providers, research=True) as idx:
+                    validate_run_source(cfg,idx,queries)
+                return {"questions":len(queries),"query_mode":"mcq","evidence_gold":False}
+            finally:
+                await providers.close()
         chunks = [Chunk.model_validate(x).json_record() for x in read_jsonl(cfg.chunks)]
         return validate_dataset(chunks, load_queries(cfg.queries), load_documents(cfg.documents))
     if command == "readiness":
@@ -167,6 +204,10 @@ async def execute(args) -> object:
                             "group_id": q["group_id"], "split": q["split"]} for original,q in zip(source, rows)]})
         return args.output
     if command == "build-index":
+        if cfg.retriever_backend == "bm25":
+            return build_bm25(cfg)
+        if cfg.retriever_backend == "replay":
+            raise ValueError("Use kbl-prepare to create a replay source")
         providers = Providers(cfg)
         try:
             manifest = await build_index(cfg, [Chunk.model_validate(x).json_record() for x in read_jsonl(cfg.chunks)], providers)

@@ -2,25 +2,34 @@
 from pathlib import Path
 
 from .config import Config, pricing, provider_headers, provider_identity
-from .corpus import load_documents, load_queries, validate_dataset
+from .corpus import load_documents, load_queries, load_run_queries, validate_dataset
 from .io import environment_manifest, file_hash, read_jsonl, write_json
 from .schema import Chunk
 
 
 def readiness(cfg: Config, output: str | None = None) -> dict:
     checks, issues = {}, []
-    for name in ("documents", "chunks", "queries"):
+    inputs = ("queries", "benchmark_gold") if cfg.retriever_backend == "replay" else ("documents", "chunks", "queries")
+    if cfg.query_mode == "mcq" and "benchmark_gold" not in inputs:
+        inputs += ("benchmark_gold",)
+    for name in inputs:
         path = Path(getattr(cfg, name))
         checks[name] = {"path": str(path), "exists": path.is_file()}
         if path.is_file():
             checks[name]["sha256"] = file_hash(path)
         else:
             issues.append({"code": "missing_input", "item": name, "path": str(path)})
-    if all(checks[name]["exists"] for name in ("documents", "chunks", "queries")):
+    if all(checks[name]["exists"] for name in inputs):
         try:
-            checks["dataset"] = validate_dataset(
-                [Chunk.model_validate(x).json_record() for x in read_jsonl(cfg.chunks)],
-                load_queries(cfg.queries), load_documents(cfg.documents))
+            if cfg.query_mode == "mcq":
+                from .mcq import validate_gold
+                queries = load_run_queries(cfg)
+                validate_gold(cfg, queries)
+                checks["dataset"] = {"queries":len(queries),"query_mode":"mcq","evidence_gold":False}
+            else:
+                checks["dataset"] = validate_dataset(
+                    [Chunk.model_validate(x).json_record() for x in read_jsonl(cfg.chunks)],
+                    load_queries(cfg.queries), load_documents(cfg.documents))
         except ValueError as e:
             issues.append({"code": "invalid_dataset", "detail": str(e)})
     checks["index_manifest"] = {"path": str(Path(cfg.index_dir)/"manifest.json"),
@@ -29,7 +38,7 @@ def readiness(cfg: Config, output: str | None = None) -> dict:
         issues.append({"code": "index_not_built"})
     if cfg.qdrant_source != "managed":
         issues.append({"code": "exploration_index_not_research_snapshot"})
-    kinds = ["embedding"] + (["ce"] if any(m.startswith("ce") for m in cfg.methods) else []) + (
+    kinds = (["embedding"] if cfg.retriever_backend == "vector" else []) + (["ce"] if any(m.startswith("ce") for m in cfg.methods) else []) + (
         ["jev"] if any(m.startswith("jev") for m in cfg.methods) else []) + (["generation"] if cfg.generate else [])
     checks["providers"] = {}
     for kind in kinds:
@@ -51,7 +60,11 @@ def readiness(cfg: Config, output: str | None = None) -> dict:
             issues.append({"code": "provider_identity_missing_or_invalid", "item": kind})
     try:
         prices = pricing()
-        required = {("local_usd_per_hour", None)} if cfg.qdrant_mode == "local" else {("qdrant_usd_per_hour", None)}
+        required = set()
+        if cfg.retriever_backend != "replay":
+            required.add(("local_usd_per_hour" if cfg.retriever_backend == "bm25" or cfg.qdrant_mode == "local" else "qdrant_usd_per_hour", None))
+        if cfg.retriever_backend == "replay":
+            checks["original_retrieval"] = {"measured":False,"cost_usd":None}
         for kind in kinds:
             backend = getattr(cfg, kind + "_backend")
             if backend == "local":

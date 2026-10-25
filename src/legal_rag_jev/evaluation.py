@@ -118,6 +118,11 @@ def answer_metrics(row: dict, annotation: dict | None) -> dict:
 def evaluate(run_dir: str, annotations: str | None = None) -> Path:
     directory = Path(run_dir)
     manifest = read_json(directory / "manifest.json")
+    if manifest.get("query_mode") == "mcq":
+        if annotations:
+            raise ValueError("MCQ label scoring does not import human evidence annotations")
+        from .mcq import evaluate_mcq
+        return evaluate_mcq(run_dir)
     if manifest.get("mode") not in ("quality", "fresh"):
         raise ValueError("Only completed quality/fresh runs are evaluated; annotation pools and benchmarks have separate workflows")
     raw = read_jsonl(directory / "raw.jsonl")
@@ -199,6 +204,8 @@ def evaluate(run_dir: str, annotations: str | None = None) -> Path:
 def paired_statistics(run_dir: str, repeats: int, seed: int, delta: float, *, margins: dict | None = None,
                       noninferiority_alpha: float = .05) -> Path:
     directory = Path(run_dir)
+    if (directory / "manifest.json").is_file() and read_json(directory / "manifest.json").get("query_mode") == "mcq":
+        raise ValueError("Evidence statistics require evidence gold; MCQ scores are a separate evaluation")
     rows = read_jsonl(directory / "metrics.jsonl")
     ready = {s["condition_id"] for s in read_json(directory/"summary.json") if s.get("grounded_correct_complete")}
     comparisons = [("ce_r", "jev_r", "esr"), ("ce_r", "jev_r", "grounded_correct"),

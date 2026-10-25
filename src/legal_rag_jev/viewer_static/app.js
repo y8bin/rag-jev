@@ -23,6 +23,7 @@ const ICON = {
 /* ---------- condition vocabulary (final_research_strategy.md §5) ---------- */
 const METHOD = {
   vector: { label: "Vector", family: "vector", fr: false },
+  retrieval: { label: "검색 순서", family: "vector", fr: false },
   ce_r: { label: "CE-R", family: "ce", fr: false },
   ce_fr: { label: "CE-FR", family: "ce", fr: true },
   jev_r: { label: "Jev-R", family: "jev", fr: false },
@@ -31,6 +32,7 @@ const METHOD = {
 };
 const methodOf = (c) => METHOD[c.method] || METHOD[String(c.condition_id || "").replace(/_grid\d+$/, "")] || { label: c.method || c.condition_id, family: "vector", fr: false };
 const condLabel = (c) => {
+  if (c.method === "retrieval") return c.retrieval_label || "검색 순서";
   const grid = String(c.condition_id || "").match(/_grid(\d+)$/);
   return grid ? `${methodOf(c).label} ·${grid[1]}` : methodOf(c).label;
 };
@@ -72,7 +74,7 @@ function diffWords(base, text) {
 }
 
 /* ---------- state + routing ---------- */
-const state = { runs: null, asks: null, configs: null, run: null, runPath: null, query: null, askCache: {}, pending: null, draft: null, lastKey: null };
+const state = { runs: null, asks: null, configs: null, run: null, runPath: null, query: null, askCache: {}, composerDrafts: {}, pending: null, draft: null, lastKey: null };
 
 function parseHash() {
   const raw = location.hash.replace(/^#\/?/, "");
@@ -159,14 +161,14 @@ function defaultQuestionConfig() {
 function costLine(info) {
   if (!info) return { cls: "block", text: "설정 없음", ok: false };
   if (info.error) return { cls: "block", text: `스키마 오류: ${info.error}`, ok: false };
-  if (!info.index_built) return { cls: "block", text: `인덱스 없음 · legal-rag --config configs/${info.path} build-index`, ok: false };
+  if (!info.index_built) return { cls: "block", text: "준비 필요", detail: info.retriever_backend === "replay" ? "legal-rag kbl-prepare" : `legal-rag --config configs/${info.path} build-index`, ok: false };
   const skipped = info.skipped?.length ? ` · ${info.skipped.map((m) => METHOD[m]?.label || m).join("·")} 제외` : "";
   const mock = Object.values(info.backends || {}).every((b) => b === "mock");
-  if (mock) return { cls: "", text: `mock · 비용 없음${skipped}`, ok: true };
+  if (mock) return { cls: "", text: "mock", detail: `비용 없음${skipped}`, ok: true };
   const remote = Object.entries(info.backends || {}).filter(([, b]) => b === "http" || b === "openai").map(([k]) => ({ embedding: "임베딩", ce: "CE", jev: "Jev", generation: "생성" })[k]);
   const source = info.existing_collection ? " · .env의 Qdrant 기존 컬렉션 검색 · 효력·관할 필터 미적용" : "";
   const model = info.generation_model ? ` · ${info.generation_model}${info.generation_model_source === "process" ? " (프로세스 환경)" : ""}` : "";
-  return { cls: "live", text: `${remote.length ? `${remote.join("·")} API 호출 · 비용 발생` : "로컬 모델"}${model}${source}${skipped}`, ok: true };
+  return { cls: "live", text: remote.length ? "API · 유료" : "로컬", detail: `${remote.join("·")}${model}${source}${skipped}`, ok: true };
 }
 
 function renderComposer(prefill) {
@@ -175,14 +177,18 @@ function renderComposer(prefill) {
   const info = configInfo(chosen);
   const line = costLine(info);
   const busy = !!state.pending;
-  return `<form class="composer" id="composer" autocomplete="off">
-    <textarea id="q-input" name="question" aria-label="질문" placeholder="법률 질문" ${busy ? "disabled" : ""}>${esc(prefill.question || "")}</textarea>
+  const replay = info?.retriever_backend === "replay";
+  const question = replay ? (info.questions || []).find((q) => q.query_id === prefill.query_id) || info.questions?.[0] : null;
+  return `<form class="composer" id="composer" data-config="${esc(chosen)}" autocomplete="off">
+    ${replay ? `<div class="record-picker"><label for="q-record">문항</label><select id="q-record" name="query_id" ${busy ? "disabled" : ""}>${(info.questions || []).map((q, i) => `<option value="${esc(q.query_id)}" ${q === question ? "selected" : ""}>${i+1}. ${esc(q.question.slice(0, 90))}</option>`).join("")}</select></div>` : ""}
+    <textarea id="q-input" name="question" aria-label="질문" placeholder="법률 질문" ${busy ? "disabled" : replay ? "readonly" : ""}>${esc(question?.question || prefill.question || "")}</textarea>
+    ${question ? `<ol class="mcq-choices">${Object.entries(question.choices).map(([key, value]) => `<li><b>${esc(key)}</b><span>${esc(value)}</span></li>`).join("")}</ol>` : ""}
     <div class="composer-bar">
       <label class="field">설정 <select name="config" id="q-config" ${busy ? "disabled" : ""}>${cfgs.map((c) => `<option value="${esc(c.path)}" ${c.path === chosen ? "selected" : ""}>${esc(c.name)}</option>`).join("")}</select></label>
-      <label class="field">기준일 <input type="date" name="as_of_date" value="${esc(prefill.as_of_date ?? today())}" ${busy ? "disabled" : ""}></label>
-      <label class="field">관할 <input type="text" name="jurisdiction" value="${esc(prefill.jurisdiction ?? "KR")}" ${busy ? "disabled" : ""}></label>
+      ${info?.snapshot_corpus ? '<span class="mark" title="시행일을 검증하지 않은 공개 스냅샷">스냅샷</span>' : `<label class="field">기준일 <input type="date" name="as_of_date" value="${esc(prefill.as_of_date ?? today())}" ${busy ? "disabled" : ""}></label>`}
+      <label class="field">관할 <input type="text" name="jurisdiction" value="${esc(prefill.jurisdiction ?? "KR")}" ${busy ? "disabled" : replay ? "readonly" : ""}></label>
       <span class="spacer"></span>
-      <span class="cost-line ${line.cls}" id="cost-line">${esc(line.text)}</span>
+      <span class="cost-line ${line.cls}" id="cost-line" title="${esc(line.detail || "")}" role="status">${esc(line.text)}</span>
       <button class="btn-primary" type="submit" id="ask-btn" title="⌘/Ctrl + Enter" ${busy || !line.ok ? "disabled" : ""}>${busy ? '<span class="spinner" aria-hidden="true"></span>생성 중' : '질문하기'}</button>
     </div>
   </form>`;
@@ -194,8 +200,8 @@ async function renderAsk(id) {
   if (id) {
     const d = state.askCache[id] || (state.askCache[id] = await api(`/api/ask?id=${encodeURIComponent(id)}`));
     const q = d.query || {};
-    prefill = { question: q.question, config: d.config, as_of_date: q.as_of_date || "", jurisdiction: q.jurisdiction || "" };
-    body = renderAskMeta(d) + (d.conditions ? renderComparison(d, { meta: true }) : "");
+    prefill = { question: q.question, query_id: q.query_id, config: d.config, as_of_date: q.as_of_date || "", jurisdiction: q.jurisdiction || "" };
+    body = d.conditions ? renderComparison(d, { meta: true }) : "";
   } else if (state.pending) {
     prefill = state.pending;
     body = renderPending(state.pending);
@@ -219,32 +225,23 @@ function renderEmptyComparison(name) {
   const info = configInfo(name || defaultQuestionConfig());
   const order = askOrder(info?.path);
   const skipped = new Set(info?.skipped || []);
-  return `<h2 class="section" style="margin-top:28px">조건별 답변 대비</h2>
-    <div class="table-wrap"><table class="daebi" style="min-width:${76 + order.length * 148}px"><colgroup><col class="label">${order.map(() => "<col>").join("")}</colgroup>
-      <thead><tr><th>구분</th>${order.map((m, i) => `<th class="${i === 0 ? "base" : ""}">${condName({ method: m })}<span class="sub">${i === 0 ? "기준" : skipped.has(m) ? "제외" : "&nbsp;"}</span></th>`).join("")}</tr></thead>
-      <tbody>${["답변", "근거", "수치"].map((l) => `<tr><th>${l}</th>${order.map((m, i) => `<td class="empty-cell${i === 0 ? " base" : ""}"></td>`).join("")}</tr>`).join("")}</tbody></table></div>
-    ${DAEBI_LEGEND}`;
+  return `<div class="table-wrap comparison"><table class="daebi" aria-label="조건별 답변 비교" style="min-width:${76 + order.length * 148}px"><colgroup><col class="label">${order.map(() => "<col>").join("")}</colgroup>
+      <thead><tr><th aria-label="구분"></th>${order.map((m, i) => `<th class="${i === 0 ? "base" : ""}${skipped.has(m) ? " excluded" : ""}" ${i === 0 ? 'title="비교 기준"' : ""} ${skipped.has(m) ? 'aria-description="문턱값 없음 · 제외"' : ""}>${condName({ method: m, retrieval_label: info?.retriever_backend === "bm25" ? "BM25" : "제공 순서" })}</th>`).join("")}</tr></thead>
+      <tbody>${["답변", "근거", "수치"].map((l) => `<tr><th>${l}</th>${order.map((m, i) => `<td class="empty-cell${i === 0 ? " base" : ""}"></td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
 }
 
 function renderAskMeta(d) {
-  const skipped = d.skipped_conditions || [];
   const mock = Object.values(d.backends || {}).every((b) => b === "mock");
-  return [
-    mock ? `<div class="notice"><div><b>mock</b> · 연구 근거 아님</div></div>`
-      : `<div class="notice plain"><div><b>탐색 기록</b> · 연구 지표·통계에서 제외</div></div>`,
-    skipped.length ? `<div class="notice plain"><div>${skipped.map((m) => METHOD[m]?.label || m).join("·")} 제외 · 문턱값 없음</div></div>` : "",
-  ].join("");
+  return mock ? '<span class="mark note" title="연구 근거 아님">mock</span>' : "";
 }
 
 function renderPending(p) {
   const skipped = configInfo(p.config)?.skipped || [];
   const order = askOrder(p.config).filter((m) => !skipped.includes(m));
-  return `<header class="qhead"><p class="question">${esc(p.question)}</p></header>
-    <h2 class="section" style="margin-top:22px">조건별 답변 대비</h2>
-    <div class="table-wrap"><table class="daebi pending" style="min-width:${76 + order.length * 148}px"><colgroup><col class="label">${order.map(() => "<col>").join("")}</colgroup>
-      <thead><tr><th></th>${order.map((m, i) => `<th class="${i === 0 ? "base" : ""}">${condName({ method: m })}${i === 0 ? '<span class="sub">기준</span>' : ""}</th>`).join("")}</tr></thead>
+  return `<div class="table-wrap comparison"><table class="daebi pending" aria-label="조건별 답변 생성 중" aria-busy="true" style="min-width:${76 + order.length * 148}px"><colgroup><col class="label">${order.map(() => "<col>").join("")}</colgroup>
+      <thead><tr><th></th>${order.map((m, i) => `<th class="${i === 0 ? "base" : ""}">${condName({ method: m })}</th>`).join("")}</tr></thead>
       <tbody>${["답변", "근거"].map((l) => `<tr><th>${l}</th>${order.map(() => "<td><i></i><i></i><i></i></td>").join("")}</tr>`).join("")}</tbody></table></div>
-    <p class="pending-note" id="pending-note">검색 → 재채점 → 선택 → 생성 <span id="elapsed"></span></p>`;
+    <p class="pending-note" role="status"><span id="elapsed"></span></p>`;
 }
 
 function bindComposer() {
@@ -252,17 +249,17 @@ function bindComposer() {
   if (!form) return;
   const sel = $("#q-config");
   const input = $("#q-input");
-  const sync = () => {
-    const line = costLine(configInfo(sel.value));
-    const el = $("#cost-line");
-    el.textContent = line.text;
-    el.className = `cost-line ${line.cls}`;
-    $("#ask-btn").disabled = !!state.pending || !line.ok;
-  };
   sel.addEventListener("change", () => {
+    state.composerDrafts[form.dataset.config] = Object.fromEntries(new FormData(form));
     store.set("viewer.config.v2", sel.value);
-    sync();
-    if (!parseHash().target && !state.pending && !state.askError) route();
+    state.draft = { ...(state.composerDrafts[sel.value] || {}), config: sel.value };
+    state.askError = null;
+    if (parseHash().target) location.hash = "#/ask"; else route();
+  });
+  $("#q-record")?.addEventListener("change", (e) => {
+    state.draft = { config: sel.value, query_id: e.target.value };
+    state.askError = null;
+    if (parseHash().target) location.hash = "#/ask"; else route();
   });
   const fit = () => {
     if (CSS.supports("field-sizing", "content")) return;
@@ -282,7 +279,7 @@ function bindComposer() {
     if (location.hash !== "#/ask") location.hash = "#/ask"; else route();
     const timer = setInterval(() => {
       const el = $("#elapsed");
-      if (el && state.pending) el.textContent = `· ${Math.round((Date.now() - state.pending.startedAt) / 1000)}초`;
+      if (el && state.pending) el.textContent = `${Math.round((Date.now() - state.pending.startedAt) / 1000)}초`;
     }, 1000);
     try {
       const d = await api("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
@@ -311,14 +308,16 @@ function renderComparison(d, opts = {}) {
   const cand = new Map(d.candidates.map((c) => [c.chunk_id, c]));
   const facts = opts.run ? [
     ["기준일", q.as_of_date], ["관할", q.jurisdiction], ["유형", q.task_type], ["그룹", q.group_id],
-    ["답변 가능", q.answerable === false ? "아니오" : "예"],
-    ["충분한 근거 집합", (q.sufficient_sets || []).length ? q.sufficient_sets.map((s) => `{${s.join(", ")}}`).join(" 또는 ") : "없음"],
+    ["답변 가능", q.answerable == null ? "미판정" : q.answerable === false ? "아니오" : "예"],
+    ["충분한 근거 집합", q.choices ? "미주석" : (q.sufficient_sets || []).length ? q.sufficient_sets.map((s) => `{${s.join(", ")}}`).join(" 또는 ") : "없음"],
   ] : [["기준일", q.as_of_date || "지정 안 함"], ["관할", q.jurisdiction || "전체"], ["설정", d.config],
     ...(d.source ? [["컬렉션", (d.source.collections || [d.source.collection]).join(", ")], ["효력·관할 필터", d.source.metadata_filters_applied ? "적용" : "미적용"]] : []),
     ["기록", d.ask_id], ["시각", when(d.asked_at)]];
-  const head = `<header class="qhead">
+  const metadata = `<dl class="facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v ?? "—")}</dd></div>`).join("")}</dl>`;
+  const head = `<header class="qhead${opts.meta ? " ask-meta" : ""}">
     ${opts.meta ? "" : `<p class="question">${esc(q.question)}</p>`}
-    <dl class="facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v ?? "—")}</dd></div>`).join("")}</dl>
+    ${!opts.meta && q.choices ? `<ol class="mcq-choices">${Object.entries(q.choices).map(([key,value]) => `<li><b>${esc(key)}</b><span>${esc(value)}</span></li>`).join("")}</ol>` : ""}
+    <div class="query-meta">${opts.meta ? renderAskMeta(d) : ""}<details class="query-details"><summary>상세 정보</summary>${metadata}</details></div>
     ${q.reference_answer ? `<div class="ref-answer"><span class="lbl">기준 답변</span>${esc(q.reference_answer)}</div>` : ""}
   </header>`;
 
@@ -327,8 +326,7 @@ function renderComparison(d, opts = {}) {
     if (c.status === "failed") return failCell(c);
     const a = c.answer;
     if (!a) return `<span class="same">생성 안 함</span>`;
-    const text = a.abstained ? "(답변 보류)" : a.answer || "";
-    if (!isBase && baseText != null && text === baseText) return `<span class="same">(기준과 같음)</span>`;
+    const text = a.answer || "";
     if (a.abstained) return `<span class="mark note">답변 보류</span>`;
     const invalid = new Set(c.invalid_citations || []);
     const cites = (ids) => (ids || []).map((id) => `<button type="button" class="cite${invalid.has(id) ? " invalid" : ""}" data-cite="${esc(id)}" title="${invalid.has(id) ? "제공되지 않은 ID" : esc(cand.get(id)?.title || id)}">${esc(String(id).slice(0, 10))}</button>`).join(" ");
@@ -341,7 +339,6 @@ function renderComparison(d, opts = {}) {
   };
   const evidenceCell = (c, isBase) => {
     if (c.status === "failed" && c.error_stage === "retrieval") return failCell(c);
-    if (!isBase && c.selected.join() === base.selected.join() && base.selected.length) return `<span class="same">(기준과 같음)</span>`;
     const baseSet = new Set(base.selected);
     const dropped = isBase ? [] : base.selected.filter((id) => !c.selected.includes(id));
     if (!c.selected.length) return `<span class="same">선택 없음</span>${dropped.length ? `<ol class="ev">${dropped.map((id) => evLine(id, "−", "dropped")).join("")}</ol>` : ""}`;
@@ -352,6 +349,7 @@ function renderComparison(d, opts = {}) {
     return `<dl class="figs">
       <dt>근거·토큰</dt><dd>${c.selected.length}개 · ${num(c.context_tokens)}</dd>
       <dt>온라인 비용</dt><dd>${usd(c.cost?.online_usd)}</dd>
+      ${c.cost?.online_usd == null && c.cost?.rerank_generation_usd != null ? `<dt>재채점·생성</dt><dd>${usd(c.cost.rerank_generation_usd)}</dd>` : ""}
       ${rr && rr.request_count ? `<dt>재채점</dt><dd>${rr.request_count}건${rr.cached ? " · 캐시" : ""}</dd>` : ""}
       ${g && g.usage ? `<dt>생성 토큰</dt><dd>${num(g.usage.input_tokens)}→${num(g.usage.output_tokens)}</dd>` : ""}
       <dt>구성 시간</dt><dd>${ms(c.timing?.component_sum_ms)}${c.timing?.cached ? " · 캐시" : ""}</dd>
@@ -359,17 +357,13 @@ function renderComparison(d, opts = {}) {
     </dl>`;
   };
   const cols = `<colgroup><col class="label">${order.map(() => "<col>").join("")}</colgroup>`;
-  const thead = `<thead><tr><th>구분</th>${order.map((c, i) => `<th class="${i === 0 ? "base" : ""}">${condName(c)}<span class="sub">${i === 0 ? "기준" : c.threshold != null ? `≥ ${c.threshold}` : "&nbsp;"}</span></th>`).join("")}</tr></thead>`;
+  const thead = `<thead><tr><th aria-label="구분"></th>${order.map((c, i) => `<th class="${i === 0 ? "base" : ""}" ${i === 0 ? 'title="비교 기준"' : ""}>${condName(c)}${c.threshold != null ? `<span class="threshold">≥ ${c.threshold}</span>` : ""}</th>`).join("")}</tr></thead>`;
   const row = (label, fn) => `<tr><th>${label}</th>${order.map((c, i) => `<td class="${i === 0 ? "base" : ""}">${fn(c, i === 0)}</td>`).join("")}</tr>`;
-  const table = `<h2 class="section" style="margin-top:24px">조건별 답변 대비</h2>
-
-    <div class="table-wrap"><table class="daebi" style="min-width:${76 + order.length * 148}px">${cols}${thead}<tbody>
+  const table = `<div class="table-wrap comparison"><table class="daebi" aria-label="조건별 답변 비교" style="min-width:${76 + order.length * 148}px">${cols}${thead}<tbody>
       ${row("답변", answerCell)}${row("근거", evidenceCell)}${row("수치", figCell)}
-    </tbody></table></div>${DAEBI_LEGEND}`;
+    </tbody></table></div>`;
   return head + table + renderMatrix(d, order);
 }
-
-const DAEBI_LEGEND = `<div class="legend"><span>기준 열: CE-R</span><span>(기준과 같음)</span><span><ins>추가</ins></span><span><s class="dropped-key">빠짐</s></span></div>`;
 
 function failCell(c) {
   return `<div class="fail"><b>${esc(c.error_stage === "retrieval" ? "검색 실패" : c.error_stage === "rerank" ? "재채점 실패" : "생성 실패")}</b>
@@ -378,16 +372,17 @@ function failCell(c) {
 
 function renderMatrix(d, order) {
   const byCond = order.map((c) => ({ c, rank: new Map(c.ranking.map((x) => [x.chunk_id, x])), sel: new Set(c.selected) }));
-  const isVec = (c) => c.method === "vector" || c.method === "candidate_pool";
+  const isVec = (c) => ["vector", "retrieval", "candidate_pool"].includes(c.method);
   const cell = ({ c, rank, sel }, cand) => {
-    if (isVec(c)) return `<td class="mcell"><span class="rank${sel.has(cand.chunk_id) ? " sel" : ""}">${cand.vector_rank ?? "·"}</span><span class="score">${score(cand.vector_score)}</span></td>`;
+    const selection = sel.has(cand.chunk_id) ? "선택" : "미선택";
+    if (isVec(c)) return `<td class="mcell" aria-label="${selection}, 순위 ${cand.retrieval_rank ?? cand.vector_rank ?? "없음"}"><span class="rank${sel.has(cand.chunk_id) ? " sel" : ""}">${cand.retrieval_rank ?? cand.vector_rank ?? "·"}</span><span class="score" title="원 점수">${score(cand.retrieval_score ?? cand.vector_score)}</span></td>`;
     const r = rank.get(cand.chunk_id);
     if (!r) return `<td class="mcell"><span class="rank" title="재순위 기록 없음">·</span></td>`;
-    return `<td class="mcell"><span class="rank${sel.has(cand.chunk_id) ? " sel" : ""}">${r.rank ?? "·"}</span><span class="score">${score(r.score)}</span></td>`;
+    return `<td class="mcell" aria-label="${selection}, 순위 ${r.rank ?? "없음"}"><span class="rank${sel.has(cand.chunk_id) ? " sel" : ""}">${r.rank ?? "·"}</span><span class="score" title="원 점수">${score(r.score)}</span></td>`;
   };
-  return `<h2 class="section">공통 후보 ${d.candidates.length}개 · 조건별 순위</h2>
+  return `<h2 class="section">후보 <span class="section-count">${d.candidates.length}</span></h2>
     <div class="table-wrap"><table class="matrix">
-      <thead><tr><th class="num">#</th><th>후보 (Vector 순)</th>${byCond.map(({ c }) => `<th class="mcol">${condName(c)}<span class="thr">${c.threshold != null ? `≥ ${c.threshold}` : "&nbsp;"}</span></th>`).join("")}</tr></thead>
+      <thead><tr><th class="num" title="검색 순위">#</th><th>후보</th>${byCond.map(({ c }) => `<th class="mcol">${condName(c)}${c.threshold != null ? `<span class="threshold">≥ ${c.threshold}</span>` : ""}</th>`).join("")}</tr></thead>
       <tbody>${d.candidates.map((cand, i) => `<tr data-chunk="${esc(cand.chunk_id)}" tabindex="0" aria-expanded="false" title="원문 펼치기">
         <td class="num">${i + 1}</td>
         <td class="cand"><div class="title">${esc(cand.title || cand.doc_id)}${cand.units.map((u) => `<span class="mark change" title="정답 근거 ${esc(u)} 구간과 겹침">근거 ${esc(u)}</span>`).join("")}${cand.relevance != null ? `<span class="mark" title="사람 관련성 등급">등급 ${cand.relevance}</span>` : ""}</div>
@@ -396,8 +391,7 @@ function renderMatrix(d, order) {
         ${byCond.map((b) => cell(b, cand)).join("")}
       </tr>`).join("")}</tbody>
       <tfoot><tr><td></td><td>선택 수${byCond.some(({ c }) => c.metrics?.esr != null) ? " · ESR" : ""}</td>${byCond.map(({ c }) => `<td>${c.selected.length}${c.metrics?.esr != null ? ` · ${pct(c.metrics.esr)}` : ""}</td>`).join("")}</tr></tfoot>
-    </table></div>
-    <div class="legend"><span><span class="rank sel">1</span> 선택</span><span><span class="rank">3</span> 미선택</span><span><span class="mark change">근거 U1</span> 정답 구간 포함</span><span>작은 숫자: 원 점수</span></div>`;
+    </table></div>`;
 }
 
 function bindComparison() {
@@ -413,6 +407,8 @@ function bindComparison() {
     b.addEventListener("click", () => {
       const r = row();
       if (!r) return;
+      r.classList.add("open");
+      r.setAttribute("aria-expanded", "true");
       r.scrollIntoView({ behavior: "smooth", block: "center" });
       r.classList.add("hl");
       setTimeout(() => r.classList.remove("hl"), 1400);
@@ -425,21 +421,16 @@ async function renderRun(params) {
   const run = state.run;
   const tab = params.get("tab") || "answers";
   const m = run.manifest || {};
-  const conds = m.conditions || [];
   const comp = run.completion;
   const tabs = [["answers", "질문·답변", run.queries.length], ["summary", "요약", null],
     ["errors", "오류", run.errors.reduce((a, e) => a + e.count, 0)], ["info", "실행 정보", null]];
   const head = `<header class="page-head">
       <h1><span class="crumb">${esc(run.path.split("/").slice(0, -1).join(" / "))}${run.path.includes("/") ? " / " : ""}</span>${esc(m.run_id || run.path.split("/").pop())}</h1>
       <div class="meta-row">
-        ${m.mode ? `<span><span class="k">모드</span>${esc(m.mode)}</span>` : ""}
-        ${m.split ? `<span><span class="k">분할</span>${esc(m.split)}</span>` : ""}
-        ${comp ? `<span><span class="k">행</span>${comp.rows}/${comp.planned_rows}${comp.failed ? ` · <b style="color:var(--void)">실패 ${comp.failed}</b>` : ""}</span>` : ""}
-        ${conds.length ? `<span class="chips">${conds.map((c) => condName(c) + (c.threshold != null ? `<span class="null">≥${c.threshold}</span>` : "")).join('<span class="null">·</span>')}</span>` : ""}
-        ${run.index_version ? `<span><span class="k">인덱스</span>${short(run.index_version)}</span>` : ""}
-        ${run.protocol_hash ? `<span><span class="k">프로토콜</span>${short(run.protocol_hash)}</span>` : ""}
+        ${m.split ? `<span>${esc(m.split)}</span>` : ""}
+        ${comp ? `<span>${comp.rows}/${comp.planned_rows}행${comp.failed ? ` · <b class="fail">실패 ${comp.failed}</b>` : ""}</span>` : ""}
+        ${runNotices(run)}
       </div>
-      ${runNotices(run)}
     </header>
     <nav class="tabs" role="tablist">${tabs.map(([id, label, count]) => `<a role="tab" href="${runHref(run.path, { tab: id })}" aria-selected="${tab === id}">${label}${count != null ? `<span class="count${id === "errors" && count ? " void" : ""}">${count}</span>` : ""}</a>`).join("")}</nav>`;
   let body;
@@ -456,19 +447,19 @@ function runNotices(run) {
   const m = run.manifest || {};
   const out = [];
   if (m.research_valid === false)
-    out.push(`<div class="notice"><div><b>mock</b> · 연구 근거 아님</div></div>`);
+    out.push('<span class="mark note" title="연구 근거 아님">mock</span>');
   const c = run.completion;
   if (c && c.failed && c.failed === c.rows)
-    out.push(`<div class="notice void">${ICON.alert}<div><b>전체 실패</b> · 오류 탭 참고</div></div>`);
+    out.push('<span class="mark void">전체 실패</span>');
   else if (c && c.rows < c.planned_rows)
-    out.push(`<div class="notice"><div><b>${c.rows}/${c.planned_rows}행</b> · 진행 중이거나 중단됨 · <code>--resume</code>으로 이어서 실행</div></div>`);
+    out.push('<span class="mark note">미완료</span>');
   if (m.mode === "candidate_annotation")
-    out.push(`<div class="notice plain"><div><b>라벨링용 후보 풀</b> · 성능 미계산</div></div>`);
+    out.push('<span class="mark">후보 풀</span>');
   return out.join("");
 }
 
 async function renderRunAnswers(run, qid) {
-  if (!run.queries.length) return `<div class="empty"><h2>질문 없음</h2><p>raw.jsonl이 비어 있습니다.</p></div>`;
+  if (!run.queries.length) return `<div class="empty"><h2>질문 없음</h2></div>`;
   qid = qid || run.queries[0].query_id;
   if (!state.query || state.query.query.query_id !== qid) {
     state.query = await api(`/api/query?path=${encodeURIComponent(run.path)}&id=${encodeURIComponent(qid)}`);
@@ -504,11 +495,10 @@ const SUMMARY_COLS = [
 ];
 
 function renderSummary(run) {
-  if (!run.summary) return `<div class="empty"><h2>summary.json 없음</h2><pre>legal-rag --config &lt;config&gt; evaluate --run results/${esc(run.path)}</pre></div>`;
+  if (!run.summary) return '<div class="empty"><h2>지표 없음</h2></div>';
   const rows = run.summary;
-  const human = rows.reduce((a, r) => a + (r.human_evaluated || 0), 0);
+  if (run.manifest.query_mode === "mcq") return renderMCQSummary(rows);
   return `<h2 class="section">방법별 지표</h2>
-    <p class="hint">n = 분모 · — = 값 없음${human ? "" : " · 사람 답변 판정 없음"}</p>
     <div class="table-wrap"><table>
       <thead><tr class="group"><th></th>${SUMMARY_COLS.map(([g, cols]) => `<th colspan="${cols.length}">${g}</th>`).join("")}</tr>
       <tr><th>조건</th>${SUMMARY_COLS.flatMap(([, cols]) => cols.map(([, label, , tip]) => `<th ${tip ? `title="${esc(tip)}"` : ""}>${label}</th>`)).join("")}</tr></thead>
@@ -519,14 +509,22 @@ function renderSummary(run) {
     </table></div>${renderStatistics(run)}`;
 }
 
+function renderMCQSummary(rows) {
+  const cols = [["mcq_accuracy", "객관식 정답률", pct], ["invalid_choice", "형식 오류", pct],
+    ["abstention", "보류", pct], ["selected_count", "선택 수", (v) => num(v, 2)],
+    ["context_tokens", "문맥 토큰", num], ["rerank_generation_usd", "재채점·생성 비용", usd], ["online_cost_usd", "전체 비용", usd]];
+  return `<div class="table-wrap"><table><thead><tr><th>조건</th>${cols.map(([, label]) => `<th>${label}</th>`).join("")}</tr></thead>
+    <tbody>${rows.map((r) => `<tr><th>${condName(r)}<span class="n">${r.queries}문항</span></th>${cols.map(([key, , fmt]) => `<td class="num">${fmt(r[key])}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+
 const statusText = (s) => ({ human_annotations_incomplete: "사람 판정 미완료" })[s] || s;
 
 function renderStatistics(run) {
   const st = run.statistics;
-  if (!st) return `<h2 class="section">사전 지정 비교</h2><p class="hint">statistics.json 없음 · <code>legal-rag statistics --run results/${esc(run.path)}</code></p>`;
+  if (!st) return `<h2 class="section">사전 지정 비교</h2><div class="empty">통계 없음</div>`;
   const ci = (x) => (x ? `[${x.map((v) => v.toFixed(3)).join(", ")}]` : NA());
   const ni = st.noninferiority || [];
-  return `<h2 class="section">사전 지정 비교 · cluster bootstrap</h2>
+  return `<h2 class="section" title="cluster bootstrap">사전 지정 비교</h2>
     <div class="table-wrap"><table><thead><tr><th>비교</th><th>지표</th><th>표본</th><th>n</th><th>그룹</th><th>평균 차이</th><th>95% CI</th><th>p (Holm)</th></tr></thead>
     <tbody>${(st.comparisons || []).map((c) => `<tr><td>${condName({ method: c.treatment })} <span class="null">대</span> ${condName({ method: c.baseline })}</td><td><code>${esc(c.metric)}</code></td><td>${c.complete_case ? "공통 성공" : "전체 계획"}</td>
       ${c.status ? `<td class="num">${c.n}</td><td colspan="4"><span class="mark note">${esc(statusText(c.status))}</span></td>`
@@ -542,10 +540,10 @@ function renderErrors(run) {
   if (!run.errors.length) return `<div class="empty"><h2>오류 없음</h2></div>`;
   const failedBy = new Map();
   for (const q of run.queries) for (const c of q.conditions) if (c.status === "failed") failedBy.set(c.condition_id, [...(failedBy.get(c.condition_id) || []), q.query_id]);
-  return `<h2 class="section">오류 · 메시지별</h2>
+  return `<h2 class="section">오류</h2>
     <div class="table-wrap"><table><thead><tr><th style="width:64px">건수</th><th>단계 · 메시지</th></tr></thead>
     <tbody>${run.errors.map((e) => `<tr><td class="num"><b>${e.count}</b></td><td style="overflow-wrap:anywhere">${esc(e.message)}</td></tr>`).join("")}</tbody></table></div>
-    ${failedBy.size ? `<h2 class="section">실패 질문 · 조건별</h2><div class="table-wrap"><table><thead><tr><th>조건</th><th>실패</th><th>질문</th></tr></thead>
+    ${failedBy.size ? `<h2 class="section">실패 질문</h2><div class="table-wrap"><table><thead><tr><th>조건</th><th>실패</th><th>질문</th></tr></thead>
     <tbody>${[...failedBy].map(([cid, qs]) => `<tr><th>${condName({ condition_id: cid })}</th><td class="num">${qs.length}</td><td>${qs.map((q) => `<a href="${runHref(run.path, { tab: "answers", q })}"><code>${esc(q)}</code></a>`).join(" ")}</td></tr>`).join("")}</tbody></table></div>` : ""}`;
 }
 
@@ -560,7 +558,7 @@ function renderInfo(run) {
   const m = run.manifest || {};
   return `${prov.length ? `<h2 class="section">모델·제공자</h2>
     <div class="table-wrap"><table><thead><tr><th>역할</th><th>백엔드</th><th>모델</th><th>revision / 주소</th></tr></thead><tbody>${prov.map(([k, v]) => `<tr><td class="key">${esc(k)}</td><td>${esc(v?.backend || "")}</td><td class="val">${esc(v?.model || "")}</td><td class="val">${v?.revision ? short(v.revision, 12) : esc(v?.base_url || "")}</td></tr>`).join("")}</tbody></table></div>` : ""}
-    <div class="two-col">${kvTable(run.config, "실행 설정")}<div>${kvTable(run.pricing, "단가 (USD / 1M 토큰)")}${kvTable(m.environment ? { python: m.environment.python, platform: m.environment.platform, ...m.environment.dependencies } : null, "환경")}${kvTable(run.completion, "완료 기록")}</div></div>`;
+    <div class="two-col">${kvTable(run.config, "실행 설정")}<div>${kvTable({ mode: m.mode, index_version: run.index_version, protocol_hash: run.protocol_hash }, "실행 정보")}${kvTable(run.pricing, "단가 (USD / 1M 토큰)")}${kvTable(m.environment ? { python: m.environment.python, platform: m.environment.platform, ...m.environment.dependencies } : null, "환경")}${kvTable(run.completion, "완료 기록")}</div></div>`;
 }
 
 /* ---------- configs ---------- */
@@ -574,15 +572,13 @@ function renderConfigs(params) {
   const fmt = (v) => (v === null ? "null" : typeof v === "object" ? JSON.stringify(v) : String(v));
   return `<div class="page">
     <header class="page-head"><h1>설정 비교</h1>
-      <div class="meta-row"><span>${cfgs.map((c) => `<code>configs/${esc(c.path)}</code>`).join(" · ")}</span></div>
       ${cfgs.filter((c) => c.error).map((c) => `<div class="notice void">${ICON.alert}<div><b>${esc(c.path)}</b> 스키마 오류 · ${esc(c.error)}</div></div>`).join("")}
     </header>
     <div class="toolbar">
       <label><input type="checkbox" id="only-diff" ${onlyDiff ? "checked" : ""}> 다른 항목만 (${d.fields.filter(differs).length}/${d.fields.length})</label>
-      <span class="null">흐림 = 기본값 · <ins>밑줄</ins> = 기본값과 다름</span>
     </div>
     <div class="table-wrap"><table>
-      <thead><tr><th>항목</th>${cfgs.map((c) => `<th>${esc(c.name)}</th>`).join("")}<th>기본값</th></tr></thead>
+      <thead><tr><th>항목</th>${cfgs.map((c) => `<th title="configs/${esc(c.path)}">${esc(c.name)}</th>`).join("")}<th>기본값</th></tr></thead>
       <tbody>${rows.map((f) => `<tr class="${differs(f) ? "diff" : ""}"><td class="key">${esc(f)}</td>${cfgs.map((c) => `<td class="val${c.explicit.includes(f) ? "" : " default"}${JSON.stringify(c.values[f]) !== JSON.stringify(d.defaults[f]) ? " changed" : ""}">${esc(fmt(c.values[f]))}</td>`).join("")}<td class="val default">${esc(fmt(d.defaults[f]))}</td></tr>`).join("")}</tbody>
     </table></div>
   </div>`;

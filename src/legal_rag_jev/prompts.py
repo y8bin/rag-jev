@@ -16,10 +16,18 @@ claim_labels는 답변 claims와 같은 순서로 {support: supported|unsupporte
 citations: [{evidence_id: string, supported: bool}]} 형태다. 각 주장의 모든 evidence_ids를 평가한다.
 주장이 없으면 claim_labels=[]다. 평가는 자동 judge의 보조 판정이며 사람 gold가 아니다."""
 
+MCQ_SYSTEM = GENERATION_SYSTEM + "\n객관식 질문이다. answer에는 선택지 문자(A–E) 하나만 쓴다. 선택 이유와 인용 근거는 rationale 및 claims에 쓴다. 근거가 부족하면 abstained=true로 보류한다."
+
+
+def generation_system(q: dict) -> str:
+    return MCQ_SYSTEM if q.get("choices") else GENERATION_SYSTEM
+
 
 def query_text(q: dict) -> str:
-    return json.dumps({"question": q["question"], "as_of_date": q.get("as_of_date"),
-                       "jurisdiction": q.get("jurisdiction", "")}, ensure_ascii=False, sort_keys=True)
+    content = {"question": q["question"], "as_of_date": q.get("as_of_date"), "jurisdiction": q.get("jurisdiction", "")}
+    if q.get("choices"):
+        content["choices"] = q["choices"]
+    return json.dumps(content, ensure_ascii=False, sort_keys=True)
 
 
 def evidence_text(c: dict, max_chars: int | None = None) -> str:

@@ -9,6 +9,24 @@ from .io import digest, file_hash, read_jsonl, write_jsonl
 from .schema import Chunk, Document, Query
 
 
+def load_run_queries(cfg, split: str | None = None):
+    if cfg.query_mode == "evidence":
+        return load_queries(cfg.queries, split)
+    from .schema import BenchmarkQuery
+    rows = [BenchmarkQuery.model_validate(x) for x in read_jsonl(cfg.queries)]
+    if len({q.query_id for q in rows}) != len(rows):
+        raise ValueError("Duplicate benchmark query IDs")
+    groups = {}
+    for q in rows:
+        groups.setdefault(q.group_id, set()).add(q.split)
+    if any(len(v) > 1 for v in groups.values()):
+        raise ValueError("Benchmark groups leak across splits")
+    selected = [q for q in rows if split is None or q.split == split]
+    if not selected:
+        raise ValueError(f"No benchmark queries for split={split}")
+    return selected
+
+
 def load_documents(path: str) -> list[Document]:
     docs = [Document.model_validate(x) for x in read_jsonl(path)]
     keys = [(d.doc_id, d.version_id) for d in docs]

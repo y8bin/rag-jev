@@ -13,7 +13,7 @@ import numpy as np
 from .config import Config, api_cost, env, local_cost, provider_headers, provider_identity
 from .io import digest
 from .openai_responses import parse_response, response_format
-from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, JUDGE_SYSTEM, RELEVANCE, evidence_text, generation_content, query_text
+from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, JUDGE_SYSTEM, RELEVANCE, evidence_text, generation_content, generation_system, query_text
 from .schema import Answer
 
 
@@ -332,14 +332,14 @@ class Providers:
             start = time.perf_counter()
             if chunks:
                 cid, text = chunks[0]["chunk_id"], chunks[0]["text"]
-                answer = Answer(answer=text, claims=[{"text": text, "evidence_ids": [cid]}], citations=[cid], abstained=False)
+                answer = Answer(answer=next(iter(q["choices"])) if q.get("choices") else text, claims=[{"text": text, "evidence_ids": [cid]}], citations=[cid], abstained=False)
             else:
                 answer = Answer(answer="제공된 근거가 부족합니다.", abstained=True)
             trace = local_trace("generation", identity, start)
             trace["usage"] = {"input_tokens": tokens(json.dumps(generation_content(q, chunks, self.cfg.common_input_chars), ensure_ascii=False), self.cfg.token_encoding),
                               "output_tokens": tokens(answer.answer, self.cfg.token_encoding)}
             return Result(answer.json_record(), trace)
-        result = await self.structured_response("generation", GENERATION_SYSTEM, generation_content(q, chunks, self.cfg.common_input_chars))
+        result = await self.structured_response("generation", generation_system(q), generation_content(q, chunks, self.cfg.common_input_chars))
         try:
             result.value = Answer.model_validate(result.value).json_record()
         except ValueError as e:

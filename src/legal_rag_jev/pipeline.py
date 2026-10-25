@@ -10,15 +10,16 @@ from pathlib import Path
 
 from .cache import Cache
 from .config import Config, pricing
-from .corpus import load_queries, validate_dataset
+from .corpus import load_queries, load_run_queries, validate_dataset
 from .index import VectorIndex
 from .io import digest, environment_manifest, file_hash, implementation_digest, read_json, read_jsonl, write_json, write_jsonl
-from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, RELEVANCE, evidence_text, generation_content, query_text
+from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, MCQ_SYSTEM, RELEVANCE, evidence_text, generation_content, generation_system, query_text
+from .retrievers import open_retriever, retrieval_manifest, validate_run_source
 from .providers import ProviderError, Providers, Result, tokens
 
 
 def identities(cfg: Config, providers: Providers) -> dict:
-    kinds = {"embedding"}
+    kinds = {"embedding"} if cfg.retriever_backend == "vector" else set()
     if any(m.startswith("ce") for m in cfg.methods):
         kinds.add("ce")
     if any(m.startswith("jev") for m in cfg.methods):
@@ -33,17 +34,19 @@ def protocol(cfg: Config, providers: Providers) -> dict:
             "implementation_digest": implementation_digest(), "dependency_versions": environment_manifest()["dependencies"],
             "pricing": pricing(), "queries_sha256": file_hash(cfg.queries),
             "protocol_documents_sha256": {path: file_hash(path) for path in cfg.protocol_documents},
-            "index_version": read_json(Path(cfg.index_dir) / "manifest.json")["index_version"],
+            "index_version": retrieval_manifest(cfg)["index_version"],
+            "retriever_backend": cfg.retriever_backend,
+            "benchmark_gold_sha256": file_hash(cfg.benchmark_gold) if cfg.query_mode == "mcq" else None,
             "prompts": {"applicability": APPLICABILITY, "criteria": CRITERIA,
-                        "relevance": RELEVANCE, "generator": GENERATION_SYSTEM}}
+                        "relevance": RELEVANCE, "generator": MCQ_SYSTEM if cfg.query_mode == "mcq" else GENERATION_SYSTEM}}
 
 
 async def freeze(cfg: Config, path: str) -> dict:
     providers = Providers(cfg)
     try:
-        load_queries(cfg.queries)
-        with VectorIndex(cfg, providers) as idx:
-            validate_dataset(list(idx.chunks.values()), load_queries(cfg.queries))
+        queries = load_run_queries(cfg)
+        with open_retriever(cfg, providers, research=True) as idx:
+            validate_run_source(cfg, idx, queries)
         p = protocol(cfg, providers)
         lock = {"protocol": p, "protocol_hash": digest(p), "frozen_at": datetime.now(timezone.utc).isoformat(),
                 "environment": environment_manifest()}
@@ -81,11 +84,13 @@ def actual_context(c: dict, cfg: Config) -> dict:
 
 def select(cfg: Config, q: dict, candidates: list[dict], scores: list[float] | None, threshold: float | None) -> tuple[list[dict], list[dict]]:
     ranking = [dict(c, rerank_score=float(scores[i]) if scores is not None else None) for i,c in enumerate(candidates)]
-    ranking.sort(key=lambda c: (-(c["rerank_score"] if scores is not None else c["vector_score"]), c["vector_rank"], c["chunk_id"]))
+    ranking.sort(key=lambda c: (-(c["rerank_score"] if scores is not None else
+                                -c["retrieval_rank"] if cfg.retriever_backend == "replay" else c.get("retrieval_score", c.get("vector_score", 0))),
+                                c.get("retrieval_rank", c.get("vector_rank", 0)), c["chunk_id"]))
     for i,c in enumerate(ranking):
         c["rank"] = i + 1
     chosen = []
-    base_tokens = tokens(GENERATION_SYSTEM + "\n" + __import__('json').dumps(generation_content(q, [], cfg.common_input_chars), ensure_ascii=False), cfg.token_encoding)
+    base_tokens = tokens(generation_system(q) + "\n" + __import__('json').dumps(generation_content(q, [], cfg.common_input_chars), ensure_ascii=False), cfg.token_encoding)
     if cfg.token_budget is not None and base_tokens > cfg.token_budget:
         raise ValueError("token_budget is smaller than the empty generation prompt")
     for c in ranking:
@@ -93,7 +98,7 @@ def select(cfg: Config, q: dict, candidates: list[dict], scores: list[float] | N
             continue
         context = actual_context(c, cfg)
         if cfg.token_budget is not None:
-            text = GENERATION_SYSTEM + "\n" + __import__('json').dumps(generation_content(q, chosen + [context], cfg.common_input_chars), ensure_ascii=False)
+            text = generation_system(q) + "\n" + __import__('json').dumps(generation_content(q, chosen + [context], cfg.common_input_chars), ensure_ascii=False)
             if tokens(text, cfg.token_encoding) > cfg.token_budget:
                 continue
         chosen.append(context)
@@ -105,7 +110,8 @@ def select(cfg: Config, q: dict, candidates: list[dict], scores: list[float] | N
 async def query_rows(cfg: Config, idx: VectorIndex, providers: Providers, q: dict, conditions: list[dict],
                      cache: Cache, fresh: bool, run_id: str) -> list[dict]:
     retrieval_key = digest({"schema": 1, "implementation": implementation_digest(), "kind": "candidates", "index": idx.manifest["index_version"],
-        "query": query_text(q), "k": cfg.top_k, "filters": cfg.apply_metadata_filters,
+        "query": query_text(q), "query_id": q.get("query_id") if cfg.retriever_backend == "replay" else None,
+        "backend": cfg.retriever_backend, "k": cfg.top_k, "filters": cfg.apply_metadata_filters,
         "unknown_temporal": cfg.unknown_temporal_policy, "prices": pricing()["embedding"], "local_price": pricing()["local_usd_per_hour"]})
     retrieval = cache.get(retrieval_key)
     if retrieval:
@@ -124,7 +130,7 @@ async def query_rows(cfg: Config, idx: VectorIndex, providers: Providers, q: dic
                     for cond in conditions]
     candidates = retrieval["candidates"]
     score_results: dict[str, Result | ProviderError] = {}
-    for kind in sorted({c["method"].split("_")[0] for c in conditions if c["method"] != "vector"}):
+    for kind in sorted({c["method"].split("_")[0] for c in conditions if c["method"] not in ("vector", "retrieval")}):
         key = digest({"schema": 1, "implementation": implementation_digest(), "kind": kind, "identity": providers.identity(kind), "q": query_text(q),
             "candidates": [(c["chunk_id"], evidence_text(c, cfg.common_input_chars)) for c in candidates],
             "instruction": APPLICABILITY if cfg.jev_instruction == "applicability" else RELEVANCE,
@@ -141,6 +147,7 @@ async def query_rows(cfg: Config, idx: VectorIndex, providers: Providers, q: dic
         score_trace = scored.trace if scored else {"latency_ms": 0.0, "cost_usd": 0.0, "cached": False, "request_count": 0}
         row = {"run_id": run_id, "query": q, "query_id": q["query_id"], "group_id": q["group_id"],
             "method": method, "condition_id": cond["condition_id"], "threshold": cond.get("threshold"),
+            "retrieval_label": "BM25" if cfg.retriever_backend == "bm25" else "제공 순서" if cfg.retriever_backend == "replay" else "Vector",
             "index_version": idx.manifest["index_version"], "candidates": candidates,
             "retrieval_trace": retrieval["trace"], "rerank_trace": score_trace,
             "selected": [], "answer": None, "status": "ok", "evaluation_mode": "fresh" if fresh else "quality"}
@@ -154,7 +161,7 @@ async def query_rows(cfg: Config, idx: VectorIndex, providers: Providers, q: dic
                 row["context_tokens"] = tokens(__import__('json').dumps(content, ensure_ascii=False), cfg.token_encoding)
                 if cfg.generate:
                     key = digest({"schema": 1, "implementation": implementation_digest(), "kind": "generation", "identity": providers.identity("generation"),
-                        "system": GENERATION_SYSTEM, "content": content, "temperature": cfg.temperature,
+                        "system": generation_system(q), "content": content, "temperature": cfg.temperature,
                         "max_output_tokens": cfg.max_output_tokens, "prices": pricing()["generation"]})
                     generated = await cached_call(cache, key, lambda: providers.generate(q, selected))
                     row["answer"], row["generation_trace"] = generated.value, generated.trace
@@ -172,8 +179,9 @@ async def query_rows(cfg: Config, idx: VectorIndex, providers: Providers, q: dic
         live = row["status"] == "ok" and all(not t.get("cached") and t.get("latency_ms") is not None for t in components)
         row["cost"] = {"online_usd": online, "query_embedding_usd": rt["embedding"].get("cost_usd"),
                        "search_usd": rt.get("search_cost_usd"), "rerank_usd": score_trace.get("cost_usd"),
-                       "generation_usd": generation_cost, "attribution": "full per-method service cost"}
-        row["timing"] = {"online_ms": sum(t["latency_ms"] for t in components) if fresh and live else None,
+                       "generation_usd": generation_cost, "attribution": "full per-method service cost",
+                       "rerank_generation_usd": sum_cost([score_trace.get("cost_usd"), generation_cost])}
+        row["timing"] = {"online_ms": sum(t["latency_ms"] for t in components) if fresh and live and rt.get("retrieval_measurement") != "precomputed" else None,
             "component_sum_ms": sum(t.get("latency_ms", 0) for t in components),
             "cached": any(t.get("cached", False) for t in components),
             "quality_timing_is_online_latency": False}
@@ -187,7 +195,8 @@ def default_conditions(cfg: Config) -> list[dict]:
         threshold = cfg.ce_threshold if m == "ce_fr" else cfg.jev_threshold if m == "jev_fr" else None
         if m.endswith("fr") and threshold is None:
             raise ValueError(f"{m} requires a development-selected threshold (use sweep first)")
-        result.append({"method": m, "condition_id": m, "threshold": threshold})
+        result.append({"method": m, "condition_id": m, "threshold": threshold,
+                       **({"retrieval_label": "BM25" if cfg.retriever_backend == "bm25" else "제공 순서"} if m == "retrieval" else {})})
     return result
 
 
@@ -215,8 +224,8 @@ async def run(cfg: Config, split: str, *, lock_path: str | None = None, run_id: 
     providers = Providers(cfg)
     idx = None
     try:
-        queries = load_queries(cfg.queries, split)
-        if cfg.common_input_chars is not None and any(u.chunk_ids for q in queries for u in q.evidence_units):
+        queries = load_run_queries(cfg, split)
+        if cfg.query_mode == "evidence" and cfg.common_input_chars is not None and any(u.chunk_ids for q in queries for u in q.evidence_units):
             raise ValueError("Input truncation analyses require span-based gold units without chunk_ids")
         conditions = conditions or default_conditions(cfg)
         p = protocol(cfg, providers)
@@ -224,8 +233,8 @@ async def run(cfg: Config, split: str, *, lock_path: str | None = None, run_id: 
             raise ValueError("Real test runs require --lock from freeze")
         if lock_path and read_json(lock_path)["protocol_hash"] != digest(p):
             raise ValueError("Protocol differs from lock; test configuration/data cannot be tuned")
-        idx = VectorIndex(cfg, providers)
-        validate_dataset(list(idx.chunks.values()), load_queries(cfg.queries))
+        idx = open_retriever(cfg, providers, research=True)
+        validate_run_source(cfg, idx, load_run_queries(cfg))
         run_id = run_id or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S") + "_" + uuid.uuid4().hex[:8]
         if Path(run_id).name != run_id or run_id in (".", ".."):
             raise ValueError("run_id must be a single directory name")
@@ -242,9 +251,10 @@ async def run(cfg: Config, split: str, *, lock_path: str | None = None, run_id: 
             write_json(output / "manifest.json", {"run_id": run_id, "run_signature": run_signature, "protocol": p,
                 "protocol_hash": digest(p), "split": split, "conditions": conditions, "mode": "fresh" if fresh else "quality",
                 "research_valid": idx.manifest["research_valid"] and cfg.token_encoding != "unicode_characters" and all(v["backend"] != "mock" for v in p["providers"].values()),
-                "planned_queries": [q.query_id for q in queries], "environment": environment_manifest()})
+                "planned_queries": [q.query_id for q in queries], "query_mode": cfg.query_mode,
+                "retriever_backend": cfg.retriever_backend, "environment": environment_manifest()})
             manifest = read_json(output / "manifest.json")
-            manifest["human_evaluation_query_ids"] = human_sample(cfg,queries)
+            manifest["human_evaluation_query_ids"] = human_sample(cfg,queries) if cfg.query_mode == "evidence" else []
             chosen_ids = set(manifest["human_evaluation_query_ids"])
             manifest["human_evaluation_sample"] = {
                 "policy": "all_queries" if len(chosen_ids) == len(queries) else "round_robin_task_type_answerability",
@@ -254,7 +264,7 @@ async def run(cfg: Config, split: str, *, lock_path: str | None = None, run_id: 
                 "strata": [{"task_type": task, "answerable": answerable,
                     "population": sum(q.task_type == task and q.answerable == answerable for q in queries),
                     "selected": sum(q.task_type == task and q.answerable == answerable and q.query_id in chosen_ids for q in queries)}
-                    for task,answerable in sorted({(q.task_type,q.answerable) for q in queries})]}
+                    for task,answerable in sorted({(q.task_type,q.answerable) for q in queries})] if cfg.query_mode == "evidence" else []}
             write_json(output / "manifest.json",manifest)
         complete = {(r["query"]["query_id"], r["condition_id"]) for r in rows}
         cache = Cache(cfg.cache_dir, enabled=not fresh)
@@ -291,8 +301,8 @@ async def benchmark(cfg: Config, split: str, repeats: int, warmup: int, limit: i
             raise ValueError("Benchmark protocol differs from lock")
         buckets = {}
         rng = random.Random(cfg.seed)
-        for q in load_queries(cfg.queries, split):
-            buckets.setdefault((q.task_type,q.answerable), []).append(q)
+        for q in load_run_queries(cfg, split):
+            buckets.setdefault((q.task_type,getattr(q,"answerable",None)), []).append(q)
         for bucket in buckets.values():
             rng.shuffle(bucket)
         queries = []
@@ -303,7 +313,7 @@ async def benchmark(cfg: Config, split: str, repeats: int, warmup: int, limit: i
         conditions = default_conditions(cfg)
         output = Path(cfg.output_dir) / ("benchmark_" + uuid.uuid4().hex[:10])
         rows = []
-        with VectorIndex(cfg, providers) as idx:
+        with open_retriever(cfg, providers, research=True) as idx:
             for repetition in range(-warmup, repeats):
                 jobs = [(q,c) for q in queries for c in conditions]
                 random.Random(cfg.seed + repetition).shuffle(jobs)

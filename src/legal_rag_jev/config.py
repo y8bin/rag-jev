@@ -12,7 +12,7 @@ from dotenv import dotenv_values, load_dotenv
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
-METHODS = ("vector", "ce_r", "ce_fr", "jev_r", "jev_fr")
+METHODS = ("vector", "retrieval", "ce_r", "ce_fr", "jev_r", "jev_fr")
 _request_environment: ContextVar[dict[str, str] | None] = ContextVar("request_environment", default=None)
 
 
@@ -29,10 +29,15 @@ def environment_file_scope(path: str, inherited: dict[str, str]):
 
 class Config(BaseModel):
     model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
+    display_name: str = ""
     documents: str = "data/processed/documents.jsonl"
     chunks: str = "data/processed/chunks.jsonl"
     queries: str = "data/processed/queries.jsonl"
     index_dir: str = "indexes/main"
+    retriever_backend: Literal["vector", "replay", "bm25"] = "vector"
+    query_mode: Literal["evidence", "mcq"] = "evidence"
+    benchmark_gold: str | None = None
+    snapshot_corpus: bool = False
     output_dir: str = "results"
     cache_dir: str = ".cache"
     embedding_backend: Literal["local", "http", "mock"] = "local"
@@ -56,7 +61,7 @@ class Config(BaseModel):
     top_n: int = Field(default=5, ge=1)
     ce_threshold: float | None = None
     jev_threshold: float | None = None
-    methods: list[str] = Field(default_factory=lambda: list(METHODS))
+    methods: list[str] = Field(default_factory=lambda: [m for m in METHODS if m != "retrieval"])
     jev_instruction: Literal["applicability", "relevance"] = "applicability"
     token_budget: int | None = Field(default=None, ge=1)
     token_encoding: str = "cl100k_base"
@@ -86,6 +91,18 @@ class Config(BaseModel):
 
     @model_validator(mode="after")
     def valid_methods(self):
+        if self.retriever_backend != "vector" and self.qdrant_source == "existing":
+            raise ValueError("qdrant_source: existing requires retriever_backend: vector")
+        if self.retriever_backend != "vector" and "vector" in self.methods:
+            raise ValueError("Use the retrieval baseline for replay/bm25, not vector")
+        if self.retriever_backend == "vector" and "retrieval" in self.methods:
+            raise ValueError("Use the vector baseline for vector retrieval")
+        if self.retriever_backend == "replay" and self.query_mode != "mcq":
+            raise ValueError("Replay requires query_mode: mcq")
+        if self.retriever_backend == "replay" and self.apply_metadata_filters:
+            raise ValueError("Precomputed replay cannot reapply metadata filters; set apply_metadata_filters: false")
+        if self.query_mode == "mcq" and not self.benchmark_gold:
+            raise ValueError("MCQ evaluation requires a separate benchmark_gold file")
         self.qdrant_existing_collections = [name.strip() for name in self.qdrant_existing_collections]
         if self.qdrant_existing_collections:
             if self.qdrant_existing_collection:

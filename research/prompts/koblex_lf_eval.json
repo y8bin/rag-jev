@@ -1,0 +1,10 @@
+{
+  "criteria": "You will be given a complex legal question along with the relevant legal provisions that can be used to resolve it.\nEvaluate the legal accuracy of the response on a scale from 1 to 10. \nA score of 1 means the response addresses a completely unrelated situation and a score of 10 means the response correctly and thoroughly uses all of the given legal provisions.\n",
+  "evaluation_steps": [
+    "Check whether the 'actual output' properly answers the 'input' question.",
+    "Check whether the 'actual output' contradicts or omits any legal facts or provisions in the 'context'.",
+    "Heavily penalize if the legal conclusion differs in detail from the 'expected output'.",
+    "Heavily penalize if the 'actual output' contradicts or omits any specific elements from the 'context'.",
+    "Heavily penalize responses that include statements like 'The given context does not include the answer, but generally speaking...'."
+  ]
+}

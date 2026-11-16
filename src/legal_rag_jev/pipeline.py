@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import copy
+import math
 import random
 import time
 import uuid
@@ -13,7 +14,7 @@ from .config import Config, pricing
 from .corpus import load_queries, load_run_queries, validate_dataset
 from .index import VectorIndex
 from .io import digest, environment_manifest, file_hash, implementation_digest, read_json, read_jsonl, write_json, write_jsonl
-from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, MCQ_SYSTEM, RELEVANCE, evidence_text, generation_content, generation_system, query_text
+from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, ISSUE_SYSTEM, LEGAL_APPLICABILITY, LEGAL_CRITERIA, MCQ_SYSTEM, RELEVANCE, evidence_text, generation_content, generation_system, generation_text, jev_rubric, query_text
 from .retrievers import open_retriever, retrieval_manifest, validate_run_source
 from .providers import ProviderError, Providers, Result, tokens
 
@@ -24,7 +25,7 @@ def identities(cfg: Config, providers: Providers) -> dict:
         kinds.add("ce")
     if any(m.startswith("jev") for m in cfg.methods):
         kinds.add("jev")
-    if cfg.generate:
+    if cfg.generate or cfg.needs_issue_analysis:
         kinds.add("generation")
     return {k: providers.identity(k) for k in sorted(kinds)}
 
@@ -37,8 +38,12 @@ def protocol(cfg: Config, providers: Providers) -> dict:
             "index_version": retrieval_manifest(cfg)["index_version"],
             "retriever_backend": cfg.retriever_backend,
             "benchmark_gold_sha256": file_hash(cfg.benchmark_gold) if cfg.query_mode == "mcq" else None,
+            "koblex_lf_eval_judge": providers.identity("judge") if cfg.generation_style == "koblex" else None,
             "prompts": {"applicability": APPLICABILITY, "criteria": CRITERIA,
-                        "relevance": RELEVANCE, "generator": MCQ_SYSTEM if cfg.query_mode == "mcq" else GENERATION_SYSTEM}}
+                        "legal": LEGAL_APPLICABILITY, "legal_criteria": LEGAL_CRITERIA, "issues": ISSUE_SYSTEM,
+                        "relevance": RELEVANCE, "generator":
+                            {"system": Path(cfg.koblex_system_prompt).read_text(), "instruction": Path(cfg.koblex_instruction_prompt).read_text()}
+                            if cfg.generation_style == "koblex" else MCQ_SYSTEM if cfg.query_mode == "mcq" else GENERATION_SYSTEM}}
 
 
 async def freeze(cfg: Config, path: str) -> dict:
@@ -82,7 +87,8 @@ def actual_context(c: dict, cfg: Config) -> dict:
     return result
 
 
-def select(cfg: Config, q: dict, candidates: list[dict], scores: list[float] | None, threshold: float | None) -> tuple[list[dict], list[dict]]:
+def select(cfg: Config, q: dict, candidates: list[dict], scores: list[float] | None, threshold: float | None,
+           *, coverage: dict | None = None) -> tuple[list[dict], list[dict]]:
     ranking = [dict(c, rerank_score=float(scores[i]) if scores is not None else None) for i,c in enumerate(candidates)]
     ranking.sort(key=lambda c: (-(c["rerank_score"] if scores is not None else
                                 -c["retrieval_rank"] if cfg.retriever_backend == "replay" else c.get("retrieval_score", c.get("vector_score", 0))),
@@ -90,20 +96,45 @@ def select(cfg: Config, q: dict, candidates: list[dict], scores: list[float] | N
     for i,c in enumerate(ranking):
         c["rank"] = i + 1
     chosen = []
-    base_tokens = tokens(generation_system(q) + "\n" + __import__('json').dumps(generation_content(q, [], cfg.common_input_chars), ensure_ascii=False), cfg.token_encoding)
+    base_tokens = tokens(generation_text(cfg, q, []), cfg.token_encoding)
     if cfg.token_budget is not None and base_tokens > cfg.token_budget:
         raise ValueError("token_budget is smaller than the empty generation prompt")
-    for c in ranking:
-        if threshold is not None and c["rerank_score"] < threshold:
+    eligible = [c for c in ranking if threshold is None or c["rerank_score"] >= threshold]
+    issue_count = len(coverage.get("issues", [])) if coverage else 0
+    covered = [0.0] * issue_count
+    if coverage is not None and eligible:
+        if not issue_count or scores is None:
+            raise ValueError("Coverage selection requires query issues and Jev scores")
+        for c in eligible:
+            values = coverage.get("issue_scores", {}).get(c["chunk_id"], [])
+            if len(values) != issue_count or any(isinstance(s, bool) or not isinstance(s, (int, float)) or not math.isfinite(s) or not 0 <= s <= 1 for s in values):
+                raise ValueError("Missing or invalid Jev issue scores; refusing partial coverage selection")
+            c["issue_scores"] = list(values)
+    seen = set()
+    while eligible and len(chosen) < cfg.top_n:
+        def utility(c):
+            if coverage is None:
+                return 0.0
+            # Capping by applicability prevents issue-only topic matches gaining excessive novelty credit.
+            gain = sum(max(0.0, min(s, c["rerank_score"]) - old) for s, old in zip(c["issue_scores"], covered)) / issue_count
+            return (1 - cfg.jev_coverage_weight) * c["rerank_score"] + cfg.jev_coverage_weight * gain
+        c = max(eligible, key=lambda c: (utility(c), -c["rank"])) if coverage is not None else eligible[0]
+        eligible.remove(c)
+        signature = (c.get("law_name") or c.get("doc_id"), c.get("article"), c.get("paragraph"),
+                     c.get("version_id"), " ".join(c["text"].split()))
+        if coverage is not None and signature in seen:
             continue
         context = actual_context(c, cfg)
         if cfg.token_budget is not None:
-            text = generation_system(q) + "\n" + __import__('json').dumps(generation_content(q, chosen + [context], cfg.common_input_chars), ensure_ascii=False)
+            text = generation_text(cfg, q, chosen + [context])
             if tokens(text, cfg.token_encoding) > cfg.token_budget:
                 continue
+        if coverage is not None:
+            context["selection_utility"] = utility(c)
+            context["selection_order"] = len(chosen) + 1
+            covered = [max(old, min(s, c["rerank_score"])) for s, old in zip(c["issue_scores"], covered)]
+            seen.add(signature)
         chosen.append(context)
-        if len(chosen) >= cfg.top_n:
-            break
     return ranking, chosen
 
 
@@ -133,8 +164,11 @@ async def query_rows(cfg: Config, idx: VectorIndex, providers: Providers, q: dic
     for kind in sorted({c["method"].split("_")[0] for c in conditions if c["method"] not in ("vector", "retrieval")}):
         key = digest({"schema": 1, "implementation": implementation_digest(), "kind": kind, "identity": providers.identity(kind), "q": query_text(q),
             "candidates": [(c["chunk_id"], evidence_text(c, cfg.common_input_chars)) for c in candidates],
-            "instruction": APPLICABILITY if cfg.jev_instruction == "applicability" else RELEVANCE,
-            "criteria": CRITERIA, "ce_max_length": cfg.ce_max_length,
+            "rubric": jev_rubric(cfg.jev_instruction), "jev_selection": cfg.jev_selection,
+            "issue_prompt": ISSUE_SYSTEM, "issue_provider": providers.identity("generation") if kind == "jev" and cfg.jev_selection == "coverage" and cfg.jev_backend != "mock" else None,
+            "issue_generation_settings": {"max_output_tokens": cfg.max_output_tokens, "temperature": cfg.temperature,
+                                          "pricing": pricing()["generation"]} if kind == "jev" and cfg.needs_issue_analysis else None,
+            "ce_max_length": cfg.ce_max_length,
             "prices": pricing()[kind], "local_price": pricing()["local_usd_per_hour"]})
         try:
             score_results[kind] = await cached_call(cache, key, lambda k=kind: getattr(providers, k)(q, candidates))
@@ -155,13 +189,20 @@ async def query_rows(cfg: Config, idx: VectorIndex, providers: Providers, q: dic
             row.update({"status": "failed", "error_stage": "rerank", "error": str(scored)})
         else:
             try:
-                ranked, selected = select(cfg, q, candidates, scored.value if scored else None, cond.get("threshold"))
+                coverage = score_trace if method.startswith("jev") and cfg.jev_selection == "coverage" else None
+                ranked, selected = select(cfg, q, candidates, scored.value if scored else None, cond.get("threshold"), coverage=coverage)
                 row.update({"ranking": ranked, "selected": selected, "selected_count": len(selected)})
+                row["selection"] = {"mode": cfg.jev_selection if method.startswith("jev") else "score",
+                                    "issues": score_trace.get("issues", []) if coverage is not None else [],
+                                    "coverage_weight": cfg.jev_coverage_weight if coverage is not None else None}
                 content = generation_content(q, selected, cfg.common_input_chars)
-                row["context_tokens"] = tokens(__import__('json').dumps(content, ensure_ascii=False), cfg.token_encoding)
+                context_text = "\n".join(c["text"] for c in selected) if cfg.generation_style == "koblex" else __import__('json').dumps(content, ensure_ascii=False)
+                row["context_tokens"] = tokens(context_text, cfg.token_encoding)
                 if cfg.generate:
                     key = digest({"schema": 1, "implementation": implementation_digest(), "kind": "generation", "identity": providers.identity("generation"),
                         "system": generation_system(q), "content": content, "temperature": cfg.temperature,
+                        "generation_style": cfg.generation_style, "top_p": cfg.generation_top_p,
+                        "actual_prompt": generation_text(cfg, q, selected) if cfg.generation_style == "koblex" else None,
                         "max_output_tokens": cfg.max_output_tokens, "prices": pricing()["generation"]})
                     generated = await cached_call(cache, key, lambda: providers.generate(q, selected))
                     row["answer"], row["generation_trace"] = generated.value, generated.trace
@@ -201,6 +242,10 @@ def default_conditions(cfg: Config) -> list[dict]:
 
 
 def human_sample(cfg: Config, queries: list) -> list[str]:
+    if cfg.human_evaluation_ids:
+        if set(cfg.human_evaluation_ids) - {q.query_id for q in queries}:
+            raise ValueError("Preregistered human sample IDs missing from run questions")
+        return list(cfg.human_evaluation_ids)
     if cfg.human_evaluation_limit is None or cfg.human_evaluation_limit >= len(queries):
         return [q.query_id for q in queries]
     buckets = {}
@@ -257,7 +302,7 @@ async def run(cfg: Config, split: str, *, lock_path: str | None = None, run_id: 
             manifest["human_evaluation_query_ids"] = human_sample(cfg,queries) if cfg.query_mode == "evidence" else []
             chosen_ids = set(manifest["human_evaluation_query_ids"])
             manifest["human_evaluation_sample"] = {
-                "policy": "all_queries" if len(chosen_ids) == len(queries) else "round_robin_task_type_answerability",
+                "policy": "preregistered_ids" if cfg.human_evaluation_ids else "all_queries" if len(chosen_ids) == len(queries) else "round_robin_task_type_answerability",
                 "estimand": "unweighted_mean_in_selected_questions", "seed": cfg.seed,
                 "population_queries": len(queries), "selected_queries": len(chosen_ids),
                 "selected_groups": len({q.group_id for q in queries if q.query_id in chosen_ids}),

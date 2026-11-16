@@ -53,6 +53,7 @@ class Chunk(Document):
 
 class EvidenceUnit(Record):
     unit_id: str
+    available_in_corpus: bool = True
     chunk_ids: list[str] = Field(default_factory=list)
     doc_id: str | None = None
     version_id: str | None = None
@@ -61,6 +62,10 @@ class EvidenceUnit(Record):
 
     @model_validator(mode="after")
     def valid_reference(self):
+        if not self.available_in_corpus:
+            if self.chunk_ids or any(v is not None for v in (self.doc_id, self.version_id, self.start, self.end)):
+                raise ValueError("Unavailable gold units cannot also have corpus references")
+            return self
         if not self.chunk_ids and (not self.doc_id or not self.version_id or self.start is None or self.end is None):
             raise ValueError("evidence unit needs chunk_ids or doc_id/version_id/start/end")
         if self.start is not None and (self.end is None or self.start < 0 or self.end <= self.start):

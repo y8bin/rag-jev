@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import hashlib
+import json
 import shutil
 import tempfile
 import time
@@ -60,9 +62,36 @@ def chunk_payload(chunk: dict) -> dict:
 
 
 def point_digest(points) -> str:
-    return digest(sorted(({"id": str(p.id), "payload": p.payload,
-                           "vector": np.asarray(p.vector, dtype=np.float32).tolist()}
-                          for p in points), key=lambda p: p["id"]))
+    return point_digest_ordered(sorted(points, key=lambda p: str(p.id)))
+
+
+def point_digest_ordered(points) -> str:
+    """Same canonical JSON hash as point_digest, without materializing the full JSON/vector list."""
+    value = hashlib.sha256()
+    value.update(b"[")
+    previous = None
+    for p in points:
+        pid = str(p.id)
+        if previous is not None:
+            if pid <= previous:
+                raise ValueError("Expected unique UUID points in ascending ID order")
+            value.update(b",")
+        item = {"id": pid, "payload": p.payload, "vector": np.asarray(p.vector, dtype=np.float32).tolist()}
+        value.update(json.dumps(item, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False).encode())
+        previous = pid
+    value.update(b"]")
+    return value.hexdigest()
+
+
+def iter_scroll_points(client: QdrantClient, collection: str):
+    offset = None
+    while True:
+        # Local Qdrant sorts all IDs on each page. A bounded larger page avoids
+        # hundreds of repeated full-ID sorts for the 233k-row paper snapshot.
+        batch, offset = client.scroll(collection, limit=4096, offset=offset, with_payload=True, with_vectors=True)
+        yield from batch
+        if offset is None:
+            return
 
 
 def scroll_points(client: QdrantClient, collection: str) -> list:
@@ -106,8 +135,9 @@ async def build_index(cfg: Config, chunks: list[dict], providers: Providers) -> 
             matrices.append(r.value)
             traces.append(r.trace)
         vectors = unit_vectors(np.concatenate(matrices))
-        points = [models.PointStruct(id=point_id(c["chunk_id"]), vector=v.tolist(), payload=chunk_payload(c))
-                  for c, v in zip(chunks, vectors)]
+        def points_at(indices):
+            return (models.PointStruct(id=point_id(chunks[i]["chunk_id"]), vector=vectors[i].tolist(),
+                    payload=chunk_payload(chunks[i])) for i in indices)
         client = open_client(cfg, staging)
         if client.collection_exists(collection):
             raise ValueError("Qdrant collection already exists without this manifest; use a new collection prefix")
@@ -118,10 +148,12 @@ async def build_index(cfg: Config, chunks: list[dict], providers: Providers) -> 
                                 ("effective_from_day", models.PayloadSchemaType.INTEGER),
                                 ("effective_to_day", models.PayloadSchemaType.INTEGER)]:
                 client.create_payload_index(collection, field, field_schema=kind, wait=True)
-        for begin in range(0, len(points), cfg.embedding_batch_size):
-            client.upsert(collection, points=points[begin:begin + cfg.embedding_batch_size], wait=True)
-        expected_digest = point_digest(points)
-        if client.count(collection, exact=True).count != len(chunks) or point_digest(scroll_points(client, collection)) != expected_digest:
+        upload_size = max(256, cfg.embedding_batch_size)
+        for begin in range(0, len(chunks), upload_size):
+            client.upsert(collection, points=list(points_at(range(begin, min(begin + upload_size, len(chunks))))), wait=True)
+        ordered = sorted(range(len(chunks)), key=lambda i: point_id(chunks[i]["chunk_id"]))
+        expected_digest = point_digest_ordered(points_at(ordered))
+        if client.count(collection, exact=True).count != len(chunks) or point_digest_ordered(iter_scroll_points(client, collection)) != expected_digest:
             raise ValueError("Qdrant build integrity check failed")
         client.close()
         client = None
@@ -219,11 +251,18 @@ class VectorIndex:
                     or params.distance != models.Distance.DOT
                     or self.client.count(self.collection, exact=True).count != self.manifest["count"]):
                 raise ValueError("Qdrant dimensions/distance/count mismatch")
-            points = scroll_points(self.client, self.collection)
-            if point_digest(points) != self.manifest["points_digest"]:
+            expected_chunks = {point_id(c["chunk_id"]): c for c in snapshot}
+            self.chunks = {}
+            def checked_points():
+                for point in iter_scroll_points(self.client, self.collection):
+                    chunk = point.payload["chunk"]
+                    if expected_chunks.get(str(point.id)) != chunk:
+                        raise ValueError("Qdrant payload integrity check failed")
+                    self.chunks[str(point.id)] = chunk
+                    yield point
+            if point_digest_ordered(checked_points()) != self.manifest["points_digest"]:
                 raise ValueError("Qdrant point integrity check failed")
-            self.chunks = {str(p.id): p.payload["chunk"] for p in points}
-            if {point_id(c["chunk_id"]): c for c in snapshot} != self.chunks:
+            if expected_chunks != self.chunks:
                 raise ValueError("Qdrant payload integrity check failed")
         except BaseException:
             self.close()
@@ -249,17 +288,25 @@ class VectorIndex:
         search_start = time.perf_counter()
         query_filter = metadata_filter(q, self.cfg)
         count = self.client.count(self.collection, count_filter=query_filter, exact=True).count
-        # Fetch all eligible exact scores to preserve chunk_id ordering even at a K-boundary tie.
-        hits = self.client.query_points(self.collection, query=vector[0].tolist(), query_filter=query_filter,
-            search_params=models.SearchParams(exact=True) if self.cfg.qdrant_mode == "remote" else None,
-            limit=count, with_payload=True,
-            with_vectors=False).points if count else []
+        # Exact scores, fetching beyond K only until every boundary tie is included.
+        # This preserves full-sort results without transferring the entire corpus per question.
+        limit = min(count, self.cfg.top_k + 1)
+        hits = []
+        while limit:
+            hits = self.client.query_points(self.collection, query=vector[0].tolist(), query_filter=query_filter,
+                search_params=models.SearchParams(exact=True) if self.cfg.qdrant_mode == "remote" else None,
+                limit=limit, with_payload=True, with_vectors=False).points
+            ordered_scores = sorted((p.score for p in hits), reverse=True)
+            if limit >= count or len(hits) <= self.cfg.top_k or ordered_scores[self.cfg.top_k - 1] > ordered_scores[-1]:
+                break
+            limit = min(count, limit * 2)
         items = sorted(hits, key=lambda p: (-p.score, p.payload["chunk"]["chunk_id"]))
         result = [{**p.payload["chunk"], "vector_score": float(p.score), "vector_rank": rank + 1}
                   for rank, p in enumerate(items[:self.cfg.top_k])]
         ms = (time.perf_counter() - search_start) * 1000
         return {"candidates": result, "index_version": self.manifest["index_version"], "eligible_count": count,
             "trace": {"latency_ms": (time.perf_counter()-start)*1000, "search_ms": ms,
+                      "fetched_points": len(hits), "exact_boundary_ties": True,
                       "embedding": embedded.trace, "search_cost_usd": 0.0 if self.cfg.embedding_backend == "mock" else search_cost(ms, self.cfg.qdrant_mode),
                       "search_cost_basis": "synthetic" if self.cfg.embedding_backend == "mock" else
                           "remote_elapsed_time_allocation" if self.cfg.qdrant_mode == "remote" else "local_elapsed_time_allocation",

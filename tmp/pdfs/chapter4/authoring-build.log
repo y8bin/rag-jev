@@ -1,0 +1,80 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./research/chapter4/preview.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cjk-ko/kotex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kotex-utf/kotex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/xetex/xetexko/xetexko.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/unicode-data/load-unicode-xetex
+-classes.tex 
+load-unicode-xetex-classes.tex v1.19 (2025-09-26)
+Reading Unicode east Asian character class data
+# LineBreak-17.0.0.txt 
+# Date: 2025-07-29, 13:52:18 GMT 
+# EastAsianWidth-17.0.0.txt 
+# Date: 2025-07-24, 00:12:54 GMT 
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/sttools/flushend.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(tmp/pdfs/chapter4/chapter4-draft.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(./research/chapter4/chapter4.tex (./research/chapter4/section4_1.tex
+Underfull \hbox (badness 2486) in paragraph at lines 5--6
+\TU/UnBatang.ttf(0)/m/n/10 의 재 정 렬 모 델 을 \TU/lmr/m/n/10 Cross-Encoder\TU/UnBata
+ng.ttf(0)/m/n/10 (\TU/lmr/m/n/10 CE, \TU/lmtt/m/n/10 dragonkue/
+
+Underfull \hbox (badness 6691) in paragraph at lines 5--6
+\TU/lmtt/m/n/10 bge- reranker- v2- m3- ko\TU/UnBatang.ttf(0)/m/n/10 ) 에 서 \TU/l
+mr/m/n/10 Decision Model \TU/UnBatang.ttf(0)/m/n/10 인
+) (./research/chapter4/section4_2.tex
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \hbox (badness 3302) in paragraph at lines 16--17
+[]\TU/UnBatang.ttf(0)/m/n/10 문 항 별 \TU/lmr/m/n/10 F1 \TU/UnBatang.ttf(0)/m/n/10
+ 은 \TU/lmr/m/n/10 Jev \TU/UnBatang.ttf(0)/m/n/10 우 세 \TU/lmr/m/n/10 32 \TU/UnBa
+tang.ttf(0)/m/n/10 개, 동 일 \TU/lmr/m/n/10 177 \TU/UnBatang.ttf(0)/m/n/10 개, \TU/
+lmr/m/n/10 CE
+
+Underfull \hbox (badness 7540) in paragraph at lines 16--17
+\TU/UnBatang.ttf(0)/m/n/10 우 세 \TU/lmr/m/n/10 17 \TU/UnBatang.ttf(0)/m/n/10 개 였
+ 다. 데 이 터 셋 \TU/lmr/m/n/10 hop \TU/UnBatang.ttf(0)/m/n/10 라 벨 별 \TU/lmr/m/n/10 
+F1 \TU/UnBatang.ttf(0)/m/n/10 은
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+\TU/lmr/m/n/10 1-hop 78.07$\OMS/cmsy/m/n/10 !$\TU/lmr/m/n/10 76.90\TU/UnBatang.
+ttf(0)/m/n/10 (\TU/lmr/m/n/10 Jev \TU/UnBatang.ttf(0)/m/n/10 우 세\TU/lmr/m/n/10 
+/ \TU/UnBatang.ttf(0)/m/n/10 동 일\TU/lmr/m/n/10 / CE \TU/UnBatang.ttf(0)/m/n/10 
+우 세
+
+Underfull \hbox (badness 4132) in paragraph at lines 16--17
+\TU/lmr/m/n/10 0/56/1 \TU/UnBatang.ttf(0)/m/n/10 문 항), \TU/lmr/m/n/10 2-hop 53.
+33$\OMS/cmsy/m/n/10 !$\TU/lmr/m/n/10 57.24\TU/UnBatang.ttf(0)/m/n/10 (\TU/lmr/m
+/n/10 20/95/12\TU/UnBatang.ttf(0)/m/n/10 ), \TU/lmr/m/n/10 3-hop
+) (./research/chapter4/section4_3.tex
+Underfull \vbox (badness 6592) has occurred while \output is active [1])
+(./research/chapter4/section4_4.tex) (./research/chapter4/section4_5.tex))
+[2] [3] (tmp/pdfs/chapter4/chapter4-draft.aux) )
+(see the transcript file for additional information)
+Output written on tmp/pdfs/chapter4/chapter4-draft.pdf (3 pages).
+Transcript written on tmp/pdfs/chapter4/chapter4-draft.log.

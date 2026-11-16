@@ -13,7 +13,7 @@ import numpy as np
 from .config import Config, api_cost, env, local_cost, provider_headers, provider_identity
 from .io import digest
 from .openai_responses import parse_response, response_format
-from .prompts import APPLICABILITY, CRITERIA, GENERATION_SYSTEM, JUDGE_SYSTEM, RELEVANCE, evidence_text, generation_content, generation_system, query_text
+from .prompts import ISSUE_SYSTEM, JUDGE_SYSTEM, evidence_text, generation_content, generation_system, generation_text, jev_rubric, query_text
 from .schema import Answer
 
 
@@ -66,9 +66,9 @@ def usage_of(kind: str, data: dict) -> dict:
     if not isinstance(u, dict):
         u = {}
     if kind in ("generation", "judge"):
-        usage = {"input_tokens": u.get("input_tokens"), "output_tokens": u.get("output_tokens")}
-        inputs = u.get("input_tokens_details") or {}
-        outputs = u.get("output_tokens_details") or {}
+        usage = {"input_tokens": u.get("input_tokens", u.get("prompt_tokens")), "output_tokens": u.get("output_tokens", u.get("completion_tokens"))}
+        inputs = u.get("input_tokens_details", u.get("prompt_tokens_details")) or {}
+        outputs = u.get("output_tokens_details", u.get("completion_tokens_details")) or {}
         if isinstance(inputs, dict):
             for source, target in (("cached_tokens", "cached_input_tokens"), ("cache_write_tokens", "cache_write_tokens")):
                 if source in inputs:
@@ -86,6 +86,10 @@ class Transport:
         self.cfg = cfg
         self.client = client or httpx.AsyncClient(timeout=cfg.timeout_seconds)
         self.semaphore = asyncio.Semaphore(cfg.concurrency)
+        self.budget = None
+        if cfg.budget_ledger is not None:
+            from .budget import Budget
+            self.budget = Budget(cfg.budget_ledger, cfg.budget_limit_usd, openai_limit=cfg.budget_openai_limit_usd)
 
     async def close(self):
         await self.client.aclose()
@@ -101,6 +105,7 @@ class Transport:
         attempts = []
         async with self.semaphore:
             for attempt in range(self.cfg.max_retries + 1):
+                reservation = self.budget.reserve(kind, identity, body) if self.budget is not None and body is not None else None
                 try:
                     response = await self.client.request("POST" if body is not None else "GET",
                         identity["base_url"] + path, json=body, headers=headers)
@@ -124,11 +129,14 @@ class Transport:
                     if not isinstance(data, dict):
                         raise ProviderError(f"{kind}: response must be a JSON object")
                     usage = usage_of(kind, data)
+                    if reservation is not None:
+                        self.budget.settle(reservation, api_cost(kind, usage))
                     # A preceding failed request might have been billed. Never invent its usage.
                     cost = api_cost(kind, usage) if len(attempts) == 1 else None
                     return Result(data, {"latency_ms": (time.perf_counter() - start) * 1000,
                         "attempts": attempts, "request_count": len(attempts), "retry_count": len(attempts) - 1,
                         "usage": usage, "cost_usd": cost, "cost_complete": cost is not None,
+                        **({"budget": self.budget.summary()} if self.budget is not None else {}),
                         "returned_model": data.get("model"), "identity": identity, "cached": False,
                         **({"response_id": data.get("id"), "response_status": data.get("status"),
                             "service_tier": data.get("service_tier")} if identity.get("backend") == "openai" else {})})
@@ -243,14 +251,21 @@ class Providers:
                     max_length=self.cfg.ce_max_length, token=env("HF_TOKEN") or None, trust_remote_code=False,
                     cache_folder=env("MODEL_CACHE_DIR",default=".cache/models"))
                 load_ms = (time.perf_counter()-load_start)*1000
+            import torch
+            if self._ce.device.type == "mps":
+                torch.mps.synchronize()
             start = time.perf_counter()
             lengths = [len(self._ce.tokenizer(a, b, truncation=False)["input_ids"]) for a,b in pairs]
-            scores = np.asarray(self._ce.predict(pairs, show_progress_bar=False)).reshape(-1).tolist()
+            scores = np.asarray(self._ce.predict(pairs, batch_size=self.cfg.ce_batch_size, show_progress_bar=False)).reshape(-1).tolist()
+            if self._ce.device.type == "mps":
+                torch.mps.synchronize()
             if len(scores) != len(chunks) or not all(math.isfinite(s) for s in scores):
                 raise ProviderError("CE requires one finite scalar score per candidate")
             trace = local_trace("ce", identity, start)
             trace.update({"truncated_inputs": sum(n > self.cfg.ce_max_length for n in lengths),
-                          "input_lengths": lengths, "max_length": self.cfg.ce_max_length,"initialization_ms":load_ms})
+                          "input_lengths": lengths, "max_length": self.cfg.ce_max_length,"initialization_ms":load_ms,
+                          "device": str(self._ce.device), "batch_size": self.cfg.ce_batch_size,
+                          "parameter_dtype": str(next(self._ce.parameters()).dtype)})
             return Result(scores, trace)
         result = await self.transport.request("ce", identity, "/rerank", {"model": identity["model"],
             "query": query_text(q), "documents": [b for _, b in pairs], "top_n": len(chunks)})
@@ -269,59 +284,87 @@ class Providers:
     async def jev(self, q: dict, chunks: list[dict]) -> Result:
         identity = self.identity("jev")
         start = time.perf_counter()
+        issues = []
+        issue_trace = None
+        if self.cfg.jev_selection == "coverage" and chunks:
+            # Only query_text reaches decomposition: never gold answers, relevance labels, or candidates.
+            if identity["backend"] == "mock":
+                issues = [q["question"]]
+            else:
+                analysis = await self.structured_response("generation", ISSUE_SYSTEM,
+                    json.loads(query_text(q)), schema_kind="issues")
+                issues, issue_trace = analysis.value["issues"], analysis.trace
         if identity["backend"] == "mock":
             a = set(features(q["question"]))
-            return Result([len(a & set(features(c["text"]))) / max(1, len(a)) for c in chunks],
-                          local_trace("jev", identity, start))
+            scores = [len(a & set(features(c["text"]))) / max(1, len(a)) for c in chunks]
+            trace = local_trace("jev", identity, start)
+            trace.update(issues=issues, issue_scores={c["chunk_id"]: [s] for c, s in zip(chunks, scores)} if issues else {})
+            return Result(scores, trace)
+        instruction, criteria = jev_rubric(self.cfg.jev_instruction)
         async def one(c):
             body = {"model": identity["model"], "state": {
                 "query": json.loads(query_text(q)), "candidate": json.loads(evidence_text(c, self.cfg.common_input_chars))},
                 "questions": {"applicable": {"type": "noul", "instructions":
-                    APPLICABILITY if self.cfg.jev_instruction == "applicability" else RELEVANCE}}}
-            if self.cfg.jev_instruction == "applicability":
-                body["questions"]["applicable"]["criteria"] = CRITERIA
+                    instruction}}}
+            if criteria is not None:
+                body["questions"]["applicable"]["criteria"] = criteria
+            for i, issue in enumerate(issues):
+                body["questions"][f"issue_{i}"] = {"type": "noul", "instructions":
+                    f"원래 질문의 사실관계를 유지할 때, 후보가 다음 하위 쟁점의 판단에 필요한 법적 근거를 제공하는가? {issue}",
+                    "criteria": criteria}
             r = await self.transport.request("jev", identity, "/v1/systemone", body)
             try:
-                answer = r.value["answers"]["applicable"]
-                score = float(answer["noul"])
-                if answer["type"] != "noul" or not math.isfinite(score) or not 0 <= score <= 1:
-                    raise ValueError("invalid probability")
-                r.value = score
+                values = {}
+                for name in body["questions"]:
+                    answer = r.value["answers"][name]
+                    score = float(answer["noul"])
+                    if isinstance(answer["noul"], bool) or answer["type"] != "noul" or not math.isfinite(score) or not 0 <= score <= 1:
+                        raise ValueError("invalid probability")
+                    values[name] = score
+                r.value = values["applicable"]
                 r.trace["chunk_id"] = c["chunk_id"]
+                r.trace["issue_scores"] = [values[f"issue_{i}"] for i in range(len(issues))]
                 return r
             except (KeyError, TypeError, ValueError) as e:
                 raise ProviderError("Invalid Jev noul response", r.trace) from e
         results = await asyncio.gather(*(one(c) for c in chunks), return_exceptions=True)
+        from .budget import BudgetError
+        for result in results:
+            if isinstance(result, BudgetError):
+                raise result
         traces = [{**(r.trace if isinstance(r, (Result, ProviderError)) else {"cost_usd": None}),
                    "chunk_id": c["chunk_id"], "status": "failed" if isinstance(r, BaseException) else "ok",
                    **({"error": str(r) if isinstance(r, ProviderError) else type(r).__name__} if isinstance(r, BaseException) else {})}
                   for c,r in zip(chunks,results)]
-        costs = [t.get("cost_usd") for t in traces]
+        all_traces = traces + ([issue_trace] if issue_trace is not None else [])
+        costs = [t.get("cost_usd") for t in all_traces]
         trace = {"identity": identity, "score_type": "noul_probability", "latency_ms": (time.perf_counter() - start)*1000,
-            "calls": traces, "request_count": sum(t.get("request_count", 0) for t in traces),
-            "retry_count": sum(t.get("retry_count", 0) for t in traces), "cached": False,
+            "calls": traces, "request_count": sum(t.get("request_count", 0) for t in all_traces),
+            "retry_count": sum(t.get("retry_count", 0) for t in all_traces), "cached": False,
+            "issues": issues, "issue_analysis": issue_trace,
+            "issue_scores": {t["chunk_id"]: t["issue_scores"] for t in traces if t["status"] == "ok"},
             "cost_usd": sum(costs) if all(c is not None for c in costs) else None,
-            "usage": {k: sum(t.get("usage", {}).get(k) or 0 for t in traces)
-                      if all(t.get("usage", {}).get(k) is not None for t in traces) else None
+            "usage": {k: sum(t.get("usage", {}).get(k) or 0 for t in all_traces)
+                      if all(t.get("usage", {}).get(k) is not None for t in all_traces) else None
                       for k in ("input_tokens", "output_tokens")}}
         failures = [r for r in results if isinstance(r, BaseException)]
         if failures:
             raise ProviderError(f"Jev failed for {len(failures)}/{len(chunks)} candidates", trace)
         return Result([r.value for r in results], trace)
 
-    async def structured_response(self, kind: str, system: str, content: dict) -> Result:
+    async def structured_response(self, kind: str, system: str, content: dict, *, schema_kind: str | None = None) -> Result:
         identity = self.identity(kind)
         if identity["backend"] != "openai":
             raise ProviderError("Structured generation requires OpenAI")
         body = {"model": identity["model"], "instructions": system,
                 "input": [{"role": "user", "content": json.dumps(content, ensure_ascii=False)}],
                 "max_output_tokens": self.cfg.max_output_tokens,
-                "text": {"format": response_format(kind)}, "store": False}
+                "text": {"format": response_format(schema_kind or kind)}, "store": False}
         if self.cfg.temperature is not None:
             body["temperature"] = self.cfg.temperature
         result = await self.transport.request(kind, identity, "/responses", body)
         try:
-            result.value = parse_response(kind, result.value)
+            result.value = parse_response(schema_kind or kind, result.value)
         except ValueError as e:
             raise ProviderError(str(e), result.trace) from e
         return result
@@ -339,6 +382,25 @@ class Providers:
             trace["usage"] = {"input_tokens": tokens(json.dumps(generation_content(q, chunks, self.cfg.common_input_chars), ensure_ascii=False), self.cfg.token_encoding),
                               "output_tokens": tokens(answer.answer, self.cfg.token_encoding)}
             return Result(answer.json_record(), trace)
+        if self.cfg.generation_style == "koblex":
+            prompt = generation_text(self.cfg, q, chunks)
+            body = {"model": identity["model"], "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": self.cfg.max_output_tokens, "store": False}
+            if self.cfg.temperature is not None:
+                body["temperature"] = self.cfg.temperature
+            if self.cfg.generation_top_p is not None:
+                body["top_p"] = self.cfg.generation_top_p
+            result = await self.transport.request("generation", identity, "/chat/completions", body)
+            try:
+                choice = result.value["choices"][0]
+                text = choice["message"]["content"]
+                if choice["finish_reason"] != "stop" or not isinstance(text, str):
+                    raise ValueError("Incomplete or missing free-form answer")
+                result.trace.update(generation_style="koblex", prompt_sha256=digest(prompt), raw_output=text)
+                result.value = Answer(answer=text.split("Answer:")[-1].strip(), abstained=False).json_record()
+            except (KeyError, IndexError, TypeError, ValueError) as e:
+                raise ProviderError("Invalid KoBLEX free-form generator response", result.trace) from e
+            return result
         result = await self.structured_response("generation", generation_system(q), generation_content(q, chunks, self.cfg.common_input_chars))
         try:
             result.value = Answer.model_validate(result.value).json_record()

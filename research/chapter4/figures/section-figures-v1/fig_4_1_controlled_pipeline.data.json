@@ -1,0 +1,7 @@
+{
+  "questions": 226,
+  "candidate_pools": 478,
+  "candidates_per_pool": 100,
+  "shortlist_per_pool": 10,
+  "llm_selections_per_pool": 1
+}

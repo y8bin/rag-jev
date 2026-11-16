@@ -1,0 +1,47 @@
+{
+  "completed_at_utc": "2026-11-09T06:17:57.677923+00:00",
+  "status": "PASS_CHAPTER4_DRAFT_CHECKS",
+  "current_study_verify": "VERIFIED_CURRENT_STUDY",
+  "original_files_preserved": 43076,
+  "frozen_prep_outputs_preserved": 67,
+  "numeric_checks": [
+    "hop means and raw differences",
+    "case F1 and LF scores",
+    "resource means and context IQR",
+    "all 3 cases outside existing human sample"
+  ],
+  "latex": "XeLaTeX 2 passes; no overfull boxes, undefined references or font warnings",
+  "references_checked": 10,
+  "preview_pages": 3,
+  "visual_review": "All three pages and hop figure inspected; no clipping, missing glyphs or overlap",
+  "preview_layout": "provisional A4 / 10pt / two columns / 20mm margins; final venue layout pending",
+  "rendering": "CoreGraphics through Swift; raster pages in tmp/pdfs/chapter4",
+  "pdf": {
+    "path": "output/pdf/chapter4-draft.pdf",
+    "sha256": "a502dc38b8421fecc9f4d7b69ca6f8649eac0e8ece32c8b55d4dd493ccc3606a"
+  },
+  "new_paid_calls": 0,
+  "new_human_judgments": 0,
+  "source_facts": "research/chapter4/manuscript-facts.json",
+  "files": {
+    "research/chapter4/section4_5.tex": "e3bd990371189353bc42318bce28c1024e3ec5dc61ceb10fac9b4d655f0eaec9",
+    "research/chapter4/section4_4.tex": "17b7a511b967e82324981e1b7d36c3f082fa9f7e84f45bf94f4fef3b4eeac764",
+    "research/chapter4/manuscript-facts.json": "62d6ec9cd331e8d1fe6761050f33475e363a7ff5ef4d790e10422398a0548d21",
+    "research/chapter4/chapter4.tex": "356696bdd28f2f374600a0673fb867d5f59d04c96f532971bad028ead5b8c1f4",
+    "research/chapter4/section4_3.tex": "f74b5b0e4d2765e62b34f56fcd947e1a87dd01ab377b7411377c24290b416217",
+    "research/chapter4/section4_2.tex": "ed225e7a1350b3584cbcc0b7a639aa78ecb4efb4810a313803cfc2d3c448512d",
+    "research/chapter4/section4_1.tex": "0a449558f210ffac96f72dbb980e45eca7d7c3b59080154914eba20e851c320e",
+    "research/chapter4/preview.tex": "1f59fed37b9d5b5a8d71abe7bc018a4aca424fb752582c91278db36dc3b77481",
+    "research/chapter4/WRITING_NOTES.md": "78c3da95d71b0b1c1925e99555efdcd53467794783f2a55af764c0777933750d",
+    "research/chapter4/figures/plot_hop_f1.py": "0f05faabb20cfccb4f780fd3495cf9c74f3d94f29f14b0244c137965972ac9b7",
+    "research/chapter4/figures/hop_f1.csv": "d402c2981b973b6af55e67de65a43122abdb6830484185e4cadc9d48bc8431ba",
+    "research/chapter4/figures/hop_f1.provenance.json": "203b0a9dc6779bae8fb958c9e08b61cc1fd9490c8946c3a08d786f64fed932e5",
+    "research/chapter4/figures/hop_f1.svg": "ca331cd78aec263a86c2ad0cf6266f6df9f816eb6d466d2f1249ee43fe984219",
+    "research/chapter4/figures/hop_f1.pdf": "80bb907e5d2f447f73fe873c3969bfed92a2946fad35f01523412b2106846017",
+    "research/chapter4/figures/hop_f1.png": "87f2670c63c8bb1597a5b79d9bf61304dbe13612b7171de211f657d26ac2d5d4",
+    "research/chapter4/figures/skill-references/api.md": "12892f4940c153c8b2e75abe8eed8f96476989b0a75d65f0dc3d08118bf58269",
+    "research/chapter4/figures/skill-references/design-theory.md": "d34fa995a481588a33aab301591a9a2ae54dae8df34c74e0a13311582ef48d99",
+    "research/chapter4/figures/skill-references/tutorials.md": "e5a9b9fa78a73a981f046aa29728dd844268282109159fd934f9c9716b3592c1",
+    "research/chapter4/figures/skill-references/SKILL.md": "952300b4d0bd8fbd0c55aaa732a47a0abb8e9707bc80965c8e70221ef13f0292"
+  }
+}

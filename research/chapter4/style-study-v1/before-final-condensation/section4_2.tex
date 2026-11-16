@@ -1,0 +1,76 @@
+% 제4장: 실험 결과 및 분석 / 4.2 문체 수정본
+% section4_1.tex 다음에 삽입한다. 표는 4.4에서도 함께 참조한다.
+% 근거: results/koblex-reproduction-v1/analysis.json,
+%       results/koblex-reproduction-v1/chapter4-prep-v1/A1/numeric-ledger.json,
+%       results/koblex-reproduction-v1/chapter4-prep-v1/A4/stage-summary.jsonl,
+%       results/koblex-reproduction-v1/chapter4-prep-v1/A4/pool-feasibility-summary.json
+
+\subsection{재정렬 모델 교체에 따른 근거 선택 성능}
+\label{sec:ch4_evidence_results}
+
+Jev의 최종 근거 F1은 61.75점으로 수정 CE의 58.57점보다 3.19점
+높았다(표~\ref{tab:ch4_main_results}). 차이의 탐색적 95\% 신뢰구간은
+$[+0.75,\,+5.68]$점이었다. Recall도 57.74점에서 60.69점으로
+2.95점 증가하였으며, 차이의 신뢰구간은 $[+0.39,\,+5.51]$점이었다.
+두 지표는 Jev 조건에서 정답 근거의 평균 회수 수준이 높았음을 보여준다.
+
+근거 선택 점수는 공식 정답 근거(gold)와 최종 선택 근거의 문자열
+집합을 비교한 문항별 점수의 비가중 평균이다. EM은 두 집합의 완전
+일치율이며, 모든 gold 포함률은 추가 근거의 유무와 관계없이 정답
+근거를 모두 포함한 문항의 비율이다.
+
+\begin{table}[htbp]
+    \centering
+    \caption{수정 CE와 Jev의 전체 성능 비교 ($n=226$)}
+    \label{tab:ch4_main_results}
+    \small
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{@{}lrrrr@{}}
+        \hline
+        지표 & 수정 CE & Jev & $\Delta$ & 차이의 95\% CI \\
+        \hline
+        \multicolumn{5}{@{}l}{\textbf{근거 선택}} \\
+        F1              & 58.57 & 61.75 & $+3.19$ & $[+0.75,\,+5.68]$ \\
+        Recall          & 57.74 & 60.69 & $+2.95$ & $[+0.39,\,+5.51]$ \\
+        EM              & 27.88 & 29.65 & $+1.77$ & $[-1.77,\,+5.19]$ \\
+        모든 gold 포함률 & 34.07 & 34.96 & $+0.88$ & $[-2.90,\,+4.53]$ \\
+        \hline
+        \multicolumn{5}{@{}l}{\textbf{답변 품질}} \\
+        Token F1        & 46.20 & 47.31 & $+1.12$ & $[+0.02,\,+2.27]$ \\
+        LF-Eval         & 67.57 & 70.15 & $+2.58$ & $[+0.37,\,+4.79]$ \\
+        \hline
+    \end{tabular}
+    \par\smallskip
+    \begin{minipage}{\linewidth}
+        \footnotesize
+        값은 0--1 원점수의 100배이며, EM과 모든 gold 포함률은 백분율이다.
+        $\Delta$는 Jev$-$수정 CE로, EM과 모든 gold 포함률의 차이는 \%p,
+        나머지 지표의 차이는 점 단위이다. 차이와 CI는 반올림 전 값으로
+        계산하였다. CI는 151개 의존 그룹의 대응 bootstrap 10,000회로
+        산출한 탐색적 percentile 구간이며, 다중 비교를 보정하지 않았다.
+    \end{minipage}
+\end{table}
+
+정답 근거를 모두 확보하는 성능의 개선은 불확실했다.
+EM의 증가폭은 1.77\%p였고 신뢰구간은 0을 포함하였다.
+모든 gold를 포함한 문항은 수정 CE 77개에서 Jev 79개로 늘었으나,
+비율 차이는 0.88\%p에 그쳤으며 신뢰구간은
+$[-2.90,\,+4.53]$\%p였다. 평균 F1과 Recall의 개선에 비해
+근거 집합의 완결성에서는 뚜렷한 차이를 확인하기 어려웠다.
+
+Jev의 회수 이점은 LLM 선택기에 제시하는 shortlist에서도 관찰되었다.
+공통 BM25 후보 합집합의 문항 평균 gold Recall은 77.21\%,
+모든 gold 포함률은 61.06\%(138/226)였다.
+예상 법령별 상위 10개를 합친 shortlist의 평균 gold Recall은
+수정 CE 69.47\%, Jev 74.63\%로, Jev가 더 많은 정답 근거를
+후속 선택 단계에 남겼다. 후보 목록당 하나를 선택하는 제약까지
+고려할 때, 모든 gold를 동시에 선택할 수 있는 문항은 수정 CE 104개,
+Jev 120개였다. 이는 구조적으로 가능한 문항 수의 상한이다.
+실제 완전 회수 문항은 각각 77개와 79개로 이보다 적었다.
+따라서 최종 성능은 변경된 재정렬 결과와 공통 LLM
+선택 절차가 결합된 파이프라인의 결과이다.
+
+공개 코드 CE의 F1은 48.72점으로 수정 CE보다 9.85점 낮았다.
+이 차이는 목록 참조 인덱스 수정에 따른 것으로, Jev 교체의 3.19점과
+별개의 결과다. 문제를 확인한 범위는 공개 코드 스냅샷이며,
+원 논문의 실제 실행에도 같은 문제가 있었는지는 확인되지 않았다.

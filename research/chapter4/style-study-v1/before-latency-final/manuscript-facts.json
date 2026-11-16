@@ -1,0 +1,402 @@
+{
+  "scope": "existing descriptive aggregates reused for manuscript; no new experimental or inferential result",
+  "source_files": {
+    "results/koblex-reproduction-v1/analysis.json": {
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A2/hop-f1-figure-data.csv": {
+      "sha256": "d402c2981b973b6af55e67de65a43122abdb6830484185e4cadc9d48bc8431ba"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A3/win-tie-loss.json": {
+      "sha256": "195e3a88e93e97e8784f3985ac1b7d0c656c7117a503638870e43ce73b57f1c7"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A4/denominators.json": {
+      "sha256": "4b75b1e54b204fbb2ddc7840e92ceb4b26141ffeb45e9e0d7bb6a3a749930eb4"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A5/descriptive-statistics.jsonl": {
+      "sha256": "8a6d4b8f74669ffe41e5f3e34be5251406ff6ceaaf5bedeeddf42bd8bd3ade3b"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A5/cache-separated-usage.jsonl": {
+      "sha256": "783a19e4fd5e8a1f8702d4462e582001166905aa59492fc481abd1f790a058ac"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A5/tokenizer.json": {
+      "sha256": "18f97582886e97b753bbbc430072bba7b86a5cf4b73f1fa5e4bcb255827b6fd3"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A6/proposed-three-candidates.json": {
+      "sha256": "60628466dc931f9a3883f4002c2533face96fa09035428b072fadb896904f371"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A6/casebook.jsonl": {
+      "sha256": "fb699e535f795dd328b434d7b63c2be158e9fc1c52b7ed57bb66558cf7fb0177"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A6/observation-frequencies.jsonl": {
+      "sha256": "a9b8e0e1be344dc5a491fae72ab6e7ea98417cc5c643813e37222ab469164c63"
+    },
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A6/human-review-boundary.json": {
+      "sha256": "4e6a64d2e474f53a954f6278b1959ed0480b52149313ea0b2f9d768995a3c4d5"
+    }
+  },
+  "4.3": {
+    "hop": [
+      {
+        "hop": 1,
+        "n": 57,
+        "fixed_CE_f1": 0.7807017543859649,
+        "Jev_f1": 0.7690058479532165,
+        "difference": -0.011695906432748426,
+        "all_gold_coverage": {
+          "parser_ce_fixed": 0.8421052631578947,
+          "parser_jev_fixed": 0.8245614035087719
+        }
+      },
+      {
+        "hop": 2,
+        "n": 127,
+        "fixed_CE_f1": 0.5333333333333333,
+        "Jev_f1": 0.5724409448818898,
+        "difference": 0.039107611548556465,
+        "all_gold_coverage": {
+          "parser_ce_fixed": 0.2204724409448819,
+          "parser_jev_fixed": 0.2440944881889764
+        }
+      },
+      {
+        "hop": 3,
+        "n": 42,
+        "fixed_CE_f1": 0.47913832199546486,
+        "Jev_f1": 0.5482993197278911,
+        "difference": 0.06916099773242629,
+        "all_gold_coverage": {
+          "parser_ce_fixed": 0.023809523809523808,
+          "parser_jev_fixed": 0.023809523809523808
+        }
+      }
+    ],
+    "paired_F1": {
+      "tie": 177,
+      "Jev_higher": 32,
+      "CE_higher": 17
+    }
+  },
+  "4.4": {
+    "resource_means": [
+      {
+        "arm": "parser_ce_fixed",
+        "variable": "context_tokens",
+        "n": 226,
+        "sum": 46029.0,
+        "mean": 203.66814159292036,
+        "median": 164.0,
+        "q1": 113.0,
+        "q3": 246.75,
+        "iqr": 133.75,
+        "min": 37.0,
+        "max": 924.0,
+        "scope": "logical per-query demand; cached rows included"
+      },
+      {
+        "arm": "parser_ce_fixed",
+        "variable": "api_input_tokens",
+        "n": 226,
+        "sum": 520403.0,
+        "mean": 2302.66814159292,
+        "median": 2273.0,
+        "q1": 2199.0,
+        "q3": 2352.0,
+        "iqr": 153.0,
+        "min": 2070.0,
+        "max": 3008.0,
+        "scope": "logical per-query demand; cached rows included"
+      },
+      {
+        "arm": "parser_ce_fixed",
+        "variable": "api_output_tokens",
+        "n": 226,
+        "sum": 16308.0,
+        "mean": 72.15929203539822,
+        "median": 66.0,
+        "q1": 47.25,
+        "q3": 88.0,
+        "iqr": 40.75,
+        "min": 19.0,
+        "max": 220.0,
+        "scope": "logical per-query demand; cached rows included"
+      },
+      {
+        "arm": "parser_jev_fixed",
+        "variable": "context_tokens",
+        "n": 226,
+        "sum": 48725.0,
+        "mean": 215.59734513274336,
+        "median": 170.5,
+        "q1": 120.0,
+        "q3": 262.5,
+        "iqr": 142.5,
+        "min": 25.0,
+        "max": 1694.0,
+        "scope": "logical per-query demand; cached rows included"
+      },
+      {
+        "arm": "parser_jev_fixed",
+        "variable": "api_input_tokens",
+        "n": 226,
+        "sum": 523096.0,
+        "mean": 2314.5840707964603,
+        "median": 2272.5,
+        "q1": 2199.5,
+        "q3": 2378.5,
+        "iqr": 179.0,
+        "min": 2070.0,
+        "max": 3814.0,
+        "scope": "logical per-query demand; cached rows included"
+      },
+      {
+        "arm": "parser_jev_fixed",
+        "variable": "api_output_tokens",
+        "n": 226,
+        "sum": 16719.0,
+        "mean": 73.97787610619469,
+        "median": 67.0,
+        "q1": 48.0,
+        "q3": 93.0,
+        "iqr": 45.0,
+        "min": 19.0,
+        "max": 256.0,
+        "scope": "logical per-query demand; cached rows included"
+      }
+    ],
+    "automatic_comparisons": [
+      {
+        "mean_difference": 0.011176106194690267,
+        "ci95": [
+          0.0001788458869082441,
+          0.022736642223011357
+        ],
+        "p_centered_bootstrap_two_sided": 0.0524947505249475,
+        "questions": 226,
+        "clusters": 151,
+        "repetitions": 10000,
+        "seed": 20261108,
+        "estimand": "unweighted question mean",
+        "treatment": "parser_jev_fixed",
+        "control": "parser_ce_fixed",
+        "metric": "token_f1",
+        "confirmatory": false
+      },
+      {
+        "mean_difference": 0.025814149936426917,
+        "ci95": [
+          0.003745512942064026,
+          0.04791551001249569
+        ],
+        "p_centered_bootstrap_two_sided": 0.0225977402259774,
+        "questions": 226,
+        "clusters": 151,
+        "repetitions": 10000,
+        "seed": 20261108,
+        "estimand": "unweighted question mean",
+        "treatment": "parser_jev_fixed",
+        "control": "parser_ce_fixed",
+        "metric": "lf_eval",
+        "confirmatory": false
+      }
+    ]
+  },
+  "4.5": {
+    "denominators": {
+      "questions": 226,
+      "unique_gold_global": 386,
+      "unmapped_unique_gold_global": 27,
+      "gold_occurrences_per_arm": 443,
+      "gold_occurrences_two_arms": 886,
+      "corpus_rows": 233544,
+      "corpus_unique_canonical": 209564,
+      "duplicate_rows": 23980,
+      "first_loss_counts": {
+        "parser_ce_fixed": {
+          "bm25_absent": 75,
+          "selected": 233,
+          "corpus_absent": 33,
+          "shortlist_present_unselected": 60,
+          "shortlist_absent": 42
+        },
+        "parser_jev_fixed": {
+          "bm25_absent": 75,
+          "selected": 250,
+          "corpus_absent": 33,
+          "shortlist_present_unselected": 72,
+          "shortlist_absent": 13
+        }
+      }
+    },
+    "case_ids": [
+      "qa_124_2hop_480_rand",
+      "qa_324_2hop_515",
+      "qa_443_3hop_703"
+    ],
+    "case_metrics": {
+      "qa_324_2hop_515": {
+        "query_id": "qa_324_2hop_515",
+        "n_hops": 2,
+        "mapping": "fully_mapped",
+        "delta": {
+          "precision": -0.3333333333333333,
+          "recall": -0.5,
+          "f1": -0.4,
+          "em": 0.0,
+          "gold_set_coverage": -1.0,
+          "token_f1": -0.03700000000000003,
+          "lf_eval": -0.19119015188997202
+        },
+        "direction": {
+          "precision": "CE_higher",
+          "recall": "CE_higher",
+          "f1": "CE_higher",
+          "em": "tie",
+          "gold_set_coverage": "CE_higher",
+          "token_f1": "CE_higher",
+          "lf_eval": "CE_higher"
+        },
+        "strict_discordance": {
+          "token_f1": false,
+          "lf_eval": false
+        },
+        "directional_mismatch_including_ties": {
+          "token_f1": false,
+          "lf_eval": false
+        },
+        "ce": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "em": 0.0,
+          "gold_set_coverage": 1.0,
+          "token_f1": 0.3279,
+          "lf_eval": 0.7178589635429733
+        },
+        "jev": {
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "em": 0.0,
+          "gold_set_coverage": 0.0,
+          "token_f1": 0.2909,
+          "lf_eval": 0.5266688116530013
+        },
+        "source_row_1based": 24
+      },
+      "qa_124_2hop_480_rand": {
+        "query_id": "qa_124_2hop_480_rand",
+        "n_hops": 2,
+        "mapping": "fully_mapped",
+        "delta": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "em": 1.0,
+          "gold_set_coverage": 1.0,
+          "token_f1": 0.17700000000000005,
+          "lf_eval": 0.3389155111939417
+        },
+        "direction": {
+          "precision": "Jev_higher",
+          "recall": "Jev_higher",
+          "f1": "Jev_higher",
+          "em": "Jev_higher",
+          "gold_set_coverage": "Jev_higher",
+          "token_f1": "Jev_higher",
+          "lf_eval": "Jev_higher"
+        },
+        "strict_discordance": {
+          "token_f1": false,
+          "lf_eval": false
+        },
+        "directional_mismatch_including_ties": {
+          "token_f1": false,
+          "lf_eval": false
+        },
+        "ce": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "em": 0.0,
+          "gold_set_coverage": 0.0,
+          "token_f1": 0.6909,
+          "lf_eval": 0.6529325132085864
+        },
+        "jev": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "em": 1.0,
+          "gold_set_coverage": 1.0,
+          "token_f1": 0.8679,
+          "lf_eval": 0.9918480244025281
+        },
+        "source_row_1based": 46
+      },
+      "qa_443_3hop_703": {
+        "query_id": "qa_443_3hop_703",
+        "n_hops": 3,
+        "mapping": "affected",
+        "delta": {
+          "precision": -0.5,
+          "recall": -0.3333333333333333,
+          "f1": -0.4,
+          "em": 0.0,
+          "gold_set_coverage": 0.0,
+          "token_f1": 0.07279999999999998,
+          "lf_eval": -0.005510107734868042
+        },
+        "direction": {
+          "precision": "CE_higher",
+          "recall": "CE_higher",
+          "f1": "CE_higher",
+          "em": "tie",
+          "gold_set_coverage": "tie",
+          "token_f1": "Jev_higher",
+          "lf_eval": "CE_higher"
+        },
+        "strict_discordance": {
+          "token_f1": true,
+          "lf_eval": false
+        },
+        "directional_mismatch_including_ties": {
+          "token_f1": true,
+          "lf_eval": false
+        },
+        "ce": {
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4,
+          "em": 0.0,
+          "gold_set_coverage": 0.0,
+          "token_f1": 0.186,
+          "lf_eval": 0.3109740426193056
+        },
+        "jev": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "em": 0.0,
+          "gold_set_coverage": 0.0,
+          "token_f1": 0.2588,
+          "lf_eval": 0.30546393488443757
+        },
+        "source_row_1based": 226
+      }
+    },
+    "legal_judgment_status": "NOT_REVIEWED"
+  },
+  "completed_results_rewrite": {
+    "new_experiments": 0,
+    "new_human_judgments": 0,
+    "new_inferential_tests": 0,
+    "filtering_source": "results/koblex-filtering-v1/summary.json",
+    "filtering_source_sha256": "9f474388b12b7b47c00b74faa8b9f7597f359aefb91031b850fde1af8fa51623",
+    "figure_sources": "figures/section-figures-v1/provenance.json",
+    "excluded": [
+      "incomplete latency results",
+      "unperformed human review"
+    ]
+  }
+}

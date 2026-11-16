@@ -1,0 +1,221 @@
+{
+  "indexed_at_utc": "2026-11-09T06:41:17.207830+00:00",
+  "collection_date_local": "2026-11-09",
+  "paper_count": 10,
+  "selection": "Purposive writing reference sample covering legal QA, retrieval, reranking, RAG and evaluation; not a systematic review",
+  "version_rule": "Downloads requested by unversioned ID; version pinned from arXiv identifier printed inside each saved PDF",
+  "page_rule": "PDF physical page index, one-based, not journal or proceedings page numbers",
+  "extraction_tool": "pypdf",
+  "papers": [
+    {
+      "arxiv_id": "2509.01324",
+      "version_in_pdf": "2509.01324v1",
+      "title": "KoBLEX: Open Legal Question Answering with Multi-hop Reasoning",
+      "requested_download_url": "https://arxiv.org/pdf/2509.01324",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2509.01324v1",
+      "versioned_abstract_url": "https://arxiv.org/abs/2509.01324v1",
+      "pdf": "papers/2509.01324.pdf",
+      "pdf_sha256": "167f2025005556d4ed3033f18eec3a45d5f5e402ba42fdae74b36578eef3d82b",
+      "pdf_bytes": 2657954,
+      "pdf_pages": 35,
+      "extracted_text": "papers/2509.01324.txt",
+      "text_sha256": "0c57f74ff6a5aecbe3fe4785bbb1b7e35710257d8fc8fd0239064e0f0cd5583c",
+      "reviewed_pdf_pages_one_based": [
+        7,
+        8,
+        9
+      ],
+      "visual_sample_pdf_page": 8,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2408.10343",
+      "version_in_pdf": "2408.10343v1",
+      "title": "LegalBench-RAG: A Benchmark for Retrieval-Augmented Generation in the Legal Domain",
+      "requested_download_url": "https://arxiv.org/pdf/2408.10343",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2408.10343v1",
+      "versioned_abstract_url": "https://arxiv.org/abs/2408.10343v1",
+      "pdf": "papers/2408.10343.pdf",
+      "pdf_sha256": "49f456c744cac4048018588550bf5ccb68ad29b49442d7bd227f21c9398824cd",
+      "pdf_bytes": 605888,
+      "pdf_pages": 12,
+      "extracted_text": "papers/2408.10343.txt",
+      "text_sha256": "6b8947a5e2e2412168021acc96a2440b261e4beaff8caf664d1093c57ca6010d",
+      "reviewed_pdf_pages_one_based": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "visual_sample_pdf_page": 7,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2005.11401",
+      "version_in_pdf": "2005.11401v4",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "requested_download_url": "https://arxiv.org/pdf/2005.11401",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2005.11401v4",
+      "versioned_abstract_url": "https://arxiv.org/abs/2005.11401v4",
+      "pdf": "papers/2005.11401.pdf",
+      "pdf_sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "pdf_bytes": 885323,
+      "pdf_pages": 19,
+      "extracted_text": "papers/2005.11401.txt",
+      "text_sha256": "005ba205ed98119177b7fee5dcafd6ef4fdbc731133bc628805f43a934c4c249",
+      "reviewed_pdf_pages_one_based": [
+        5,
+        6
+      ],
+      "visual_sample_pdf_page": 6,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2004.04906",
+      "version_in_pdf": "2004.04906v3",
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "requested_download_url": "https://arxiv.org/pdf/2004.04906",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2004.04906v3",
+      "versioned_abstract_url": "https://arxiv.org/abs/2004.04906v3",
+      "pdf": "papers/2004.04906.pdf",
+      "pdf_sha256": "3e67fc1a9977715acf722d85f0b7d124b03715e975f6310a4d6c12094190912f",
+      "pdf_bytes": 383508,
+      "pdf_pages": 13,
+      "extracted_text": "papers/2004.04906.txt",
+      "text_sha256": "36fc1de7fd11db7cba6bc7374a73d0825258b993b321033512bf50542495e0d0",
+      "reviewed_pdf_pages_one_based": [
+        5,
+        6,
+        7
+      ],
+      "visual_sample_pdf_page": 5,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2007.01282",
+      "version_in_pdf": "2007.01282v2",
+      "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+      "requested_download_url": "https://arxiv.org/pdf/2007.01282",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2007.01282v2",
+      "versioned_abstract_url": "https://arxiv.org/abs/2007.01282v2",
+      "pdf": "papers/2007.01282.pdf",
+      "pdf_sha256": "f1ee7e927c3fb31beb2146f8c205692a91b40dadd65d80e025c6686e4d430953",
+      "pdf_bytes": 326612,
+      "pdf_pages": 6,
+      "extracted_text": "papers/2007.01282.txt",
+      "text_sha256": "b71036dcd34493e998b005cd8dd4975419156dd0e0bf19fc996e72827571cb89",
+      "reviewed_pdf_pages_one_based": [
+        3,
+        4,
+        5
+      ],
+      "visual_sample_pdf_page": 4,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2304.09542",
+      "version_in_pdf": "2304.09542v3",
+      "title": "Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents",
+      "requested_download_url": "https://arxiv.org/pdf/2304.09542",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2304.09542v3",
+      "versioned_abstract_url": "https://arxiv.org/abs/2304.09542v3",
+      "pdf": "papers/2304.09542.pdf",
+      "pdf_sha256": "3a2ca388b4a2fb17e58551f1a77b2c7decbbf6767255382cfa2d9e435c7a7e70",
+      "pdf_bytes": 849174,
+      "pdf_pages": 20,
+      "extracted_text": "papers/2304.09542.txt",
+      "text_sha256": "b93d2237731f3810538206bdb202567c2e443a39afaa78d02ea4c0de38a9d30f",
+      "reviewed_pdf_pages_one_based": [
+        5,
+        6,
+        7
+      ],
+      "visual_sample_pdf_page": 5,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2305.14627",
+      "version_in_pdf": "2305.14627v2",
+      "title": "Enabling Large Language Models to Generate Text with Citations",
+      "requested_download_url": "https://arxiv.org/pdf/2305.14627",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2305.14627v2",
+      "versioned_abstract_url": "https://arxiv.org/abs/2305.14627v2",
+      "pdf": "papers/2305.14627.pdf",
+      "pdf_sha256": "ac8809fe3ca1d52a413f41ef97afd71c43924944d512c90477ec0c28f2ea3a4d",
+      "pdf_bytes": 611779,
+      "pdf_pages": 24,
+      "extracted_text": "papers/2305.14627.txt",
+      "text_sha256": "efd3a9df063c308217d35d0e53f6a3359efab571f01207bc94594a3d863155f5",
+      "reviewed_pdf_pages_one_based": [
+        6,
+        7,
+        8
+      ],
+      "visual_sample_pdf_page": 7,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2307.03172",
+      "version_in_pdf": "2307.03172v3",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "requested_download_url": "https://arxiv.org/pdf/2307.03172",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2307.03172v3",
+      "versioned_abstract_url": "https://arxiv.org/abs/2307.03172v3",
+      "pdf": "papers/2307.03172.pdf",
+      "pdf_sha256": "653b29619eae2ae4b361d7bdcdc06db4bedcb1b0eabe31814036beca8c1af0b1",
+      "pdf_bytes": 747542,
+      "pdf_pages": 18,
+      "extracted_text": "papers/2307.03172.txt",
+      "text_sha256": "494d5853b46bbbca65a65e846a5dc9aa4fcb1753567f7143537c611a86eed09f",
+      "reviewed_pdf_pages_one_based": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "visual_sample_pdf_page": 5,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2309.15217",
+      "version_in_pdf": "2309.15217v2",
+      "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+      "requested_download_url": "https://arxiv.org/pdf/2309.15217",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2309.15217v2",
+      "versioned_abstract_url": "https://arxiv.org/abs/2309.15217v2",
+      "pdf": "papers/2309.15217.pdf",
+      "pdf_sha256": "6c24762a3f277fd120ed1adf34b01420ecf92f18ff6d1b5435fa0a09cb804ecb",
+      "pdf_bytes": 231984,
+      "pdf_pages": 8,
+      "extracted_text": "papers/2309.15217.txt",
+      "text_sha256": "f42890ce0fbc1e67b54e94fee106a9c1b149830ed5a56c947a4f84df061c2ea1",
+      "reviewed_pdf_pages_one_based": [
+        4,
+        5
+      ],
+      "visual_sample_pdf_page": 5,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    },
+    {
+      "arxiv_id": "2408.08067",
+      "version_in_pdf": "2408.08067v2",
+      "title": "RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation",
+      "requested_download_url": "https://arxiv.org/pdf/2408.08067",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2408.08067v2",
+      "versioned_abstract_url": "https://arxiv.org/abs/2408.08067v2",
+      "pdf": "papers/2408.08067.pdf",
+      "pdf_sha256": "1034bf8f0b909895540e093f2d42d6d81f1dfae51711fcf1b0379dc834c084c2",
+      "pdf_bytes": 2553412,
+      "pdf_pages": 27,
+      "extracted_text": "papers/2408.08067.txt",
+      "text_sha256": "5661821efa5d514b9dceef09d99d9dd55e0f945796685bb0b0dd0046a5a32ba1",
+      "reviewed_pdf_pages_one_based": [
+        7,
+        8,
+        9
+      ],
+      "visual_sample_pdf_page": 8,
+      "scope": "Results-related sections read; not a claim to have read every page of the paper"
+    }
+  ]
+}

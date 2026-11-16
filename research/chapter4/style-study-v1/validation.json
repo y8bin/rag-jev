@@ -1,0 +1,71 @@
+{
+  "completed_at_utc": "2026-11-09T06:51:08.377403+00:00",
+  "status": "PASS_CHAPTER4_STYLE_REVISION",
+  "current_study_verify": "VERIFIED_CURRENT_STUDY (separately run scripts/koblex.py verify)",
+  "original_files_preserved": 43076,
+  "frozen_prep_outputs_preserved": 67,
+  "source_facts_files_preserved": 11,
+  "manuscript_facts_unchanged": true,
+  "unchanged_table_environments": 3,
+  "unchanged_figure_environments": 1,
+  "figure_files_unchanged": 10,
+  "displayed_numeric_token_set_unchanged": true,
+  "numeric_repetition_changes_before_after": {
+    "0": [
+      6,
+      5
+    ],
+    "1": [
+      8,
+      9
+    ],
+    "2": [
+      9,
+      10
+    ],
+    "226": [
+      5,
+      4
+    ],
+    "3": [
+      7,
+      8
+    ],
+    "95": [
+      3,
+      4
+    ]
+  },
+  "numeric_check_scope": "Lexical coverage is supplementary; metric, arm, unit and claim associations also manually reviewed against the fixed sources",
+  "section_titles_unchanged": true,
+  "references_checked": 10,
+  "paper_count": 10,
+  "collected_pdf_pages": 182,
+  "reviewed_result_related_pdf_pages": 30,
+  "reference_visual_sample_pages": 10,
+  "latex": "XeLaTeX, 2 passes after final text update; no overfull boxes, undefined references or missing glyph warnings",
+  "preview_pages": 3,
+  "visual_review": "Operator inspected all 3 final rendered pages; no clipping, missing glyphs or overlapping text. Provisional 2-column layout; last page has substantial unused space.",
+  "preview_layout": "A4 / 10pt / two columns / 20mm margins; final venue layout pending",
+  "pdf": {
+    "path": "output/pdf/chapter4-draft.pdf",
+    "sha256": "574599a68eb3de22147e580d30c6d159d36438f4d48d7ebe0787232d195987ba"
+  },
+  "new_paid_calls": 0,
+  "new_human_judgments": 0,
+  "new_statistical_tests": 0,
+  "rq_coordination": "results/koblex-reproduction-v1/chapter4-prep-v1/RQ_TOC_COORDINATION.md",
+  "legal_review": "results/koblex-reproduction-v1/chapter4-prep-v1/LEGAL_REVIEW.md",
+  "files": {
+    "research/chapter4/chapter4.tex": "356696bdd28f2f374600a0673fb867d5f59d04c96f532971bad028ead5b8c1f4",
+    "research/chapter4/preview.tex": "1f59fed37b9d5b5a8d71abe7bc018a4aca424fb752582c91278db36dc3b77481",
+    "research/chapter4/section4_1.tex": "4e7a946a73de5c2a8d90502d56399d3a6dbddff667c2adf1f1f3f1e69a23b0b0",
+    "research/chapter4/section4_2.tex": "5045f2ec6dc3ea28592f4e3aee2cd476b47a31abad7229707d1eb71209d73a9a",
+    "research/chapter4/section4_3.tex": "56005940b94b831bf77ad4e67f0c18fe63cced9c8886987aa42fd6cefca7266d",
+    "research/chapter4/section4_4.tex": "0eaa2c48ccaa7d6f18a34fbf08a79c456313b64ba94fad0d15f2661a9b039540",
+    "research/chapter4/section4_5.tex": "f9e2b050b456e8e247a3479055a24bd653e2068b10a3f70f321b201acb6a9616",
+    "research/chapter4/WRITING_NOTES.md": "895330f6a07ddbead667aa4e051d555a860dc5d722ec169c365a8514d68eaad4"
+  },
+  "source_facts": "research/chapter4/manuscript-facts.json",
+  "full_review_notes": "research/chapter4/style-study-v1/READING_NOTES.md"
+}

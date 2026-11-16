@@ -1,0 +1,45 @@
+% 제4장: 실험 결과 및 분석 / 4.1 문체 수정본
+% article 계열의 제4절 아래에 삽입하는 본문 조각이다.
+% 근거: results/koblex-reproduction-v1/protocol-lock.json,
+%       results/koblex-reproduction-v1/chapter4-prep-v1/verification-audit.json,
+%       results/koblex-reproduction-v1/chapter4-prep-v1/A1/numeric-ledger.json
+
+\subsection{실험 조건 및 비교 기준}
+\label{sec:ch4_conditions}
+
+본 장은 KoBLEX의 공식 한국어 226문항에서 ParSeR의
+CE(cross-encoder)를 Jev로 교체했을 때의 근거 선택 성능과 답변 품질을
+비교한다. 주 기준선은 공개 코드의 후보 목록 참조 인덱스 문제를 수정한
+CE이며, 같은 파이프라인에서 점수화 모델만 Jev로 교체한 조건과
+문항별로 대응 비교하였다. 인덱스 문제를 보존한 공개 코드 CE는
+재현 점검을 위한 참조 조건으로 두었다(표~\ref{tab:ch4_conditions}).
+
+\begin{table}[htbp]
+    \centering
+    \caption{비교 조건의 구성}
+    \label{tab:ch4_conditions}
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{@{}llll@{}}
+        \hline
+        조건 & 점수화 & 선택 인덱스 & 역할 \\
+        \hline
+        공개 코드 CE & BGE & 문제 보존 & 재현 참조 \\
+        수정 CE      & BGE & 수정      & 주 기준선 \\
+        Jev 교체     & Jev & 수정      & 주 비교 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+세 조건은 예상 법령과 BM25 후보를 공유하였다. 예상 법령별 후보
+100개를 재정렬하고 상위 10개 중 하나를 공통 LLM 선택기로 선택한 뒤,
+선택 근거를 이용해 답변을 생성하였다. 최종 근거 수는 예상 법령 수에
+따라 달라지며, 정답 hop 정보는 선택에 사용하지 않았다.
+선택ㆍ생성 프롬프트와 평가 기준은 동일하게 유지하였다.
+CE는 \texttt{bge-reranker-v2-m3-ko}, Jev는 \texttt{jev-1.14.0}을
+사용하였으며, 선택ㆍ답변 생성과 LF-Eval의 평가 모델은
+\texttt{gpt-4o-2024-08-06}으로 통일하였다.
+
+정답 근거의 일부가 corpus와 정확히 매핑되지 않는 29문항을 포함하여,
+전체 226문항을 주 분석의 분모로 삼았다. 모든 비교는 기존 시험 결과를
+확인한 이후 수행한 탐색적 재현 분석이다.

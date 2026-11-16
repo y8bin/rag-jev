@@ -1,0 +1,7 @@
+subgroup,metric,arm,n,numerator,raw_mean,display_x100,descriptive_only,source
+hop_1,f1,parser_ce_fixed,57,44.5,0.7807017543859649,78.0701754385965,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,f1,parser_jev_fixed,57,43.833333333333336,0.7690058479532165,76.90058479532165,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,f1,parser_ce_fixed,127,67.73333333333333,0.5333333333333333,53.333333333333336,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,f1,parser_jev_fixed,127,72.7,0.5724409448818898,57.24409448818898,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,f1,parser_ce_fixed,42,20.123809523809523,0.47913832199546486,47.91383219954648,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,f1,parser_jev_fixed,42,23.02857142857143,0.5482993197278911,54.82993197278911,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json

@@ -1,0 +1,26 @@
+% 최종 축약본. chapter4.md와 같은 본문에서 생성.
+\subsection{실험 조건 및 비교 기준}
+\label{sec:ch4_conditions}
+
+KoBLEX의 한국어 법률 질문 226문항에서 ParSeR의 재정렬 모델을 CE(cross-encoder)에서 Jev로 교체하여 비교하였다. 재정렬 모델은 검색된 법령 후보에 질문과의 관련도 점수를 매겨 순서를 정하는 역할을 한다. 주 기준선은 공개 코드의 후보 목록 참조 오류를 수정한 CE이며, 오류를 보존한 CE는 재현 점검용으로 구분하였다(표~\ref{tab:ch4_conditions}).
+
+\begin{table}[htbp]
+\centering
+\caption{비교 조건}
+\label{tab:ch4_conditions}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llll@{}}
+\hline
+조건 & 점수화 모델 & 참조 오류 & 역할 \\
+\hline
+공개 코드 CE & BGE & 보존 & 재현 점검 \\
+CE & BGE & 수정 & 주 기준선 \\
+Jev 교체 & Jev & 수정 & 주 비교 \\
+\hline
+\end{tabular}
+\end{table}
+
+세 조건은 질문에서 예상한 법령 문구와 BM25 검색 후보를 공유하였다. 예상 법령별 후보 100개를 재정렬하고, 상위 10개 중 공통 언어 모델(LLM)이 하나를 선택한 뒤 답변을 생성하였다. 선택 개수는 예상 법령 수에 따르며 정답 정보로 정하지 않았다. 프롬프트와 평가 기준도 동일하게 유지하였다.
+
+CE는 \texttt{bge-reranker-v2-m3-ko}, Jev는 \texttt{jev-1.14.0}을 사용하였다. 선택·생성·자동 평가 모델은 \texttt{gpt-4o-2024-08-06}이다. 정답 근거 일부가 검색 자료와 일치하지 않는 29문항도 전체 분석에 포함하였다. 모든 비교는 기존 시험 결과를 확인한 뒤 수행한 탐색적 분석이다.

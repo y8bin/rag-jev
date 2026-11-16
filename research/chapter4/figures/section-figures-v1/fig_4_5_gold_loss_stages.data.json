@@ -1,0 +1,24 @@
+[
+  {
+    "arm": "parser_ce_fixed",
+    "counts": {
+      "No exact match\nin corpus": 33,
+      "Missing from\nBM25 pools": 75,
+      "Lost at\nreranking": 42,
+      "Not selected\nfrom shortlist": 60,
+      "Finally\nselected": 233
+    },
+    "denominator": 443
+  },
+  {
+    "arm": "parser_jev_fixed",
+    "counts": {
+      "No exact match\nin corpus": 33,
+      "Missing from\nBM25 pools": 75,
+      "Lost at\nreranking": 13,
+      "Not selected\nfrom shortlist": 72,
+      "Finally\nselected": 250
+    },
+    "denominator": 443
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "arm": "parser_ce_fixed",
+    "macro_gold_recall_x100": 69.46902654867256,
+    "all_gold_question_rate_x100": 49.557522123893804,
+    "n": 226
+  },
+  {
+    "arm": "parser_jev_fixed",
+    "macro_gold_recall_x100": 74.63126843657817,
+    "all_gold_question_rate_x100": 57.52212389380531,
+    "n": 226
+  }
+]

@@ -1,0 +1,106 @@
+{
+ "cv_overall": {
+  "ce": {
+   "unfiltered": {
+    "questions": 226,
+    "f1": 58.57,
+    "precision": 63.46,
+    "recall": 57.74,
+    "em": 27.88,
+    "gold_set_coverage": 34.07,
+    "kept_items_total": 478,
+    "kept_items_mean": 2.12,
+    "kept_fraction": 1.0,
+    "kept_chars_mean": 306.53,
+    "zero_evidence_questions": 0
+   },
+   "filtered_cv": {
+    "questions": 226,
+    "f1": 58.54,
+    "precision": 64.56,
+    "recall": 57.15,
+    "em": 26.99,
+    "gold_set_coverage": 33.19,
+    "kept_items_total": 467,
+    "kept_items_mean": 2.07,
+    "kept_fraction": 0.98,
+    "kept_chars_mean": 301.54,
+    "zero_evidence_questions": 1
+   }
+  },
+  "jev": {
+   "unfiltered": {
+    "questions": 226,
+    "f1": 61.75,
+    "precision": 66.85,
+    "recall": 60.69,
+    "em": 29.65,
+    "gold_set_coverage": 34.96,
+    "kept_items_total": 478,
+    "kept_items_mean": 2.12,
+    "kept_fraction": 1.0,
+    "kept_chars_mean": 326.54,
+    "zero_evidence_questions": 0
+   },
+   "filtered_cv": {
+    "questions": 226,
+    "f1": 61.43,
+    "precision": 69.8,
+    "recall": 58.26,
+    "em": 29.2,
+    "gold_set_coverage": 33.19,
+    "kept_items_total": 426,
+    "kept_items_mean": 1.88,
+    "kept_fraction": 0.89,
+    "kept_chars_mean": 281.9,
+    "zero_evidence_questions": 4
+   }
+  }
+ },
+ "chosen": {
+  "ce": {
+   "0": {
+    "tau": 3.819607627519872e-06,
+    "train_keep_rate": 0.9505208333333334
+   },
+   "1": {
+    "tau": 0.0,
+    "train_keep_rate": 1.0
+   },
+   "2": {
+    "tau": 3.819607627519872e-06,
+    "train_keep_rate": 0.95
+   },
+   "3": {
+    "tau": 3.713020532813971e-06,
+    "train_keep_rate": 0.9509536784741145
+   },
+   "4": {
+    "tau": 3.819607627519872e-06,
+    "train_keep_rate": 0.949874686716792
+   }
+  },
+  "jev": {
+   "0": {
+    "tau": 0.31,
+    "train_keep_rate": 0.9036458333333334
+   },
+   "1": {
+    "tau": 0.32,
+    "train_keep_rate": 0.900523560209424
+   },
+   "2": {
+    "tau": 0.34,
+    "train_keep_rate": 0.9026315789473685
+   },
+   "3": {
+    "tau": 0.4,
+    "train_keep_rate": 0.8501362397820164
+   },
+   "4": {
+    "tau": 0.3,
+    "train_keep_rate": 0.899749373433584
+   }
+  }
+ }
+}

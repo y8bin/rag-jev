@@ -1,0 +1,26 @@
+{
+  "data_source": "results/koblex-reproduction-v1/chapter4-prep-v1/A2/hop-f1-figure-data.csv",
+  "data_source_sha256": "d402c2981b973b6af55e67de65a43122abdb6830484185e4cadc9d48bc8431ba",
+  "copied_data_sha256": "d402c2981b973b6af55e67de65a43122abdb6830484185e4cadc9d48bc8431ba",
+  "skill": "scientific-figure-making",
+  "repository": "https://github.com/ChenLiu-1996/figures4papers",
+  "commit": "b709de17da7e8f9a72e51a5de5bced924a01eeab",
+  "implementation": "local API implementation, per pinned tutorials/API; no tracked shared upstream Python module",
+  "skill_references": {
+    "research/chapter4/figures/skill-references/SKILL.md": "952300b4d0bd8fbd0c55aaa732a47a0abb8e9707bc80965c8e70221ef13f0292",
+    "research/chapter4/figures/skill-references/api.md": "12892f4940c153c8b2e75abe8eed8f96476989b0a75d65f0dc3d08118bf58269",
+    "research/chapter4/figures/skill-references/design-theory.md": "d34fa995a481588a33aab301591a9a2ae54dae8df34c74e0a13311582ef48d99",
+    "research/chapter4/figures/skill-references/tutorials.md": "e5a9b9fa78a73a981f046aa29728dd844268282109159fd934f9c9716b3592c1"
+  },
+  "plot_script_sha256": "09e36e016f26733f20ff66d2a2085fb91a96e810fce7e1ea375047d0ccd726a3",
+  "matplotlib": "3.11.1",
+  "numpy": "2.5.3",
+  "layout": "provisional 85 mm single column; 6.8x3.5 in source scaled to column width",
+  "style": "18 pt base font; blue Jev / red CE; circle/solid versus square/dashed; top/right spines off; frameless legend; editable vector text",
+  "uncertainty": "descriptive point estimates; no CI, significance or interaction inference added",
+  "outputs": {
+    "research/chapter4/figures/hop_f1.pdf": "a1ddbf71a438e493a860d37e7d41dcf64eb8d7428625d5348e6d7dc2b5606596",
+    "research/chapter4/figures/hop_f1.svg": "60ed6c156902c902d3a3382448270358545ea87fc04ecb9824e6491bf892d3b4",
+    "research/chapter4/figures/hop_f1.png": "a4f5a0995242ef56d2289e14abc4701050767e5cd0bdec2667f552581cd4bd86"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-11-09T06:39:03.443335+00:00",
+  "files": {
+    "research/chapter4/section4_5.tex": {
+      "backup": "research/chapter4/style-study-v1/before-revision/section4_5.tex",
+      "sha256": "e3bd990371189353bc42318bce28c1024e3ec5dc61ceb10fac9b4d655f0eaec9"
+    },
+    "research/chapter4/section4_4.tex": {
+      "backup": "research/chapter4/style-study-v1/before-revision/section4_4.tex",
+      "sha256": "17b7a511b967e82324981e1b7d36c3f082fa9f7e84f45bf94f4fef3b4eeac764"
+    },
+    "research/chapter4/chapter4.tex": {
+      "backup": "research/chapter4/style-study-v1/before-revision/chapter4.tex",
+      "sha256": "356696bdd28f2f374600a0673fb867d5f59d04c96f532971bad028ead5b8c1f4"
+    },
+    "research/chapter4/section4_3.tex": {
+      "backup": "research/chapter4/style-study-v1/before-revision/section4_3.tex",
+      "sha256": "f74b5b0e4d2765e62b34f56fcd947e1a87dd01ab377b7411377c24290b416217"
+    },
+    "research/chapter4/section4_2.tex": {
+      "backup": "research/chapter4/style-study-v1/before-revision/section4_2.tex",
+      "sha256": "ed225e7a1350b3584cbcc0b7a639aa78ecb4efb4810a313803cfc2d3c448512d"
+    },
+    "research/chapter4/section4_1.tex": {
+      "backup": "research/chapter4/style-study-v1/before-revision/section4_1.tex",
+      "sha256": "0a449558f210ffac96f72dbb980e45eca7d7c3b59080154914eba20e851c320e"
+    },
+    "research/chapter4/preview.tex": {
+      "backup": "research/chapter4/style-study-v1/before-revision/preview.tex",
+      "sha256": "1f59fed37b9d5b5a8d71abe7bc018a4aca424fb752582c91278db36dc3b77481"
+    },
+    "research/chapter4/WRITING_NOTES.md": {
+      "backup": "research/chapter4/style-study-v1/before-revision/WRITING_NOTES.md",
+      "sha256": "78c3da95d71b0b1c1925e99555efdcd53467794783f2a55af764c0777933750d"
+    },
+    "research/chapter4/draft-validation.json": {
+      "backup": "research/chapter4/style-study-v1/before-revision/draft-validation.json",
+      "sha256": "48354951c99433ae9f64e84a90faf6375dbdaf95eb60d7b02dbbf18c3b275bcd"
+    },
+    "research/chapter4/manuscript-facts.json": {
+      "backup": "research/chapter4/style-study-v1/before-revision/manuscript-facts.json",
+      "sha256": "62d6ec9cd331e8d1fe6761050f33475e363a7ff5ef4d790e10422398a0548d21"
+    },
+    "output/pdf/chapter4-draft.pdf": {
+      "backup": "research/chapter4/style-study-v1/before-revision/chapter4-draft.pdf",
+      "sha256": "a502dc38b8421fecc9f4d7b69ca6f8649eac0e8ece32c8b55d4dd493ccc3606a"
+    }
+  }
+}

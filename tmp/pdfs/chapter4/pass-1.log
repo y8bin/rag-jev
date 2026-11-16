@@ -1,0 +1,61 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+entering extended mode
+(./research/chapter4/preview.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cjk-ko/kotex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kotex-utf/kotex.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/xetex/xetexko/xetexko.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/unicode-data/load-unicode-xetex
+-classes.tex 
+load-unicode-xetex-classes.tex v1.19 (2025-09-26)
+Reading Unicode east Asian character class data
+# LineBreak-17.0.0.txt 
+# Date: 2025-07-29, 13:52:18 GMT 
+# EastAsianWidth-17.0.0.txt 
+# Date: 2025-07-24, 00:12:54 GMT 
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(tmp/pdfs/chapter4/chapter4-draft.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(./research/chapter4/chapter4.tex (./research/chapter4/section4_1.tex)
+(./research/chapter4/section4_2.tex
+Underfull \hbox (badness 1655) in paragraph at lines 50--57
+[]\TU/lmr/m/n/10 Jev \TU/UnBatang.ttf(0)/m/n/10 의 근 거 \TU/lmr/m/n/10 F1 \TU/UnB
+atang.ttf(0)/m/n/10 은 \TU/lmr/m/n/10 61.75 \TU/UnBatang.ttf(0)/m/n/10 점 으 로 수 정
+ \TU/lmr/m/n/10 CE \TU/UnBatang.ttf(0)/m/n/10 의 \TU/lmr/m/n/10 58.57
+
+Underfull \hbox (badness 3428) in paragraph at lines 50--57
+\TU/UnBatang.ttf(0)/m/n/10 점 보 다 \TU/lmr/m/n/10 3.19 \TU/UnBatang.ttf(0)/m/n/10
+ 점 높 았 으 며, 차 이 의 \TU/lmr/m/n/10 95% \TU/UnBatang.ttf(0)/m/n/10 신 뢰 구 간
+
+Underfull \hbox (badness 1616) in paragraph at lines 50--57
+\TU/UnBatang.ttf(0)/m/n/10 은 $\OT1/cmr/m/n/10 [+0\OML/cmm/m/it/10 :\OT1/cmr/m/n
+/10 75\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 +5\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6
+8]$ \TU/UnBatang.ttf(0)/m/n/10 점 이 었 다. \TU/lmr/m/n/10 Recall \TU/UnBatang.ttf(
+0)/m/n/10 도 \TU/lmr/m/n/10 57.74 \TU/UnBatang.ttf(0)/m/n/10 점 에 서
+) (./research/chapter4/section4_3.tex) (./research/chapter4/section4_4.tex
+[1]) (./research/chapter4/section4_5.tex [2])) [3]
+(tmp/pdfs/chapter4/chapter4-draft.aux) )
+(see the transcript file for additional information)
+Output written on tmp/pdfs/chapter4/chapter4-draft.pdf (3 pages).
+Transcript written on tmp/pdfs/chapter4/chapter4-draft.log.

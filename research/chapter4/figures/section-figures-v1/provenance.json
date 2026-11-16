@@ -1,0 +1,116 @@
+{
+  "skill": "scientific-figure-making",
+  "skill_snapshot": "research/chapter4/figures/skill-references/SKILL.md",
+  "upstream_commit": "b709de17da7e8f9a72e51a5de5bced924a01eeab",
+  "matplotlib": "3.11.1",
+  "new_model_calls": 0,
+  "new_statistical_tests": 0,
+  "figures": [
+    {
+      "figure": "fig_4_1_controlled_pipeline",
+      "caption_ko": "동일한 입력·후보와 후속 LLM을 공유하는 CE/Jev 주 비교. 공개 코드 CE는 별도 재현 참조 조건이며 그림에서 생략하였다. 100·10·1은 pool별 개수다.",
+      "sources": {
+        "results/koblex-reproduction-v1/analysis.json": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+        "results/koblex-reproduction-v1/protocol-lock.json": "99d5c5cc29b33168a5c855d5e3dd0a3d324c8106077691cf1ef34299c1c87bc1"
+      },
+      "outputs": {
+        "fig_4_1_controlled_pipeline.pdf": "024b321e9ee4138fd8cb01a3758839957018448cf741ae276c82f270b68d9a77",
+        "fig_4_1_controlled_pipeline.svg": "f349195bc17404cf7d26598b6c8acdacda6ad3efdcb6029a23c9887d4ddc58a2",
+        "fig_4_1_controlled_pipeline.png": "4a91cd5a9b8de45b10c37a3f7744231af19c7c7775ead5ea86559cf38b8db66d"
+      }
+    },
+    {
+      "figure": "fig_4_2_evidence_effects",
+      "caption_ko": "최종 선택 근거의 Jev−수정 CE 차이. 막대는 151개 의존 그룹의 대응 bootstrap 10,000회로 산출한 탐색적 95% CI다. 다중 비교 무보정이며 EM·완전 회수율 구간은 0을 포함한다.",
+      "sources": {
+        "results/koblex-reproduction-v1/analysis.json": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176"
+      },
+      "outputs": {
+        "fig_4_2_evidence_effects.pdf": "508cfee25e0c09df90a436e9f969b017ec3a50bab3890f7bf79e78d60369adb1",
+        "fig_4_2_evidence_effects.svg": "a360cdc17fe87e8e45083cda2ce9690edee862e46845b8454566d5cfccadbc38",
+        "fig_4_2_evidence_effects.png": "2a81315afd4e5924988b61ceaffa9995664864a2cb966d05ae2806086005f022"
+      }
+    },
+    {
+      "figure": "fig_4_3_shortlist_quality",
+      "caption_ko": "재정렬 후 상위 10개 후보 합집합의 정답 근거 유지 수준(226문항). Recall은 문항별 비가중 평균, 모든 gold 포함률은 문항 비율이다. 점추정만 표시한다. 재정렬 지연은 이 그림에 포함하지 않고 본문 표 1에 별도로 제시한다.",
+      "sources": {
+        "results/koblex-reproduction-v1/chapter4-prep-v1/A4/stage-summary.csv": "5581f4ace9867dbde9db2dbefd4643d54a9c7e56b0d8aa90382ddf50a9f312d1"
+      },
+      "outputs": {
+        "fig_4_3_shortlist_quality.pdf": "c7ef4ebf0c3e4ef3fa505f88f17f72ca909395dceb65ba8df7c6e689bd7afcf7",
+        "fig_4_3_shortlist_quality.svg": "9131f9834ccbfd6b2e21aa9d3cca775bac19d1350840f2d2447d35d3f792b28f",
+        "fig_4_3_shortlist_quality.png": "cd471fd5e61d7804abbab549456cb0536cb2e94886747703953cdfbff06f83e5"
+      }
+    },
+    {
+      "figure": "fig_4_4_answer_quality_resources",
+      "caption_ko": "최종 답변의 자동 품질과 생성 입력 요구량(226문항). 세 패널은 서로 다른 단위·축을 사용하며 막대는 0에서 시작한다. 캐시 재사용 행도 논리적 입력량에 포함한다. 신규 청구액·근거 주장 지지율이 아니며, 오차막대는 표시하지 않았다. 입력량 절감은 관찰되지 않았다.",
+      "sources": {
+        "results/koblex-reproduction-v1/analysis.json": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+        "results/koblex-reproduction-v1/chapter4-prep-v1/A5/descriptive-statistics.csv": "45fb58d6d1aabdf2dc97fa90576ad0456a0fbdef361ec0febe4c3612199d8164"
+      },
+      "outputs": {
+        "fig_4_4_answer_quality_resources.pdf": "1b0c7bdc4c51379906bbc7ca72da37adaaa720ea1836a8270dffc4837963e080",
+        "fig_4_4_answer_quality_resources.svg": "96c47c960fccb61b4bf1a5aaf458e5bc2967f25031e0fab0795e9ae731e2149f",
+        "fig_4_4_answer_quality_resources.png": "b7829de9a2980c7d84676032e18600322c73e70199601b61c95d21def4fb201b"
+      }
+    },
+    {
+      "figure": "fig_4_5_gold_loss_stages",
+      "caption_ko": "문항별 gold 출현 443건을 최초 탈락 단계 또는 최종 선택으로 배타 분류한 결과. 같은 gold가 다른 문항에 필요하면 각각 센다. shortlist 이후 미선택에는 pool별 하나 선택 제약이 작용할 수 있으므로 법률 판단 오류로 단정하지 않는다.",
+      "sources": {
+        "results/koblex-reproduction-v1/chapter4-prep-v1/A4/stage-summary.csv": "5581f4ace9867dbde9db2dbefd4643d54a9c7e56b0d8aa90382ddf50a9f312d1"
+      },
+      "outputs": {
+        "fig_4_5_gold_loss_stages.pdf": "919bddd91d683efb4f11e544f574ad302ad7e635e911de87247b62ca9c6eb438",
+        "fig_4_5_gold_loss_stages.svg": "3c6f462515ca7a7aeb42d57bbc264a264b264d9d690b309897ca212b35089af4",
+        "fig_4_5_gold_loss_stages.png": "4806bc6f651b6be5fc0714806f93abfc04842b5acf7354392aa0d07c8692bd31"
+      }
+    }
+  ],
+  "manuscript_column_figures": {
+    "builder": "build_manuscript_figures.py",
+    "builder_sha256": "8b89fb47a2cb79d8967955479226c4108280c4e37d0241695b52c4827007cb54",
+    "note": "chapter4.md 본문이 사용하는 85mm 단 너비 판본. 해당 data.json만 읽으며 새 모델 호출·통계 검정 없음. 해시는 2026-11-13 기록 시점 파일 기준.",
+    "figures": [
+      {
+        "figure": "fig_4_2_evidence_effects_column",
+        "manuscript_label": "그림 1",
+        "inputs": {
+          "fig_4_2_evidence_effects.data.json": "7f8e41e1411c4c0078a8e768004fee48d0db4ed6d065c48aa87f6e8506abb7e2"
+        },
+        "outputs": {
+          "fig_4_2_evidence_effects_column.pdf": "080cf76747ccc73ff9017613c83c7e95f8bcdcc5a53a9407400b487f2a71a184",
+          "fig_4_2_evidence_effects_column.png": "44d677220df76b36e9ee4a52443a087a9124c8c98188210398cd6cfc856a3efc",
+          "fig_4_2_evidence_effects_column.svg": "c19f45032a440ede4abf44521ab1a60e50489950159e2a2bb8a53e7e8e74774e"
+        }
+      },
+      {
+        "figure": "fig_4_3_shortlist_quality_column",
+        "manuscript_label": "본문 제외(자료집 전용; Stage 4 RM-10, 2026-11-13)",
+        "inputs": {
+          "fig_4_3_shortlist_quality.data.json": "128e0ee08d19c6548668e214e5aeb7c9ed76337a07c5d7168dff0a93d786e417"
+        },
+        "outputs": {
+          "fig_4_3_shortlist_quality_column.pdf": "bf44eb1e9da867f3265b52b02183a971182503fc36b2d30d8fa0c6768ad6d2f5",
+          "fig_4_3_shortlist_quality_column.png": "20032017f5b34580a98081f9880367bde6f53b0bcc0ea94ae1fdb77e3ee78b8c",
+          "fig_4_3_shortlist_quality_column.svg": "f867da19409103caea05b10b5bb65935cb2be4ffbf57d92e6c64376525c5405c"
+        }
+      },
+      {
+        "figure": "fig_4_5_gold_loss_stages_column",
+        "manuscript_label": "그림 2",
+        "inputs": {
+          "fig_4_5_gold_loss_stages.data.json": "d73415649808c3e1aa037e640c5b29434a2f665c20df50a3e1ce7b1fd399d038"
+        },
+        "outputs": {
+          "fig_4_5_gold_loss_stages_column.pdf": "18b45be17921baeb137c98dfa88848e7e37960bcbf4f028ecd04c3d07a49a855",
+          "fig_4_5_gold_loss_stages_column.png": "9eb602282e10ea436f8b1ad21fbc0cc35ee56b81b76625e2fb4a110eb8db086d",
+          "fig_4_5_gold_loss_stages_column.svg": "ad4c8025cf19bc2229c7a04b3e5c13347154fac57ba0e0651d92ff6bc373ac88"
+        }
+      }
+    ],
+    "label_update": "2026-11-13 Stage 4: 그림 2(shortlist) 본문 삭제, 기존 그림 3 -> 그림 2. 파일·해시 변경 없음."
+  }
+}

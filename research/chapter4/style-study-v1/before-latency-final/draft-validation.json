@@ -1,0 +1,37 @@
+{
+  "status": "PASS_COMPLETED_RESULTS_MANUSCRIPT",
+  "actual_pages": 2,
+  "maximum_pages": 3,
+  "layout": "A4, 10pt, two columns, 20mm margins",
+  "sections": 5,
+  "figures": 3,
+  "tables": 1,
+  "source_hashes_checked": {
+    "results/koblex-reproduction-v1/analysis.json": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+    "results/koblex-reproduction-v1/protocol-lock.json": "99d5c5cc29b33168a5c855d5e3dd0a3d324c8106077691cf1ef34299c1c87bc1",
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A4/stage-summary.csv": "5581f4ace9867dbde9db2dbefd4643d54a9c7e56b0d8aa90382ddf50a9f312d1",
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A5/descriptive-statistics.csv": "45fb58d6d1aabdf2dc97fa90576ad0456a0fbdef361ec0febe4c3612199d8164"
+  },
+  "main_metrics_and_filtering_values": "PASS",
+  "latex_errors_overfull_missing_glyphs": "NONE",
+  "visual_review": "Both final page PNGs inspected; labels legible, no clipping, overlap or float-only pages",
+  "excluded_results": [
+    "incomplete latency benchmark",
+    "unperformed human review"
+  ],
+  "new_experiments": 0,
+  "new_statistical_tests": 0,
+  "new_human_judgments": 0,
+  "files": {
+    "research/chapter4/chapter4.md": "4392b60813c62506413fb1c6f62f91e2b8c5e428f6e9d96fe03024f49f559cf6",
+    "research/chapter4/chapter4-supplement.md": "f02e19524a0863708efdbf2a4baa551367955c3f870b963c252e366669586532",
+    "research/chapter4/preview.tex": "8f0093b473ed8ed4eaf16084e01bc49981cdcc92653bfd0690c2e7e3f569b698",
+    "research/chapter4/chapter4.tex": "356696bdd28f2f374600a0673fb867d5f59d04c96f532971bad028ead5b8c1f4",
+    "output/pdf/chapter4-draft.pdf": "be2563396e066d89030f73d86c6a8dafa9630785f2414d17c8863362759aee5b",
+    "research/chapter4/section4_1.tex": "d84a4af41b67301777a644bfd0c380ee24ca96cd72601d78bba253dc707cd982",
+    "research/chapter4/section4_2.tex": "64b268209e4acd571c477322849adef57874a50059c3fa4f36dd41cba0e7ee8b",
+    "research/chapter4/section4_3.tex": "910ae1a1f4c5e336c3a52db99a2c99035d4d8e7e247b5d585bd512d69a993e1c",
+    "research/chapter4/section4_4.tex": "16ac206fc3a968a66ac00802695684df93d6f00898c38356efa9bf56511cfbb6",
+    "research/chapter4/section4_5.tex": "6ca461d945a4285c791d94e85f0d79ff588a1c509328739042a62f78f21b6af8"
+  }
+}

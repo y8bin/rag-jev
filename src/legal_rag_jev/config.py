@@ -51,6 +51,13 @@ class Config(BaseModel):
     ce_backend: Literal["local", "http", "mock"] = "local"
     jev_backend: Literal["http", "mock"] = "http"
     generation_backend: Literal["openai", "mock"] = "openai"
+    generation_style: Literal["structured", "koblex"] = "structured"
+    generation_top_p: float | None = Field(default=None, gt=0, le=1)
+    koblex_system_prompt: str | None = None
+    koblex_instruction_prompt: str | None = None
+    budget_ledger: str | None = None
+    budget_limit_usd: float | None = Field(default=None, gt=0)
+    budget_openai_limit_usd: float | None = Field(default=None, gt=0)
     judge_backend: Literal["openai", "mock"] = "openai"
     embedding_dimension: int = Field(default=512, ge=8)
     chunk_max_chars: int = Field(default=1800, ge=30)
@@ -62,7 +69,9 @@ class Config(BaseModel):
     ce_threshold: float | None = None
     jev_threshold: float | None = None
     methods: list[str] = Field(default_factory=lambda: [m for m in METHODS if m != "retrieval"])
-    jev_instruction: Literal["applicability", "relevance"] = "applicability"
+    jev_instruction: Literal["applicability", "relevance", "legal"] = "applicability"
+    jev_selection: Literal["score", "coverage"] = "score"
+    jev_coverage_weight: float = Field(default=0.5, ge=0, le=1)
     token_budget: int | None = Field(default=None, ge=1)
     token_encoding: str = "cl100k_base"
     max_output_tokens: int = Field(default=1000, ge=1)
@@ -71,11 +80,13 @@ class Config(BaseModel):
     max_retries: int = Field(default=3, ge=0, le=10)
     concurrency: int = Field(default=4, ge=1)
     ce_max_length: int = Field(default=512, ge=16)
+    ce_batch_size: int = Field(default=32, ge=1)
     common_input_chars: int | None = Field(default=None, ge=1)
     unknown_temporal_policy: Literal["exclude", "include"] = "exclude"
     apply_metadata_filters: bool = True
     generate: bool = True
     human_evaluation_limit: int | None = Field(default=None, ge=1)
+    human_evaluation_ids: list[str] = Field(default_factory=list)
     seed: int = 20261009
     bootstrap_repetitions: int = Field(default=2000, ge=100)
     quality_delta: float = Field(default=0.02, ge=0, le=1)
@@ -85,12 +96,26 @@ class Config(BaseModel):
     protocol_documents: list[str] = Field(default_factory=list)
 
     @property
+    def needs_issue_analysis(self) -> bool:
+        return self.jev_selection == "coverage" and self.jev_backend != "mock" and any(m.startswith("jev") for m in self.methods)
+
+    @property
     def quality_margins(self) -> dict[str, float]:
         return {"esr": self.quality_delta if self.esr_quality_delta is None else self.esr_quality_delta,
                 "grounded_correct": self.quality_delta if self.answer_quality_delta is None else self.answer_quality_delta}
 
     @model_validator(mode="after")
     def valid_methods(self):
+        if (self.budget_ledger is None) != (self.budget_limit_usd is None):
+            raise ValueError("Configure both budget_ledger and budget_limit_usd")
+        if self.budget_openai_limit_usd is not None and self.budget_ledger is None:
+            raise ValueError("OpenAI sublimit requires a persistent budget ledger")
+        if self.generation_style == "koblex" and (not self.koblex_system_prompt or not self.koblex_instruction_prompt):
+            raise ValueError("KoBLEX generation needs pinned system and instruction prompt files")
+        if self.jev_selection == "coverage" and self.jev_instruction != "legal":
+            raise ValueError("Jev coverage selection requires jev_instruction: legal")
+        if self.needs_issue_analysis and self.generation_backend != "openai":
+            raise ValueError("Jev coverage requires the OpenAI generator for query issue extraction")
         if self.retriever_backend != "vector" and self.qdrant_source == "existing":
             raise ValueError("qdrant_source: existing requires retriever_backend: vector")
         if self.retriever_backend != "vector" and "vector" in self.methods:
@@ -119,6 +144,10 @@ class Config(BaseModel):
             raise ValueError(f"methods must be unique members of {METHODS}")
         if self.top_n > self.top_k:
             raise ValueError("top_n must not exceed top_k")
+        if len(set(self.human_evaluation_ids)) != len(self.human_evaluation_ids):
+            raise ValueError("human_evaluation_ids must be unique")
+        if self.human_evaluation_ids and self.human_evaluation_limit not in (None, len(self.human_evaluation_ids)):
+            raise ValueError("human_evaluation_limit must match explicit sample IDs")
         return self
 
     @classmethod

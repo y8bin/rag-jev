@@ -1,0 +1,41 @@
+{
+  "status": "PASS_FINAL_MANUSCRIPT_WITH_LATENCY",
+  "actual_pages": 3,
+  "maximum_pages": 3,
+  "layout": "A4, 10pt, two columns, 20mm margins",
+  "sections": 5,
+  "figures": 3,
+  "tables": 2,
+  "source_hashes_checked": {
+    "results/koblex-reproduction-v1/analysis.json": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+    "results/koblex-reproduction-v1/protocol-lock.json": "99d5c5cc29b33168a5c855d5e3dd0a3d324c8106077691cf1ef34299c1c87bc1",
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A4/stage-summary.csv": "5581f4ace9867dbde9db2dbefd4643d54a9c7e56b0d8aa90382ddf50a9f312d1",
+    "results/koblex-reproduction-v1/chapter4-prep-v1/A5/descriptive-statistics.csv": "45fb58d6d1aabdf2dc97fa90576ad0456a0fbdef361ec0febe4c3612199d8164",
+    "results/koblex-latency-v1/summary.json": "450782b06fe9da432ca17d2432e4ed78ba6d8c78f3ace27e2815fe4beaad6610",
+    "results/koblex-latency-v1/protocol.json": "7928eb6ca20e98f5dbba04592bc3d58a104acbe7e72378ff82853058e7a7c724",
+    "results/koblex-latency-v1/raw.jsonl": "7d62b9f954b8f53ea39a960956d1d7e401d856eaeafdfe3acfe40324f091da08",
+    "results/koblex-latency-v1/completed.json": "ba63a4622b833628699725a1fa6899b827483789f79977d2174e4e5f164302bd"
+  },
+  "main_metrics_and_filtering_values": "PASS",
+  "latency_rows_pairing_and_summary": "PASS",
+  "latex_errors_overfull_missing_glyphs": "NONE",
+  "visual_review": "All three final pages inspected; labels legible, no clipping, overlap or float-only pages; last-page columns balanced",
+  "excluded_results": [
+    "unperformed human review"
+  ],
+  "new_experiments": 0,
+  "new_statistical_tests": 0,
+  "new_human_judgments": 0,
+  "files": {
+    "research/chapter4/chapter4.md": "3cdf21dc12c07a41d417a5bf07a014a8bd7b716ad65b10f0c9a23171e00e5d70",
+    "research/chapter4/chapter4-supplement.md": "a066f3a54ba7f6b9e320f7c7e5e9e9f5f6f3931ad15fd4ef9429b3d791a809a9",
+    "research/chapter4/preview.tex": "16c06de850ea9d0336bb311b07956d22b4b844d3e6ce7343bcedeb1b60b137d1",
+    "research/chapter4/chapter4.tex": "356696bdd28f2f374600a0673fb867d5f59d04c96f532971bad028ead5b8c1f4",
+    "output/pdf/chapter4-final.pdf": "366747b8d35d6cd3e227bfc7797d5f0a6e365a05a3e28c6e52fb99ccd022c2b1",
+    "research/chapter4/section4_1.tex": "1761e4f2fc4aaa8c325490c31a4d879bf3622a882a9c98bde864136b29709d5c",
+    "research/chapter4/section4_2.tex": "64b268209e4acd571c477322849adef57874a50059c3fa4f36dd41cba0e7ee8b",
+    "research/chapter4/section4_3.tex": "e3f64397b52b67ad6e8b34a7758de642673e9de845d1cbc5e5ad5bb14a2f0df6",
+    "research/chapter4/section4_4.tex": "2628c631897f77abe2c51421e5e7ccf582b01930b73ed44f3cf6a104220eea5d",
+    "research/chapter4/section4_5.tex": "6ca461d945a4285c791d94e85f0d79ff588a1c509328739042a62f78f21b6af8"
+  }
+}

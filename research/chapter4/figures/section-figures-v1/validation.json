@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "figures": [
+    "fig_4_1_controlled_pipeline",
+    "fig_4_2_evidence_effects",
+    "fig_4_3_shortlist_quality",
+    "fig_4_4_answer_quality_resources",
+    "fig_4_5_gold_loss_stages"
+  ],
+  "output_hashes_verified": true,
+  "visual_review": "overview inspected: no overlapping labels or clipped content",
+  "new_inference": false,
+  "latency_included": false,
+  "script_sha256": "08bc94dbcdd731d9024d2796c53588b9e294ca7171e38c4a6af21a58542db1dc"
+}

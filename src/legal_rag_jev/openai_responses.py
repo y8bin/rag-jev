@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, field_validator
 
 from .schema import Answer, Claim, Record
 
@@ -36,8 +36,20 @@ class JudgeResponse(Record):
     claim_labels: list[ClaimJudgment]
 
 
+class IssueResponse(Record):
+    issues: list[str] = Field(min_length=1, max_length=6)
+
+    @field_validator("issues")
+    @classmethod
+    def distinct_issues(cls, value):
+        cleaned = [s.strip() for s in value]
+        if any(not s or len(s) > 500 for s in cleaned) or len(set(cleaned)) != len(cleaned):
+            raise ValueError("Issues must be nonempty, bounded, and unique")
+        return cleaned
+
+
 def response_model(kind: str):
-    return {"generation": ResponseAnswer, "judge": JudgeResponse}[kind]
+    return {"generation": ResponseAnswer, "judge": JudgeResponse, "issues": IssueResponse}[kind]
 
 
 def response_format(kind: str) -> dict:

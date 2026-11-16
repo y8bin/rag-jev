@@ -1,0 +1,87 @@
+{
+  "key": "b943d42a2a694faf55d09c26fc7f6c763b12941a6e0ddd668023a87027b3ff9c",
+  "response": {
+    "id": "chatcmpl-Ei8yAEmX7WrdrvUqWPOQ47shpBSaW",
+    "object": "chat.completion",
+    "created": 1794189618,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"조세범 처벌법 (공소시효) 조세범의 공소시효는 범칙행위가 종료된 날부터 5년으로 한다.\", \"조세범 처벌법 (법인의 벌금형 면제 조건) 법인의 대표자, 대리인, 사용인 기타의 종업원이 그 법인의 업무에 관하여 이 법에 위반한 행위를 한 때에는 그 법인에 대하여도 해당 조문의 벌금형을 과(課)한다. 다만, 법인이 그 위반행위를 방지하기 위하여 상당한 주의와 감독을 게을리하지 아니한 때에는 그러하지 아니하다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1681,
+      "completion_tokens": 144,
+      "total_tokens": 1825,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 2035.55091599992,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_fe0cba3e57b34fe3942a6221a5995705"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1681,
+      "output_tokens": 144,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0056425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19648,
+      "known_cost_usd": 7.432299222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.432299222,
+      "remaining_usd": 92.567700778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.6762974999999996,
+          "accounted_with_reservations_usd": 6.6762974999999996,
+          "remaining_usd": 30.3237025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8yAEmX7WrdrvUqWPOQ47shpBSaW",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

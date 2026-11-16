@@ -1,0 +1,87 @@
+{
+  "key": "ce5df8d1f8d479bc367458797472751cf4cdd53a299795caa07a9c117ec9c711",
+  "response": {
+    "id": "chatcmpl-Ei9xvpcyTcZty1LOqJYkh3bVQnQAV",
+    "object": "chat.completion",
+    "created": 1794193447,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑과 을은 병의 가게에서 물건을 훔치기로 공모하고 실행한 경우, 형법 제30조에 따라 공동정범으로서 각자를 그 죄의 정범으로 처벌한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2221,
+      "completion_tokens": 48,
+      "total_tokens": 2269,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1270.4578329867218,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6608de6a80394ce78563a25265686d73"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2221,
+      "output_tokens": 48,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0060325,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59887,
+      "known_cost_usd": 17.32186315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 18.61776565,
+      "remaining_usd": 81.38223435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.824455,
+          "accounted_with_reservations_usd": 17.1203575,
+          "remaining_usd": 19.8796425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9xvpcyTcZty1LOqJYkh3bVQnQAV",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

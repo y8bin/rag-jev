@@ -1,0 +1,87 @@
+{
+  "key": "15a40c015626ffb979f2e2464d7801dbfcef4cb4330dcb1bdc2ae51a2e767d4f",
+  "response": {
+    "id": "chatcmpl-Ei8x7AkTz1i1Wo0r6z6suQBv3jrYp",
+    "object": "chat.completion",
+    "created": 1794189553,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"부가가치세법 (매입자발행계산서 발급 신청) 사업자는 매입자발행계산서를 발급받기 위해 거래사실 확인을 신청할 때 거래명세서, 세금계산서 사본, 거래계약서 등 거래사실을 증명할 수 있는 서류를 제출하여야 한다.\", \"부가가치세법 (거래사실 확인신청 대상 거래) 거래사실의 확인신청 대상이 되는 거래는 공급가액이 일정 금액 이상인 거래로서, 거래 상대방이 세금계산서를 발급하지 아니한 경우에 해당한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1654,
+      "completion_tokens": 141,
+      "total_tokens": 1795,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1257.592249996378,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4813dbcbe4f9417c811bdffdd7d58070"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1654,
+      "output_tokens": 141,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005545,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19602,
+      "known_cost_usd": 7.199659222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.199659222,
+      "remaining_usd": 92.800340778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.4436575,
+          "accounted_with_reservations_usd": 6.4436575,
+          "remaining_usd": 30.5563425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8x7AkTz1i1Wo0r6z6suQBv3jrYp",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

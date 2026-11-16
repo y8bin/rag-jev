@@ -1,0 +1,87 @@
+{
+  "key": "4fecdff0e74027fd5456e21c99c2c60c56829550e814475b8d4c3178c677751e",
+  "response": {
+    "id": "chatcmpl-Ei8yhjLVfUOYd4ivvAOmHcIYL8aVe",
+    "object": "chat.completion",
+    "created": 1794189651,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"소득세법 (이자소득의 정의) 이자소득은 금전의 사용에 대한 대가로 지급받는 금액으로서 이자, 할인액, 그 밖에 이와 유사한 성질의 금액을 포함한다.\", \"소득세법 (환매조건부 매매의 소득 구분) 환매조건부로 매매하는 채권 또는 증권의 매매차익은 이자소득으로 간주된다.\", \"소득세법 (복합금융상품의 소득 구분) 이자소득이 발생하는 채권에 파생상품이 결합된 상품의 경우, 이자소득으로 과세되는 요건은 해당 금융상품의 실질적인 성격에 따라 결정된다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1812,
+      "completion_tokens": 167,
+      "total_tokens": 1979,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 2239.8594170081196,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d45798585a1e468fa538892f1210a2fe"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1812,
+      "output_tokens": 167,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19668,
+      "known_cost_usd": 7.532771722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.532771722,
+      "remaining_usd": 92.467228278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.77677,
+          "accounted_with_reservations_usd": 6.77677,
+          "remaining_usd": 30.22323
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8yhjLVfUOYd4ivvAOmHcIYL8aVe",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

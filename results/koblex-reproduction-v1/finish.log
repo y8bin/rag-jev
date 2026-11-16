@@ -1,0 +1,809 @@
+answered parser_ce_raw qa_19_1hop_28
+answered parser_ce_fixed qa_19_1hop_28
+answered parser_ce_raw qa_139_1hop_254
+answered parser_ce_fixed qa_139_1hop_254
+answered parser_ce_raw qa_92_1hop_149
+answered parser_ce_fixed qa_92_1hop_149
+answered parser_ce_raw qa_172_1hop_308
+answered parser_ce_fixed qa_172_1hop_308
+answered parser_jev_fixed qa_92_1hop_149
+answered parser_jev_fixed qa_139_1hop_254
+answered parser_jev_fixed qa_19_1hop_28
+answered parser_jev_fixed qa_172_1hop_308
+answered parser_ce_raw qa_90_2hop_147
+answered parser_ce_raw qa_192_2hop_334
+answered parser_ce_fixed qa_192_2hop_334
+answered parser_ce_fixed qa_90_2hop_147
+answered parser_ce_raw qa_312_2hop_499
+answered parser_ce_raw qa_387_2hop_603
+answered parser_jev_fixed qa_192_2hop_334
+answered parser_jev_fixed qa_90_2hop_147
+answered parser_ce_fixed qa_312_2hop_499
+answered parser_ce_fixed qa_387_2hop_603
+answered parser_jev_fixed qa_387_2hop_603
+answered parser_ce_raw qa_621_2hop_937
+answered parser_ce_raw qa_476_2hop_749
+answered parser_jev_fixed qa_312_2hop_499
+answered parser_ce_fixed qa_621_2hop_937
+answered parser_ce_fixed qa_476_2hop_749
+answered parser_ce_raw qa_49_2hop_192_rand
+answered parser_ce_fixed qa_49_2hop_192_rand
+answered parser_ce_raw qa_116_2hop_452_rand
+answered parser_jev_fixed qa_476_2hop_749
+answered parser_jev_fixed qa_621_2hop_937
+answered parser_ce_fixed qa_116_2hop_452_rand
+answered parser_jev_fixed qa_49_2hop_192_rand
+answered parser_ce_raw qa_163_2hop_630_rand
+answered parser_ce_raw qa_213_2hop_812_rand
+answered parser_jev_fixed qa_116_2hop_452_rand
+answered parser_ce_fixed qa_163_2hop_630_rand
+answered parser_ce_raw qa_257_2hop_983_rand
+answered parser_ce_fixed qa_213_2hop_812_rand
+answered parser_ce_fixed qa_257_2hop_983_rand
+answered parser_jev_fixed qa_163_2hop_630_rand
+answered parser_jev_fixed qa_213_2hop_812_rand
+answered parser_ce_raw qa_140_3hop_540_rand
+answered parser_jev_fixed qa_257_2hop_983_rand
+answered parser_ce_fixed qa_140_3hop_540_rand
+answered parser_ce_raw qa_86_3hop_140
+answered parser_ce_raw qa_61_1hop_93
+answered parser_ce_fixed qa_61_1hop_93
+answered parser_ce_fixed qa_86_3hop_140
+answered parser_jev_fixed qa_61_1hop_93
+answered parser_jev_fixed qa_140_3hop_540_rand
+answered parser_ce_raw qa_352_3hop_554
+answered parser_ce_raw qa_94_1hop_155
+answered parser_ce_fixed qa_94_1hop_155
+answered parser_jev_fixed qa_86_3hop_140
+answered parser_ce_fixed qa_352_3hop_554
+Traceback (most recent call last):
+  File "/Users/indeep/Desktop/RAG-jev/src/legal_rag_jev/providers.py", line 124, in request
+    raise ProviderError(f"{kind}: HTTP {response.status_code}" + (f" — {detail}" if detail else ""))
+legal_rag_jev.providers.ProviderError: generation: HTTP 429 — message=Rate limit reached for gpt-4o-2024-08-06 (for limit gpt-4o) in organization org-BUOvx2pkAnDxegkZxO4EHNAO on tokens per min (TPM): Limit 450000, Used 450000, Requested 6809. Please try again in 907ms. Visit https://platform.openai.com/account/rate-limits to learn more.; type=tokens; code=rate_limit_exceeded
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/indeep/Desktop/RAG-jev/scripts/run_koblex_reproduction_answers.py", line 63, in <module>
+    if __name__=='__main__':asyncio.run(main())
+                            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/indeep/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/scripts/run_koblex_reproduction_answers.py", line 57, in main
+    await asyncio.gather(*(one(q) for q in questions))
+  File "/Users/indeep/Desktop/RAG-jev/scripts/run_koblex_reproduction_answers.py", line 43, in one
+    text,trace=await study.chat(cfg,transport,study.prompt('selection_retrieval',background=q['background'],question=q['question'],candidates=candidates))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/scripts/run_koblex_reproduction.py", line 123, in chat
+    result=await transport.request('generation',identity,'/chat/completions',body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/src/legal_rag_jev/providers.py", line 150, in request
+    raise ProviderError(str(e), {"attempts": attempts, "request_count": len(attempts),
+legal_rag_jev.providers.ProviderError: generation: HTTP 429 — message=Rate limit reached for gpt-4o-2024-08-06 (for limit gpt-4o) in organization org-BUOvx2pkAnDxegkZxO4EHNAO on tokens per min (TPM): Limit 450000, Used 450000, Requested 6809. Please try again in 907ms. Visit https://platform.openai.com/account/rate-limits to learn more.; type=tokens; code=rate_limit_exceeded
+answered parser_jev_fixed qa_94_1hop_155
+answered parser_ce_raw qa_140_1hop_257
+answered parser_ce_raw qa_174_1hop_312
+answered parser_ce_fixed qa_174_1hop_312
+answered parser_jev_fixed qa_174_1hop_312
+answered parser_ce_fixed qa_140_1hop_257
+answered parser_ce_raw qa_99_2hop_168
+answered parser_jev_fixed qa_352_3hop_554
+answered parser_ce_fixed qa_99_2hop_168
+answered parser_jev_fixed qa_140_1hop_257
+answered parser_jev_fixed qa_99_2hop_168
+answered parser_ce_raw qa_324_2hop_515
+answered parser_ce_raw qa_401_2hop_619
+answered parser_ce_fixed qa_401_2hop_619
+answered parser_ce_raw qa_488_2hop_766
+answered parser_ce_fixed qa_324_2hop_515
+answered parser_ce_fixed qa_488_2hop_766
+answered parser_ce_raw qa_624_2hop_943
+answered parser_ce_fixed qa_624_2hop_943
+answered parser_jev_fixed qa_401_2hop_619
+answered parser_jev_fixed qa_324_2hop_515
+answered parser_jev_fixed qa_624_2hop_943
+answered parser_jev_fixed qa_488_2hop_766
+answered parser_ce_raw qa_59_2hop_232_rand
+answered parser_ce_fixed qa_59_2hop_232_rand
+answered parser_ce_raw qa_119_2hop_464_rand
+answered parser_ce_raw qa_171_2hop_658_rand
+answered parser_ce_fixed qa_171_2hop_658_rand
+answered parser_ce_fixed qa_119_2hop_464_rand
+answered parser_ce_raw qa_215_2hop_820_rand
+answered parser_jev_fixed qa_171_2hop_658_rand
+answered parser_jev_fixed qa_59_2hop_232_rand
+answered parser_ce_fixed qa_215_2hop_820_rand
+answered parser_jev_fixed qa_119_2hop_464_rand
+answered parser_ce_raw qa_260_2hop_995_rand
+answered parser_ce_fixed qa_260_2hop_995_rand
+answered parser_jev_fixed qa_215_2hop_820_rand
+answered parser_ce_raw qa_279_3hop_1064_rand
+answered parser_jev_fixed qa_260_2hop_995_rand
+answered parser_ce_raw qa_102_3hop_175
+answered parser_ce_fixed qa_279_3hop_1064_rand
+answered parser_ce_fixed qa_102_3hop_175
+answered parser_ce_raw qa_24_1hop_35
+answered parser_ce_fixed qa_24_1hop_35
+answered parser_ce_raw qa_422_3hop_653
+answered parser_ce_fixed qa_422_3hop_653
+answered parser_jev_fixed qa_24_1hop_35
+answered parser_jev_fixed qa_279_3hop_1064_rand
+answered parser_jev_fixed qa_102_3hop_175
+answered parser_jev_fixed qa_422_3hop_653
+answered parser_ce_raw qa_62_1hop_94
+answered parser_ce_fixed qa_62_1hop_94
+answered parser_jev_fixed qa_62_1hop_94
+answered parser_ce_raw qa_141_1hop_258
+answered parser_ce_fixed qa_141_1hop_258
+answered parser_jev_fixed qa_141_1hop_258
+answered parser_ce_raw qa_95_1hop_156
+answered parser_ce_raw qa_113_2hop_200
+answered parser_ce_fixed qa_95_1hop_156
+answered parser_ce_fixed qa_113_2hop_200
+answered parser_ce_raw qa_330_2hop_525
+answered parser_ce_raw qa_406_2hop_622
+answered parser_ce_fixed qa_330_2hop_525
+answered parser_ce_fixed qa_406_2hop_622
+answered parser_jev_fixed qa_95_1hop_156
+answered parser_jev_fixed qa_113_2hop_200
+answered parser_jev_fixed qa_330_2hop_525
+answered parser_jev_fixed qa_406_2hop_622
+answered parser_ce_raw qa_503_2hop_790
+answered parser_ce_raw qa_633_2hop_954
+answered parser_ce_raw qa_62_2hop_244_rand
+answered parser_ce_fixed qa_503_2hop_790
+answered parser_ce_fixed qa_633_2hop_954
+answered parser_ce_raw qa_124_2hop_480_rand
+answered parser_ce_fixed qa_62_2hop_244_rand
+answered parser_ce_fixed qa_124_2hop_480_rand
+answered parser_jev_fixed qa_503_2hop_790
+answered parser_jev_fixed qa_633_2hop_954
+answered parser_jev_fixed qa_62_2hop_244_rand
+answered parser_jev_fixed qa_124_2hop_480_rand
+answered parser_ce_raw qa_174_2hop_666_rand
+answered parser_ce_raw qa_216_2hop_824_rand
+answered parser_ce_fixed qa_216_2hop_824_rand
+answered parser_ce_fixed qa_174_2hop_666_rand
+answered parser_ce_raw qa_82_3hop_235_rand2
+answered parser_ce_raw qa_127_3hop_230
+answered parser_ce_fixed qa_82_3hop_235_rand2
+answered parser_jev_fixed qa_216_2hop_824_rand
+answered parser_ce_fixed qa_127_3hop_230
+answered parser_jev_fixed qa_174_2hop_666_rand
+answered parser_ce_raw qa_25_1hop_37
+answered parser_ce_fixed qa_25_1hop_37
+answered parser_ce_raw qa_430_3hop_669
+answered parser_jev_fixed qa_127_3hop_230
+answered parser_jev_fixed qa_82_3hop_235_rand2
+answered parser_jev_fixed qa_25_1hop_37
+answered parser_ce_fixed qa_430_3hop_669
+answered parser_jev_fixed qa_430_3hop_669
+answered parser_ce_raw qa_145_1hop_267
+answered parser_ce_fixed qa_145_1hop_267
+answered parser_ce_raw qa_99_1hop_167
+answered parser_ce_fixed qa_99_1hop_167
+answered parser_ce_raw qa_64_1hop_95
+answered parser_ce_fixed qa_64_1hop_95
+answered parser_ce_raw qa_192_1hop_333
+answered parser_jev_fixed qa_145_1hop_267
+answered parser_ce_fixed qa_192_1hop_333
+answered parser_jev_fixed qa_99_1hop_167
+answered parser_jev_fixed qa_192_1hop_333
+answered parser_jev_fixed qa_64_1hop_95
+answered parser_ce_raw qa_115_2hop_204
+answered parser_ce_raw qa_332_2hop_531
+answered parser_ce_raw qa_522_2hop_806
+answered parser_ce_fixed qa_115_2hop_204
+answered parser_ce_fixed qa_522_2hop_806
+answered parser_ce_fixed qa_332_2hop_531
+answered parser_ce_raw qa_644_2hop_973
+answered parser_ce_fixed qa_644_2hop_973
+answered parser_jev_fixed qa_332_2hop_531
+answered parser_jev_fixed qa_115_2hop_204
+answered parser_jev_fixed qa_644_2hop_973
+answered parser_jev_fixed qa_522_2hop_806
+answered parser_ce_raw qa_129_2hop_497_rand
+answered parser_ce_fixed qa_129_2hop_497_rand
+answered parser_ce_raw qa_63_2hop_248_rand
+answered parser_ce_raw qa_180_2hop_689_rand
+answered parser_jev_fixed qa_129_2hop_497_rand
+answered parser_ce_raw qa_226_2hop_860_rand
+answered parser_ce_fixed qa_226_2hop_860_rand
+answered parser_ce_fixed qa_63_2hop_248_rand
+answered parser_ce_fixed qa_180_2hop_689_rand
+answered parser_jev_fixed qa_226_2hop_860_rand
+answered parser_jev_fixed qa_180_2hop_689_rand
+answered parser_ce_raw qa_286_2hop_1091_rand
+answered parser_jev_fixed qa_63_2hop_248_rand
+answered parser_ce_fixed qa_286_2hop_1091_rand
+answered parser_ce_raw qa_131_3hop_237
+answered parser_ce_raw qa_144_3hop_410_rand2
+answered parser_jev_fixed qa_286_2hop_1091_rand
+answered parser_ce_fixed qa_144_3hop_410_rand2
+answered parser_ce_raw qa_441_3hop_696
+answered parser_ce_fixed qa_131_3hop_237
+answered parser_ce_raw qa_26_1hop_39
+answered parser_ce_fixed qa_26_1hop_39
+answered parser_ce_fixed qa_441_3hop_696
+answered parser_jev_fixed qa_26_1hop_39
+answered parser_jev_fixed qa_144_3hop_410_rand2
+answered parser_jev_fixed qa_131_3hop_237
+answered parser_ce_raw qa_102_1hop_173
+answered parser_ce_fixed qa_102_1hop_173
+answered parser_ce_raw qa_3_2hop_6
+answered parser_ce_raw qa_116_2hop_208
+answered parser_jev_fixed qa_441_3hop_696
+answered parser_ce_fixed qa_116_2hop_208
+answered parser_ce_fixed qa_3_2hop_6
+answered parser_jev_fixed qa_102_1hop_173
+answered parser_jev_fixed qa_116_2hop_208
+answered parser_jev_fixed qa_3_2hop_6
+answered parser_ce_raw qa_339_2hop_536
+answered parser_ce_raw qa_202_2hop_350
+answered parser_ce_raw qa_653_2hop_987
+answered parser_ce_fixed qa_339_2hop_536
+answered parser_ce_fixed qa_202_2hop_350
+answered parser_ce_raw qa_409_2hop_628
+answered parser_ce_fixed qa_653_2hop_987
+answered parser_ce_fixed qa_409_2hop_628
+answered parser_jev_fixed qa_339_2hop_536
+answered parser_jev_fixed qa_653_2hop_987
+answered parser_jev_fixed qa_202_2hop_350
+answered parser_jev_fixed qa_409_2hop_628
+answered parser_ce_raw qa_130_2hop_501_rand
+answered parser_ce_fixed qa_130_2hop_501_rand
+answered parser_ce_raw qa_185_2hop_707_rand
+answered parser_ce_raw qa_233_2hop_888_rand
+answered parser_ce_fixed qa_185_2hop_707_rand
+answered parser_ce_fixed qa_233_2hop_888_rand
+answered parser_jev_fixed qa_130_2hop_501_rand
+answered parser_jev_fixed qa_185_2hop_707_rand
+answered parser_jev_fixed qa_233_2hop_888_rand
+answered parser_ce_raw qa_41_3hop_66
+answered parser_ce_fixed qa_41_3hop_66
+answered parser_ce_raw qa_304_3hop_869_rand2
+answered parser_ce_raw qa_148_3hop_273
+answered parser_ce_raw qa_460_3hop_730
+answered parser_ce_fixed qa_304_3hop_869_rand2
+answered parser_ce_fixed qa_148_3hop_273
+answered parser_ce_fixed qa_460_3hop_730
+answered parser_jev_fixed qa_41_3hop_66
+answered parser_jev_fixed qa_460_3hop_730
+answered parser_jev_fixed qa_148_3hop_273
+answered parser_jev_fixed qa_304_3hop_869_rand2
+answered parser_ce_raw qa_150_1hop_277
+answered parser_ce_fixed qa_150_1hop_277
+answered parser_ce_raw qa_68_1hop_100
+answered parser_jev_fixed qa_150_1hop_277
+answered parser_ce_raw qa_104_1hop_180
+answered parser_ce_raw qa_5_2hop_8
+answered parser_ce_fixed qa_68_1hop_100
+answered parser_ce_fixed qa_104_1hop_180
+answered parser_ce_fixed qa_5_2hop_8
+answered parser_jev_fixed qa_104_1hop_180
+answered parser_ce_raw qa_122_2hop_219
+answered parser_ce_fixed qa_122_2hop_219
+answered parser_jev_fixed qa_68_1hop_100
+answered parser_jev_fixed qa_5_2hop_8
+answered parser_jev_fixed qa_122_2hop_219
+answered parser_ce_raw qa_340_2hop_539
+answered parser_ce_fixed qa_340_2hop_539
+answered parser_ce_raw qa_0_2hop_1_rand
+answered parser_ce_raw qa_421_2hop_650
+answered parser_ce_fixed qa_421_2hop_650
+answered parser_ce_fixed qa_0_2hop_1_rand
+answered parser_jev_fixed qa_340_2hop_539
+answered parser_ce_raw qa_67_2hop_261_rand
+answered parser_ce_fixed qa_67_2hop_261_rand
+answered parser_jev_fixed qa_421_2hop_650
+answered parser_ce_raw qa_132_2hop_507_rand
+answered parser_jev_fixed qa_0_2hop_1_rand
+answered parser_ce_raw qa_193_2hop_739_rand
+answered parser_ce_fixed qa_132_2hop_507_rand
+answered parser_jev_fixed qa_67_2hop_261_rand
+answered parser_ce_fixed qa_193_2hop_739_rand
+answered parser_ce_raw qa_234_2hop_892_rand
+answered parser_ce_fixed qa_234_2hop_892_rand
+answered parser_jev_fixed qa_132_2hop_507_rand
+answered parser_ce_raw qa_291_2hop_1111_rand
+answered parser_ce_fixed qa_291_2hop_1111_rand
+answered parser_jev_fixed qa_234_2hop_892_rand
+answered parser_jev_fixed qa_193_2hop_739_rand
+answered parser_ce_raw qa_104_3hop_182
+answered parser_jev_fixed qa_291_2hop_1111_rand
+answered parser_ce_fixed qa_104_3hop_182
+answered parser_jev_fixed qa_104_3hop_182
+answered parser_ce_raw qa_309_3hop_881_rand2
+answered parser_ce_raw qa_493_3hop_773
+answered parser_ce_fixed qa_493_3hop_773
+answered parser_ce_raw qa_32_1hop_49
+answered parser_ce_fixed qa_32_1hop_49
+answered parser_ce_raw qa_168_3hop_301
+answered parser_jev_fixed qa_32_1hop_49
+answered parser_ce_fixed qa_309_3hop_881_rand2
+answered parser_jev_fixed qa_493_3hop_773
+answered parser_ce_fixed qa_168_3hop_301
+answered parser_ce_raw qa_69_1hop_102
+answered parser_ce_fixed qa_69_1hop_102
+answered parser_jev_fixed qa_69_1hop_102
+answered parser_ce_raw qa_105_1hop_183
+answered parser_ce_fixed qa_105_1hop_183
+answered parser_jev_fixed qa_105_1hop_183
+answered parser_jev_fixed qa_309_3hop_881_rand2
+answered parser_ce_raw qa_152_1hop_280
+answered parser_ce_fixed qa_152_1hop_280
+answered parser_jev_fixed qa_168_3hop_301
+answered parser_jev_fixed qa_152_1hop_280
+answered parser_ce_raw qa_233_2hop_388
+answered parser_ce_fixed qa_233_2hop_388
+answered parser_ce_raw qa_17_2hop_25
+answered parser_ce_raw qa_125_2hop_226
+answered parser_jev_fixed qa_233_2hop_388
+answered parser_ce_raw qa_343_2hop_541
+answered parser_ce_fixed qa_343_2hop_541
+answered parser_ce_fixed qa_125_2hop_226
+answered parser_ce_fixed qa_17_2hop_25
+answered parser_jev_fixed qa_343_2hop_541
+answered parser_ce_raw qa_423_2hop_656
+answered parser_jev_fixed qa_125_2hop_226
+answered parser_ce_fixed qa_423_2hop_656
+answered parser_ce_raw qa_8_2hop_33_rand
+answered parser_ce_fixed qa_8_2hop_33_rand
+answered parser_jev_fixed qa_17_2hop_25
+answered parser_ce_raw qa_70_2hop_273_rand
+answered parser_jev_fixed qa_8_2hop_33_rand
+answered parser_jev_fixed qa_423_2hop_656
+answered parser_ce_fixed qa_70_2hop_273_rand
+answered parser_ce_raw qa_134_2hop_515_rand
+answered parser_ce_fixed qa_134_2hop_515_rand
+answered parser_jev_fixed qa_70_2hop_273_rand
+answered parser_jev_fixed qa_134_2hop_515_rand
+answered parser_ce_raw qa_239_2hop_912_rand
+answered parser_ce_raw qa_197_2hop_752_rand
+answered parser_ce_fixed qa_239_2hop_912_rand
+answered parser_ce_raw qa_366_3hop_580
+answered parser_ce_fixed qa_197_2hop_752_rand
+answered parser_jev_fixed qa_239_2hop_912_rand
+answered parser_ce_fixed qa_366_3hop_580
+answered parser_ce_raw qa_32_3hop_51
+answered parser_jev_fixed qa_197_2hop_752_rand
+answered parser_ce_fixed qa_32_3hop_51
+answered parser_jev_fixed qa_366_3hop_580
+answered parser_ce_raw qa_495_3hop_777
+answered parser_ce_raw qa_1_1hop_2
+answered parser_ce_fixed qa_1_1hop_2
+answered parser_ce_raw qa_72_1hop_108
+answered parser_ce_fixed qa_72_1hop_108
+answered parser_ce_fixed qa_495_3hop_777
+answered parser_jev_fixed qa_1_1hop_2
+answered parser_jev_fixed qa_72_1hop_108
+answered parser_jev_fixed qa_32_3hop_51
+answered parser_ce_raw qa_116_1hop_207
+answered parser_ce_fixed qa_116_1hop_207
+answered parser_ce_raw qa_155_1hop_283
+answered parser_ce_fixed qa_155_1hop_283
+answered parser_ce_raw qa_249_2hop_406
+answered parser_ce_fixed qa_249_2hop_406
+answered parser_jev_fixed qa_495_3hop_777
+answered parser_jev_fixed qa_116_1hop_207
+answered parser_jev_fixed qa_155_1hop_283
+answered parser_jev_fixed qa_249_2hop_406
+answered parser_ce_raw qa_356_2hop_565
+answered parser_ce_raw qa_552_2hop_839
+answered parser_ce_fixed qa_356_2hop_565
+answered parser_ce_raw qa_23_2hop_93_rand
+answered parser_ce_fixed qa_23_2hop_93_rand
+answered parser_ce_raw qa_430_2hop_668
+answered parser_ce_fixed qa_552_2hop_839
+answered parser_ce_fixed qa_430_2hop_668
+answered parser_jev_fixed qa_356_2hop_565
+answered parser_jev_fixed qa_552_2hop_839
+answered parser_jev_fixed qa_23_2hop_93_rand
+answered parser_ce_raw qa_80_2hop_313_rand
+answered parser_ce_fixed qa_80_2hop_313_rand
+answered parser_ce_raw qa_139_2hop_535_rand
+answered parser_ce_raw qa_242_2hop_923_rand
+answered parser_ce_fixed qa_242_2hop_923_rand
+answered parser_jev_fixed qa_80_2hop_313_rand
+answered parser_ce_fixed qa_139_2hop_535_rand
+answered parser_jev_fixed qa_430_2hop_668
+answered parser_jev_fixed qa_242_2hop_923_rand
+answered parser_jev_fixed qa_139_2hop_535_rand
+answered parser_ce_raw qa_33_3hop_52
+answered parser_ce_raw qa_209_3hop_360
+answered parser_ce_raw qa_498_3hop_782
+answered parser_ce_fixed qa_33_3hop_52
+answered parser_ce_raw qa_2_1hop_4
+answered parser_ce_fixed qa_209_3hop_360
+answered parser_ce_fixed qa_498_3hop_782
+answered parser_ce_fixed qa_2_1hop_4
+answered parser_jev_fixed qa_33_3hop_52
+answered parser_jev_fixed qa_209_3hop_360
+answered parser_jev_fixed qa_2_1hop_4
+answered parser_jev_fixed qa_498_3hop_782
+answered parser_ce_raw qa_74_1hop_114
+answered parser_ce_fixed qa_74_1hop_114
+answered parser_ce_raw qa_48_1hop_73
+answered parser_ce_fixed qa_48_1hop_73
+answered parser_ce_raw qa_124_1hop_223
+answered parser_jev_fixed qa_48_1hop_73
+answered parser_jev_fixed qa_74_1hop_114
+answered parser_ce_raw qa_49_2hop_75
+answered parser_ce_fixed qa_124_1hop_223
+answered parser_ce_fixed qa_49_2hop_75
+answered parser_jev_fixed qa_124_1hop_223
+answered parser_ce_raw qa_143_2hop_261
+answered parser_ce_fixed qa_143_2hop_261
+answered parser_ce_raw qa_365_2hop_578
+answered parser_jev_fixed qa_49_2hop_75
+answered parser_ce_fixed qa_365_2hop_578
+answered parser_ce_raw qa_435_2hop_678
+answered parser_ce_fixed qa_435_2hop_678
+answered parser_jev_fixed qa_143_2hop_261
+answered parser_jev_fixed qa_365_2hop_578
+answered parser_ce_raw qa_566_2hop_861
+answered parser_ce_fixed qa_566_2hop_861
+answered parser_jev_fixed qa_435_2hop_678
+answered parser_ce_raw qa_83_2hop_325_rand
+answered parser_ce_fixed qa_83_2hop_325_rand
+answered parser_ce_raw qa_144_2hop_555_rand
+answered parser_ce_fixed qa_144_2hop_555_rand
+answered parser_jev_fixed qa_83_2hop_325_rand
+answered parser_jev_fixed qa_566_2hop_861
+answered parser_ce_raw qa_243_2hop_927_rand
+answered parser_ce_fixed qa_243_2hop_927_rand
+answered parser_ce_raw qa_242_3hop_399
+answered parser_jev_fixed qa_144_2hop_555_rand
+answered parser_ce_fixed qa_242_3hop_399
+answered parser_ce_raw qa_6_1hop_9
+answered parser_ce_fixed qa_6_1hop_9
+answered parser_jev_fixed qa_243_2hop_927_rand
+answered parser_jev_fixed qa_6_1hop_9
+answered parser_ce_raw qa_50_1hop_78
+answered parser_ce_fixed qa_50_1hop_78
+answered parser_ce_raw qa_76_1hop_118
+answered parser_ce_fixed qa_76_1hop_118
+answered parser_jev_fixed qa_50_1hop_78
+answered parser_ce_raw qa_125_1hop_225
+answered parser_ce_fixed qa_125_1hop_225
+answered parser_jev_fixed qa_76_1hop_118
+answered parser_jev_fixed qa_242_3hop_399
+answered parser_jev_fixed qa_125_1hop_225
+answered parser_ce_raw qa_58_2hop_88
+answered parser_ce_raw qa_160_1hop_289
+answered parser_ce_fixed qa_160_1hop_289
+answered parser_ce_fixed qa_58_2hop_88
+answered parser_ce_raw qa_273_2hop_431
+answered parser_jev_fixed qa_160_1hop_289
+answered parser_ce_raw qa_584_2hop_884
+answered parser_ce_fixed qa_273_2hop_431
+answered parser_ce_fixed qa_584_2hop_884
+answered parser_jev_fixed qa_58_2hop_88
+answered parser_ce_raw qa_26_2hop_104_rand
+answered parser_jev_fixed qa_273_2hop_431
+answered parser_ce_fixed qa_26_2hop_104_rand
+answered parser_jev_fixed qa_584_2hop_884
+answered parser_ce_raw qa_145_2hop_559_rand
+answered parser_ce_fixed qa_145_2hop_559_rand
+answered parser_ce_raw qa_85_2hop_333_rand
+answered parser_jev_fixed qa_26_2hop_104_rand
+answered parser_jev_fixed qa_145_2hop_559_rand
+answered parser_ce_fixed qa_85_2hop_333_rand
+answered parser_ce_raw qa_206_2hop_786_rand
+answered parser_ce_fixed qa_206_2hop_786_rand
+answered parser_ce_raw qa_244_2hop_931_rand
+answered parser_ce_fixed qa_244_2hop_931_rand
+answered parser_ce_raw qa_608_3hop_919
+answered parser_ce_fixed qa_608_3hop_919
+answered parser_jev_fixed qa_85_2hop_333_rand
+answered parser_jev_fixed qa_244_2hop_931_rand
+answered parser_jev_fixed qa_206_2hop_786_rand
+answered parser_ce_raw qa_13_1hop_18
+answered parser_jev_fixed qa_608_3hop_919
+answered parser_ce_fixed qa_13_1hop_18
+answered parser_ce_raw qa_274_3hop_434
+answered parser_ce_raw qa_550_3hop_837
+answered parser_jev_fixed qa_13_1hop_18
+answered parser_ce_fixed qa_274_3hop_434
+answered parser_ce_fixed qa_550_3hop_837
+answered parser_ce_raw qa_52_1hop_80
+answered parser_ce_fixed qa_52_1hop_80
+answered parser_ce_raw qa_80_1hop_125
+answered parser_ce_fixed qa_80_1hop_125
+answered parser_jev_fixed qa_52_1hop_80
+answered parser_jev_fixed qa_80_1hop_125
+answered parser_jev_fixed qa_274_3hop_434
+answered parser_jev_fixed qa_550_3hop_837
+answered parser_ce_raw qa_162_1hop_291
+answered parser_ce_fixed qa_162_1hop_291
+answered parser_ce_raw qa_158_2hop_287
+answered parser_ce_raw qa_59_2hop_90
+answered parser_ce_raw qa_281_2hop_441
+answered parser_ce_fixed qa_158_2hop_287
+answered parser_ce_fixed qa_59_2hop_90
+answered parser_jev_fixed qa_162_1hop_291
+answered parser_ce_fixed qa_281_2hop_441
+answered parser_jev_fixed qa_59_2hop_90
+answered parser_ce_raw qa_368_2hop_584
+answered parser_ce_fixed qa_368_2hop_584
+answered parser_jev_fixed qa_158_2hop_287
+answered parser_jev_fixed qa_281_2hop_441
+answered parser_jev_fixed qa_368_2hop_584
+answered parser_ce_raw qa_602_2hop_910
+answered parser_ce_fixed qa_602_2hop_910
+answered parser_ce_raw qa_28_2hop_112_rand
+answered parser_ce_fixed qa_28_2hop_112_rand
+answered parser_ce_raw qa_157_2hop_606_rand
+answered parser_jev_fixed qa_602_2hop_910
+answered parser_jev_fixed qa_28_2hop_112_rand
+answered parser_ce_raw qa_207_2hop_790_rand
+answered parser_ce_fixed qa_157_2hop_606_rand
+answered parser_ce_fixed qa_207_2hop_790_rand
+answered parser_jev_fixed qa_157_2hop_606_rand
+answered parser_jev_fixed qa_207_2hop_790_rand
+answered parser_ce_raw qa_14_3hop_58_rand
+answered parser_ce_raw qa_73_3hop_113
+answered parser_ce_fixed qa_14_3hop_58_rand
+answered parser_ce_fixed qa_73_3hop_113
+answered parser_ce_raw qa_16_1hop_22
+answered parser_ce_fixed qa_16_1hop_22
+answered parser_ce_raw qa_314_3hop_503
+answered parser_jev_fixed qa_16_1hop_22
+answered parser_ce_fixed qa_314_3hop_503
+answered parser_jev_fixed qa_14_3hop_58_rand
+answered parser_ce_raw qa_55_1hop_83
+answered parser_ce_fixed qa_55_1hop_83
+answered parser_jev_fixed qa_55_1hop_83
+answered parser_jev_fixed qa_73_3hop_113
+answered parser_jev_fixed qa_314_3hop_503
+answered parser_ce_raw qa_165_1hop_293
+answered parser_ce_fixed qa_165_1hop_293
+answered parser_ce_raw qa_135_1hop_245
+answered parser_ce_raw qa_168_2hop_300
+answered parser_ce_fixed qa_135_1hop_245
+answered parser_jev_fixed qa_165_1hop_293
+answered parser_ce_raw qa_69_2hop_103
+answered parser_ce_fixed qa_168_2hop_300
+answered parser_ce_fixed qa_69_2hop_103
+answered parser_jev_fixed qa_135_1hop_245
+answered parser_jev_fixed qa_168_2hop_300
+answered parser_ce_raw qa_290_2hop_453
+answered parser_jev_fixed qa_69_2hop_103
+answered parser_ce_raw qa_450_2hop_717
+answered parser_ce_fixed qa_290_2hop_453
+answered parser_ce_fixed qa_450_2hop_717
+answered parser_ce_raw qa_92_2hop_361_rand
+answered parser_ce_raw qa_41_2hop_160_rand
+answered parser_ce_fixed qa_41_2hop_160_rand
+answered parser_ce_fixed qa_92_2hop_361_rand
+answered parser_jev_fixed qa_41_2hop_160_rand
+answered parser_jev_fixed qa_290_2hop_453
+answered parser_jev_fixed qa_450_2hop_717
+answered parser_jev_fixed qa_92_2hop_361_rand
+answered parser_ce_raw qa_209_2hop_798_rand
+answered parser_ce_raw qa_159_2hop_614_rand
+answered parser_ce_raw qa_248_2hop_947_rand
+answered parser_ce_fixed qa_209_2hop_798_rand
+answered parser_ce_fixed qa_159_2hop_614_rand
+answered parser_ce_fixed qa_248_2hop_947_rand
+answered parser_jev_fixed qa_209_2hop_798_rand
+answered parser_ce_raw qa_32_3hop_125_rand
+answered parser_jev_fixed qa_248_2hop_947_rand
+answered parser_ce_fixed qa_32_3hop_125_rand
+answered parser_jev_fixed qa_159_2hop_614_rand
+answered parser_ce_raw qa_74_3hop_116
+answered parser_ce_raw qa_17_1hop_24
+answered parser_ce_fixed qa_17_1hop_24
+answered parser_ce_fixed qa_74_3hop_116
+answered parser_ce_raw qa_321_3hop_511
+answered parser_jev_fixed qa_17_1hop_24
+answered parser_jev_fixed qa_32_3hop_125_rand
+answered parser_ce_fixed qa_321_3hop_511
+answered parser_jev_fixed qa_74_3hop_116
+answered parser_ce_raw qa_56_1hop_86
+answered parser_ce_fixed qa_56_1hop_86
+answered parser_jev_fixed qa_321_3hop_511
+answered parser_ce_raw qa_85_1hop_135
+answered parser_ce_raw qa_138_1hop_252
+answered parser_ce_fixed qa_138_1hop_252
+answered parser_ce_fixed qa_85_1hop_135
+answered parser_jev_fixed qa_138_1hop_252
+answered parser_jev_fixed qa_56_1hop_86
+answered parser_ce_raw qa_168_1hop_299
+answered parser_ce_fixed qa_168_1hop_299
+answered parser_jev_fixed qa_168_1hop_299
+answered parser_jev_fixed qa_85_1hop_135
+answered parser_ce_raw qa_299_2hop_473
+answered parser_ce_raw qa_473_2hop_745
+answered parser_ce_raw qa_608_2hop_918
+answered parser_ce_fixed qa_299_2hop_473
+answered parser_ce_fixed qa_473_2hop_745
+answered parser_ce_fixed qa_608_2hop_918
+answered parser_ce_raw qa_47_2hop_184_rand
+answered parser_ce_fixed qa_47_2hop_184_rand
+answered parser_jev_fixed qa_608_2hop_918
+answered parser_jev_fixed qa_473_2hop_745
+answered parser_jev_fixed qa_299_2hop_473
+answered parser_jev_fixed qa_47_2hop_184_rand
+answered parser_ce_raw qa_250_2hop_955_rand
+answered parser_ce_fixed qa_250_2hop_955_rand
+answered parser_ce_raw qa_211_2hop_804_rand
+answered parser_ce_fixed qa_211_2hop_804_rand
+answered parser_ce_raw qa_102_2hop_400_rand
+answered parser_jev_fixed qa_250_2hop_955_rand
+answered parser_ce_raw qa_132_3hop_508_rand
+answered parser_jev_fixed qa_211_2hop_804_rand
+answered parser_ce_fixed qa_102_2hop_400_rand
+answered parser_ce_fixed qa_132_3hop_508_rand
+answered parser_jev_fixed qa_102_2hop_400_rand
+answered parser_ce_raw qa_329_3hop_523
+answered parser_ce_fixed qa_329_3hop_523
+answered parser_ce_raw qa_0_1hop_0
+answered parser_jev_fixed qa_132_3hop_508_rand
+answered parser_jev_fixed qa_329_3hop_523
+answered parser_ce_raw qa_77_3hop_121
+answered parser_ce_fixed qa_0_1hop_0
+answered parser_ce_fixed qa_77_3hop_121
+answered parser_ce_raw qa_70_1hop_106
+answered parser_ce_fixed qa_70_1hop_106
+answered parser_jev_fixed qa_0_1hop_0
+answered parser_jev_fixed qa_70_1hop_106
+answered parser_ce_raw qa_45_1hop_69
+answered parser_ce_raw qa_110_1hop_193
+answered parser_ce_fixed qa_110_1hop_193
+answered parser_ce_fixed qa_45_1hop_69
+answered parser_ce_raw qa_154_1hop_281
+answered parser_ce_fixed qa_154_1hop_281
+answered parser_jev_fixed qa_110_1hop_193
+answered parser_jev_fixed qa_154_1hop_281
+answered parser_jev_fixed qa_77_3hop_121
+answered parser_jev_fixed qa_45_1hop_69
+answered parser_ce_raw qa_22_2hop_33
+answered parser_ce_raw qa_244_2hop_400
+answered parser_ce_raw qa_344_2hop_543
+answered parser_ce_fixed qa_22_2hop_33
+answered parser_ce_fixed qa_344_2hop_543
+answered parser_ce_fixed qa_244_2hop_400
+answered parser_jev_fixed qa_344_2hop_543
+answered parser_jev_fixed qa_244_2hop_400
+answered parser_ce_raw qa_429_2hop_665
+answered parser_jev_fixed qa_22_2hop_33
+answered parser_ce_fixed qa_429_2hop_665
+answered parser_ce_raw qa_549_2hop_834
+answered parser_ce_raw qa_19_2hop_77_rand
+answered parser_ce_fixed qa_19_2hop_77_rand
+answered parser_ce_fixed qa_549_2hop_834
+answered parser_ce_raw qa_71_2hop_277_rand
+answered parser_jev_fixed qa_19_2hop_77_rand
+answered parser_jev_fixed qa_429_2hop_665
+answered parser_ce_fixed qa_71_2hop_277_rand
+answered parser_jev_fixed qa_549_2hop_834
+answered parser_ce_raw qa_136_2hop_523_rand
+answered parser_ce_raw qa_198_2hop_756_rand
+answered parser_ce_fixed qa_198_2hop_756_rand
+answered parser_ce_fixed qa_136_2hop_523_rand
+answered parser_jev_fixed qa_71_2hop_277_rand
+answered parser_ce_raw qa_240_2hop_916_rand
+answered parser_jev_fixed qa_198_2hop_756_rand
+answered parser_jev_fixed qa_136_2hop_523_rand
+answered parser_ce_fixed qa_240_2hop_916_rand
+answered parser_ce_raw qa_297_2hop_1135_rand
+answered parser_ce_raw qa_293_3hop_839_rand2
+answered parser_jev_fixed qa_240_2hop_916_rand
+answered parser_ce_fixed qa_293_3hop_839_rand2
+answered parser_ce_raw qa_136_3hop_249
+answered parser_ce_fixed qa_297_2hop_1135_rand
+answered parser_ce_fixed qa_136_3hop_249
+answered parser_ce_raw qa_443_3hop_703
+answered parser_ce_fixed qa_443_3hop_703
+answered parser_jev_fixed qa_293_3hop_839_rand2
+answered parser_jev_fixed qa_297_2hop_1135_rand
+answered parser_jev_fixed qa_136_3hop_249
+answered parser_jev_fixed qa_443_3hop_703
+Traceback (most recent call last):
+  File "/Users/indeep/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/scripts/run_koblex_reproduction.py", line 355, in main
+    for arm in ARMS:print(await evaluate(cfg,GOLD,str(ROOT/'predictions'/f'{arm}.jsonl'),str(ROOT/'lf-eval'/arm)),flush=True)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/src/legal_rag_jev/koblex_lf_eval.py", line 119, in evaluate
+    score = await metric.a_measure(LLMTestCase(input=questions[g["query_id"]],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/deepeval/tracing/tracing.py", line 1560, in async_wrapper
+    return await func(*args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/deepeval/metrics/g_eval/g_eval.py", line 189, in a_measure
+    g_score, reason = await self._a_evaluate(
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/deepeval/tracing/tracing.py", line 1560, in async_wrapper
+    return await func(*args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/deepeval/metrics/g_eval/g_eval.py", line 353, in _a_evaluate
+    return await a_generate_rubric_score(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/deepeval/metrics/utils/decision.py", line 669, in a_generate_rubric_score
+    res, cost = await judge.a_generate_raw_response(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/deepeval/tracing/tracing.py", line 1560, in async_wrapper
+    return await func(*args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/src/legal_rag_jev/koblex_lf_eval.py", line 63, in a_generate_raw_response
+    r = await self.transport.request("judge", self.identity, "/chat/completions", body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/src/legal_rag_jev/providers.py", line 110, in request
+    response = await self.client.request("POST" if body is not None else "GET",
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpx/_client.py", line 1643, in send
+    raise exc
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpx/_client.py", line 1637, in send
+    await response.aread()
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpx/_models.py", line 979, in aread
+    self._content = b"".join([part async for part in self.aiter_bytes()])
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpx/_models.py", line 997, in aiter_bytes
+    async for raw_bytes in self.aiter_raw():
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpx/_models.py", line 1055, in aiter_raw
+    async for raw_stream_bytes in self.stream:
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpx/_client.py", line 176, in __aiter__
+    async for chunk in self._stream:
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpx/_transports/default.py", line 271, in __aiter__
+    async for part in self._httpcore_stream:
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 407, in __aiter__
+    raise exc from None
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 403, in __aiter__
+    async for part in self._stream:
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpcore/_async/http11.py", line 342, in __aiter__
+    raise exc
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpcore/_async/http11.py", line 334, in __aiter__
+    async for chunk in self._connection._receive_response_body(**kwargs):
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpcore/_async/http11.py", line 203, in _receive_response_body
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 35, in read
+    return await self._stream.receive(max_bytes=max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/anyio/streams/tls.py", line 268, in receive
+    data = await self._call_sslobject_method(self._ssl_object.read, max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/anyio/streams/tls.py", line 209, in _call_sslobject_method
+    data = await self.transport_stream.receive()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/Desktop/RAG-jev/.venv-lf-eval/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1431, in receive
+    await self._protocol.read_event.wait()
+  File "/Users/indeep/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/locks.py", line 212, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/indeep/Desktop/RAG-jev/scripts/run_koblex_reproduction.py", line 373, in <module>
+    if __name__=='__main__':asyncio.run(main())
+                            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/indeep/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/indeep/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+parser_ce_raw {'questions': 226, 'lf_eval': 0.5830392799177871, 'signature': {'prediction_sha256': 'fc2821e5c20ce06d0d6d625e63f154f54db67f6fe47cf467932c2d0333eb47d7', 'gold_sha256': 'd0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b', 'questions_sha256': '2144be61214cab88097b7ef43427923a2f7b334fe578a4ae2a15965f449344c4', 'rubric_sha256': '95bf7c61c635079c766a3bbdfc383e4adb40e3661c0df2e706b15a164c9da86a', 'model': 'gpt-4o-2024-08-06', 'deepeval': '4.3.3', 'openai': '3.46.0', 'top_logprobs': 20, 'max_output_tokens': 2000, 'temperature': 0, 'score_scale': 'framework 0..1, paper table multiplies by 100', 'answer_clip_chars': 800}, 'budget': {'limit_usd': 100.0, 'attempts': 60909, 'known_cost_usd': 24.09577565, 'unsettled_attempts': 12, 'accounted_with_reservations_usd': 25.23273565, 'remaining_usd': 74.76726435, 'service_limits': {'openai': {'limit_usd': 37.0, 'known_cost_usd': 22.5983675, 'accounted_with_reservations_usd': 23.7353275, 'remaining_usd': 13.2646725}}}, 'completed': True}
+parser_ce_fixed {'questions': 226, 'lf_eval': 0.6757119296079768, 'signature': {'prediction_sha256': 'e4981ae96b4cfbfae75e02f06d8225607faa477b7d3fb4d825ddf48a4a018e63', 'gold_sha256': 'd0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b', 'questions_sha256': '2144be61214cab88097b7ef43427923a2f7b334fe578a4ae2a15965f449344c4', 'rubric_sha256': '95bf7c61c635079c766a3bbdfc383e4adb40e3661c0df2e706b15a164c9da86a', 'model': 'gpt-4o-2024-08-06', 'deepeval': '4.3.3', 'openai': '3.46.0', 'top_logprobs': 20, 'max_output_tokens': 2000, 'temperature': 0, 'score_scale': 'framework 0..1, paper table multiplies by 100', 'answer_clip_chars': 800}, 'budget': {'limit_usd': 100.0, 'attempts': 60909, 'known_cost_usd': 24.08849315, 'unsettled_attempts': 14, 'accounted_with_reservations_usd': 25.30706565, 'remaining_usd': 74.69293435, 'service_limits': {'openai': {'limit_usd': 37.0, 'known_cost_usd': 22.591085, 'accounted_with_reservations_usd': 23.8096575, 'remaining_usd': 13.1903425}}}, 'completed': True}
+parser_jev_fixed {'questions': 226, 'lf_eval': 0.7015260795444038, 'signature': {'prediction_sha256': '91753fd5a3ecbf0864d162a2c0db18aedac2e81c0f6e54c4eab7eea9d2c28db2', 'gold_sha256': 'd0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b', 'questions_sha256': '2144be61214cab88097b7ef43427923a2f7b334fe578a4ae2a15965f449344c4', 'rubric_sha256': '95bf7c61c635079c766a3bbdfc383e4adb40e3661c0df2e706b15a164c9da86a', 'model': 'gpt-4o-2024-08-06', 'deepeval': '4.3.3', 'openai': '3.46.0', 'top_logprobs': 20, 'max_output_tokens': 2000, 'temperature': 0, 'score_scale': 'framework 0..1, paper table multiplies by 100', 'answer_clip_chars': 800}, 'budget': {'limit_usd': 100.0, 'attempts': 60909, 'known_cost_usd': 24.09218065, 'unsettled_attempts': 13, 'accounted_with_reservations_usd': 25.27006815, 'remaining_usd': 74.72993185, 'service_limits': {'openai': {'limit_usd': 37.0, 'known_cost_usd': 22.5947725, 'accounted_with_reservations_usd': 23.77266, 'remaining_usd': 13.227340000000002}}}, 'completed': True}
+{'limit_usd': 100.0, 'attempts': 60909, 'known_cost_usd': 24.09577565, 'unsettled_attempts': 12, 'accounted_with_reservations_usd': 25.23273565, 'remaining_usd': 74.76726435, 'service_limits': {'openai': {'limit_usd': 37.0, 'known_cost_usd': 22.5983675, 'accounted_with_reservations_usd': 23.7353275, 'remaining_usd': 13.2646725}}}

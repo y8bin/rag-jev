@@ -1,0 +1,87 @@
+{
+  "key": "6e25296b0588104e3dca6d354c78ba8e35af7f1e42b06070d540b0c122fd25ad",
+  "response": {
+    "id": "chatcmpl-Ei8ztVdi69koMg6ZjiBitBAVbXkn2",
+    "object": "chat.completion",
+    "created": 1794189725,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"상속세 및 증여세법 (상속세 신고기한) 상속세는 상속개시일이 속하는 달의 말일부터 6개월 이내에 신고하여야 한다.\", \"상속세 및 증여세법 (상속세 신고서류) 상속세 신고 시에는 상속세 과세표준신고 및 자진납부계산서를 제출하여야 하며, 상속재산명세서, 상속세 과세가액 및 과세표준계산명세서, 상속세 납부세액계산명세서 등을 포함하여야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1678,
+      "completion_tokens": 136,
+      "total_tokens": 1814,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1796.2881669955095,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_a8392825ebc6430f82a862915ffe0bb2"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1678,
+      "output_tokens": 136,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005555,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19716,
+      "known_cost_usd": 7.767556722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.767556722,
+      "remaining_usd": 92.232443278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.011555,
+          "accounted_with_reservations_usd": 7.011555,
+          "remaining_usd": 29.988445
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8ztVdi69koMg6ZjiBitBAVbXkn2",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

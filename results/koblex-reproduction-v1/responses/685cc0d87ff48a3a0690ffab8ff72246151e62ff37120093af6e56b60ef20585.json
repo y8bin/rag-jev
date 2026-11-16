@@ -1,0 +1,87 @@
+{
+  "key": "685cc0d87ff48a3a0690ffab8ff72246151e62ff37120093af6e56b60ef20585",
+  "response": {
+    "id": "chatcmpl-Ei9s6rRYi3mboQ0IpgoczQpBhdE4L",
+    "object": "chat.completion",
+    "created": 1794193086,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "'트렌드서베이'가 선거에 관한 여론조사를 공표하거나 보도 목적으로 실시하려면 조사시스템, 분석전문인력, 중앙선거관리위원회규칙으로 정하는 요건을 갖추어 관할 선거여론조사심의위원회에 서면으로 등록을 신청해야 한다. 등록 신청 이후, 관할 선거여론조사심의위원회는 등록 절차를 처리해야 한다. 등록증이 교부된 이후, '트렌드서베이'에 관한 정보는 일반 국민에게 공개된다. 또한, 여론조사 결과를 공표하거나 보도하려는 경우, 해당 여론조사를 실시한 선거여론조사기관은 결과의 공표ㆍ보도 전에 중앙선거여론조사심의위원회 홈페이지에 등록해야 한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2615,
+      "completion_tokens": 184,
+      "total_tokens": 2799,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1668.755083999713,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1b21950ab3f34cbcacb4a92d09bcfaef"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2615,
+      "output_tokens": 184,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0083775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59637,
+      "known_cost_usd": 14.98475565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.33331315,
+      "remaining_usd": 83.66668685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.4873475,
+          "accounted_with_reservations_usd": 14.835905,
+          "remaining_usd": 22.164095
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9s6rRYi3mboQ0IpgoczQpBhdE4L",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

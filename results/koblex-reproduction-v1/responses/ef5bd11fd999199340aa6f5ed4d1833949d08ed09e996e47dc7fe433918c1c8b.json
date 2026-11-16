@@ -1,0 +1,87 @@
+{
+  "key": "ef5bd11fd999199340aa6f5ed4d1833949d08ed09e996e47dc7fe433918c1c8b",
+  "response": {
+    "id": "chatcmpl-Ei8yQpRGp66zcwEhfYJyQZ1uEgX5O",
+    "object": "chat.completion",
+    "created": 1794189634,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형사소송법 (영장주의) 사법경찰관은 체포영장 없이 피의자의 주거를 수색할 수 없다. 영장 없이 수집한 증거는 원칙적으로 증거능력이 없다.\", \"형사소송법 (적법절차) 피의자신문조서는 피의자가 임의로 진술한 경우에 한하여 증거능력이 인정된다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1710,
+      "completion_tokens": 91,
+      "total_tokens": 1801,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1427.7325830043992,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e967fbe512554b408b3e8d75bc1bb9ed"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1710,
+      "output_tokens": 91,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005185,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19658,
+      "known_cost_usd": 7.483009222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.483009222,
+      "remaining_usd": 92.51699077800001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.7270075,
+          "accounted_with_reservations_usd": 6.7270075,
+          "remaining_usd": 30.2729925
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8yQpRGp66zcwEhfYJyQZ1uEgX5O",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "9fa5bf9c91ad367b029d22b966d40b0e0a0ec711cffd2f6684494c8868c13b10",
+  "response": {
+    "id": "chatcmpl-Ei91IbVMsHwLdlSMFuKmZZIsx8RP5",
+    "object": "chat.completion",
+    "created": 1794189812,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"국유재산법 (잡종재산의 매각) 잡종재산의 매각가격은 시가를 기준으로 하되, 그 산정방법은 대통령령으로 정한다.\", \"국유재산법 (대금의 일시납부에 따른 공제) 잡종재산의 매각대금을 일시에 납부하는 경우에는 대통령령으로 정하는 바에 따라 일정 금액을 공제할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1671,
+      "completion_tokens": 98,
+      "total_tokens": 1769,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1625.3386250027688,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3cf7f7b5f82443a9a5692e63d17eb6ac"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1671,
+      "output_tokens": 98,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0051575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19776,
+      "known_cost_usd": 8.056449222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.056449222,
+      "remaining_usd": 91.943550778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.3004475,
+          "accounted_with_reservations_usd": 7.3004475,
+          "remaining_usd": 29.6995525
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91IbVMsHwLdlSMFuKmZZIsx8RP5",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

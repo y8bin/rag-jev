@@ -1,0 +1,31 @@
+{
+  "revision": "1a2d225be33a70ebf91e2b6369acf27551dcfbb4",
+  "rows": 226,
+  "fields": [
+    "answer",
+    "answer_eng",
+    "background",
+    "background_eng",
+    "contexts",
+    "id",
+    "n_hops",
+    "question",
+    "question_eng"
+  ],
+  "hop_counts": {
+    "1": 57,
+    "2": 127,
+    "3": 42
+  },
+  "context_fields": [
+    "content",
+    "content_eng",
+    "hierarchy",
+    "hierarchy_eng",
+    "index",
+    "index_eng"
+  ],
+  "duplicate_question_count": 0,
+  "gold_contexts": 443,
+  "files_saved": 15
+}

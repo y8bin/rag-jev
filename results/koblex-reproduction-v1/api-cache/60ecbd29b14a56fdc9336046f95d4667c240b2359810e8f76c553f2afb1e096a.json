@@ -1,0 +1,52 @@
+{
+  "key": "60ecbd29b14a56fdc9336046f95d4667c240b2359810e8f76c553f2afb1e096a",
+  "text": "보험회사는 보험사고가 발생한 후 계약을 해지하였을 때 보험금을 지급할 책임이 없으나, 고지의무 위반 사실 또는 위험의 변경이나 증가가 보험사고 발생에 영향을 미치지 않았음이 증명된 경우에는 보험금을 지급할 책임이 있다.",
+  "trace": {
+    "latency_ms": 980.5622910062084,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2b93fc1ed1b543cf964ba9d4c18b322f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2499,
+      "output_tokens": 67,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0045175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60340,
+      "known_cost_usd": 21.68185315,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 22.82954315,
+      "remaining_usd": 77.17045685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.184445,
+          "accounted_with_reservations_usd": 21.332135,
+          "remaining_usd": 15.667864999999999
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA8Ywm3HwAYWnYaEfOyTNKtnIKGO",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

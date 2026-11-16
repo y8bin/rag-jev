@@ -1,0 +1,52 @@
+{
+  "key": "c6e1f79c02fc502b98e8f3b64dc900c973e8015c9a34624544cd9c5db45d55dd",
+  "text": "The provided Context does not contain relevant information to answer the question about the effects of a conciliation decision in a civil case or the retroactive effect of ratification after curing a defect in the representative's litigation capacity.",
+  "trace": {
+    "latency_ms": 1078.318957996089,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f0c27ab16ba14d00a47db03f85ecc95e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2191,
+      "output_tokens": 43,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0059075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59529,
+      "known_cost_usd": 13.93153815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.24207815,
+      "remaining_usd": 84.75792185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.43413,
+          "accounted_with_reservations_usd": 13.74467,
+          "remaining_usd": 23.25533
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9pIGdj7695ndJszSQ5p3wX5ojw6",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "98d6422834a4d060597d4bdc02dace18d61e42cfed8c97cd3a164b04adbf9ffb",
+  "text": "갑의 행위는 이사회의 승인을 받아야 하는 거래를 승인 없이 단독으로 결정하고 집행한 것으로, 이는 상법 542조의9 제3항에 위반될 수 있습니다. XYZ 회사 자체에 대한 형사처벌 가능성은 제공된 문맥에서는 명시되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 1787.7084159990773,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ece1cf89efde4e4cb74d62b4fd27c28f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2505,
+      "output_tokens": 69,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0069525,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60417,
+      "known_cost_usd": 22.38054565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.73109815,
+      "remaining_usd": 76.26890184999999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.8831375,
+          "accounted_with_reservations_usd": 22.23369,
+          "remaining_usd": 14.76631
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA9jtp0EHMUKm830390XR34ATJJh",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

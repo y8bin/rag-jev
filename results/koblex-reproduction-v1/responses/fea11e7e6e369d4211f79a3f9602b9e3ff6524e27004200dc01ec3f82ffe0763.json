@@ -1,0 +1,87 @@
+{
+  "key": "fea11e7e6e369d4211f79a3f9602b9e3ff6524e27004200dc01ec3f82ffe0763",
+  "response": {
+    "id": "chatcmpl-Ei9pBFN9pMz9y9WL4ceqzbXXeqIA8",
+    "object": "chat.completion",
+    "created": 1794192905,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을은 갑의 대통령 당선에 이의를 제기하고자 할 때, 당선인결정일부터 30일 이내에 대법원에 소를 제기할 수 있으며, 소송은 소가 제기된 날부터 180일 이내에 처리되어야 한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2527,
+      "completion_tokens": 62,
+      "total_tokens": 2589,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 926.5969580010278,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_0b29c7ae72b5445f865b2fc8b2644e73"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2527,
+      "output_tokens": 62,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0045375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59508,
+      "known_cost_usd": 13.71677065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.06372815,
+      "remaining_usd": 84.93627185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.2193625,
+          "accounted_with_reservations_usd": 13.56632,
+          "remaining_usd": 23.433680000000003
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9pBFN9pMz9y9WL4ceqzbXXeqIA8",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "07fee0915c30d2cc820d398e997dcbf393f303c550491d444f6e0954e2af9a06",
+  "text": "[\"형법 (컴퓨터 등 사용사기) 컴퓨터 등 정보처리장치를 이용하여 부정한 명령을 입력하거나 기타 방법으로 정보처리를 하여 재물을 취득한 자는 10년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.\", \"형법 (사기) 사람을 기망하여 재물을 교부받은 자는 10년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.\", \"형법 (절도) 타인의 재물을 절취한 자는 6년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.\"]",
+  "trace": {
+    "latency_ms": 2698.156416998245,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1d7355f693694288a95a559e4350a35e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1666,
+      "output_tokens": 144,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005605,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19702,
+      "known_cost_usd": 7.695589222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.695589222,
+      "remaining_usd": 92.304410778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.9395875,
+          "accounted_with_reservations_usd": 6.9395875,
+          "remaining_usd": 30.060412499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zZcexa7T9uOshOmudYUXPez9WG",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

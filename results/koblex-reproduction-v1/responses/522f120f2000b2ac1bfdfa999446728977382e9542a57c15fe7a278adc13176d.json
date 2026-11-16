@@ -1,0 +1,87 @@
+{
+  "key": "522f120f2000b2ac1bfdfa999446728977382e9542a57c15fe7a278adc13176d",
+  "response": {
+    "id": "chatcmpl-Ei9z0lwYp2pujZpocdHWxUGLV1hMx",
+    "object": "chat.completion",
+    "created": 1794193514,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 을의 법정대리인으로서 병을 상대로 인지청구의 소를 제기할 수 있습니다. 인지가 된 경우, 양육책임과 면접교섭권에 대한 구체적인 내용은 제공된 문맥에 포함되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2372,
+      "completion_tokens": 61,
+      "total_tokens": 2433,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 986.7082499986282,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b011c6a2cc4f46a6a48b9648c5db610c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2372,
+      "output_tokens": 61,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00654,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59950,
+      "known_cost_usd": 17.89801065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 19.25718065,
+      "remaining_usd": 80.74281935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.4006025,
+          "accounted_with_reservations_usd": 17.7597725,
+          "remaining_usd": 19.2402275
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9z0lwYp2pujZpocdHWxUGLV1hMx",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

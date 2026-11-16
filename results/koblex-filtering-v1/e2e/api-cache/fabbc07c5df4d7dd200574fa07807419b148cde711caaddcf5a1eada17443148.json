@@ -1,0 +1,52 @@
+{
+  "key": "fabbc07c5df4d7dd200574fa07807419b148cde711caaddcf5a1eada17443148",
+  "text": "Question: 갑은 건물 보안 회사를 운영하고자 하였으나, 경비업에 필요한 법적 허가를 받지 않고 사업을 시작했습니다. 을은 해당 회사의 직원으로, 이를 알면서도 경비 업무를 수행했습니다. 몇 달 후, 당국의 단속에 의해 갑의 회사가 불법 경비업을 운영한 사실이 적발되었습니다. 갑이 경비업의 허가를 받지 않고 회사를 운영한 경우, 법적으로 어떤 처벌을 받게 되는가?\nContext: \n경비업법 41조  무허가 경비업의 금지 제41조(무허가 경비업의 금지) ① 누구든지 이 법에 따른 허가를 받지 아니하고는 경비업을 영위할 수 없다. ② 제1항을 위반한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.\n\nAnswer: 갑이 경비업의 허가를 받지 않고 회사를 운영한 경우, 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.",
+  "trace": {
+    "latency_ms": 3490.406874974724,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5522fe97e3e54c24ac3d8be3c75a6aba"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2071,
+      "output_tokens": 247,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0054075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73641,
+      "known_cost_usd": 24.90599781,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 26.04295781,
+      "remaining_usd": 73.95704219,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.7909175,
+          "accounted_with_reservations_usd": 23.9278775,
+          "remaining_usd": 13.072122499999999
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK8F2DUPf4q3N4OXgHRvrQPZkChL",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

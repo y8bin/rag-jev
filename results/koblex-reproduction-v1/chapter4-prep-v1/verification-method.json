@@ -1,0 +1,8 @@
+{
+  "existing_audit_source": "scripts/audit_koblex_reproduction.py",
+  "redirected_output": [
+    "results/koblex-reproduction-v1/integrity-audit-current.json"
+  ],
+  "paid_calls": 0,
+  "source_audit_script_unchanged": true
+}

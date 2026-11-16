@@ -1,0 +1,87 @@
+{
+  "key": "f72f0534168786781940ad83776e628d5e49cacd30bc64e08d0f04b5b21fa2ae",
+  "response": {
+    "id": "chatcmpl-Ei9x7tDWFcvkpOOsFIxFzkCqg9rO1",
+    "object": "chat.completion",
+    "created": 1794193397,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 을에게 승차권 판매를 위탁해야 하며, 다만 여객의 편의를 위하여 필요하다고 인정되면 국토교통부령으로 정하는 바에 따라 을이 직접 판매하거나 터미널사업자가 아닌 자에게 승차권 판매를 위탁할 수 있다. 승차권 판매를 위탁하는 경우, 위탁 판매 수수료는 을과 승차권 판매를 위탁받는 자가 서로 협의하여 정한다. 터미널 확장 계획에 대한 면허기준은 제공된 문맥에 포함되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2311,
+      "completion_tokens": 127,
+      "total_tokens": 2438,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1162.5424170051701,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_07cda513757d4ef69e606ece0daf311d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2311,
+      "output_tokens": 127,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0070475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59873,
+      "known_cost_usd": 17.20510065,
+      "unsettled_attempts": 11,
+      "accounted_with_reservations_usd": 18.30047065,
+      "remaining_usd": 81.69952935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.7076925,
+          "accounted_with_reservations_usd": 16.8030625,
+          "remaining_usd": 20.1969375
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9x7tDWFcvkpOOsFIxFzkCqg9rO1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

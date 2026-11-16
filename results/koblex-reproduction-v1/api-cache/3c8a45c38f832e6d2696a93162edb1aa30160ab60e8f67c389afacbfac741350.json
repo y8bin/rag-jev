@@ -1,0 +1,52 @@
+{
+  "key": "3c8a45c38f832e6d2696a93162edb1aa30160ab60e8f67c389afacbfac741350",
+  "text": "적법한 절차에 따르지 않고 수집한 증거는 증거로 사용할 수 없다. 을의 진술이 포함된 문서는 적법한 절차와 방식에 따라 작성되고, 그 진술이 특별히 신빙할 수 있는 상태에서 이루어졌음이 증명된 경우에 한해 증거로 사용할 수 있다.",
+  "trace": {
+    "latency_ms": 1042.7360419998877,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_24bd253cfa24441bae47512c55e1e7d4"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2419,
+      "output_tokens": 76,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0042475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59944,
+      "known_cost_usd": 17.84285565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 19.19159315,
+      "remaining_usd": 80.80840685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.3454475,
+          "accounted_with_reservations_usd": 17.694185,
+          "remaining_usd": 19.305815
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9yyh3bGTp29nKlK7yJ43XNdZmKK",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

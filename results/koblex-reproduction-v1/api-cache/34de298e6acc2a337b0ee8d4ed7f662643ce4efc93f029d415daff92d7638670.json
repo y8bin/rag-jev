@@ -1,0 +1,52 @@
+{
+  "key": "34de298e6acc2a337b0ee8d4ed7f662643ce4efc93f029d415daff92d7638670",
+  "text": "갑이 을의 회사 계약서를 위조한 경우, 행사할 목적으로 권리ㆍ의무 또는 사실증명에 관한 타인의 문서를 위조한 것으로, 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. 갑이 시청 발급 문서인 가족관계증명서를 변조한 경우, 행사할 목적으로 문서를 변조한 것으로, 1년 이상 10년 이하의 징역 또는 1천만원 이상 1억원 이하의 벌금에 처하거나 이를 병과할 수 있다.",
+  "trace": {
+    "latency_ms": 1524.4777920015622,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4099dc2b37ea434bb34d23e037f42466"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2355,
+      "output_tokens": 123,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0071175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59023,
+      "known_cost_usd": 9.27810815,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.53288815,
+      "remaining_usd": 90.46711185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.7807,
+          "accounted_with_reservations_usd": 8.03548,
+          "remaining_usd": 28.96452
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eULfPLLhuJqzSByTEnYRQP8KvY",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

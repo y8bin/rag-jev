@@ -1,0 +1,87 @@
+{
+  "key": "0489902136575d1133bf6a038ce21590cff23b0dc57a58c0b31a931e98aec729",
+  "response": {
+    "id": "chatcmpl-EiA8iiE3Q4mt8NJcTMqOF7SBq5Wye",
+    "object": "chat.completion",
+    "created": 1794194116,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 변제 기일이 없는 대출금에 대해 변제를 청구할 수 있는 때의 채무자의 자력을 담보할 수 있으며, 법원은 갑이 신청하지 않은 을의 계약 위반에 대한 손해배상 청구에 대해 판결할 수 없다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2261,
+      "completion_tokens": 62,
+      "total_tokens": 2323,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1029.508084000554,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_cb7ec863f1d74bc9b45fe1e4ee512af0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2261,
+      "output_tokens": 62,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0037125,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60372,
+      "known_cost_usd": 21.96654065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 23.21672815,
+      "remaining_usd": 76.78327185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.4691325,
+          "accounted_with_reservations_usd": 21.71932,
+          "remaining_usd": 15.28068
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA8iiE3Q4mt8NJcTMqOF7SBq5Wye",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

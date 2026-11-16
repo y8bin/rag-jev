@@ -1,0 +1,52 @@
+{
+  "key": "f867b70e9ed9caa930da5fecab3b13cbf2066fd0a33f65106ee727753d7d5ad7",
+  "text": "[\"산업재해보상보험법 (업무상 재해의 인정) 근로자가 업무 수행 중 또는 그에 수반되는 행위로 인하여 발생한 사고는 업무상 재해로 인정된다.\", \"산업재해보상보험법 (요양 중 발생한 사고) 산재보험에 따른 요양 중에 발생한 사고로 인한 상해도 업무상 재해로 인정될 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1362.6658749999478,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b92264d012314b2e8f97bdd1a1bc0571"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1706,
+      "output_tokens": 93,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005195,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19604,
+      "known_cost_usd": 7.210694222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.210694222,
+      "remaining_usd": 92.789305778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.4546925,
+          "accounted_with_reservations_usd": 6.4546925,
+          "remaining_usd": 30.5453075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xB9fUAkqKrNuJxIUVAKLlooWw3",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

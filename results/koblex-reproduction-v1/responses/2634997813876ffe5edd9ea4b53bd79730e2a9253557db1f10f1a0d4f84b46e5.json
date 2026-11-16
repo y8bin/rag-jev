@@ -1,0 +1,87 @@
+{
+  "key": "2634997813876ffe5edd9ea4b53bd79730e2a9253557db1f10f1a0d4f84b46e5",
+  "response": {
+    "id": "chatcmpl-Ei9q8syFYNxoddhOZO8AixJmr54FY",
+    "object": "chat.completion",
+    "created": 1794192964,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "환매조건부로 매매하는 채권 또는 증권의 매매차익은 금융회사가 환매기간에 따른 사전약정이율을 적용하여 환매수 또는 환매도하는 조건으로 매매하는 경우에 해당한다. 환매수 조건으로 매도한 채권 등에서 발생하는 수익은 환매기간에 따른 사전약정이율을 적용하여 환매수하는 조건으로 매도하고 환매수하는 날까지 해당 채권의 매수인으로부터 지급받는 이자에 상당하는 금액으로, 이는 이자소득에 포함된다. 금융회사가 이자소득이 발생하는 채권에 파생상품이 결합된 상품을 운용할 경우, 이자소득으로 과세되는 요건은 해당 채권에서 발생하는 이자에 상당하는 금액이 이자소득에 포함되는 것이다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2703,
+      "completion_tokens": 191,
+      "total_tokens": 2894,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1666.6431669873418,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_750e065cfe804970bc2c20cb0cf4ae4e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2703,
+      "output_tokens": 191,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59548,
+      "known_cost_usd": 14.11367315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.46423065,
+      "remaining_usd": 84.53576935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.616265,
+          "accounted_with_reservations_usd": 13.9668225,
+          "remaining_usd": 23.0331775
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9q8syFYNxoddhOZO8AixJmr54FY",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

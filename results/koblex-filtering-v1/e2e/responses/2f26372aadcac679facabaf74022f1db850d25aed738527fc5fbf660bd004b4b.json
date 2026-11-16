@@ -1,0 +1,87 @@
+{
+  "key": "2f26372aadcac679facabaf74022f1db850d25aed738527fc5fbf660bd004b4b",
+  "response": {
+    "id": "chatcmpl-EiK8Tgd70AYlP85wIX6Uk4vaR9oqs",
+    "object": "chat.completion",
+    "created": 1794232541,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑과 을 간의 부동산 매매 계약은 갑의 궁박한 상황을 이용한 것이므로, 불공정한 계약으로 볼 수 있으며, 이는 민법의 일반 원칙에 따라 무효가 될 가능성이 있다. 병과 을 간의 불법 도박 사이트 운영 계약은 불법의 원인으로 인한 계약이므로, 민법 제746조에 따라 그 이익의 반환을 청구할 수 없다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2162,
+      "completion_tokens": 95,
+      "total_tokens": 2257,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e665f1271d"
+  },
+  "trace": {
+    "latency_ms": 3010.697165998863,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_66c62c87ad5b463d9800ad63f468f85c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2162,
+      "output_tokens": 95,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006355,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73647,
+      "known_cost_usd": 24.94487531,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 26.08183531,
+      "remaining_usd": 73.91816469,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.829795,
+          "accounted_with_reservations_usd": 23.966755,
+          "remaining_usd": 13.033245
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK8Tgd70AYlP85wIX6Uk4vaR9oqs",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

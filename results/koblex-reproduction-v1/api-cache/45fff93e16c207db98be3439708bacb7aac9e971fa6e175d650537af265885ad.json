@@ -1,0 +1,52 @@
+{
+  "key": "45fff93e16c207db98be3439708bacb7aac9e971fa6e175d650537af265885ad",
+  "text": "'트렌드서베이'가 선거에 관한 여론조사를 공표하거나 보도 목적으로 실시하려면 조사시스템, 분석전문인력, 중앙선거관리위원회규칙으로 정하는 요건을 갖추어 관할 선거여론조사심의위원회에 서면으로 등록을 신청해야 한다. 갑의 등록 신청 이후, 관할 선거여론조사심의위원회는 신청을 접수한 날부터 7일 이내에 등록을 수리하고 등록증을 교부해야 한다. 등록증이 교부된 이후 '트렌드서베이'에 관한 정보는 「공공기관의 정보공개에 관한 법률」 제7조에 따라 공개되어야 한다.",
+  "trace": {
+    "latency_ms": 1878.8760000024922,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_618ad7b1ccc8458c919033def647c4dd"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2435,
+      "output_tokens": 163,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0077175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59643,
+      "known_cost_usd": 15.05650315,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 16.25088065,
+      "remaining_usd": 83.74911935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.559095,
+          "accounted_with_reservations_usd": 14.7534725,
+          "remaining_usd": 22.2465275
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9s8zvQWGjx1ipfwqNTFRXrkGj8K",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

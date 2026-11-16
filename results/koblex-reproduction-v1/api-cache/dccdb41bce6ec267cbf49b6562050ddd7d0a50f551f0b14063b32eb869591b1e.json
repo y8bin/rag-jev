@@ -1,0 +1,52 @@
+{
+  "key": "dccdb41bce6ec267cbf49b6562050ddd7d0a50f551f0b14063b32eb869591b1e",
+  "text": "갑은 6개월 이상 국외에 체류하기 위하여 출국하는 경우, 미리 관할경찰관서의 장에게 체류국가 및 체류기간 등을 신고하여야 합니다. 또한, 사정변경 등으로 출국을 하지 않거나 출국 후 입국 예정일까지 입국할 수 없게 된 경우에는 지체 없이 관할경찰관서의 장에게 알려야 합니다. 출국 전에는 시장ㆍ군수 또는 구청장에게 해외체류신고를 해야 하며, 이를 통보받은 시장ㆍ군수 또는 구청장은 주민등록표에 \"해외체류신고\"라고 기록해야 합니다.",
+  "trace": {
+    "latency_ms": 1473.344875004841,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2b38ebd1319045b88375e3c377b3bcae"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2350,
+      "output_tokens": 143,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004905,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60433,
+      "known_cost_usd": 22.54406565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 23.79552815,
+      "remaining_usd": 76.20447185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 21.0466575,
+          "accounted_with_reservations_usd": 22.29812,
+          "remaining_usd": 14.70188
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiAAWflpDZIwrFlOUwVcB51cCnHyw",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

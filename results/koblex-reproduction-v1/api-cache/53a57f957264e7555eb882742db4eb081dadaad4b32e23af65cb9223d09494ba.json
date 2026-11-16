@@ -1,0 +1,52 @@
+{
+  "key": "53a57f957264e7555eb882742db4eb081dadaad4b32e23af65cb9223d09494ba",
+  "text": "환매수 조건으로 매도한 채권에서 발생하는 수익은 환매기간에 따른 사전약정이율을 적용하여 환매수하는 조건으로 매도하고 환매수하는 날까지 해당 채권의 매수인으로부터 지급받는 이자에 상당하는 금액으로, 이는 이자소득에 포함됩니다. 또한, 금융회사가 이자소득이 발생하는 채권에 파생상품이 결합된 상품을 운용할 경우, 해당 파생상품의 거래 또는 행위로부터의 이익도 이자소득으로 과세됩니다.",
+  "trace": {
+    "latency_ms": 1503.4467919904273,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_953ea54e30a4413d9851b61d17ebe80e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 3008,
+      "output_tokens": 128,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0088,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59527,
+      "known_cost_usd": 13.91911065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.22293065,
+      "remaining_usd": 84.77706935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.4217025,
+          "accounted_with_reservations_usd": 13.7255225,
+          "remaining_usd": 23.2744775
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9pHZLq7NIDC2cvOrVi91bwoSHU3",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "tolerance": 1e-12,
+  "denominator": 226,
+  "counts": {
+    "precision": {
+      "tie": 179,
+      "Jev_higher": 32,
+      "CE_higher": 15
+    },
+    "recall": {
+      "tie": 183,
+      "Jev_higher": 30,
+      "CE_higher": 13
+    },
+    "f1": {
+      "tie": 177,
+      "Jev_higher": 32,
+      "CE_higher": 17
+    },
+    "em": {
+      "tie": 210,
+      "Jev_higher": 10,
+      "CE_higher": 6
+    },
+    "gold_set_coverage": {
+      "tie": 208,
+      "Jev_higher": 10,
+      "CE_higher": 8
+    },
+    "token_f1": {
+      "Jev_higher": 61,
+      "tie": 127,
+      "CE_higher": 38
+    },
+    "lf_eval": {
+      "Jev_higher": 66,
+      "tie": 127,
+      "CE_higher": 33
+    }
+  },
+  "not_independent_success_trials": true
+}

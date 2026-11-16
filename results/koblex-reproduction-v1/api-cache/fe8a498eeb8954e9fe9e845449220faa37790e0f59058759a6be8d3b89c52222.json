@@ -1,0 +1,52 @@
+{
+  "key": "fe8a498eeb8954e9fe9e845449220faa37790e0f59058759a6be8d3b89c52222",
+  "text": "해양항만관청은 선박 소유자 갑과 선원 을 간에 생긴 근로관계에 관한 분쟁의 해결을 주선할 수 있으며, 해양항만관청의 심사나 조정에 이의가 있는 자는 선원노동위원회에 심사나 중재를 청구할 수 있다.",
+  "trace": {
+    "latency_ms": 1130.0631250051083,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_396656ed88284199adf4cdd0485661bb"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2245,
+      "output_tokens": 76,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0038125,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60093,
+      "known_cost_usd": 19.28252065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 20.58732565,
+      "remaining_usd": 79.41267435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.7851125,
+          "accounted_with_reservations_usd": 19.0899175,
+          "remaining_usd": 17.9100825
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA2kfL76OKqpNaBXE6tiqMe5K3gB",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "64b0562952259dc63716ac2cc01e928c2264b1ab0469563ab969e4ed7f6ba859",
+  "text": "갑은 을에게 불이익 조치를 가한 경우 2년 이하의 징역 또는 2천만원 이하의 벌금에 처할 수 있다. 이 사건을 계기로 국가와 지방자치단체는 장애인 학대를 예방하기 위해 필요한 조치를 취해야 한다.",
+  "trace": {
+    "latency_ms": 922.8525840007933,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5a847afff7da4f7e9e810fcf4aca3db6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2204,
+      "output_tokens": 62,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00613,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59781,
+      "known_cost_usd": 16.35364565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.60704815,
+      "remaining_usd": 82.39295185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.8562375,
+          "accounted_with_reservations_usd": 16.10964,
+          "remaining_usd": 20.89036
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9v8sisAz5o4mD2JBPcwA8CkOyDe",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

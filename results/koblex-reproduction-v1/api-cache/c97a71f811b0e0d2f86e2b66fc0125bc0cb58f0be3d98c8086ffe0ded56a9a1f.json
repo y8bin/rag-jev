@@ -1,0 +1,52 @@
+{
+  "key": "c97a71f811b0e0d2f86e2b66fc0125bc0cb58f0be3d98c8086ffe0ded56a9a1f",
+  "text": "갑 사법경찰관은 검사가 정당한 이유 없이 영장을 판사에게 청구하지 않은 경우, 그 검사 소속의 지방검찰청 소재지를 관할하는 고등검찰청에 영장 청구 여부에 대한 심의를 신청할 수 있다.",
+  "trace": {
+    "latency_ms": 1044.8110419965815,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e51065df17524eb881ff94541448da3e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2281,
+      "output_tokens": 59,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062925,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59472,
+      "known_cost_usd": 13.37807065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.73451315,
+      "remaining_usd": 85.26548685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.8806625,
+          "accounted_with_reservations_usd": 13.237105,
+          "remaining_usd": 23.762895
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9oF4maaqnxjFkiLoRbxWBmbkB1S",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

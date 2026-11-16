@@ -1,0 +1,87 @@
+{
+  "key": "9e24c118e3f1fee84ab629643d80cf78fa2928c91baca5e7caa97a30767d5dcf",
+  "response": {
+    "id": "chatcmpl-Ei9oFnsyp3ecKAGbdJoYawT0i3mLA",
+    "object": "chat.completion",
+    "created": 1794192847,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 을의 기차 여행 중 철로를 의도적으로 파손하여 사람을 위험하게 한 경우, 건설기술 진흥법에 따라 10년 이하의 징역 또는 1억원 이하의 벌금에 처할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2192,
+      "completion_tokens": 55,
+      "total_tokens": 2247,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1216.9858330016723,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_08f1afb5739b4f56b322852e0dc96890"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2192,
+      "output_tokens": 55,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00603,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59474,
+      "known_cost_usd": 13.39466065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.70414815,
+      "remaining_usd": 85.29585185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.8972525,
+          "accounted_with_reservations_usd": 13.20674,
+          "remaining_usd": 23.79326
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9oFnsyp3ecKAGbdJoYawT0i3mLA",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

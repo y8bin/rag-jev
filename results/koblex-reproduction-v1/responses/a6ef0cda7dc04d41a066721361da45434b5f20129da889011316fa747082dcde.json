@@ -1,0 +1,87 @@
+{
+  "key": "a6ef0cda7dc04d41a066721361da45434b5f20129da889011316fa747082dcde",
+  "response": {
+    "id": "chatcmpl-Ei915eKxRZKuDv2n7IdKdaQsEGZ90",
+    "object": "chat.completion",
+    "created": 1794189799,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"경비업법 (무허가 경비업의 처벌) 경비업의 허가를 받지 아니하고 경비업을 한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다.\", \"형법 (법률의 착오) 법령에 의해 죄가 되지 않는 것으로 오인한 행위는 그 오인에 정당한 이유가 있는 때에 한하여 벌하지 아니한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1691,
+      "completion_tokens": 102,
+      "total_tokens": 1793,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1942.0829160080757,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_da830fa7caab4d9a92fbb1f71d24450b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1691,
+      "output_tokens": 102,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0052475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19768,
+      "known_cost_usd": 8.014254222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.014254222,
+      "remaining_usd": 91.985745778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.2582525,
+          "accounted_with_reservations_usd": 7.2582525,
+          "remaining_usd": 29.7417475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei915eKxRZKuDv2n7IdKdaQsEGZ90",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

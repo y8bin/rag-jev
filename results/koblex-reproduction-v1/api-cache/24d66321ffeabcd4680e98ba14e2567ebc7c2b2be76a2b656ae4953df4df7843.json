@@ -1,0 +1,52 @@
+{
+  "key": "24d66321ffeabcd4680e98ba14e2567ebc7c2b2be76a2b656ae4953df4df7843",
+  "text": "갑과 을이 공동으로 강도죄를 저지른 경우, 각각 3년 이상의 유기징역에 처한다. 2인 이상이 공동하여 죄를 범한 때에는 각자를 그 죄의 정범으로 처벌한다.",
+  "trace": {
+    "latency_ms": 983.2843750045868,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c7c382af18c64be6bfd5168d17ffb885"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2146,
+      "output_tokens": 55,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003515,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59052,
+      "known_cost_usd": 9.533115650000001,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.74206815,
+      "remaining_usd": 90.25793185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.0357075,
+          "accounted_with_reservations_usd": 8.24466,
+          "remaining_usd": 28.75534
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9ebLLhH4YUFYKauEkl5j7DGIzP7",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

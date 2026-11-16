@@ -1,0 +1,87 @@
+{
+  "key": "9bc3dd5fddc9dface7c11fa2c2e4deab8d087abeae729d301edcce6e90ea2cc8",
+  "response": {
+    "id": "chatcmpl-Ei9eeSm9dIGnC0SwjDZGWBtTWy6pf",
+    "object": "chat.completion",
+    "created": 1794192252,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 2023년 6월 1일에 천연가스 버스를 구매하는 경우에는 취득세가 부과되지만, 전기버스 또는 수소전기버스를 구매하는 경우에는 2027년 12월 31일까지 취득세가 면제된다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2328,
+      "completion_tokens": 65,
+      "total_tokens": 2393,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1087.9698330099927,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_dfa1c580c4fd44e5a77390e893a13af6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2328,
+      "output_tokens": 65,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00647,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59066,
+      "known_cost_usd": 9.67124065,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.83730815,
+      "remaining_usd": 90.16269185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.1738325,
+          "accounted_with_reservations_usd": 8.3399,
+          "remaining_usd": 28.6601
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eeSm9dIGnC0SwjDZGWBtTWy6pf",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

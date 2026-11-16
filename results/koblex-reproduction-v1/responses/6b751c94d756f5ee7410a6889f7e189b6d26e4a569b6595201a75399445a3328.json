@@ -1,0 +1,87 @@
+{
+  "key": "6b751c94d756f5ee7410a6889f7e189b6d26e4a569b6595201a75399445a3328",
+  "response": {
+    "id": "chatcmpl-EiA4gyDw2pOoUFQJmEw7h4MdzYrgf",
+    "object": "chat.completion",
+    "created": 1794193866,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Context에 제공된 정보는 갑이 잡종재산의 대금을 일시에 납부할 경우 공제받을 수 있는 금액이나 시가 기준으로 결정된 가격의 산정 방법에 대한 직접적인 내용을 포함하고 있지 않습니다. 다만, 외국인투자 촉진법 13조 3항에 따르면, 매입대금을 한꺼번에 납부하기 곤란한 경우 납부 기일을 연기하거나 분할 납부할 수 있는 규정이 있습니다. 이는 대금 납부 방식에 대한 유연성을 제공하는 조항으로, 공제와 직접적인 관련은 없습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2330,
+      "completion_tokens": 140,
+      "total_tokens": 2470,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1556.7999580089236,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8c95c501b3f649709da38e41bb5ea2be"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2330,
+      "output_tokens": 140,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004985,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60179,
+      "known_cost_usd": 20.09247815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.40056065,
+      "remaining_usd": 78.59943935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.59507,
+          "accounted_with_reservations_usd": 19.9031525,
+          "remaining_usd": 17.0968475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA4gyDw2pOoUFQJmEw7h4MdzYrgf",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "8583418ab90478c1b0193272122db13b29afccbb96452a6b61a7e3edd09953f1",
+  "response": {
+    "id": "chatcmpl-Ei9iQewSEfrYBLO6gpXauAw2ySzQu",
+    "object": "chat.completion",
+    "created": 1794192486,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "병은 제3자로서 변제를 할 수 있으며, 변제기 이전에도 변제가 가능합니다. 그러나 을이 이를 거절할 경우, 병은 변제기 전에 변제를 시도할 수 있지만, 을에게 손해가 발생할 경우 그 손해를 배상해야 합니다. 제3자의 변제는 채무의 성질이나 당사자의 의사표시로 허용되지 않는 경우가 아니라면 가능합니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2328,
+      "completion_tokens": 91,
+      "total_tokens": 2419,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1225.957707996713,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b972a669624b45c881a2bcbc2c086b08"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2328,
+      "output_tokens": 91,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00417,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59225,
+      "known_cost_usd": 11.02839565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.38493065,
+      "remaining_usd": 87.61506935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.5309875,
+          "accounted_with_reservations_usd": 10.8875225,
+          "remaining_usd": 26.1124775
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9iQewSEfrYBLO6gpXauAw2ySzQu",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "676732c6f81cb589e1b4bdd434e7f74502050a62998abf9cdf3d6d6e00c32158",
+  "text": "갑은 국민체육진흥법 제14조 제2항에 따라 부정한 청탁을 받고 재물이나 재산상의 이익을 제공하거나 제공할 것을 요구 또는 약속하여서는 안 되며, 을은 형법 제357조 제2항에 따라 재산상 이익을 공여한 자로서 2년 이하의 징역 또는 500만원 이하의 벌금에 처할 수 있다.",
+  "trace": {
+    "latency_ms": 1052.4752920027822,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6c8debeb440d45869c98c1d7d9cd299a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2230,
+      "output_tokens": 93,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004105,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59532,
+      "known_cost_usd": 13.95676315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.31750315,
+      "remaining_usd": 84.68249685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.459355,
+          "accounted_with_reservations_usd": 13.820095,
+          "remaining_usd": 23.179904999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9pJDpr3B3OnuBwU1dG8JB0fBL6Q",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

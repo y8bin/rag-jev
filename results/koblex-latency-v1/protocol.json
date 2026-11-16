@@ -1,0 +1,60 @@
+{
+  "created_at_utc": "2026-11-09T13:05:21.565697+00:00",
+  "study_verification": {
+    "status": "VERIFIED_CURRENT_STUDY",
+    "questions": 226,
+    "conditions": 3,
+    "cleanup_is_post_execution": true
+  },
+  "sample": {
+    "source": "research/koblex_source_audit_20261108.json#human_review_sample",
+    "seed": 20261108,
+    "hop_counts": {
+      "1": 15,
+      "2": 34,
+      "3": 11
+    },
+    "questions": 60
+  },
+  "timed_region": "score all unique (question, candidate) pairs of the question, then per-pool sort + top-10",
+  "excluded": [
+    "parametric provision generation",
+    "BM25 retrieval",
+    "LLM selection",
+    "answer generation",
+    "model load"
+  ],
+  "duplicate_policy": "unique candidate text per question scored once, both methods",
+  "cache": false,
+  "warmup_questions_per_method": 3,
+  "repetitions": 3,
+  "order_seed": 20261109,
+  "ce": {
+    "model": "dragonkue/bge-reranker-v2-m3-ko",
+    "revision": "2aca5884ecac490192af9ebd86836d9073d826cd",
+    "device": "mps",
+    "dtype": "float32",
+    "batch_size": 50,
+    "activation": "sigmoid"
+  },
+  "jev": {
+    "identity": {
+      "backend": "http",
+      "model": "jev-1.14.0",
+      "base_url": "https://api.typesafe.ai"
+    },
+    "instructions": "Rank by relevance: does the candidate statutory passage directly support answering the question?",
+    "concurrency": 4,
+    "timeout_seconds": 60,
+    "max_retries": 1
+  },
+  "machine": {
+    "platform": "macOS-27.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13"
+  },
+  "source_hashes": {
+    "candidates.jsonl": "a7f6cc00afb60825087ef04842f84ce05185b1777296a1f34037092d0ca16f3a",
+    "script": "870ec42911e5f6e23f1224faad111e58ea464f722c3dd77cf37d24677c4b6279"
+  }
+}

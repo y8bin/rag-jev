@@ -1,0 +1,87 @@
+{
+  "key": "d68ff9ae91999ddfa7403d962e9ab5e0b614e0faceac3f7f96946a2bc0b3c8af",
+  "response": {
+    "id": "chatcmpl-Ei8xxwwQ5ydSgchg2x1KkjVPNSXIl",
+    "object": "chat.completion",
+    "created": 1794189605,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"근로기준법 (부당해고의 구제신청) 근로자는 사용자가 정당한 이유 없이 해고한 경우 노동위원회에 구제를 신청할 수 있다.\", \"근로기준법 (부당해고의 효력) 사용자가 근로자를 정당한 이유 없이 해고한 경우 그 해고는 무효로 한다.\", \"근로기준법 (부당해고에 대한 구제명령) 노동위원회는 부당해고가 인정되는 경우 사용자가 근로자를 복직시키고 해고 기간 동안의 임금을 지급하도록 명령할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1627,
+      "completion_tokens": 135,
+      "total_tokens": 1762,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1574.3867090059211,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ee10c3a8a59e4f69be034da47376eacc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1627,
+      "output_tokens": 135,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0054175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19641,
+      "known_cost_usd": 7.396799222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.396799222,
+      "remaining_usd": 92.603200778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.6407975,
+          "accounted_with_reservations_usd": 6.6407975,
+          "remaining_usd": 30.359202500000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xxwwQ5ydSgchg2x1KkjVPNSXIl",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

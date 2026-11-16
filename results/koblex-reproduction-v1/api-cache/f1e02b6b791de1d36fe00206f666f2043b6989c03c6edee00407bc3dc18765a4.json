@@ -1,0 +1,52 @@
+{
+  "key": "f1e02b6b791de1d36fe00206f666f2043b6989c03c6edee00407bc3dc18765a4",
+  "text": "[\"민사소송법 (화해의 효력) 법정에서의 화해는 확정판결과 동일한 효력을 가진다.\", \"민사소송법 (변론조서의 효력) 변론조서에 기록된 화해는 확정판결과 동일한 효력을 가진다.\"]",
+  "trace": {
+    "latency_ms": 1027.8624999918975,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_96cf5ef8b54546b8a0b9da0ba114c565"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1680,
+      "output_tokens": 70,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00314,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19591,
+      "known_cost_usd": 7.146089222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.146089222,
+      "remaining_usd": 92.853910778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.3900875,
+          "accounted_with_reservations_usd": 6.3900875,
+          "remaining_usd": 30.6099125
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8wtWvDQHvXcphsFCHueGcZ1KfuR",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

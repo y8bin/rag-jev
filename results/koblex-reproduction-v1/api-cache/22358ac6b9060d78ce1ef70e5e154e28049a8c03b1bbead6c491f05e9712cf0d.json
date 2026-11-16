@@ -1,0 +1,52 @@
+{
+  "key": "22358ac6b9060d78ce1ef70e5e154e28049a8c03b1bbead6c491f05e9712cf0d",
+  "text": "갑은 자신의 부동산에 부합한 을의 태양광 패널의 소유권을 취득할 수 있습니다. 이는 민법 제256조에 따라 부동산의 소유자는 그 부동산에 부합한 물건의 소유권을 취득하기 때문입니다. 다만, 타인의 권원에 의해 부속된 경우는 예외입니다. 만약 갑이 태양광 패널로 인해 손해를 입었다면, 을에게 손해배상을 청구할 수 있습니다.",
+  "trace": {
+    "latency_ms": 1444.3530410062522,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_26fdc47fd5d74d1e8464fb103158cccc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2255,
+      "output_tokens": 112,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0067575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60358,
+      "known_cost_usd": 21.82312315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.17680315,
+      "remaining_usd": 76.82319685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.325715,
+          "accounted_with_reservations_usd": 21.679395,
+          "remaining_usd": 15.320605
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA8e0XCMvfvIhtxjJeslUtoI08j4",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

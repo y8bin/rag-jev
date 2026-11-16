@@ -1,0 +1,52 @@
+{
+  "key": "67b85395d81aadfa675e73adcf90d1306ab55c3568b8128517d34c95c9a466ee",
+  "text": "을은 갑에 대한 손해배상청구권을 행사할 수 있는 시점에 대한 정보는 제공된 Context에 포함되어 있지 않습니다. Context에 관련된 법률 조항이나 규정이 없으므로, 을이 소송을 제기할 수 있는 구체적인 시점을 명확히 답변할 수 없습니다.",
+  "trace": {
+    "latency_ms": 3545.8509589952882,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_78257044e8d74dd2bd6163462d5e8023"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2139,
+      "output_tokens": 73,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0060775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73611,
+      "known_cost_usd": 24.71952531,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.85648531,
+      "remaining_usd": 74.14351469,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.604445,
+          "accounted_with_reservations_usd": 23.741405,
+          "remaining_usd": 13.258595
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7DSjBepzU1g7PZe1ICBwysX3CV",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

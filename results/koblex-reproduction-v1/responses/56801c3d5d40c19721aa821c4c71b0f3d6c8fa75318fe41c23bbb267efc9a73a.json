@@ -1,0 +1,87 @@
+{
+  "key": "56801c3d5d40c19721aa821c4c71b0f3d6c8fa75318fe41c23bbb267efc9a73a",
+  "response": {
+    "id": "chatcmpl-Ei8xQEwXdF58L9PWhpHR4fS0GhzIc",
+    "object": "chat.completion",
+    "created": 1794189572,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"하천법 (매수대상토지의 기준) 하천구역으로 지정된 토지로서 종래의 용도대로 사용할 수 없어 그 효용이 감소한 토지는 매수대상토지로 판정될 수 있다.\", \"공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 (매수예상가격 산정) 매수예상가격은 공익사업의 시행으로 인한 손실보상액을 기준으로 산정하여야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1700,
+      "completion_tokens": 111,
+      "total_tokens": 1811,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1153.4572919917991,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_646884995e724ea8b8bc5e197b1fdb4c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1700,
+      "output_tokens": 111,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0036,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19616,
+      "known_cost_usd": 7.264979222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.264979222,
+      "remaining_usd": 92.735020778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.5089775,
+          "accounted_with_reservations_usd": 6.5089775,
+          "remaining_usd": 30.4910225
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xQEwXdF58L9PWhpHR4fS0GhzIc",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

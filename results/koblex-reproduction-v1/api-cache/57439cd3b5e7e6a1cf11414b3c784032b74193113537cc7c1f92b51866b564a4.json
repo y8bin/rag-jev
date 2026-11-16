@@ -1,0 +1,52 @@
+{
+  "key": "57439cd3b5e7e6a1cf11414b3c784032b74193113537cc7c1f92b51866b564a4",
+  "text": "갑과 을은 각각 장내기능검정 또는 도로주행검정에 불합격한 날부터 3일이 지난 후에 다시 시험에 응시할 수 있다.",
+  "trace": {
+    "latency_ms": 953.1774159986526,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4352eaff882542c18c859ae2181e1f76"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2232,
+      "output_tokens": 41,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00599,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60155,
+      "known_cost_usd": 19.85343565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.21607815,
+      "remaining_usd": 78.78392185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.3560275,
+          "accounted_with_reservations_usd": 19.71867,
+          "remaining_usd": 17.28133
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA3pKxWXuo9lZIF99Gqkukvbrn7a",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

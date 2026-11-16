@@ -1,0 +1,2038 @@
+{
+  "paths_relative_to": "/Users/indeep/Desktop/RAG-jev",
+  "files": {
+    "scripts/prepare_chapter4.py": {
+      "sha256": "82f5a53e8525252a211d7ee16b34d1ede5e8830d20edf6d5da048d4332d9ca45",
+      "bytes": 37903
+    },
+    "data/koblex/upstream/experiments/source/koblex.jsonl": {
+      "sha256": "d02133763ef76dc1cb30ffb27e2489220439a28ee1435b3be16a780535380d8e",
+      "bytes": 1009245
+    },
+    "data/koblex/prepared-v1/gold.jsonl": {
+      "sha256": "d0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b",
+      "bytes": 331058
+    },
+    "results/koblex-reproduction-v1/analysis.json": {
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "bytes": 13852
+    },
+    "research/koblex_source_audit_20261108.json": {
+      "sha256": "089fbac95d45493a852a5fbb978e97eb9cfb47a8a607edad9729a2cdae211dcb",
+      "bytes": 24892
+    },
+    "results/koblex-reproduction-v1/metrics/parser_ce_raw/metrics.jsonl": {
+      "sha256": "7213e85f6977a38ad8b69aea3be6851583eabd9836d85c2ac71616d78b8393d0",
+      "bytes": 52098
+    },
+    "results/koblex-reproduction-v1/lf-eval/parser_ce_raw/metrics.jsonl": {
+      "sha256": "2f39319bd1a7f5585ee67530926c1357809595a38b0c2e80df44ae621064042e",
+      "bytes": 39530939
+    },
+    "results/koblex-reproduction-v1/predictions/parser_ce_raw.jsonl": {
+      "sha256": "fc2821e5c20ce06d0d6d625e63f154f54db67f6fe47cf467932c2d0333eb47d7",
+      "bytes": 960005
+    },
+    "results/koblex-reproduction-v1/metrics/parser_ce_fixed/metrics.jsonl": {
+      "sha256": "2181b146d9b5dadaedd4ed7ca805023eeeeaf1b0f67665ddde510c7ed3e2acd3",
+      "bytes": 52470
+    },
+    "results/koblex-reproduction-v1/lf-eval/parser_ce_fixed/metrics.jsonl": {
+      "sha256": "a799618d5507299b3098229111ed9d44e3b46009e3cca1b20c4f4899deb1c5b7",
+      "bytes": 39733705
+    },
+    "results/koblex-reproduction-v1/predictions/parser_ce_fixed.jsonl": {
+      "sha256": "e4981ae96b4cfbfae75e02f06d8225607faa477b7d3fb4d825ddf48a4a018e63",
+      "bytes": 970478
+    },
+    "results/koblex-reproduction-v1/metrics/parser_jev_fixed/metrics.jsonl": {
+      "sha256": "26dd900d60e8655c2fba40504952302bb5d34af7d2aba1cddecf16be73586082",
+      "bytes": 52450
+    },
+    "results/koblex-reproduction-v1/lf-eval/parser_jev_fixed/metrics.jsonl": {
+      "sha256": "04673764b7c9098a39cdfd74d782a5cfeeae6bc858abdb466f7500d93f4d0d62",
+      "bytes": 39875380
+    },
+    "results/koblex-reproduction-v1/predictions/parser_jev_fixed.jsonl": {
+      "sha256": "91753fd5a3ecbf0864d162a2c0db18aedac2e81c0f6e54c4eab7eea9d2c28db2",
+      "bytes": 982951
+    },
+    "data/koblex/downloads/statute.jsonl": {
+      "sha256": "0f50fdfe4d7dbad388235deb338b016634ec3e51b3d760cb81e3b5f525f4b053",
+      "bytes": 102347296
+    },
+    "results/koblex-reproduction-v1/candidates.jsonl": {
+      "sha256": "a7f6cc00afb60825087ef04842f84ce05185b1777296a1f34037092d0ca16f3a",
+      "bytes": 1401849
+    },
+    "results/koblex-reproduction-v1/ranking-ce.jsonl": {
+      "sha256": "74bab4d2374919e5b118bd2bad36667047cd1293136683d0d2ac692f92bae665",
+      "bytes": 1787664
+    },
+    "results/koblex-reproduction-v1/ranking-jev.jsonl": {
+      "sha256": "2e847411f2bad76782dfda0d2e1c47bb4c41a3a39c690ceecb55cea14932b839",
+      "bytes": 28168316
+    },
+    "results/koblex-reproduction-v1/candidate-audit.json": {
+      "sha256": "6358554d0f21ca9939e920a62ac7e1a8f84c56546e3d07e7cdbe22ed30c69529",
+      "bytes": 216
+    },
+    "data/koblex/upstream/experiments/parser/prompts/question_answering.py": {
+      "sha256": "98df7f48e5b7ba11871419b5ecaf2213c9d997df397c32c50c3e938a81510069",
+      "bytes": 7847
+    },
+    "results/koblex-reproduction-v1/protocol-lock.json": {
+      "sha256": "99d5c5cc29b33168a5c855d5e3dd0a3d324c8106077691cf1ef34299c1c87bc1",
+      "bytes": 7943
+    },
+    "results/koblex-reproduction-v1/api-cache/8fae8e1c243f3daf49dfb65572f2fa179970c4d537b61637dcc7a63f9b1f49c7.json": {
+      "sha256": "80253a03837073a8941d6b4444bba516c916b17eb02dcdb9b2dc990d3634e160",
+      "bytes": 1499
+    },
+    "results/koblex-reproduction-v1/api-cache/517adbb1a10fcc3523ce67b326eb00866cc5726d1dfe471a6f4c53490ae0135b.json": {
+      "sha256": "ac4cec5ea482c790bfb4ce1bcdf4318013d62923fc4cce6fb1505339e64346f1",
+      "bytes": 1530
+    },
+    "results/koblex-reproduction-v1/api-cache/74a7b7a7b44d3fa1ead8c405a6eef4ba132c1113bf01f48e60c941a980721579.json": {
+      "sha256": "bae81ce8b0c47bd2b93667cc7285c5ff61abf59b98d903a89c1b5cd01a653f5b",
+      "bytes": 1431
+    },
+    "results/koblex-reproduction-v1/api-cache/69d15c22a22f9209e8a319db4c7f9d83a34c01540dedbcb25cfcd85c0bdf5a06.json": {
+      "sha256": "44065e587021ceff2dcd8112226711f8cab31d1c2f4b60e34cea8de0b9e8bff9",
+      "bytes": 1533
+    },
+    "results/koblex-reproduction-v1/api-cache/fa1a2c72a20b9813217bd38f650dc79b19204d0f45216cd3466cc04fa4c8451b.json": {
+      "sha256": "53ec4e49b1f8c2a5a7a61cafadd9a01defe5fe3d9e736304747859ad4a45d356",
+      "bytes": 1621
+    },
+    "results/koblex-reproduction-v1/api-cache/8599bedfeb3451d4791353d79ae480f8324ed5cf9ff11ce381638f68bcf262d2.json": {
+      "sha256": "987f09ba0d605f04ad064531264b68524db2ca0853625c7d51de7995a30f4e60",
+      "bytes": 1623
+    },
+    "results/koblex-reproduction-v1/api-cache/da32d84e643e73f08feced91e60a2f076c8cbfd163564d4a097cd8733ce9ce27.json": {
+      "sha256": "b8f8ac9432ade946c40aa2cd34b6aac3baa58b125b5cb0508a80c77ce8b91f30",
+      "bytes": 1666
+    },
+    "results/koblex-reproduction-v1/api-cache/34de298e6acc2a337b0ee8d4ed7f662643ce4efc93f029d415daff92d7638670.json": {
+      "sha256": "1baabdcc88c11928f287aef46d47970e2cdcd80e6f811cf9e59ef62517649acb",
+      "bytes": 1847
+    },
+    "results/koblex-reproduction-v1/api-cache/b325d29a326137451b46c3dd702c80195c9af3dc2c4c38c9ebad8c120b27803b.json": {
+      "sha256": "9058c08f66bf8d080ee9e56250da154c44ef841685b398884dda09abb97515ae",
+      "bytes": 1474
+    },
+    "results/koblex-reproduction-v1/api-cache/0576f4d7fdecaec46d6a41f03e497f4ffc136b19881d781fc5d4f3ea5c651bd7.json": {
+      "sha256": "61d8762a60d699bb7cded2cf8ac6131a1e64bcd8352902c68d8b358e56249a24",
+      "bytes": 1632
+    },
+    "results/koblex-reproduction-v1/api-cache/db383ea9729997b42a1d02271c0156d45a950ddfca0712708dc6b4c9b119cbb9.json": {
+      "sha256": "a825d3afc55e520d7dc59d63d1585b0802384c80f9e77de689763c242ffcfaef",
+      "bytes": 1474
+    },
+    "results/koblex-reproduction-v1/api-cache/06558aa598a69bb597c45c87244383a05bf7d3769280dd9eff23c8e15b28a5b3.json": {
+      "sha256": "cb6e7397d468e7c9ef2b31d91f6ce6e4fb9de27d7a9e7163f0e04381dcd732ef",
+      "bytes": 1801
+    },
+    "results/koblex-reproduction-v1/api-cache/afd2c082eff081a1bc0f2f5652ee6b3c8c2e4cf8ea3804b40a5f0e5593bc7eb2.json": {
+      "sha256": "dff975ede5ac5e769e6b02e90f33ef210e3d77eb57cab1a6763c0e717408737b",
+      "bytes": 1663
+    },
+    "results/koblex-reproduction-v1/api-cache/9bc3dd5fddc9dface7c11fa2c2e4deab8d087abeae729d301edcce6e90ea2cc8.json": {
+      "sha256": "2bd100f1b6a8d3ee28bc02ff4faeceb6c10e6a3cfcceefed6db51b971f856021",
+      "bytes": 1582
+    },
+    "results/koblex-reproduction-v1/api-cache/154282887f04574e3962367e6f5104cc893b1d713f5cc1cc0d85c0c58b8833b3.json": {
+      "sha256": "ec0c95efba42a95e4559018d97a9fe2b1b609f3d481de3e3591496121c1aa01a",
+      "bytes": 1874
+    },
+    "results/koblex-reproduction-v1/api-cache/41f780ca4e74dc2172625a0dafad854edd9f69ea3a85cfda0ec9fee9dfb2dfd0.json": {
+      "sha256": "8726206d66633c8fd262ab646bece12601584ca57f59f4d8af5ca7eec7e3000c",
+      "bytes": 1727
+    },
+    "results/koblex-reproduction-v1/api-cache/241483f3d646e3aeb27fe0e9f67f4399f42add443c0eb681c4819b5898fcfe96.json": {
+      "sha256": "4c417765ac371ba05880f458a0a48be73e6f72f5724b0bf24d0ab840b44ad64b",
+      "bytes": 1677
+    },
+    "results/koblex-reproduction-v1/api-cache/535e7e88da44b6d6f8bcbbb8b3ca833fa1f604b8939d9be618806b0217b15ae2.json": {
+      "sha256": "eb143ba45cec628a7d6361c330df7a4f083c60e7b82554f1e0d822276ffdb4e2",
+      "bytes": 1792
+    },
+    "results/koblex-reproduction-v1/api-cache/2a86e0fc0771fb5915e85e0fe49415fd36c759fefe1afac6f239318ca2361fb9.json": {
+      "sha256": "c54bd309fa57c14f8c796d493f8a01cdb286842aed68fdc70ff28e068cd88121",
+      "bytes": 1583
+    },
+    "results/koblex-reproduction-v1/api-cache/3e88e9b597d7eae2108763d8b4ccb3b8a054b0f75b7ad8d6c4ac8f2ba3141909.json": {
+      "sha256": "1c035e26620ccc28d874f986181ba6fed4cb02593ae3101575af559ef125c4c8",
+      "bytes": 1512
+    },
+    "results/koblex-reproduction-v1/api-cache/8fe20797df17e0fda582118b3e8bcdef36f038b05e0aa0179e72ad02f439d01d.json": {
+      "sha256": "fe20e65a83ea870399d5a089037eacf96a2115c9fc46e46e50e094f26ea1ab4c",
+      "bytes": 1594
+    },
+    "results/koblex-reproduction-v1/api-cache/791d46a9aece7726e2a5c6a837df702e952cc0405f63de06af78da716ab38e28.json": {
+      "sha256": "dea2ca3eba5c26069d323da6f0e81bd7c5fae03d74d919db02503f5676890b60",
+      "bytes": 1547
+    },
+    "results/koblex-reproduction-v1/api-cache/976a7edffa73e3811b9097d9288b33884827af27d00ec3638c5aab4c15d22d77.json": {
+      "sha256": "55654e222833192742114208bda4d3a6418094778c54135c54d8d527fe54fe4c",
+      "bytes": 1602
+    },
+    "results/koblex-reproduction-v1/api-cache/20d57e113509d6f0f77c92558a19e3ff6e5e7d631131370743e075865dbece88.json": {
+      "sha256": "17c7bf4d5e378fc7f843b4bf48a33ff202f5a840255b1880ea36dd670342e607",
+      "bytes": 1597
+    },
+    "results/koblex-reproduction-v1/api-cache/59e96c8c8be4c0ddcbff08f4713bf6ecfcc6819b45c2a7aca3a192f4cdb71fb1.json": {
+      "sha256": "85b49491915492c8afc885e6e6e3c0d1e85af7a30750e778a9161af5e2abd07c",
+      "bytes": 1507
+    },
+    "results/koblex-reproduction-v1/api-cache/72540cea23e54b09b581093b911527491c7e3ae188f4f59b59661a6b903d7c9e.json": {
+      "sha256": "87073a1cc987d657cbdc9c113bf17749eddce2873ec23b23cadf819da0a5b765",
+      "bytes": 1759
+    },
+    "results/koblex-reproduction-v1/api-cache/abcec766ffb8ab0c4b859b715c5ca023b2b52911bfc24cae5b1bb1462bd810b2.json": {
+      "sha256": "af2f51fce258b95db14939d10c33886217da909e7688863aeb6bf3e091b922e9",
+      "bytes": 1472
+    },
+    "results/koblex-reproduction-v1/api-cache/581fd05d4c1bb4f65133eb4c83cd3fc8c19e07e87ff4ce7c7a8073487060f3a1.json": {
+      "sha256": "5e606b2816a6025304d4d118ba7d470e6b8c8208b5c7ff30df6563cb852d982c",
+      "bytes": 1536
+    },
+    "results/koblex-reproduction-v1/api-cache/76b378363df11e6aa1cb5734bcf0d7555ce8431ff2d27827737f845d0b08e69b.json": {
+      "sha256": "fd515db092e47ac9fccc3ccb7b4754d690b76cb98deaa3116bf8e6a97b396bd8",
+      "bytes": 1860
+    },
+    "results/koblex-reproduction-v1/api-cache/c775ff10bc0fa3c191a61d538d1c124a7d041562441c6608144f7f69701dc677.json": {
+      "sha256": "54e477ad351b23855bcb5671ee35d0d05c1dc9e0cb5a30a5cbd3f89026d40690",
+      "bytes": 1621
+    },
+    "results/koblex-reproduction-v1/api-cache/7c2a2b4ed108721b90513d433884644e457e4baad1a6fa2b51721cee63394b18.json": {
+      "sha256": "ec7754127f6b7914411a051c42ee906b7ed7819f57c5cf5adf948c42e9cbeecd",
+      "bytes": 1602
+    },
+    "results/koblex-reproduction-v1/api-cache/77f5c56e8a4598909dc1bb1cb253644613c8f98b8d454523bfc931281c59c318.json": {
+      "sha256": "b6ce2b73dce14377aa465bdadc9f3d7a04f615733cc526641e806c393080f22f",
+      "bytes": 1780
+    },
+    "results/koblex-reproduction-v1/api-cache/43026e9c18bd129adcc428a1656522e64ece49f1d2ad83b7e492b382fefd9665.json": {
+      "sha256": "bf36acbd2b0b124c865c5cbfbdbac74a0a7a38bc7fbe365984c08aba75934b7d",
+      "bytes": 2187
+    },
+    "results/koblex-reproduction-v1/api-cache/ef631f1870fed46e34212f6920f946265414fbf973d67fb28915c570cc5af615.json": {
+      "sha256": "dde6f4dba7b62a8014cbb620d11894a7030b53683f7d711e14a24222facaddbf",
+      "bytes": 1800
+    },
+    "results/koblex-reproduction-v1/api-cache/5c46f103fa4a03110d2157d8d764e37d71de2dddafb04aacedc68ac2e2129218.json": {
+      "sha256": "8b76a1d42aae71a8c19465f02b398a45877730b60da203a9eaca0f48751b4ffc",
+      "bytes": 1909
+    },
+    "results/koblex-reproduction-v1/api-cache/a17e8fc84c57f3e70dc995f23e1530784dbcfc8a08121e9100e0cb45468a0b6a.json": {
+      "sha256": "cff62d2b5dbd73d4b9dcdda251739fa21a0d8d0e9c14d5b1bff9bc8f75688b83",
+      "bytes": 1484
+    },
+    "results/koblex-reproduction-v1/api-cache/f5ca7229614608fe02ddfb04f2c196511ba74d717a4add3a23dc72b2e90e038a.json": {
+      "sha256": "bdc6b9fe9ef68c0f7c6ba5fa66a942dc874c9c823b3c788529593ae90efa7141",
+      "bytes": 1542
+    },
+    "results/koblex-reproduction-v1/api-cache/d22b7638c467842bf77f18e3c6aed1f9fe3998afc791a0da2aa26a2e3b5f1026.json": {
+      "sha256": "6b2bfa5bf139ee7b5d174957c0dd363dfb7ece211cb6d9e96a68de26175fb2b8",
+      "bytes": 1451
+    },
+    "results/koblex-reproduction-v1/api-cache/2d7a74216cb580c273b135d93271c37a8b4a0ca220882217e2ce64ec9d1fe038.json": {
+      "sha256": "d6f0cf6ba8bc7653151c7c1674b959ab9f59e433cbd5b7adbb794605b6ff02b8",
+      "bytes": 1596
+    },
+    "results/koblex-reproduction-v1/api-cache/b842ecdd24bde52d6f02b0c4509111659bacb98b5f39764a1cfa02a8e5421d17.json": {
+      "sha256": "1d7482a5fe02a1df4fcaeb699d799a6eb2f0434be35d6c6d623198efb2338835",
+      "bytes": 1707
+    },
+    "results/koblex-reproduction-v1/api-cache/a769fd6f1a2cc81e54329556df804d01e906c9d57469583cfe43c3608d0c4023.json": {
+      "sha256": "9313783dff92a7fb9315b7937a8b469b7d0038434c4bf41efa39a860e54f2935",
+      "bytes": 1494
+    },
+    "results/koblex-reproduction-v1/api-cache/a6cd162fa27f4e917a21e86a984ba9a6cf7a54ed5ee2963ef654f3487a86a515.json": {
+      "sha256": "63bec5ff1dcc09d50ef1561c29df1acbf43f2454ddabd9914425031f09ec660c",
+      "bytes": 1599
+    },
+    "results/koblex-reproduction-v1/api-cache/d2107afc90b183d71445b9954e54dc91ecdf1e6df5036a9a6a9ffbf82c94c94f.json": {
+      "sha256": "202a6d064947b50f13ce3a960fe038500c0326ccff6f1a222e657eb4d113e5c9",
+      "bytes": 1779
+    },
+    "results/koblex-reproduction-v1/api-cache/cba66cd76595660aa110fa6dafa9ebebbb9c045033aced40e1cd803c6bc18db0.json": {
+      "sha256": "874df60e3845c399f8b7485e579632123b837d9be7ea7f7b382af8e0300bc02d",
+      "bytes": 1605
+    },
+    "results/koblex-reproduction-v1/api-cache/58f40803788546307a76efc60089c0edaacc0f529ff2ac49f406bcf068e550d8.json": {
+      "sha256": "7bd26b335d38b06267c36f6e12b53d3de9cb84e27610b8e044b128c0fd848ee1",
+      "bytes": 1519
+    },
+    "results/koblex-reproduction-v1/api-cache/9591c4c60d2191cc464e7d78212b2a41cab0829d469d0e9e410a2cbcf3a22a8f.json": {
+      "sha256": "1d534e29e192bf89293a013b8789d19311d403544cafb1d30ca3b8c3b463575a",
+      "bytes": 1687
+    },
+    "results/koblex-reproduction-v1/api-cache/d569525fe09a56f23dcfbf23f24d9118b1ffcd7c48032eef3307d25c1e47913b.json": {
+      "sha256": "1de869bb05f164e0e2eca5764d30d9165e45bd36b5123821301448cdbee775af",
+      "bytes": 1748
+    },
+    "results/koblex-reproduction-v1/api-cache/851b3980b0c462eb8d0e8fe04baacd3623c06fc99a10eb16fe568f8b244a867b.json": {
+      "sha256": "276b4f71f0f58fb7259c3e50ecadf893a3ac9b70bb6af763f454f3e6b3b7237a",
+      "bytes": 1506
+    },
+    "results/koblex-reproduction-v1/api-cache/a0a2c925f3e823af108b2c6e7658adc36db8343d8300b7aa7a101f29af200907.json": {
+      "sha256": "9efd75b42d68a12d383e97d4769ea0e00e17642d7dc621f9b0b1b4f6ea0142f5",
+      "bytes": 1882
+    },
+    "results/koblex-reproduction-v1/api-cache/feeb1462b587967f404db87e02732df589672e9945e71cc6a03e93a8a3711ccb.json": {
+      "sha256": "3da67bce24758cde6f0d3b753ffcc5af7b9fedefdeb40877fa7a0ce0d3dc8df8",
+      "bytes": 1760
+    },
+    "results/koblex-reproduction-v1/api-cache/95710bd2a0b54562a2a4f4b52246e9045e0c44232ebf732ec5f93606ab1f7302.json": {
+      "sha256": "0d3d73e5536702e912a94fcf0f0d5e9fa87311b6e2550a390416c1ed4fbadb82",
+      "bytes": 1604
+    },
+    "results/koblex-reproduction-v1/api-cache/8b196b3b3d09211d91844d92597d843b80f83d036d56a880d486837ebc477b11.json": {
+      "sha256": "8cb243247c6ebd6488373647a64f9c1b727389ca103ad93e3385ee4239525dc2",
+      "bytes": 1584
+    },
+    "results/koblex-reproduction-v1/api-cache/2843f673f4aa6d206d3a9d75714d0d6ee08f10387c02ea248d7e4894883f2a07.json": {
+      "sha256": "7c8d6871c4d4bd44b2505758827d3c5852a04a99318f5097facc08751ebb5701",
+      "bytes": 1563
+    },
+    "results/koblex-reproduction-v1/api-cache/3314a23921bd4421439dc6ba33dcc624079ccf954245a953188f1fe3b1aefb4e.json": {
+      "sha256": "ac412dc925ff1088dd4782c1cfe20740e07a4aa5943c6862b47177357542004d",
+      "bytes": 1480
+    },
+    "results/koblex-reproduction-v1/api-cache/5c888b168c2f92b185a00e515e62af28ca5f277a50cae43101362353279425e7.json": {
+      "sha256": "feffa5e6eab98b5895e74b06623fd1014777e48be19f12807c97246e4fe0cd9d",
+      "bytes": 1545
+    },
+    "results/koblex-reproduction-v1/api-cache/fa5a0beac075ac711caae1331f23cd55057368f0fdba78ee6ffc20122d95938a.json": {
+      "sha256": "aa322dc7c6b29f1383603977581d4c391a59428bbd23794d6916f3861e1b8585",
+      "bytes": 1514
+    },
+    "results/koblex-reproduction-v1/api-cache/e4ca09ad8f38b131f35bb47a68de1675158d0ad4d74d72a9979d51a8a3ea3f6f.json": {
+      "sha256": "c4cf577a461230df372a6944976efb8445772f6a346dc46e14ae14d24a73cc10",
+      "bytes": 2002
+    },
+    "results/koblex-reproduction-v1/api-cache/2857524cadca7ceb557bd90e3c228a8368cb379d4dff3c92ca45c1a82dc7a6d7.json": {
+      "sha256": "92025f65d1a62b7cd458dfd8e56212c54410c94836e49f28ad864cd2ef7ca4c7",
+      "bytes": 1693
+    },
+    "results/koblex-reproduction-v1/api-cache/40ff36363aaf0d6ac4e495b9857f889877c1a410d82acb3bdce0001e34257f83.json": {
+      "sha256": "5e58d54cdb16f5c9a7e9a1933fe488fd0387db6af9b180fc918a7681aea0bde5",
+      "bytes": 1658
+    },
+    "results/koblex-reproduction-v1/api-cache/d559655fe7e005c607c8c361461a3cdd354deffb96b6df3454ba131dcb672222.json": {
+      "sha256": "c561000d3c9bfbb9725ae8580938166c8d68a55804a159d63164d667a63a1709",
+      "bytes": 1666
+    },
+    "results/koblex-reproduction-v1/api-cache/fd32fc5ab6fcb05bb78d804707ab9e1b6fd774bb5846f8e9b70630509ec9777f.json": {
+      "sha256": "84316a469ccecbd4cb958034b90893d5064ea92da0242b8952fa934a96e7aa52",
+      "bytes": 1638
+    },
+    "results/koblex-reproduction-v1/api-cache/7226025ebe3f82eaa195cf09929416c54180e8f0750869691ae6833a41df7079.json": {
+      "sha256": "68994b8c75c78796d98365260413fb4cda5c6c9e6b91a3fef3ff739437f3cbe8",
+      "bytes": 1633
+    },
+    "results/koblex-reproduction-v1/api-cache/fc613ae21647e666fee1414229fc8ff00db79b9c716880851fb1f2a9d00f5163.json": {
+      "sha256": "9502cb14d216d47145cc4bdb381321aea08fc29f782f852174e295f329f1c2c0",
+      "bytes": 1597
+    },
+    "results/koblex-reproduction-v1/api-cache/eada1700dda8121c503bf0c8794a465e05050761f24dabb2f1ba5b4b91a6405f.json": {
+      "sha256": "403645d4a635841e91e63bb9dfab6c731674b38af8cebfe537857a182f03e307",
+      "bytes": 1728
+    },
+    "results/koblex-reproduction-v1/api-cache/c0c1aff6bf44c65ef380569ff8324fa2ec1fad66e85af496b948f6feb1c738a4.json": {
+      "sha256": "08bc5d6ef91939098c34d4ad071b517907ebbc46d76cbb21a550729d32fb857c",
+      "bytes": 1904
+    },
+    "results/koblex-reproduction-v1/api-cache/80445094e1919cefe63798b1551d6aad7f7c9b88a4ceeb735d03d69f04d6782d.json": {
+      "sha256": "ebaa77a816053dd45afea190c8ece6fb75519ef235f9a715b0b65d77f0d18810",
+      "bytes": 1843
+    },
+    "results/koblex-reproduction-v1/api-cache/ff9c843aabe0bcdf9e6065ba3c057b29d6026272e411e45ae4ffcc0a2efb42be.json": {
+      "sha256": "db0361976d6636d92a755834eedc2472bf871f6ac8edc4dba9006e1c26aefad7",
+      "bytes": 1744
+    },
+    "results/koblex-reproduction-v1/api-cache/05df48dcd514b7ba11117c964150663fea0c15649d381f690990416518570dcd.json": {
+      "sha256": "d29ca28dba469ad2bd6b7344422076d1e9e595a365cb98a0f8f2e8d981bd6be2",
+      "bytes": 1793
+    },
+    "results/koblex-reproduction-v1/api-cache/129aab75b87a887d41c4283143ad1cb283cd0e9ce584aa6baa60b57d4a96ba66.json": {
+      "sha256": "d9a07dd715b84ad4a223ebb6228cb31b4409d70ba5b2b3ecb31ae754d8a8bdc5",
+      "bytes": 1491
+    },
+    "results/koblex-reproduction-v1/api-cache/c21ef712be6234712d5bdbda643551b06441edc0d0e9fb8a6e2e735bf3b76d6e.json": {
+      "sha256": "525252e4f11d49809b73753469533b514d548ed95a1260b83a3139b00c2b1463",
+      "bytes": 1615
+    },
+    "results/koblex-reproduction-v1/api-cache/a0b76d365aef8a205d44bca7ca3f42a883d51de939e84f4af7e11c56a1973769.json": {
+      "sha256": "37a5e9a4e96b659604fb22eef19d6fc24f62c0d98fdd66a7aa640524e589c044",
+      "bytes": 1728
+    },
+    "results/koblex-reproduction-v1/api-cache/428964ee287e44845e14739a601707087958986115e0a656373a58be31429736.json": {
+      "sha256": "65dee5b75bbe49bbb900b5243682cec3527403a3352ad63f8cd79514e1b5bda7",
+      "bytes": 1487
+    },
+    "results/koblex-reproduction-v1/api-cache/9e24c118e3f1fee84ab629643d80cf78fa2928c91baca5e7caa97a30767d5dcf.json": {
+      "sha256": "4f22197d13be2c9a707e75faaaed34cd012a529566376c330e065dce312bd7da",
+      "bytes": 1577
+    },
+    "results/koblex-reproduction-v1/api-cache/c97a71f811b0e0d2f86e2b66fc0125bc0cb58f0be3d98c8086ffe0ded56a9a1f.json": {
+      "sha256": "51a80cb8ee64a7c455ab392ae8876225080fccabfe7f69eae93c9bb3ee2aef6b",
+      "bytes": 1618
+    },
+    "results/koblex-reproduction-v1/api-cache/2f4139606f8262648574b44ffc18699bccc3cef1d58880cce12f726471f9254a.json": {
+      "sha256": "606fd86d96ffb6ff7468a10684396345a7ae4409595947f97c08c6588e832a00",
+      "bytes": 1803
+    },
+    "results/koblex-reproduction-v1/api-cache/59b09031501fd80e78c4e2cfce1a43d67ac8429c9ef07b01b866efe68d8b4345.json": {
+      "sha256": "f6a552b92acaf79e771ff5687d6e626d37ad5dc6bc124995a4a5ec0754e9a76c",
+      "bytes": 1547
+    },
+    "results/koblex-reproduction-v1/api-cache/9be0fdc06ceebbf7c9490192094dc3413b5bc737d509fec806f6dde56cb2785d.json": {
+      "sha256": "f675b1b52e3ad1e48d3c1c9f185f31eae1b57f55f94193e0286877dd7f1cb66b",
+      "bytes": 1516
+    },
+    "results/koblex-reproduction-v1/api-cache/3c0f88c9e34aa39496a7da38caa028e8c325ac21f2ee830f191f73ca252554a9.json": {
+      "sha256": "3d5b84792cf74e603f214b14c9100365588bf140db85ca78cb9664dc84c9a6cc",
+      "bytes": 1523
+    },
+    "results/koblex-reproduction-v1/api-cache/805e010618b47404dc7fa62da1f5ecb26edde57d76a0135a8463feb4b5e00b6d.json": {
+      "sha256": "2deb4c6e792043cd6756cfd1f9c1d3c896a560fd6fa2bb6457e2d2211b636333",
+      "bytes": 1439
+    },
+    "results/koblex-reproduction-v1/api-cache/3dee0acdd9b2cde0f285d6879cad7765fe6dabd85c674e0cc027c097baafc5d4.json": {
+      "sha256": "e16f526529a19311eec11194cfe9c7f5d5bd9b1d3c527fade581b201be385547",
+      "bytes": 1865
+    },
+    "results/koblex-reproduction-v1/api-cache/53a57f957264e7555eb882742db4eb081dadaad4b32e23af65cb9223d09494ba.json": {
+      "sha256": "da60622ba3d0af0374f9aba57b771a6a0b81d9ce4656e11af53e751714746b55",
+      "bytes": 1908
+    },
+    "results/koblex-reproduction-v1/api-cache/c4dc999bdc444cbaafce1d041cd67ed9d98e54c6d2a6e9bb22405950cdf65c70.json": {
+      "sha256": "55d4a48caf34556f627ca3fd8655e69b55b75d1ae1c63eb0bf0431e418e7b59a",
+      "bytes": 1633
+    },
+    "results/koblex-reproduction-v1/api-cache/c6e1f79c02fc502b98e8f3b64dc900c973e8015c9a34624544cd9c5db45d55dd.json": {
+      "sha256": "4ce74b3dca8440e1445d204a7d58b432e07b298fdf73319eb5cff0d05746cda0",
+      "bytes": 1612
+    },
+    "results/koblex-reproduction-v1/api-cache/1f332a6b7aa109eddeca2b74899fd113dba8b35c2aa97b8eb879f742c9ea0405.json": {
+      "sha256": "68ec2eb509513a221310e44ff4e2c19700ed3db2a7d77a02c61ebc85400b60f4",
+      "bytes": 1573
+    },
+    "results/koblex-reproduction-v1/api-cache/53ef2d5dfb242707800e82296dcea1fca60fe202155ac6313626cc5d44ec040f.json": {
+      "sha256": "13f3085c19ac8cfc8fd8b6bceb34d3ec99dbe5cfbf287404967bfe8ac472e9a3",
+      "bytes": 1534
+    },
+    "results/koblex-reproduction-v1/api-cache/14027a8131455702605f32ece0dd582f0932e5fe059998d1684eeeda5f34ca6f.json": {
+      "sha256": "d3f15a3ef2db4ed38ef55795c4bb3f2ef2523506050d7bed35ac2d05e23be077",
+      "bytes": 1495
+    },
+    "results/koblex-reproduction-v1/api-cache/8bf428b7cef6ef6f7e713e33a5addeccf7b0585dc4360d85204116bb2561c770.json": {
+      "sha256": "e41445fd69e54985219c8184e129e0afb1f6bb56130041c68873840313eea53f",
+      "bytes": 1763
+    },
+    "results/koblex-reproduction-v1/api-cache/9ad8a83c560cd9eaeddb43b8a516cfe47c1b5515f2fb773205eb6990edab3cf3.json": {
+      "sha256": "ef92de1756c7027a505c11e7c884715292415a09a38b1662354e04a5fb041cd6",
+      "bytes": 1559
+    },
+    "results/koblex-reproduction-v1/api-cache/549346307be0378a2ba6723e6dc12a7680e41eb3dff6c3059d85dac16ab4fb35.json": {
+      "sha256": "1b76bd87d962183835c1109469db503c01ea6b31578851bbabba9751f893bbb1",
+      "bytes": 1452
+    },
+    "results/koblex-reproduction-v1/api-cache/a0645a9f295188c6546b650c671e9e0c9c2b0068d4a689f433519fd5743be9da.json": {
+      "sha256": "cf47ef76dcc4892f1f088538e17ed712f078375d3d48afaa6b3e6bf12953a6fa",
+      "bytes": 1498
+    },
+    "results/koblex-reproduction-v1/api-cache/b4e4ca0e3799d805172dc57f7fd7f8f3f990e3b97fe532733045ebc59f7f6f45.json": {
+      "sha256": "0bd4bb70cca59a7c342cba32082b525fbf69371ce454fa5a02389abd0af4b90d",
+      "bytes": 1573
+    },
+    "results/koblex-reproduction-v1/api-cache/96602b6e55b1e9ae98397cc556933ca5f5a18e42a011bdda11c26b1ac2e91cf1.json": {
+      "sha256": "026f410ad6a970af2909ce2e1cafbe32de4fec32aafdec85564edeb9cf8e96c5",
+      "bytes": 2108
+    },
+    "results/koblex-reproduction-v1/api-cache/5a29578407e4999752c6360b30c56d30b82db886a6a2b3cfc884b2402b369f5e.json": {
+      "sha256": "3f157c90d5898f92e9647facb16065650678b2f3b8e9c7cbd68adbb9e436bd49",
+      "bytes": 1646
+    },
+    "results/koblex-reproduction-v1/api-cache/3c5b1f2c45d0d91fefc093d084355cff4de1ea29ea9d1dfcddb46c0eed6c3242.json": {
+      "sha256": "29a134ff4a134762cf159c8c2e545cceb4a0c40294c2274f5c4adef340d46156",
+      "bytes": 1580
+    },
+    "results/koblex-reproduction-v1/api-cache/7d0c5f8f4447e29e8eeb237b6cb2d029d466b579bedbfec5bc2d2b6f551e4361.json": {
+      "sha256": "647bc774cbf5efa8e1bb661be6484e73e1f655be1e15509b20c9621863624985",
+      "bytes": 1573
+    },
+    "results/koblex-reproduction-v1/api-cache/a2dc816d5d68914794ae37c2552dc24b8546e7905b070e4b7283708ad6828fec.json": {
+      "sha256": "ca568d6c728c928d0a1c75754e8896ac5c6d15b1606112e5caba511f0ba2331b",
+      "bytes": 1575
+    },
+    "results/koblex-reproduction-v1/api-cache/da3f181dbd5eaaae5f5465474d97f670ae3467a8ba1a5dabd7b93e1ef6684760.json": {
+      "sha256": "d5c979df7c98f968f058fb4d9c3af133032c9c9f0c6646e45d1721afb6322924",
+      "bytes": 1652
+    },
+    "results/koblex-reproduction-v1/api-cache/685cc0d87ff48a3a0690ffab8ff72246151e62ff37120093af6e56b60ef20585.json": {
+      "sha256": "78c60fd3a86cff64ced600cc614491a56d31d98342e5ca5ff6b11749246ee7e7",
+      "bytes": 2121
+    },
+    "results/koblex-reproduction-v1/api-cache/a31621984986515df4e7138903ad2e2c8d92c884b455e09b430f16c16911375c.json": {
+      "sha256": "bfcb638b6c3652a3b3bc6f4cb3ea0e155e5a20278601ff4d627fb284f21fd553",
+      "bytes": 1691
+    },
+    "results/koblex-reproduction-v1/api-cache/7f94b4872183ddfaa81470ad1087a51017832ecd22fb89d94072852db3234084.json": {
+      "sha256": "e3d7e378d4bfefac4d9ea1a475cd6581c99d7499cfd7711d9d710a927989db46",
+      "bytes": 1752
+    },
+    "results/koblex-reproduction-v1/api-cache/e5dd161fbcb1621745d84fa9832bb02e9bfed3ca5587b0e51f78e5c0495d3c29.json": {
+      "sha256": "545c69fa17c32df50c4dc6e7d7b5ac5a34224fc88b93bd36d9002e07f1943299",
+      "bytes": 1526
+    },
+    "results/koblex-reproduction-v1/api-cache/a20ce46a46780d8adb0afd3b419a2006be31a735abf911525b65a96c096b8c63.json": {
+      "sha256": "19dce0fffda383450a2f34bef01974aa3037f9892f1b64924766bdff85b17a1b",
+      "bytes": 1523
+    },
+    "results/koblex-reproduction-v1/api-cache/1273a9d9f3d73e3012ab858117f8a1e768284553b2a38bbdce906fbd02eb5215.json": {
+      "sha256": "a0c7b609877b7db926ba5be77cd9cfcd6f3d4b0f3a4bfd535fdabd92086e0171",
+      "bytes": 1504
+    },
+    "results/koblex-reproduction-v1/api-cache/89cab64ecf379ae4042f7d0ef14a7f10367b9814e257c3a734b2f449703a2254.json": {
+      "sha256": "22f6c322543ef1f3e7c75f7ca4e6f34f07732f537784873991419b527265fa16",
+      "bytes": 1661
+    },
+    "results/koblex-reproduction-v1/api-cache/f29760ae7935af1ffca0b41b8e4803b55ba4174377821527af12594b5f6aa113.json": {
+      "sha256": "e0246be883c934c91f6ee2068d0f535f5648b4839b8a348a7db54b470a6f20fb",
+      "bytes": 1902
+    },
+    "results/koblex-reproduction-v1/api-cache/c437ced0e188b3926f7cbc6a3c259b7d15f54745ca0a7b9303f41d0b57f20dbf.json": {
+      "sha256": "65377666657613283ae5176089f269ff3e1193c553f2f34f99cc9ee368628e06",
+      "bytes": 1548
+    },
+    "results/koblex-reproduction-v1/api-cache/0f81cbdc13d90472e13fc885299210c675ce451304378806dbbf23f18b34ce09.json": {
+      "sha256": "070fac2d8875783a93102bc9b170c9e03c52aac0e20aa8d2007fc45d881ab0ce",
+      "bytes": 1480
+    },
+    "results/koblex-reproduction-v1/api-cache/2d267e786c6957ecb0d7049c676123a9306a161b33309f00c03bdd2553e74f48.json": {
+      "sha256": "f181aafc9afb9e5ceade14cae2c7911d2b31a2cc61ea733f7677bdf4ec1dad43",
+      "bytes": 1452
+    },
+    "results/koblex-reproduction-v1/api-cache/488f5f0635a3f2e25c4b475088e9b6c4381e611f962e461345f2817322bd51db.json": {
+      "sha256": "df676760c2c67b2f0828f3d61a5b9fc352d3b91cbdefc56c2e1137f834d4aa35",
+      "bytes": 1589
+    },
+    "results/koblex-reproduction-v1/api-cache/279bc085de4b257096c360c3db40ac27ed50b546b1fbb7bc042e9f5b9806fd25.json": {
+      "sha256": "f2422ec6e498ce4b98656431107af3593ee45505c5ac2f75ba6ba7636e558c20",
+      "bytes": 1614
+    },
+    "results/koblex-reproduction-v1/api-cache/06e1ffe663f53d7541f0337ade6e65be3b208ae2c55dc2ac9a452687ed5f0978.json": {
+      "sha256": "2e282069311ff95292af8293471b852af5bf0248097d9fa5d2ce96f5c6a21ff6",
+      "bytes": 1627
+    },
+    "results/koblex-reproduction-v1/api-cache/6133618922727993774a2c61203010027d72a09bef59f8b615d6e6df1419b9e3.json": {
+      "sha256": "3d3902f5f79421a1e3752b2a6757e5b1d97d635369bf5b98c9360c60a9ce6a44",
+      "bytes": 1615
+    },
+    "results/koblex-reproduction-v1/api-cache/c98b2841e3c79aff086e4e55907242928ca53504e3ec04746df76a356582c751.json": {
+      "sha256": "8f883c09de7000714c0e014e6240ed5cd63e94b6caa0dabad2653608c25f5c77",
+      "bytes": 1693
+    },
+    "results/koblex-reproduction-v1/api-cache/ab746546487bb9c6ecc55422b63069b5a4207493ca3b61594d9aceb31c0724b7.json": {
+      "sha256": "9a82e72cb19f654c243eeda020bf728d6de2f838c1ba53ba91c081dba2f0923b",
+      "bytes": 1497
+    },
+    "results/koblex-reproduction-v1/api-cache/b343bf67875896ea274ba819a17d0a340fd4f1c4e942e36a0bfc28a432153252.json": {
+      "sha256": "61a03b104cb5f5c940677a7fb264e873baf2ed3ed3107594bfa8f9fd1319c6e5",
+      "bytes": 1695
+    },
+    "results/koblex-reproduction-v1/api-cache/1992a66c775632a59a6f3c1c747abf8211c34144c9232bc95cba9212a0eb1beb.json": {
+      "sha256": "d48442bd45ddf5046e3423ea936d2d7c987df4ca9450283578393c7f932b7f83",
+      "bytes": 1950
+    },
+    "results/koblex-reproduction-v1/api-cache/5dd72bd1ba9788648bf800db3c0bfc8ead818f9279869166b590416b57468297.json": {
+      "sha256": "558b824905ea2e6d09d0eda329570ce96d61dcbc53fb7a08688c0b9eba024c9c",
+      "bytes": 1692
+    },
+    "results/koblex-reproduction-v1/api-cache/97563c906804e7348a48c83a532676c5d2642b4a0416a81e84cbf1f8a93a0f91.json": {
+      "sha256": "7d72f34609627890993dd66765a0e972cbc9ee293e7212f79e2ffc023d599f11",
+      "bytes": 1470
+    },
+    "results/koblex-reproduction-v1/api-cache/6a50a56e9749be39327bbdd42f6c953079ce82b1d8f3c08ed891ab86cb1c2303.json": {
+      "sha256": "ca736797a71d388ad2f2db37a55b4cae735a25e91c591ccdf10789f20f6fc183",
+      "bytes": 1600
+    },
+    "results/koblex-reproduction-v1/api-cache/f1524957697f33a0d29dc7b889f7909e3618fc6e845ffe641df132be82954df5.json": {
+      "sha256": "af2ec98eb33edc423ab3b60535ec87ee490601c7e0940a45074492e071cd80ab",
+      "bytes": 1679
+    },
+    "results/koblex-reproduction-v1/api-cache/86503ee30b6edeb454d9a901b77a56787821913c8c7a449f03cba0e640f1654f.json": {
+      "sha256": "1a43a59503231360d55537c35759332fea6bfa4e429bb99a32ee1d76f32c1cbb",
+      "bytes": 1645
+    },
+    "results/koblex-reproduction-v1/api-cache/0f23e8d65224f6f36b84803768ddbe069b1c8a7a2d78bbb149cb32946ce08767.json": {
+      "sha256": "e51900d30f8630d6ef6d7a77d872e7f2d764566b0d566bc8519c6f7aaedf5899",
+      "bytes": 1625
+    },
+    "results/koblex-reproduction-v1/api-cache/fea3423b6f72feeee17196196a3ee515d6874fd9c07aeaa83b5325e515504c28.json": {
+      "sha256": "4bccd107a61860822894ea70b0b1511a0c838a006af3c360265ca10a32f2c77d",
+      "bytes": 1545
+    },
+    "results/koblex-reproduction-v1/api-cache/956128a17fd83d5cc829e7c61483af647ea52626d2c6362da8a47892d1e955ac.json": {
+      "sha256": "2e2ef8ceb5eb88b8a286cf88b10b05e0bf7d5cc248006d744e84b3ecba389ba2",
+      "bytes": 1619
+    },
+    "results/koblex-reproduction-v1/api-cache/64b0562952259dc63716ac2cc01e928c2264b1ab0469563ab969e4ed7f6ba859.json": {
+      "sha256": "e47a287ee430d3a4678b94fe7e0771db5cf74854daac5a2e60c2482890574267",
+      "bytes": 1624
+    },
+    "results/koblex-reproduction-v1/api-cache/f72e4d9a2324ead2404ff9855554b80d473090d0a3c3dd03b4f35d7a10e12c4a.json": {
+      "sha256": "e9dcbb9882b4841b8932cb6614346556b681c5473ffe570dd646858909a06a32",
+      "bytes": 1761
+    },
+    "results/koblex-reproduction-v1/api-cache/ce40acf522e023bc8775d96e621c7587de1eb41fe42f942bdb52f0625faccb82.json": {
+      "sha256": "49577c6375fd7e29e4059f97abb8c6ecbf207d2aeaba4fbe24c231d823d73704",
+      "bytes": 1475
+    },
+    "results/koblex-reproduction-v1/api-cache/44d0320b60b0579efeab0bac898af2f6561e8707e5f0190481f1b70fe727156b.json": {
+      "sha256": "9dc35f50e986f3a736b71fc7df658e6171055aa8cd26b880b9d164bda9494087",
+      "bytes": 1852
+    },
+    "results/koblex-reproduction-v1/api-cache/856e12a33c96ee6b39edc13e9aaca4412a89b81538fcebe6b6103b61b3076f74.json": {
+      "sha256": "24fb61e3092653de22980b46b59f3821efba1c5793de0704823a7c9b40855ee8",
+      "bytes": 1547
+    },
+    "results/koblex-reproduction-v1/api-cache/020b0996202a7c66863339957c99cb562a2c7afb801abee9a751960497e799f8.json": {
+      "sha256": "00df18c52e5cd688094c18aaa33eef8c1dbbff5c2d2a88ab60433ec8be404992",
+      "bytes": 1628
+    },
+    "results/koblex-reproduction-v1/api-cache/aee843988256f8b2a7f3ad16a9f901389878c7405d2cc106d3df39cc174af57f.json": {
+      "sha256": "dde52b87f0b26a96d6b3c64a7a751caf18795bcb38d5b5a9e30615b8d91654cb",
+      "bytes": 1585
+    },
+    "results/koblex-reproduction-v1/api-cache/c3b3c9bff1991a8d87edcc395d407c00409081490582dad1e26fc8b69ca28881.json": {
+      "sha256": "744d559c5d516b4b208b5ab154096cf9c1ec2f7db2b7c773ef504e91e996e056",
+      "bytes": 1707
+    },
+    "results/koblex-reproduction-v1/api-cache/6c62fa3df0f8aee3ee62b086ce2e85f839aa98e4c3a165a55be11b3ecc040727.json": {
+      "sha256": "1479d8759b9052d2803e458fbcb808889ef1e9b1db52ffcf85ff2f7cfa2a7036",
+      "bytes": 1544
+    },
+    "results/koblex-reproduction-v1/api-cache/8a9e104e0d778cdad142e1eee0900753740110ad1a825cf30a82353a57c0e5a5.json": {
+      "sha256": "424d3c47ef4494786a330376a72c4fc58f0e09ff1dc6bcbf61506ebf26a09e98",
+      "bytes": 1522
+    },
+    "results/koblex-reproduction-v1/api-cache/d61943c1a715e5ced1f12555c527c4153e2507ce5face27ca106e02519b739fd.json": {
+      "sha256": "ab5a5125e0f47a78c30942d89a59cbf7030a1f51256c30d8739a28e369b5941d",
+      "bytes": 1538
+    },
+    "results/koblex-reproduction-v1/api-cache/c9ef5d42de29e47e017e33e86c16a781e55c33415bc9af4b390b01397f13acd3.json": {
+      "sha256": "3e0fd4a6c3126e69c68fd2e37a8e1db499c6e01cac5be099ebdcc8836c112f7e",
+      "bytes": 1600
+    },
+    "results/koblex-reproduction-v1/api-cache/b8cb688683c7bb8e1608401eb1e07a35cfa6e9bb393e99b091c15ab9a0be4395.json": {
+      "sha256": "17a03dc07f059c12cb829b83aa2eba95b37717f0815a08a5f927d8a92c6722d5",
+      "bytes": 1596
+    },
+    "results/koblex-reproduction-v1/api-cache/712641ced681b9d34aae225e14e41f4d866dd3e6bf7c70351375d6bd63af6a5e.json": {
+      "sha256": "1d000a3e65d7fbaa0126ca124e6e5941e6817fc675b4e074692a7d5787e67cc0",
+      "bytes": 1606
+    },
+    "results/koblex-reproduction-v1/api-cache/fd16a1e7806a4177f7fa79d830458aa3b44329ee3bae332c766e328e3da9170c.json": {
+      "sha256": "e434ae57191a6027fb86cb9e20ee1f611b64a7568940efb522b9250a138cd434",
+      "bytes": 1557
+    },
+    "results/koblex-reproduction-v1/api-cache/f72f0534168786781940ad83776e628d5e49cacd30bc64e08d0f04b5b21fa2ae.json": {
+      "sha256": "4ca5c7b39998818c3657fdf0f1b203be7fef84ef53132eb87f1a24412a214367",
+      "bytes": 1902
+    },
+    "results/koblex-reproduction-v1/api-cache/ce5df8d1f8d479bc367458797472751cf4cdd53a299795caa07a9c117ec9c711.json": {
+      "sha256": "2a55203deffdd0d2bec17c6279cf297a0f746f10a1a85bbc979ac1c7fdad2094",
+      "bytes": 1550
+    },
+    "results/koblex-reproduction-v1/api-cache/6ceacd408913ad06ebee378909e8f355e379f7f131694f4e597375c28cd8abe0.json": {
+      "sha256": "e7e9125343ad8b98075ad948a40471b6182332d51430d0579a20f1314ffdabbe",
+      "bytes": 1722
+    },
+    "results/koblex-reproduction-v1/api-cache/3b1fa4e417201dfd4b5c66954de1c0ff147135c99029c1e181a2a6cdfc5f219a.json": {
+      "sha256": "2ab67ab9d721033f0002bf1f23faec53c20d2b1810c8cdec33d442d53766e7a2",
+      "bytes": 1600
+    },
+    "results/koblex-reproduction-v1/api-cache/18530aa3dd1461f63848f35d8aa089913aed9608f2ddac03a021b7bc8f39a161.json": {
+      "sha256": "188571cf060516d0d9e05eaf9cbb09a7272ae02eaef9d9905e73be48802c6c7a",
+      "bytes": 1651
+    },
+    "results/koblex-reproduction-v1/api-cache/32674a98316e61b053207233f550f607176413271b847dec9675202f0ee38c4a.json": {
+      "sha256": "91c534fd465e78d3361ab790badb52cbd0eba45d936e997dc5fb01c83e036f0e",
+      "bytes": 1640
+    },
+    "results/koblex-reproduction-v1/api-cache/1aadd78b7475462580c2d890fc0cad7a1749092f68261657c5ffba8ebd607ba8.json": {
+      "sha256": "0d1dd53c0369f00643af4a3b34549e884f3b6a4350573c47874c3ade9b973a65",
+      "bytes": 1548
+    },
+    "results/koblex-reproduction-v1/api-cache/ba7c43179bba6d822b90b4d4feac709eac28efe9eeee149d80796d48876dbf01.json": {
+      "sha256": "dfe92b324abe50273ead7865576553c07ab4d01a1dc47a9756bdc474931e6ad9",
+      "bytes": 1530
+    },
+    "results/koblex-reproduction-v1/api-cache/48ad69dd1631701871c3646c67242bd5f111464009d31a8115d266db7e142139.json": {
+      "sha256": "d0acc7a5d93240bd1825228aa2224be72bf61135db174b6d0c9027baca686183",
+      "bytes": 1491
+    },
+    "results/koblex-reproduction-v1/api-cache/dcd85150fab8a3d8721f78654f888ee9fdd34400a8e7c7c9a7a1d7bc86b6b023.json": {
+      "sha256": "3ca78f4ecd27cd2c551da342a7135496c0030594c28bf1ab58f7a57184300579",
+      "bytes": 1472
+    },
+    "results/koblex-reproduction-v1/api-cache/49a51831e29c9092aba519e2f38d3d83b4630ddbdfa0133f0df9afe17090822b.json": {
+      "sha256": "cb81d4340667133a134c9f4138b9aa8a963b81d3461fedfffe0f4c55f3ba0f11",
+      "bytes": 1490
+    },
+    "results/koblex-reproduction-v1/api-cache/df32b4d8ea1849137815c05b1bf905c9218bb0af8ecce78a9a423bfdabca8bbb.json": {
+      "sha256": "a7f99eb971260186ffc2b63da964e492804eaae840dc06c0bf85ab214fae6bd4",
+      "bytes": 1456
+    },
+    "results/koblex-reproduction-v1/api-cache/11dce7a21dd3b89ec35cf3449a6f34ff5da34dd9231096f6ccfa829b519fd141.json": {
+      "sha256": "496f2d9814e063c0f0af1dc6cd50ba2887be28609ce7f4e62774a95c60bf2927",
+      "bytes": 1724
+    },
+    "results/koblex-reproduction-v1/api-cache/522f120f2000b2ac1bfdfa999446728977382e9542a57c15fe7a278adc13176d.json": {
+      "sha256": "c4fb558c5a723b17e167608798066afbe3a13e56f17d845c66a6f045c7773d79",
+      "bytes": 1612
+    },
+    "results/koblex-reproduction-v1/api-cache/7cd16be05cab75de22b8f2e6782360f0b8bd484f7df684f0ae96a898df704c9e.json": {
+      "sha256": "bd8dd04d486c48b81e4c54879146ba2b2cf5c0af63e704da2ce04820a0ebe45b",
+      "bytes": 1783
+    },
+    "results/koblex-reproduction-v1/api-cache/80682c0023a6d474e0c20727362a050ed62efd79af4678cc9b64452e9dccad8f.json": {
+      "sha256": "584ee2798ff302c6634fe76f818aab14bfbc68f5861a9f7742173c005135a187",
+      "bytes": 1894
+    },
+    "results/koblex-reproduction-v1/api-cache/aee9603e638747ab6f1084cadf745e5aeabe676cd29e5049a92b177936380c21.json": {
+      "sha256": "d44f72ea90059702bd66232753d85289593bf81783ec894e26caefe699dc2d5c",
+      "bytes": 1564
+    },
+    "results/koblex-reproduction-v1/api-cache/fce3b1e769fca0b319d2bfc129de0cd809491959cdfb6e1c1f41cf37640fd7f0.json": {
+      "sha256": "e825d5a65d180a6de109ea7786a9bfcfba823fa8b28ead35cd18a7801e386d42",
+      "bytes": 1578
+    },
+    "results/koblex-reproduction-v1/api-cache/a1f146b7ea9ee11e35484aa36f0b37eebbe1ee06adfde1803a2bbaeed231d723.json": {
+      "sha256": "89fab85a2ea5d229e2046205f9ae380a02ef29b35157239b470658ea792a404a",
+      "bytes": 1668
+    },
+    "results/koblex-reproduction-v1/api-cache/26c480d2f4c9bddd579a1575b2f15bb1060ebc1c2a3e9bc871bc7768d034f6e9.json": {
+      "sha256": "220258e4039690659b7090b083cd1c62df8cde2f80fdc4891fd96b3b9dfac279",
+      "bytes": 1552
+    },
+    "results/koblex-reproduction-v1/api-cache/2f56b755fd2d6f78fb4a6603057ab6b53a0d51912f1c68bbd7ec5989b4076b2c.json": {
+      "sha256": "14846838816e5c0273d726542f3b9fdd1770038dc375f64ce6314ba533da3111",
+      "bytes": 1725
+    },
+    "results/koblex-reproduction-v1/api-cache/20428cd4cc51c3d28864de8575404a76ac93c411107d912e4ac80c3f417e71e0.json": {
+      "sha256": "56ed094902e873d2556254b97c5b5ad6871967321092e607631b05a7e90645bb",
+      "bytes": 2005
+    },
+    "results/koblex-reproduction-v1/api-cache/0d104c2dd283db0cb73320c4be63957b4bb767fa2fcd508f8559a817f42718fd.json": {
+      "sha256": "64b21fc0568c3a0d9ed0462e3d56e64446247db81453316b63c2e36ecf0ca40c",
+      "bytes": 1505
+    },
+    "results/koblex-reproduction-v1/api-cache/5095412dd3d9b763700887ecd2cc24cfaa9bb3c764b9b4c809394537a20a8f60.json": {
+      "sha256": "380d3e7ab8f19400d8ebd44815e39e8ef7b53cfebb2ef21d6d93c3a10e2213a7",
+      "bytes": 1539
+    },
+    "results/koblex-reproduction-v1/api-cache/05ae536fb517cd47d6d77a9002961b936e83b9b996e1e0b905e14398897910af.json": {
+      "sha256": "e4dc6616cf44987f3a60fc46eff39ccc598f4ed104c3e673815ba1530c6c8713",
+      "bytes": 1464
+    },
+    "results/koblex-reproduction-v1/api-cache/62c9a4530482f5f59c16183df82a9de58b5ff25644d70aaf5e71939a490756c6.json": {
+      "sha256": "44df262b81432989da2f96003c6cab171e195ac7a75a1a77a49c3606a937067b",
+      "bytes": 1514
+    },
+    "results/koblex-reproduction-v1/api-cache/49ed673be8040d237ea194dfe1c4be8dff6b761ff3c3885f3d6b7dc8e8db3e02.json": {
+      "sha256": "1fed875a1fe88212fad49af2af54eef43a1d71918f5075c74cf21e02094171e4",
+      "bytes": 1643
+    },
+    "results/koblex-reproduction-v1/api-cache/5f54931f0eb33e721bb7d1d97a114c2e1e91c831e783df185b14b3e0e4860b16.json": {
+      "sha256": "9ec2839c3038d667b3bab8fb7906d56448d58fb9045c8e07678d7235cc6c1501",
+      "bytes": 1567
+    },
+    "results/koblex-reproduction-v1/api-cache/cd8e814ea8c09cf75cde012362381a86b1c17a43a749235564883af157e2ab51.json": {
+      "sha256": "88a38de957487dfa639569a018d8f498fd44e0957809764b14bad25c1332213d",
+      "bytes": 1611
+    },
+    "results/koblex-reproduction-v1/api-cache/64ba89e8f2772632f7a8f769cf7bdb394481371cebfb0a3efacaf3ca1c4f1955.json": {
+      "sha256": "834334840916b24df57eff5c37c27a63917932d00313778055fa95ddf2749868",
+      "bytes": 1495
+    },
+    "results/koblex-reproduction-v1/api-cache/6c5fe3a926865d016d339051826dc22a500d9ec765aec215c62393a214985b00.json": {
+      "sha256": "e672933033ce900025296c282ae848a37373e7cde95ba95f6a0eda711a8606ab",
+      "bytes": 1506
+    },
+    "results/koblex-reproduction-v1/api-cache/bcbba8ae0d11990bebcf4ee1cf1995f73d322884455b5ceb6615e4beff011b67.json": {
+      "sha256": "f955333b5503b813b1eed78a76059767271f49a96beab830e0cca6c3fabc0c86",
+      "bytes": 1500
+    },
+    "results/koblex-reproduction-v1/api-cache/8d0b415f5d6bfeaa0b2bea830fd8ee72d387bb6e8dfe9e9ee54f1882559bbd06.json": {
+      "sha256": "51d83a1630508cf7fe671ee6028fd7f687530cbf56320ee911acca1b63547670",
+      "bytes": 1591
+    },
+    "results/koblex-reproduction-v1/api-cache/b2caaf08615ade620195d76bb89cf53c217277d7b5fdde3f2601eaf9e2684cf4.json": {
+      "sha256": "9d3920fe629145ef7c779dfd85391968b0d0f18d573f19f43df7aaa76e0c930e",
+      "bytes": 1500
+    },
+    "results/koblex-reproduction-v1/api-cache/39ff0e1b605ce98cb0b35a08fa13c5517ce853bfb2d45d71e933ee11467b8210.json": {
+      "sha256": "cc2c53715e573f2a1c965248289ceff41a197ad17bf85264fa058e19d42ceff9",
+      "bytes": 1924
+    },
+    "results/koblex-reproduction-v1/api-cache/13f051bf714c77804d87ef566ed7d5ff45d330deef578497d1dd7e3de211d290.json": {
+      "sha256": "f0afb769e00ae5b558b8c90357b0a1592c9b308bfb5c37b80a06a57f20a5af9c",
+      "bytes": 1760
+    },
+    "results/koblex-reproduction-v1/api-cache/266eda01e040ee79cb2afa3f1894ef78d566dc816abd7f9e3d73d78853a6c8a3.json": {
+      "sha256": "c1240398775af6e6d55aad9251f0d2ad1c801569f84ae32a2b2985dd549ef2ed",
+      "bytes": 1783
+    },
+    "results/koblex-reproduction-v1/api-cache/aa526ccc7ffb94aa6ab477096fd268afc78aabdf6b3f711f9a2ffdefbdd0e1a9.json": {
+      "sha256": "ec2332b22368eb8feeb92c6bde3eb2ad20581be379deafa9914b5a42bc7e4f7f",
+      "bytes": 1609
+    },
+    "results/koblex-reproduction-v1/api-cache/8c9b651e2fa92989dbbcb7493e0f8d48a3f38fbf239e0214876fa1ad38ee7477.json": {
+      "sha256": "0f6752a73ced01bb82fea14912626eeebf2d2d3410ecd854aefe41ba6fbf16d7",
+      "bytes": 1428
+    },
+    "results/koblex-reproduction-v1/api-cache/78430a87b5e63e738e8f6f4e299c5ab199aa5184cecdc4f95a605844a2f01b6a.json": {
+      "sha256": "f1b6f7bc40b810f368488109f19f8d3573bf6d484e3a5a71d2887181beb21ad6",
+      "bytes": 1577
+    },
+    "results/koblex-reproduction-v1/api-cache/904c815585735ddce8507a1c68f885b36d584cfbf299146cd1a50f055350bca1.json": {
+      "sha256": "d058a2acedb767985dd5fa601729941fe8a35c3a382a73f430d188c67f05b804",
+      "bytes": 1541
+    },
+    "results/koblex-reproduction-v1/api-cache/fe97af2ecee8b914059e8feb68ec263df7fbde183a83d914a4b2647c9bcf31ee.json": {
+      "sha256": "6fe4ac803f67b0a2c431793ce40b4c538edeb2cf29aa7a342d7b4a932bfbc628",
+      "bytes": 1677
+    },
+    "results/koblex-reproduction-v1/api-cache/ca44bc53ebd4beafca0ed56230fed4c1c1d71e0566d39be18e376c6b71f9cc52.json": {
+      "sha256": "d730f7b9353ea1627de7c653f8b3268a7ac3ba8b7850e6e5ccd9f3d75e8b1401",
+      "bytes": 1557
+    },
+    "results/koblex-reproduction-v1/api-cache/9ed47e42f2508cba24b32c21728d6178a2d2ee26f2ee65747a683b45e77adeb7.json": {
+      "sha256": "c4cba99f8db9d368aec01ba671936c395611feabfc8e8a4ca0069b44c5818b1d",
+      "bytes": 2309
+    },
+    "results/koblex-reproduction-v1/api-cache/aae8aa7c871d66b6e297b366159ab080a10a79128811b83edc94f6a5e1637168.json": {
+      "sha256": "4df770bd6c15ebd56ac27aced059495b217f2c7f2ab56c4306bd5ffe393e0474",
+      "bytes": 1889
+    },
+    "results/koblex-reproduction-v1/api-cache/57439cd3b5e7e6a1cf11414b3c784032b74193113537cc7c1f92b51866b564a4.json": {
+      "sha256": "2a8e836ecd487166d2ef4e17665abdc1f98d76cc2f845794b672e93e708cf305",
+      "bytes": 1513
+    },
+    "results/koblex-reproduction-v1/api-cache/079dae16549ab1da8be75919c509024d262da7b61b12243391acfe50167615b2.json": {
+      "sha256": "3df30d5038789e059646e06ea2b63036f2a6e81049f1b0d6ed09cae5cbffcd89",
+      "bytes": 1638
+    },
+    "results/koblex-reproduction-v1/api-cache/3eb24b526d1b2f37220ca02ecf369133baa85b0489dcc7b89f969757dcff4f7f.json": {
+      "sha256": "67bd62297bc988e3357aeaab3277e66155de0565649df2bcec4444063dc1cf49",
+      "bytes": 1677
+    },
+    "results/koblex-reproduction-v1/api-cache/c4ef13cf5e5974686bc71cd6c5ff34debd6f90eb5b886bc08ecb3300ff1ea446.json": {
+      "sha256": "cff523443fa512a6c982388f7c37b77bada271c0d737ae529dcd04cb0b23f0cc",
+      "bytes": 1666
+    },
+    "results/koblex-reproduction-v1/api-cache/6b751c94d756f5ee7410a6889f7e189b6d26e4a569b6595201a75399445a3328.json": {
+      "sha256": "31f74c3ec29bd6d9d0871bce2e6c15da367a1b19c0457352c6f21e7d723dfe9d",
+      "bytes": 1945
+    },
+    "results/koblex-reproduction-v1/api-cache/c70018621ad45c0359fedfeb5c3869ff5cf5b60b09a9528e40a2bdd360350447.json": {
+      "sha256": "611fc04a3827c0e1a442fe70d49b3e3604986688a143e2c88b44047a11c5973c",
+      "bytes": 1864
+    },
+    "results/koblex-reproduction-v1/api-cache/6b6c0b63a355d81f3c6deead92f3763deaa2f0f08448ee5da8889e24955f79bb.json": {
+      "sha256": "ab9a3f89df85503cf641509a8ae81eda5c1ff9000389e0e6876433b08eb0e985",
+      "bytes": 1646
+    },
+    "results/koblex-reproduction-v1/api-cache/fbe1b971943604174feb0f6623edc849d6a78584b8e59fcbedfe3104bdbc7fe4.json": {
+      "sha256": "d701d504869789a75b6dcf795377801a9362afefbaad2d9b5b279f1dae1f207e",
+      "bytes": 1643
+    },
+    "results/koblex-reproduction-v1/api-cache/98bc2bf00a458c26f4b73e9b464ecec1c3479b310a85c4adfdadb222ccd86055.json": {
+      "sha256": "6046b149e6a659088cef20ffeaf32c0e2d2bbf024a2e3e97dd90d70ce30d7c10",
+      "bytes": 1491
+    },
+    "results/koblex-reproduction-v1/api-cache/de87148b1160fa84f2dd87b13f43e2c30b310a134cfbe8152a371df711a94010.json": {
+      "sha256": "accfa5a4d009208b827bed2bc33c6ca5345c7e1d8f176a4376abef33ed3bf899",
+      "bytes": 1595
+    },
+    "results/koblex-reproduction-v1/api-cache/eae777d510ac46d5156027afdb3ef63f86fa75c8a9a5787b69a71cbadac3677c.json": {
+      "sha256": "ab31ad76163108b8b9d289cf953e5e60f9af78cf5fb0d61ecf223b77c37b68ce",
+      "bytes": 1483
+    },
+    "results/koblex-reproduction-v1/api-cache/8745f239e519920a306eff99676e44f833803d27851159f6ddd63290447a7542.json": {
+      "sha256": "9b2657fa9754235ec88139da46324cce651a2a0bee64cd252daa3465fc05c298",
+      "bytes": 1490
+    },
+    "results/koblex-reproduction-v1/api-cache/316593e95bc87312b15acbd8d3dddb1e90b5d01f740052d122160a3508e7270a.json": {
+      "sha256": "6eab7685ef9430af1f0b6a65bcc41a01281528a3cb996eac22546a8bb71d1327",
+      "bytes": 1442
+    },
+    "results/koblex-reproduction-v1/api-cache/39865946622267024835eca562f0074363cc6e4cb5ce751033c5e3213f43f7a3.json": {
+      "sha256": "d167c2775913d5f2f1a82280d3f727ba9e1b77f87c7a80a6cab9f266e97c27b7",
+      "bytes": 1681
+    },
+    "results/koblex-reproduction-v1/api-cache/7a8f95b615a2b6a1ac3b93528f842e1036b308094efe852477916b38b1656af8.json": {
+      "sha256": "d45e51139c17152c7ea977fa44f529dc08338420bd3b985ecea71fdd61eec62b",
+      "bytes": 1616
+    },
+    "results/koblex-reproduction-v1/api-cache/1a33e4deaae93afebdfc01ac5837e9cb545ddd8115fa273c6da4d4c3b64392d8.json": {
+      "sha256": "f0e1747894f7e276a05ebdcbc9e85fadee18a57ef7fc6761a7c62c5a870b06b8",
+      "bytes": 1581
+    },
+    "results/koblex-reproduction-v1/api-cache/45911e43ba81345987f528564f915329b120434dad5768739885eb346be02ea2.json": {
+      "sha256": "d4e61bcf0107192a8950b9a78a920616c7ce4d42be3781091f3c7b5b7ccb3ec2",
+      "bytes": 1679
+    },
+    "results/koblex-reproduction-v1/api-cache/4a4d7c3465924ff33b102230f643c251b8c5ddcd37f61519853081b98bf0537c.json": {
+      "sha256": "d645c764416bd187d5abd4543647b4c3af1334d076019e61757296ca4ff83a4b",
+      "bytes": 1764
+    },
+    "results/koblex-reproduction-v1/api-cache/207d399758f777d4169a2c7372976a30b4fd095165278f01eaad1e8f07da8f07.json": {
+      "sha256": "c11eb22820e8392c1178fe082316eb63bf769f5b27894e2c4209b61a7859888b",
+      "bytes": 1638
+    },
+    "results/koblex-reproduction-v1/api-cache/28a4562df8beaed33d27e4b1835b7af88e05109abb2031dc436dff28db089f5e.json": {
+      "sha256": "b231efa213e5c47cd0a4e38523243e2842bc503f8afa0a0f9652ec996e665046",
+      "bytes": 1536
+    },
+    "results/koblex-reproduction-v1/api-cache/d620dff95d67fa4ad67084a6378f0f4dc20e5f6fff659f8fa7c639f1073a3a69.json": {
+      "sha256": "995c7e2ff52d9b4a157284b28ac20fa8dfef2dc9e4829e466f80c35d163d9b55",
+      "bytes": 1689
+    },
+    "results/koblex-reproduction-v1/api-cache/1531366a39dd59f0e9cb6092e102284a5b511dc4f4cbe5a9d1aa367ef86c9a47.json": {
+      "sha256": "0a2e62f569d362c16a0e18cf267e9d69ccc149d2b430e9cb4a43aa612892574d",
+      "bytes": 1821
+    },
+    "results/koblex-reproduction-v1/api-cache/6aa3e5524343d12ba14120ce320a30613d034f019b0eeae06db1e4a30812fd48.json": {
+      "sha256": "b528840ae8423aa1a72914a2d3117633464fde417e66866e21bdd4c9f5df6cea",
+      "bytes": 1649
+    },
+    "results/koblex-reproduction-v1/api-cache/f0d710ad15abe7a13f5ca2d0684ceb9fd057b4a33060405ac55f12d75b2ca230.json": {
+      "sha256": "169daf166070a9b0aefcd9eafb41ff87b21729dca0a68ea4aa4617e3359c5a5a",
+      "bytes": 1614
+    },
+    "results/koblex-reproduction-v1/api-cache/789c47f18ee3b86a90a2c8878f2bd8d72a0506f1656611038e0dfdbb4e649d00.json": {
+      "sha256": "5c6eade26a54ac6788ef59995df76e2944354aa339529e5d89415195892dcc60",
+      "bytes": 1578
+    },
+    "results/koblex-reproduction-v1/api-cache/d6b97492e785ecc52c1a4936ff7d2583c58cdc93857227d7d718abfa1bad4e16.json": {
+      "sha256": "b560fe80bd66aae44644a37344a6739939703c008be5cee4f327748cf2609a9a",
+      "bytes": 1572
+    },
+    "results/koblex-reproduction-v1/api-cache/15ff6618d2012237c47d143b1ff94646c044d9c058d0faf521225cc86e89031f.json": {
+      "sha256": "116aeff6090b0f88908ead653099ef6b98aa183475ed781da3d38af23f785c10",
+      "bytes": 1514
+    },
+    "results/koblex-reproduction-v1/api-cache/6aad8ca1d38f13d19a66d021f0dd4e28e5f7541e90547ba7684d43c1eb06ea6a.json": {
+      "sha256": "3e49f67b5f94c025d281c37218f65bb20d75e382ee5ae3c9949998ef065d65df",
+      "bytes": 1487
+    },
+    "results/koblex-reproduction-v1/api-cache/f3ed3cba7ab5dd93b07523dbf76e79f62768e12538f5e227da90a7c40de83745.json": {
+      "sha256": "2b29e07979898b1ae3d1439b610193909b92cae509146a88e3df5ca0f89a9bb4",
+      "bytes": 1836
+    },
+    "results/koblex-reproduction-v1/api-cache/e8ec8df8ecefaf9d73362ff66badb44c9fb2ba0eba102631fac15509c7c5a8cc.json": {
+      "sha256": "fa76efa29f77f1d2de4454f978704ae4d892e32965202a852b066c90aa2a887d",
+      "bytes": 1799
+    },
+    "results/koblex-reproduction-v1/api-cache/58a85b78bf85e4bfaa2865c94ff21277eb9500e97b157df7a934fdee4bf3c728.json": {
+      "sha256": "9e9eff1e0353a964ef3c0e14e11382516aa0268494c0a9ab2ce0f60532340213",
+      "bytes": 1772
+    },
+    "results/koblex-reproduction-v1/api-cache/22358ac6b9060d78ce1ef70e5e154e28049a8c03b1bbead6c491f05e9712cf0d.json": {
+      "sha256": "64502c82106fd066ec7efdebeeac40e018556063ceda8b56d4a84bce893c89d4",
+      "bytes": 1804
+    },
+    "results/koblex-reproduction-v1/api-cache/1c28facd48b225b8278593ea9905fdbaa25c1b1c615b59f919a62649408393fd.json": {
+      "sha256": "ba4df8149a1400c6568d193a5b75c519f5059195351ba40f49dc1d02a7482199",
+      "bytes": 1888
+    },
+    "results/koblex-reproduction-v1/api-cache/0201a724532dd40c7e13f6b7533863212946b6dc7ebbe0d8227c009fb360f1ab.json": {
+      "sha256": "90c4b1a06e65e4cc6bcb2f2ae6e45f4834c9697a55e8bc34e24f1534724620fe",
+      "bytes": 1695
+    },
+    "results/koblex-reproduction-v1/api-cache/50bca3dcc10d2096543677053504b42bb2d731187d64ac87acaaa7c311a697f7.json": {
+      "sha256": "856eadf5fd22af767b69f46fe59d84c40725397be7939403b112492e39db181d",
+      "bytes": 1661
+    },
+    "results/koblex-reproduction-v1/api-cache/38100a8aee3c8787711f7d19e3f0e1149e7b4edcc6faa98dc70af49b2407e3b3.json": {
+      "sha256": "dba365246d4cfc946b28d5de10f4a600f190c1d07dcc4c9f8d0cba06d29aa840",
+      "bytes": 1574
+    },
+    "results/koblex-reproduction-v1/api-cache/6eb82628cceec6f4491990e2a08e4a36c700b594247f6aa3c8e92d976ef948fc.json": {
+      "sha256": "cce42269d40804eaf8dd7925737de8b0d949fe0f6bfd18f2597158de55b80847",
+      "bytes": 1456
+    },
+    "results/koblex-reproduction-v1/api-cache/949284ff270bd7975eb26d80cdc3bfb021841f7b77fc24428edc5eee70dda05c.json": {
+      "sha256": "4c0d42c2e1918e607ccfba789a61def957cb61f6d0a7f6ef06ba8188fe011cfb",
+      "bytes": 1627
+    },
+    "results/koblex-reproduction-v1/api-cache/7c376d69efbd3f4b9f9d13fb1b706e27bf88b57483d4c546549760bd34cb2ca8.json": {
+      "sha256": "63926213c3d4b219dd137b9838703ca268f89ffa9bfdaf68dc82529fc53e64cd",
+      "bytes": 1821
+    },
+    "results/koblex-reproduction-v1/api-cache/001b2d48fe83faee682f3ed1fcca22cfb524a83ef967cd85f3b04f86dbf25041.json": {
+      "sha256": "d95cad2401de444198aea479da66591c8f0461c4ad4ce9dd00af2b8b345a0efd",
+      "bytes": 1529
+    },
+    "results/koblex-reproduction-v1/api-cache/98d6422834a4d060597d4bdc02dace18d61e42cfed8c97cd3a164b04adbf9ffb.json": {
+      "sha256": "c0fc5ef071afde2dca83d4e6d583fb01d064601c75476bbae9ba55cf5fe7844e",
+      "bytes": 1675
+    },
+    "results/koblex-reproduction-v1/api-cache/5bac67c4030abd7ab2f6c212fec04d624a7c12fbed00c3a0d71a7b49cb7a7a92.json": {
+      "sha256": "effa6ac680571e3a36d0cfb2c86720d7df46c8b47d3b9a5300b247e51253798d",
+      "bytes": 1828
+    },
+    "results/koblex-reproduction-v1/api-cache/1bcfbe900609d07883697a4ae9b19a38da36b8f2ced6a9c8aa47d47d603049e6.json": {
+      "sha256": "800a2e53bc62c4190d829e55bbacd21a06bb01fecf65e10da980a5dd80fe9e4e",
+      "bytes": 1629
+    },
+    "results/koblex-reproduction-v1/api-cache/b399d5865a03459cd25ddd242ba5fb5d71dbdc970b6263ae81d68698849c12c0.json": {
+      "sha256": "d0c12ce575863f889e55ca898f694478a48762060efd3741c4f642a473c3a9d3",
+      "bytes": 1678
+    },
+    "results/koblex-reproduction-v1/api-cache/2a147c8433a798d4c37efcf5225b53aa6cf45c235c0b0e93f2839719c378656b.json": {
+      "sha256": "f29bd68626a1ad356c970969c27729962978c651d520a9cde5e7a286593abbf1",
+      "bytes": 1534
+    },
+    "results/koblex-reproduction-v1/api-cache/4a90e75018ff0894e687e2469a6c510dee768e7c9204fa112524ebae15c4bfea.json": {
+      "sha256": "171a0509257e98eadbedc5d1a6cb3c9418a6d426a2a3393ee1d6f03fd800219a",
+      "bytes": 1532
+    },
+    "results/koblex-reproduction-v1/api-cache/cf84f9ce3cd6e9c4530f3dd9023ca26d18ef2b1ffbe72ae85f7d45974d9627b2.json": {
+      "sha256": "a4cfddfee03b56205779ee98c6d25bc39f095abef11d26e7d86434d7a9a72351",
+      "bytes": 1746
+    },
+    "results/koblex-reproduction-v1/api-cache/ce1e0cf5463049df17a0eca96acc8bda6fcb09de1a5d7d9c42e18e9e27c49ebc.json": {
+      "sha256": "7d81165319236e3429b01964ef879f5012cac5bc55c459abeeef4aa895f2937a",
+      "bytes": 1627
+    },
+    "results/koblex-reproduction-v1/api-cache/ce0241dd4d6a855734752dbee270c7864577546774685e0303c9cfad6b5cc49d.json": {
+      "sha256": "290dba3ba2e9864c7c91b8554dba4beb16bf473e10554fc787af5e5928e10a0c",
+      "bytes": 1872
+    },
+    "results/koblex-reproduction-v1/api-cache/397864ceda2fa36d5ceb738aaedc7a68dbeebbc931b6f80c13cc3adfb80ad1f7.json": {
+      "sha256": "b40ce68b4d2fb9c719fcdee9af12c91ded98b79b918ea9771050ef842ef80240",
+      "bytes": 1657
+    },
+    "results/koblex-reproduction-v1/api-cache/15c83077b3069173ac75a74009cfe8e9c3e0f3bc995fd6d8b9fa050f01b1d2b6.json": {
+      "sha256": "8b87ced8af9857a1e6064002810c36abdbde6ae5922cbc662aafcd961817ee60",
+      "bytes": 1605
+    },
+    "results/koblex-reproduction-v1/api-cache/75d6eea13ce3f561f6833eabb14b40465dfc3175360b21252009edc61f9ca772.json": {
+      "sha256": "c79aa5a0032df53de0a58552a00fdef45e3eaec37f5b8884c224ce03d53ae19c",
+      "bytes": 1754
+    },
+    "results/koblex-reproduction-v1/api-cache/4545e012542f7dd6218ccf4c5866da453ee097a72f4378e7fe0a705d87e2bd55.json": {
+      "sha256": "759440b417d96cfa5a4f0bb8be197f25235b188456fcd756255e7db944f27bfc",
+      "bytes": 1792
+    },
+    "results/koblex-reproduction-v1/api-cache/b40e328bccf52e5dd843e594d2dcf3ec688f1a8c1bd8ab864ef7b4421ab2c104.json": {
+      "sha256": "1720560a327124b4349ff0fe16d51c7ea55026b4803158a1a21dd8e16e12417b",
+      "bytes": 1641
+    },
+    "results/koblex-reproduction-v1/api-cache/a51b86c9662b2e69d79c78dfd3134f4fedb6c10f05f36d22e8413cb26a6855a7.json": {
+      "sha256": "acb84cfed030800f0f8be2d666f005155243d09e2dd34e5ba7eaeb6d63e2121c",
+      "bytes": 1843
+    },
+    "results/koblex-reproduction-v1/api-cache/4e1dee17b97393af5a95be8414c4651ffe253812d09abd0985f47fee87426a77.json": {
+      "sha256": "6d2ff5b0a76c869190354d5903969e33da41de1fe285c29b6edb4597929947a1",
+      "bytes": 1606
+    },
+    "results/koblex-reproduction-v1/api-cache/ab9a92e6d6d02e50142792c2dd86dd3535506cfb267a524e10562a4a979fc66f.json": {
+      "sha256": "3926ddfc4ab15408a824b0f727d51b2eba2d072d396d41b030151b87473a7b70",
+      "bytes": 1696
+    },
+    "results/koblex-reproduction-v1/api-cache/a07bb6520c7b8a1338957d3584af6d85de8071b0767a77dba7054cc8239cc857.json": {
+      "sha256": "6e69521282edcfe9db82af3968566784612becde65184953e7a76a0a9b951a7f",
+      "bytes": 1800
+    },
+    "results/koblex-reproduction-v1/api-cache/7392b83bd55a78c93df20f546f896803cf43c40f294fae64f91a9a2a6028026e.json": {
+      "sha256": "b1af3e3f4c4d47e813ea7f8e0a314d7b46f01080ad66681277b6e7bdd18f3dee",
+      "bytes": 1467
+    },
+    "results/koblex-reproduction-v1/api-cache/c4bd76ff124e9a7b0a956b6929aafa2144fa1268173f8855eea021e7684e76c5.json": {
+      "sha256": "7a3f6f5dd63f58d50c6c5734b347c1c5732481224b731352888e37e68d455ee0",
+      "bytes": 1676
+    },
+    "results/koblex-reproduction-v1/api-cache/0df414f832caac83aa453f4f0f6edd5d7b22f0f27af34b8acc2879fe34407755.json": {
+      "sha256": "2f49576ac28f20d39eab2000a05f670d826ae0f9ad52b5e820a1906be17cf50f",
+      "bytes": 1680
+    },
+    "results/koblex-reproduction-v1/api-cache/e3d06fee5079d7e6130badd5a7539d316ff1abb9d47ae9d9b814db6a7e319729.json": {
+      "sha256": "17a54d69bb059de2403a22a3d1c4bfdf6baef5ca958700fae0390db14d7e6c66",
+      "bytes": 1775
+    },
+    "results/koblex-reproduction-v1/api-cache/7c9612fd5e75924b9f2836e6110be6c77e51dfad405b769f5f2885f6c0870cfc.json": {
+      "sha256": "a477c1f28265ac83acebed1e0458c96e7fe1275645038b800f9460e1452a9d09",
+      "bytes": 1686
+    },
+    "results/koblex-reproduction-v1/api-cache/7ada73772bb9e953021944539c7ff6f9f016383cca8c831411efa60f745e0412.json": {
+      "sha256": "1ff17b9ea9cd0b0d1ea25bf4d41bfbe1e4493e80f1aeb9786714d8d3d45473a0",
+      "bytes": 1621
+    },
+    "results/koblex-reproduction-v1/api-cache/c049787f2151485820d121a4864feebad2cf4effec893994c9f9d2edbab03a10.json": {
+      "sha256": "4176d6d475d02413da0af42b2328c9d71ed942937d594cd87ad2ef3c2e41ff5f",
+      "bytes": 2214
+    },
+    "results/koblex-reproduction-v1/api-cache/4ef91623377039ad00803cef2d9db83c0b39b91c150afee42c9c8fd6c3730902.json": {
+      "sha256": "78d639a05b93ee2fcd21131da0bc83bf15632d49ff0f75c2770800bfeb4f634c",
+      "bytes": 1846
+    },
+    "results/koblex-reproduction-v1/api-cache/8583418ab90478c1b0193272122db13b29afccbb96452a6b61a7e3edd09953f1.json": {
+      "sha256": "8c955158f70de2210ab30f5786454aa19c8424cca781e1166bc7d359e9e7bd50",
+      "bytes": 1775
+    },
+    "results/koblex-reproduction-v1/api-cache/6d91bff8ba0029f4b37b21962d1b0683f28ddb67bf0ccd8a466fc9438840ee73.json": {
+      "sha256": "6db953ee051d8ea09648f0fbfe182d361873c810361c4536e18f9f35b5bbbee1",
+      "bytes": 1455
+    },
+    "results/koblex-reproduction-v1/api-cache/5df61ffb513e93c2898d0b986ba666daaaba763dc8fc2eba636ad9ceb874b283.json": {
+      "sha256": "1d6dd7e748fde6589a7a8735fa05a4d2494bc5d770c05610115db0833d53f31d",
+      "bytes": 1679
+    },
+    "results/koblex-reproduction-v1/api-cache/0648ae354571e441fea4ebcaed9cd3cbdffd511983432ccf9821c30fdd298614.json": {
+      "sha256": "ea4064e35053219e27f53e970c202539c25e26d64fea981bc5ae7710a093a831",
+      "bytes": 1588
+    },
+    "results/koblex-reproduction-v1/api-cache/c8d5b7c8aaae7356fd5393a94f7a23a9e47f2497a7b83cd08f826358afaacc08.json": {
+      "sha256": "167b4fb8021b37f6a7727d2c63c9b6f22130521374d6242424c43197c40e291d",
+      "bytes": 1512
+    },
+    "results/koblex-reproduction-v1/api-cache/f31f077b117350adee973b0e8e9c5f012455525368077fd59c283f98ae113c45.json": {
+      "sha256": "71dbec256f7907823a96eeb8c5fa25a459e0bce426347db8072bde774a11c574",
+      "bytes": 1771
+    },
+    "results/koblex-reproduction-v1/api-cache/e42dbe877b2ff4437fb592261c6d3f18a0b5981e6ed4d464aea8672ec74a43aa.json": {
+      "sha256": "1859c0233b8343b8ee872844b692d30976d29cd1f4e1e4a2f9ab88ae3206abea",
+      "bytes": 1652
+    },
+    "results/koblex-reproduction-v1/api-cache/e7ac40afb1a6a8b4210d405b95c5f420d7a678284b00d4763eeaa70aa5df0533.json": {
+      "sha256": "cf2a3cd116dd9a8c1c2981a07a20011b2adce553c5549a6ed5418d19b0ec3188",
+      "bytes": 1650
+    },
+    "results/koblex-reproduction-v1/api-cache/d224d3ad33573013c38857b3b619ba0773ad6b36131d8746951a68a9706fa124.json": {
+      "sha256": "be02ea175167852a932d1529b86b0f9c3e56050556dddc175ef273af41235c66",
+      "bytes": 1689
+    },
+    "results/koblex-reproduction-v1/api-cache/075035b85853891051d80b42563c5ffbe99c2176814cf096b48507310956096b.json": {
+      "sha256": "c46d58d2df803be594c650bde20861cfbbeeb1c0d454a19bbe31cfcf87601588",
+      "bytes": 1702
+    },
+    "results/koblex-reproduction-v1/api-cache/19ce956e0a24e2d07051775743c80fca835745716404e3590fcc469f98d56cde.json": {
+      "sha256": "ac5e86a8b64fa7728a6c4b84f3c2f116206bc564a5b53136f8fcce5362b2a9d0",
+      "bytes": 1499
+    },
+    "results/koblex-reproduction-v1/api-cache/04ef865a0737643312ca833bcf89edca261474cd79da8a9e05ea34742c26eb20.json": {
+      "sha256": "686a17800bd7cb143b6ee62307c13a60dde7df615a77451f85d601e08ce13678",
+      "bytes": 1828
+    },
+    "results/koblex-reproduction-v1/api-cache/867eba40bb3485ab7ed01048273702516d2ea4d470ca2cd2ebbe5831b375e8df.json": {
+      "sha256": "e76e8db49dd63c8981257f1dc26ceb2528fc92814947eb60dea178c1b3c39f2c",
+      "bytes": 1745
+    },
+    "results/koblex-reproduction-v1/api-cache/2c8dc1b63c9d69780c6f516c70ec86c397cd46227a868295ae8825963ee39cb1.json": {
+      "sha256": "da235dfb1b2965ae8f6787b72d149ffa32da75705c3e349e8fb9ab833cdd237e",
+      "bytes": 1582
+    },
+    "results/koblex-reproduction-v1/api-cache/a6c28c6dcbd41952d86d9f87d140dff1637a4b238b46c86d49413f89c5dbd456.json": {
+      "sha256": "2f865d84d93013cadfd4ffe191cacff8717586b269a652eb0ce0b4978ee1c208",
+      "bytes": 1542
+    },
+    "results/koblex-reproduction-v1/api-cache/92584462614c907238f23553a738d55731c585c9f26395769815ec79e8220d01.json": {
+      "sha256": "e58ac8c15b28277977d2f80c0aa0b5cd015bd75e87f21faaed739b683a189042",
+      "bytes": 1541
+    },
+    "results/koblex-reproduction-v1/api-cache/7809bd04b333942fe29d491181ca69c692de584043974523aba7ab5abb34c023.json": {
+      "sha256": "b8bb7a3667a12b870d79d782418ed593db1bf1fd4d33d5a13797bd35ec8ac50d",
+      "bytes": 1536
+    },
+    "results/koblex-reproduction-v1/api-cache/cc483a840664a5db92af54566ef6e664fd67574c5a93254f002a27341c67907c.json": {
+      "sha256": "0c09bcf631b8f88f4d10ba992fc7691a5e7e005527642b137d5e663153166578",
+      "bytes": 2094
+    },
+    "results/koblex-reproduction-v1/api-cache/916d1f6780633c7318d2bb07a0f291c0352038daa76173e18fd92ca3f65154fc.json": {
+      "sha256": "281c3b88f6e29efd83c4bacc2e2b4fec4c453f620016d9dba1fd8981f64c7780",
+      "bytes": 1622
+    },
+    "results/koblex-reproduction-v1/api-cache/370751b0fadba2f971b9f8ed4ccd27e3929bbd0f1cf94fd2e47875df7519cd4c.json": {
+      "sha256": "fa18d95ae53f7c07745176cf316af74122e93d645deec624f467b2ab70a0878e",
+      "bytes": 1746
+    },
+    "results/koblex-reproduction-v1/api-cache/2d3a6866c9a916f87617f6a24a79213b14c587be59efe19aa7f82e3cb66c348a.json": {
+      "sha256": "37881cd12d6a8e0be281f5c360eaa7c088b535e41c3268d4f97c653ba94fab04",
+      "bytes": 1690
+    },
+    "results/koblex-reproduction-v1/api-cache/1e60f19d5056f96b0770b2c7eafb896aedf46e7550a429f486b5a6146c7dddbe.json": {
+      "sha256": "345d4bfe20bc5c43608ae82fd84c617c5dc07af3e23ca73f5be464a97412c725",
+      "bytes": 1668
+    },
+    "results/koblex-reproduction-v1/api-cache/549123fb4e8009d7f6497e3e402daeeb0c862fa9ee9c7f14687258394fc1d237.json": {
+      "sha256": "977f8801bf9522559e35e17414f46bbe031237160ae86d05070de27255c07cc9",
+      "bytes": 1570
+    },
+    "results/koblex-reproduction-v1/api-cache/3ff27b4db95cf1da1749169e40bed0b65aad681f4a9c07d63f7c3236c7366003.json": {
+      "sha256": "d4b67f22cc50e6cd63d6329b6ee8eb6815a63199e07a9250ecb7e07e1c207e28",
+      "bytes": 1963
+    },
+    "results/koblex-reproduction-v1/api-cache/6564343fdc8fd1c5be9ceca55db6f3524d470dfd92165bb1e2aa24e69a92fef7.json": {
+      "sha256": "9cbf74c78c1715cf2d63b55a370b536c4ff2f0751bffe4a230d778c62647d810",
+      "bytes": 1790
+    },
+    "results/koblex-reproduction-v1/api-cache/bfa22c25a5859c3066cce7fbf4885020e5a54bdc1096e4c10affbcc8d5a1d02c.json": {
+      "sha256": "4c1646008637a58dd936ef8595d57906e0239b7bf5d4fc100096516edd7daed9",
+      "bytes": 1799
+    },
+    "results/koblex-reproduction-v1/api-cache/5c6ba72d440f80f3d445a08715e96535f1cd7a81358d3b944de4c0ce83496332.json": {
+      "sha256": "20144964fb3b8c4a62cf994244021c4bcdd09f6792b98ff823507f3c8644fdd8",
+      "bytes": 1945
+    },
+    "results/koblex-reproduction-v1/api-cache/d717469e399745fcad420a2b68076d164724d7da85d151aacc284fd20e879bd8.json": {
+      "sha256": "282c1f7649105bc9cd4af7ad636ec01340bdafa435d3e7e892afd2617920dc3a",
+      "bytes": 1774
+    },
+    "results/koblex-reproduction-v1/api-cache/1e02a8ff36be6db69506791d853933e000aae0cd607d38cd4ab5ef35991086ce.json": {
+      "sha256": "157378ce9e5f3fb12253ce2464d00b0786958aade776c6fb30ed7c1d975a6344",
+      "bytes": 1623
+    },
+    "results/koblex-reproduction-v1/api-cache/d45a2e5cab3ae2139470b19bf0585681333a6fffb5551a1ce61ac68d7a908fb1.json": {
+      "sha256": "7c8804dcf1971b02cd7143f0550ebaa96552a9d2820cef91c4abbc7d4550e452",
+      "bytes": 1589
+    },
+    "results/koblex-reproduction-v1/api-cache/d0cf86c7ad062dc4f9cac8489cc5d1f49be4f7ee05524f56cf9663bd78e2b17c.json": {
+      "sha256": "3989ab9f88cc8ada4ebb27715d610637a09b2563da891bd91d45ccda83f3e2d4",
+      "bytes": 1854
+    },
+    "results/koblex-reproduction-v1/api-cache/197d1b308f97a7a3cc1d15042f8e898fa51bd996e724ee7906a7afdd4333fab0.json": {
+      "sha256": "92649cf5f5a6c0cb2cfd50020d8f0409a83d940e1339b072d9d4d3aaa00a51e4",
+      "bytes": 1896
+    },
+    "results/koblex-reproduction-v1/api-cache/314f85bd578caf6c6471ccc199424ee49ec9b9c8a4561a093f9c27842b5ab4a1.json": {
+      "sha256": "92e3f4a8c5af936c6d2c93e3a27a06804389b33ad9c877960ae30ea083b30313",
+      "bytes": 1592
+    },
+    "results/koblex-reproduction-v1/api-cache/fea11e7e6e369d4211f79a3f9602b9e3ff6524e27004200dc01ec3f82ffe0763.json": {
+      "sha256": "20af1035653d1b52d9719a42edb5401822e3abfdc377fe1f9f26a0f8a2c9c26a",
+      "bytes": 1608
+    },
+    "results/koblex-reproduction-v1/api-cache/7c9d2733e8aff40fe8cf142b4bf6c3036672f08e016aaee375aaa951266e8dcf.json": {
+      "sha256": "6541166f0a7dfd61f02bf8c8101a20df54ccaf95094a3213a7746aced6481b53",
+      "bytes": 1516
+    },
+    "results/koblex-reproduction-v1/api-cache/d61adb54f77fe94ecd687a5e8cd0c1be2d2642bc6158ba8d65318999a008ffb2.json": {
+      "sha256": "504384c511d1dca4c07454da00dcf46680eccddcc42f2dd00786ea74d49777e9",
+      "bytes": 1937
+    },
+    "results/koblex-reproduction-v1/api-cache/77e871408246071370e8fdf24894794fc64130f584ab0fd6301abe989e1e6a8f.json": {
+      "sha256": "12f816c6737277fb925d52bf80930b41f87e5453b5a13043e00f76eaf8f4b7af",
+      "bytes": 1897
+    },
+    "results/koblex-reproduction-v1/api-cache/676732c6f81cb589e1b4bdd434e7f74502050a62998abf9cdf3d6d6e00c32158.json": {
+      "sha256": "95fbb709ec8f126832091f0ef5b6f39a022c48692db9aa7878bc083b30ec7977",
+      "bytes": 1732
+    },
+    "results/koblex-reproduction-v1/api-cache/bb0667674b825b6683a208f397e21d8bedc287b66d215e8c5a4b1f6c9b801e64.json": {
+      "sha256": "6f36026a196065eb29a1c8a6a814c1a24cb0dced07aa1518e0cea885b0de4c1d",
+      "bytes": 1661
+    },
+    "results/koblex-reproduction-v1/api-cache/6cf71951409484164bf3468b06bb2449e5c82b7fe4b44f62db0b2a3872e77550.json": {
+      "sha256": "159947b50d2aeceaa99f891c6a13f4a8402de9c416c651acba5427a565c57db3",
+      "bytes": 1780
+    },
+    "results/koblex-reproduction-v1/api-cache/2a1c6edaf2607fe03d40ba55e2522d295c3b8156d81df239b7d0bfc2eb5d0711.json": {
+      "sha256": "ead85756013d29b35403c725773bac2d77a82ef83803f0474790eecd4666f3c0",
+      "bytes": 1547
+    },
+    "results/koblex-reproduction-v1/api-cache/0d61b2b39477806a6e0da9dca3ef547d9196a9f02c7fd61acf74714dfbbc5a0c.json": {
+      "sha256": "2c606edf8acea50ac99876094ed25f45674595e839b15413be69e405bc697a41",
+      "bytes": 1759
+    },
+    "results/koblex-reproduction-v1/api-cache/564962b8f77cb5fcdf28fc22924686460bebe97b662dffcf23b4bbd509d4385c.json": {
+      "sha256": "c9e1729a139818d8e15fe2af9d090641578d35dca13aece55bbaa8059aa257f9",
+      "bytes": 1612
+    },
+    "results/koblex-reproduction-v1/api-cache/ae10daad949d35ecab762e1a30a7a3c41c080d59069f57dabc3d8deafeb2be0e.json": {
+      "sha256": "c231acbb36afe8223caf8cf48a8e10accd55cc07bfa386e2539273d23625a876",
+      "bytes": 1626
+    },
+    "results/koblex-reproduction-v1/api-cache/97f325817cdb57fadfe0782265c1b363e06b68f88c102981c9904a4a26be89d1.json": {
+      "sha256": "52ee3655841fcb8fbdafe1229fe079039b1dea4b1cfa36d9b90c10d9ed25dd8f",
+      "bytes": 1641
+    },
+    "results/koblex-reproduction-v1/api-cache/8049cc0acac3648023eb1dba672470166b8ca6e76863c4641c3b1ab9e1077b96.json": {
+      "sha256": "bc0921ae9a7f3080458372c7948c15b499b4088af242b8896504e2387ba9e5d0",
+      "bytes": 1689
+    },
+    "results/koblex-reproduction-v1/api-cache/fee3a7064bf8c325052f10a97b16e1003c038fc072af14983f77bd8bbc144a4b.json": {
+      "sha256": "bbf8d1a76a7f78dec783a2d46ea4d097042514d950b15e3b35a86138bd8846ca",
+      "bytes": 1719
+    },
+    "results/koblex-reproduction-v1/api-cache/45fff93e16c207db98be3439708bacb7aac9e971fa6e175d650537af265885ad.json": {
+      "sha256": "07f91894638f0b88942abbf44f96bd4918710b332307253405678623ab067021",
+      "bytes": 2011
+    },
+    "results/koblex-reproduction-v1/api-cache/862a56586458198574deda99d88d318afd8f801f72ab34b37d55e963cd2abb6d.json": {
+      "sha256": "822f4a4b50b8916c512c54140e7e2a8b236cd9fb1be4ea446fe94a7012d9f2b3",
+      "bytes": 1682
+    },
+    "results/koblex-reproduction-v1/api-cache/0cad06d480c7583faa04bf6330831c1b8b73ce482bb5855823cde88018a2a03c.json": {
+      "sha256": "03ab4c4aedbc71d88406093a37f1016e24fc1dc6ed9286fad54083688c23c2fa",
+      "bytes": 1668
+    },
+    "results/koblex-reproduction-v1/api-cache/eaed7a7bf9dc69acf417fbbc24ebc4214ccc9a7e7f3422fd7e5d56bab04f4088.json": {
+      "sha256": "0541566a18d6551cb914f80882202da9d5e1568b6fdd98048f445a068a2e3da6",
+      "bytes": 1888
+    },
+    "results/koblex-reproduction-v1/api-cache/c5e27db62313ae0548d42b991b759c944ddf09312e24a397d63b39d9aae6090b.json": {
+      "sha256": "b3fc7a39f196406d0d2268cea16d595b75a18e5329ba892be33251e0b16cf1f5",
+      "bytes": 1576
+    },
+    "results/koblex-reproduction-v1/api-cache/5411b8c06e64e9392d9cea570c0d88b3cc5be75268674001e6b5fd70ed97c517.json": {
+      "sha256": "9a6c4fd8c70710f80739f27e162b83fc36b24c91cb6e2d6c2bb652e06ef7f32b",
+      "bytes": 1562
+    },
+    "results/koblex-reproduction-v1/api-cache/fadbe162b219e131d7eaa1c9ef0d3d0b6c20b00942d66d86da7a45a005c01b02.json": {
+      "sha256": "f05a27fc1b933efe03f845d4422db82bb2704e84ce30b8c6865349a0f5d39b8e",
+      "bytes": 1627
+    },
+    "results/koblex-reproduction-v1/api-cache/c3fda36a92d726a5a6541c6ebaca15e5c503dd1e5ea7684844c92fd513bf6988.json": {
+      "sha256": "fc0feb35bfd52dd18cc5230edd48a9e9a0fafe6a466540a08db1956ea25e8d31",
+      "bytes": 1933
+    },
+    "results/koblex-reproduction-v1/api-cache/85c5f498d21fb0152f15b5c603ed07a5e53a9145f7e48d53adb0cc3f7342b827.json": {
+      "sha256": "3cd12acf9b3ad1b2b60c0a90938740e8844b3601084ca9ae295d74ea60c70427",
+      "bytes": 1646
+    },
+    "results/koblex-reproduction-v1/api-cache/4a093722ea80c259f2baab63fd7c8fe36e6361e7b55f83cfb83f22dad1cb7c93.json": {
+      "sha256": "4314a2140ff12198a9161ccdda9faa58cd36fb18ef67979b32a38e11e0e6b37c",
+      "bytes": 1666
+    },
+    "results/koblex-reproduction-v1/api-cache/4b480598761f343ffaa2cd0eddf642981fc1ab672ff431e003976575fd1238ff.json": {
+      "sha256": "f833730ddc3bd4aace4c4977edb71c2ce23ea28d38f6ebd8abac59721e170d51",
+      "bytes": 1814
+    },
+    "results/koblex-reproduction-v1/api-cache/9cb421b6ef8a1794bfe2ed60cedeea17fa5629b26c4304fbc43595fef524b8a6.json": {
+      "sha256": "a861475226196e7d1e9515c975d1a5a977fef7883cabef015bb2b7905c06ac86",
+      "bytes": 1651
+    },
+    "results/koblex-reproduction-v1/api-cache/9c3968b67ce378e24e0fa292e95fd4fc95bb69bb94e7b3d79091857f832b02b5.json": {
+      "sha256": "57736e8b2dcd7dc1023e35096a9250022094f2494fe65ba75c37b6dfb5bcfd90",
+      "bytes": 1533
+    },
+    "results/koblex-reproduction-v1/api-cache/0442421486c4da9af374ddcbcb707eec4c5cb9e9f7c7e94225b200c63369142e.json": {
+      "sha256": "73a72f46543ea3b13d474396215bf9da3bd207fc7cf878de6f7954ee3026b420",
+      "bytes": 1597
+    },
+    "results/koblex-reproduction-v1/api-cache/10af26671a209db19c3efe0ea24cf6ee3979b25451381c1e8b534afee2bd23e9.json": {
+      "sha256": "7090f1d2a93972c89eccaecd9264d49bb7cedb364cf960aa95d321eefbf92b2f",
+      "bytes": 1668
+    },
+    "results/koblex-reproduction-v1/api-cache/90bddd872a59ddcf0f6d7baa11dd46d8d1efc5d20c12f33273dfe2834f3bdf99.json": {
+      "sha256": "894e56b9ef80248dd9c7472167edbeab6e471f177ad9a408af975969fe12b3b6",
+      "bytes": 1474
+    },
+    "results/koblex-reproduction-v1/api-cache/96ee5cd48b73edf20ba16509f9df3b1586dd50076c858d2cbb4cb419a1afb0b1.json": {
+      "sha256": "7b5b9e38e46f21cd935603c8960e6ca90405eb4170eb909692d63f555501de0b",
+      "bytes": 1733
+    },
+    "results/koblex-reproduction-v1/api-cache/78e31a1b616b521d4e252a77d536e27212afde94f7f47e20915986213c1140b8.json": {
+      "sha256": "dd224c05acd6740099ad4a5e0839aeef206ad079d7db491c9e01c004661fc67c",
+      "bytes": 1707
+    },
+    "results/koblex-reproduction-v1/api-cache/52f471c5b2122b84a074dd150efd904866463a3fc25c70a582686ac06bdf758f.json": {
+      "sha256": "9821d63224aa0151d7f7d349a14a60d2b439df03274e2db493b86ff591be6c69",
+      "bytes": 1627
+    },
+    "results/koblex-reproduction-v1/api-cache/e9d577b15f418642a8903f26ff2ed3d05a7b2fa03302c91a01499575512f2f50.json": {
+      "sha256": "72479073ad730cc2318973fe58e15734bfe23faaacd8c8b4c0693c0954dcaad4",
+      "bytes": 1650
+    },
+    "results/koblex-reproduction-v1/api-cache/8b24bd93cd6785f6edfb358328902d7cfd272e53bd530d55a195b5349efc99c0.json": {
+      "sha256": "a6442737a31b5ee8330a10eec87835433fa47bd9853d6804e6586fda57086b7c",
+      "bytes": 1579
+    },
+    "results/koblex-reproduction-v1/api-cache/433c8f0b9f617f65ca0544c9ebd6bdeebfe349c0746323061b896981fc6c8b35.json": {
+      "sha256": "6d0dc9039e17898001bbb64b638677b24d0342afdde1bdbd38b4ba04ecb00fb7",
+      "bytes": 1603
+    },
+    "results/koblex-reproduction-v1/api-cache/baed81b39ad8c9a722b02156700d75f1fc1b7d1090cf8c91d4051ab6ae26dd66.json": {
+      "sha256": "a28494345f01943024488222035abcc96a229f6c78fdc68b6001d4d124fbd9e2",
+      "bytes": 1631
+    },
+    "results/koblex-reproduction-v1/api-cache/51c0dd137c488b357432c4a9d04710a4c9e686d8961cecfee16a39731e724579.json": {
+      "sha256": "e3a6bc13655dc36027e176a02b29765b68ce6b8a242982b19ca6d9c4195718df",
+      "bytes": 1613
+    },
+    "results/koblex-reproduction-v1/api-cache/d82c1e1caf1bf03f7c421ed60f534f0775072a2a6e3a00054a0315d02817550b.json": {
+      "sha256": "86b0bbbfd7a333a074271d436fc9c4d013d071513aafb5b68808afe1a395c8cb",
+      "bytes": 1640
+    },
+    "results/koblex-reproduction-v1/api-cache/1635ded8d3c766654df1871fe3f7c483722006dd6a0ce966fbc18d5c6461c562.json": {
+      "sha256": "31c63893be57c7b2509be72ad10ce0e70ca102a6de938cd8ffeb74b2e2b465eb",
+      "bytes": 1816
+    },
+    "results/koblex-reproduction-v1/api-cache/8cdcf1eb1211bc61001844a9dcd5ded27dd46d53334e13f83823a6e50eb93616.json": {
+      "sha256": "b0c7044b45ef9027c196f7f043cd42a4fd834cab6705f09846913f9f70a998fa",
+      "bytes": 1622
+    },
+    "results/koblex-reproduction-v1/api-cache/693d40a5aeb6e413e7ecc44742b30428d52c210338de01011ee1995d38c9ad65.json": {
+      "sha256": "f5b1a9d2b08da7046add68d66aa340ea70ffad2ae12a645bdb0ccedc6df369be",
+      "bytes": 1676
+    },
+    "results/koblex-reproduction-v1/api-cache/fdfe9c4ddeb5267d5cd8769a6a22ac0ebb5c58ac87410cf753f2f9123a5c23df.json": {
+      "sha256": "c9483d86e24246318f7ce7a6864b0254caa5ff51d0bc9ace57d9dd9cd2694bac",
+      "bytes": 1570
+    },
+    "results/koblex-reproduction-v1/api-cache/d95a335f36fd565a6213f247702f464774305477f610945e89c632276b61132b.json": {
+      "sha256": "34cd8ff32b226e2597c9d53497eb25b16b549920ea6d38f35e243e31cad7ae7e",
+      "bytes": 1692
+    },
+    "results/koblex-reproduction-v1/api-cache/3c8a45c38f832e6d2696a93162edb1aa30160ab60e8f67c389afacbfac741350.json": {
+      "sha256": "c8374dad78263add02f3ad0516c12d15be8714b7e4408eb234b28ab67aa37057",
+      "bytes": 1681
+    },
+    "results/koblex-reproduction-v1/api-cache/abfb270573867e3f2f19eb99070c06ae62b89a54827bb115db255f0c6e2a180e.json": {
+      "sha256": "d37b7d4db8bda83ca63277829932378a6f9eebb750d20f1caab504de904e4ab5",
+      "bytes": 1760
+    },
+    "results/koblex-reproduction-v1/api-cache/d810641c7d4ae738b16179b253292b036542534e650876bc1f91e20d987d84e3.json": {
+      "sha256": "7ae1d84eea928807b66b2c8ee3a7769b6343cf1a4a4c2eb2eddaf2757e7b7e09",
+      "bytes": 1624
+    },
+    "results/koblex-reproduction-v1/api-cache/2e6e14ec28e456d71213ec203bbe93c241c4a107c7ba4230013bc66c8bb6ecc7.json": {
+      "sha256": "8ffd4907c4669e7a4ff8946284592f96f848e33546252ff204098f932b13c895",
+      "bytes": 1743
+    },
+    "results/koblex-reproduction-v1/api-cache/01633bb8be8d9155e4543cf96fd2305516607b26b713fc2ed9020af726d2714d.json": {
+      "sha256": "5931c3a50d0a55d328f33cfd90559f090a068b45957f70f35c9288f9c8785fa7",
+      "bytes": 1880
+    },
+    "results/koblex-reproduction-v1/api-cache/61e271b29c49eb4d350fba498d610ee501e811605484b95ab303ab3227386146.json": {
+      "sha256": "855bb3f46209085e05092ee88b07bffc442c63d8886bedbe49c709acb79cee7c",
+      "bytes": 1673
+    },
+    "results/koblex-reproduction-v1/api-cache/4fc37d0166aefb9d2d60244d13e8a3997e68ef0e8b15e4191680d73f28fd39a3.json": {
+      "sha256": "eb6bb13ee0570d410d1a1d3066b4d102d2a4d68e0a4212c46381c3f3b64f6403",
+      "bytes": 1651
+    },
+    "results/koblex-reproduction-v1/api-cache/1e3cb4f046c0c7877fbf4acade68df2dde99bf465a97e90b31c3766ed540e976.json": {
+      "sha256": "2061ef7e630837c54f6aefea0dede863d92890d3136da9ab5fd5364bff1b6c9a",
+      "bytes": 1703
+    },
+    "results/koblex-reproduction-v1/api-cache/28dde15936df8abe6862f286e50eb48babd52ce6914084d04716fc1c39792f75.json": {
+      "sha256": "57fbe2c56d74f7a2a6b8a2220e3933560debc76d688b7e40e94a1e0cd2b91454",
+      "bytes": 1784
+    },
+    "results/koblex-reproduction-v1/api-cache/74e6042ccb4585da7f47824a5edcb898fe027429db876d142d2fc3ba1055c762.json": {
+      "sha256": "f495911284c221b03bf17a0637750b21d3c5427aa147de06b619ed9445cb1c81",
+      "bytes": 1600
+    },
+    "results/koblex-reproduction-v1/api-cache/f7496a169f649d08110877242f5ec86c5b72431ed161187ebc03994b4f4d989c.json": {
+      "sha256": "7725dc00e5610a7d718c0f19e09c53902e6119cde1b47960faabc152a58c85d2",
+      "bytes": 1455
+    },
+    "results/koblex-reproduction-v1/api-cache/3f26fa8f98565cd7e9a5bd24858864857d422fc530ee6f0f43b322dafcd4aa5e.json": {
+      "sha256": "44d96764df9ee18d0aec9b8a4b03cc89750f3eb0fd92b3de3ad0b6c9c03843cd",
+      "bytes": 1681
+    },
+    "results/koblex-reproduction-v1/api-cache/fa915139c36a4b2293e49b9fd8651913366b9a2f3945c4737eb5fcc7233feb0e.json": {
+      "sha256": "d730986f2d6a52806687094756b9192d31e795940a02dc39c6193f17a1914b1a",
+      "bytes": 1565
+    },
+    "results/koblex-reproduction-v1/api-cache/e6bef97fb3cb6d42dceaa0fcc9dbc9b38c8c745dbe5b575c0bbbb93cedf03e29.json": {
+      "sha256": "bb43aab1432d1a390d05f7356fc4f429166fd87249b8cdcd7f70d8e08a9b27bd",
+      "bytes": 1645
+    },
+    "results/koblex-reproduction-v1/api-cache/0546f4a8ad9d9d5dc95bc5b52c6839c6c62c98ba1134d90b69fe49c3317eeb4f.json": {
+      "sha256": "0793eb505ce722b75e7a779d5ffa2cdd384ca9138b858f68a1e70edcca3d1496",
+      "bytes": 1623
+    },
+    "results/koblex-reproduction-v1/api-cache/5c105dc79d85bb33674634801573c0d612162b39a062d568a97582c6a787ffe5.json": {
+      "sha256": "49662f535c34872108d3beb9d83bad4e36944787a109235eba66082f20d8e269",
+      "bytes": 1627
+    },
+    "results/koblex-reproduction-v1/api-cache/72e6f2fac4fa9aa10cac2adb929800e6ffc2ddfc0327e0d28d2f76b540557dc0.json": {
+      "sha256": "de0453adaca55cacadb63dac7e05209887e8fd3f817db1b178715accf0514f73",
+      "bytes": 1869
+    },
+    "results/koblex-reproduction-v1/api-cache/26bda0ec06a91ef51eef23c6adae012a44dfa6d7ab72c9f0be21506538a43036.json": {
+      "sha256": "fd3c7b9a6e8a4ea01ec583d0d681ab333c6e98c8e635ce6e05a90368dd48e3ec",
+      "bytes": 1741
+    },
+    "results/koblex-reproduction-v1/api-cache/590bdfc5277ba62ea704a41c2cbe42ad28844aa6c30924145a64aef14a3a1f58.json": {
+      "sha256": "bbd65903a277fc2c3892cd8044cc00e24f888c424514e0160bb7d52caba40c3d",
+      "bytes": 1822
+    },
+    "results/koblex-reproduction-v1/api-cache/3ee8d052e0b0bc42b0d3e2f44d3cded7187582058b4844b0a8abcee3e82da2f4.json": {
+      "sha256": "937c849613850a317f1d3e1aad46d5768477ea1cae958c8c10a1377e0928eacc",
+      "bytes": 1560
+    },
+    "results/koblex-reproduction-v1/api-cache/f3d5f421ab4d10c0273cd9b6954023a71bad322b7ed0d9ea0145a41b61fa6510.json": {
+      "sha256": "890e3a8b609cdcd542f3d1fa763e2e661559898fc7ef9b7f3147c8fc88658e61",
+      "bytes": 1702
+    },
+    "results/koblex-reproduction-v1/api-cache/9365d100ebe100ddeee681b30c035f76dee9d9f2b6d3feb7a4c4f5bb7ed70495.json": {
+      "sha256": "62729877f9d1d09ca29b58275c0aa07bbed3d26234f91c9c70bf5ba919b7b213",
+      "bytes": 1600
+    },
+    "results/koblex-reproduction-v1/api-cache/5f612cbf210f713cc6d851e30c133f98e46ebebf6494d6f238a9fcc1dcfd19a9.json": {
+      "sha256": "4afc89e3405a18d0482a6d3748058e56c0c8d3fd5eeb88399a516ce207e1b916",
+      "bytes": 2253
+    },
+    "results/koblex-reproduction-v1/api-cache/37e620480ba4ef60d53bb2b2791c059f000e84832c892d81c0f75952709a702d.json": {
+      "sha256": "5032538b2e448ab4a7e56089b7f75d0ad637cfbc262d3eea565f330e14b4536d",
+      "bytes": 2017
+    },
+    "results/koblex-reproduction-v1/api-cache/6a9e8d6a5e17c7b9044f0f8d4800a429567209e7be3917b5ca6eb1c75e997af1.json": {
+      "sha256": "71eb5484f107e9f6c08f84f3951529ce1abbf50c553a3533af9928ab6206fe76",
+      "bytes": 1663
+    },
+    "results/koblex-reproduction-v1/api-cache/3f093b677c684d771e3c129a7a48e4d38b201ebfd0aab93f4d48e9fcfcfa229c.json": {
+      "sha256": "4b761cfb5711c05e96bf7b9fd495e79274c1a526758d52aaacd412c1e04cc299",
+      "bytes": 1542
+    },
+    "results/koblex-reproduction-v1/api-cache/7e5a9d8863f12c22d8b5a1727bafe05d578162647b162d7f47a304015f56e0c0.json": {
+      "sha256": "8f6df6a89484f9129b5d836cc6c6b4962c58c1cdf893a19a27ad7fe55b11c0c1",
+      "bytes": 1835
+    },
+    "results/koblex-reproduction-v1/api-cache/fc139075b50de7af1e829a91821ead3a615cd21cf3048126a7776d210f2ee60e.json": {
+      "sha256": "d512c6ffa0682d875c6d7d6f1fe57e96ea67f6bb3793d23ae02c46ff577eb96d",
+      "bytes": 1518
+    },
+    "results/koblex-reproduction-v1/api-cache/5a46812cb4d5824f1ecb5ed2067be264f11c985b5a6babf3ee3ddcaf2fd3c99e.json": {
+      "sha256": "c9b0399b2124ee09e6cb3c43597f415cff6c8dfe1046408d111198cee9b7f0b4",
+      "bytes": 1543
+    },
+    "results/koblex-reproduction-v1/api-cache/51beb63eeb25b4280572449878df339f2d62f24129bd2d3420b6153a61d5c068.json": {
+      "sha256": "dc4c474922c0e2ddced8d703241795bc55c3393d432d47fef3f4b1282a20e896",
+      "bytes": 1647
+    },
+    "results/koblex-reproduction-v1/api-cache/1a436c7481aadffeceef4584be30d0cdae76f016cd8fef74619abdfba9888246.json": {
+      "sha256": "422d8ad307edfd3c39def00b05937ee109706802da852cf7ba77e0fc13ab4ce0",
+      "bytes": 1724
+    },
+    "results/koblex-reproduction-v1/api-cache/b09c81801d1251ee973790d78a66990551677ff444d02e7c1b9f05686ae69ac4.json": {
+      "sha256": "bd8c42c0cb35aad8c07e09f43254d4d51b121bf5621a4fe5b617a706962c3412",
+      "bytes": 1571
+    },
+    "results/koblex-reproduction-v1/api-cache/12ee4195b5517bd078422241ce21240e6039277ac500af993c0a9b7bd6ab1c35.json": {
+      "sha256": "61219199333501000efd616884f0535599da1f4f7f48a0e0a50dc0f8589f62a7",
+      "bytes": 1672
+    },
+    "results/koblex-reproduction-v1/api-cache/5c1006afba656bd9c6ce943c6597f7ca3723b0c7829ad8c8137a3c08e210d9a6.json": {
+      "sha256": "76f6221c7c7976f01789dc333805597403418aa9ae870020759cdcfab77a63bc",
+      "bytes": 1554
+    },
+    "results/koblex-reproduction-v1/api-cache/dd397c6e02cc934731dec9b404f78ba35990320d6bcebe85ca9d3fae97d3a635.json": {
+      "sha256": "2e33e110858e6db2e255d2a17c21e435353ff2c8a243667ccd09a4c6e6b4e7e3",
+      "bytes": 1780
+    },
+    "results/koblex-reproduction-v1/api-cache/c195b7f606407cbd1678557ce028c00043af807429a4286f0d2b3e36042b8d30.json": {
+      "sha256": "fdd7588ad5c6d25192b1571f279e193839b6355214665fe77a6d142cc5b2fb08",
+      "bytes": 1793
+    },
+    "results/koblex-reproduction-v1/api-cache/e869f1d7c458e6ddca4a625000f2dbb370922f52da03d25079af993e4069e5cc.json": {
+      "sha256": "b1fab743c73d8984c88a25771a7c7145bdce03151186831f65984682f27000a3",
+      "bytes": 2026
+    },
+    "results/koblex-reproduction-v1/api-cache/425b9e8f43fcf1d490989defa547d8979ebda24cd05b51b71e64fb361eae9802.json": {
+      "sha256": "c8bea77f585a4d9624e71b45b1e67dc94ac52a0d434a231797ae2ba049a5284b",
+      "bytes": 1727
+    },
+    "results/koblex-reproduction-v1/api-cache/66c1e990ed7c2831a67ba46ef98cb376fda86be66291c32edb7c519b9215593a.json": {
+      "sha256": "0e6658222c734c4bf085f97311b404a834e539c8cb7b12b2358210a08ac34712",
+      "bytes": 1945
+    },
+    "results/koblex-reproduction-v1/api-cache/b686969fd1a464498519aa1e06dcf0bf090b1b54d579a59e58e3b71c4707e24b.json": {
+      "sha256": "49ad5d716e8eac8334262a8c6123edff86bdb6f84031fae2c8d5a7824b4ce213",
+      "bytes": 1585
+    },
+    "results/koblex-reproduction-v1/api-cache/8dc3a23c9184cfc5bf5f7aa424918a2b8bf2f99ed3be4c095077bd0b71953be4.json": {
+      "sha256": "94e98b9293bd40ea98f1e2205d2f73d76af885903cabd57b7cbcdfafe6cea8ce",
+      "bytes": 1538
+    },
+    "results/koblex-reproduction-v1/api-cache/cac0e2555591fd5fa3b5cb703542746e1f76f23cc0542cef1c1d685f37516714.json": {
+      "sha256": "234e17db0d37c925491433f9c1a5f726c8004615b5df81554e302c37b177b5eb",
+      "bytes": 1701
+    },
+    "results/koblex-reproduction-v1/api-cache/2416ee56b6a9df6d548d17c98528d498842d8969fe80db2b85dbc346c8772a7b.json": {
+      "sha256": "deba250d6329c1c08d01df811d925a36ef082e8e5b5b705aa6a243a03a4d56e5",
+      "bytes": 1851
+    },
+    "results/koblex-reproduction-v1/api-cache/b76a737e4a5bdd55925c3f57537d7071e5cca9a740b373155d4635ab527cd361.json": {
+      "sha256": "5e13102c75de5c87a276937e62821fd4b771b1271079aa72867394da92b6e991",
+      "bytes": 1718
+    },
+    "results/koblex-reproduction-v1/api-cache/8791adf1745b55ff09b9b1d8bb39ea8a980efa531901b5e57558b7b706a84e2b.json": {
+      "sha256": "2b997de3cdee4ac96344602b2c7cb13ba89333c555e7e352d7396c7f8617ca20",
+      "bytes": 1890
+    },
+    "results/koblex-reproduction-v1/api-cache/0489902136575d1133bf6a038ce21590cff23b0dc57a58c0b31a931e98aec729.json": {
+      "sha256": "8cbe47f018ff6d9a899b94fc14d209904a95e6fc981c945c1c88e3466810d56a",
+      "bytes": 1622
+    },
+    "results/koblex-reproduction-v1/api-cache/8f6a2a80e25a6505fdba83df71ade7de0ae3c59b87cc6298db8327235a1b9f2a.json": {
+      "sha256": "eb66cf949a35ce8ff6826f8681c634f069d28bcd207189cbf8fad82bede88b18",
+      "bytes": 1626
+    },
+    "results/koblex-reproduction-v1/api-cache/21ec67848603bf5527a722ad71fca364eac7286d98f8cb7673872140681a9cad.json": {
+      "sha256": "2213eb454397146407f6036d6b007e30ae81d5dfb42b029c0fa22aeaeb40d525",
+      "bytes": 1588
+    },
+    "results/koblex-reproduction-v1/api-cache/bac469ee1fe4be1db659abcce2927b72e42bdce3e0f41b41283dcda7b1be0896.json": {
+      "sha256": "c1e8b71595a0a6e7bb52c95bada070399597d5cac8658bb1939feada1bb0ee0f",
+      "bytes": 1706
+    },
+    "results/koblex-reproduction-v1/api-cache/9cc8175d23a78a514c3340a8c0494e125a9f6f08cb576b40dece9cecfc1e608c.json": {
+      "sha256": "14c5d689c74bfa7362eccd097a89f4e2c6e7a2c322ea9e0e87f3a8eb5988c088",
+      "bytes": 2055
+    },
+    "results/koblex-reproduction-v1/api-cache/8d7ff1d1ce8eceea7a063c715cdc5db8b463b63df6c5abe36bc5dc14fd1de5c5.json": {
+      "sha256": "3676e7a47c7f0ae39cf53c6e8e5ad68dbbf0b78fbde8c587cbc302019ed3c34d",
+      "bytes": 1688
+    },
+    "results/koblex-reproduction-v1/api-cache/90d976255afeba255bb4b0b4ea0de56e114fe3bcf3abf957f2bf36fa2923da80.json": {
+      "sha256": "3c30402ccbc9c88b2a5c71d14b4b18982d32409a891cd62582f7dca3ff01190d",
+      "bytes": 1917
+    },
+    "results/koblex-reproduction-v1/api-cache/1dc8cba4079dfbeec3db37bbc793b3dd7986155496fb33d31abe349466a4c704.json": {
+      "sha256": "d50a912e6aee7eeb884c1294878d21c936c24240189e0dc21d570044962ee3e0",
+      "bytes": 1728
+    },
+    "results/koblex-reproduction-v1/api-cache/d751d7a5ee72bd2899ed557d299fa8ea055a74b01e579b72b55f0ac6eaf08d1f.json": {
+      "sha256": "0fd02973565cbefcd0938d09074c5a437c06e5c22a7a9de04376a223603509e2",
+      "bytes": 1474
+    },
+    "results/koblex-reproduction-v1/api-cache/214b3dbceb5381be54309d6953e473c704eaf55f1b185e0205a74030a8a19da8.json": {
+      "sha256": "da4ab576809997e343f62ac1a2b3bd7e1adab7792bc1b118f4e07763a4b6aed9",
+      "bytes": 1677
+    },
+    "results/koblex-reproduction-v1/api-cache/24d66321ffeabcd4680e98ba14e2567ebc7c2b2be76a2b656ae4953df4df7843.json": {
+      "sha256": "b216b759b84e760b407495c7404f7bd2d805527c341b5d6a697347b7178ab6b2",
+      "bytes": 1573
+    },
+    "results/koblex-reproduction-v1/api-cache/74dc354aeda122d605793fdee4aedb02a10271deaa62920aae6b910f738cdf6b.json": {
+      "sha256": "1450bc8b7fc6f1e09e37e9666b2d756aacdf571c1a172927b023aa44cee84c64",
+      "bytes": 1711
+    },
+    "results/koblex-reproduction-v1/api-cache/182f4ce5c2a63726d3e67d6a363de97619756b79c807bdbeefedd6747fb869e0.json": {
+      "sha256": "4854b6beabcecd93ab161d2e147cb77fa895714530cfdc436b6a18f06aefa4a9",
+      "bytes": 1780
+    },
+    "results/koblex-reproduction-v1/api-cache/ea3766a7b1001478c716384c55ab751f4ba7f0dd1afefef04e710dc868ef5d7f.json": {
+      "sha256": "dda0fcee7bccfc0e9716b8e8af1193cf9eeca3a241fd2102d0a3f08b24c23652",
+      "bytes": 1594
+    },
+    "results/koblex-reproduction-v1/api-cache/ede2e4282c44c37b06c10598546ffa1e82fe29f36bce050ba29ebafd11022eb8.json": {
+      "sha256": "12a4b5b0c8f57e440d70ad4037f1f4bcef13bb49041ad8f0caa0e4a567f479f7",
+      "bytes": 1601
+    },
+    "results/koblex-reproduction-v1/api-cache/fd74121ebe9d3d1b478c900e7f61a892117f56727f0f555bc05432d09972a581.json": {
+      "sha256": "ca9e99a579e636a64d384e2f079872932e7bb2619462421a180a862d35ad4348",
+      "bytes": 1756
+    },
+    "results/koblex-reproduction-v1/api-cache/1157077f5e37bf39ff1eccc16fbf5e75c72d4264f30f61e75585bf2eca5778b2.json": {
+      "sha256": "8410088ea95df9af8fc34156980085c070508291ae49b82841087379c1385e3a",
+      "bytes": 1908
+    },
+    "results/koblex-reproduction-v1/api-cache/1bcb2be0c3df53885f601d330c3d52fd7411ce1ae05ff55ed23229b908285ec2.json": {
+      "sha256": "0b45626ed6902598d71c373615cb58cf1ee1ef2d48eb87052ac8e8e6c7c69555",
+      "bytes": 1732
+    },
+    "results/koblex-reproduction-v1/api-cache/802c942398c87971efe95b5ba4ddee9730562218bb0e3506692ab67427bca2e6.json": {
+      "sha256": "7d5b70ace9250de6cde27257de24273e8df4b88602b0a995a6b608e359546b6a",
+      "bytes": 1500
+    },
+    "results/koblex-reproduction-v1/api-cache/a234257788b593a01d8892754fd26e901174f6416d899be34f16ae8b8d046263.json": {
+      "sha256": "b53255951e53be7a6875e94319a3179f6fca926a7cc4c329890cd826dfe96dc3",
+      "bytes": 1676
+    },
+    "results/koblex-reproduction-v1/api-cache/48f556228009c57c1ad24664d3da720a05abc95aab8d1ca5208a173a3e5f64fc.json": {
+      "sha256": "b05c1a9ba91ef3e0ee16290e3ed83fc135a94ff499d28a8d94d9f536d07f2043",
+      "bytes": 1644
+    },
+    "results/koblex-reproduction-v1/api-cache/9b01a6aee8aea4ccaaf11a66c180ad7243527dae2e085ac13bda1b6d0e564077.json": {
+      "sha256": "beaad10e036104aff7a2f5f281ad4e7c41ddf3c0d3a4b87e9ca0a8f053136f26",
+      "bytes": 1556
+    },
+    "results/koblex-reproduction-v1/api-cache/4f16ba26f245bfb78fe6eac53222569154139d15387892975eb9d45ba0abd0ea.json": {
+      "sha256": "356a36ee360b9224f709052617b9a3e084f1c31e77f8af50c389dba69cc64cf1",
+      "bytes": 1674
+    },
+    "results/koblex-reproduction-v1/api-cache/885be0558174aef442258c6b65be56c38aaf5fd26a696a3a9a00f4144bbe0f9e.json": {
+      "sha256": "efd3cfbb02965e49df193bdde075559b52b1f3c77444388851c04152c13550ad",
+      "bytes": 1760
+    },
+    "results/koblex-reproduction-v1/api-cache/996747ab5db2665aabe74561d46b4a09b27511bd6c8f8a56b98f5382c5dc0cf3.json": {
+      "sha256": "e449cfe11013869484164e7f18db0dd7c6d48778a62640e802aa41896ee0fb47",
+      "bytes": 1630
+    },
+    "results/koblex-reproduction-v1/api-cache/18a57979d2f0dbd0479150ec569f28233b48b258692080364704bd75df7e5dca.json": {
+      "sha256": "eccc9134fc75e2ba1ee31974cedc2bb59694e222dfdc9195e0aec28c01dbcf2d",
+      "bytes": 2166
+    },
+    "results/koblex-reproduction-v1/api-cache/103ac58061bc80c78cd85eb07a33c680e01efb7f883da7de22854b5d8aab6e7c.json": {
+      "sha256": "aa8b05ce3bdc935433f6159a5d9555c78a87523fa4e9d3b6002f6a04b23eeeb5",
+      "bytes": 1953
+    },
+    "results/koblex-reproduction-v1/api-cache/68ed9fd91ca4858069205b9feb2ef1485cfdd21623ac96c39adafb956d181b56.json": {
+      "sha256": "4b2350cce45e242d3453c9bef72bb81ea3cfb059bcffe6f5588b00caad06acab",
+      "bytes": 1700
+    },
+    "results/koblex-reproduction-v1/api-cache/b35bfb014dd853dbec620ae9438b777076f6264e1c93398081c5ae24399a77fe.json": {
+      "sha256": "631465063695306988fec7d3cd99924859639ad1b16df2b9495ef6dbcc03f2b0",
+      "bytes": 1456
+    },
+    "results/koblex-reproduction-v1/api-cache/0b42ae70e81082b7401ce88178e33267d858a35b5cca5da0abb2c441e6219ad0.json": {
+      "sha256": "e6e9f4eff4ed2da8d7a7a0444fc26808e7604902d7b57063f77976e10717881f",
+      "bytes": 1702
+    },
+    "results/koblex-reproduction-v1/api-cache/8b34da0919137afe777b10786923242ba658353ffe9bdebea599973cb7b143bd.json": {
+      "sha256": "32f356963252d71e710740e9f56b81a8670ac2c23403ea043d84cf5628cce528",
+      "bytes": 1719
+    },
+    "results/koblex-reproduction-v1/api-cache/00439d83c9154b63578fd132b40d7176dd9370391e26edec47c67b7877cea29e.json": {
+      "sha256": "4f1ff1608360a52ddee531849524db1772fbcb52b6474faa474f5e02d6278052",
+      "bytes": 1655
+    },
+    "results/koblex-reproduction-v1/api-cache/b93ca9ece878b3c79e8635c747e3033f5e6e8f8fed9ba342a73eaf6071b83d83.json": {
+      "sha256": "5e02100a8ad8efea787283b8267463adcfc43684b1b0b99d84846cbe7dff65ec",
+      "bytes": 1638
+    },
+    "results/koblex-reproduction-v1/api-cache/519db8af60013d50595e13cfa602f77c42cba136c8f6c5ece2a6c8b7ace74bbf.json": {
+      "sha256": "f8e865d1d4a288ac913f7f781514bc06431938e5989836ecb085c51370cf47cd",
+      "bytes": 1663
+    },
+    "results/koblex-reproduction-v1/api-cache/219e5b0073c69687416f631049cd31a09d84b80b181058f8373c97ee6a36a926.json": {
+      "sha256": "c35c42e43904d5076cf557985e380213be223793a9b3a502255053c0bea415b5",
+      "bytes": 1658
+    },
+    "results/koblex-reproduction-v1/api-cache/b9d615c0b169b21915dcc97bf2ae6baafe1f706dc1b135a0370f605d863ddef2.json": {
+      "sha256": "7e92be726cc9bdf2fd42eaa9b85a4289da44188e501d110cc0c831dcfdcbabc7",
+      "bytes": 1899
+    },
+    "results/koblex-reproduction-v1/api-cache/25cceff88e1aaefaef716ad593be19823a5ef3c7cf51ddd0c9c39a5d37a3e4dc.json": {
+      "sha256": "76724d7ae7ce34fd86cf2484b60782ccf819e703b19111d0b9910d548737b27d",
+      "bytes": 1540
+    },
+    "results/koblex-reproduction-v1/api-cache/5a26e91b75741fe1fb31404b8966989273d395c0b7e7246dfcedf5b96faf24ec.json": {
+      "sha256": "6d1ae63b3ed57202a2dfdb3242236c77e0b495889e70be40cc7cf11b07763558",
+      "bytes": 1866
+    },
+    "results/koblex-reproduction-v1/api-cache/293adc4f81e55ec9d4c8df3b843050a3dd3d1426b45bd5543111203474009331.json": {
+      "sha256": "06bd78a3d42b29d3a11d23981d227e808cefb2bada4cd60b44bf41059e37dfd9",
+      "bytes": 1765
+    },
+    "results/koblex-reproduction-v1/api-cache/a02e6e5de0a841dcf675df23651ec11c7e82635f6525468e43de04e5bbaa6637.json": {
+      "sha256": "a883586f97746befd2b50cfdfe589b3f37c8fe1116de9b1c7ca232fe08a4b3a2",
+      "bytes": 1678
+    },
+    "results/koblex-reproduction-v1/api-cache/e5b6f9c5033685002263cde253d3cd07b4a1c8eb34ff39d7fefeb8dd6e8afec1.json": {
+      "sha256": "7b4ab83b44f26f0082a848579fab3937e32d0d958dec96f4da93c0abe9955011",
+      "bytes": 1841
+    },
+    "results/koblex-reproduction-v1/api-cache/b22c3ab629c3f31c17c79476dfb16edef9d4cd8c1e24d1f8478e087051e79c70.json": {
+      "sha256": "3c2718d25cb541f8482d113622d35d0ab9a61521f43b714906f012646e3fbf10",
+      "bytes": 1772
+    },
+    "results/koblex-reproduction-v1/api-cache/b8bbbe85cb6d8ac6fef8ba6ec2007a2bb7f19bf0f5a13465d7ab4543de1cf7f6.json": {
+      "sha256": "84c887daa235af172e40884977fea14ce1c844bff5ac6f355bde1632fdb8cb2b",
+      "bytes": 1801
+    },
+    "results/koblex-reproduction-v1/api-cache/23d9b00a1bfe9c1877cdd210701f4f5d73981f8a6128a0dcd2d9de2083fc72ed.json": {
+      "sha256": "e000657c0ac9a79178ee81b214fe83891e0a33efd538d9160425416a35a230df",
+      "bytes": 1647
+    },
+    "results/koblex-reproduction-v1/api-cache/525a82ac52135b4e22b4616353571a1dae288bdd4daeac5b86aa8a0894585ba8.json": {
+      "sha256": "39c15d93da08c815e7f677bd080aba24220a8f4a3bfe81e5b67e8172d1575b2c",
+      "bytes": 1608
+    },
+    "results/koblex-reproduction-v1/api-cache/1c19b008f56d9c0b86f3d6eff8bec56a9cfa50675ff4e190a9ee6d89eb582f45.json": {
+      "sha256": "3ea68cc3278eee05d5e40ff9b2d9037258a247eccb45ca5ba89765e1f484e7de",
+      "bytes": 1832
+    },
+    "results/koblex-reproduction-v1/api-cache/d18393a71e3ff2d7cffc100e5c19632fb4cbdffe7e486d673648f5ac26c45ebf.json": {
+      "sha256": "f0bb6bf12b96e4d624082423ccc5bc939019669592622f42ffad7cae3edce6d2",
+      "bytes": 1613
+    },
+    "results/koblex-reproduction-v1/api-cache/c560ab8bb21caf0c317ef49100b9770eebb26972832197bef89014eca3004c2c.json": {
+      "sha256": "ab797441d997a2fc4e49c5742ee098f037691ffd09f7fd7451a60df8de88454b",
+      "bytes": 1765
+    },
+    "results/koblex-reproduction-v1/api-cache/2634997813876ffe5edd9ea4b53bd79730e2a9253557db1f10f1a0d4f84b46e5.json": {
+      "sha256": "3e6a4a0132f202e904724cea4bee08aad75c2071c013e643d5749e24492741ff",
+      "bytes": 2181
+    },
+    "results/koblex-reproduction-v1/api-cache/11af6c569dc8331621620e77297a51e107fbfe406a7eafaed53afefabf86ca16.json": {
+      "sha256": "bebf80e48968edbe44360e60ea1e7a06d16830b06cbc37617cde35857808dfc3",
+      "bytes": 1592
+    },
+    "results/koblex-reproduction-v1/api-cache/ea42292f2339ff7698406249166ad83f2062823a2cef021ac122ee21ec13ac06.json": {
+      "sha256": "53ad556ce5cd7318c1e5aec8f631872ad4610871ec1ca4bdc06621bb3e49a5b6",
+      "bytes": 1654
+    },
+    "results/koblex-reproduction-v1/api-cache/b761c0858d79122ad26bdceb7b2ef9a96d6ac7867ec7eaf73ebd46b4cab85098.json": {
+      "sha256": "0665187f77eaa8a1279a810029d26c42132a34e2467802adf022c771e90d6946",
+      "bytes": 1544
+    },
+    "results/koblex-reproduction-v1/api-cache/6fd61a96fcdca3a4f3843aa6fb46ae1c896212f30f31b14102a31eb994c0e82e.json": {
+      "sha256": "5b51481588c46e93514ab1261183609b9c2b043dc4d2ca27d6ba13e632bf3525",
+      "bytes": 2165
+    },
+    "results/koblex-reproduction-v1/api-cache/5fb4e2543b5147566d29483a565b0432127017a7b82b336e209c06d1854765c6.json": {
+      "sha256": "d55994f67f9b7dafe920016d5bebe1d2327641460a83a9e3a86aa856b1b1e972",
+      "bytes": 1744
+    },
+    "results/koblex-reproduction-v1/api-cache/99e2df8090434f15b60490eb54fc9e5ddb66ba694e19abfe1f557880d2f82549.json": {
+      "sha256": "78fae3ea9848a7ef997eae467f7dcb995142751dae96679db66815424d37e5fd",
+      "bytes": 2127
+    },
+    "results/koblex-reproduction-v1/api-cache/86039f8488643fb7c71f987143e0e83621c971fb5de5ab34e1e0e16ea20c1ea0.json": {
+      "sha256": "32c269ad82ea3f7cfae437b813e7748c348ebc8dea5af47b8def492a38857aa8",
+      "bytes": 1792
+    },
+    "results/koblex-reproduction-v1/api-cache/d57597451c6a5b56b7d0019a4d24ab8d3d01ef6156c1bfb18bdd4af90ccc8395.json": {
+      "sha256": "575863754117ea8b1b9cd5cf49e173b6e6133fbbddc2b7ede1051ee18f94bb36",
+      "bytes": 2031
+    },
+    "results/koblex-reproduction-v1/api-cache/26974aae1a10d1ba47a80d2ffabdc570a539bf1e9060d87282be47c97c9f77a7.json": {
+      "sha256": "9c347512bb71ac9249b0ed21fca8a0e59d69c820359304dc0d9d220ba299eb0c",
+      "bytes": 1676
+    },
+    "results/koblex-reproduction-v1/api-cache/5210bcdaabe90a3d9482698aa9ab2b123a02344010d949f36d5d9023f8504356.json": {
+      "sha256": "3ea2ddc8ed7a48ffff875126da76dc0941ba1b896164f4ab28b96b5e99c83e76",
+      "bytes": 1911
+    },
+    "results/koblex-reproduction-v1/api-cache/9e7f81885b49d82ef6a340504f71365aa7368efd4eaf7aed805c24407fc5aaf0.json": {
+      "sha256": "716048dead124bafb005d7f4b804898a25d7557c7a07f1a15a1b5eb0062ca37b",
+      "bytes": 1598
+    },
+    "results/koblex-reproduction-v1/api-cache/85d4ba09edd28893de7f640575f84fc6d3e76816355ca62c926c576f6e5db4ef.json": {
+      "sha256": "15f5165998b2399965b6bb9928ee9838a0760609c26410b03ed2b305ae3b9fc8",
+      "bytes": 1564
+    },
+    "results/koblex-reproduction-v1/api-cache/72d2050f2b82128be5ed7645346cdbb34cf4cb5daa5c1c3238756182006c85ea.json": {
+      "sha256": "28c619e4eb1a1b58bbbb67b2c807284b1cad88b0077fd3e0ba89c5af0f632c72",
+      "bytes": 1599
+    },
+    "results/koblex-reproduction-v1/api-cache/926cba498d797ec8163c915bcc60bd58b60bfe11132ceee31cb52eb2a7366b0b.json": {
+      "sha256": "8d47e369007b56cc67d6eef42d2caf0046833f7b899d958447b7b95a31c09fc0",
+      "bytes": 1893
+    },
+    "results/koblex-reproduction-v1/api-cache/2c084648b363f8a5afb9d68a8e50eb682eac809fb98422e921489bcf5a94a241.json": {
+      "sha256": "34244b096b9f02d5392729d4ad79c7cba89e11bd1e07c02acda658005033d7f0",
+      "bytes": 1635
+    },
+    "results/koblex-reproduction-v1/api-cache/0449e19930a64e0b2b3f1230f41300c9fb39fa7ce06d426a1d3959fb375d2ba4.json": {
+      "sha256": "9b3b85bff6c65256cbdf6b8b3f5f36d58484e24a40336b2baee7a5b27297aa01",
+      "bytes": 1692
+    },
+    "results/koblex-reproduction-v1/api-cache/01c9a2bf9ea47f3ea057d279fde2f18835366625807b01ca7b69f706808ca58a.json": {
+      "sha256": "cb6ccfde996498a0aa0fa7cc89048c3600d03823ab7f4531146bb342ebf6e1f9",
+      "bytes": 1744
+    },
+    "results/koblex-reproduction-v1/api-cache/d78c0a6b44d5529f42544a3d2f2f4f054a7772ace8094d35378ffc29e5ebbb06.json": {
+      "sha256": "e131ffdb9c68918b7ec56283b25840926f16705757c318fd9f5379ea7b31c493",
+      "bytes": 1668
+    },
+    "results/koblex-reproduction-v1/api-cache/24c30b9bf47d7233907b81d489545717c30e309fa5813090069067afae9eea79.json": {
+      "sha256": "5f6b45d8c44cfc23e8bd50ca89272eb681fe91ad13a1098ebd565d6bc476c2ba",
+      "bytes": 1586
+    },
+    "results/koblex-reproduction-v1/api-cache/c2a038b5f4c588a7628046f2ca07134ed9996163a7861fff278443c703472910.json": {
+      "sha256": "22330c2e620e673a8fadc16b2d6ed0095454dc9509ee8b44492d64b1694c58e9",
+      "bytes": 1571
+    },
+    "results/koblex-reproduction-v1/api-cache/02756b7ef2f3b5c0da8185922aeb583378a86f1a24f6b1723ef84a88d06c5b35.json": {
+      "sha256": "708188f9cfdee821b8b9e79834edb90f12c925e26ca2332f84a4c9c4410f1b8c",
+      "bytes": 1638
+    },
+    "results/koblex-reproduction-v1/api-cache/c85d4524af4998ea9b47e9fb82f16141a344484ded6ca1de1bb8ee682bd79c17.json": {
+      "sha256": "2b81fda14765829518c0273f1b5d3f840c50c6daea14abb5eec1d49e683ab023",
+      "bytes": 1893
+    },
+    "results/koblex-reproduction-v1/api-cache/35162c718bdba99426a8fd00b69380cb86cee20fe96e708ebefce10b65ac0641.json": {
+      "sha256": "b896bdd012ef0a258a0d77430e4010a5f27d5f147cf6cdc1de026589e55252ec",
+      "bytes": 1537
+    },
+    "results/koblex-reproduction-v1/api-cache/422d646d9d51e3016c9d7fa8a56bf3cad5ff249d4e9fac19765224d772a97221.json": {
+      "sha256": "417b14ba95c74dc495343349963c362fd886b864b0bcedc8846e8111ea5ad64f",
+      "bytes": 1609
+    },
+    "results/koblex-reproduction-v1/api-cache/4c5ad6b59f165641fbc68ab0469946ee258f043375d5ec413169a7217f8bcae3.json": {
+      "sha256": "02bd10a146c502b6faaaa14e79e533307db51a17efcdd1065bf716443b27a12f",
+      "bytes": 1797
+    },
+    "results/koblex-reproduction-v1/api-cache/63fcdbb4fd387959399501ce14af45d05eaaf868cbde23cc8e3f5a7186f1ebe3.json": {
+      "sha256": "0431d9597bab1530e669d88ea3567214c8724088d1c7ffeb241ee82e71d4a09c",
+      "bytes": 1712
+    },
+    "results/koblex-reproduction-v1/api-cache/fec24e2c25ff51adcd40d2db1996ffa8077f260893a5a8d140861bd76c6f69f2.json": {
+      "sha256": "27e364ae621b07844de277c6bfe0a2bdf436bdd4bb5c4671265fb4f4500af3fc",
+      "bytes": 1733
+    },
+    "results/koblex-reproduction-v1/api-cache/b4869cad0021d7aca48272ba7c5b77f09b9996101f63acea9a46a565a6c92d38.json": {
+      "sha256": "5c223d923723b85f6cfaf731a1ef13332b3b3d82911d7ee89418bbc8a6ee716c",
+      "bytes": 1934
+    },
+    "results/koblex-reproduction-v1/api-cache/8753e0f2f78d51d58073a2af26152fd651150d36b218bf78004ae6fa9e52d0e7.json": {
+      "sha256": "f94dee9bf287d453e1cb9ce425059d88437c55e81857435044a0f0f8e5da620d",
+      "bytes": 1804
+    },
+    "results/koblex-reproduction-v1/api-cache/5f5b33d579be5ca1b027aa7a1134b60a7525f4286b6f08cdf3f9c888bfe84e77.json": {
+      "sha256": "05f8ffce8b683394ae9b684a8cf8d36c2b0a322d30fd99222119d1b99cdfb0d6",
+      "bytes": 1772
+    },
+    "results/koblex-reproduction-v1/api-cache/0a5dfbc1d3b5e11eea7bcd11b9f91c8cf7d56be334156199689c0c91edb7b35a.json": {
+      "sha256": "cc2af5fc46f319671fc25424cd4ba44c2753665fb5a1b7c956142949e1f95dc9",
+      "bytes": 1764
+    },
+    "results/koblex-reproduction-v1/api-cache/1e6466d46b1185d06479b86b7744eb45618cb31bdb9b12915c73bbd82a97bac6.json": {
+      "sha256": "11dee4e58c089ba36c6490b79526b6ea2c0e845055c22cc9867a26883664bd53",
+      "bytes": 1693
+    },
+    "results/koblex-reproduction-v1/api-cache/6692810f35a28641306c70281fa7f323247b71287e038d379e49dffd2e3b41c6.json": {
+      "sha256": "089dd371a38e585fafe896879daa3e7e4d00367680533c266999d5141620ae9d",
+      "bytes": 2015
+    },
+    "results/koblex-reproduction-v1/api-cache/f075c7e8ca36b627c48e8d7ffe1fc0a499d73c049518834fcd02970fd8193553.json": {
+      "sha256": "bd18b41bcc205e3c87484b855b608ab63fdd40ff0c4fa7211efce7c2b8cc84c9",
+      "bytes": 1483
+    },
+    "results/koblex-reproduction-v1/api-cache/cef6e9b27e7822f52e6aae611d139a47e8d94ed985b035fb1ad4cfe300cec708.json": {
+      "sha256": "35ee30230f67224970d3f555e06c7d57cbed329691d54d53e7582ebb4bacc354",
+      "bytes": 1706
+    },
+    "results/koblex-reproduction-v1/api-cache/fe8a498eeb8954e9fe9e845449220faa37790e0f59058759a6be8d3b89c52222.json": {
+      "sha256": "ca66ef0d8e2c23b62139398fb0fb16d7c0fb673e7281b4c1d9a3d9fee82819e4",
+      "bytes": 1642
+    },
+    "results/koblex-reproduction-v1/api-cache/f42c040f2b713074706cc29c230bb9b589ae9b2e8245ef85938dc56ba7b5b025.json": {
+      "sha256": "65ba8119189fb27b08a53926971d28b42d2dd8bb607d2efe4be1e1fe128cee9c",
+      "bytes": 1991
+    },
+    "results/koblex-reproduction-v1/api-cache/546d2f5c75035e4536fe0636332b4b0597200a911300a3b11d9f7ead1403351e.json": {
+      "sha256": "22a193b8d84f824c71eec80d025ce630691c85753b163fe707d67cca19586722",
+      "bytes": 1887
+    },
+    "results/koblex-reproduction-v1/api-cache/d25fea301eefd9408e8a27844917bf69e14a9b3d7c0aefd4e73c268cb2208779.json": {
+      "sha256": "516ebedb0e9ca69ae3f69fdc31df3fe06d58d334add1e19292e741191d664638",
+      "bytes": 1841
+    },
+    "results/koblex-reproduction-v1/api-cache/6c8def10e0466e8c7a17e2826f2d3b54e27e57fb3f1e0eedc5938dbe230dd35c.json": {
+      "sha256": "781617dfe03709886d800b5b78b679fed6a9eb04220212ed8c0646bf58bc2c11",
+      "bytes": 1501
+    },
+    "results/koblex-reproduction-v1/api-cache/83eb2c3bb49a059064ae69791133aada0e1cb52136add79f9c324b061d2895e7.json": {
+      "sha256": "a38949ec3611490dd7babae3532230cdd573b73148bebcb41fa6d02c714df7e7",
+      "bytes": 2408
+    },
+    "results/koblex-reproduction-v1/api-cache/09c3b53d883920c25ac299e501425d738cd063d2d3fa017afef6b2d39617cdb2.json": {
+      "sha256": "ec7521ef1db417e7e49af8acabdcca9f8af5de640d700168876af15b924b8c0e",
+      "bytes": 1749
+    },
+    "results/koblex-reproduction-v1/api-cache/734e7a9361d173c0086baa7101f78fb2a122c413919bf50f4faa6072feeb483b.json": {
+      "sha256": "6ea544d7113ec0a0c03c2b05316ab48ebf4a9751d55ca17af05b1434b6427d77",
+      "bytes": 1681
+    },
+    "results/koblex-reproduction-v1/api-cache/9557892eb4a32a2d9225483eecca885487da04e2e2d85d7fdb7e75df577310eb.json": {
+      "sha256": "72c5306ad0fbf116d03802f7d80210c291b7b3e8d7848c537ba6fbca8304dfe6",
+      "bytes": 1545
+    },
+    "results/koblex-reproduction-v1/api-cache/63e593b074bbe7677cd6704f460120611929555eb038fa27b431b094d3767523.json": {
+      "sha256": "9f8c2d315ef9d1ee6b8db54eacfc2fa9ceebab5993dbf2b9e1800243cdbae261",
+      "bytes": 1732
+    },
+    "results/koblex-reproduction-v1/api-cache/f09f97fc3c3aa009d7fb92c7d6dc5cf3fb6fbc32c113b1c169f9140508d716c5.json": {
+      "sha256": "e75b57b8124a873e4d080db3b7cfce2d2a4d3150608c547c64c883f782b37ce6",
+      "bytes": 1761
+    },
+    "results/koblex-reproduction-v1/api-cache/bdc7c4f579ba341feb095d62f51fa71f5c34899c99838655dce2fdb0ac80df5b.json": {
+      "sha256": "744d32b1d525e05ad06695f4b08c6c2a3d97d58a498be227d14822ea1f62bce5",
+      "bytes": 1680
+    },
+    "results/koblex-reproduction-v1/api-cache/fd0384d38b8f35d5c7af12fb8678089e2281e4b5533c20d5010bac9a6d6ec5c7.json": {
+      "sha256": "ef3cc8ab0fd51b0b98ddc7942aad613632672a531a4aa3d686696c131b7d6d21",
+      "bytes": 1502
+    },
+    "results/koblex-reproduction-v1/api-cache/0c41d6c2e98c0de3f936dc89155314512cde92b7e9b5bdd49ab403be96611f46.json": {
+      "sha256": "e544d55e206668c750ff8db9b38a2f84a40f2bb1e7bfad3a7c12373658991f4e",
+      "bytes": 1601
+    },
+    "results/koblex-reproduction-v1/api-cache/07b09e2fdd6c8223f702d7a902133d137805ed398c3d650a0830ab4ce7b3c8f6.json": {
+      "sha256": "20234aa43951414c645cdd289b3e77cd9abd48c4f06bcbceed4bde7de5df96b8",
+      "bytes": 1702
+    },
+    "results/koblex-reproduction-v1/api-cache/af4cae051f4fe7bc8f9c86ab7586d6a8941d6de1fb71cc855da5c1dd17694b8a.json": {
+      "sha256": "df36bfb3108f80b5edf304ee8c82e193fc326a9d4bc87d5de236990ff85f61af",
+      "bytes": 1852
+    },
+    "results/koblex-reproduction-v1/api-cache/289973e0dba7cf03f36332f3671994dea4031a65b664d99e530b97f0e7fbf72b.json": {
+      "sha256": "d660db77bf663cec35ae37e133957acc8e9ab4bad6c8aa8eeeb024597a3eac3f",
+      "bytes": 1691
+    },
+    "results/koblex-reproduction-v1/api-cache/479bc3f73f8c4a60825b789d47ad8c5da87790c515a9e396091600c659705b93.json": {
+      "sha256": "33b0ca2724345fe8e03a3e81a83b1fc753bb90e756e0924cdf632ab50d28212b",
+      "bytes": 1581
+    },
+    "results/koblex-reproduction-v1/api-cache/60ecbd29b14a56fdc9336046f95d4667c240b2359810e8f76c553f2afb1e096a.json": {
+      "sha256": "563f03d301a985e8fa277055b809e3f95c63045e6006f864622430e4866abece",
+      "bytes": 1682
+    },
+    "results/koblex-reproduction-v1/api-cache/6468c232fa11131c5410f125e689d25782886bd82de72ccdf78bf0a2bfe22cae.json": {
+      "sha256": "65de232d46f77f88e5383cbbcbf49c96dbf76bfc5a2d0515900bc7adf28b752c",
+      "bytes": 1614
+    },
+    "results/koblex-reproduction-v1/api-cache/327c7d89b25f644e1467cc5afed3f11c00e9e0f05cb9d241f31423d993b79287.json": {
+      "sha256": "5d9700c659d8e4e3f7ecad6452e4f394ea3d3d451464e86a7130064b325896c4",
+      "bytes": 1753
+    },
+    "results/koblex-reproduction-v1/api-cache/fbeeb9811beedaff76ff321a8bfdf95db1fec9007b85ba153bc2107168a6c23e.json": {
+      "sha256": "99c4cc7317fdca084624ec7dc1849bee2c49736f3b0ccaa659202ce4cb4b669d",
+      "bytes": 1707
+    },
+    "results/koblex-reproduction-v1/api-cache/544ade1a78418871273ff4130671d422d042e48d51007014394f3df780ca6088.json": {
+      "sha256": "a28d8b42fbc93377f8feb0fe0c0a4eb65f2b0a8a9a5b08dfd6da43920539157d",
+      "bytes": 1750
+    },
+    "results/koblex-reproduction-v1/api-cache/ee269a4156b374b74af1ff98846e3dd63f6b1f0e12e431e5534abd6a4bf9a0c6.json": {
+      "sha256": "25046d4975ec33a463e620039a87f66548c1b11539c53b2cf0c5ab42edaab287",
+      "bytes": 1924
+    },
+    "results/koblex-reproduction-v1/api-cache/dccdb41bce6ec267cbf49b6562050ddd7d0a50f551f0b14063b32eb869591b1e.json": {
+      "sha256": "0e881eef6f564fdee124c07b924f243410fcf8d27fcafd040e9347678af5f6de",
+      "bytes": 1962
+    },
+    "results/koblex-reproduction-v1/api-cache/15b8c2643f65e759063c8ccff66e6e41e8406eaaefbd8c49529598ff521a6267.json": {
+      "sha256": "4746c8aba17c4cbaa7a7100119292cc12b3adbdcf4f16400a7e58c57d79fcde2",
+      "bytes": 1778
+    },
+    "results/koblex-reproduction-v1/api-cache/c7768b6776bad19501b20a1bd606f0f5729072fc10e0ca6c01094e2f4c0e138c.json": {
+      "sha256": "4d103e9ae244b20df188c4004bdec620dbfbaefcbf69947eef500408d02bbb15",
+      "bytes": 1910
+    },
+    "results/koblex-reproduction-v1/api-cache/aa4cc51bdb6f6f2adde7581a6ca0fe7e43be9c17c072fc41fe032bc4e0cfa0d0.json": {
+      "sha256": "2e4ef3da79473fc58ac5b93bf6999bf5c1dbb6edde2bbfa491992e6e2057262e",
+      "bytes": 1729
+    },
+    "SESSION_HANDOFF.md": {
+      "sha256": "97ff3b7df2ea9ab2300669d6487e7703f9aeec99369b3317dedefaaac2e4285b",
+      "bytes": 23677
+    },
+    "research/CHAPTER4_WRITING_PLAN_20261109.md": {
+      "sha256": "3ceec24f5f0768e473dd44f8824a0b772232f5ffb210a8a885e4b2136b92b2c2",
+      "bytes": 27579
+    },
+    "research/KOBLEX_REPRODUCTION_RESULTS_20261109.md": {
+      "sha256": "0dcf6fc4ad82641fa1896d68f15c7748f0b079c5692f27ff58b83db8ca4229ce",
+      "bytes": 9706
+    }
+  },
+  "source_reference_convention": "JSONL physical line 1-based; corpus row IDs 0-based; JSON pointers for JSON summaries"
+}

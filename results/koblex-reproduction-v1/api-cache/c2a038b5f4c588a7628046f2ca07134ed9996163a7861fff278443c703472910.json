@@ -1,0 +1,52 @@
+{
+  "key": "c2a038b5f4c588a7628046f2ca07134ed9996163a7861fff278443c703472910",
+  "text": "갑이 농지를 공장 부지로 전환하기 위해서는 농림축산식품부장관의 허가를 받아야 합니다. 허가를 받은 후에는 농지보전부담금을 미리 납부해야 합니다.",
+  "trace": {
+    "latency_ms": 927.1906249923632,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8fcee3e987dc4da4bc48520ac7cefe37"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2590,
+      "output_tokens": 52,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004595,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59873,
+      "known_cost_usd": 17.18326815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.48560065,
+      "remaining_usd": 81.51439935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.68586,
+          "accounted_with_reservations_usd": 16.9881925,
+          "remaining_usd": 20.0118075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9x744QiE58ZhjoSHLn4z8fLpxrb",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

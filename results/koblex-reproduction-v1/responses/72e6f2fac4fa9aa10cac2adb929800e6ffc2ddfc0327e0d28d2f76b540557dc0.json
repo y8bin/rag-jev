@@ -1,0 +1,87 @@
+{
+  "key": "72e6f2fac4fa9aa10cac2adb929800e6ffc2ddfc0327e0d28d2f76b540557dc0",
+  "response": {
+    "id": "chatcmpl-EiA2lpPYBSY5KTRrXqGD60ikV6cwX",
+    "object": "chat.completion",
+    "created": 1794193747,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑산림토석회사는 매년 2월 말까지 전년도의 사업실적보고서 및 결산보고서, 해당 연도의 사업계획서 및 수지예산서를 산림청장에게 제출해야 합니다. 산림청장 을은 산지전용이나 토석채취 관련 조사를 위해 산지전용ㆍ일시사용제한지역을 지정한 경우, 그 지정사실을 고시하고 관계 행정기관의 장에게 통보하며, 지정에 관한 관계 서류를 일반에게 공람하게 할 수 있습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2398,
+      "completion_tokens": 120,
+      "total_tokens": 2518,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1177.9094170051394,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e2a40da68d544c038fc9403dd2de1956"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2398,
+      "output_tokens": 120,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004955,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60096,
+      "known_cost_usd": 19.32451815,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 20.47383065,
+      "remaining_usd": 79.52616935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.82711,
+          "accounted_with_reservations_usd": 18.9764225,
+          "remaining_usd": 18.0235775
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA2lpPYBSY5KTRrXqGD60ikV6cwX",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

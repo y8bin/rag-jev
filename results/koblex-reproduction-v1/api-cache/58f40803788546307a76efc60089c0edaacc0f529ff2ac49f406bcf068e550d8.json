@@ -1,0 +1,52 @@
+{
+  "key": "58f40803788546307a76efc60089c0edaacc0f529ff2ac49f406bcf068e550d8",
+  "text": "갑은 법률 또는 조례에 따르지 않고는 IT 장비를 출자의 목적으로 제공하거나 장비에 사권을 설정할 수 없다.",
+  "trace": {
+    "latency_ms": 1002.7391669864301,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4a0a5ededa9942118caeb2d93f33b13f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2271,
+      "output_tokens": 34,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0060175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59277,
+      "known_cost_usd": 11.51125315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.76413565,
+      "remaining_usd": 87.23586435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.013845,
+          "accounted_with_reservations_usd": 11.2667275,
+          "remaining_usd": 25.733272499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9jRO0z8b0Xy1Ll6zWD9SavLaVuD",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

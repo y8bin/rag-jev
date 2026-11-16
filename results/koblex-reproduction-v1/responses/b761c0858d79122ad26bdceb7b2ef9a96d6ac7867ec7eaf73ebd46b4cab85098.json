@@ -1,0 +1,87 @@
+{
+  "key": "b761c0858d79122ad26bdceb7b2ef9a96d6ac7867ec7eaf73ebd46b4cab85098",
+  "response": {
+    "id": "chatcmpl-Ei9qFpY9x7mTPkQl7R9AYaVG5RpKw",
+    "object": "chat.completion",
+    "created": 1794192971,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑과 을이 탈법적인 문서를 배포 및 게시하여 공직선거법을 위반한 경우, 5년 이하의 징역 또는 2천만원 이하의 벌금에 처할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2273,
+      "completion_tokens": 48,
+      "total_tokens": 2321,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 981.9136250007432,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_87f816cdc9134e9eb0c74c4261941675"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2273,
+      "output_tokens": 48,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0036025,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59571,
+      "known_cost_usd": 14.33341815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 15.58165565,
+      "remaining_usd": 84.41834435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.83601,
+          "accounted_with_reservations_usd": 14.0842475,
+          "remaining_usd": 22.9157525
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9qFpY9x7mTPkQl7R9AYaVG5RpKw",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

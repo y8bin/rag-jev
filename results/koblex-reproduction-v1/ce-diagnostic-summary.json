@@ -1,0 +1,32 @@
+{
+  "questions": 30,
+  "variants": {
+    "stored_json_background": {
+      "precision": 0.1277777777777778,
+      "recall": 0.35555555555555557,
+      "f1": 0.17936507936507937,
+      "gold_set_coverage": 0.2
+    },
+    "plain_question_plain_law": {
+      "precision": 0.24444444444444446,
+      "recall": 0.65,
+      "f1": 0.33936507936507937,
+      "gold_set_coverage": 0.4666666666666667
+    },
+    "plain_background_plain_law": {
+      "precision": 0.1322222222222222,
+      "recall": 0.35,
+      "f1": 0.18087301587301588,
+      "gold_set_coverage": 0.2
+    },
+    "plain_question_json_law": {
+      "precision": 0.24444444444444446,
+      "recall": 0.65,
+      "f1": 0.33936507936507937,
+      "gold_set_coverage": 0.4666666666666667
+    }
+  },
+  "plan_sha256": "3a3133fd7572ca1afc0d8071db9a5b3347a06f1b1d94dc105f8b240b8f6e4c64",
+  "records_sha256": "1b0cbf4b6bf25f4f1f0fab29abb0ee8783bf241628c3d15000fb26d6fb45aae1",
+  "interpretation": "Exploratory input-format audit on already observed test data; not a new held-out test."
+}

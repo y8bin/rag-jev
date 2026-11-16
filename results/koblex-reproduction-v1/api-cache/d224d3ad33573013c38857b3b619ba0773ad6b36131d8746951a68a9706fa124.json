@@ -1,0 +1,52 @@
+{
+  "key": "d224d3ad33573013c38857b3b619ba0773ad6b36131d8746951a68a9706fa124",
+  "text": "갑은 자사가 생산한 식품 및 식품첨가물의 생산 실적을 식품의약품안전처장 또는 시ㆍ도지사에게 보고해야 하며, 위해식품의 회수계획을 사전에 관련 기관에 보고해야 하는 경우에도 식품의약품안전처장 또는 시ㆍ도지사에게 보고해야 한다.",
+  "trace": {
+    "latency_ms": 1031.7015000036918,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b82e01e817f44684b93ecbea4e2e8e0f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2299,
+      "output_tokens": 79,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0039775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59284,
+      "known_cost_usd": 11.55996315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.96333315,
+      "remaining_usd": 87.03666685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.062555,
+          "accounted_with_reservations_usd": 11.465925,
+          "remaining_usd": 25.534075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9jTU6yjLs7h2jlhs9SIgZVu9nQO",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

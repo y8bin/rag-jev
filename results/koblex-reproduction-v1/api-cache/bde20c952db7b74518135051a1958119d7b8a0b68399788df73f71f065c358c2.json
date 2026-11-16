@@ -1,0 +1,52 @@
+{
+  "key": "bde20c952db7b74518135051a1958119d7b8a0b68399788df73f71f065c358c2",
+  "text": "[\"어음법 (어음의 반환 의무) 어음의 소지인은 어음의 반환 없이도 어음상의 권리를 행사할 수 있다.\", \"어음법 (약속어음에의 적용) 약속어음에 대해서도 환어음에 관한 규정이 준용된다.\"]",
+  "trace": {
+    "latency_ms": 1216.5023340057814,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_0c8be572b0b64cdbb1ddde7ca9393f16"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1699,
+      "output_tokens": 67,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0031575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19754,
+      "known_cost_usd": 7.943084222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.943084222,
+      "remaining_usd": 92.056915778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.1870825,
+          "accounted_with_reservations_usd": 7.1870825,
+          "remaining_usd": 29.8129175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90lsnfqSzsFEEkrXf0UtzKkrG53",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

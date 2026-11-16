@@ -1,0 +1,87 @@
+{
+  "key": "aa4cc51bdb6f6f2adde7581a6ca0fe7e43be9c17c072fc41fe032bc4e0cfa0d0",
+  "response": {
+    "id": "chatcmpl-EiAAYJdDhQhcgqQ70Ep2EGApLNRf5",
+    "object": "chat.completion",
+    "created": 1794194230,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑의 사기죄에 대해 특별사면이 내려진 경우, 형의 집행이 면제된다. 절도죄에 대해서는 이미 유죄 판결이 확정되었으므로, 사기죄에 대한 특별사면은 그 형의 집행을 면제할 뿐이며, 절도죄에 대한 처벌은 그대로 유지된다. 따라서 갑은 절도죄에 대한 처벌만 받게 된다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2465,
+      "completion_tokens": 91,
+      "total_tokens": 2556,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1197.9010840004776,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8b893bbc0e73410c8f4600e0662da237"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2465,
+      "output_tokens": 91,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0046725,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60434,
+      "known_cost_usd": 22.56562065,
+      "unsettled_attempts": 11,
+      "accounted_with_reservations_usd": 23.66099065,
+      "remaining_usd": 76.33900935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 21.0682125,
+          "accounted_with_reservations_usd": 22.1635825,
+          "remaining_usd": 14.8364175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiAAYJdDhQhcgqQ70Ep2EGApLNRf5",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

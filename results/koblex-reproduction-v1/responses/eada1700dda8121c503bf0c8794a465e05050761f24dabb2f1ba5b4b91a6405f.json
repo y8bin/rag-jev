@@ -1,0 +1,87 @@
+{
+  "key": "eada1700dda8121c503bf0c8794a465e05050761f24dabb2f1ba5b4b91a6405f",
+  "response": {
+    "id": "chatcmpl-Ei9mL1kcFP0cTjMyaUOvWDw9jYGV6",
+    "object": "chat.completion",
+    "created": 1794192729,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 복구비 예치기간을 연장하고자 할 경우, 별지 제38호의2서식의 복구비 예치기간 연장신청서에 복구비 예치재원의 조달계획서와 그 사실을 증명할 수 있는 서류를 첨부하여 관할청에 제출해야 한다. 연장 가능한 기간에 대한 정보는 제공된 문맥에 포함되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2396,
+      "completion_tokens": 93,
+      "total_tokens": 2489,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1297.7584999898681,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_51a392316f054e24b53073deea845e99"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2396,
+      "output_tokens": 93,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00692,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59399,
+      "known_cost_usd": 12.65850065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.97018815,
+      "remaining_usd": 86.02981185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.1610925,
+          "accounted_with_reservations_usd": 12.47278,
+          "remaining_usd": 24.52722
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9mL1kcFP0cTjMyaUOvWDw9jYGV6",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

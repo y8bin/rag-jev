@@ -1,0 +1,87 @@
+{
+  "key": "6eb82628cceec6f4491990e2a08e4a36c700b594247f6aa3c8e92d976ef948fc",
+  "response": {
+    "id": "chatcmpl-EiA9YwSb3I9Ohv7klvTEcGn7vVPE7",
+    "object": "chat.completion",
+    "created": 1794194168,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 을과 전화통화를 하기 위해서는 소장의 허가를 받아야 합니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2152,
+      "completion_tokens": 19,
+      "total_tokens": 2171,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 904.4934159901459,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f4de7edd83ce4911868f0adf0c3ae834"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2152,
+      "output_tokens": 19,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00557,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60389,
+      "known_cost_usd": 22.13322815,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 23.281098150000002,
+      "remaining_usd": 76.71890185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.63582,
+          "accounted_with_reservations_usd": 21.78369,
+          "remaining_usd": 15.21631
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA9YwSb3I9Ohv7klvTEcGn7vVPE7",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

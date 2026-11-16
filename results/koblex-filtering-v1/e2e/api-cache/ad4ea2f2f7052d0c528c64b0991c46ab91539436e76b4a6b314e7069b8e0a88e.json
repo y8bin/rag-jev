@@ -1,0 +1,52 @@
+{
+  "key": "ad4ea2f2f7052d0c528c64b0991c46ab91539436e76b4a6b314e7069b8e0a88e",
+  "text": "갑은 국민주택을 분양받을 때 한부모가족으로서 일정 비율이 우선 분양될 수 있도록 국가나 지방자치단체의 노력을 받을 수 있습니다. 갑의 자녀가 공공의 아동 편의시설 등을 이용할 때, 한부모가족의 아동이 우선적으로 이용할 수 있도록 국가나 지방자치단체의 노력을 받을 수 있습니다. 공공시설 내 매점을 설치하는 것에 대한 혜택에 대해서는 제공된 문맥에 정보가 없습니다.",
+  "trace": {
+    "latency_ms": 5658.448417001637,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1d09e9c2f1de4cedaa808a423dc560b9"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2327,
+      "output_tokens": 117,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0069875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73633,
+      "known_cost_usd": 24.85454281,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.99150281,
+      "remaining_usd": 74.00849719,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.7394625,
+          "accounted_with_reservations_usd": 23.8764225,
+          "remaining_usd": 13.1235775
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7xKr0Cwsl9AHSJA7USXF3HehiA",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "192b75282b9af7de6f7fc759f9a12c838c9c09c742a0635931a452b6b4381803",
+  "text": "갑과 을은 2명 이상이 합동하여 병의 가게에서 물건을 훔쳤으므로, 형법 제331조 제2항에 따라 특수절도로 처벌받게 되며, 형법 제30조에 따라 각자를 그 죄의 정범으로 처벌한다.",
+  "trace": {
+    "latency_ms": 1846.919292001985,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_61e2ff39af354610966d6bbe02435dac"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2172,
+      "output_tokens": 67,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0061,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73645,
+      "known_cost_usd": 24.93226031,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 26.06922031,
+      "remaining_usd": 73.93077969000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.81718,
+          "accounted_with_reservations_usd": 23.95414,
+          "remaining_usd": 13.045860000000001
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK8PF6K2S10LHhdRg6ANxz0gDfsW",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

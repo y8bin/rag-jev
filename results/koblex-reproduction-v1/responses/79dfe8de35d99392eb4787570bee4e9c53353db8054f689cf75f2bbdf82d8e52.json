@@ -1,0 +1,87 @@
+{
+  "key": "79dfe8de35d99392eb4787570bee4e9c53353db8054f689cf75f2bbdf82d8e52",
+  "response": {
+    "id": "chatcmpl-Ei919iurTj0qOYnMxNwtWTSHaeAKg",
+    "object": "chat.completion",
+    "created": 1794189803,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형법 (직무유기) 공무원이 정당한 이유 없이 그 직무를 수행하지 아니한 때에는 1년 이하의 징역 또는 금고에 처한다.\", \"형법 (허위공문서작성) 공무원이 그 직무에 관하여 허위의 공문서를 작성하거나 행사한 때에는 5년 이하의 징역 또는 10년 이하의 자격정지에 처한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1671,
+      "completion_tokens": 97,
+      "total_tokens": 1768,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1223.180417000549,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5afee3e73c0b49cf89a754a1bf3efa09"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1671,
+      "output_tokens": 97,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0051475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19771,
+      "known_cost_usd": 8.030074222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.030074222,
+      "remaining_usd": 91.969925778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.2740725,
+          "accounted_with_reservations_usd": 7.2740725,
+          "remaining_usd": 29.7259275
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei919iurTj0qOYnMxNwtWTSHaeAKg",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

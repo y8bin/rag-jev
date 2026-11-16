@@ -1,0 +1,52 @@
+{
+  "key": "4a093722ea80c259f2baab63fd7c8fe36e6361e7b55f83cfb83f22dad1cb7c93",
+  "text": "갑이 컴퓨터 해킹으로 을의 계좌에서 돈을 이체한 경우, 10년 이하의 징역 또는 2천만원 이하의 벌금에 처한다. 을을 속여 돈을 송금하게 한 경우와 가방을 훔친 경우에 대한 처벌은 제공된 문맥에 명시되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 1133.7121249962365,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7d108f0dd5d94499824304cb83720a95"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2359,
+      "output_tokens": 76,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0042575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59736,
+      "known_cost_usd": 15.91007565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.266458150000002,
+      "remaining_usd": 82.73354185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.4126675,
+          "accounted_with_reservations_usd": 15.76905,
+          "remaining_usd": 21.23095
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9u88ZwjnGi2xxAVQb6WX9Ms6ue3",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

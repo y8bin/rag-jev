@@ -1,0 +1,102 @@
+{
+  "status": "EXPLORATORY_SCORER_ONLY_LATENCY",
+  "questions_complete": 60,
+  "failed_attempts": {
+    "ce": 0,
+    "jev": 0
+  },
+  "per_question_ms": {
+    "ce": {
+      "n": 60,
+      "mean": 5008.971333333628,
+      "median": 4816.84760399609,
+      "p25": 3404.714704915629,
+      "p75": 6107.377732825019,
+      "p95": 8870.050324902693,
+      "min": 1285.8860276658863,
+      "max": 14373.352597331783
+    },
+    "jev": {
+      "n": 60,
+      "mean": 10649.731567356988,
+      "median": 10794.556604513975,
+      "p25": 8827.000121498713,
+      "p75": 11849.885746751776,
+      "p95": 16527.197589802865,
+      "min": 5077.113680667632,
+      "max": 17446.657749659305
+    }
+  },
+  "per_pair_ms": {
+    "ce": {
+      "n": 60,
+      "mean": 27.598776048227197,
+      "median": 26.682041357556606,
+      "p25": 23.162885829779107,
+      "p75": 30.79560046191588,
+      "p95": 40.737407470670504,
+      "min": 15.492602742962486,
+      "max": 53.832781263414915
+    },
+    "jev": {
+      "n": 60,
+      "mean": 60.22220023734958,
+      "median": 60.24205539644581,
+      "p25": 59.18901736279233,
+      "p75": 60.92523130847982,
+      "p95": 62.59850638220356,
+      "min": 56.49569604005317,
+      "max": 65.04035547190107
+    }
+  },
+  "pairs_per_question": {
+    "n": 60,
+    "mean": 176.98333333333332,
+    "median": 178.0,
+    "p25": 147.75,
+    "p75": 195.0,
+    "p95": 276.05,
+    "min": 83.0,
+    "max": 287.0
+  },
+  "jev_minus_ce_ms": {
+    "mean_difference": 5640.76023402336,
+    "ci95": [
+      5148.543054095276,
+      6165.8540850869595
+    ],
+    "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+    "clusters": 52
+  },
+  "jev_over_ce_geometric_mean_ratio": {
+    "estimate": 2.2522633326306742,
+    "ci95": [
+      2.105554926152673,
+      2.394797485962962
+    ]
+  },
+  "repeatability": {
+    "ce": {
+      "top10_identical_to_quality_run_fraction": 1.0,
+      "top10_set_overlap_mean": 1.0
+    },
+    "jev": {
+      "top10_identical_to_quality_run_fraction": 0.011111111111111112,
+      "top10_set_overlap_mean": 0.9150925925925928
+    }
+  },
+  "within_question_cv": {
+    "ce": 0.16932052753081958,
+    "jev": 0.034260514547437636
+  },
+  "jev_retries": 0,
+  "jev_cost_usd_measured_reps": 0.6100542,
+  "raw_sha256": "7d62b9f954b8f53ea39a960956d1d7e401d856eaeafdfe3acfe40324f091da08",
+  "script_sha256": "54ad45b2cab55da455ad4916392ba9352aec25210c7d493db71c0225644f51ba",
+  "limits": [
+    "scorer-only: excludes LLM selection and generation (same structure in both conditions)",
+    "deployment comparison: local Apple MPS CE vs remote Jev API at concurrency 4; not model-intrinsic speed",
+    "network conditions of one session; no cost model for local CE hardware",
+    "60-question pre-registered sample, not all 226"
+  ]
+}

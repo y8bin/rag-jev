@@ -1,0 +1,87 @@
+{
+  "key": "19ce956e0a24e2d07051775743c80fca835745716404e3590fcc469f98d56cde",
+  "response": {
+    "id": "chatcmpl-Ei9kMmBrJT7eSki6bFZ5ZA7049fO4",
+    "object": "chat.completion",
+    "created": 1794192606,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을의 진료기록부는 10년 동안 보존해야 하며, 진료기록을 마이크로필름 형태로 보존하는 것은 적법하다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2652,
+      "completion_tokens": 38,
+      "total_tokens": 2690,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1252.9145000007702,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3126182348e74749800f6e99153170b6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2652,
+      "output_tokens": 38,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00701,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59307,
+      "known_cost_usd": 11.78693315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.04489815,
+      "remaining_usd": 86.95510185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.289525,
+          "accounted_with_reservations_usd": 11.54749,
+          "remaining_usd": 25.45251
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9kMmBrJT7eSki6bFZ5ZA7049fO4",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

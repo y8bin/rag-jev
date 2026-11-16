@@ -1,0 +1,87 @@
+{
+  "key": "6b6c0b63a355d81f3c6deead92f3763deaa2f0f08448ee5da8889e24955f79bb",
+  "response": {
+    "id": "chatcmpl-EiA4oK7DCOKqo2IENMLY0B6IjHN8u",
+    "object": "chat.completion",
+    "created": 1794193874,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을은 6개월 이상 국외에 체류하기 위해 출국하는 경우, 미리 관할 경찰관서의 장에게 체류국가 및 체류기간 등을 신고해야 한다. 이를 정당한 사유 없이 이행하지 않을 경우, 관련 법령에 따른 처벌을 받을 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2425,
+      "completion_tokens": 66,
+      "total_tokens": 2491,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1140.2627079951344,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_43690a11d4a7445d82337fcc5a21eeb6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2425,
+      "output_tokens": 66,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0067225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60202,
+      "known_cost_usd": 20.31048815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.66444315,
+      "remaining_usd": 78.33555685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.81308,
+          "accounted_with_reservations_usd": 20.167035,
+          "remaining_usd": 16.832965
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA4oK7DCOKqo2IENMLY0B6IjHN8u",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "b18eee233bff6ab1976ca7f4c0a6b143bc1bcc976a450b93c856330be9a6d4e1",
+  "text": "[\"형법 (음란물 판매) 음란한 문서, 도화, 필름, 기타 물건을 판매하거나 판매할 목적으로 제작, 수입, 수출, 운반, 소지 또는 전시한 자는 1년 이하의 징역 또는 500만원 이하의 벌금에 처한다.\"]",
+  "trace": {
+    "latency_ms": 1324.7375420032768,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4ec46b0ecf1246bab9e793e4eb846311"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1642,
+      "output_tokens": 71,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004815,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19799,
+      "known_cost_usd": 8.174826722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.174826722,
+      "remaining_usd": 91.825173278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.418825,
+          "accounted_with_reservations_usd": 7.418825,
+          "remaining_usd": 29.581175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91uH3QJrxr2AGs1OC0SZqpzuMqy",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

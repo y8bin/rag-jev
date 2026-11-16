@@ -1,0 +1,87 @@
+{
+  "key": "7e5a9d8863f12c22d8b5a1727bafe05d578162647b162d7f47a304015f56e0c0",
+  "response": {
+    "id": "chatcmpl-EiA4hNt0NAoK4aJRKncaA2qvudQXB",
+    "object": "chat.completion",
+    "created": 1794193867,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "후보자 갑이 사망했음에도 불구하고 투표용지에서 갑의 정보가 말소되지 않는 이유는 후보자등록기간이 지난 후에 후보자가 사퇴, 사망하거나 등록이 무효로 된 때라도 투표용지에 해당 후보자의 성명을 그대로 두기 때문이다. 선상투표자 을에게는 투표용지가 선거일 전 9일까지 팩시밀리를 이용하여 을이 승선하고 있는 선박의 선장에게 전송된다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2389,
+      "completion_tokens": 109,
+      "total_tokens": 2498,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1326.163916994119,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e1467f8c59db4f01b2ecbd727d67020b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2389,
+      "output_tokens": 109,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0045025,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60180,
+      "known_cost_usd": 20.09698065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.40440565,
+      "remaining_usd": 78.59559435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.5995725,
+          "accounted_with_reservations_usd": 19.9069975,
+          "remaining_usd": 17.0930025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA4hNt0NAoK4aJRKncaA2qvudQXB",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

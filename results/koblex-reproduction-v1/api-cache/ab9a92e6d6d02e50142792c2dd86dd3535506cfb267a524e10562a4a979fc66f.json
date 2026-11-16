@@ -1,0 +1,52 @@
+{
+  "key": "ab9a92e6d6d02e50142792c2dd86dd3535506cfb267a524e10562a4a979fc66f",
+  "text": "을은 갑의 부당해고에 대해 노동위원회에 구제를 신청할 수 있으며, 노동위원회가 부당해고라고 판정하면 을이 원직복직을 원하지 않을 경우, 노동위원회는 을에게 해고기간 동안 받을 수 있었던 임금 상당액 이상의 금품을 지급하도록 명할 수 있다.",
+  "trace": {
+    "latency_ms": 1077.038958988851,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4ceb231658954f7bbacf7347cd8a8978"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2232,
+      "output_tokens": 74,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00392,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59134,
+      "known_cost_usd": 10.17268065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 11.56722315,
+      "remaining_usd": 88.43277685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.6752725,
+          "accounted_with_reservations_usd": 10.069815,
+          "remaining_usd": 26.930185
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9gSolz3HZC6opBYlHMdlfBazQMK",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

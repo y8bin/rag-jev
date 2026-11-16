@@ -1,0 +1,87 @@
+{
+  "key": "3ff27b4db95cf1da1749169e40bed0b65aad681f4a9c07d63f7c3236c7366003",
+  "response": {
+    "id": "chatcmpl-Ei9nC2qFLU1vC2gEbOTa4ijK19riE",
+    "object": "chat.completion",
+    "created": 1794192782,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을은 갑의 주민등록표 등본을 확인하기 위해 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통해 확인해야 한다. 다만, 갑이 확인에 동의하지 않거나 주민등록표 등본으로 부양가족의 유무를 판단할 수 없는 경우에는 주민등록표 등본 또는 가족관계등록부 증명서를 첨부하도록 해야 한다. 갑이 중간예납추계액신고서를 제출하지 않은 경우, 납세지 관할세무서장은 법 제80조의 규정을 준용하여 그 종합소득금액을 조사 결정할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2379,
+      "completion_tokens": 143,
+      "total_tokens": 2522,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 2308.2042090100003,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b4d997c655b745b0ba893254d537582c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2379,
+      "output_tokens": 143,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0049775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59417,
+      "known_cost_usd": 12.84764065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 14.14394815,
+      "remaining_usd": 85.85605185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.3502325,
+          "accounted_with_reservations_usd": 12.64654,
+          "remaining_usd": 24.35346
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9nC2qFLU1vC2gEbOTa4ijK19riE",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

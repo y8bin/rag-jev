@@ -1,0 +1,52 @@
+{
+  "key": "6c5fe3a926865d016d339051826dc22a500d9ec765aec215c62393a214985b00",
+  "text": "갑이 항소한 사건에서는 원심판결보다 무거운 형을 선고할 수 없다. 상고의 경우에도 같은 규정이 적용된다.",
+  "trace": {
+    "latency_ms": 890.0931669923011,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_216f65e9b44e477786088acc2112eceb"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2229,
+      "output_tokens": 35,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0059225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60067,
+      "known_cost_usd": 19.03197315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.33089815,
+      "remaining_usd": 79.66910185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.534565,
+          "accounted_with_reservations_usd": 18.83349,
+          "remaining_usd": 18.16651
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA1r9ruXke92pHe95PW8UxULxzlt",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

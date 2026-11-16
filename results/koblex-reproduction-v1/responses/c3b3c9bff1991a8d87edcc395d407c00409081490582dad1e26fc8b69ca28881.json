@@ -1,0 +1,87 @@
+{
+  "key": "c3b3c9bff1991a8d87edcc395d407c00409081490582dad1e26fc8b69ca28881",
+  "response": {
+    "id": "chatcmpl-Ei9w75ckcDgV9pZQGOfsfNN7Mtwnz",
+    "object": "chat.completion",
+    "created": 1794193335,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "법원은 필요하다고 인정한 때에 직권 또는 검사, 피고인이나 변호인의 신청에 의해 변론을 분리하거나 병합할 수 있다. 을이 항소한 경우에도 갑을 위한 원심판결의 파기가 가능한 경우는 을의 항소 이유가 갑에게도 동일하게 적용될 수 있는 논점일 때이다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2287,
+      "completion_tokens": 78,
+      "total_tokens": 2365,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1098.9777909999248,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_263174ac6c0240deba770ec92ad81ca5"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2287,
+      "output_tokens": 78,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0064975,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59827,
+      "known_cost_usd": 16.78006315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.03479065,
+      "remaining_usd": 81.96520935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.282655,
+          "accounted_with_reservations_usd": 16.5373825,
+          "remaining_usd": 20.4626175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9w75ckcDgV9pZQGOfsfNN7Mtwnz",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

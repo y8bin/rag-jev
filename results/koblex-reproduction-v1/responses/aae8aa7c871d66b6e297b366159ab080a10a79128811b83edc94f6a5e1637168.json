@@ -1,0 +1,87 @@
+{
+  "key": "aae8aa7c871d66b6e297b366159ab080a10a79128811b83edc94f6a5e1637168",
+  "response": {
+    "id": "chatcmpl-EiA3nX17llACdadvCfmov0L5dKyVP",
+    "object": "chat.completion",
+    "created": 1794193811,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 상사의 지시를 무시하고 직무를 수행하지 않았으므로, 감사원법에 따른 감사를 거부하거나 자료제출 요구에 따르지 않은 경우에 해당할 수 있으며, 1년 이하의 징역 또는 1천만원 이하의 벌금에 처할 수 있다. 을은 결산서 전자기록을 허위로 작성하여 시스템에 입력했으므로, 이로 인해 발생한 오류가 감사원법에 따른 감사를 방해한 것으로 간주될 수 있으며, 동일한 처벌을 받을 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2279,
+      "completion_tokens": 123,
+      "total_tokens": 2402,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1440.3915419970872,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_91eac7649ae54260ace065b5fdf7d362"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2279,
+      "output_tokens": 123,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0069275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60147,
+      "known_cost_usd": 19.78150065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.13517315,
+      "remaining_usd": 78.86482685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.2840925,
+          "accounted_with_reservations_usd": 19.637765,
+          "remaining_usd": 17.362235
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA3nX17llACdadvCfmov0L5dKyVP",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "5210bcdaabe90a3d9482698aa9ab2b123a02344010d949f36d5d9023f8504356",
+  "response": {
+    "id": "chatcmpl-Ei9tBlDkoi6q50eNJDdiKKIfl5FI0",
+    "object": "chat.completion",
+    "created": 1794193153,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을은 갑이 계약상 의무를 이행하지 않을 때, 계약의 성질 또는 당사자의 의사표시에 의해 일정한 시일 내에 이행하지 않으면 계약의 목적을 달성할 수 없는 경우, 최고를 하지 않고 계약을 해제할 수 있다. 계약서에 \"이행 기한이 지연될 경우 을은 계약 해제를 위해 추가적인 서면 통지를 필요로 하지 않는다\"라는 조항이 포함되어 있으므로, 을은 추가적인 서면 통지 없이 계약을 해제할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2313,
+      "completion_tokens": 118,
+      "total_tokens": 2431,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1180.3602500003763,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_baf4f1e31ca045bb84e751da16a5ac51"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2313,
+      "output_tokens": 118,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0045625,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59700,
+      "known_cost_usd": 15.561410650000001,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.96861315,
+      "remaining_usd": 83.03138685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.0640025,
+          "accounted_with_reservations_usd": 15.471205,
+          "remaining_usd": 21.528795000000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9tBlDkoi6q50eNJDdiKKIfl5FI0",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

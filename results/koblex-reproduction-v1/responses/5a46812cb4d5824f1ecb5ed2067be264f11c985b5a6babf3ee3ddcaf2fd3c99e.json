@@ -1,0 +1,87 @@
+{
+  "key": "5a46812cb4d5824f1ecb5ed2067be264f11c985b5a6babf3ee3ddcaf2fd3c99e",
+  "response": {
+    "id": "chatcmpl-EiA4nJLhOofV3L0Z3wycgIX3ShFXH",
+    "object": "chat.completion",
+    "created": 1794193873,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 출마하려는 국회의원 지역구에서 선출할 국회의원의 수는 1명이며, 국회의원 선거구의 명칭과 구역은 별표 1에 따라 획정된다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2382,
+      "completion_tokens": 49,
+      "total_tokens": 2431,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 828.9871669985587,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7407599df14e499aa5159f29bb9c8de0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2382,
+      "output_tokens": 49,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004045,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60196,
+      "known_cost_usd": 20.24791315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.60797565,
+      "remaining_usd": 78.39202435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.750505,
+          "accounted_with_reservations_usd": 20.1105675,
+          "remaining_usd": 16.8894325
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA4nJLhOofV3L0Z3wycgIX3ShFXH",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

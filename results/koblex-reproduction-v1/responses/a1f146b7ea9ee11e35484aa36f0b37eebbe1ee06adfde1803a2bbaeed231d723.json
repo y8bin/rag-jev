@@ -1,0 +1,87 @@
+{
+  "key": "a1f146b7ea9ee11e35484aa36f0b37eebbe1ee06adfde1803a2bbaeed231d723",
+  "response": {
+    "id": "chatcmpl-Ei9zwX3pfGz6qQ5rtHa0hzcHCwyMT",
+    "object": "chat.completion",
+    "created": 1794193572,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 공공주택사업자로서 사업계획의 승인을 받기 위해 국토교통부장관에게 신청서에 필요한 서류를 첨부하여 제출해야 합니다. 준공검사를 받기 위해 제출해야 하는 서류에 대한 정보는 제공된 문맥에 포함되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2361,
+      "completion_tokens": 68,
+      "total_tokens": 2429,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1036.006209003972,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2ab760ffb4204ae6a2b276faee148f72"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2361,
+      "output_tokens": 68,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0065825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59986,
+      "known_cost_usd": 18.25384065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 19.61291315,
+      "remaining_usd": 80.38708685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.7564325,
+          "accounted_with_reservations_usd": 18.115505,
+          "remaining_usd": 18.884495
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9zwX3pfGz6qQ5rtHa0hzcHCwyMT",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

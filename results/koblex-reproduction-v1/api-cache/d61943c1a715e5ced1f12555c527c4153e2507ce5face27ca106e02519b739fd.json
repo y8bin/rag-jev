@@ -1,0 +1,52 @@
+{
+  "key": "d61943c1a715e5ced1f12555c527c4153e2507ce5face27ca106e02519b739fd",
+  "text": "갑은 6개월 이상 국외에 체류하기 위하여 출국하는 경우, 미리 관할경찰관서의 장에게 체류국가 및 체류기간 등을 신고하여야 한다.",
+  "trace": {
+    "latency_ms": 869.6336669963785,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7d3b0b7b78524c989f7c6cd603cf60cc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2145,
+      "output_tokens": 44,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0058025,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59849,
+      "known_cost_usd": 16.98632565,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 18.13323815,
+      "remaining_usd": 81.86676185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.4889175,
+          "accounted_with_reservations_usd": 16.63583,
+          "remaining_usd": 20.36417
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9wzBWHaK3lxjuMzKh97Af8FBKBK",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

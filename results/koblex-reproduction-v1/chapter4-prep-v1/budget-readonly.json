@@ -1,0 +1,11 @@
+{
+  "access": "SQLite mode=ro; PRAGMA query_only=ON",
+  "attempt_records": 41325,
+  "opening_balance_records": 3,
+  "current_request_records": 41322,
+  "known_cost_usd": 24.09577565,
+  "unsettled_attempts": 12,
+  "accounted_with_reservations_usd": 25.23273565,
+  "new_calls": 0,
+  "note": "Cumulative recorded usage amounts; not invoice reconciled, not per-arm online operating cost."
+}

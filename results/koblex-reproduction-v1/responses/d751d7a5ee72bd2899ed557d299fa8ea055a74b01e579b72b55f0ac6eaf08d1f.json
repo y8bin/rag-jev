@@ -1,0 +1,87 @@
+{
+  "key": "d751d7a5ee72bd2899ed557d299fa8ea055a74b01e579b72b55f0ac6eaf08d1f",
+  "response": {
+    "id": "chatcmpl-Ei9eRbp8AxsVpPS4uIYZR2THIcz4L",
+    "object": "chat.completion",
+    "created": 1794192239,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을은 상품이 인도된 날로부터 1년 이내에 갑에 대한 손해배상청구권을 행사할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2164,
+      "completion_tokens": 32,
+      "total_tokens": 2196,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 956.9329579971964,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_df31f8acde9d4c68a37f547a7c5327b7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2164,
+      "output_tokens": 32,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00333,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59008,
+      "known_cost_usd": 9.13592565,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.43859815,
+      "remaining_usd": 90.56140185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.6385175,
+          "accounted_with_reservations_usd": 7.94119,
+          "remaining_usd": 29.05881
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eRbp8AxsVpPS4uIYZR2THIcz4L",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "77ae27f874d32fcf0d9c67acee5707ba4826c103b3ac3a7615bb8d0f249160b6",
+  "text": "Answer: 0",
+  "trace": {
+    "latency_ms": 752.68624999444,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_713d5cd2f3124ff68c82c51659878e8c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 8030,
+      "output_tokens": 4,
+      "cached_input_tokens": 6016,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.012595,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60081,
+      "known_cost_usd": 19.16951065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.41753065,
+      "remaining_usd": 79.58246935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.6721025,
+          "accounted_with_reservations_usd": 18.9201225,
+          "remaining_usd": 18.0798775
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA1wtALrSWhe2UjGUvJw0q1P5k44",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

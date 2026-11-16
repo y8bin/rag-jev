@@ -1,0 +1,87 @@
+{
+  "key": "fa219d34741423b57ceae452896973b2d3b0bbeb0072f6b3196ff28d1dbb8a77",
+  "response": {
+    "id": "chatcmpl-EiA8jceJDLOsK6eYxdbJm5yVC8gJy",
+    "object": "chat.completion",
+    "created": 1794194117,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 7729,
+      "completion_tokens": 1,
+      "total_tokens": 7730,
+      "prompt_tokens_details": {
+        "cached_tokens": 6016,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_f89046aead"
+  },
+  "trace": {
+    "latency_ms": 651.4385830087122,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3236774d911f49ac82c86326cd4dda51"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 7729,
+      "output_tokens": 1,
+      "cached_input_tokens": 6016,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0118125,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60372,
+      "known_cost_usd": 21.97835315,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 23.12691315,
+      "remaining_usd": 76.87308684999999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.480945,
+          "accounted_with_reservations_usd": 21.629505,
+          "remaining_usd": 15.370494999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA8jceJDLOsK6eYxdbJm5yVC8gJy",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

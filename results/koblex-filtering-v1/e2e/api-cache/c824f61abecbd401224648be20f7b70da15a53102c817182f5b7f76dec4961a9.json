@@ -1,0 +1,52 @@
+{
+  "key": "c824f61abecbd401224648be20f7b70da15a53102c817182f5b7f76dec4961a9",
+  "text": "민사소송에서 내려진 판결서에 반드시 포함되어야 할 형식적 요건 중 '이유'가 누락되거나 모순될 경우, 이는 상고에 정당한 이유가 있는 것으로 간주된다. 을은 이러한 경우 절대적 상고이유에 해당하므로 상고를 제기할 수 있다.",
+  "trace": {
+    "latency_ms": 1674.6278339996934,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b924db59302141e2aaed212967c7d040"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2347,
+      "output_tokens": 75,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0066175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73637,
+      "known_cost_usd": 24.88027031,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 26.01723031,
+      "remaining_usd": 73.98276969,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.76519,
+          "accounted_with_reservations_usd": 23.90215,
+          "remaining_usd": 13.097850000000001
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK88FDjdCYoCtMIThihN7rqe8mUX",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,49 @@
+arm,variable,n,sum,mean,median,q1,q3,iqr,min,max,scope
+parser_ce_raw,selected_list_count,226,478.0,2.1150442477876106,2.0,2.0,2.0,0.0,1.0,5.0,logical per-query demand; cached rows included
+parser_ce_raw,selected_unique_canonical_count,226,368.0,1.6283185840707965,2.0,1.0,2.0,1.0,1.0,4.0,logical per-query demand; cached rows included
+parser_ce_raw,duplicate_count,226,110.0,0.48672566371681414,0.0,0.0,1.0,1.0,0.0,2.0,logical per-query demand; cached rows included
+parser_ce_raw,duplicate_fraction,226,45.53333333333333,0.20147492625368732,0.0,0.0,0.5,0.5,0.0,0.6666666666666666,logical per-query demand; cached rows included
+parser_ce_raw,context_tokens,226,43781.0,193.7212389380531,158.0,110.5,231.75,121.25,35.0,866.0,logical per-query demand; cached rows included
+parser_ce_raw,context_chars,226,65924.0,291.6991150442478,234.0,159.0,349.0,190.0,42.0,1325.0,logical per-query demand; cached rows included
+parser_ce_raw,full_user_message_tokens,226,516578.0,2285.7433628318586,2247.5,2186.0,2331.0,145.0,2063.0,3001.0,logical per-query demand; cached rows included
+parser_ce_raw,api_input_tokens,226,518160.0,2292.7433628318586,2254.5,2193.0,2338.0,145.0,2070.0,3008.0,logical per-query demand; cached rows included
+parser_ce_raw,api_output_tokens,226,15361.0,67.96902654867256,59.0,44.0,86.75,42.75,19.0,233.0,logical per-query demand; cached rows included
+parser_ce_raw,api_prefix_cached_input_tokens,226,73472.0,325.0973451327434,0.0,0.0,0.0,0.0,0.0,1792.0,logical per-query demand; cached rows included
+parser_ce_raw,api_minus_text_input_tokens,226,1582.0,7.0,7.0,7.0,7.0,0.0,7.0,7.0,logical per-query demand; cached rows included
+parser_ce_raw,answer_text_tokens,226,15361.0,67.96902654867256,59.0,44.0,86.75,42.75,19.0,233.0,logical per-query demand; cached rows included
+parser_ce_fixed,selected_list_count,226,478.0,2.1150442477876106,2.0,2.0,2.0,0.0,1.0,5.0,logical per-query demand; cached rows included
+parser_ce_fixed,selected_unique_canonical_count,226,407.0,1.8008849557522124,2.0,1.0,2.0,1.0,1.0,5.0,logical per-query demand; cached rows included
+parser_ce_fixed,duplicate_count,226,71.0,0.3141592920353982,0.0,0.0,1.0,1.0,0.0,2.0,logical per-query demand; cached rows included
+parser_ce_fixed,duplicate_fraction,226,30.25,0.1338495575221239,0.0,0.0,0.3333333333333333,0.3333333333333333,0.0,0.6666666666666666,logical per-query demand; cached rows included
+parser_ce_fixed,context_tokens,226,46029.0,203.66814159292036,164.0,113.0,246.75,133.75,37.0,924.0,logical per-query demand; cached rows included
+parser_ce_fixed,context_chars,226,69527.0,307.64159292035396,249.0,165.0,372.0,207.0,57.0,1372.0,logical per-query demand; cached rows included
+parser_ce_fixed,full_user_message_tokens,226,518821.0,2295.66814159292,2266.0,2192.0,2345.0,153.0,2063.0,3001.0,logical per-query demand; cached rows included
+parser_ce_fixed,api_input_tokens,226,520403.0,2302.66814159292,2273.0,2199.0,2352.0,153.0,2070.0,3008.0,logical per-query demand; cached rows included
+parser_ce_fixed,api_output_tokens,226,16308.0,72.15929203539822,66.0,47.25,88.0,40.75,19.0,220.0,logical per-query demand; cached rows included
+parser_ce_fixed,api_prefix_cached_input_tokens,226,295040.0,1305.486725663717,1920.0,0.0,1920.0,1920.0,0.0,2688.0,logical per-query demand; cached rows included
+parser_ce_fixed,api_minus_text_input_tokens,226,1582.0,7.0,7.0,7.0,7.0,0.0,7.0,7.0,logical per-query demand; cached rows included
+parser_ce_fixed,answer_text_tokens,226,16308.0,72.15929203539822,66.0,47.25,88.0,40.75,19.0,220.0,logical per-query demand; cached rows included
+parser_jev_fixed,selected_list_count,226,478.0,2.1150442477876106,2.0,2.0,2.0,0.0,1.0,5.0,logical per-query demand; cached rows included
+parser_jev_fixed,selected_unique_canonical_count,226,409.0,1.8097345132743363,2.0,1.0,2.0,1.0,1.0,4.0,logical per-query demand; cached rows included
+parser_jev_fixed,duplicate_count,226,69.0,0.3053097345132743,0.0,0.0,1.0,1.0,0.0,2.0,logical per-query demand; cached rows included
+parser_jev_fixed,duplicate_fraction,226,29.116666666666667,0.128834808259587,0.0,0.0,0.3333333333333333,0.3333333333333333,0.0,0.6666666666666666,logical per-query demand; cached rows included
+parser_jev_fixed,context_tokens,226,48725.0,215.59734513274336,170.5,120.0,262.5,142.5,25.0,1694.0,logical per-query demand; cached rows included
+parser_jev_fixed,context_chars,226,74051.0,327.6592920353982,255.5,171.25,393.5,222.25,34.0,2832.0,logical per-query demand; cached rows included
+parser_jev_fixed,full_user_message_tokens,226,521514.0,2307.5840707964603,2265.5,2192.5,2371.5,179.0,2063.0,3807.0,logical per-query demand; cached rows included
+parser_jev_fixed,api_input_tokens,226,523096.0,2314.5840707964603,2272.5,2199.5,2378.5,179.0,2070.0,3814.0,logical per-query demand; cached rows included
+parser_jev_fixed,api_output_tokens,226,16719.0,73.97787610619469,67.0,48.0,93.0,45.0,19.0,256.0,logical per-query demand; cached rows included
+parser_jev_fixed,api_prefix_cached_input_tokens,226,305920.0,1353.6283185840707,1920.0,0.0,1920.0,1920.0,0.0,2304.0,logical per-query demand; cached rows included
+parser_jev_fixed,api_minus_text_input_tokens,226,1582.0,7.0,7.0,7.0,7.0,0.0,7.0,7.0,logical per-query demand; cached rows included
+parser_jev_fixed,answer_text_tokens,226,16719.0,73.97787610619469,67.0,48.0,93.0,45.0,19.0,256.0,logical per-query demand; cached rows included
+Jev minus CE (paired),selected_list_count,226,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,paired logical demand difference
+Jev minus CE (paired),selected_unique_canonical_count,226,2.0,0.008849557522123894,0.0,0.0,0.0,0.0,-1.0,1.0,paired logical demand difference
+Jev minus CE (paired),duplicate_count,226,-2.0,-0.008849557522123894,0.0,0.0,0.0,0.0,-1.0,1.0,paired logical demand difference
+Jev minus CE (paired),duplicate_fraction,226,-1.1333333333333333,-0.005014749262536873,0.0,0.0,0.0,0.0,-0.5,0.5,paired logical demand difference
+Jev minus CE (paired),context_tokens,226,2696.0,11.929203539823009,0.0,0.0,2.5,2.5,-750.0,1259.0,paired logical demand difference
+Jev minus CE (paired),context_chars,226,4524.0,20.01769911504425,0.0,0.0,1.5,1.5,-1150.0,2139.0,paired logical demand difference
+Jev minus CE (paired),full_user_message_tokens,226,2693.0,11.915929203539823,0.0,0.0,2.5,2.5,-750.0,1259.0,paired logical demand difference
+Jev minus CE (paired),api_input_tokens,226,2693.0,11.915929203539823,0.0,0.0,2.5,2.5,-750.0,1259.0,paired logical demand difference
+Jev minus CE (paired),api_output_tokens,226,411.0,1.8185840707964602,0.0,0.0,1.0,1.0,-61.0,120.0,paired logical demand difference
+Jev minus CE (paired),api_prefix_cached_input_tokens,226,10880.0,48.14159292035398,0.0,0.0,0.0,0.0,-2432.0,2048.0,paired logical demand difference
+Jev minus CE (paired),api_minus_text_input_tokens,226,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,paired logical demand difference
+Jev minus CE (paired),answer_text_tokens,226,411.0,1.8185840707964602,0.0,0.0,1.0,1.0,-61.0,120.0,paired logical demand difference

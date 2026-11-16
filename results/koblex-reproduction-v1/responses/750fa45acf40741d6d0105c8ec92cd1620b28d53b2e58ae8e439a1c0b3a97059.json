@@ -1,0 +1,87 @@
+{
+  "key": "750fa45acf40741d6d0105c8ec92cd1620b28d53b2e58ae8e439a1c0b3a97059",
+  "response": {
+    "id": "chatcmpl-Ei92GMdL5ZpzzJiZcxegnvJLoIzie",
+    "object": "chat.completion",
+    "created": 1794189872,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형법 (일죄의 처벌) 하나의 행위가 여러 개의 죄에 해당하는 경우에는 가장 중한 죄에 정한 형으로 처벌한다.\", \"형법 (사면의 효과) 사면은 형의 선고의 효력을 상실하게 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1740,
+      "completion_tokens": 64,
+      "total_tokens": 1804,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1318.0146669910755,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3a05323bd2be4f44819ea6637e2e454c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1740,
+      "output_tokens": 64,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00499,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19813,
+      "known_cost_usd": 8.245106722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.245106722,
+      "remaining_usd": 91.754893278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.489105,
+          "accounted_with_reservations_usd": 7.489105,
+          "remaining_usd": 29.510894999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei92GMdL5ZpzzJiZcxegnvJLoIzie",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

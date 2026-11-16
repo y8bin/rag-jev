@@ -1,0 +1,52 @@
+{
+  "key": "78430a87b5e63e738e8f6f4e299c5ab199aa5184cecdc4f95a605844a2f01b6a",
+  "text": "갑이 을에게 자신의 접근매체를 대여한 경우, 전자금융거래법에 따라 접근매체를 대여하는 행위는 금지되어 있으며, 이는 고의나 중대한 과실의 범위에 해당한다.",
+  "trace": {
+    "latency_ms": 973.2464159897063,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d252620a502c42ada59e5cf731dfe793"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2496,
+      "output_tokens": 53,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00677,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60124,
+      "known_cost_usd": 19.58492565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.88185815,
+      "remaining_usd": 79.11814185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.0875175,
+          "accounted_with_reservations_usd": 19.38445,
+          "remaining_usd": 17.61555
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA2vbsIjO48a2qWHEqfckCC45BLm",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

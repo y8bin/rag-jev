@@ -1,0 +1,52 @@
+{
+  "key": "bafc06bc2b8fa8fb7364e51c84076fa4caa053909f0e0642b197506f1538c216",
+  "text": "[\"중소기업협동조합법 (공제조합 설립인가 타당성 검토) 중소기업협동조합의 설립인가를 받은 날부터 5년마다 그 타당성을 검토하여야 한다.\", \"석유 및 석유대체연료 사업법 (석유 수입·판매 부과금의 징수 대상 검토) 석유 수입 및 판매와 관련된 부과금의 징수 대상은 매년 검토하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1528.0172499915352,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_32d752b6a12449eaa4c0833d7ec64d01"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1679,
+      "output_tokens": 111,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0053075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19678,
+      "known_cost_usd": 7.577314222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.577314222,
+      "remaining_usd": 92.422685778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.8213125,
+          "accounted_with_reservations_usd": 6.8213125,
+          "remaining_usd": 30.1786875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8yxN9A7z6lr33ZoETaMIpw4jBRV",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "1635ded8d3c766654df1871fe3f7c483722006dd6a0ce966fbc18d5c6461c562",
+  "text": "갑은 을에게 승차권 판매를 터미널사업자에게 위탁해야 하지만, 여객의 편의를 위하여 필요하다고 인정되면 국토교통부령으로 정하는 바에 따라 을이 직접 판매하거나 터미널사업자가 아닌 자에게 승차권 판매를 위탁할 수 있다. 갑의 터미널 확장 계획에 대한 면허기준은 터미널의 규모가 그 지역의 장기적인 수송 수요에 적합해야 한다.",
+  "trace": {
+    "latency_ms": 1290.6385410024086,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_da89bf37e8c2473eb64f11b53bf126fa"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2287,
+      "output_tokens": 106,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0043775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59881,
+      "known_cost_usd": 17.25631315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.60172815,
+      "remaining_usd": 81.39827185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.758905,
+          "accounted_with_reservations_usd": 17.10432,
+          "remaining_usd": 19.89568
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9xs3X3xvEK1Qs0kJuVK1vOj04vs",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

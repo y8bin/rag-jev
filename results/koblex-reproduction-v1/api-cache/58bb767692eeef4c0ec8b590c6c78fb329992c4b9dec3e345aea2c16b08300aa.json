@@ -1,0 +1,52 @@
+{
+  "key": "58bb767692eeef4c0ec8b590c6c78fb329992c4b9dec3e345aea2c16b08300aa",
+  "text": "[\"자본시장과 금융투자업에 관한 법률 (합병 계획서의 내용) 투자신탁의 합병 계획서에는 합병의 목적, 방법, 합병 후 존속하는 투자신탁의 명칭, 합병에 따른 수익자의 권리 및 의무, 합병에 따른 비용 부담, 합병의 효력 발생일 등을 포함하여야 한다.\", \"자본시장과 금융투자업에 관한 법률 (합병의 효력 발생 시기) 투자신탁의 합병은 수익자총회의 승인을 받은 후 금융위원회에 신고하고, 그 신고가 수리된 날부터 효력이 발생한다.\"]",
+  "trace": {
+    "latency_ms": 1873.8813339878106,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_bcab33651a83455eb007637e63bb240a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1707,
+      "output_tokens": 143,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0056975,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19679,
+      "known_cost_usd": 7.583011722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.583011722,
+      "remaining_usd": 92.416988278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.82701,
+          "accounted_with_reservations_usd": 6.82701,
+          "remaining_usd": 30.17299
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8yzDU09746qgJKCItq6lVfzA4dP",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "cfb57286909b42da879f0809f28c9e4f30a8e0fbb4ac1d92c89d83076368fd49",
+  "text": "[\"형법 (공무집행방해) 공무원의 직무집행을 방해할 목적으로 위계 또는 위력을 사용한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.\", \"형법 (위계에 의한 공무집행방해) 위계로써 공무원의 직무집행을 방해한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.\"]",
+  "trace": {
+    "latency_ms": 1421.1066660063807,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d8b6266daed24fdaa8b67b9756fc68e6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1664,
+      "output_tokens": 109,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00525,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19750,
+      "known_cost_usd": 7.926801722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.926801722,
+      "remaining_usd": 92.073198278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.1708,
+          "accounted_with_reservations_usd": 7.1708,
+          "remaining_usd": 29.8292
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90gIwKDiNuTdIKy0hbUWIgURaIf",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

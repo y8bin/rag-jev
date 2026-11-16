@@ -1,0 +1,7 @@
+arm,execution_cache_hit,questions,denominator,input_tokens_sum,output_tokens_sum,unique_response_ids,interpretation
+parser_ce_raw,False,226,226,518160,15361,226,"recorded successful uncached answer-generation response usage; excludes selector, scorer, judge, preparation and retries"
+parser_ce_raw,True,0,226,0,0,0,reused response demand; zero new request here
+parser_ce_fixed,False,154,226,359691,12725,154,"recorded successful uncached answer-generation response usage; excludes selector, scorer, judge, preparation and retries"
+parser_ce_fixed,True,72,226,160712,3583,72,reused response demand; zero new request here
+parser_jev_fixed,False,104,226,246294,9412,104,"recorded successful uncached answer-generation response usage; excludes selector, scorer, judge, preparation and retries"
+parser_jev_fixed,True,122,226,276802,7307,122,reused response demand; zero new request here

@@ -1,0 +1,52 @@
+{
+  "key": "8791adf1745b55ff09b9b1d8bb39ea8a980efa531901b5e57558b7b706a84e2b",
+  "text": "갑은 부동산에 부합한 을의 태양광 패널의 소유권을 취득할 수 있습니다. 그러나, 타인의 권원에 의해 부속된 경우에는 그러하지 않습니다. 만약 갑이 태양광 패널로 인해 손해를 입었다면, 공작물의 설치 또는 보존의 하자로 인한 손해에 대해 공작물 점유자가 손해를 배상할 책임이 있으며, 점유자가 손해의 방지에 필요한 주의를 해태하지 않았다면 그 소유자가 손해를 배상할 책임이 있습니다.",
+  "trace": {
+    "latency_ms": 1225.81345900835,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_65ad16145baf4b8b819a6cff7c8bc2b5"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2341,
+      "output_tokens": 126,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0047125,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60363,
+      "known_cost_usd": 21.86568315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.21664815,
+      "remaining_usd": 76.78335185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.368275,
+          "accounted_with_reservations_usd": 21.71924,
+          "remaining_usd": 15.28076
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA8gj7aKWNEmdenQrsAwAvcljHOA",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

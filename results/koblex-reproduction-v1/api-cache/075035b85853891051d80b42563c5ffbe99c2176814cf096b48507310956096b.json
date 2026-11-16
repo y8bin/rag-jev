@@ -1,0 +1,52 @@
+{
+  "key": "075035b85853891051d80b42563c5ffbe99c2176814cf096b48507310956096b",
+  "text": "을은 농어촌정비사업의 시행으로 토지의 이동이 있는 경우 시장ㆍ군수에게 신고하여야 한다. 사업 시행이 완료된 후, 제106조제1항 각 호에 따른 지정ㆍ결정ㆍ확정 등이 있으면 해당 마을정비구역 지정 전의 상태로 환원 또는 폐지된 것으로 본다.",
+  "trace": {
+    "latency_ms": 1302.4641250085551,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c3811c85ec0a4238954db5ec135a8ef9"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2245,
+      "output_tokens": 77,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0039825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59308,
+      "known_cost_usd": 11.79091565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.09841565,
+      "remaining_usd": 86.90158435000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.2935075,
+          "accounted_with_reservations_usd": 11.6010075,
+          "remaining_usd": 25.3989925
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9kMYbmpTREol5guHVLHVpFwbjhH",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "d95a335f36fd565a6213f247702f464774305477f610945e89c632276b61132b",
+  "text": "채권자인 갑이 을의 재산에 대한 가압류를 통해 소멸시효를 중단시키기 위해 필요한 요건은 가압류가 이루어지는 것입니다. 가압류로 인해 시효가 중단된 경우, 시효는 납입의 고지 또는 독촉에 따른 납입기간이 지났을 때부터 새로 진행됩니다.",
+  "trace": {
+    "latency_ms": 1052.4989999976242,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_aa3fb3ff04694c9f8b9d7c63f2ceb479"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2207,
+      "output_tokens": 82,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0063375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59916,
+      "known_cost_usd": 17.58951565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 18.84109065,
+      "remaining_usd": 81.15890935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.0921075,
+          "accounted_with_reservations_usd": 17.3436825,
+          "remaining_usd": 19.6563175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9y5PZXNKyJ50Pvu6jLyQus4IMZr",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

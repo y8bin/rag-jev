@@ -1,0 +1,52 @@
+{
+  "key": "0c41d6c2e98c0de3f936dc89155314512cde92b7e9b5bdd49ab403be96611f46",
+  "text": "갑이 을의 집에 몰래 침입하여 강간을 저지른 경우 3년 이상의 유기징역에 처하고, 병이 정에게 강제추행을 저지른 경우 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다.",
+  "trace": {
+    "latency_ms": 1001.6523329977645,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6a7bc2f662db49738d5817b2476f1dc1"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2249,
+      "output_tokens": 65,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0038725,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60264,
+      "known_cost_usd": 20.92936565,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 22.12944815,
+      "remaining_usd": 77.87055185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.4319575,
+          "accounted_with_reservations_usd": 20.63204,
+          "remaining_usd": 16.36796
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA6e8hh3b5gTRHVvhuxcVmMp8U0i",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

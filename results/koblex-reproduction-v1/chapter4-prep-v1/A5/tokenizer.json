@@ -1,0 +1,13 @@
+{
+  "package": "tiktoken",
+  "version": "0.14.0",
+  "encoding": "o200k_base",
+  "mergeable_ranks_sha256": "dcf8f06c59a061f59909285da2f0fbbc0fa772916ad5f0b4ed52ce6a1c32d04a",
+  "mergeable_ranks_hash_rule": "ascending rank; uint32 big-endian rank + byte-length + token bytes",
+  "special_tokens": {
+    "<|endoftext|>": 199999,
+    "<|endofprompt|>": 200018
+  },
+  "pattern_sha256": "2d1b8dc11e89af71459b36004f698ab3693f59fd84f63e8ec2b49564ab857420",
+  "network": "disabled"
+}

@@ -1,0 +1,52 @@
+{
+  "key": "0a73d5ad817543efa5edee8aa52183b1543ca8cdf15e7f42a5e7de7bf0ecd03f",
+  "text": "[\"선원법 (선원수첩 발급 제한) 병역법 제76조제1항 각호에 해당하는 사유로 병역의무를 이행하지 아니한 자에게는 선원수첩을 발급하지 아니할 수 있다.\", \"선원법 (선원수첩 유효기간 제한) 해양항만관청은 필요하다고 인정하는 경우 선원수첩의 유효기간을 제한할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1420.770625001751,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4b0bf694acfa4c0d8340dfc0a2440269"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1730,
+      "output_tokens": 102,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005345,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19729,
+      "known_cost_usd": 7.827359222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.827359222,
+      "remaining_usd": 92.172640778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.0713575,
+          "accounted_with_reservations_usd": 7.0713575,
+          "remaining_usd": 29.9286425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90CLuWZnXL1gIs4tvc90uyPDk9c",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

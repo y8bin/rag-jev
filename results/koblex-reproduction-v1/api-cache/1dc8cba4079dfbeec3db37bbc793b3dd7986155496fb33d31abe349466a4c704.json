@@ -1,0 +1,52 @@
+{
+  "key": "1dc8cba4079dfbeec3db37bbc793b3dd7986155496fb33d31abe349466a4c704",
+  "text": "갑의 사기죄에 대해 특별사면이 내려진 경우, 사기죄에 대한 형은 소멸됩니다. 형법 제40조에 따라 한 개의 행위가 여러 개의 죄에 해당하는 경우 가장 무거운 죄에 대하여 정한 형으로 처벌하므로, 사기죄가 사면되어 형이 소멸되면 절도죄에 대한 형으로만 처벌됩니다.",
+  "trace": {
+    "latency_ms": 1366.3509580073878,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_50bd40e6459545f98d9af728a9a1d767"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2220,
+      "output_tokens": 93,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00648,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60425,
+      "known_cost_usd": 22.47464565,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 23.66945815,
+      "remaining_usd": 76.33054185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.9772375,
+          "accounted_with_reservations_usd": 22.17205,
+          "remaining_usd": 14.827950000000001
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiAATGzZULsGjp0aasJjjOIxSckzm",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

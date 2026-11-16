@@ -1,0 +1,52 @@
+{
+  "key": "016e47b65f5ff1222d11522adc6098066492e6f6b27fd83777a99cf9cbe9551a",
+  "text": "[\"농어촌정비법 (토지의 이동 신고) 농어촌정비사업 시행으로 토지의 이동이 있는 경우 사업시행자는 그 사실을 관할 시장, 군수 또는 구청장에게 신고하여야 한다.\", \"농어촌정비법 (지정의 해제) 농어촌정비사업이 완료된 경우 해당 지역의 지정은 사업시행계획에 따라 해제될 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1098.0536669958383,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d7fb4bf1c7544c6fb684d9dd5838a727"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1685,
+      "output_tokens": 95,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0051625,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19634,
+      "known_cost_usd": 7.3591392220000005,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.3591392220000005,
+      "remaining_usd": 92.640860778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.6031375,
+          "accounted_with_reservations_usd": 6.6031375,
+          "remaining_usd": 30.3968625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xozu2YTaKyZSIWaMUk3XrejJi1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

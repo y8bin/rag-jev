@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/ChenLiu-1996/figures4papers",
+  "commit": "b709de17da7e8f9a72e51a5de5bced924a01eeab",
+  "skill_path": "scientific-figure-making/SKILL.md",
+  "snapshot": "figures4papers-SKILL.snapshot.md",
+  "snapshot_sha256": "952300b4d0bd8fbd0c55aaa732a47a0abb8e9707bc80965c8e70221ef13f0292",
+  "use": "future publication figure workflow; not scientific input for A1-A6",
+  "global_installation_performed": false,
+  "figures_rendered": false
+}

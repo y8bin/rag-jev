@@ -1,0 +1,87 @@
+{
+  "key": "e79bb1f373450ecd5c17ad355910e4eadd03379f46c80fd2ca5e06300f95dbb8",
+  "response": {
+    "id": "chatcmpl-EiK7NTInMLNPALjagik2FXG8Unj9U",
+    "object": "chat.completion",
+    "created": 1794232473,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 을에게 승차권 판매를 터미널사업자에게 위탁해야 하지만, 여객의 편의를 위하여 필요하다고 인정되면 국토교통부령으로 정하는 바에 따라 을이 직접 판매하거나 터미널사업자가 아닌 자에게 승차권 판매를 위탁할 수 있다. 터미널 확장 계획에 대한 면허기준은 제공된 문맥에 포함되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2244,
+      "completion_tokens": 93,
+      "total_tokens": 2337,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e665f1271d"
+  },
+  "trace": {
+    "latency_ms": 2166.2987919989973,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f167d2a506bb4ca986c706d093d80c65"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2244,
+      "output_tokens": 93,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00654,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73615,
+      "known_cost_usd": 24.74654031,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.88350031,
+      "remaining_usd": 74.11649969,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.63146,
+          "accounted_with_reservations_usd": 23.76842,
+          "remaining_usd": 13.231580000000001
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7NTInMLNPALjagik2FXG8Unj9U",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "d78c0a6b44d5529f42544a3d2f2f4f054a7772ace8094d35378ffc29e5ebbb06",
+  "text": "법원은 필요하다고 인정한 때에 직권 또는 검사, 피고인이나 변호인의 신청에 의해 변론을 분리하거나 병합할 수 있다. 을이 항소한 경우, 파기의 이유가 갑에게도 공통되는 때에는 갑에 대해서도 원심판결을 파기하여야 한다.",
+  "trace": {
+    "latency_ms": 973.7799169961363,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_827d5c3e9bf84f6d9bba2d88fe2fdcac"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2317,
+      "output_tokens": 71,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0039425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59844,
+      "known_cost_usd": 16.92329315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 18.22264565,
+      "remaining_usd": 81.77735435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.425885,
+          "accounted_with_reservations_usd": 16.7252375,
+          "remaining_usd": 20.2747625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9wxHW5WkxnmxUvo6HhDdhsrBDQY",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

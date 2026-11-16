@@ -1,0 +1,52 @@
+{
+  "key": "549123fb4e8009d7f6497e3e402daeeb0c862fa9ee9c7f14687258394fc1d237",
+  "text": "갑이 받는 육아휴직수당 중 비과세되는 금액은 월 150만원입니다. 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 월 100만원입니다.",
+  "trace": {
+    "latency_ms": 953.9944999996806,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9ee1f3049e594b73b91ad18a74fd2d1d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2725,
+      "output_tokens": 52,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0049325,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59401,
+      "known_cost_usd": 12.66784815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.078183150000001,
+      "remaining_usd": 85.92181685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.17044,
+          "accounted_with_reservations_usd": 12.580775,
+          "remaining_usd": 24.419225
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9mMfcSXBDsob9yyPR4eoGl6B1ep",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

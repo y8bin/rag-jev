@@ -1,0 +1,26 @@
+{
+  "questions": 226,
+  "unique_gold_global": 386,
+  "unmapped_unique_gold_global": 27,
+  "gold_occurrences_per_arm": 443,
+  "gold_occurrences_two_arms": 886,
+  "corpus_rows": 233544,
+  "corpus_unique_canonical": 209564,
+  "duplicate_rows": 23980,
+  "first_loss_counts": {
+    "parser_ce_fixed": {
+      "bm25_absent": 75,
+      "selected": 233,
+      "corpus_absent": 33,
+      "shortlist_present_unselected": 60,
+      "shortlist_absent": 42
+    },
+    "parser_jev_fixed": {
+      "bm25_absent": 75,
+      "selected": 250,
+      "corpus_absent": 33,
+      "shortlist_present_unselected": 72,
+      "shortlist_absent": 13
+    }
+  }
+}

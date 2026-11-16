@@ -1,0 +1,52 @@
+{
+  "key": "3e44907ec619d401666a03902ef541a4f6b40c76b2e118b078da03041b43a32a",
+  "text": "A 회사는 불가분채무를 부담한 갑, 을, 병 중 한 명에게 채무의 전부나 일부의 이행을 청구할 수 있다.",
+  "trace": {
+    "latency_ms": 1096.2115000002086,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_99126fb56dce4ae6b55bc32fed1de1f6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2088,
+      "output_tokens": 37,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00559,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73652,
+      "known_cost_usd": 24.97481031,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 26.11177031,
+      "remaining_usd": 73.88822969,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.85973,
+          "accounted_with_reservations_usd": 23.99669,
+          "remaining_usd": 13.003309999999999
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK8dPtiABTFC1kxvvn0376Ilz90h",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

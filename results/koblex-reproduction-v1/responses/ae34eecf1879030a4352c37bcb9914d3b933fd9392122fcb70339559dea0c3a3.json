@@ -1,0 +1,87 @@
+{
+  "key": "ae34eecf1879030a4352c37bcb9914d3b933fd9392122fcb70339559dea0c3a3",
+  "response": {
+    "id": "chatcmpl-Ei8zreU1kWAkxRzT9i61yOuNuGgY7",
+    "object": "chat.completion",
+    "created": 1794189723,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"군사법원법 (사형 집행 명령) 사형 판결이 확정된 때에는 국방부장관은 지체 없이 사형 집행 명령을 내려야 한다.\", \"형법 (사형 집행) 사형은 집행 명령이 내려진 날로부터 5일 이내에 집행하여야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1672,
+      "completion_tokens": 79,
+      "total_tokens": 1751,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1476.03325000091,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_971a82fb30f04d448bc287758d0f4bef"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1672,
+      "output_tokens": 79,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00497,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19714,
+      "known_cost_usd": 7.756711722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.756711722,
+      "remaining_usd": 92.243288278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.00071,
+          "accounted_with_reservations_usd": 7.00071,
+          "remaining_usd": 29.999290000000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zreU1kWAkxRzT9i61yOuNuGgY7",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

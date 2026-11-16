@@ -1,0 +1,87 @@
+{
+  "key": "6f208a637b4c9e35d60292b9c40850f0d2a01a45ca5df7d4ef379d174c4670f3",
+  "response": {
+    "id": "chatcmpl-Ei8zmMXJBLNP8HidQpchShr3vYAmA",
+    "object": "chat.completion",
+    "created": 1794189718,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"상법 (보험자의 대위권) 보험자가 보험금액을 지급한 때에는 그 지급한 금액의 한도에서 피보험자가 가지는 권리를 취득한다.\", \"상법 (피보험자의 제3자에 대한 권리) 피보험자가 제3자에 대하여 가지는 권리가 보험자에게 이전된 경우에도 피보험자는 그 권리를 행사할 수 있다.\", \"자동차손해배상보장법 (피해자의 직접청구권) 자동차 사고로 인한 피해자는 보험자에 대하여 직접 보험금의 지급을 청구할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1673,
+      "completion_tokens": 130,
+      "total_tokens": 1803,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_936db6157f"
+  },
+  "trace": {
+    "latency_ms": 1626.530666006147,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_a6981e9d37074ffc9c1cf635213f2de1"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1673,
+      "output_tokens": 130,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0054825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19711,
+      "known_cost_usd": 7.741169222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.741169222,
+      "remaining_usd": 92.258830778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.9851675,
+          "accounted_with_reservations_usd": 6.9851675,
+          "remaining_usd": 30.0148325
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zmMXJBLNP8HidQpchShr3vYAmA",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

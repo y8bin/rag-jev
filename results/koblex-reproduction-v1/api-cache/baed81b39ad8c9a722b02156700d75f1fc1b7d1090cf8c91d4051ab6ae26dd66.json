@@ -1,0 +1,52 @@
+{
+  "key": "baed81b39ad8c9a722b02156700d75f1fc1b7d1090cf8c91d4051ab6ae26dd66",
+  "text": "갑이 농지를 공장 부지로 전환하기 위해 필요한 법적 허가는 농림축산식품부장관이나 시장ㆍ군수 또는 자치구구청장으로부터 받아야 하며, 이 허가를 받은 후 갑은 농지보전부담금을 납부해야 한다.",
+  "trace": {
+    "latency_ms": 1388.3773329871474,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8144afa6dfdc4afc803d81ee021d3ebc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2387,
+      "output_tokens": 67,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0040775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59862,
+      "known_cost_usd": 17.08026815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.47648315,
+      "remaining_usd": 81.52351685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.58286,
+          "accounted_with_reservations_usd": 16.979075,
+          "remaining_usd": 20.020925
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9x2Oq367ZUZ2f5EiW9CE7zaE3jx",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

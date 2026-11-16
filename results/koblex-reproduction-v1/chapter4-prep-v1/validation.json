@@ -1,0 +1,15 @@
+{
+  "status": "PASS_PREP_AND_ORIGINAL_PRESERVATION",
+  "original_files_checked": 43076,
+  "original_files_changed": [],
+  "new_or_missing_original_result_files": [],
+  "source_files_checked": 508,
+  "csv_jsonl_pairs_checked": 19,
+  "source_pointer_ledger_values_and_CIs": "PASS",
+  "nested_gold_survival": "PASS",
+  "generation_prompt_API_framing_residual": "7 tokens in all 678 rows",
+  "validator_source": "scripts/validate_chapter4_prep.py",
+  "validator_sha256": "a831254243427869149f614d1699f67bc30c7798b681ff5ee03be7233dcd65cb",
+  "paid_calls": 0,
+  "human_judgments_created": 0
+}

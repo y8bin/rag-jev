@@ -1,0 +1,6 @@
+{
+  "unique_passage_rankings_equal": true,
+  "reason_for_raw_index_rank_difference": "Floating-point tie differences among exact duplicate passage rows",
+  "max_absolute_error": 4.377216100692749e-08,
+  "pairs": 8
+}

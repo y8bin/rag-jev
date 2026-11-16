@@ -1,0 +1,52 @@
+{
+  "key": "e52e881bf08f87ab3da2a70a73b7e67e26b28a396785928ae32f499e1134831a",
+  "text": "[\"민법 (변제공탁) 채권자가 변제를 수령하지 아니하거나 수령할 수 없는 경우에는 채무자는 그 변제를 공탁할 수 있다. 이 경우 채무자는 변제의무를 면제받는다.\", \"민법 (공탁물의 보관료) 공탁물의 보관료는 채권자가 부담한다.\", \"공탁법 (공탁금의 보관료) 공탁금의 보관료는 대통령령으로 정하는 바에 따라 산정된다.\"]",
+  "trace": {
+    "latency_ms": 1320.4618750023656,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1d0f9575161449b8b1f4481dd633c04f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1701,
+      "output_tokens": 113,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0036225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19753,
+      "known_cost_usd": 7.939926722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.939926722,
+      "remaining_usd": 92.060073278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.183925,
+          "accounted_with_reservations_usd": 7.183925,
+          "remaining_usd": 29.816074999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90kbaggLQYx9CVqBHeTds9R8oq7",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

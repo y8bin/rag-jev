@@ -1,0 +1,52 @@
+{
+  "key": "c437ced0e188b3926f7cbc6a3c259b7d15f54745ca0a7b9303f41d0b57f20dbf",
+  "text": "갑은 원심판결에 대한 항소이유로 이유 모순을 들 수 있다. 항소기간의 마지막 날이 토요일인 경우, 해당 날은 기간에 산입되지 않는다.",
+  "trace": {
+    "latency_ms": 892.2968330007279,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1ac9ab85410b4fa6a8c4c0ace619a853"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2211,
+      "output_tokens": 43,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0037175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59676,
+      "known_cost_usd": 15.36535815,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 16.56034565,
+      "remaining_usd": 83.43965435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.86795,
+          "accounted_with_reservations_usd": 15.0629375,
+          "remaining_usd": 21.9370625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9t4LV50wTQiakgvo9FCtgft8RYy",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "7c376d69efbd3f4b9f9d13fb1b706e27bf88b57483d4c546549760bd34cb2ca8",
+  "response": {
+    "id": "chatcmpl-EiA9iAXQRp7HNWIZT0cFHyCeibAMS",
+    "object": "chat.completion",
+    "created": 1794194178,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 6개월 이상 국외에 체류하기 위해 출국하는 경우, 출국 전에는 해외체류신고를 해야 하며, 시장ㆍ군수 또는 구청장은 이를 관할하는 시장ㆍ군수 또는 구청장에게 신고사항을 알려야 하고, 주민등록표에 \"해외체류신고\"라고 기록해야 합니다. 만약 출국을 포기하려는 경우에는 별지 제18호서식에 따라 출국포기신고를 해야 합니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2421,
+      "completion_tokens": 107,
+      "total_tokens": 2528,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 2207.9305840015877,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9efa123dca154d0fbb9e11ba44faa639"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2421,
+      "output_tokens": 107,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0071225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60412,
+      "known_cost_usd": 22.34719315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.60916065,
+      "remaining_usd": 76.39083935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.849785,
+          "accounted_with_reservations_usd": 22.1117525,
+          "remaining_usd": 14.888247499999999
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA9iAXQRp7HNWIZT0cFHyCeibAMS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "314f85bd578caf6c6471ccc199424ee49ec9b9c8a4561a093f9c27842b5ab4a1",
+  "text": "갑은 을에 대한 채무의 소멸시효를 중단하기 위해 가압류를 신청할 수 있습니다. 민법 168조에 따르면, 소멸시효의 중단사유에는 압류 또는 가압류, 가처분이 포함됩니다.",
+  "trace": {
+    "latency_ms": 1240.9948329877807,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f641a951405c40779f53ceb9751c9f2c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2143,
+      "output_tokens": 60,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0035575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59481,
+      "known_cost_usd": 13.44461065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.79772815,
+      "remaining_usd": 85.20227185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.9472025,
+          "accounted_with_reservations_usd": 13.30032,
+          "remaining_usd": 23.69968
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9oHWxALUOk82dJXBxPTdNcSmk0I",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

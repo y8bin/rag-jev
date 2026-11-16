@@ -1,0 +1,52 @@
+{
+  "key": "2f678b2675d8d7a43b26f3033fc5cb04af224a4bcf399420fdfc2cb0bfd55729",
+  "text": "[\"형집행법 (수용자의 건강관리) 교정시설의 장은 수용자의 건강을 유지하기 위하여 필요한 운동 및 목욕을 보장하여야 한다.\", \"형집행법 (수용자의 부상 및 질병에 대한 조치) 수용자가 부상을 당하거나 질병에 걸린 경우 교정시설의 장은 즉시 적절한 의료조치를 취하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1469.360292001511,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1a214a2e63c94e8bb9b1cd7f20f4e869"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1697,
+      "output_tokens": 91,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0051525,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19701,
+      "known_cost_usd": 7.689984222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.689984222,
+      "remaining_usd": 92.31001577800001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.9339825,
+          "accounted_with_reservations_usd": 6.9339825,
+          "remaining_usd": 30.0660175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zXapHG58gpjsFxexkE5MLBngCq",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

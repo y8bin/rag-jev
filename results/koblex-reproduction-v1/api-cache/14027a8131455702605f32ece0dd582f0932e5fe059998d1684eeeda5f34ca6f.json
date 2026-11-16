@@ -1,0 +1,52 @@
+{
+  "key": "14027a8131455702605f32ece0dd582f0932e5fe059998d1684eeeda5f34ca6f",
+  "text": "갑의 무기징역을 법률상 감경할 경우, 을은 갑에게 10년 이상 50년 이하의 징역형을 선고할 수 있다.",
+  "trace": {
+    "latency_ms": 1035.0485000089975,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_691cfb1ca13c4aa7a2ecb02a6229360a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2302,
+      "output_tokens": 39,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006145,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59551,
+      "known_cost_usd": 14.15458315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 15.40409315,
+      "remaining_usd": 84.59590685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.657175,
+          "accounted_with_reservations_usd": 13.906685,
+          "remaining_usd": 23.093315
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9q9ilHDCQPu8Tks1eVF4ZKnqHC9",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

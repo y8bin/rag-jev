@@ -1,0 +1,10 @@
+{
+  "runner_sha256": "eb4822abb5341843de811f532c6a6223271e09a98ee3a7b32f229ff9d172332c",
+  "parent_lock_sha256": "99d5c5cc29b33168a5c855d5e3dd0a3d324c8106077691cf1ef34299c1c87bc1",
+  "change": "Three independent condition streams; original within-condition order and evaluator unchanged.",
+  "maximum_active_judge_requests": 3,
+  "identical_prompt_cache_shared_and_locked": true,
+  "prior_completed_LF_rows_preserved": true,
+  "scientific_parameters_changed": false,
+  "previous_interruption_reservations_retained": true
+}

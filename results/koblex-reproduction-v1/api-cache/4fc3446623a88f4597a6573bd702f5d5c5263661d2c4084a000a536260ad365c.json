@@ -1,0 +1,52 @@
+{
+  "key": "4fc3446623a88f4597a6573bd702f5d5c5263661d2c4084a000a536260ad365c",
+  "text": "[\"민사소송법 (변론주의) 법원은 당사자가 주장하지 아니한 사실에 대하여 판단할 수 없다.\", \"민사소송법 (청구의 변경) 원고는 소송계속 중에 청구의 취지 또는 원인을 변경할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1190.5270829884103,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_63b664a659714acc9e8233b818f32089"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1697,
+      "output_tokens": 65,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0048925,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19625,
+      "known_cost_usd": 7.312766722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.312766722,
+      "remaining_usd": 92.687233278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.556765,
+          "accounted_with_reservations_usd": 6.556765,
+          "remaining_usd": 30.443235
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xd9YKam0RQPqgs7K3kW5Fq8egL",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

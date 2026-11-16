@@ -1,0 +1,52 @@
+{
+  "key": "219e5b0073c69687416f631049cd31a09d84b80b181058f8373c97ee6a36a926",
+  "text": "을은 농어촌정비사업의 시행으로 토지의 이동이 있는 경우 시장ㆍ군수에게 신고하여야 합니다. 사업이 완료된 후에는 지체 없이 농어촌정비사업의 시행ㆍ사업계획 승인권자에게 준공인가를 신청하여야 합니다.",
+  "trace": {
+    "latency_ms": 1051.2925420043757,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5c82817e8b2940ac9b3011b47fdec9c6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2301,
+      "output_tokens": 62,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0038125,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59319,
+      "known_cost_usd": 11.88742315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.29814065,
+      "remaining_usd": 86.70185935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.390015,
+          "accounted_with_reservations_usd": 11.8007325,
+          "remaining_usd": 25.199267499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9kPwJxa9Nyr9VyJILfUp5Psmjyl",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

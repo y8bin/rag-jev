@@ -1,0 +1,52 @@
+{
+  "key": "17cab6bbee95c92dd8acbe16f4102649fe0e7b8e9b7edea08b277684ad58515a",
+  "text": "[\"대기환경보전법 (대기오염경보의 발령) 대기오염경보는 미세먼지, 초미세먼지, 오존, 이산화질소, 일산화탄소, 아황산가스의 농도가 일정 기준을 초과할 때 발령된다.\", \"대기환경보전법 (대기오염경보 시 조치) 대기오염경보가 발령된 경우, 사업자는 대기오염물질의 배출을 줄이기 위한 조치를 취하여야 하며, 필요한 경우 운영을 일시적으로 중단할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1682.1278749994235,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4070be41ae494d8a9bf7b4d1f7fcfbe4"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1677,
+      "output_tokens": 138,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0055725,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19789,
+      "known_cost_usd": 8.124494222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.124494222,
+      "remaining_usd": 91.875505778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.3684925,
+          "accounted_with_reservations_usd": 7.3684925,
+          "remaining_usd": 29.631507499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91eMZLbvL7VCrM9lldapni7j6Px",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

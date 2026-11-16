@@ -1,0 +1,87 @@
+{
+  "key": "8c9b651e2fa92989dbbcb7493e0f8d48a3f38fbf239e0214876fa1ad38ee7477",
+  "response": {
+    "id": "chatcmpl-EiA2rAWPOUzdYsOWilvZFQ6njMO8j",
+    "object": "chat.completion",
+    "created": 1794193753,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "A시 지방법원은 관할위반의 선고를 하여야 한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2118,
+      "completion_tokens": 19,
+      "total_tokens": 2137,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 800.7133750070352,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_178a6a803b7342479182fce1fc07146a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2118,
+      "output_tokens": 19,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005485,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60114,
+      "known_cost_usd": 19.47524065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 20.83340315,
+      "remaining_usd": 79.16659685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.9778325,
+          "accounted_with_reservations_usd": 19.335995,
+          "remaining_usd": 17.664005
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA2rAWPOUzdYsOWilvZFQ6njMO8j",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

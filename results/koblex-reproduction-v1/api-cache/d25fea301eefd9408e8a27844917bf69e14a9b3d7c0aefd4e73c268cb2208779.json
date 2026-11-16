@@ -1,0 +1,52 @@
+{
+  "key": "d25fea301eefd9408e8a27844917bf69e14a9b3d7c0aefd4e73c268cb2208779",
+  "text": "갑이 경비업의 허가 없이 보안 서비스를 제공한 경우, 경비업법에 따른 처벌 조항이 명시되어 있지 않으므로 구체적인 처벌 내용은 제공된 문맥에서 확인할 수 없습니다. 그러나, 자신의 행위가 법령에 의해 죄가 되지 않는 것으로 오인한 경우, 그 오인에 정당한 이유가 있는 때에 한하여 벌하지 아니한다는 형법 제16조에 따라 처벌받지 않을 수 있습니다.",
+  "trace": {
+    "latency_ms": 1300.3081670030951,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6f77a2fa88f442a7ac0b5bfddd6eb1aa"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2249,
+      "output_tokens": 108,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0043025,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60144,
+      "known_cost_usd": 19.77457315,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 20.92300565,
+      "remaining_usd": 79.07699435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.277165,
+          "accounted_with_reservations_usd": 19.4255975,
+          "remaining_usd": 17.5744025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA3mQPWUmyacsAQnn0gUFVYzZM5c",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

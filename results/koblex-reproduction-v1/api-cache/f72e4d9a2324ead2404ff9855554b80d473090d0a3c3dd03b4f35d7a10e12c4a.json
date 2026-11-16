@@ -1,0 +1,52 @@
+{
+  "key": "f72e4d9a2324ead2404ff9855554b80d473090d0a3c3dd03b4f35d7a10e12c4a",
+  "text": "갑이 안전교육 위탁기관으로 지정받기 위해서는 해양수산부령으로 정하는 바에 따라 해양경찰청장에게 지정을 신청해야 한다. 지정 후, 해양경찰청장은 지정서를 신청인에게 발급하고, 그 사실을 관보에 고시하거나 수상레저종합정보시스템 또는 해양경찰청 인터넷 홈페이지에 게시해야 한다.",
+  "trace": {
+    "latency_ms": 1342.3741669976152,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_11f64bc364f3460d9facf93dca9e056b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2193,
+      "output_tokens": 87,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0041125,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59783,
+      "known_cost_usd": 16.36130565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.66724565,
+      "remaining_usd": 82.33275435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.8638975,
+          "accounted_with_reservations_usd": 16.1698375,
+          "remaining_usd": 20.8301625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9v8BnfBftadUMF3u6CErSQpTpxv",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

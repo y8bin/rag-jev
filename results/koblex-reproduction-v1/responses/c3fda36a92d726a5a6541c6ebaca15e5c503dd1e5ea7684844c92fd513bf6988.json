@@ -1,0 +1,87 @@
+{
+  "key": "c3fda36a92d726a5a6541c6ebaca15e5c503dd1e5ea7684844c92fd513bf6988",
+  "response": {
+    "id": "chatcmpl-Ei9u5AZPGhOmpxSDoJZFJJCximlBm",
+    "object": "chat.completion",
+    "created": 1794193209,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위는 무효이며, 사업시행자는 조성용지의 공급 당시 가액과 「은행법」에 따른 은행의 1년 만기 정기예금 평균이자율을 합산한 금액을 지급하고 그 조성용지를 환매할 수 있다. 농림축산식품부장관은 생활환경정비사업의 원활한 추진과 시설물의 품질관리를 위하여 기획ㆍ기술지원을 하여야 하며, 이에 필요한 경비를 예산의 범위에서 지원할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2486,
+      "completion_tokens": 144,
+      "total_tokens": 2630,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 3059.9780829943484,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_fd7d50cfa56243c7bbe9b4b52f0bd3fd"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2486,
+      "output_tokens": 144,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005255,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59732,
+      "known_cost_usd": 15.87864315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.17976065,
+      "remaining_usd": 82.82023935000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.381235,
+          "accounted_with_reservations_usd": 15.6823525,
+          "remaining_usd": 21.3176475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9u5AZPGhOmpxSDoJZFJJCximlBm",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

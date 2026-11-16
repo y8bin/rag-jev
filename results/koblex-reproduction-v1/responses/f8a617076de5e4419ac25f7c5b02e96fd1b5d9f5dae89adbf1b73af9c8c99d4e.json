@@ -1,0 +1,87 @@
+{
+  "key": "f8a617076de5e4419ac25f7c5b02e96fd1b5d9f5dae89adbf1b73af9c8c99d4e",
+  "response": {
+    "id": "chatcmpl-Ei8xF7zBrNsXB1SSgMnyU6763R7Vr",
+    "object": "chat.completion",
+    "created": 1794189561,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형법 (공연음란) 공연히 음란한 행위를 한 자는 1년 이하의 징역, 500만원 이하의 벌금, 구류 또는 과료에 처한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1633,
+      "completion_tokens": 46,
+      "total_tokens": 1679,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1104.3776669976069,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_84a6e2413841403c89a04b758ca720ba"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1633,
+      "output_tokens": 46,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0045425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19607,
+      "known_cost_usd": 7.225884222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.225884222,
+      "remaining_usd": 92.774115778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.4698825,
+          "accounted_with_reservations_usd": 6.4698825,
+          "remaining_usd": 30.5301175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xF7zBrNsXB1SSgMnyU6763R7Vr",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

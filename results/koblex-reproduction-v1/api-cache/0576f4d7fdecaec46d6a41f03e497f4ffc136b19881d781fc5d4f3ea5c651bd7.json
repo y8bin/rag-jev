@@ -1,0 +1,52 @@
+{
+  "key": "0576f4d7fdecaec46d6a41f03e497f4ffc136b19881d781fc5d4f3ea5c651bd7",
+  "text": "갑은 강제 수용 절차에 대하여 「행정소송법」에 따른 행정소송을 제기할 수 있는 자격이 있다. 취소 소송이 제기된 경우에 집행정지가 인정될 수 있는 요건은 제공된 Context에 포함되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 1000.1653330109548,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_085f5a124e7f4533a0f841b92d8c64ec"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2216,
+      "output_tokens": 66,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59036,
+      "known_cost_usd": 9.40365815,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.60918565,
+      "remaining_usd": 90.39081435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.90625,
+          "accounted_with_reservations_usd": 8.1117775,
+          "remaining_usd": 28.888222499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eX5EwY1cqdCprIM0tDQi9U0ksz",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

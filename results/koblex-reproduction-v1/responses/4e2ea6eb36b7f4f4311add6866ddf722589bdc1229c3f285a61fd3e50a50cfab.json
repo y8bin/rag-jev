@@ -1,0 +1,87 @@
+{
+  "key": "4e2ea6eb36b7f4f4311add6866ddf722589bdc1229c3f285a61fd3e50a50cfab",
+  "response": {
+    "id": "chatcmpl-Ei90UCoqteRRzGG7uPDhudG6vMsDh",
+    "object": "chat.completion",
+    "created": 1794189762,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"소득세법 (교육비 세액공제) 거주자가 기본공제대상자를 위하여 교육비를 지출한 경우 해당 과세기간의 소득세에서 일정 금액을 공제받을 수 있다.\", \"소득세법 (교육비 세액공제 한도) 초등학생의 경우 연간 300만원까지 교육비 세액공제를 받을 수 있다.\", \"소득세법 (기본공제대상자 요건) 과세기간 종료일 현재 기본공제대상자 요건을 충족하지 않는 경우 해당 과세기간에 대한 교육비 세액공제를 받을 수 없다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1696,
+      "completion_tokens": 140,
+      "total_tokens": 1836,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1724.9415830010548,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_476d2b760b114c25836175bd15f23312"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1696,
+      "output_tokens": 140,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00564,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19742,
+      "known_cost_usd": 7.887314222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.887314222,
+      "remaining_usd": 92.112685778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.1313125,
+          "accounted_with_reservations_usd": 7.1313125,
+          "remaining_usd": 29.8686875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90UCoqteRRzGG7uPDhudG6vMsDh",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

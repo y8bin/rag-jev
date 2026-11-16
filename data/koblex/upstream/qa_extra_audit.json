@@ -1,0 +1,13 @@
+{
+  "prompt_overlap": [],
+  "shared_gold_components": 176,
+  "component_size_histogram": {
+    "1": 148,
+    "11": 1,
+    "3": 2,
+    "2": 22,
+    "5": 2,
+    "7": 1
+  },
+  "largest_component": 11
+}

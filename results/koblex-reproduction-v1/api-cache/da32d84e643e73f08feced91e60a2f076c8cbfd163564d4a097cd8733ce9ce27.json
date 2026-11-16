@@ -1,0 +1,52 @@
+{
+  "key": "da32d84e643e73f08feced91e60a2f076c8cbfd163564d4a097cd8733ce9ce27",
+  "text": "을은 갑의 도박 중독 문제로 인해 혼인을 계속하기 어려운 중대한 사유가 있다고 판단했다면, 민법 840조에 따라 가정법원에 재판상 이혼을 청구할 수 있다. 이 청구권의 소멸에 관한 정보는 제공된 문맥에 포함되어 있지 않다.",
+  "trace": {
+    "latency_ms": 1395.32829199743,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7e2e3cec3dd0431e837333a533a6c1a0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2202,
+      "output_tokens": 75,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006255,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59020,
+      "known_cost_usd": 9.24715565,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.50463065,
+      "remaining_usd": 90.49536935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.7497475,
+          "accounted_with_reservations_usd": 8.0072225,
+          "remaining_usd": 28.992777500000003
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eUbWtXiieMthYL0eClXKcIUYPB",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

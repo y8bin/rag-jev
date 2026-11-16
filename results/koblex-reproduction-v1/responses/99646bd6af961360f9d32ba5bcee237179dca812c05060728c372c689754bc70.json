@@ -1,0 +1,87 @@
+{
+  "key": "99646bd6af961360f9d32ba5bcee237179dca812c05060728c372c689754bc70",
+  "response": {
+    "id": "chatcmpl-Ei91xuigCo46I0j9basB8j109GYw1",
+    "object": "chat.completion",
+    "created": 1794189853,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"행정소송법 (목적) 이 법은 행정청의 위법한 처분 등으로 인하여 권리 또는 이익을 침해받은 자가 법원에 그 처분 등의 취소 또는 변경을 구하는 소송을 제기할 수 있도록 하여 국민의 권리와 이익을 보호함을 목적으로 한다.\", \"행정심판법 (심판청구의 처리) 행정심판위원회는 심판청구가 제기된 경우 신속하고 공정하게 심리하여야 하며, 심판청구가 여러 개 제기된 경우에는 이를 병합하여 심리할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1723,
+      "completion_tokens": 143,
+      "total_tokens": 1866,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 2309.8105829994893,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_47053225825e4151929e047f1d609fc9"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1723,
+      "output_tokens": 143,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0057375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19801,
+      "known_cost_usd": 8.183814222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.183814222,
+      "remaining_usd": 91.816185778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.4278125,
+          "accounted_with_reservations_usd": 7.4278125,
+          "remaining_usd": 29.5721875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91xuigCo46I0j9basB8j109GYw1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

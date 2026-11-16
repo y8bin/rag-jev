@@ -1,0 +1,52 @@
+{
+  "key": "90d976255afeba255bb4b0b4ea0de56e114fe3bcf3abf957f2bf36fa2923da80",
+  "text": "갑의 행위는 상법 542조 9에 따라 이사회의 승인을 받아야 하는 거래를 승인 없이 진행한 것으로, 이는 자본시장과 금융투자업에 관한 법률 446조에 따라 신용공여를 위반한 행위로 형사처벌의 대상이 될 수 있다. 또한, 상법 622조에 따라 갑이 임무에 위배하여 회사에 손해를 가한 경우, 10년 이하의 징역 또는 3천만원 이하의 벌금에 처해질 수 있다. XYZ 회사 자체에 대한 형사처벌 가능성은 명시되어 있지 않다.",
+  "trace": {
+    "latency_ms": 1390.9667920088395,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_484b7cddd23045edb041b999dd7fe8b7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2551,
+      "output_tokens": 140,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0053775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60420,
+      "known_cost_usd": 22.42620815,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 23.57434065,
+      "remaining_usd": 76.42565935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.9288,
+          "accounted_with_reservations_usd": 22.0769325,
+          "remaining_usd": 14.923067499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA9lchs8gBwn3jtPZ8tS8AfwPOcM",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

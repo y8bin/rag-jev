@@ -1,0 +1,52 @@
+{
+  "key": "57937f3a5d8af50d430afd3451e417389e291d733f969b8e564440687ffacc8d",
+  "text": "[\"상법 (미성년자 피보험자의 생명보험) 타인의 사망을 보험사고로 하는 보험계약은 그 타인의 서면에 의한 동의를 얻지 아니하면 효력이 없다. 다만, 피보험자가 15세 미만인 경우에는 그러하지 아니하다.\", \"상법 (질병보험의 적용) 질병보험에 관하여는 생명보험 및 상해보험에 관한 규정을 준용한다.\", \"보험업법 (불리한 계약조건의 제한) 보험회사는 보험계약자에게 불리한 계약조건을 특약으로 제시할 수 없다.\"]",
+  "trace": {
+    "latency_ms": 2378.3994169934886,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f3ce9f96e4a944bc83fa2fb205ee2a1f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1712,
+      "output_tokens": 135,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00563,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19703,
+      "known_cost_usd": 7.701219222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.701219222,
+      "remaining_usd": 92.298780778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.9452175,
+          "accounted_with_reservations_usd": 6.9452175,
+          "remaining_usd": 30.0547825
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zck1RkewwyT7UyJCSC4hYS4UOW",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "970ddd04bed98f8dba92e81e3248411ec8eeae44613684dba7a66442ac49344e",
+  "text": "[\"민법 (부당이득의 반환) 타인의 재산 또는 노무로 인하여 이익을 얻고 그로 인하여 타인에게 손해를 가한 자는 그 이익을 반환하여야 한다.\", \"민법 (악의의 수익자) 수익자가 악의인 경우에는 그 받은 이익에 이자를 붙여 반환하여야 한다.\", \"민법 (법정이율) 법률에 다른 규정이 없으면 이율은 연 5%로 한다.\"]",
+  "trace": {
+    "latency_ms": 1830.5308330018306,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_fd8c2b08ff3e4db1b898b1c07aa599bc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1700,
+      "output_tokens": 111,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00536,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19779,
+      "known_cost_usd": 8.073806722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.073806722,
+      "remaining_usd": 91.926193278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.317805,
+          "accounted_with_reservations_usd": 7.317805,
+          "remaining_usd": 29.682195
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91OayNhDdPv3gg4bnUO5Iv74laC",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "5d520d9d067d04b2fb73cc0c7b7e47f36c8107510e379e169d4773c17d981968",
+  "text": "[\"형법 (강도) 폭행 또는 협박으로 사람의 재물을 강취한 자는 3년 이상의 유기징역에 처한다.\"]",
+  "trace": {
+    "latency_ms": 1122.790541005088,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_90a97dc405354306b315b3f071384755"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1652,
+      "output_tokens": 35,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00448,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19751,
+      "known_cost_usd": 7.9312817220000005,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.9312817220000005,
+      "remaining_usd": 92.068718278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.17528,
+          "accounted_with_reservations_usd": 7.17528,
+          "remaining_usd": 29.82472
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90hbuKF5sTMlyq5sqRHR3zYOPvJ",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

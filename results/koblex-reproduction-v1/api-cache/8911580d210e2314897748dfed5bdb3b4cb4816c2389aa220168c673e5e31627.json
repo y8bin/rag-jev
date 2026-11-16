@@ -1,0 +1,52 @@
+{
+  "key": "8911580d210e2314897748dfed5bdb3b4cb4816c2389aa220168c673e5e31627",
+  "text": "[\"출입국관리법 (출국신고) 대한민국 국민이 국외로 출국하려는 경우에는 출국심사를 받아야 한다.\", \"출입국관리법 (장기체류자 신고) 대한민국 국민이 6개월 이상 국외에 체류할 목적으로 출국하는 경우에는 출국 전후로 체류지 및 연락처를 관할 출입국관리사무소에 신고하여야 한다.\", \"출입국관리법 (출국 일정 변경 신고) 출국 일정이 변경된 경우에는 변경된 일정을 관할 출입국관리사무소에 신고하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1602.0108339871513,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8552aef29dcc448abb2164fd428e2833"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1635,
+      "output_tokens": 134,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0054275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19810,
+      "known_cost_usd": 8.232229222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.232229222,
+      "remaining_usd": 91.767770778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.4762275,
+          "accounted_with_reservations_usd": 7.4762275,
+          "remaining_usd": 29.5237725
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei92Bu3KWkBlNPskxrcllbZ9tM0h9",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

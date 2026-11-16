@@ -1,0 +1,52 @@
+{
+  "key": "85c5f498d21fb0152f15b5c603ed07a5e53a9145f7e48d53adb0cc3f7342b827",
+  "text": "을 소장은 수용자가 건강유지에 필요한 운동 및 목욕을 정기적으로 할 수 있도록 보장해야 하며, 갑이 부상을 당하거나 질병에 걸렸을 경우에는 건강한 생활을 위한 위생 및 의료상의 적절한 조치를 해야 한다.",
+  "trace": {
+    "latency_ms": 967.8915410040645,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_09ed6b82998f42ada71750772c15ba70"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2230,
+      "output_tokens": 60,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003615,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59725,
+      "known_cost_usd": 15.81138565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.16373565,
+      "remaining_usd": 82.83626435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.3139775,
+          "accounted_with_reservations_usd": 15.6663275,
+          "remaining_usd": 21.3336725
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9u5U96ln7KSiVKO6zO3cvUMW5pD",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

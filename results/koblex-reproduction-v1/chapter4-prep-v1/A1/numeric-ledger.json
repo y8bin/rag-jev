@@ -1,0 +1,863 @@
+[
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_raw",
+    "metric": "precision",
+    "numerator": 129.33333333333334,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.5722713864306785,
+    "display_x100": 57.22713864306785,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_raw/retrieval/precision"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_raw",
+    "metric": "recall",
+    "numerator": 102.5,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.45353982300884954,
+    "display_x100": 45.35398230088495,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_raw/retrieval/recall"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_raw",
+    "metric": "f1",
+    "numerator": 110.1,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.4871681415929203,
+    "display_x100": 48.716814159292035,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_raw/retrieval/f1"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_raw",
+    "metric": "em",
+    "numerator": 40.0,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.17699115044247787,
+    "display_x100": 17.699115044247787,
+    "display_unit": "%",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_raw/retrieval/em"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_raw",
+    "metric": "gold_set_coverage",
+    "numerator": 47.0,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.2079646017699115,
+    "display_x100": 20.79646017699115,
+    "display_unit": "%",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_raw/retrieval/gold_set_coverage"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_raw",
+    "metric": "token_f1",
+    "numerator": 91.9891,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.4070314159292035,
+    "display_x100": 40.70314159292035,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_raw/token_f1"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_raw",
+    "metric": "lf_eval",
+    "numerator": 131.7668772614199,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.5830392799177871,
+    "display_x100": 58.303927991778714,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_raw/lf_eval"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_fixed",
+    "metric": "precision",
+    "numerator": 143.41666666666666,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.6345870206489675,
+    "display_x100": 63.458702064896755,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_fixed/retrieval/precision"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_fixed",
+    "metric": "recall",
+    "numerator": 130.5,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.577433628318584,
+    "display_x100": 57.743362831858406,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_fixed/retrieval/recall"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_fixed",
+    "metric": "f1",
+    "numerator": 132.35714285714286,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.5856510745891277,
+    "display_x100": 58.56510745891277,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_fixed/retrieval/f1"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_fixed",
+    "metric": "em",
+    "numerator": 63.0,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.27876106194690264,
+    "display_x100": 27.876106194690266,
+    "display_unit": "%",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_fixed/retrieval/em"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_fixed",
+    "metric": "gold_set_coverage",
+    "numerator": 77.0,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.3407079646017699,
+    "display_x100": 34.070796460176986,
+    "display_unit": "%",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_fixed/retrieval/gold_set_coverage"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_fixed",
+    "metric": "token_f1",
+    "numerator": 104.4016,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.46195398230088497,
+    "display_x100": 46.1953982300885,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_fixed/token_f1"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_ce_fixed",
+    "metric": "lf_eval",
+    "numerator": 152.71089609140276,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.6757119296079768,
+    "display_x100": 67.57119296079767,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_ce_fixed/lf_eval"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_jev_fixed",
+    "metric": "precision",
+    "numerator": 151.08333333333334,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.6685103244837759,
+    "display_x100": 66.8510324483776,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_jev_fixed/retrieval/precision"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_jev_fixed",
+    "metric": "recall",
+    "numerator": 137.16666666666666,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.6069321533923303,
+    "display_x100": 60.69321533923303,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_jev_fixed/retrieval/recall"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_jev_fixed",
+    "metric": "f1",
+    "numerator": 139.56190476190477,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.6175305520438265,
+    "display_x100": 61.75305520438265,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_jev_fixed/retrieval/f1"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_jev_fixed",
+    "metric": "em",
+    "numerator": 67.0,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.29646017699115046,
+    "display_x100": 29.646017699115045,
+    "display_unit": "%",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_jev_fixed/retrieval/em"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_jev_fixed",
+    "metric": "gold_set_coverage",
+    "numerator": 79.0,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.3495575221238938,
+    "display_x100": 34.95575221238938,
+    "display_unit": "%",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_jev_fixed/retrieval/gold_set_coverage"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_jev_fixed",
+    "metric": "token_f1",
+    "numerator": 106.9274,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.47313008849557525,
+    "display_x100": 47.31300884955753,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_jev_fixed/token_f1"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "question_mean",
+    "arm": "parser_jev_fixed",
+    "metric": "lf_eval",
+    "numerator": 158.54489397703526,
+    "denominator": 226,
+    "denominator_unit": "questions",
+    "raw_value": 0.7015260795444038,
+    "display_x100": 70.15260795444038,
+    "display_unit": "points on 0..100 scale",
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/summaries/parser_jev_fixed/lf_eval"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_jev_fixed minus parser_ce_fixed",
+    "metric": "f1",
+    "numerator": 7.204761904761905,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.03187947745469869,
+    "display_x100": 3.1879477454698693,
+    "display_unit": "points on 0..100 scale",
+    "ci95_raw": [
+      0.007468999659813845,
+      0.056762380952380946
+    ],
+    "ci95_x100": [
+      0.7468999659813844,
+      5.676238095238094
+    ],
+    "existing_inference": {
+      "mean_difference": 0.03187947745469869,
+      "ci95": [
+        0.007468999659813845,
+        0.056762380952380946
+      ],
+      "p_centered_bootstrap_two_sided": 0.012398760123987601,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "f1",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/0"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_jev_fixed minus parser_ce_fixed",
+    "metric": "recall",
+    "numerator": 6.666666666666666,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.029498525073746312,
+    "display_x100": 2.949852507374631,
+    "display_unit": "points on 0..100 scale",
+    "ci95_raw": [
+      0.003911906015532446,
+      0.055067115484818324
+    ],
+    "ci95_x100": [
+      0.3911906015532446,
+      5.5067115484818325
+    ],
+    "existing_inference": {
+      "mean_difference": 0.029498525073746312,
+      "ci95": [
+        0.003911906015532446,
+        0.055067115484818324
+      ],
+      "p_centered_bootstrap_two_sided": 0.024797520247975203,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "recall",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/1"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_jev_fixed minus parser_ce_fixed",
+    "metric": "em",
+    "numerator": 4.0,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.017699115044247787,
+    "display_x100": 1.7699115044247788,
+    "display_unit": "percentage points",
+    "ci95_raw": [
+      -0.017699115044247787,
+      0.05188679245283019
+    ],
+    "ci95_x100": [
+      -1.7699115044247788,
+      5.188679245283019
+    ],
+    "existing_inference": {
+      "mean_difference": 0.017699115044247787,
+      "ci95": [
+        -0.017699115044247787,
+        0.05188679245283019
+      ],
+      "p_centered_bootstrap_two_sided": 0.3481651834816518,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "em",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/2"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_jev_fixed minus parser_ce_fixed",
+    "metric": "gold_set_coverage",
+    "numerator": 2.0,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.008849557522123894,
+    "display_x100": 0.8849557522123894,
+    "display_unit": "percentage points",
+    "ci95_raw": [
+      -0.028985507246376812,
+      0.04526748971193416
+    ],
+    "ci95_x100": [
+      -2.898550724637681,
+      4.526748971193416
+    ],
+    "existing_inference": {
+      "mean_difference": 0.008849557522123894,
+      "ci95": [
+        -0.028985507246376812,
+        0.04526748971193416
+      ],
+      "p_centered_bootstrap_two_sided": 0.6777322267773223,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "gold_set_coverage",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/3"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_jev_fixed minus parser_ce_fixed",
+    "metric": "token_f1",
+    "numerator": 2.5258000000000003,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.011176106194690267,
+    "display_x100": 1.1176106194690267,
+    "display_unit": "points on 0..100 scale",
+    "ci95_raw": [
+      0.0001788458869082441,
+      0.022736642223011357
+    ],
+    "ci95_x100": [
+      0.01788458869082441,
+      2.273664222301136
+    ],
+    "existing_inference": {
+      "mean_difference": 0.011176106194690267,
+      "ci95": [
+        0.0001788458869082441,
+        0.022736642223011357
+      ],
+      "p_centered_bootstrap_two_sided": 0.0524947505249475,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "token_f1",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/4"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_jev_fixed minus parser_ce_fixed",
+    "metric": "lf_eval",
+    "numerator": 5.833997885632483,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.025814149936426917,
+    "display_x100": 2.581414993642692,
+    "display_unit": "points on 0..100 scale",
+    "ci95_raw": [
+      0.003745512942064026,
+      0.04791551001249569
+    ],
+    "ci95_x100": [
+      0.3745512942064026,
+      4.7915510012495695
+    ],
+    "existing_inference": {
+      "mean_difference": 0.025814149936426917,
+      "ci95": [
+        0.003745512942064026,
+        0.04791551001249569
+      ],
+      "p_centered_bootstrap_two_sided": 0.0225977402259774,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "lf_eval",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/5"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_ce_fixed minus parser_ce_raw",
+    "metric": "f1",
+    "numerator": 22.257142857142856,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.09848293299620733,
+    "display_x100": 9.848293299620734,
+    "display_unit": "points on 0..100 scale",
+    "ci95_raw": [
+      0.06853496340478983,
+      0.13021149229401305
+    ],
+    "ci95_x100": [
+      6.8534963404789835,
+      13.021149229401304
+    ],
+    "existing_inference": {
+      "mean_difference": 0.09848293299620733,
+      "ci95": [
+        0.06853496340478983,
+        0.13021149229401305
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "f1",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/6"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_ce_fixed minus parser_ce_raw",
+    "metric": "recall",
+    "numerator": 28.0,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.1238938053097345,
+    "display_x100": 12.38938053097345,
+    "display_unit": "points on 0..100 scale",
+    "ci95_raw": [
+      0.09277484741456767,
+      0.15825688073394495
+    ],
+    "ci95_x100": [
+      9.277484741456767,
+      15.825688073394495
+    ],
+    "existing_inference": {
+      "mean_difference": 0.1238938053097345,
+      "ci95": [
+        0.09277484741456767,
+        0.15825688073394495
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "recall",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/7"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_ce_fixed minus parser_ce_raw",
+    "metric": "em",
+    "numerator": 23.0,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.10176991150442478,
+    "display_x100": 10.176991150442479,
+    "display_unit": "percentage points",
+    "ci95_raw": [
+      0.04700854700854701,
+      0.15859030837004406
+    ],
+    "ci95_x100": [
+      4.700854700854701,
+      15.859030837004406
+    ],
+    "existing_inference": {
+      "mean_difference": 0.10176991150442478,
+      "ci95": [
+        0.04700854700854701,
+        0.15859030837004406
+      ],
+      "p_centered_bootstrap_two_sided": 0.00039996000399960006,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "em",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/8"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_ce_fixed minus parser_ce_raw",
+    "metric": "gold_set_coverage",
+    "numerator": 30.0,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.13274336283185842,
+    "display_x100": 13.274336283185843,
+    "display_unit": "percentage points",
+    "ci95_raw": [
+      0.08620689655172414,
+      0.18340611353711792
+    ],
+    "ci95_x100": [
+      8.620689655172415,
+      18.340611353711793
+    ],
+    "existing_inference": {
+      "mean_difference": 0.13274336283185842,
+      "ci95": [
+        0.08620689655172414,
+        0.18340611353711792
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "gold_set_coverage",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/9"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_ce_fixed minus parser_ce_raw",
+    "metric": "token_f1",
+    "numerator": 12.4125,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.05492256637168141,
+    "display_x100": 5.492256637168141,
+    "display_unit": "points on 0..100 scale",
+    "ci95_raw": [
+      0.03779788930020171,
+      0.07304744602818702
+    ],
+    "ci95_x100": [
+      3.779788930020171,
+      7.304744602818703
+    ],
+    "existing_inference": {
+      "mean_difference": 0.05492256637168141,
+      "ci95": [
+        0.03779788930020171,
+        0.07304744602818702
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "token_f1",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/10"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  },
+  {
+    "kind": "paired_difference_existing_ci",
+    "arm": "parser_ce_fixed minus parser_ce_raw",
+    "metric": "lf_eval",
+    "numerator": 20.944018829982866,
+    "denominator": 226,
+    "denominator_unit": "paired questions (151 dependence groups)",
+    "raw_value": 0.09267264969018968,
+    "display_x100": 9.267264969018967,
+    "display_unit": "points on 0..100 scale",
+    "ci95_raw": [
+      0.062036674380875,
+      0.12300305396053125
+    ],
+    "ci95_x100": [
+      6.2036674380875,
+      12.300305396053126
+    ],
+    "existing_inference": {
+      "mean_difference": 0.09267264969018968,
+      "ci95": [
+        0.062036674380875,
+        0.12300305396053125
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "lf_eval",
+      "confirmatory": false
+    },
+    "source": {
+      "path": "results/koblex-reproduction-v1/analysis.json",
+      "sha256": "7609288f45915e64bc86c1041f2a526603fa2a8094e900b55110d65153cdf176",
+      "json_pointer": "/comparisons/11"
+    },
+    "raw_rows": "A1/question-metrics.jsonl"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "bucket": "Jev_improvement",
+    "stratum": "all",
+    "candidate_n": 32,
+    "query_id": "qa_124_2hop_480_rand",
+    "selection_key": "abs_delta_F1",
+    "key_value": 0.5,
+    "bucket_median": 0.5,
+    "distance_to_median": 0.0,
+    "legal_review_status": "NOT_REVIEWED"
+  },
+  {
+    "bucket": "CE_advantage",
+    "stratum": "all",
+    "candidate_n": 17,
+    "query_id": "qa_324_2hop_515",
+    "selection_key": "abs_delta_F1",
+    "key_value": 0.4,
+    "bucket_median": 0.4,
+    "distance_to_median": 0.0,
+    "legal_review_status": "NOT_REVIEWED"
+  },
+  {
+    "bucket": "metric_discordance",
+    "stratum": "all",
+    "candidate_n": 11,
+    "query_id": "qa_443_3hop_703",
+    "selection_key": "abs_delta_F1",
+    "key_value": 0.4,
+    "bucket_median": 0.4,
+    "distance_to_median": 0.0,
+    "legal_review_status": "NOT_REVIEWED"
+  }
+]

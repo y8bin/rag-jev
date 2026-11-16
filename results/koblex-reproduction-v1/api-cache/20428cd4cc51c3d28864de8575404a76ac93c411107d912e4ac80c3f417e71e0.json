@@ -1,0 +1,52 @@
+{
+  "key": "20428cd4cc51c3d28864de8575404a76ac93c411107d912e4ac80c3f417e71e0",
+  "text": "임대차가 종료한 경우에도 임차인이 보증금을 돌려받을 때까지는 임대차 관계는 존속하는 것으로 본다. 갑이 새로운 임대차를 통해 얻은 수익은 법률상 원인 없이 을의 권리를 침해하여 얻은 이익으로 평가될 수 있다. 을이 계약 해지 또는 해제권을 행사하려면 보증금 반환에 대하여 소송을 제기하여 승소판결이 확정되거나, 주택임대차분쟁조정위원회의 조정안을 수락하여 조정이 성립된 경우에도 임대사업자가 보증금을 반환하지 않는 경우를 통해 절차를 진행할 수 있다.",
+  "trace": {
+    "latency_ms": 1795.0640829949407,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_20fcedb7b2be48698b69501c7ddf4fc9"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2508,
+      "output_tokens": 151,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00778,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60014,
+      "known_cost_usd": 18.53259065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 19.882895650000002,
+      "remaining_usd": 80.11710435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.0351825,
+          "accounted_with_reservations_usd": 18.3854875,
+          "remaining_usd": 18.6145125
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA0p5NtyMlyZ3g1EBuMAAYp9dDmU",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

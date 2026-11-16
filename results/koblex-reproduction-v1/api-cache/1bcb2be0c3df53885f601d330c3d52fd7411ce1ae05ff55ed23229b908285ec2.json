@@ -1,0 +1,52 @@
+{
+  "key": "1bcb2be0c3df53885f601d330c3d52fd7411ce1ae05ff55ed23229b908285ec2",
+  "text": "병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 여러 개의 청구가 같은 종류의 소송절차에 따르는 경우에만 하나의 소로 제기할 수 있습니다. 또한, 소송목적이 한 쪽 당사자와 제3자에게 합일적으로 확정되어야 할 경우, 병은 공동소송인으로 소송에 참가할 수 있습니다.",
+  "trace": {
+    "latency_ms": 1065.540042007342,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7d2c5595f2694ac8a90beaa4e8bbbdc3"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2244,
+      "output_tokens": 91,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00412,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59162,
+      "known_cost_usd": 10.42364315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 11.72752565,
+      "remaining_usd": 88.27247435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.926235,
+          "accounted_with_reservations_usd": 10.2301175,
+          "remaining_usd": 26.7698825
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9hM0ZK4wW3BAZaI3YAhahHMvR66",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

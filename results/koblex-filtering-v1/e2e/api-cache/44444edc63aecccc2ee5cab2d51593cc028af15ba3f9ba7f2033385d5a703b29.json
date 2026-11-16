@@ -1,0 +1,52 @@
+{
+  "key": "44444edc63aecccc2ee5cab2d51593cc028af15ba3f9ba7f2033385d5a703b29",
+  "text": "갑과 을이 공동으로 강도죄를 저지른 경우, 형법 제30조에 따라 각자를 그 죄의 정범으로 처벌한다.",
+  "trace": {
+    "latency_ms": 1291.002291982295,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b04c9f8e8736474a9950b0abe26ccad7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2083,
+      "output_tokens": 35,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0055575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73622,
+      "known_cost_usd": 24.78949781,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.92645781,
+      "remaining_usd": 74.07354219,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.6744175,
+          "accounted_with_reservations_usd": 23.8113775,
+          "remaining_usd": 13.188622500000001
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7dgPY70R4m2RTvIi3ouTPHNVTQ",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

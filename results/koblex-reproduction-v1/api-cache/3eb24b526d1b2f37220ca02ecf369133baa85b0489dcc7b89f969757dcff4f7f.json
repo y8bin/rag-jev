@@ -1,0 +1,52 @@
+{
+  "key": "3eb24b526d1b2f37220ca02ecf369133baa85b0489dcc7b89f969757dcff4f7f",
+  "text": "신탁채권은 수익채권보다 우선합니다. 따라서, 을이 갑의 재산을 관리하는 동안 발생한 신탁채권이 병의 수익채권보다 우선합니다. 정이 수탁자로 변경된 경우, 정은 을이 신탁행위로 인하여 병에게 부담하는 채무를 승계하게 됩니다.",
+  "trace": {
+    "latency_ms": 1073.8939580041915,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4f50c979c511461c9ccbcd5f3e81f787"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2475,
+      "output_tokens": 76,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0069475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60178,
+      "known_cost_usd": 20.08749315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.39464565,
+      "remaining_usd": 78.60535435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.590085,
+          "accounted_with_reservations_usd": 19.8972375,
+          "remaining_usd": 17.1027625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA4gB0MzVYFOcCF40GdiBKJNf1UK",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

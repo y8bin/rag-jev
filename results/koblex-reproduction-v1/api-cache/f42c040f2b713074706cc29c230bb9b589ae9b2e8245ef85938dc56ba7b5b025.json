@@ -1,0 +1,52 @@
+{
+  "key": "f42c040f2b713074706cc29c230bb9b589ae9b2e8245ef85938dc56ba7b5b025",
+  "text": "갑산림토석회사는 매년 2월 말까지 산림청장에게 전년도의 사업실적보고서 및 결산보고서, 해당 연도의 사업계획서 및 수지예산서를 제출해야 한다. 산림청장 을은 산지전용이나 토석채취 관련 조사를 수행하고, 조사 결과에 따라 필요한 조치를 할 수 있다. 을이 채석단지를 지정 또는 변경 지정하려면 세부지정기준 적합 여부와 채석경제성 평가결과를 검토하고, 관계 행정기관의 장과 협의하며, 중앙산지관리위원회 또는 지방산지관리위원회의 심의를 거쳐야 한다.",
+  "trace": {
+    "latency_ms": 1532.3437500046566,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b8c356378e0140329d3013c9abc5de2a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2540,
+      "output_tokens": 147,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00542,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60113,
+      "known_cost_usd": 19.46975565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 20.77406065,
+      "remaining_usd": 79.22593935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.9723475,
+          "accounted_with_reservations_usd": 19.2766525,
+          "remaining_usd": 17.7233475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA2qWwh7YxrguvLgrn6V8MRNFWbC",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

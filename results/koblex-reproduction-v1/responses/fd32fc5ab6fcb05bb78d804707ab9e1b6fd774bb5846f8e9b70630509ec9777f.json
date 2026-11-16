@@ -1,0 +1,87 @@
+{
+  "key": "fd32fc5ab6fcb05bb78d804707ab9e1b6fd774bb5846f8e9b70630509ec9777f",
+  "response": {
+    "id": "chatcmpl-Ei9mKLAKTp2qjmi70h1pwdFMjaSeS",
+    "object": "chat.completion",
+    "created": 1794192728,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑씨가 저지른 범칙행위에 대한 공소시효는 7년이 지나면 완성된다. 갑 주식회사가 벌금형을 피할 수 있는 조건은 위반행위를 방지하기 위해 상당한 주의와 감독을 게을리하지 않았음을 입증하는 것이다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2242,
+      "completion_tokens": 68,
+      "total_tokens": 2310,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1173.3035829965957,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f7958ae9fa39464e8b5df8c9427d4548"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2242,
+      "output_tokens": 68,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004045,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59396,
+      "known_cost_usd": 12.62868565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.94740315,
+      "remaining_usd": 86.05259685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.1312775,
+          "accounted_with_reservations_usd": 12.449995,
+          "remaining_usd": 24.550005
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9mKLAKTp2qjmi70h1pwdFMjaSeS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

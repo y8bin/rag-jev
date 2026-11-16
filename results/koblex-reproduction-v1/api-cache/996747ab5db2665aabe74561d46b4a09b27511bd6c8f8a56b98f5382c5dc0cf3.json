@@ -1,0 +1,52 @@
+{
+  "key": "996747ab5db2665aabe74561d46b4a09b27511bd6c8f8a56b98f5382c5dc0cf3",
+  "text": "갑이 을에게 징계를 내릴 때는 미리 3명 이상의 해원으로 구성되는 징계위원회의 의결을 거쳐야 한다. 을의 폭력행위에 대해 가능한 징계는 훈계, 상륙금지(정박 중에 10일 이내), 및 하선이다.",
+  "trace": {
+    "latency_ms": 1228.854916000273,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ecca6e036cee4bba9ebda822f13f3519"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2203,
+      "output_tokens": 73,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0038375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59209,
+      "known_cost_usd": 10.87455565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.17982065,
+      "remaining_usd": 87.82017935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.3771475,
+          "accounted_with_reservations_usd": 10.6824125,
+          "remaining_usd": 26.317587500000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9iNoDEkOzz4fLz4s7PeLpGIUiwB",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

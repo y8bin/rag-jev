@@ -1,0 +1,87 @@
+{
+  "key": "b326344b763d37a0b79f6e8cfe56a441c4a0ecd82c4a2f2275ef5b6682d1db4b",
+  "response": {
+    "id": "chatcmpl-Ei8x5u6oWSEtBY921mbDsEEeYjWWk",
+    "object": "chat.completion",
+    "created": 1794189551,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"조세특례제한법 (현금영수증 발급 거부 신고 포상금) 현금영수증 발급 거부를 최초로 신고한 자에게 포상금을 지급한다.\", \"조세특례제한법 (포상금의 한도) 현금영수증 발급 거부에 대한 포상금의 연간 한도는 500만원으로 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1705,
+      "completion_tokens": 88,
+      "total_tokens": 1793,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1588.6392499960493,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4079ac55af9245afb411ee695fefd5ce"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1705,
+      "output_tokens": 88,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0033825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19600,
+      "known_cost_usd": 7.189189222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.189189222,
+      "remaining_usd": 92.810810778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.4331875,
+          "accounted_with_reservations_usd": 6.4331875,
+          "remaining_usd": 30.5668125
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8x5u6oWSEtBY921mbDsEEeYjWWk",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

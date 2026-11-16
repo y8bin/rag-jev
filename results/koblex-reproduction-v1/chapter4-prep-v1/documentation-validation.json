@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "local_links_checked": 41,
+  "link_scope": "authored prep documents; upstream skill snapshot references resolve in its pinned repository",
+  "all_json_and_jsonl_parse": "PASS"
+}

@@ -1,0 +1,87 @@
+{
+  "key": "06558aa598a69bb597c45c87244383a05bf7d3769280dd9eff23c8e15b28a5b3",
+  "response": {
+    "id": "chatcmpl-Ei9ebPqMN4R6Gw8DoMkAOuiOyqFj5",
+    "object": "chat.completion",
+    "created": 1794192249,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 별정우체국의 지정을 해지하려면 별정우체국법 제3조제3항 및 제15조에 따라 지정 해지 절차를 따라야 하며, 지정이 해지 또는 취소된 때에는 해당 국장 및 직원은 당연히 퇴직한다. 다만, 피지정인의 추천을 받아 임용된 국장이 그 별정우체국의 업무를 인수하여 새로 피지정인으로 지정받았을 때에는 퇴직하지 않는다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2301,
+      "completion_tokens": 113,
+      "total_tokens": 2414,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1353.9684590068646,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_93ead3aecb0043108b25b082b71a7e88"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2301,
+      "output_tokens": 113,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0068825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59051,
+      "known_cost_usd": 9.52960065,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.73687065,
+      "remaining_usd": 90.26312935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.0321925,
+          "accounted_with_reservations_usd": 8.2394625,
+          "remaining_usd": 28.760537499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9ebPqMN4R6Gw8DoMkAOuiOyqFj5",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

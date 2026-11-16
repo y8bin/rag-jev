@@ -1,0 +1,87 @@
+{
+  "key": "3769a6990d170a194cceb16ab2928d2f39f6da44a50e70a9d223d73b0536f82d",
+  "response": {
+    "id": "chatcmpl-Ei8x2P4arzASZgfU6i2tb59Cx02de",
+    "object": "chat.completion",
+    "created": 1794189548,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"비영리법인의 설립 및 감독에 관한 법률 (인가 후 절차) 주무관청은 법인의 설립을 인가한 후 지체 없이 이를 관보에 고시하여야 한다.\", \"비영리법인의 설립 및 감독에 관한 법률 (감독) 주무관청은 법인의 업무 및 재산에 관하여 필요한 감독을 할 수 있으며, 법인은 주무관청의 감독에 필요한 자료를 제출하여야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1651,
+      "completion_tokens": 104,
+      "total_tokens": 1755,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1209.0578329953132,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4a7b4c439e2c45fc99036d939fc8fa11"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1651,
+      "output_tokens": 104,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0051675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19598,
+      "known_cost_usd": 7.180329222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.180329222,
+      "remaining_usd": 92.819670778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.4243275,
+          "accounted_with_reservations_usd": 6.4243275,
+          "remaining_usd": 30.5756725
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8x2P4arzASZgfU6i2tb59Cx02de",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

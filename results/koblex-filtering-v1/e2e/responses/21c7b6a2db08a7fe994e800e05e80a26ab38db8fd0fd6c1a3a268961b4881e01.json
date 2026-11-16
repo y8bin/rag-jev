@@ -1,0 +1,87 @@
+{
+  "key": "21c7b6a2db08a7fe994e800e05e80a26ab38db8fd0fd6c1a3a268961b4881e01",
+  "response": {
+    "id": "chatcmpl-EiK8RgCSTiqZtgBWvHLI2l0kejrBY",
+    "object": "chat.completion",
+    "created": 1794232539,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 주주총회의 결의를 거쳐야 합니다. 내부 업무에 관한 규정을 변경한 경우에는 이사회 결의로 변경할 수 있습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2308,
+      "completion_tokens": 49,
+      "total_tokens": 2357,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e665f1271d"
+  },
+  "trace": {
+    "latency_ms": 1628.2925000123214,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2e8c0eb6e9074e4fbd27de4857834da7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2308,
+      "output_tokens": 49,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00626,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73646,
+      "known_cost_usd": 24.93852031,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 26.07548031,
+      "remaining_usd": 73.92451969,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.82344,
+          "accounted_with_reservations_usd": 23.9604,
+          "remaining_usd": 13.0396
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK8RgCSTiqZtgBWvHLI2l0kejrBY",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

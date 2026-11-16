@@ -1,0 +1,87 @@
+{
+  "key": "a2dc816d5d68914794ae37c2552dc24b8546e7905b070e4b7283708ad6828fec",
+  "response": {
+    "id": "chatcmpl-Ei9rFvxbPncts2MiJKOLqRwdvWVYg",
+    "object": "chat.completion",
+    "created": 1794193033,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을이 갑의 선거운동을 위하여 지역구민들에게 서명이나 날인을 받는 것은 허용되지 않으며, 병에게 선거운동을 위해 금품을 제공하는 행위도 허용되지 않는다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2219,
+      "completion_tokens": 50,
+      "total_tokens": 2269,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1056.108624994522,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3515b710447b4ee890ef777f6764a748"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2219,
+      "output_tokens": 50,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0060475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59616,
+      "known_cost_usd": 14.76913815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 16.07069315,
+      "remaining_usd": 83.92930685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.27173,
+          "accounted_with_reservations_usd": 14.573285,
+          "remaining_usd": 22.426715
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9rFvxbPncts2MiJKOLqRwdvWVYg",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

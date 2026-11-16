@@ -1,0 +1,52 @@
+{
+  "key": "d620dff95d67fa4ad67084a6378f0f4dc20e5f6fff659f8fa7c639f1073a3a69",
+  "text": "갑은 을과 병 사이의 환지로 인한 분쟁을 조정하기 위해 중앙분쟁조정위원회에 조정을 신청할 수 있다. 환지 처분과 관련된 토지 및 건물의 등기 시점이나 환지심의위원회의 구성과 운영에 관한 사항은 제공된 문맥에 포함되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 1059.942416002741,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2882997f9321409e9c5495c1cef8245f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2283,
+      "output_tokens": 76,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0064675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60283,
+      "known_cost_usd": 21.10633815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 22.464468150000002,
+      "remaining_usd": 77.53553185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.60893,
+          "accounted_with_reservations_usd": 20.96706,
+          "remaining_usd": 16.03294
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA6kY6fJ0EmCdqSmbuLnMIK2aQha",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

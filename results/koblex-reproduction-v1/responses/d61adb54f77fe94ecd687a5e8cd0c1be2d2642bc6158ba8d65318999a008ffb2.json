@@ -1,0 +1,87 @@
+{
+  "key": "d61adb54f77fe94ecd687a5e8cd0c1be2d2642bc6158ba8d65318999a008ffb2",
+  "response": {
+    "id": "chatcmpl-Ei9pGTs0rPGESwxF3iKJWAVLAxG7h",
+    "object": "chat.completion",
+    "created": 1794192910,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "경찰이 갑을 소환하거나 체포, 구금할 때에는 소환장 또는 구속영장을 발부하여야 하며, 체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 갑의 자택을 압수나 수색할 때에도 영장을 발부하여 시행하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2323,
+      "completion_tokens": 148,
+      "total_tokens": 2471,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1316.1347080022097,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4e4857f5194546fca99176d7b4734ffc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2323,
+      "output_tokens": 148,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0048875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59523,
+      "known_cost_usd": 13.87513315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.23233315,
+      "remaining_usd": 84.76766685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.377725,
+          "accounted_with_reservations_usd": 13.734925,
+          "remaining_usd": 23.265075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9pGTs0rPGESwxF3iKJWAVLAxG7h",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

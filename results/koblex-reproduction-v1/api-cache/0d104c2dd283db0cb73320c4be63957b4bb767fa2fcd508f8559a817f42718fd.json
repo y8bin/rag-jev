@@ -1,0 +1,52 @@
+{
+  "key": "0d104c2dd283db0cb73320c4be63957b4bb767fa2fcd508f8559a817f42718fd",
+  "text": "갑과 을이 공동으로 을의 사무실에서 절도죄를 범한 경우, 이들은 각자를 그 죄의 정범으로 처벌한다.",
+  "trace": {
+    "latency_ms": 1014.8829579993617,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_dd1b21f196dd49949934feee0c7c37a2"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2153,
+      "output_tokens": 35,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0057325,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60009,
+      "known_cost_usd": 18.49698065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 19.75876815,
+      "remaining_usd": 80.24123184999999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.9995725,
+          "accounted_with_reservations_usd": 18.26136,
+          "remaining_usd": 18.73864
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA0oKaIz7NdKf7XXXijCd4l9hSxd",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

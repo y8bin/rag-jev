@@ -1,0 +1,52 @@
+{
+  "key": "9ed47e42f2508cba24b32c21728d6178a2d2ee26f2ee65747a683b45e77adeb7",
+  "text": "갑이 재개발 사업을 위해 신탁업자 을을 사업시행자로 지정한 경우, 토지등소유자 전체회의의 의결을 거쳐야 하는 사항은 다음과 같습니다: 시행규정의 확정 및 변경, 정비사업비의 사용 및 변경, 정비사업전문관리업자와의 계약 등 토지등소유자의 부담이 될 계약, 시공자의 선정 및 변경, 정비사업비의 토지등소유자별 분담내역, 자금의 차입과 그 방법ㆍ이자율 및 상환방법, 사업시행계획서의 작성 및 변경, 관리처분계획의 수립 및 변경, 청산금의 징수ㆍ지급과 조합 해산 시의 회계보고, 비용의 금액 및 징수방법, 그 밖에 토지등소유자에게 부담이 되는 것으로 시행규정으로 정하는 사항입니다. \n\n정비구역의 지정 또는 변경 시 필요한 절차에 대한 구체적인 내용은 제공된 문맥에 포함되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 2172.8852499945788,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6ff8d402135b41cc8fe12bcc09317fa7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2945,
+      "output_tokens": 233,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0096925,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60144,
+      "known_cost_usd": 19.77027065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.97148815,
+      "remaining_usd": 79.02851185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.2728625,
+          "accounted_with_reservations_usd": 19.47408,
+          "remaining_usd": 17.52592
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA3lZfgJJoSYqEhAar27ZR3soYIT",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

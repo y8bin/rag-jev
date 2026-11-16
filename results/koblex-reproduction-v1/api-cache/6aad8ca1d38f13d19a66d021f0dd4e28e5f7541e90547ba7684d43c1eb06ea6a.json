@@ -1,0 +1,52 @@
+{
+  "key": "6aad8ca1d38f13d19a66d021f0dd4e28e5f7541e90547ba7684d43c1eb06ea6a",
+  "text": "갑이 음란한 잡지를 판매한 경우, 1년 이하의 징역 또는 500만원 이하의 벌금에 처할 수 있다.",
+  "trace": {
+    "latency_ms": 818.5467080038507,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5d57aac108eb4549bc33c471afba10c1"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2128,
+      "output_tokens": 33,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00565,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60328,
+      "known_cost_usd": 21.53598565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 22.93689065,
+      "remaining_usd": 77.06310935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.0385775,
+          "accounted_with_reservations_usd": 21.4394825,
+          "remaining_usd": 15.5605175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA7kZaGBez5GMIA7NUnHdt2kFQLa",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

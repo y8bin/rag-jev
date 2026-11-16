@@ -1,0 +1,52 @@
+{
+  "key": "10a4c31b0a739215a3d12a998f4842ff8df9d393c52f9eb9026ab92934cfaf6f",
+  "text": "[\"신탁법 (수익자의 권리) 수익자는 신탁재산으로부터 이익을 얻을 권리가 있으며, 수익자의 권리는 신탁재산에 대한 권리로서 수탁자에게 대항할 수 있다.\", \"신탁법 (수탁자의 변경) 수탁자가 변경된 경우, 새로운 수탁자는 이전 수탁자가 신탁행위로 인하여 부담하는 채무를 승계한다.\", \"신탁법 (신탁채권의 우선순위) 신탁재산에 대한 수익자의 권리는 신탁채권보다 우선한다.\"]",
+  "trace": {
+    "latency_ms": 1523.888291005278,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5a248bfa72a54c9e91ef0fa7dfa62cb6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1759,
+      "output_tokens": 131,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0057075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19774,
+      "known_cost_usd": 8.046164222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.046164222,
+      "remaining_usd": 91.953835778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.2901625,
+          "accounted_with_reservations_usd": 7.2901625,
+          "remaining_usd": 29.7098375
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91EyqfrHXIGXFYuK2dH2i0k9CQD",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

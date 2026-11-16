@@ -1,0 +1,87 @@
+{
+  "key": "5f612cbf210f713cc6d851e30c133f98e46ebebf6494d6f238a9fcc1dcfd19a9",
+  "response": {
+    "id": "chatcmpl-EiA3o1QJ9NBiXaLN039XFe9mjs021",
+    "object": "chat.completion",
+    "created": 1794193812,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 신탁업자 을을 사업시행자로 지정한 경우, 토지등소유자 전체회의의 의결을 거쳐야 하는 사항은 다음과 같습니다: 시행규정의 확정 및 변경, 정비사업비의 사용 및 변경, 정비사업전문관리업자와의 계약 등 토지등소유자의 부담이 될 계약, 시공자의 선정 및 변경, 정비사업비의 토지등소유자별 분담내역, 자금의 차입과 그 방법ㆍ이자율 및 상환방법, 사업시행계획서의 작성 및 변경, 관리처분계획의 수립 및 변경, 청산금의 징수ㆍ지급과 조합 해산 시의 회계보고, 비용의 금액 및 징수방법, 그 밖에 토지등소유자에게 부담이 되는 것으로 시행규정으로 정하는 사항입니다.\n\n정비구역의 지정 또는 변경 시 필요한 절차는 대통령령으로 정하는 사항에 따릅니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2603,
+      "completion_tokens": 220,
+      "total_tokens": 2823,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1912.7763750002487,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c6f15481e9bc47a5ae0c5598f03459f4"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2603,
+      "output_tokens": 220,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0063075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60152,
+      "known_cost_usd": 19.83366065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.08885815,
+      "remaining_usd": 78.91114185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.3362525,
+          "accounted_with_reservations_usd": 19.59145,
+          "remaining_usd": 17.40855
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA3o1QJ9NBiXaLN039XFe9mjs021",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

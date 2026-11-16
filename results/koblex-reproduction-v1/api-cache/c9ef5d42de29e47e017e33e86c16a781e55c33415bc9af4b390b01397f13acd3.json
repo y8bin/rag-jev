@@ -1,0 +1,52 @@
+{
+  "key": "c9ef5d42de29e47e017e33e86c16a781e55c33415bc9af4b390b01397f13acd3",
+  "text": "갑과 을 사이의 임대차 계약이 성립하기 위해서는 갑이 을에게 목적물을 사용, 수익하게 할 것을 약정하고, 을이 이에 대하여 차임을 지급할 것을 약정함으로써 그 효력이 생긴다.",
+  "trace": {
+    "latency_ms": 1081.6807500086725,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_45f5cc1673ec40a8a26efff1fc5aea9f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2226,
+      "output_tokens": 55,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006115,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59854,
+      "known_cost_usd": 17.00811065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.36037815,
+      "remaining_usd": 81.63962185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.5107025,
+          "accounted_with_reservations_usd": 16.86297,
+          "remaining_usd": 20.13703
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9x0l8AWvKnldzwgS90XflqPkR5q",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "62c9a4530482f5f59c16183df82a9de58b5ff25644d70aaf5e71939a490756c6",
+  "text": "공소시효가 만료된 상황에서 법원은 갑의 절도 혐의에 대해 공소시효 완성을 이유로 공소기각 판결을 내려야 한다.",
+  "trace": {
+    "latency_ms": 954.9292089941446,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_bdb56895515d4a64971d262d10e27b40"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2166,
+      "output_tokens": 41,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60038,
+      "known_cost_usd": 18.77072315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.06573815,
+      "remaining_usd": 79.93426185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.273315,
+          "accounted_with_reservations_usd": 18.56833,
+          "remaining_usd": 18.43167
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA0yHknosPZCwXmyZUsWLo9rSnvx",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

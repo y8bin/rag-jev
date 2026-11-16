@@ -1,0 +1,52 @@
+{
+  "key": "fee3a7064bf8c325052f10a97b16e1003c038fc072af14983f77bd8bbc144a4b",
+  "text": "갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받게 되는 절차는, 피고사건이 범죄로 되지 아니하거나 범죄사실의 증명이 없는 때에는 판결로써 무죄를 선고하여야 한다는 형사소송법 제325조에 따른다.",
+  "trace": {
+    "latency_ms": 1004.5995830005268,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_81e4bb546cc24abaa2ba3ea79c72400e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2192,
+      "output_tokens": 89,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00397,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59627,
+      "known_cost_usd": 14.87144315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.27360565,
+      "remaining_usd": 83.72639434999999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.374035,
+          "accounted_with_reservations_usd": 14.7761975,
+          "remaining_usd": 22.223802499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9s3hFHalgK3v4f32T2NyzUZqhRY",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

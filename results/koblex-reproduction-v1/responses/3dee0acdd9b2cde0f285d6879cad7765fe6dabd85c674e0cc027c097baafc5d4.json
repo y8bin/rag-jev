@@ -1,0 +1,87 @@
+{
+  "key": "3dee0acdd9b2cde0f285d6879cad7765fe6dabd85c674e0cc027c097baafc5d4",
+  "response": {
+    "id": "chatcmpl-Ei9pEalE19vpJksVaZgkOAgIny06k",
+    "object": "chat.completion",
+    "created": 1794192908,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "경찰이 갑을 체포하거나 구금할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 합니다. 또한, 갑의 자택을 압수나 수색할 때에도 마찬가지로 법관이 발부한 영장을 제시해야 합니다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2445,
+      "completion_tokens": 124,
+      "total_tokens": 2569,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1391.490292007802,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7161dc5dab9d4018a09145edca95df31"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2445,
+      "output_tokens": 124,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0073525,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59517,
+      "known_cost_usd": 13.83605565,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 15.03448565,
+      "remaining_usd": 84.96551435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.3386475,
+          "accounted_with_reservations_usd": 13.5370775,
+          "remaining_usd": 23.462922499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9pEalE19vpJksVaZgkOAgIny06k",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

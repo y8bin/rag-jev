@@ -1,0 +1,52 @@
+{
+  "key": "25cceff88e1aaefaef716ad593be19823a5ef3c7cf51ddd0c9c39a5d37a3e4dc",
+  "text": "갑은 을을 사망에 이르게 한 경우, 을의 배우자와 자녀에게 재산상의 손해가 없는 경우에도 손해배상의 책임이 있다. (민법 752조)",
+  "trace": {
+    "latency_ms": 983.4803749981802,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_23671b892495470a8b68d1907e0d2cb5"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2350,
+      "output_tokens": 44,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003915,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59366,
+      "known_cost_usd": 12.34856065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.65106065,
+      "remaining_usd": 86.34893935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.8511525,
+          "accounted_with_reservations_usd": 12.1536525,
+          "remaining_usd": 24.8463475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9lPgXkstTLQoCcYKq7spZHpQvh6",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

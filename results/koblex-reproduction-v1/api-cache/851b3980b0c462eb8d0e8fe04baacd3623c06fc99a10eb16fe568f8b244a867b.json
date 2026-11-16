@@ -1,0 +1,52 @@
+{
+  "key": "851b3980b0c462eb8d0e8fe04baacd3623c06fc99a10eb16fe568f8b244a867b",
+  "text": "을의 진료기록부는 10년 동안 보존해야 하며, 진료기록을 마이크로필름 형태로 보존하는 것은 적법합니다.",
+  "trace": {
+    "latency_ms": 1000.3900840092683,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5dd2e70d373c466a81d504294dedb31c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2460,
+      "output_tokens": 38,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00653,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59302,
+      "known_cost_usd": 11.75720315,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 12.95297065,
+      "remaining_usd": 87.04702935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.259795,
+          "accounted_with_reservations_usd": 11.4555625,
+          "remaining_usd": 25.5444375
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9kLKUtdoEIGftoegI16rkkxFKB6",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

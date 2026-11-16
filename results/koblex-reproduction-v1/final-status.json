@@ -1,0 +1,36 @@
+{
+  "status": "AUTOMATED_STUDY_COMPLETE_INTEGRITY_PASS_HUMAN_REVIEW_PENDING",
+  "completed_at_utc": "2026-11-09T03:33:34.843104+00:00",
+  "answers": 678,
+  "LF_evaluations": 678,
+  "human_judgments_completed": 0,
+  "tests_passed": 22,
+  "report": "research/KOBLEX_REPRODUCTION_RESULTS_20261109.md",
+  "report_sha256": "0dcf6fc4ad82641fa1896d68f15c7748f0b079c5692f27ff58b83db8ca4229ce",
+  "integrity_audit_sha256": "679a5478d74a64b179d00d7de9c494e06ac37f72e407924beb7e606032765f65",
+  "budget": {
+    "limit_usd": 100.0,
+    "attempts": 60909,
+    "known_cost_usd": 24.09577565,
+    "unsettled_attempts": 12,
+    "accounted_with_reservations_usd": 25.23273565,
+    "remaining_usd": 74.76726435,
+    "service_limits": {
+      "openai": {
+        "limit_usd": 37.0,
+        "known_cost_usd": 22.5983675,
+        "accounted_with_reservations_usd": 23.7353275,
+        "remaining_usd": 13.2646725
+      }
+    }
+  },
+  "integrity_audit_path": "results/koblex-reproduction-v1/integrity-audit-current.json",
+  "post_execution_cleanup": {
+    "manifest": "results/koblex-reproduction-v1/cleanup-manifest.json",
+    "scientific_results_unchanged": true,
+    "removed_GiB": 12.931,
+    "current_entry_point": "scripts/koblex.py",
+    "current_configuration": "configs/koblex-reproduction.yaml",
+    "manifest_sha256": "36c4afe827a1ea6221446dc251e613c9760f71abbf0c48d02ba1f28d4c9f1fea"
+  }
+}

@@ -1,0 +1,337 @@
+subgroup,metric,arm,n,numerator,raw_mean,display_x100,descriptive_only,source
+all,precision,parser_ce_raw,226,129.33333333333334,0.5722713864306785,57.22713864306785,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,precision,parser_ce_fixed,226,143.41666666666666,0.6345870206489675,63.458702064896755,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,precision,parser_jev_fixed,226,151.08333333333334,0.6685103244837759,66.8510324483776,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,precision,Jev minus CE,226,7.666666666666667,0.03392330383480835,3.392330383480835,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,recall,parser_ce_raw,226,102.5,0.45353982300884954,45.35398230088495,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,recall,parser_ce_fixed,226,130.5,0.577433628318584,57.743362831858406,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,recall,parser_jev_fixed,226,137.16666666666666,0.6069321533923303,60.69321533923303,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,recall,Jev minus CE,226,6.666666666666666,0.029498525073746285,2.9498525073746285,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,f1,parser_ce_raw,226,110.1,0.4871681415929203,48.716814159292035,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,f1,parser_ce_fixed,226,132.35714285714286,0.5856510745891277,58.56510745891277,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,f1,parser_jev_fixed,226,139.56190476190477,0.6175305520438265,61.75305520438265,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,f1,Jev minus CE,226,7.204761904761905,0.03187947745469877,3.187947745469877,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,em,parser_ce_raw,226,40.0,0.17699115044247787,17.699115044247787,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,em,parser_ce_fixed,226,63.0,0.27876106194690264,27.876106194690266,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,em,parser_jev_fixed,226,67.0,0.29646017699115046,29.646017699115045,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,em,Jev minus CE,226,4.0,0.017699115044247815,1.7699115044247815,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,gold_set_coverage,parser_ce_raw,226,47.0,0.2079646017699115,20.79646017699115,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,gold_set_coverage,parser_ce_fixed,226,77.0,0.3407079646017699,34.070796460176986,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,gold_set_coverage,parser_jev_fixed,226,79.0,0.3495575221238938,34.95575221238938,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,gold_set_coverage,Jev minus CE,226,2.0,0.008849557522123908,0.8849557522123908,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,token_f1,parser_ce_raw,226,91.9891,0.4070314159292035,40.70314159292035,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,token_f1,parser_ce_fixed,226,104.4016,0.46195398230088497,46.1953982300885,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,token_f1,parser_jev_fixed,226,106.9274,0.47313008849557525,47.31300884955753,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,token_f1,Jev minus CE,226,2.5258000000000003,0.011176106194690283,1.1176106194690283,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,lf_eval,parser_ce_raw,226,131.7668772614199,0.5830392799177871,58.303927991778714,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,lf_eval,parser_ce_fixed,226,152.71089609140276,0.6757119296079768,67.57119296079767,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,lf_eval,parser_jev_fixed,226,158.54489397703526,0.7015260795444038,70.15260795444038,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+all,lf_eval,Jev minus CE,226,5.833997885632483,0.025814149936427055,2.5814149936427055,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,precision,parser_ce_raw,57,42.5,0.7456140350877193,74.56140350877193,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,precision,parser_ce_fixed,57,42.833333333333336,0.7514619883040936,75.14619883040936,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,precision,parser_jev_fixed,57,42.333333333333336,0.7426900584795322,74.26900584795322,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,precision,Jev minus CE,57,-0.5,-0.00877192982456143,-0.8771929824561431,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,recall,parser_ce_raw,57,45.5,0.7982456140350878,79.82456140350878,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,recall,parser_ce_fixed,57,48.5,0.8508771929824561,85.08771929824562,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,recall,parser_jev_fixed,57,47.5,0.8333333333333334,83.33333333333334,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,recall,Jev minus CE,57,-1.0,-0.01754385964912275,-1.754385964912275,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,f1,parser_ce_raw,57,43.333333333333336,0.760233918128655,76.0233918128655,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,f1,parser_ce_fixed,57,44.5,0.7807017543859649,78.0701754385965,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,f1,parser_jev_fixed,57,43.833333333333336,0.7690058479532165,76.90058479532165,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,f1,Jev minus CE,57,-0.6666666666666666,-0.011695906432748426,-1.1695906432748426,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,em,parser_ce_raw,57,38.0,0.6666666666666666,66.66666666666666,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,em,parser_ce_fixed,57,36.0,0.631578947368421,63.1578947368421,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,em,parser_jev_fixed,57,36.0,0.631578947368421,63.1578947368421,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,em,Jev minus CE,57,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,gold_set_coverage,parser_ce_raw,57,45.0,0.7894736842105263,78.94736842105263,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,gold_set_coverage,parser_ce_fixed,57,48.0,0.8421052631578947,84.21052631578947,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,gold_set_coverage,parser_jev_fixed,57,47.0,0.8245614035087719,82.45614035087719,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,gold_set_coverage,Jev minus CE,57,-1.0,-0.01754385964912275,-1.754385964912275,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,token_f1,parser_ce_raw,57,24.2246,0.4249929824561403,42.49929824561403,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,token_f1,parser_ce_fixed,57,25.15,0.4412280701754386,44.122807017543856,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,token_f1,parser_jev_fixed,57,25.5646,0.4485017543859649,44.85017543859649,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,token_f1,Jev minus CE,57,0.41459999999999997,0.007273684210526321,0.7273684210526321,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,lf_eval,parser_ce_raw,57,46.43890633069462,0.814717654924467,81.4717654924467,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,lf_eval,parser_ce_fixed,57,48.09133989402974,0.8437077174391182,84.37077174391182,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,lf_eval,parser_jev_fixed,57,48.08566944778599,0.8436082359260699,84.36082359260699,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1,lf_eval,Jev minus CE,57,-0.0056704462437458525,-9.94815130482829e-05,-0.00994815130482829,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,precision,parser_ce_raw,127,68.66666666666667,0.5406824146981628,54.06824146981628,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,precision,parser_ce_fixed,127,77.66666666666667,0.6115485564304463,61.15485564304463,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,precision,parser_jev_fixed,127,82.5,0.6496062992125984,64.96062992125984,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,precision,Jev minus CE,127,4.833333333333333,0.038057742782152126,3.8057742782152126,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,recall,parser_ce_raw,127,46.0,0.36220472440944884,36.22047244094488,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,recall,parser_ce_fixed,127,63.333333333333336,0.49868766404199477,49.86876640419948,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,recall,parser_jev_fixed,127,68.33333333333333,0.5380577427821522,53.805774278215225,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,recall,Jev minus CE,127,5.0,0.039370078740157466,3.9370078740157464,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,f1,parser_ce_raw,127,53.4,0.4204724409448819,42.04724409448819,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,f1,parser_ce_fixed,127,67.73333333333333,0.5333333333333333,53.333333333333336,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,f1,parser_jev_fixed,127,72.7,0.5724409448818898,57.24409448818898,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,f1,Jev minus CE,127,4.966666666666667,0.039107611548556465,3.9107611548556465,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,em,parser_ce_raw,127,2.0,0.015748031496062992,1.574803149606299,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,em,parser_ce_fixed,127,26.0,0.2047244094488189,20.47244094488189,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,em,parser_jev_fixed,127,30.0,0.23622047244094488,23.62204724409449,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,em,Jev minus CE,127,4.0,0.031496062992125984,3.149606299212598,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,gold_set_coverage,parser_ce_raw,127,2.0,0.015748031496062992,1.574803149606299,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,gold_set_coverage,parser_ce_fixed,127,28.0,0.2204724409448819,22.04724409448819,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,gold_set_coverage,parser_jev_fixed,127,31.0,0.2440944881889764,24.409448818897637,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,gold_set_coverage,Jev minus CE,127,3.0,0.023622047244094502,2.36220472440945,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,token_f1,parser_ce_raw,127,54.4219,0.42851889763779527,42.851889763779525,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,token_f1,parser_ce_fixed,127,63.7503,0.5019708661417323,50.19708661417322,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,token_f1,parser_jev_fixed,127,64.7603,0.5099236220472441,50.99236220472441,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,token_f1,Jev minus CE,127,1.0100000000000002,0.00795275590551181,0.795275590551181,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,lf_eval,parser_ce_raw,127,65.80281751713586,0.5181324213947706,51.813242139477055,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,lf_eval,parser_ce_fixed,127,81.5575669028232,0.6421855661639622,64.21855661639621,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,lf_eval,parser_jev_fixed,127,83.82312884961405,0.6600246366111343,66.00246366111342,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2,lf_eval,Jev minus CE,127,2.26556194679085,0.017839070447172145,1.7839070447172145,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,precision,parser_ce_raw,42,18.166666666666668,0.43253968253968256,43.25396825396825,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,precision,parser_ce_fixed,42,22.916666666666668,0.5456349206349207,54.56349206349207,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,precision,parser_jev_fixed,42,26.25,0.625,62.5,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,precision,Jev minus CE,42,3.3333333333333335,0.0793650793650793,7.9365079365079305,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,recall,parser_ce_raw,42,11.0,0.2619047619047619,26.190476190476193,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,recall,parser_ce_fixed,42,18.666666666666664,0.44444444444444436,44.444444444444436,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,recall,parser_jev_fixed,42,21.333333333333332,0.5079365079365079,50.79365079365079,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,recall,Jev minus CE,42,2.6666666666666665,0.06349206349206354,6.349206349206354,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,f1,parser_ce_raw,42,13.366666666666667,0.3182539682539683,31.82539682539683,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,f1,parser_ce_fixed,42,20.123809523809523,0.47913832199546486,47.91383219954648,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,f1,parser_jev_fixed,42,23.02857142857143,0.5482993197278911,54.82993197278911,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,f1,Jev minus CE,42,2.904761904761905,0.06916099773242629,6.916099773242629,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,em,parser_ce_raw,42,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,em,parser_ce_fixed,42,1.0,0.023809523809523808,2.380952380952381,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,em,parser_jev_fixed,42,1.0,0.023809523809523808,2.380952380952381,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,em,Jev minus CE,42,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,gold_set_coverage,parser_ce_raw,42,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,gold_set_coverage,parser_ce_fixed,42,1.0,0.023809523809523808,2.380952380952381,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,gold_set_coverage,parser_jev_fixed,42,1.0,0.023809523809523808,2.380952380952381,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,gold_set_coverage,Jev minus CE,42,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,token_f1,parser_ce_raw,42,13.342600000000001,0.3176809523809524,31.76809523809524,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,token_f1,parser_ce_fixed,42,15.5013,0.3690785714285714,36.90785714285714,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,token_f1,parser_jev_fixed,42,16.6025,0.395297619047619,39.5297619047619,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,token_f1,Jev minus CE,42,1.1012,0.026219047619047586,2.6219047619047586,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,lf_eval,parser_ce_raw,42,19.525153413589408,0.4648846050854621,46.48846050854621,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,lf_eval,parser_ce_fixed,42,23.061989294549825,0.5490949832035673,54.90949832035673,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,lf_eval,parser_jev_fixed,42,26.636095679635204,0.6341927542770287,63.41927542770287,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3,lf_eval,Jev minus CE,42,3.574106385085379,0.08509777107346139,8.509777107346139,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,precision,parser_ce_raw,197,121.83333333333333,0.6184433164128595,61.844331641285955,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,precision,parser_ce_fixed,197,136.75,0.6941624365482234,69.41624365482234,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,precision,parser_jev_fixed,197,143.25,0.7271573604060914,72.71573604060913,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,precision,Jev minus CE,197,6.5,0.03299492385786795,3.2994923857867953,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,recall,parser_ce_raw,197,98.16666666666667,0.49830795262267347,49.830795262267344,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,recall,parser_ce_fixed,197,124.83333333333333,0.6336717428087987,63.367174280879865,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,recall,parser_jev_fixed,197,130.33333333333334,0.661590524534687,66.1590524534687,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,recall,Jev minus CE,197,5.5,0.027918781725888353,2.7918781725888353,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,f1,parser_ce_raw,197,104.8,0.531979695431472,53.1979695431472,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,f1,parser_ce_fixed,197,126.32380952380952,0.6412376117959874,64.12376117959873,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,f1,parser_jev_fixed,197,132.39523809523808,0.6720570461687212,67.20570461687213,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,f1,Jev minus CE,197,6.071428571428571,0.030819434372733823,3.0819434372733823,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,em,parser_ce_raw,197,40.0,0.20304568527918782,20.304568527918782,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,em,parser_ce_fixed,197,63.0,0.3197969543147208,31.979695431472084,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,em,parser_jev_fixed,197,67.0,0.3401015228426396,34.01015228426396,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,em,Jev minus CE,197,4.0,0.020304568527918787,2.030456852791879,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,gold_set_coverage,parser_ce_raw,197,47.0,0.23857868020304568,23.85786802030457,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,gold_set_coverage,parser_ce_fixed,197,77.0,0.39086294416243655,39.08629441624365,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,gold_set_coverage,parser_jev_fixed,197,79.0,0.4010152284263959,40.10152284263959,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,gold_set_coverage,Jev minus CE,197,2.0,0.010152284263959366,1.0152284263959366,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,token_f1,parser_ce_raw,197,82.3605,0.4180736040609137,41.80736040609137,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,token_f1,parser_ce_fixed,197,93.3956,0.47408934010152287,47.40893401015229,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,token_f1,parser_jev_fixed,197,95.1772,0.48313299492385786,48.31329949238579,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,token_f1,Jev minus CE,197,1.7816,0.00904365482233499,0.904365482233499,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,lf_eval,parser_ce_raw,197,119.10601643802464,0.604599068213323,60.4599068213323,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,lf_eval,parser_ce_fixed,197,137.89732128709383,0.6999864024725575,69.99864024725575,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,lf_eval,parser_jev_fixed,197,142.82907461864184,0.7250206833433596,72.50206833433596,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+fully_mapped,lf_eval,Jev minus CE,197,4.931753331548018,0.02503428087080206,2.503428087080206,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,precision,parser_ce_raw,54,42.5,0.7870370370370371,78.70370370370371,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,precision,parser_ce_fixed,54,42.833333333333336,0.79320987654321,79.320987654321,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,precision,parser_jev_fixed,54,42.333333333333336,0.7839506172839507,78.39506172839506,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,precision,Jev minus CE,54,-0.5,-0.0092592592592593,-0.92592592592593,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,recall,parser_ce_raw,54,45.5,0.8425925925925926,84.25925925925925,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,recall,parser_ce_fixed,54,48.5,0.8981481481481481,89.81481481481481,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,recall,parser_jev_fixed,54,47.5,0.8796296296296297,87.96296296296296,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,recall,Jev minus CE,54,-1.0,-0.01851851851851849,-1.851851851851849,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,f1,parser_ce_raw,54,43.333333333333336,0.8024691358024691,80.24691358024691,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,f1,parser_ce_fixed,54,44.5,0.8240740740740741,82.4074074074074,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,f1,parser_jev_fixed,54,43.833333333333336,0.8117283950617284,81.17283950617285,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,f1,Jev minus CE,54,-0.6666666666666666,-0.012345679012345623,-1.2345679012345623,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,em,parser_ce_raw,54,38.0,0.7037037037037037,70.37037037037037,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,em,parser_ce_fixed,54,36.0,0.6666666666666666,66.66666666666666,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,em,parser_jev_fixed,54,36.0,0.6666666666666666,66.66666666666666,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,em,Jev minus CE,54,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,gold_set_coverage,parser_ce_raw,54,45.0,0.8333333333333334,83.33333333333334,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,gold_set_coverage,parser_ce_fixed,54,48.0,0.8888888888888888,88.88888888888889,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,gold_set_coverage,parser_jev_fixed,54,47.0,0.8703703703703703,87.03703703703704,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,gold_set_coverage,Jev minus CE,54,-1.0,-0.01851851851851849,-1.851851851851849,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,token_f1,parser_ce_raw,54,23.7913,0.4405796296296296,44.05796296296296,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,token_f1,parser_ce_fixed,54,24.7167,0.45771666666666666,45.77166666666667,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,token_f1,parser_jev_fixed,54,25.2278,0.4671814814814815,46.718148148148146,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,token_f1,Jev minus CE,54,0.5110999999999999,0.009464814814814815,0.9464814814814815,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,lf_eval,parser_ce_raw,54,44.93441466388638,0.83211879007197,83.211879007197,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,lf_eval,parser_ce_fixed,54,45.86516362086031,0.8493548818677835,84.93548818677836,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,lf_eval,parser_jev_fixed,54,45.8812644867094,0.849653046050174,84.9653046050174,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_fully_mapped,lf_eval,Jev minus CE,54,0.016100865849089596,0.00029816418239048126,0.029816418239048126,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,precision,parser_ce_raw,110,64.16666666666667,0.5833333333333334,58.333333333333336,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,precision,parser_ce_fixed,110,73.16666666666667,0.6651515151515152,66.51515151515152,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,precision,parser_jev_fixed,110,77.66666666666667,0.706060606060606,70.60606060606061,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,precision,Jev minus CE,110,4.5,0.040909090909090895,4.09090909090909,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,recall,parser_ce_raw,110,43.0,0.39090909090909093,39.09090909090909,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,recall,parser_ce_fixed,110,59.333333333333336,0.5393939393939394,53.939393939393945,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,recall,parser_jev_fixed,110,63.833333333333336,0.5803030303030303,58.03030303030303,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,recall,Jev minus CE,110,4.5,0.040909090909090895,4.09090909090909,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,f1,parser_ce_raw,110,49.9,0.4536363636363636,45.36363636363636,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,f1,parser_ce_fixed,110,63.56666666666666,0.5778787878787879,57.78787878787879,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,f1,parser_jev_fixed,110,68.13333333333333,0.6193939393939393,61.93939393939393,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,f1,Jev minus CE,110,4.566666666666666,0.041515151515151394,4.15151515151514,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,em,parser_ce_raw,110,2.0,0.01818181818181818,1.8181818181818181,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,em,parser_ce_fixed,110,26.0,0.23636363636363636,23.636363636363637,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,em,parser_jev_fixed,110,30.0,0.2727272727272727,27.27272727272727,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,em,Jev minus CE,110,4.0,0.03636363636363635,3.636363636363635,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,gold_set_coverage,parser_ce_raw,110,2.0,0.01818181818181818,1.8181818181818181,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,gold_set_coverage,parser_ce_fixed,110,28.0,0.2545454545454545,25.454545454545453,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,gold_set_coverage,parser_jev_fixed,110,31.0,0.2818181818181818,28.18181818181818,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,gold_set_coverage,Jev minus CE,110,3.0,0.027272727272727282,2.7272727272727284,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,token_f1,parser_ce_raw,110,47.8961,0.43541909090909087,43.54190909090909,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,token_f1,parser_ce_fixed,110,55.9874,0.5089763636363637,50.897636363636366,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,token_f1,parser_jev_fixed,110,56.8118,0.5164709090909091,51.647090909090906,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,token_f1,Jev minus CE,110,0.8244000000000002,0.00749454545454542,0.749454545454542,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,lf_eval,parser_ce_raw,110,58.22588341571024,0.5293262128700931,52.932621287009304,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,lf_eval,parser_ce_fixed,110,72.61896813114303,0.6601724375558458,66.01724375558457,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,lf_eval,parser_jev_fixed,110,75.0310607186632,0.6821005519878472,68.21005519878473,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_fully_mapped,lf_eval,Jev minus CE,110,2.4120925875201555,0.02192811443200149,2.192811443200149,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,precision,parser_ce_raw,33,15.166666666666666,0.45959595959595956,45.95959595959596,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,precision,parser_ce_fixed,33,20.75,0.6287878787878788,62.878787878787875,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,precision,parser_jev_fixed,33,23.25,0.7045454545454546,70.45454545454545,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,precision,Jev minus CE,33,2.5,0.0757575757575758,7.57575757575758,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,recall,parser_ce_raw,33,9.666666666666666,0.29292929292929293,29.292929292929294,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,recall,parser_ce_fixed,33,17.0,0.5151515151515151,51.515151515151516,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,recall,parser_jev_fixed,33,19.0,0.5757575757575758,57.57575757575758,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,recall,Jev minus CE,33,2.0,0.06060606060606066,6.060606060606066,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,f1,parser_ce_raw,33,11.566666666666666,0.3505050505050505,35.05050505050505,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,f1,parser_ce_fixed,33,18.257142857142856,0.5532467532467532,55.32467532467532,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,f1,parser_jev_fixed,33,20.428571428571427,0.619047619047619,61.9047619047619,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,f1,Jev minus CE,33,2.1714285714285717,0.06580086580086575,6.580086580086575,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,em,parser_ce_raw,33,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,em,parser_ce_fixed,33,1.0,0.030303030303030304,3.0303030303030303,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,em,parser_jev_fixed,33,1.0,0.030303030303030304,3.0303030303030303,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,em,Jev minus CE,33,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,gold_set_coverage,parser_ce_raw,33,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,gold_set_coverage,parser_ce_fixed,33,1.0,0.030303030303030304,3.0303030303030303,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,gold_set_coverage,parser_jev_fixed,33,1.0,0.030303030303030304,3.0303030303030303,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,gold_set_coverage,Jev minus CE,33,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,token_f1,parser_ce_raw,33,10.6731,0.32342727272727273,32.342727272727274,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,token_f1,parser_ce_fixed,33,12.6915,0.3845909090909091,38.45909090909091,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,token_f1,parser_jev_fixed,33,13.137599999999999,0.39810909090909086,39.810909090909085,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,token_f1,Jev minus CE,33,0.4461,0.013518181818181763,1.3518181818181763,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,lf_eval,parser_ce_raw,33,15.945718358428024,0.48320358661903107,48.32035866190311,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,lf_eval,parser_ce_fixed,33,19.413189535090478,0.5882784707603175,58.827847076031745,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,lf_eval,parser_jev_fixed,33,21.91674941326925,0.6641439216142198,66.41439216142197,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_fully_mapped,lf_eval,Jev minus CE,33,2.503559878178773,0.07586545085390228,7.586545085390228,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,precision,parser_ce_raw,29,7.5,0.25862068965517243,25.862068965517242,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,precision,parser_ce_fixed,29,6.666666666666667,0.22988505747126436,22.988505747126435,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,precision,parser_jev_fixed,29,7.833333333333333,0.27011494252873564,27.011494252873565,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,precision,Jev minus CE,29,1.1666666666666665,0.04022988505747127,4.0229885057471275,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,recall,parser_ce_raw,29,4.333333333333333,0.14942528735632182,14.942528735632182,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,recall,parser_ce_fixed,29,5.666666666666667,0.19540229885057472,19.54022988505747,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,recall,parser_jev_fixed,29,6.833333333333333,0.23563218390804597,23.563218390804597,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,recall,Jev minus CE,29,1.1666666666666665,0.04022988505747124,4.022988505747124,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,f1,parser_ce_raw,29,5.3,0.18275862068965518,18.275862068965516,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,f1,parser_ce_fixed,29,6.033333333333333,0.20804597701149424,20.804597701149426,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,f1,parser_jev_fixed,29,7.166666666666667,0.2471264367816092,24.71264367816092,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,f1,Jev minus CE,29,1.1333333333333333,0.039080459770114956,3.9080459770114957,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,em,parser_ce_raw,29,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,em,parser_ce_fixed,29,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,em,parser_jev_fixed,29,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,em,Jev minus CE,29,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,gold_set_coverage,parser_ce_raw,29,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,gold_set_coverage,parser_ce_fixed,29,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,gold_set_coverage,parser_jev_fixed,29,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,gold_set_coverage,Jev minus CE,29,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,token_f1,parser_ce_raw,29,9.6286,0.33202068965517245,33.20206896551724,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,token_f1,parser_ce_fixed,29,11.006,0.37951724137931037,37.95172413793104,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,token_f1,parser_jev_fixed,29,11.7502,0.40517931034482757,40.51793103448276,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,token_f1,Jev minus CE,29,0.7442,0.025662068965517204,2.56620689655172,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,lf_eval,parser_ce_raw,29,12.660860823395254,0.43658140770328463,43.658140770328465,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,lf_eval,parser_ce_fixed,29,14.813574804308946,0.5108129242865154,51.08129242865154,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,lf_eval,parser_jev_fixed,29,15.71581935839341,0.5419248054618417,54.19248054618417,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+affected,lf_eval,Jev minus CE,29,0.9022445540844648,0.031111881175326372,3.1111881175326372,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,precision,parser_ce_raw,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,precision,parser_ce_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,precision,parser_jev_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,precision,Jev minus CE,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,recall,parser_ce_raw,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,recall,parser_ce_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,recall,parser_jev_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,recall,Jev minus CE,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,f1,parser_ce_raw,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,f1,parser_ce_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,f1,parser_jev_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,f1,Jev minus CE,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,em,parser_ce_raw,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,em,parser_ce_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,em,parser_jev_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,em,Jev minus CE,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,gold_set_coverage,parser_ce_raw,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,gold_set_coverage,parser_ce_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,gold_set_coverage,parser_jev_fixed,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,gold_set_coverage,Jev minus CE,3,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,token_f1,parser_ce_raw,3,0.4333,0.14443333333333333,14.443333333333333,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,token_f1,parser_ce_fixed,3,0.4333,0.14443333333333333,14.443333333333333,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,token_f1,parser_jev_fixed,3,0.3368,0.11226666666666667,11.226666666666667,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,token_f1,Jev minus CE,3,-0.09649999999999997,-0.03216666666666666,-3.2166666666666663,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,lf_eval,parser_ce_raw,3,1.5044916668082442,0.5014972222694147,50.14972222694147,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,lf_eval,parser_ce_fixed,3,2.2261762731694326,0.7420587577231442,74.20587577231443,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,lf_eval,parser_jev_fixed,3,2.2044049610765972,0.7348016536921991,73.4801653692199,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_1_affected,lf_eval,Jev minus CE,3,-0.02177131209283545,-0.0072571040309451496,-0.725710403094515,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,precision,parser_ce_raw,17,4.5,0.2647058823529412,26.47058823529412,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,precision,parser_ce_fixed,17,4.5,0.2647058823529412,26.47058823529412,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,precision,parser_jev_fixed,17,4.833333333333333,0.28431372549019607,28.431372549019606,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,precision,Jev minus CE,17,0.3333333333333333,0.019607843137254888,1.9607843137254888,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,recall,parser_ce_raw,17,3.0,0.17647058823529413,17.647058823529413,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,recall,parser_ce_fixed,17,4.0,0.23529411764705882,23.52941176470588,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,recall,parser_jev_fixed,17,4.5,0.2647058823529412,26.47058823529412,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,recall,Jev minus CE,17,0.5,0.02941176470588236,2.941176470588236,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,f1,parser_ce_raw,17,3.5,0.20588235294117646,20.588235294117645,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,f1,parser_ce_fixed,17,4.166666666666667,0.2450980392156863,24.50980392156863,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,f1,parser_jev_fixed,17,4.566666666666666,0.26862745098039215,26.862745098039216,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,f1,Jev minus CE,17,0.4,0.023529411764705854,2.352941176470585,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,em,parser_ce_raw,17,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,em,parser_ce_fixed,17,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,em,parser_jev_fixed,17,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,em,Jev minus CE,17,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,gold_set_coverage,parser_ce_raw,17,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,gold_set_coverage,parser_ce_fixed,17,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,gold_set_coverage,parser_jev_fixed,17,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,gold_set_coverage,Jev minus CE,17,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,token_f1,parser_ce_raw,17,6.5258,0.38387058823529413,38.387058823529415,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,token_f1,parser_ce_fixed,17,7.7629,0.4566411764705882,45.66411764705882,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,token_f1,parser_jev_fixed,17,7.9485,0.46755882352941175,46.75588235294118,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,token_f1,Jev minus CE,17,0.18560000000000004,0.010917647058823532,1.0917647058823532,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,lf_eval,parser_ce_raw,17,7.576934101425627,0.44570200596621334,44.57020059662133,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,lf_eval,parser_ce_fixed,17,8.938598771680166,0.5257999277458921,52.579992774589215,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,lf_eval,parser_jev_fixed,17,8.79206813095086,0.517180478291227,51.7180478291227,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_2_affected,lf_eval,Jev minus CE,17,-0.14653064072930574,-0.008619449454665085,-0.8619449454665085,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,precision,parser_ce_raw,9,3.0,0.3333333333333333,33.33333333333333,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,precision,parser_ce_fixed,9,2.1666666666666665,0.24074074074074073,24.074074074074073,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,precision,parser_jev_fixed,9,3.0,0.3333333333333333,33.33333333333333,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,precision,Jev minus CE,9,0.8333333333333333,0.09259259259259259,9.25925925925926,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,recall,parser_ce_raw,9,1.3333333333333333,0.14814814814814814,14.814814814814813,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,recall,parser_ce_fixed,9,1.6666666666666665,0.18518518518518517,18.51851851851852,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,recall,parser_jev_fixed,9,2.333333333333333,0.25925925925925924,25.925925925925924,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,recall,Jev minus CE,9,0.6666666666666666,0.07407407407407407,7.4074074074074066,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,f1,parser_ce_raw,9,1.8,0.2,20.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,f1,parser_ce_fixed,9,1.8666666666666667,0.2074074074074074,20.74074074074074,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,f1,parser_jev_fixed,9,2.6,0.2888888888888889,28.888888888888893,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,f1,Jev minus CE,9,0.7333333333333334,0.08148148148148152,8.148148148148152,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,em,parser_ce_raw,9,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,em,parser_ce_fixed,9,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,em,parser_jev_fixed,9,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,em,Jev minus CE,9,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,gold_set_coverage,parser_ce_raw,9,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,gold_set_coverage,parser_ce_fixed,9,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,gold_set_coverage,parser_jev_fixed,9,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,gold_set_coverage,Jev minus CE,9,0.0,0.0,0.0,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,token_f1,parser_ce_raw,9,2.6695,0.29661111111111116,29.661111111111115,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,token_f1,parser_ce_fixed,9,2.8098,0.31220000000000003,31.220000000000002,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,token_f1,parser_jev_fixed,9,3.4649,0.3849888888888889,38.498888888888885,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,token_f1,Jev minus CE,9,0.6551,0.07278888888888885,7.2788888888888845,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,lf_eval,parser_ce_raw,9,3.5794350551613836,0.39771500612904265,39.77150061290426,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,lf_eval,parser_ce_fixed,9,3.6487997594593478,0.4054221954954831,40.54221954954831,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,lf_eval,parser_jev_fixed,9,4.719346266365954,0.5243718073739949,52.437180737399494,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json
+hop_3_affected,lf_eval,Jev minus CE,9,1.070546506906606,0.11894961187851183,11.894961187851184,True,A1/question-metrics.jsonl; membership in A2/subgroup-membership.json

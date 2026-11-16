@@ -1,0 +1,87 @@
+{
+  "key": "cf84f9ce3cd6e9c4530f3dd9023ca26d18ef2b1ffbe72ae85f7d45974d9627b2",
+  "response": {
+    "id": "chatcmpl-Ei9eYLe4qPNikNlzZd0tUqbl3pOQo",
+    "object": "chat.completion",
+    "created": 1794192246,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 강제 수용 절차에 대하여 행정소송을 제기할 수 있는 자격이 있으며, 이의신청과 관계없이 행정소송을 제기할 수 있다. 또한, 취소 소송이 제기된 경우 집행정지가 인정될 수 있는 요건은 처분의 집행 또는 절차의 속행으로 생길 중대한 손해를 예방하여야 할 긴급한 필요가 있는 때이다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2370,
+      "completion_tokens": 98,
+      "total_tokens": 2468,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1113.8163750001695,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_be8e2e7618ca4e339a1a679924d7e311"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2370,
+      "output_tokens": 98,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004345,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59041,
+      "known_cost_usd": 9.43994315,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.64188815,
+      "remaining_usd": 90.35811185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.942535,
+          "accounted_with_reservations_usd": 8.14448,
+          "remaining_usd": 28.85552
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eYLe4qPNikNlzZd0tUqbl3pOQo",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

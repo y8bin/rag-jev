@@ -1,0 +1,52 @@
+{
+  "key": "6cf71951409484164bf3468b06bb2449e5c82b7fe4b44f62db0b2a3872e77550",
+  "text": "갑과 을이 탈법적인 문서를 배포 및 게시하여 공직선거법을 위반한 경우, 공직선거법 제92조에 따라 선거운동을 위하여 규정되지 않은 방법으로 문서를 배포 및 게시한 행위는 금지되어 있으며, 이에 대한 처벌은 공직선거법 제252조에 따라 7년 이하의 징역 또는 500만원 이상 3천만원 이하의 벌금에 처할 수 있다.",
+  "trace": {
+    "latency_ms": 1708.1184999988182,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_bce87eb4ef4246f5aa70fd0c98a38d6e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2262,
+      "output_tokens": 105,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006705,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59559,
+      "known_cost_usd": 14.21332065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.51403565,
+      "remaining_usd": 84.48596435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.7159125,
+          "accounted_with_reservations_usd": 14.0166275,
+          "remaining_usd": 22.9833725
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9qCfXkzl6bAop0e6dQSEIApusB8",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

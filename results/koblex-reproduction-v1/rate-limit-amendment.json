@@ -1,0 +1,10 @@
+{
+  "reason": "Observed provider HTTP429 TPM450000; previous runner stopped and preserved all completed rows.",
+  "pacing_tokens_per_60_seconds": 350000,
+  "tokenizer": "o200k_base; prompt + maximum output +256 framing",
+  "scientific_parameters_changed": false,
+  "cached_successes_preserved": true,
+  "budget_reservations_retained": true,
+  "runner_sha256": "7dd7af059f93ac2f5daa34caba042b8980552750bf4b8e40faac6e403bd92321",
+  "parent_answer_runner_sha256": "b448a16744b8f1cf18245ff47d869e1fd4ed309241ad23a71325ec6bd586be27"
+}

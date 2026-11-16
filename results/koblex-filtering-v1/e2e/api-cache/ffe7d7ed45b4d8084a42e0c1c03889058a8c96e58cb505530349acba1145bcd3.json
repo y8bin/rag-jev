@@ -1,0 +1,52 @@
+{
+  "key": "ffe7d7ed45b4d8084a42e0c1c03889058a8c96e58cb505530349acba1145bcd3",
+  "text": "갑과 을은 대통령 선거 운동 기간 동안 방송 연설과 신문 광고를 할 수 없습니다. 공직선거법 제93조 제2항에 따르면, 선거일 전 90일부터 선거일까지 후보자는 방송, 신문, 잡지 기타의 광고에 출연할 수 없다고 규정되어 있습니다.",
+  "trace": {
+    "latency_ms": 2992.944624973461,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_96e5de265eee46c3867a286451878373"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2302,
+      "output_tokens": 70,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006455,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73613,
+      "known_cost_usd": 24.73236031,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.86932031,
+      "remaining_usd": 74.13067969,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.61728,
+          "accounted_with_reservations_usd": 23.75424,
+          "remaining_usd": 13.24576
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7IBKPLfVQVnrAHezYKJe8yC9JU",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

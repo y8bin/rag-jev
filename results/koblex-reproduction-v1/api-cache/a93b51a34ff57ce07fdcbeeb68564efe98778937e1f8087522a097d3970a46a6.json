@@ -1,0 +1,52 @@
+{
+  "key": "a93b51a34ff57ce07fdcbeeb68564efe98778937e1f8087522a097d3970a46a6",
+  "text": "[\"상법 (이사회의 결의) 이사회의 결의는 이사 과반수의 출석과 출석이사 과반수의 찬성으로 한다.\"]",
+  "trace": {
+    "latency_ms": 817.4301249964628,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_006cce31a6844f62a6b448178c1ccaf6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1618,
+      "output_tokens": 40,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004445,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19743,
+      "known_cost_usd": 7.891759222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.891759222,
+      "remaining_usd": 92.108240778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.1357575,
+          "accounted_with_reservations_usd": 7.1357575,
+          "remaining_usd": 29.8642425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90VOwuNhyfVHbepzRXSu6hV9mh4",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

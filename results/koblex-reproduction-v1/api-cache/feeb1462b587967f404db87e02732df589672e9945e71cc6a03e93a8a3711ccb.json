@@ -1,0 +1,52 @@
+{
+  "key": "feeb1462b587967f404db87e02732df589672e9945e71cc6a03e93a8a3711ccb",
+  "text": "갑이 기본재산인 부지를 매도하려는 경우, 해당 매각이 대통령령으로 정하는 경미한 사항이 아니라면 관할청의 허가 대상에 해당한다. 또한, 이는 이사회에서 심의·의결해야 하는 안건이다. 갑의 가족이 상당한 이익을 얻을 가능성이 있는 경우, 갑은 해당 안건에 대한 의결에 참여할 수 없다.",
+  "trace": {
+    "latency_ms": 1364.7881249926286,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5c31edf9b84d40ea95b728077087e57e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2538,
+      "output_tokens": 89,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.007235,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59312,
+      "known_cost_usd": 11.82904815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.18482565,
+      "remaining_usd": 86.81517435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.33164,
+          "accounted_with_reservations_usd": 11.6874175,
+          "remaining_usd": 25.312582499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9kOYyci5OZVjLxgOgEFJNPxafqb",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

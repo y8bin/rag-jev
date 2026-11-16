@@ -1,0 +1,52 @@
+{
+  "key": "bab29dc532eaed7d0ece68f8565962fd0902484966c62609fc8ddfa156da2f3b",
+  "text": "[\"상법 (이사의 자기거래 제한) 이사가 회사와 거래를 하려면 이사회의 승인을 받아야 한다.\", \"자본시장과 금융투자업에 관한 법률 (신용공여 제한) 상장회사는 주요주주에게 신용공여를 할 수 없으며, 이를 위반한 경우 회사와 이사는 법적 책임을 질 수 있다.\", \"형법 (업무상 배임) 업무상 임무에 위배하여 회사에 손해를 가한 경우 형사처벌을 받을 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1596.4767499972368,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_de9358a8bfed42a0a400cccdb4a5ca72"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1705,
+      "output_tokens": 120,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0037025,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19812,
+      "known_cost_usd": 8.240116722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.240116722,
+      "remaining_usd": 91.759883278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.484115,
+          "accounted_with_reservations_usd": 7.484115,
+          "remaining_usd": 29.515885
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei92F6F3mYDDeUqEFE3okaGRdJrVR",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

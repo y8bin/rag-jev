@@ -1,0 +1,87 @@
+{
+  "key": "59b09031501fd80e78c4e2cfce1a43d67ac8429c9ef07b01b866efe68d8b4345",
+  "response": {
+    "id": "chatcmpl-Ei9oGGjtHgyegT1gInZLFJX6WCRH5",
+    "object": "chat.completion",
+    "created": 1794192848,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 을에 대한 채무의 소멸시효를 중단하기 위해 가압류를 신청할 수 있습니다. 이는 민법 168조에 따라 소멸시효의 중단사유에 해당합니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2164,
+      "completion_tokens": 49,
+      "total_tokens": 2213,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 878.860833006911,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_75d0b6bbc3d8457284754139f42283d0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2164,
+      "output_tokens": 49,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0059,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59476,
+      "known_cost_usd": 13.41415315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.66966315,
+      "remaining_usd": 85.33033685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.916745,
+          "accounted_with_reservations_usd": 13.172255,
+          "remaining_usd": 23.827745
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9oGGjtHgyegT1gInZLFJX6WCRH5",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

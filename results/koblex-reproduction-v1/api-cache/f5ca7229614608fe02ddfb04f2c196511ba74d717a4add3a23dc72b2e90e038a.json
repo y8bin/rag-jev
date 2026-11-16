@@ -1,0 +1,52 @@
+{
+  "key": "f5ca7229614608fe02ddfb04f2c196511ba74d717a4add3a23dc72b2e90e038a",
+  "text": "을이 그 땅의 소유권을 취득한 것으로 볼 수 없다. 부동산에 관한 법률행위로 인한 물권의 득실변경은 등기하여야 그 효력이 생긴다.",
+  "trace": {
+    "latency_ms": 1365.3982919931877,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_77e52bf58bf3425e8bd0df13de35bdc1"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2150,
+      "output_tokens": 50,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59238,
+      "known_cost_usd": 11.15068065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.50220065,
+      "remaining_usd": 87.49779935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.6532725,
+          "accounted_with_reservations_usd": 11.0047925,
+          "remaining_usd": 25.9952075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9iTdhNnyKl0FULFYKY11638iKDX",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

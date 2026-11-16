@@ -1,0 +1,52 @@
+{
+  "key": "77f5c56e8a4598909dc1bb1cb253644613c8f98b8d454523bfc931281c59c318",
+  "text": "갑이 을에게 징계를 내릴 때는 미리 3명 이상의 해원으로 구성되는 징계위원회의 의결을 거쳐야 한다. 을의 폭력행위에 대해 가능한 징계는 하선의 징계이며, 이는 을이 폭력행위로 선내 질서를 어지럽힌 경우에만 가능하다. 이 경우, 선장은 지체 없이 선박소유자에게 하선의 징계를 한 사실을 알려야 한다.",
+  "trace": {
+    "latency_ms": 1395.912332998705,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_000abbc8241b477880140eedc1f46fe6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2249,
+      "output_tokens": 105,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0066725,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59196,
+      "known_cost_usd": 10.74734065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.15102315,
+      "remaining_usd": 87.84897685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.2499325,
+          "accounted_with_reservations_usd": 10.653615,
+          "remaining_usd": 26.346384999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9hUIM44EeSRQhFTZ2IDUug0ODMY",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

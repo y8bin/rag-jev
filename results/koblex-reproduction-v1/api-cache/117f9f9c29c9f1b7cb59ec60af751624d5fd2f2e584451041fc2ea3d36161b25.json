@@ -1,0 +1,52 @@
+{
+  "key": "117f9f9c29c9f1b7cb59ec60af751624d5fd2f2e584451041fc2ea3d36161b25",
+  "text": "[\"민법 (위임계약의 종료와 보수) 위임이 수임인의 책임 없는 사유로 종료된 경우, 수임인은 이미 완료한 부분에 대해 상당한 보수를 청구할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1314.9807910085656,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1c531520ebcf45eca977b5d2de83981c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1657,
+      "output_tokens": 49,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0046325,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19797,
+      "known_cost_usd": 8.167064222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.167064222,
+      "remaining_usd": 91.832935778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.4110625,
+          "accounted_with_reservations_usd": 7.4110625,
+          "remaining_usd": 29.5889375
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91slC5od8jCBd4HlI1uQuKxPijz",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "f0d710ad15abe7a13f5ca2d0684ceb9fd057b4a33060405ac55f12d75b2ca230",
+  "response": {
+    "id": "chatcmpl-EiA7cF3TfZpIn7HPkhGWqdhRYAYGl",
+    "object": "chat.completion",
+    "created": 1794194048,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 정해진 시기에 자동차 보험료를 납부하지 않았을 경우, 보험사 을은 상당한 기간을 정하여 갑에게 최고하고 그 기간 내에 보험료가 지급되지 않으면 그 계약을 해지할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2162,
+      "completion_tokens": 53,
+      "total_tokens": 2215,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 897.1660420065746,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_fdf8880fd31d4f378fea71661900b691"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2162,
+      "output_tokens": 53,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005935,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60304,
+      "known_cost_usd": 21.32690565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 22.58618065,
+      "remaining_usd": 77.41381935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.8294975,
+          "accounted_with_reservations_usd": 21.0887725,
+          "remaining_usd": 15.911227499999999
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA7cF3TfZpIn7HPkhGWqdhRYAYGl",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

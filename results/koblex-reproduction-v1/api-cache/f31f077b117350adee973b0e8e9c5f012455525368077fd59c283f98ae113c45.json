@@ -1,0 +1,52 @@
+{
+  "key": "f31f077b117350adee973b0e8e9c5f012455525368077fd59c283f98ae113c45",
+  "text": "갑이 기획하는 재활용 프로젝트에서 폐기물의 종류 및 재활용 유형에 관한 세부분류는 폐기물의 발생원, 구성성분 및 유해성 등을 고려하여 환경부령으로 정해야 한다. 을이 속한 지방자치단체는 이러한 기준에 따라 지역 내 폐기물 처리시설을 개선하고 적절한 처리를 추진하는 역할을 수행해야 한다.",
+  "trace": {
+    "latency_ms": 1016.0507920081727,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_249efc429b004f38b8bbe940f3883e71"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2227,
+      "output_tokens": 88,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0038875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59278,
+      "known_cost_usd": 11.51514065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.76824565,
+      "remaining_usd": 87.23175435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.0177325,
+          "accounted_with_reservations_usd": 11.2708375,
+          "remaining_usd": 25.7291625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9jR3Tzw48ZOZ5BEkDhRzTNBrj6N",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

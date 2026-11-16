@@ -1,0 +1,52 @@
+{
+  "key": "856e12a33c96ee6b39edc13e9aaca4412a89b81538fcebe6b6103b61b3076f74",
+  "text": "을은 상속개시일이 속하는 달의 말일부터 6개월 이내에 상속세의 과세가액 및 과세표준을 납세지 관할세무서장에게 신고해야 한다.",
+  "trace": {
+    "latency_ms": 890.9181670023827,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ebe1db66981b4ce6bb9b32e24aa14717"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2346,
+      "output_tokens": 49,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004115,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59806,
+      "known_cost_usd": 16.57354315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.92262315,
+      "remaining_usd": 82.07737685000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.076135,
+          "accounted_with_reservations_usd": 16.425215,
+          "remaining_usd": 20.574785
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9w0aJjqkIwqaSf1213F3NtqnTc6",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "179a53e64b82a2f5a0ab3308316b72b3aef4c778305249eadf1a7be253e48e76",
+  "text": "[\"선원법 (선원과 선박소유자 간의 분쟁 해결) 선원과 선박소유자 간의 근로관계에 관한 분쟁은 선원법에 따라 해결되어야 하며, 필요한 경우 노동위원회에 조정 또는 중재를 신청할 수 있다.\", \"노동위원회법 (조정 및 중재) 노동위원회는 근로관계에 관한 분쟁에 대해 조정 또는 중재를 할 수 있는 권한을 가진다.\"]",
+  "trace": {
+    "latency_ms": 1404.5717080007307,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d0c56373b8784809a14574748a70f881"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1659,
+      "output_tokens": 109,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0052375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19760,
+      "known_cost_usd": 7.973631722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.973631722,
+      "remaining_usd": 92.026368278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.21763,
+          "accounted_with_reservations_usd": 7.21763,
+          "remaining_usd": 29.78237
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90sYdzpvnIrZS2YfnykF1gvsK5g",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

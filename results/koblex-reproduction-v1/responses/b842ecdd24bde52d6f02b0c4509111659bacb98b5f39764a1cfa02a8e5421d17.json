@@ -1,0 +1,87 @@
+{
+  "key": "b842ecdd24bde52d6f02b0c4509111659bacb98b5f39764a1cfa02a8e5421d17",
+  "response": {
+    "id": "chatcmpl-Ei9jJNIOeSKJgbmyRuvbmrMy1Smgo",
+    "object": "chat.completion",
+    "created": 1794192541,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 화물자동차 운송사업의 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관의 변경허가를 받아야 한다. 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체에 대한 정보는 제공된 문맥에 포함되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2285,
+      "completion_tokens": 78,
+      "total_tokens": 2363,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1623.8714170031017,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_65d45373f98d45548bef3d773d32befd"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2285,
+      "output_tokens": 78,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0064925,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59246,
+      "known_cost_usd": 11.23744815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 12.48703565,
+      "remaining_usd": 87.51296435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.74004,
+          "accounted_with_reservations_usd": 10.9896275,
+          "remaining_usd": 26.010372500000003
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9jJNIOeSKJgbmyRuvbmrMy1Smgo",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

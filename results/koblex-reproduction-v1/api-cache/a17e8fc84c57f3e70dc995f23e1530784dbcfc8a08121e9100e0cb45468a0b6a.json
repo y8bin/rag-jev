@@ -1,0 +1,52 @@
+{
+  "key": "a17e8fc84c57f3e70dc995f23e1530784dbcfc8a08121e9100e0cb45468a0b6a",
+  "text": "갑은 유죄의 확정판결에 대하여 그 선고를 받은 자의 이익을 위하여 재심을 청구할 수 있다.",
+  "trace": {
+    "latency_ms": 901.061500000651,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_18e2b76d05604c1faea9000d3bc9cef6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2204,
+      "output_tokens": 33,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00584,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59217,
+      "known_cost_usd": 10.94365315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.30406565,
+      "remaining_usd": 87.69593435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.446245,
+          "accounted_with_reservations_usd": 10.8066575,
+          "remaining_usd": 26.1933425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9iPMJi79gNAgjdz4j7UkiI2O8t3",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

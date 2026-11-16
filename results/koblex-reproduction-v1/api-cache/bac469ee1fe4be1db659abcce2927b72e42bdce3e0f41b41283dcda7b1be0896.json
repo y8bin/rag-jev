@@ -1,0 +1,52 @@
+{
+  "key": "bac469ee1fe4be1db659abcce2927b72e42bdce3e0f41b41283dcda7b1be0896",
+  "text": "Context에 주어진 정보로는 갑이 주택담보노후연금이자비용 공제를 받기 위해 제출해야 할 서류나 갑의 아파트가 공제를 받기 위한 주택 요건에 대한 구체적인 내용이 포함되어 있지 않습니다. 따라서, 주어진 Context 내에서 관련 정보를 제공할 수 없습니다.",
+  "trace": {
+    "latency_ms": 1108.1978750007693,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ab958b8d6b4e4e81a3ec9b335b4c3611"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2239,
+      "output_tokens": 73,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0037675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60400,
+      "known_cost_usd": 22.22142565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 23.52910315,
+      "remaining_usd": 76.47089685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.7240175,
+          "accounted_with_reservations_usd": 22.031695,
+          "remaining_usd": 14.968305
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA9cP6zxdTkxoH92LoZk28DlqPwR",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

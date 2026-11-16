@@ -1,0 +1,87 @@
+{
+  "key": "dcd85150fab8a3d8721f78654f888ee9fdd34400a8e7c7c9a7a1d7bc86b6b023",
+  "response": {
+    "id": "chatcmpl-Ei9ysqHTdmoAUzfdbNEUIWCN0Sv06",
+    "object": "chat.completion",
+    "created": 1794193506,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 1심 판결에 이유가 제시되지 않았다는 점을 항소 이유로 주장할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2095,
+      "completion_tokens": 26,
+      "total_tokens": 2121,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 799.355082999682,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1d54ca72a675448dac2510b1e9d426f9"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2095,
+      "output_tokens": 26,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0032575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59928,
+      "known_cost_usd": 17.69914565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 18.94742065,
+      "remaining_usd": 81.05257935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.2017375,
+          "accounted_with_reservations_usd": 17.4500125,
+          "remaining_usd": 19.5499875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9ysqHTdmoAUzfdbNEUIWCN0Sv06",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

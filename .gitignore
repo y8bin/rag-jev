@@ -6,10 +6,8 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .cache/
-# Large benchmark inputs and private experiment outputs
-data/
-results/
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
+!results/koblex-reproduction-v1/budget/ledger.sqlite
 .DS_Store

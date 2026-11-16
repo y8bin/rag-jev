@@ -1,0 +1,52 @@
+{
+  "key": "08418410d41d15640fb1652861a21b5f2decabd1f3fe256088d6f80242c6500a",
+  "text": "갑은 법 개정 후에도 행위 시의 법률에 따라 처벌받아야 하므로, 저작권법 개정 이전의 형벌 조항에 따라 처벌받을 수 있습니다. 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당하는 경우, 각각의 법률에 따라 별도로 처벌받을 수 있습니다.",
+  "trace": {
+    "latency_ms": 1611.406708980212,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1f84807f55b941fd83256b8471c03c52"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2126,
+      "output_tokens": 81,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003885,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73626,
+      "known_cost_usd": 24.80895281,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.94591281,
+      "remaining_usd": 74.05408719,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.6938725,
+          "accounted_with_reservations_usd": 23.8308325,
+          "remaining_usd": 13.1691675
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7jcic8aNyFeF29jWp5APLZopz4",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

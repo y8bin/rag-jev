@@ -1,0 +1,34 @@
+{
+  "status": "A1_A6_COMPLETE_OFFLINE",
+  "checks": {
+    "all_question_pairings": true,
+    "metric_rows": true,
+    "hop_partition": true,
+    "mapping_partition": true,
+    "stage_occurrence_partition": true,
+    "all_api_cache_keys_verified": true,
+    "casebook_complete": true,
+    "no_new_inference": true,
+    "no_model_calls": true
+  },
+  "sequence": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6"
+  ],
+  "versions": {
+    "numpy": "2.5.3",
+    "tiktoken": "0.14.0"
+  },
+  "python": "3.12.13 (main, Aug  7 2026, 02:15:23) [Clang 22.1.3 ]",
+  "questions": 226,
+  "gold_occurrences_per_arm": 443,
+  "legal_review_queue_n": 183,
+  "paid_calls": 0,
+  "human_judgments_created": 0,
+  "manuscript_written": false,
+  "figures_rendered": false
+}

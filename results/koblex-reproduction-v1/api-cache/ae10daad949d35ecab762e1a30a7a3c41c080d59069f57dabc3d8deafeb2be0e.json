@@ -1,0 +1,52 @@
+{
+  "key": "ae10daad949d35ecab762e1a30a7a3c41c080d59069f57dabc3d8deafeb2be0e",
+  "text": "갑의 공제조합 설립인가 타당성 검토 시기는 도로교통법에 따라 3년마다 검토되어야 하며, 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 산업통상자원부장관이 2년마다 검토하여야 한다.",
+  "trace": {
+    "latency_ms": 1083.3011670038104,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_eefc26609f3b4e61a6f486ef8de9a855"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2441,
+      "output_tokens": 74,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0042825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59587,
+      "known_cost_usd": 14.48783815,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 15.63962315,
+      "remaining_usd": 84.36037685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.99043,
+          "accounted_with_reservations_usd": 14.142215,
+          "remaining_usd": 22.857785
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9r6zHZLnSXxuPLKilOVys0y6Pdo",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

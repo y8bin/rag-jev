@@ -1,0 +1,87 @@
+{
+  "key": "546d2f5c75035e4536fe0636332b4b0597200a911300a3b11d9f7ead1403351e",
+  "response": {
+    "id": "chatcmpl-EiA2ruGvHnNMlDZb1Xr97CIsb0iiK",
+    "object": "chat.completion",
+    "created": 1794193753,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑과 을은 공무원에 대하여 허위신고를 하여 공정증서원본에 부실의 사실을 기재하게 한 경우 형법 제228조에 따라 5년 이하의 징역 또는 1천만원 이하의 벌금에 처해질 수 있으며, 공문서를 부정행사한 경우 형법 제230조에 따라 2년 이하의 징역이나 금고 또는 500만원 이하의 벌금에 처해질 수 있다. 또한, 갑과 을이 공동으로 범한 범죄는 형법 제30조에 따라 각자를 그 죄의 정범으로 처벌한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2382,
+      "completion_tokens": 140,
+      "total_tokens": 2522,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 2178.2274579891236,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_a518d10ec8524de5bd4fe5faf7331b33"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2382,
+      "output_tokens": 140,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004955,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60118,
+      "known_cost_usd": 19.51528065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 20.91851815,
+      "remaining_usd": 79.08148185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.0178725,
+          "accounted_with_reservations_usd": 19.42111,
+          "remaining_usd": 17.57889
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA2ruGvHnNMlDZb1Xr97CIsb0iiK",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "dd902796e2422cda9e8b1dda8d3148b41e9e94b5fd0f6f5ed92327c30f333203",
+  "text": "[\"장애인복지법 (장애인 학대의 처벌) 장애인을 학대하여 신체적, 정신적 고통을 가한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다.\", \"장애인복지법 (장애인 학대 예방 조치) 국가와 지방자치단체는 장애인 학대 예방을 위하여 필요한 교육 및 홍보를 실시하고, 장애인 학대 신고센터를 설치하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1381.073500000639,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6f3551ad18c24af6b0b13ba8d2126db8"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1678,
+      "output_tokens": 111,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005305,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19712,
+      "known_cost_usd": 7.746474222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.746474222,
+      "remaining_usd": 92.253525778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.9904725,
+          "accounted_with_reservations_usd": 6.9904725,
+          "remaining_usd": 30.0095275
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zow6hmzWOJeQP52hKwRKjcpLGX",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "ef631f1870fed46e34212f6920f946265414fbf973d67fb28915c570cc5af615",
+  "text": "등기관은 신청에 문제가 있음을 발견한 경우, 신청의 잘못된 부분이 보정될 수 있는 경우로서 등기관이 보정을 명한 날의 다음 날까지 신청인이 그 잘못된 부분을 보정하지 않으면 신청을 각하하여야 한다. 갑과 을은 허위의 재무정보를 신고하여 공정증서원본에 부실한 사실을 기재하게 한 행위로 인해 형사처벌을 받을 수 있다.",
+  "trace": {
+    "latency_ms": 1310.6000830011908,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_998c7fa6a6c34bcf9cdcac75829f01a8"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2481,
+      "output_tokens": 102,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0072225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59211,
+      "known_cost_usd": 10.89186815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.24338315,
+      "remaining_usd": 87.75661685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.39446,
+          "accounted_with_reservations_usd": 10.745975,
+          "remaining_usd": 26.254025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9iNXC1PUKxdgWHP8HIFSyShXGCT",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

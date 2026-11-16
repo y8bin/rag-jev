@@ -1,0 +1,52 @@
+{
+  "key": "c907fb8306c90dbe27ded9f54baa963949220d33efef3d715bba0b25281b453e",
+  "text": "[\"민사소송법 (소송능력의 흠결) 소송능력에 흠결이 있는 자가 한 소송행위는 무효로 한다. 그러나 소송능력의 흠결이 보정된 후에는 그 소송행위를 추인할 수 있다.\", \"민사소송법 (소송절차의 수계) 소송능력의 흠결로 인한 소송행위의 무효가 보정된 경우, 상대방은 소송절차의 수계를 신청할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1659.2696670122677,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e4963ebdc8144c999649b577788acf59"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1660,
+      "output_tokens": 120,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00535,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19802,
+      "known_cost_usd": 8.189164222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.189164222,
+      "remaining_usd": 91.810835778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.4331625,
+          "accounted_with_reservations_usd": 7.4331625,
+          "remaining_usd": 29.5668375
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91zYcvg5GUaDca6gR14uDLWPILj",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

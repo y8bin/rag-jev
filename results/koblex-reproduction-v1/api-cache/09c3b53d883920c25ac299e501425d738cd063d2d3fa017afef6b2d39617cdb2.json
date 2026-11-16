@@ -1,0 +1,52 @@
+{
+  "key": "09c3b53d883920c25ac299e501425d738cd063d2d3fa017afef6b2d39617cdb2",
+  "text": "갑은 업무상의 임무에 위배하여 직무를 수행하지 않았으므로, 형법 제356조에 따라 10년 이하의 징역 또는 3천만원 이하의 벌금에 처할 수 있다. 을은 결산서 전자기록을 허위로 작성하여 시스템에 입력했으므로, 같은 조항에 따라 10년 이하의 징역 또는 3천만원 이하의 벌금에 처할 수 있다.",
+  "trace": {
+    "latency_ms": 1488.2809160044417,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9715bfeb48454e03bf1ccad2056a75a9"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2312,
+      "output_tokens": 99,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00437,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60165,
+      "known_cost_usd": 19.96683815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 21.21900065,
+      "remaining_usd": 78.78099935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.46943,
+          "accounted_with_reservations_usd": 19.7215925,
+          "remaining_usd": 17.2784075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA3stMNOdoqteMVySck5cLtbqLFB",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

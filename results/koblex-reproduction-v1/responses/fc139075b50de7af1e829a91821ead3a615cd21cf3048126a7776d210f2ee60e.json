@@ -1,0 +1,87 @@
+{
+  "key": "fc139075b50de7af1e829a91821ead3a615cd21cf3048126a7776d210f2ee60e",
+  "response": {
+    "id": "chatcmpl-EiA4iPwoIHLzLPrqNGwrEgPEEj5OV",
+    "object": "chat.completion",
+    "created": 1794193868,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 잡종재산의 대금을 일시에 납부할 경우, 결정된 가격에서 3할을 공제한 차액을 매각대금으로 하여 징수한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2323,
+      "completion_tokens": 43,
+      "total_tokens": 2366,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 847.1250000002328,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3409810e01714eb28b520df7d4489081"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2323,
+      "output_tokens": 43,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60181,
+      "known_cost_usd": 20.13018065,
+      "unsettled_attempts": 11,
+      "accounted_with_reservations_usd": 21.22555065,
+      "remaining_usd": 78.77444935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.6327725,
+          "accounted_with_reservations_usd": 19.7281425,
+          "remaining_usd": 17.2718575
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA4iPwoIHLzLPrqNGwrEgPEEj5OV",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

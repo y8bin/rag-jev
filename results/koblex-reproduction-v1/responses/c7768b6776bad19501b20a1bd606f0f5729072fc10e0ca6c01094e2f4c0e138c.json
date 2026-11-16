@@ -1,0 +1,87 @@
+{
+  "key": "c7768b6776bad19501b20a1bd606f0f5729072fc10e0ca6c01094e2f4c0e138c",
+  "response": {
+    "id": "chatcmpl-EiAAXoXp55FTvEPEwBky8w0El28WP",
+    "object": "chat.completion",
+    "created": 1794194229,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑의 행위는 이사회의 승인을 받지 않고 주요주주에게 신용공여를 한 것으로, 상법 542조의9에 따라 이사회의 승인을 받아야 하는 거래를 승인 없이 진행한 경우에 해당합니다. 이는 상법 622조에 따라 임무에 위배한 행위로써 회사에 손해를 가한 경우에 해당할 수 있으며, 10년 이하의 징역 또는 3천만원 이하의 벌금에 처해질 수 있습니다. XYZ 회사 자체에 대한 형사처벌 가능성은 명시되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2524,
+      "completion_tokens": 128,
+      "total_tokens": 2652,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1498.437082991586,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8da1a1c1f8e44f478cda27b273a78805"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2524,
+      "output_tokens": 128,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00519,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60434,
+      "known_cost_usd": 22.56094815,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 23.71102565,
+      "remaining_usd": 76.28897435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 21.06354,
+          "accounted_with_reservations_usd": 22.2136175,
+          "remaining_usd": 14.786382499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiAAXoXp55FTvEPEwBky8w0El28WP",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "63fcdbb4fd387959399501ce14af45d05eaaf868cbde23cc8e3f5a7186f1ebe3",
+  "text": "적법한 절차에 따르지 않고 수집한 증거는 증거로 사용할 수 없다. 을의 사망으로 인해 증인 진술이 불가능한 상황에서, 그의 진술이 포함된 문서는 그 진술 또는 작성이 특히 신빙할 수 있는 상태에서 행하여졌음이 증명된 경우에 한해 증거로 사용할 수 있다.",
+  "trace": {
+    "latency_ms": 996.8796670000302,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f5767fd88e344e8fa1b38e9051c06540"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2405,
+      "output_tokens": 81,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0044225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59955,
+      "known_cost_usd": 17.94802315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 19.24554065,
+      "remaining_usd": 80.75445935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.450615,
+          "accounted_with_reservations_usd": 17.7481325,
+          "remaining_usd": 19.2518675
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9z24OEMYhUOQeA6y74XhKOeSwbp",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

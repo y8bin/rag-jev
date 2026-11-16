@@ -1,0 +1,87 @@
+{
+  "key": "74e6042ccb4585da7f47824a5edcb898fe027429db876d142d2fc3ba1055c762",
+  "response": {
+    "id": "chatcmpl-EiA0pejoT3t94CnPlP1cNTmjTNgO3",
+    "object": "chat.completion",
+    "created": 1794193627,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑과 을이 공동으로 을의 사무실에서 절도죄를 범한 경우, 이들은 각자를 그 죄의 정범으로 처벌하며, 2명 이상이 합동하여 타인의 재물을 절취한 경우에도 제1항의 형에 처한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2154,
+      "completion_tokens": 61,
+      "total_tokens": 2215,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1120.972165997955,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_33216e008dba4b22b28ea084993d3fe4"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2154,
+      "output_tokens": 61,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003595,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60011,
+      "known_cost_usd": 18.50579815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 19.81254315,
+      "remaining_usd": 80.18745685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.00839,
+          "accounted_with_reservations_usd": 18.315135,
+          "remaining_usd": 18.684865
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA0pejoT3t94CnPlP1cNTmjTNgO3",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

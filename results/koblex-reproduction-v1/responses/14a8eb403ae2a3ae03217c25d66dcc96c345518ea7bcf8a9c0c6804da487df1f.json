@@ -1,0 +1,87 @@
+{
+  "key": "14a8eb403ae2a3ae03217c25d66dcc96c345518ea7bcf8a9c0c6804da487df1f",
+  "response": {
+    "id": "chatcmpl-Ei8zsvzfSBnjcEKh68GhzpLBnHfpI",
+    "object": "chat.completion",
+    "created": 1794189724,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"국가인권위원회법 (직권조사) 위원회는 인권침해의 우려가 있다고 인정되는 경우 직권으로 조사할 수 있다.\", \"국가인권위원회법 (권고의 이행) 위원회의 권고를 받은 기관의 장은 권고를 받은 날부터 90일 이내에 그 이행계획을 위원회에 통보하여야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1744,
+      "completion_tokens": 93,
+      "total_tokens": 1837,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1218.8088340044487,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7f9bf6b23e2e45aca9e3441ac830444f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1744,
+      "output_tokens": 93,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00529,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19715,
+      "known_cost_usd": 7.762001722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.762001722,
+      "remaining_usd": 92.237998278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.006,
+          "accounted_with_reservations_usd": 7.006,
+          "remaining_usd": 29.994
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zsvzfSBnjcEKh68GhzpLBnHfpI",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

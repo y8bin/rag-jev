@@ -1,0 +1,87 @@
+{
+  "key": "f1524957697f33a0d29dc7b889f7909e3618fc6e845ffe641df132be82954df5",
+  "response": {
+    "id": "chatcmpl-Ei9v1zAnEUPKojkdF1a6JrkcYQMvx",
+    "object": "chat.completion",
+    "created": 1794193267,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 의뢰인 을에게 헌법재판소가 사건을 접수한 후 종국결정의 선고는 180일 이내에 이루어져야 한다고 설명해야 한다. 다만, 재판관의 궐위로 7명의 출석이 불가능한 경우에는 그 궐위된 기간은 심판기간에 산입되지 않는다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2199,
+      "completion_tokens": 84,
+      "total_tokens": 2283,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1151.0162500053411,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_29693c0f642b4640be24c21947ee8915"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2199,
+      "output_tokens": 84,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0063375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59763,
+      "known_cost_usd": 16.17216065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.47281315,
+      "remaining_usd": 82.52718684999999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.6747525,
+          "accounted_with_reservations_usd": 15.975405,
+          "remaining_usd": 21.024594999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9v1zAnEUPKojkdF1a6JrkcYQMvx",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

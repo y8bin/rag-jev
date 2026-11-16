@@ -1,0 +1,87 @@
+{
+  "key": "51193bd4595b071bf28f744475726fecef53392edb270f512e2183618a8cdfef",
+  "response": {
+    "id": "chatcmpl-Ei91BVbt79jCjM8QO8kJHP4OzgjVS",
+    "object": "chat.completion",
+    "created": 1794189805,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"도로교통법 (장내기능시험 불합격자 재응시) 장내기능시험에 불합격한 사람은 불합격한 날부터 3일이 경과한 후에 다시 시험에 응시할 수 있다.\", \"도로교통법 (도로주행시험 불합격자 재응시) 도로주행시험에 불합격한 사람은 불합격한 날부터 3일이 경과한 후에 다시 시험에 응시할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1656,
+      "completion_tokens": 110,
+      "total_tokens": 1766,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1621.2309999973513,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_93b39501ebc54b6684c054b0f97b706d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1656,
+      "output_tokens": 110,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00524,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19772,
+      "known_cost_usd": 8.035314222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.035314222,
+      "remaining_usd": 91.964685778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.2793125,
+          "accounted_with_reservations_usd": 7.2793125,
+          "remaining_usd": 29.7206875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91BVbt79jCjM8QO8kJHP4OzgjVS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

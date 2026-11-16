@@ -1,0 +1,55 @@
+{
+  "score": 0.11,
+  "trace": {
+    "latency_ms": 267.58516700647306,
+    "attempts": [
+      {
+        "status": 200
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 440,
+      "output_tokens": 22
+    },
+    "cost_usd": 1.848e-05,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 42234,
+      "known_cost_usd": 8.670745054,
+      "unsettled_attempts": 1,
+      "accounted_with_reservations_usd": 8.670944932,
+      "remaining_usd": 91.329055068,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.489105,
+          "accounted_with_reservations_usd": 7.489105,
+          "remaining_usd": 29.510894999999998
+        }
+      }
+    },
+    "returned_model": "jev-1.14.0",
+    "identity": {
+      "backend": "http",
+      "model": "jev-1.14.0",
+      "base_url": "https://api.typesafe.ai"
+    },
+    "cached": false
+  },
+  "response": {
+    "model": "jev-1.14.0",
+    "answers": {
+      "relevant": {
+        "type": "noul",
+        "noul": 0.11
+      }
+    },
+    "usage": {
+      "input_tokens": 440,
+      "output_tokens": 22
+    }
+  }
+}

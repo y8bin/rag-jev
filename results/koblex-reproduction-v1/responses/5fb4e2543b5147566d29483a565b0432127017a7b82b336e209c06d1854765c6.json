@@ -1,0 +1,87 @@
+{
+  "key": "5fb4e2543b5147566d29483a565b0432127017a7b82b336e209c06d1854765c6",
+  "response": {
+    "id": "chatcmpl-Ei9rAYjuwI5ygol7BQpEGrv8c9Uc1",
+    "object": "chat.completion",
+    "created": 1794193028,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑의 공제조합 설립인가 타당성 검토 시기는 기획재정부장관이 인가의 신청을 받은 날부터 60일 이내에 인가 여부를 통지해야 합니다. 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 2015년 1월 1일을 기준으로 매 2년마다 그 타당성을 검토하여 개선 등의 조치를 해야 합니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2420,
+      "completion_tokens": 99,
+      "total_tokens": 2519,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1225.8617080078693,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_bf54b677b0734faa9aa776be946f1474"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2420,
+      "output_tokens": 99,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00704,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59602,
+      "known_cost_usd": 14.62573315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.88244315,
+      "remaining_usd": 84.11755685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.128325,
+          "accounted_with_reservations_usd": 14.385035,
+          "remaining_usd": 22.614964999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9rAYjuwI5ygol7BQpEGrv8c9Uc1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

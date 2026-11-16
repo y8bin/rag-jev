@@ -1,0 +1,52 @@
+{
+  "key": "8afe2e41d7bc8128fd350f3507a5d10303053e87c1c0b8d2bf28b13686c71e3a",
+  "text": "[\"공직선거법 (서명이나 날인의 제한) 누구든지 선거운동을 위하여 서명이나 날인을 받거나 요구할 수 없다.\", \"공직선거법 (금품제공의 금지) 누구든지 선거운동과 관련하여 금품, 향응, 그 밖의 이익을 제공하거나 제공할 의사를 표시할 수 없다.\"]",
+  "trace": {
+    "latency_ms": 1514.3527920008637,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4fc29d1985264b98ac028b1a404b1833"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1687,
+      "output_tokens": 85,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0050675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19683,
+      "known_cost_usd": 7.601899222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.601899222,
+      "remaining_usd": 92.398100778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.8458975,
+          "accounted_with_reservations_usd": 6.8458975,
+          "remaining_usd": 30.1541025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8z5VO7jvvp4LJ2tnJmIMkIGnQ1g",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

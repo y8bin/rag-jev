@@ -1,0 +1,87 @@
+{
+  "key": "2fce5009a0c2aeb8a710898d3bbe5d8d1e68133c4bdd011403f2bf65dca7afb6",
+  "response": {
+    "id": "chatcmpl-Ei8zgwdwgpPRKNNVTPhCansFTJD0Y",
+    "object": "chat.completion",
+    "created": 1794189712,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형법 (살인) 사람을 살해한 자는 사형, 무기 또는 5년 이상의 징역에 처한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1649,
+      "completion_tokens": 32,
+      "total_tokens": 1681,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 805.1757919893134,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d97e2892391844ab8bb2782db61d5acf"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1649,
+      "output_tokens": 32,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0044425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19705,
+      "known_cost_usd": 7.711469222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.711469222,
+      "remaining_usd": 92.288530778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.9554675,
+          "accounted_with_reservations_usd": 6.9554675,
+          "remaining_usd": 30.0445325
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zgwdwgpPRKNNVTPhCansFTJD0Y",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

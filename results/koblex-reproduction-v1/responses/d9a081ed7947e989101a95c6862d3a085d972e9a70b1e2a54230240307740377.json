@@ -1,0 +1,87 @@
+{
+  "key": "d9a081ed7947e989101a95c6862d3a085d972e9a70b1e2a54230240307740377",
+  "response": {
+    "id": "chatcmpl-Ei9083p1voL2t1YLPEK036id2qmds",
+    "object": "chat.completion",
+    "created": 1794189740,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"여객자동차운수사업법 (승차권 판매 위탁) 여객터미널의 소유자 또는 운영자는 승차권 판매를 위탁할 수 있으며, 위탁 방식 및 조건은 당사자 간의 계약에 따른다.\", \"여객자동차운수사업법 (터미널 확장 면허기준) 여객터미널의 확장에 관한 면허는 해당 지역의 교통 수요, 안전 기준, 환경 영향 등을 고려하여 결정된다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1724,
+      "completion_tokens": 109,
+      "total_tokens": 1833,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1727.9046670009848,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_926d3c3a5cf64aa8af9f9dea5254b11d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1724,
+      "output_tokens": 109,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0054,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19727,
+      "known_cost_usd": 7.816741722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.816741722,
+      "remaining_usd": 92.183258278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.06074,
+          "accounted_with_reservations_usd": 7.06074,
+          "remaining_usd": 29.93926
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9083p1voL2t1YLPEK036id2qmds",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

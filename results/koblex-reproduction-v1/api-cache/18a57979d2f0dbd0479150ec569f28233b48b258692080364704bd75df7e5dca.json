@@ -1,0 +1,52 @@
+{
+  "key": "18a57979d2f0dbd0479150ec569f28233b48b258692080364704bd75df7e5dca",
+  "text": "갑이 을시에 공장을 설립하고자 할 때, 그 공장에서 배출되는 오염물질에 대한 규제는 환경부장관 또는 시ㆍ도지사가 특정대기유해물질이나 특별대책지역의 배출시설로부터 나오는 대기오염물질로 인해 환경기준의 유지가 곤란하거나 주민의 건강, 재산, 동식물의 생육에 심각한 위해를 끼칠 우려가 있다고 인정되면, 대통령령으로 정하는 바에 따라 배출시설의 설치를 제한할 수 있습니다. 공장 설치를 위해서는 환경영향평가를 실시하여 환경적으로 지속가능하게 계획 및 개발사업이 수립ㆍ시행될 수 있도록 해야 합니다. 특정대기유해물질을 배출하는 경우, 배출시설의 설치가 제한될 수 있습니다.",
+  "trace": {
+    "latency_ms": 1828.525749995606,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_10d8cba124034c469ed87c9d13a6074d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2651,
+      "output_tokens": 184,
+      "cached_input_tokens": 2304,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0055875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59233,
+      "known_cost_usd": 11.10622815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.40912315,
+      "remaining_usd": 87.59087685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.60882,
+          "accounted_with_reservations_usd": 10.911715,
+          "remaining_usd": 26.088285
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9iRKKZvohcYdL5k7nbU1A5DuKBu",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

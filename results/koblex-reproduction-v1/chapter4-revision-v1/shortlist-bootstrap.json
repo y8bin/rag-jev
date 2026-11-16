@@ -1,0 +1,43 @@
+{
+ "definition": "per-question shortlist-union gold recall = shortlist_gold / n_gold (A4/question-stages.jsonl), unweighted question mean; all-gold-in-shortlist = all_gold_in_shortlist_union indicator",
+ "bm25_union_recall_points": 77.21238938053098,
+ "shortlist_recall_points": {
+  "parser_ce_fixed": 69.46902654867256,
+  "parser_jev_fixed": 74.63126843657818
+ },
+ "shortlist_recall_diff": {
+  "estimate": 5.162241887905605,
+  "ci95": [
+   2.608681823210532,
+   7.943925233644859
+  ],
+  "p_centered_bootstrap_two_sided": 0.0007999200079992001,
+  "questions": 226,
+  "clusters": 151,
+  "repetitions": 10000,
+  "seed": 20261108,
+  "post_hoc": true
+ },
+ "all_gold_in_shortlist_questions": {
+  "parser_ce_fixed": 112,
+  "parser_jev_fixed": 130
+ },
+ "all_gold_in_shortlist_diff_pctpoints": {
+  "estimate": 7.964601769911504,
+  "ci95": [
+   3.886840028817455,
+   12.376237623762377
+  ],
+  "p_centered_bootstrap_two_sided": 0.0005999400059994001,
+  "questions": 226,
+  "clusters": 151,
+  "repetitions": 10000,
+  "seed": 20261108,
+  "post_hoc": true
+ },
+ "shortlist_recall_win_tie_loss": [
+  30,
+  189,
+  7
+ ]
+}

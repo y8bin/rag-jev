@@ -1,0 +1,52 @@
+{
+  "key": "c0c1aff6bf44c65ef380569ff8324fa2ec1fad66e85af496b948f6feb1c738a4",
+  "text": "을은 갑의 주민등록표 등본을 확인하기 위해 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통해 확인해야 한다. 다만, 갑이 확인에 동의하지 않거나 주민등록표 등본으로 부양가족의 유무를 판단할 수 없는 경우에는 주민등록표 등본 또는 가족관계등록부 증명서를 첨부하도록 해야 한다. 갑이 중간예납추계액신고서를 제출하지 않은 경우에 대한 처리는 제공된 Context에 명시되어 있지 않다.",
+  "trace": {
+    "latency_ms": 1391.4183750021039,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ff01f4bb14844692bfbead6cd9654f9f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2301,
+      "output_tokens": 124,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0069925,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59410,
+      "known_cost_usd": 12.78234815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 14.03251065,
+      "remaining_usd": 85.96748935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.28494,
+          "accounted_with_reservations_usd": 12.5351025,
+          "remaining_usd": 24.4648975
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9mOQ4SQfAX9fsLnfZ3YlF3x6m6O",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

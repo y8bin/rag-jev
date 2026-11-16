@@ -1,0 +1,52 @@
+{
+  "key": "a6cd162fa27f4e917a21e86a984ba9a6cf7a54ed5ee2963ef654f3487a86a515",
+  "text": "갑은 소유권을 방해하는 을에 대하여 방해의 제거를 청구할 수 있다. 갑에게 방해제거청구권이 인정되는 경우, 이를 남용할 수 있다는 내용은 제공된 문맥에 포함되어 있지 않다.",
+  "trace": {
+    "latency_ms": 1238.4907090017805,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4b7e364622b0411595af91468e6cf552"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2331,
+      "output_tokens": 58,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0064075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59257,
+      "known_cost_usd": 11.32718565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.63263815,
+      "remaining_usd": 87.36736185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.8297775,
+          "accounted_with_reservations_usd": 11.13523,
+          "remaining_usd": 25.86477
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9jMgYrvelkmYqhrIUyVdEAao1jT",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

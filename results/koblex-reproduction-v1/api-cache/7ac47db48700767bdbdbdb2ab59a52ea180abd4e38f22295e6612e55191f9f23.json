@@ -1,0 +1,52 @@
+{
+  "key": "7ac47db48700767bdbdbdb2ab59a52ea180abd4e38f22295e6612e55191f9f23",
+  "text": "[\"형법 (일반교통방해) 육로, 수로 또는 교량을 손괴하거나 기타 방법으로 교통을 방해한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다.\", \"형법 (중상해) 사람의 신체를 상해하여 생명에 대한 위험을 발생하게 한 자는 1년 이상 10년 이하의 징역에 처한다.\", \"형법 (중과실치상) 중대한 과실로 인하여 사람을 상해에 이르게 한 자는 5년 이하의 금고 또는 2천만원 이하의 벌금에 처한다.\"]",
+  "trace": {
+    "latency_ms": 2040.1404579897644,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ada204949eed403bbe3afd5179b74752"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1601,
+      "output_tokens": 147,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0054725,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19660,
+      "known_cost_usd": 7.493686722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.493686722,
+      "remaining_usd": 92.506313278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.737685,
+          "accounted_with_reservations_usd": 6.737685,
+          "remaining_usd": 30.262315
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8yTsSP2knzanEk1HTE7TwfXrluA",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

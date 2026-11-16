@@ -1,0 +1,52 @@
+{
+  "key": "370751b0fadba2f971b9f8ed4ccd27e3929bbd0f1cf94fd2e47875df7519cd4c",
+  "text": "갑은 을시청의 영업정지 처분에 대해 취소소송을 제기할 법률상 이익이 있는 자로서 취소소송을 제기할 수 있다. 해당 처분의 효력은 권한이 있는 기관이 취소 또는 철회하거나 기간의 경과 등으로 소멸되기 전까지 유효하다. 다만, 무효인 처분은 처음부터 그 효력이 발생하지 않는다.",
+  "trace": {
+    "latency_ms": 1485.2292080031475,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ae4e9c175cbc4c1495274d68273a0bf6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2291,
+      "output_tokens": 97,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0042975,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59374,
+      "known_cost_usd": 12.41024815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.71910065,
+      "remaining_usd": 86.28089935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.91284,
+          "accounted_with_reservations_usd": 12.2216925,
+          "remaining_usd": 24.7783075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9mDqjAEmqsETdM0IJzv2W5Q6xBm",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "ea3766a7b1001478c716384c55ab751f4ba7f0dd1afefef04e710dc868ef5d7f",
+  "text": "갑과 병의 신고 중 최초로 신고한 자에게만 포상금을 지급한다. 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금의 한도는 제공된 Context에 명시되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 975.7099999987986,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1d072252c919443b84c0d0ed2b0f94f2"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2237,
+      "output_tokens": 55,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0037425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59080,
+      "known_cost_usd": 9.786540650000001,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.99740815,
+      "remaining_usd": 90.00259185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.2891325,
+          "accounted_with_reservations_usd": 8.5,
+          "remaining_usd": 28.5
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eiPrBcUDSKZwH3gcSPrWYth5XZ",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

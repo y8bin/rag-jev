@@ -1,0 +1,87 @@
+{
+  "key": "bd411b9664dbb4118a045f56abb0270f0f2856b6a829f6310ba07e9ae97e62d5",
+  "response": {
+    "id": "chatcmpl-Ei91XICQvclXIIsCzZXINj8Dh2LQX",
+    "object": "chat.completion",
+    "created": 1794189827,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형법 (강간) 사람을 강간한 자는 3년 이상의 유기징역에 처한다.\", \"형법 (주거침입) 사람의 주거에 침입한 자는 3년 이하의 징역 또는 500만원 이하의 벌금에 처한다.\", \"형법 (강제추행) 폭행 또는 협박으로 사람을 추행한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1667,
+      "completion_tokens": 110,
+      "total_tokens": 1777,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1524.3713750096504,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6b56dc1d35cf4f65b36a9a48092ae239"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1667,
+      "output_tokens": 110,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0052675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19785,
+      "known_cost_usd": 8.103216722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.103216722,
+      "remaining_usd": 91.896783278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.347215,
+          "accounted_with_reservations_usd": 7.347215,
+          "remaining_usd": 29.652785
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91XICQvclXIIsCzZXINj8Dh2LQX",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

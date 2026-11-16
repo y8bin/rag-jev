@@ -1,0 +1,87 @@
+{
+  "key": "64ba89e8f2772632f7a8f769cf7bdb394481371cebfb0a3efacaf3ca1c4f1955",
+  "response": {
+    "id": "chatcmpl-EiA1pO3w9M188jJFbH1kxOxDfYMJh",
+    "object": "chat.completion",
+    "created": 1794193689,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "A 회사는 불가분채무를 부담한 갑, 을, 병 중 한 명에게 채무의 전부나 일부의 이행을 청구할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2180,
+      "completion_tokens": 37,
+      "total_tokens": 2217,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 819.0330840006936,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9ca146d974df41df803a2a7ca245c381"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2180,
+      "output_tokens": 37,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00582,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60060,
+      "known_cost_usd": 18.96240565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.21461815,
+      "remaining_usd": 79.78538185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.4649975,
+          "accounted_with_reservations_usd": 18.71721,
+          "remaining_usd": 18.28279
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA1pO3w9M188jJFbH1kxOxDfYMJh",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

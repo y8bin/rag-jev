@@ -1,0 +1,87 @@
+{
+  "key": "6039ad87ed4dbde9e91644f7a28af11c80c19a9dafa09b52ccef436c695f50fa",
+  "response": {
+    "id": "chatcmpl-Ei8xaGhMeIHntQ763SFhh5g1eLBqn",
+    "object": "chat.completion",
+    "created": 1794189582,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형사소송법 (재심의 사유) 유죄의 확정판결에 대하여 무죄를 인정할 명백한 증거가 새로 발견된 때에는 재심을 청구할 수 있다.\", \"형사소송법 (재심의 사유) 유죄의 확정판결에 영향을 미친 증거가 허위인 것이 증명된 때에는 재심을 청구할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1658,
+      "completion_tokens": 95,
+      "total_tokens": 1753,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1402.6106249948498,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2c132bc432b141dba6f7879cdaf39dc8"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1658,
+      "output_tokens": 95,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005095,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19623,
+      "known_cost_usd": 7.303296722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.303296722,
+      "remaining_usd": 92.696703278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.547295,
+          "accounted_with_reservations_usd": 6.547295,
+          "remaining_usd": 30.452705
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xaGhMeIHntQ763SFhh5g1eLBqn",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

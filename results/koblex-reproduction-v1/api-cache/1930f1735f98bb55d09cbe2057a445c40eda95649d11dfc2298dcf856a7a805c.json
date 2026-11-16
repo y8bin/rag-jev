@@ -1,0 +1,52 @@
+{
+  "key": "1930f1735f98bb55d09cbe2057a445c40eda95649d11dfc2298dcf856a7a805c",
+  "text": "[\"폐기물관리법 (적합성 확인의 조건) 폐기물처리업의 적합성 확인을 받기 위해서는 환경부령으로 정하는 시설 및 장비를 갖추어야 하며, 운영계획이 적정하여야 한다.\", \"폐기물관리법 (적합성 확인의 신청 절차) 폐기물처리업자는 적합성 확인을 받기 위하여 환경부장관 또는 시ㆍ도지사에게 신청서를 제출하여야 하며, 신청서에는 환경부령으로 정하는 서류를 첨부하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 2362.5946659885813,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1ac9ae3dba334e3a89e63c18f35318bd"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1695,
+      "output_tokens": 129,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0055275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19644,
+      "known_cost_usd": 7.411131722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.411131722,
+      "remaining_usd": 92.588868278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.65513,
+          "accounted_with_reservations_usd": 6.65513,
+          "remaining_usd": 30.34487
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8y2CupOADzOMIuYh0e0UTZPf9E0",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

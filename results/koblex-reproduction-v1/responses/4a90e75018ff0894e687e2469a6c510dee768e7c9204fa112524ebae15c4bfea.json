@@ -1,0 +1,87 @@
+{
+  "key": "4a90e75018ff0894e687e2469a6c510dee768e7c9204fa112524ebae15c4bfea",
+  "response": {
+    "id": "chatcmpl-Ei9eZopNNkesx6RzICdTUkQpeKYBS",
+    "object": "chat.completion",
+    "created": 1794192247,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑과 을이 공동으로 강도죄를 저지른 경우, 2인 이상이 합동하여 강도죄를 범한 것으로 간주되어 3년 이상의 유기징역에 처한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2146,
+      "completion_tokens": 45,
+      "total_tokens": 2191,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1292.8478329995414,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e8052e292c524d9f8c691b7effd8c52f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2146,
+      "output_tokens": 45,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003415,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59043,
+      "known_cost_usd": 9.45430815,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.71029565,
+      "remaining_usd": 90.28970435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.9569,
+          "accounted_with_reservations_usd": 8.2128875,
+          "remaining_usd": 28.7871125
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eZopNNkesx6RzICdTUkQpeKYBS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "cedbd75035612db9a58bd144950c89072112e98c73381129c1ac07e3b1d349b0",
+  "text": "[\"공직선거법 (후보자 사망 시 투표용지 처리) 후보자가 사망한 경우에도 이미 인쇄된 투표용지는 그대로 사용한다.\", \"공직선거법 (선상투표자의 투표용지 전송) 선상투표자의 투표용지는 선거관리위원회가 지정한 방법에 따라 선박에 전송된다.\"]",
+  "trace": {
+    "latency_ms": 1831.7585000040708,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7715c58308a3407b9fa06be60188d2b0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1711,
+      "output_tokens": 85,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0051275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19775,
+      "known_cost_usd": 8.051291722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.051291722,
+      "remaining_usd": 91.948708278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.29529,
+          "accounted_with_reservations_usd": 7.29529,
+          "remaining_usd": 29.70471
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91GtFJC9Nme9rA53nyyY0wMsJeB",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "8f440c8139b1305862bf9a890015ea5e4f7ce24737edd2e013a842aa322d5b35",
+  "text": "[\"공직선거법 (선거운동기간) 선거운동은 선거기간개시일부터 선거일 전일까지 할 수 있다.\", \"공직선거법 (대통령선거 기탁금) 대통령선거의 후보자는 후보자등록신청 시에 3억원을 기탁금으로 납부하여야 한다.\", \"공직선거법 (국회의원선거 기탁금) 국회의원선거의 후보자는 후보자등록신청 시에 1천5백만원을 기탁금으로 납부하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1379.2850419995375,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_bc34bb52c8e946b99bc227f8076e6a5d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1659,
+      "output_tokens": 126,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0054075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19618,
+      "known_cost_usd": 7.275899222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.275899222,
+      "remaining_usd": 92.72410077800001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.5198975,
+          "accounted_with_reservations_usd": 6.5198975,
+          "remaining_usd": 30.4801025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xSHhwIZl0fjJeGZyoBz5KifGCV",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

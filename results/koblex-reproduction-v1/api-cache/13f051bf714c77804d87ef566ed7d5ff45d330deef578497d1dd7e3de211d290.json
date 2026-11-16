@@ -1,0 +1,52 @@
+{
+  "key": "13f051bf714c77804d87ef566ed7d5ff45d330deef578497d1dd7e3de211d290",
+  "text": "갑과 을은 공무원에게 허위신고를 하여 공정증서원본에 부실의 사실을 기재하게 한 행위로 형법 제228조에 따라 5년 이하의 징역 또는 1천만원 이하의 벌금에 처해질 수 있다. 공동으로 범한 범죄라는 점은 형법상 공동정범으로 간주되어 각자가 범죄의 전 과정을 실행한 것으로 보아 처벌받게 된다.",
+  "trace": {
+    "latency_ms": 1591.406375009683,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8472e3107dda42a7928d824caf46968c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2441,
+      "output_tokens": 103,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0071325,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60095,
+      "known_cost_usd": 19.29688815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 20.65042565,
+      "remaining_usd": 79.34957435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.79948,
+          "accounted_with_reservations_usd": 19.1530175,
+          "remaining_usd": 17.8469825
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA2kTidYku7NnYvoJcuX1LLWIiLa",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

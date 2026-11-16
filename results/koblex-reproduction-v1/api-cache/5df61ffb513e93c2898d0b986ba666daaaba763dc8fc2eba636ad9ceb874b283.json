@@ -1,0 +1,52 @@
+{
+  "key": "5df61ffb513e93c2898d0b986ba666daaaba763dc8fc2eba636ad9ceb874b283",
+  "text": "갑이 화물자동차 운송사업의 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관의 변경허가를 받아야 한다. 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 국토교통부장관 또는 도지사이다.",
+  "trace": {
+    "latency_ms": 1225.9977919893572,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9fa084baf59a43f59fbc1accac7d8da2"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2309,
+      "output_tokens": 77,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0039825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59251,
+      "known_cost_usd": 11.26999565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.61767565,
+      "remaining_usd": 87.38232435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.7725875,
+          "accounted_with_reservations_usd": 11.1202675,
+          "remaining_usd": 25.8797325
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9jKAtqQ8LLQv7PrX0v2xpHr5lu8",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

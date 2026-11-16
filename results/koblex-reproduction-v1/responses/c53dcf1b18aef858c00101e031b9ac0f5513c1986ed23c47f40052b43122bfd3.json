@@ -1,0 +1,87 @@
+{
+  "key": "c53dcf1b18aef858c00101e031b9ac0f5513c1986ed23c47f40052b43122bfd3",
+  "response": {
+    "id": "chatcmpl-Ei91nXX4pIwRNVMC31nfOk57w5tgc",
+    "object": "chat.completion",
+    "created": 1794189843,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"민법 (채무불이행과 최고) 채무자가 이행을 제공하였으나 채권자가 수령을 거절한 경우, 채무자는 이행의 제공으로 채무불이행의 책임을 면할 수 있다.\", \"민법 (계약의 해제) 채무자가 이행을 거절하거나 이행할 수 없음을 명백히 한 경우, 채권자는 최고 없이 계약을 해제할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1720,
+      "completion_tokens": 100,
+      "total_tokens": 1820,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1523.3829999924637,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e2ee18c7891c414b9f16ab9c1f16c399"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1720,
+      "output_tokens": 100,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0053,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19794,
+      "known_cost_usd": 8.153294222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.153294222,
+      "remaining_usd": 91.846705778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.3972925,
+          "accounted_with_reservations_usd": 7.3972925,
+          "remaining_usd": 29.6027075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91nXX4pIwRNVMC31nfOk57w5tgc",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

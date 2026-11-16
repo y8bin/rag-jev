@@ -1,0 +1,52 @@
+{
+  "key": "3feda9f93c4c54f32d091dd307e558caf5baef0b5da3a686dcf3578657a9c1d7",
+  "text": "[\"공직선거법 (국회의원 지역구) 국회의원 지역구는 인구, 행정구역, 교통, 지세 등을 고려하여 획정한다.\", \"공직선거법 (국회의원 정수) 국회의원의 정수는 300명으로 하며, 지역구 국회의원과 비례대표 국회의원으로 구성된다.\", \"공직선거법 (지역구 국회의원 수) 각 지역구에서 선출할 국회의원의 수는 1명으로 한다.\", \"공직선거법 (선거구 획정 절차) 국회의원 선거구는 선거구획정위원회의 심의를 거쳐 국회에서 확정한다.\"]",
+  "trace": {
+    "latency_ms": 2169.9482909898506,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b401684967ee4d308c4dd60d240095aa"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1698,
+      "output_tokens": 156,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005805,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19777,
+      "known_cost_usd": 8.062254222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.062254222,
+      "remaining_usd": 91.937745778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.3062525,
+          "accounted_with_reservations_usd": 7.3062525,
+          "remaining_usd": 29.6937475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91JQuF5658JgeLkXEsQlIUgWLy7",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

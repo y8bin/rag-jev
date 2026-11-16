@@ -1,0 +1,87 @@
+{
+  "key": "26974aae1a10d1ba47a80d2ffabdc570a539bf1e9060d87282be47c97c9f77a7",
+  "response": {
+    "id": "chatcmpl-Ei9t2phNpbu41fDSIVtQeZnguGpZs",
+    "object": "chat.completion",
+    "created": 1794193144,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 불법재산을 은닉하여 몰수가 불가능한 경우, 법원은 그 가액을 추징할 수 있습니다. 갑이 사망한 후에도 을의 상속재산에 대해 집행이 가능합니다. 몰수 또는 추징의 시효에 대한 정보는 제공된 문맥에 포함되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2427,
+      "completion_tokens": 73,
+      "total_tokens": 2500,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1249.7462920000544,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f196b54875a84ab1b799009801c74425"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2427,
+      "output_tokens": 73,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0043975,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59670,
+      "known_cost_usd": 15.29512815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.69466565,
+      "remaining_usd": 83.30533435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.79772,
+          "accounted_with_reservations_usd": 15.1972575,
+          "remaining_usd": 21.8027425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9t2phNpbu41fDSIVtQeZnguGpZs",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

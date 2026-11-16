@@ -1,0 +1,87 @@
+{
+  "key": "01c9a2bf9ea47f3ea057d279fde2f18835366625807b01ca7b69f706808ca58a",
+  "response": {
+    "id": "chatcmpl-Ei9wvoRahZX1HQUVk115LJb74zGKB",
+    "object": "chat.completion",
+    "created": 1794193385,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "법원은 범죄사실의 증명이 없는 때에는 형사소송법 제325조에 따라 무죄를 선고하여야 한다. 무죄판결 시 공시는 군사법원법 제490조에 따라 재심에서 무죄를 선고하였을 때 관보와 일간신문에 실어 공시하여야 한다. 다만, 해당하는 사람이 이를 원하지 않는 경우에는 공시하지 않는다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2408,
+      "completion_tokens": 93,
+      "total_tokens": 2501,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1172.7939999982482,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4084c119f72e4e54bd176ba524fa929f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2408,
+      "output_tokens": 93,
+      "cached_input_tokens": 2176,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00423,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59841,
+      "known_cost_usd": 16.90516815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 18.15427565,
+      "remaining_usd": 81.84572435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.40776,
+          "accounted_with_reservations_usd": 16.6568675,
+          "remaining_usd": 20.3431325
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9wvoRahZX1HQUVk115LJb74zGKB",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "25e1c006f4ac96039527c0f074ea8d5068fc9cc7ab2dc51bf6cd442941e61395",
+  "response": {
+    "id": "chatcmpl-Ei8zjoo2K2wb9agy0RmwL4RuOVus3",
+    "object": "chat.completion",
+    "created": 1794189715,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"민법 (조부모의 면접교섭권) 부모의 일방 또는 쌍방이 사망하거나 그 밖의 사유로 인하여 부모가 자와 면접교섭을 할 수 없는 경우, 조부모는 가정법원의 허가를 받아 자와 면접교섭을 청구할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1665,
+      "completion_tokens": 75,
+      "total_tokens": 1740,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1487.2884999931557,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f8093cd267ef44cfa1d49ddbefd5c1a0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1665,
+      "output_tokens": 75,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0049125,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19708,
+      "known_cost_usd": 7.725786722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.725786722,
+      "remaining_usd": 92.274213278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.969785,
+          "accounted_with_reservations_usd": 6.969785,
+          "remaining_usd": 30.030215
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zjoo2K2wb9agy0RmwL4RuOVus3",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

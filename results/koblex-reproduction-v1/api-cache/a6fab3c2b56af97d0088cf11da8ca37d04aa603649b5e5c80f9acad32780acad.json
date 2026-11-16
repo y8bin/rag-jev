@@ -1,0 +1,52 @@
+{
+  "key": "a6fab3c2b56af97d0088cf11da8ca37d04aa603649b5e5c80f9acad32780acad",
+  "text": "[\"형사소송법 (영장신청의 거부에 대한 이의신청) 수사기관이 신청한 영장에 대하여 검사가 정당한 이유 없이 판사에게 청구하지 아니한 때에는 수사기관은 그 거부에 대하여 이의신청을 할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1112.575499995728,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8116dcd789084042b0f6f49519091f6b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1663,
+      "output_tokens": 69,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0048475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19764,
+      "known_cost_usd": 7.996369222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.996369222,
+      "remaining_usd": 92.003630778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.2403675,
+          "accounted_with_reservations_usd": 7.2403675,
+          "remaining_usd": 29.759632500000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei910sQTBNIBpqCCcWRPRZ0RDffOV",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

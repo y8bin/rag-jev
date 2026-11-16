@@ -1,0 +1,87 @@
+{
+  "key": "6b7accd5dd6407b100f9b645ac4a4d496e22c0828e1e46feea8ad7bdda78e6db",
+  "response": {
+    "id": "chatcmpl-Ei92D3ZR0JYQF9k7MQpj4fsEe9wcL",
+    "object": "chat.completion",
+    "created": 1794189869,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"지방세특례제한법 (전세사기피해자 취득세 감면) 전세사기피해자가 전세사기피해주택을 취득하는 경우 취득세를 감면할 수 있다.\", \"지방세법 (재산세 세율) 주택에 대한 재산세는 주택의 공시가격에 따라 차등 적용되는 세율을 따른다.\", \"지방세특례제한법 (임차권등기명령 등록면허세 면제) 전세사기피해자가 임차권등기명령에 따라 임차권등기를 하는 경우 등록면허세를 면제할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1778,
+      "completion_tokens": 150,
+      "total_tokens": 1928,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_936db6157f"
+  },
+  "trace": {
+    "latency_ms": 1681.7327919998206,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_31dc35239fc040bdb0236d5e50a1ab26"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1778,
+      "output_tokens": 150,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004185,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19811,
+      "known_cost_usd": 8.236414222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.236414222,
+      "remaining_usd": 91.76358577799999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.4804125,
+          "accounted_with_reservations_usd": 7.4804125,
+          "remaining_usd": 29.5195875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei92D3ZR0JYQF9k7MQpj4fsEe9wcL",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

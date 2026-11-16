@@ -1,0 +1,52 @@
+{
+  "key": "4fbf8f4255a41e1d5449daf6b72a3a79e587c8fc0cb4d9102f6d1fba55cf6d7c",
+  "text": "[\"형사소송법 (공소장 변경) 공소사실의 동일성이 인정되는 범위 내에서 공소장을 변경할 수 있다.\", \"형법 (경합범) 판결이 확정되지 아니한 수개의 죄는 경합범으로 처벌한다.\"]",
+  "trace": {
+    "latency_ms": 1412.193500000285,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6c58f49dcb3341f49afbd50d20a69c4b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1719,
+      "output_tokens": 63,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0049275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19645,
+      "known_cost_usd": 7.416059222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.416059222,
+      "remaining_usd": 92.583940778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.6600575,
+          "accounted_with_reservations_usd": 6.6600575,
+          "remaining_usd": 30.3399425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8y5XlslhRyNYULfIrDJoLhso03Q",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

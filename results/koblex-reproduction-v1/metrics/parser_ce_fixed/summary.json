@@ -1,0 +1,76 @@
+{
+  "questions": 226,
+  "prediction_sha256": "e4981ae96b4cfbfae75e02f06d8225607faa477b7d3fb4d825ddf48a4a018e63",
+  "gold_sha256": "d0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b",
+  "compatibility_answer_clip_chars": 800,
+  "retrieval": {
+    "precision": 0.6345870206489675,
+    "recall": 0.577433628318584,
+    "f1": 0.5856510745891277,
+    "em": 0.27876106194690264,
+    "gold_set_coverage": 0.3407079646017699
+  },
+  "token_f1": 0.46195398230088497,
+  "full_answer_token_f1": 0.46195398230088497,
+  "lf_eval": null,
+  "lf_eval_status": "NOT_RUN",
+  "diagnostics": {
+    "fully_mapped": {
+      "questions": 197,
+      "retrieval": {
+        "precision": 0.6941624365482234,
+        "recall": 0.6336717428087987,
+        "f1": 0.6412376117959874,
+        "em": 0.3197969543147208,
+        "gold_set_coverage": 0.39086294416243655
+      },
+      "token_f1": 0.47408934010152287
+    },
+    "unavailable_gold_affected": {
+      "questions": 29,
+      "retrieval": {
+        "precision": 0.22988505747126436,
+        "recall": 0.19540229885057472,
+        "f1": 0.20804597701149424,
+        "em": 0.0,
+        "gold_set_coverage": 0.0
+      },
+      "token_f1": 0.37951724137931037
+    },
+    "by_hop": {
+      "1": {
+        "questions": 57,
+        "retrieval": {
+          "precision": 0.7514619883040936,
+          "recall": 0.8508771929824561,
+          "f1": 0.7807017543859649,
+          "em": 0.631578947368421,
+          "gold_set_coverage": 0.8421052631578947
+        },
+        "token_f1": 0.4412280701754386
+      },
+      "2": {
+        "questions": 127,
+        "retrieval": {
+          "precision": 0.6115485564304463,
+          "recall": 0.49868766404199477,
+          "f1": 0.5333333333333333,
+          "em": 0.2047244094488189,
+          "gold_set_coverage": 0.2204724409448819
+        },
+        "token_f1": 0.5019708661417323
+      },
+      "3": {
+        "questions": 42,
+        "retrieval": {
+          "precision": 0.5456349206349207,
+          "recall": 0.44444444444444436,
+          "f1": 0.47913832199546486,
+          "em": 0.023809523809523808,
+          "gold_set_coverage": 0.023809523809523808
+        },
+        "token_f1": 0.3690785714285714
+      }
+    }
+  }
+}

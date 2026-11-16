@@ -1,0 +1,52 @@
+{
+  "key": "5a29578407e4999752c6360b30c56d30b82db886a6a2b3cfc884b2402b369f5e",
+  "text": "갑은 환지에 따른 을과 병 간의 분쟁을 조정하기 위해 환지심의위원회를 구성하여 운영해야 하며, 환지 처분과 관련된 토지 및 건물의 등기에 대한 구체적인 시점은 제공된 문맥에 명시되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 942.4080839962699,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_de885b42f4c5474b8dfa15245b397b26"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2241,
+      "output_tokens": 65,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062525,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59601,
+      "known_cost_usd": 14.61869315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.87625065,
+      "remaining_usd": 84.12374935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.121285,
+          "accounted_with_reservations_usd": 14.3788425,
+          "remaining_usd": 22.621157500000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9rAJJNOGV3sg9kbF9ig5PsxnMm0",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

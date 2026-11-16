@@ -1,0 +1,52 @@
+{
+  "key": "e5f88e5cbb19fbff3f72339ce72ce521443faf6e81f1f02853f147822b3043fb",
+  "text": "[\"공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 (분쟁의 조정) 사업시행자는 환지로 인한 분쟁이 발생한 경우, 해당 분쟁을 조정하기 위해 지방토지수용위원회에 조정을 신청할 수 있다.\", \"공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 (환지 처분의 등기) 환지 처분이 완료된 경우, 사업시행자는 지체 없이 환지에 관한 등기를 신청하여야 한다.\", \"공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 (환지심의위원회 구성 및 운영) 환지심의위원회의 구성 및 운영에 관한 사항은 대통령령으로 정한다.\"]",
+  "trace": {
+    "latency_ms": 2035.5495419935323,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4e5b99db1b894e069fcf888513694580"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1694,
+      "output_tokens": 167,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005905,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19792,
+      "known_cost_usd": 8.141076722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.141076722,
+      "remaining_usd": 91.858923278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.385075,
+          "accounted_with_reservations_usd": 7.385075,
+          "remaining_usd": 29.614925
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91jZErEQuHCKWBLBubcixmlYMdG",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

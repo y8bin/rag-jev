@@ -1,0 +1,52 @@
+{
+  "key": "3f093b677c684d771e3c129a7a48e4d38b201ebfd0aab93f4d48e9fcfcfa229c",
+  "text": "신탁채권은 수익채권보다 우선합니다. 정이 수탁자로 변경된 경우, 정은 을이 신탁행위로 인하여 병에게 부담하는 채무를 승계합니다.",
+  "trace": {
+    "latency_ms": 807.4059999926249,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8ee776235f1e44d2998109c62b78fca5"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2428,
+      "output_tokens": 45,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00412,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60181,
+      "known_cost_usd": 20.11259315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 21.36077815,
+      "remaining_usd": 78.63922185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.615185,
+          "accounted_with_reservations_usd": 19.86337,
+          "remaining_usd": 17.13663
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA4iDSiVpvgMqBlC6h1PEHrNjr1m",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "35162c718bdba99426a8fd00b69380cb86cee20fe96e708ebefce10b65ac0641",
+  "text": "갑과 을은 2명 이상이 합동하여 병의 가게에서 물건을 절취하였으므로, 형법 제331조 제2항에 따라 특수절도의 정범으로 처벌된다.",
+  "trace": {
+    "latency_ms": 1232.1031249884982,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1d310688529a45559c672c129a31bfc9"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2201,
+      "output_tokens": 48,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0034225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59907,
+      "known_cost_usd": 17.49978815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.84937815,
+      "remaining_usd": 81.15062185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.00238,
+          "accounted_with_reservations_usd": 17.35197,
+          "remaining_usd": 19.64803
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9y1Y8Q5nj5hEjg0vp71fqUGA6YY",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

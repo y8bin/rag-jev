@@ -1,0 +1,87 @@
+{
+  "key": "59e96c8c8be4c0ddcbff08f4713bf6ecfcc6819b45c2a7aca3a192f4cdb71fb1",
+  "response": {
+    "id": "chatcmpl-Ei9gUZvlQqhMcS920e66sMFw6FKVw",
+    "object": "chat.completion",
+    "created": 1794192366,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 을과 병의 동의 없이 공유물을 처분하거나 변경할 수 없다. 그러나 갑은 자신의 지분을 매각할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2124,
+      "completion_tokens": 32,
+      "total_tokens": 2156,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 808.643917000154,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_cc4b0c0a27e74e7a8e090415240df2df"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2124,
+      "output_tokens": 32,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00563,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59144,
+      "known_cost_usd": 10.27073065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 11.57146065,
+      "remaining_usd": 88.42853935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.7733225,
+          "accounted_with_reservations_usd": 10.0740525,
+          "remaining_usd": 26.9259475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9gUZvlQqhMcS920e66sMFw6FKVw",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

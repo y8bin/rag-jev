@@ -1,0 +1,19 @@
+{
+  "completed_at_utc": "2026-11-09T13:53:12.878250+00:00",
+  "budget_after": {
+    "limit_usd": 100.0,
+    "attempts": 73610,
+    "known_cost_usd": 24.71344781,
+    "unsettled_attempts": 12,
+    "accounted_with_reservations_usd": 25.85040781,
+    "remaining_usd": 74.14959218999999,
+    "service_limits": {
+      "openai": {
+        "limit_usd": 37.0,
+        "known_cost_usd": 22.5983675,
+        "accounted_with_reservations_usd": 23.7353275,
+        "remaining_usd": 13.2646725
+      }
+    }
+  }
+}

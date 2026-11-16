@@ -1,0 +1,87 @@
+{
+  "key": "66c1e990ed7c2831a67ba46ef98cb376fda86be66291c32edb7c519b9215593a",
+  "response": {
+    "id": "chatcmpl-EiA7diL3Okzt1Iamb4jCaVd369lS5",
+    "object": "chat.completion",
+    "created": 1794194049,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 A시의 일부 지역에 대해 새로운 지역·지구를 신설하고 이를 지형도면에 고시하려는 경우, 인접한 B군의 군수인 을과 미리 협의하여야 한다. 신설하려는 지역·지구가 유효하게 성립되기 위해서는 다른 법령의 위임에 따라 규정된 지역·지구여야 하며, 국토교통부장관이 관보에 고시해야 한다. 이를 국민에게 제공하는 방식은 관계 서류를 송부하고, 대통령령으로 정하는 바에 따라 고시하여 일반인이 열람할 수 있도록 해야 한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2767,
+      "completion_tokens": 139,
+      "total_tokens": 2906,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1345.8224579953821,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5b5376ad77f5425cac2741d2ae43b549"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2767,
+      "output_tokens": 139,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0059075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60309,
+      "known_cost_usd": 21.38667315,
+      "unsettled_attempts": 11,
+      "accounted_with_reservations_usd": 22.48204315,
+      "remaining_usd": 77.51795685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.889265,
+          "accounted_with_reservations_usd": 20.984635,
+          "remaining_usd": 16.015365
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA7diL3Okzt1Iamb4jCaVd369lS5",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

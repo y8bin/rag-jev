@@ -1,0 +1,52 @@
+{
+  "key": "6692810f35a28641306c70281fa7f323247b71287e038d379e49dffd2e3b41c6",
+  "text": "임대차 계약이 종료되었음에도 불구하고 보증금이 반환되지 않은 경우, 임대차 관계는 보증금을 돌려받을 때까지 존속하는 것으로 본다. 갑이 새로운 임대차를 통해 얻은 수익은 법률상 원인 없이 을에게 손해를 가한 부당이득으로, 그 이익을 반환하여야 한다. 을이 계약 해지 또는 해제권을 행사하려면 상당한 기간을 정하여 이행을 최고하고, 그 기간 내에 이행하지 않을 경우 계약을 해제할 수 있다. 다만, 갑이 미리 이행하지 않을 의사를 표시한 경우에는 최고를 요하지 않는다.",
+  "trace": {
+    "latency_ms": 1774.3039589986438,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_42933c70f75343d58359072de118220d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2381,
+      "output_tokens": 149,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0048825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60036,
+      "known_cost_usd": 18.75289815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.00236815,
+      "remaining_usd": 79.99763185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.255489999999998,
+          "accounted_with_reservations_usd": 18.50496,
+          "remaining_usd": 18.49504
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA0xE6ikIKWmwotVuFSyu10K2lKs",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

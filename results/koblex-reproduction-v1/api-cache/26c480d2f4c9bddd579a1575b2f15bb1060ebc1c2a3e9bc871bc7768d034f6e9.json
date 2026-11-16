@@ -1,0 +1,52 @@
+{
+  "key": "26c480d2f4c9bddd579a1575b2f15bb1060ebc1c2a3e9bc871bc7768d034f6e9",
+  "text": "을이 퇴직금 제도를 설정하려면, 계속근로기간 1년에 대하여 30일분 이상의 평균임금을 퇴직금으로 지급할 수 있는 제도를 설정해야 한다.",
+  "trace": {
+    "latency_ms": 1049.746792006772,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_a21335eeeb8d4c86814023bebe103939"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2320,
+      "output_tokens": 44,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00624,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59988,
+      "known_cost_usd": 18.28453315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 19.599933150000002,
+      "remaining_usd": 80.40006685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.787125,
+          "accounted_with_reservations_usd": 18.102525,
+          "remaining_usd": 18.897475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9zxZVFfCjSRikQTxe1vdT5kYyBV",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

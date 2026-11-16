@@ -1,0 +1,52 @@
+{
+  "key": "1992a66c775632a59a6f3c1c747abf8211c34144c9232bc95cba9212a0eb1beb",
+  "text": "갑이 14세인 아들 을을 피보험자로 하여 을의 사망을 보험사고로 한 생명보험에 가입하려는 경우, 그 계약은 무효이다. 상법 제732조에 따르면 15세 미만자의 사망을 보험사고로 한 보험계약은 무효로 한다. 질병보험 가입 시 생명보험 및 상해보험에 관한 규정은 별도로 명시되어 있지 않으므로, 질병보험 자체의 규정에 따라야 한다. 보험회사는 갑에게 불리한 계약조건을 특약으로 제시할 수 있다는 내용은 제공된 문맥에 포함되어 있지 않다.",
+  "trace": {
+    "latency_ms": 1596.1397920036688,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2923fdf22e444dd3b93549b8efc41b3f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2396,
+      "output_tokens": 144,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00743,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59738,
+      "known_cost_usd": 15.92994315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.33256315,
+      "remaining_usd": 82.66743685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.432535,
+          "accounted_with_reservations_usd": 15.835155,
+          "remaining_usd": 21.164845
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9u8dCjgL27UBOYccmoCxLZW5Ew6",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "arm": "parser_ce_fixed",
+    "stage": "bm25",
+    "all_gold_in_union": 138,
+    "all_gold_jointly_selectable": 127,
+    "union_complete_but_capacity_insufficient": 11,
+    "denominator_questions": 226,
+    "source": "A4/question-stages.jsonl",
+    "rule": "sum boolean flags; pool capacity 1; structural exact-string upper bound, not an oracle execution"
+  },
+  {
+    "arm": "parser_ce_fixed",
+    "stage": "shortlist",
+    "all_gold_in_union": 112,
+    "all_gold_jointly_selectable": 104,
+    "union_complete_but_capacity_insufficient": 8,
+    "denominator_questions": 226,
+    "source": "A4/question-stages.jsonl",
+    "rule": "sum boolean flags; pool capacity 1; structural exact-string upper bound, not an oracle execution"
+  },
+  {
+    "arm": "parser_jev_fixed",
+    "stage": "bm25",
+    "all_gold_in_union": 138,
+    "all_gold_jointly_selectable": 127,
+    "union_complete_but_capacity_insufficient": 11,
+    "denominator_questions": 226,
+    "source": "A4/question-stages.jsonl",
+    "rule": "sum boolean flags; pool capacity 1; structural exact-string upper bound, not an oracle execution"
+  },
+  {
+    "arm": "parser_jev_fixed",
+    "stage": "shortlist",
+    "all_gold_in_union": 130,
+    "all_gold_jointly_selectable": 120,
+    "union_complete_but_capacity_insufficient": 10,
+    "denominator_questions": 226,
+    "source": "A4/question-stages.jsonl",
+    "rule": "sum boolean flags; pool capacity 1; structural exact-string upper bound, not an oracle execution"
+  }
+]

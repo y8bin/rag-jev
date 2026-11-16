@@ -1,0 +1,87 @@
+{
+  "key": "16ced9936ea3e1453e4b8107d6f54264ee8379c45f9c91df8a54cde9f0cb341b",
+  "response": {
+    "id": "chatcmpl-Ei8xqTRY9yC4Bbtv7HfsfJk1kVSpD",
+    "object": "chat.completion",
+    "created": 1794189598,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"주택법 (한부모가족의 국민주택 우선 분양) 한부모가족은 국민주택의 우선 분양 대상자로 지정될 수 있으며, 이에 따라 일정한 조건 하에 우선적으로 국민주택을 분양받을 수 있다.\", \"아동복지법 (아동 편의시설 이용 지원) 아동을 둔 가정은 공공의 아동 편의시설을 이용할 때 우선적 이용권 및 이용료 감면 등의 혜택을 받을 수 있다.\", \"중소기업기본법 (소규모 사업자 지원) 공공시설 내에서 소규모 매점을 운영하는 경우, 한부모가족은 임대료 감면 및 우선 입점 등의 혜택을 받을 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1756,
+      "completion_tokens": 170,
+      "total_tokens": 1926,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1840.0301250076154,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_7341651aa005457890e11b1be07b4250"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1756,
+      "output_tokens": 170,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00609,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19636,
+      "known_cost_usd": 7.370279222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.370279222,
+      "remaining_usd": 92.629720778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.6142775,
+          "accounted_with_reservations_usd": 6.6142775,
+          "remaining_usd": 30.3857225
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xqTRY9yC4Bbtv7HfsfJk1kVSpD",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

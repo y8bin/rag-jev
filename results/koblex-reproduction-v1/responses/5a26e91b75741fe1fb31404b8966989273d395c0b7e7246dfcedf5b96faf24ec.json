@@ -1,0 +1,87 @@
+{
+  "key": "5a26e91b75741fe1fb31404b8966989273d395c0b7e7246dfcedf5b96faf24ec",
+  "response": {
+    "id": "chatcmpl-Ei9mGwhDqwatqRyfTQzExl0T8HaU5",
+    "object": "chat.completion",
+    "created": 1794192724,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 운영하는 폐기물처리업에 대한 적합성 확인을 받기 위해서는 업종별 적합성확인 유효기간이 만료되기 3개월 전까지 환경부령으로 정하는 바에 따라 필요한 자료를 첨부하여 환경부장관 또는 시ㆍ도지사에게 신청해야 한다. 신청을 받은 환경부장관 또는 시ㆍ도지사는 특별한 사정이 없으면 유효기간 만료일 이전에 적합성 여부를 확인하여 신청인에게 통보해야 한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2471,
+      "completion_tokens": 116,
+      "total_tokens": 2587,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1229.1246249951655,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_769d52ae040a4f898b4e11614cd5646d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2471,
+      "output_tokens": 116,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0049375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59385,
+      "known_cost_usd": 12.51632315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.86586065,
+      "remaining_usd": 86.13413935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.018915,
+          "accounted_with_reservations_usd": 12.3684525,
+          "remaining_usd": 24.6315475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9mGwhDqwatqRyfTQzExl0T8HaU5",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

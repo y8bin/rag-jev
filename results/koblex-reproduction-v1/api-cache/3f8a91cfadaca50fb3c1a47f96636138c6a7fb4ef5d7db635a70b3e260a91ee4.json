@@ -1,0 +1,52 @@
+{
+  "key": "3f8a91cfadaca50fb3c1a47f96636138c6a7fb4ef5d7db635a70b3e260a91ee4",
+  "text": "[\"형사소송법 (위법수집증거의 배제) 적법한 절차에 따르지 아니하고 수집한 증거는 증거로 할 수 없다.\", \"개인정보 보호법 (개인정보의 수집 및 이용) 개인정보를 수집하는 경우에는 정보주체의 동의를 받아야 한다.\"]",
+  "trace": {
+    "latency_ms": 1206.3636250095442,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c70695ddca90419d9391ccb5d607daaf"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1661,
+      "output_tokens": 75,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0049025,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19720,
+      "known_cost_usd": 7.7889917220000005,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.7889917220000005,
+      "remaining_usd": 92.211008278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.03299,
+          "accounted_with_reservations_usd": 7.03299,
+          "remaining_usd": 29.967010000000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei900adERc5SHjKtAW92WZtixBeB7",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

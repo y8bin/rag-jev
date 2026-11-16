@@ -1,0 +1,52 @@
+{
+  "key": "20d57e113509d6f0f77c92558a19e3ff6e5e7d631131370743e075865dbece88",
+  "text": "병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 민사소송법 253조에 따라 여러 개의 청구는 같은 종류의 소송절차에 따르는 경우에만 하나의 소로 제기할 수 있다.",
+  "trace": {
+    "latency_ms": 1202.8089580126107,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_34c7a4bfaabd4598bf1b9e72f86f1a93"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2281,
+      "output_tokens": 58,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59143,
+      "known_cost_usd": 10.26510065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 11.56433315,
+      "remaining_usd": 88.43566685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.7676925,
+          "accounted_with_reservations_usd": 10.066925,
+          "remaining_usd": 26.933075000000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9gU0S3yajNTQXNPo4bEHH8TpAwj",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

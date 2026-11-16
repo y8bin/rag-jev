@@ -1,0 +1,52 @@
+{
+  "key": "6133618922727993774a2c61203010027d72a09bef59f8b615d6e6df1419b9e3",
+  "text": "시도경찰청장은 갑이 조건부등록 기간의 연장을 신청할 경우, 한 차례만 6개월의 범위에서 그 기간을 연장할 수 있다. 연장된 기간 만료 후에는 갑은 차량의 시설 및 설비를 갖추어야 한다.",
+  "trace": {
+    "latency_ms": 1069.1364590020385,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d2ee4138d8814d8bb896b45b3aab84e6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2299,
+      "output_tokens": 62,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0063675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59711,
+      "known_cost_usd": 15.67865815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 16.97764565,
+      "remaining_usd": 83.02235435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.18125,
+          "accounted_with_reservations_usd": 15.4802375,
+          "remaining_usd": 21.5197625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9u0aCiIF6GtCtgD0902WY33NFh4",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

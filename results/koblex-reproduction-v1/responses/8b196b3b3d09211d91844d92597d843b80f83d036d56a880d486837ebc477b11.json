@@ -1,0 +1,87 @@
+{
+  "key": "8b196b3b3d09211d91844d92597d843b80f83d036d56a880d486837ebc477b11",
+  "response": {
+    "id": "chatcmpl-Ei9kRWBoRRWhEJm5EPVRGts5VSzMS",
+    "object": "chat.completion",
+    "created": 1794192611,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑의 피의자 신문 조서는 적법한 절차와 방식에 따라 작성된 것으로서 공판 준비기일에 갑과 변호인 을이 그 내용을 인정할 때에 한정하여 증거로 사용할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2188,
+      "completion_tokens": 51,
+      "total_tokens": 2239,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 943.8931670010788,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c0cc43bef60b4c6a95b73aa7bd65e530"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2188,
+      "output_tokens": 51,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00374,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59326,
+      "known_cost_usd": 11.96105065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.27047565,
+      "remaining_usd": 86.72952435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.4636425,
+          "accounted_with_reservations_usd": 11.7730675,
+          "remaining_usd": 25.2269325
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9kRWBoRRWhEJm5EPVRGts5VSzMS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

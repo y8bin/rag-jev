@@ -1,0 +1,52 @@
+{
+  "key": "f29760ae7935af1ffca0b41b8e4803b55ba4174377821527af12594b5f6aa113",
+  "text": "을은 계약의 성질 또는 당사자의 의사표시에 의해 일정한 시일 또는 기간 내에 이행하지 않으면 계약의 목적을 달성할 수 없는 경우, 갑이 그 시기에 이행하지 않았을 때 최고를 하지 않고 계약을 해제할 수 있다. 계약서에 \"이행 기한이 지연될 경우 을은 계약 해제를 위해 추가적인 서면 통지를 필요로 하지 않는다\"라는 조항이 포함되어 있으므로, 을은 추가적인 서면 통지 없이 계약을 해제할 수 있다.",
+  "trace": {
+    "latency_ms": 1118.6212089960463,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_314c4527545b4e67a5fce9c25b70064c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2355,
+      "output_tokens": 118,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0070675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59676,
+      "known_cost_usd": 15.36164065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 16.60882315,
+      "remaining_usd": 83.39117685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.8642325,
+          "accounted_with_reservations_usd": 15.111415,
+          "remaining_usd": 21.888585
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9t4YWjonH3npcVMI5SQ4GbTR1dC",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

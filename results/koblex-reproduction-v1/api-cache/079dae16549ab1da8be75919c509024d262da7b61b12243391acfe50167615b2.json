@@ -1,0 +1,52 @@
+{
+  "key": "079dae16549ab1da8be75919c509024d262da7b61b12243391acfe50167615b2",
+  "text": "갑시가 국가지원지방도 A의 조사 및 설계를 실시할 경우 그 비용은 국고에서 부담한다. 을시가 국가지원지방도의 건설에 관한 사업을 하려는 경우에 대한 절차는 제공된 문맥에 포함되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 1087.8462079999736,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5d32af5ca0bd4ad5a124dca8f763fe58"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2251,
+      "output_tokens": 62,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60154,
+      "known_cost_usd": 19.84744565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.20933815,
+      "remaining_usd": 78.79066184999999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.3500375,
+          "accounted_with_reservations_usd": 19.71193,
+          "remaining_usd": 17.28807
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA3pMsdzJNM5a4jBfccYZty48wKc",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

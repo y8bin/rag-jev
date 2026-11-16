@@ -1,0 +1,52 @@
+{
+  "key": "aa526ccc7ffb94aa6ab477096fd268afc78aabdf6b3f711f9a2ffdefbdd0e1a9",
+  "text": "갑은 담당 검사 병이 정당한 이유 없이 영장을 판사에게 청구하지 않을 경우, 병이 소속된 지방검찰청 소재지를 관할하는 고등검찰청에 영장 청구 여부에 대한 심의를 신청할 수 있다.",
+  "trace": {
+    "latency_ms": 1273.2807919965126,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e0dd4598d2a644a4a00fa193ed148bee"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2172,
+      "output_tokens": 56,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00599,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60101,
+      "known_cost_usd": 19.35895065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.61421065,
+      "remaining_usd": 79.38578935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.8615425,
+          "accounted_with_reservations_usd": 19.1168025,
+          "remaining_usd": 17.8831975
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA2n4G8NWXHe7QFElFhxh23yeXi1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

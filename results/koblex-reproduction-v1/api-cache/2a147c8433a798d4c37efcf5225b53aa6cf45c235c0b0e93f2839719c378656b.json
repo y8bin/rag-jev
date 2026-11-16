@@ -1,0 +1,52 @@
+{
+  "key": "2a147c8433a798d4c37efcf5225b53aa6cf45c235c0b0e93f2839719c378656b",
+  "text": "갑이 을의 회사 계약서를 위조한 경우와 시청 발급 문서를 변조한 경우 각각 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+  "trace": {
+    "latency_ms": 832.9717919987161,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c19a68b81001436cbb840a5d68818bde"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2294,
+      "output_tokens": 44,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59027,
+      "known_cost_usd": 9.30778065,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.60859315,
+      "remaining_usd": 90.39140685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.8103725,
+          "accounted_with_reservations_usd": 8.111185,
+          "remaining_usd": 28.888815
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eWsvWOU1lz39f984yx10FyLp79",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

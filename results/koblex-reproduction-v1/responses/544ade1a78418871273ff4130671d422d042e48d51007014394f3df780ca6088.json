@@ -1,0 +1,87 @@
+{
+  "key": "544ade1a78418871273ff4130671d422d042e48d51007014394f3df780ca6088",
+  "response": {
+    "id": "chatcmpl-EiA9Zh0AeIxmaQESyHZN7sQvBoit2",
+    "object": "chat.completion",
+    "created": 1794194169,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을 군수는 갑이 도로 점용료를 납부하지 않을 경우, 국세 또는 지방세 체납처분의 예에 따라 점용료를 징수할 수 있으며, 도로점용허가를 취소할 수 있다. 점용료의 산정 기준은 도로법에 명시되어 있지 않으므로, 구체적인 산정 기준은 별도의 규정이나 지침에 따라 정해질 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2426,
+      "completion_tokens": 99,
+      "total_tokens": 2525,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1223.4658329980448,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_15b4b65ae83d46558cdabc928a15866f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2426,
+      "output_tokens": 99,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004655,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60394,
+      "known_cost_usd": 22.16403065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 23.41114315,
+      "remaining_usd": 76.58885685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.6666225,
+          "accounted_with_reservations_usd": 21.913735,
+          "remaining_usd": 15.086265000000001
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA9Zh0AeIxmaQESyHZN7sQvBoit2",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

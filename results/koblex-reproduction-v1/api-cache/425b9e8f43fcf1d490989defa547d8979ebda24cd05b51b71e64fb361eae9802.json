@@ -1,0 +1,52 @@
+{
+  "key": "425b9e8f43fcf1d490989defa547d8979ebda24cd05b51b71e64fb361eae9802",
+  "text": "갑은 을과 병 사이의 환지로 인한 분쟁을 해결하기 위해 중앙분쟁조정위원회에 조정을 신청할 수 있다. 환지 처분과 관련된 토지 및 건물의 등기는 인가를 받은 때 지체 없이 촉탁하여야 한다. 환지심의위원회의 구성과 운영에 관한 사항은 대통령령으로 정해진다.",
+  "trace": {
+    "latency_ms": 1145.362750001368,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c4cf8f0fc63947c497f698a153aa5f5f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2283,
+      "output_tokens": 84,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0041475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60288,
+      "known_cost_usd": 21.15057065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 22.55998065,
+      "remaining_usd": 77.44001935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.6531625,
+          "accounted_with_reservations_usd": 21.0625725,
+          "remaining_usd": 15.937427499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA6m7ITLzIt3eUi1GFdsJg5mV3ti",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

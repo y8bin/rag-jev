@@ -1,0 +1,52 @@
+{
+  "key": "fa915139c36a4b2293e49b9fd8651913366b9a2f3945c4737eb5fcc7233feb0e",
+  "text": "갑은 환어음의 소지인이 제1항에 따라 그 권리를 증명할 때, 환어음을 반환할 의무가 없다. 을이 발행한 약속어음에 대해서도 동일한 규정이 적용된다.",
+  "trace": {
+    "latency_ms": 1217.9560419899644,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9aa6b68fd4584cc284c3989813e86b6d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2248,
+      "output_tokens": 52,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00358,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60048,
+      "known_cost_usd": 18.85423565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.10067815,
+      "remaining_usd": 79.89932185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.3568275,
+          "accounted_with_reservations_usd": 18.60327,
+          "remaining_usd": 18.39673
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA1khWi8ZQyOoSskSJUodkyxCrmQ",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "5c6ba72d440f80f3d445a08715e96535f1cd7a81358d3b944de4c0ce83496332",
+  "response": {
+    "id": "chatcmpl-Ei9nHEpr5RwDkHvAg0pluZeZh472O",
+    "object": "chat.completion",
+    "created": 1794192787,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을이 정을 상대로 유류분 반환청구를 하려는 경우, 소멸시효는 을이 상속의 개시와 반환하여야 할 증여 사실을 안 2022년 4월 1일부터 1년 이내이며, 상속이 개시한 2022년 3월 1일부터 10년을 경과한 때도 소멸한다. 갑의 생전 증여는 유류분 산정에 포함되며, 유류분은 상속개시 시점의 재산 가액에 증여재산 가액을 가산하고 채무의 전액을 공제하여 산정한다. 피상속인의 직계비속인 을과 병의 유류분은 법정상속분의 2분의 1이다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2446,
+      "completion_tokens": 175,
+      "total_tokens": 2621,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1585.7771669980139,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6f061ef24b264b47807bb3b97e74e6b6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2446,
+      "output_tokens": 175,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005465,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59435,
+      "known_cost_usd": 13.00751315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.40360565,
+      "remaining_usd": 85.59639435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.510105,
+          "accounted_with_reservations_usd": 12.9061975,
+          "remaining_usd": 24.093802500000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9nHEpr5RwDkHvAg0pluZeZh472O",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

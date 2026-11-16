@@ -1,0 +1,87 @@
+{
+  "key": "06ecd776a6b017f039f23c6d4d07d3c14aa52aba4d55785d5a0002be8d5e1009",
+  "response": {
+    "id": "chatcmpl-Ei91lBI9QzzyO4D7lKrgMkqxbflMe",
+    "object": "chat.completion",
+    "created": 1794189841,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"국토의 계획 및 이용에 관한 법률 (관계 지방자치단체장과의 협의) 도시·군계획시설의 결정·변경에 관하여 관계 지방자치단체장과 미리 협의하여야 한다.\", \"국토의 계획 및 이용에 관한 법률 (도시·군계획시설의 결정·변경) 도시·군계획시설의 결정·변경은 대통령령으로 정하는 바에 따라 고시하여야 한다.\", \"행정절차법 (행정예고) 행정청은 국민의 권리·의무에 중대한 영향을 미치는 처분을 하려는 경우에는 이를 예고하여야 한다.\", \"국토의 계획 및 이용에 관한 법률 (지형도면의 고시) 도시·군계획시설의 결정·변경에 관한 사항은 지형도면에 반영하여 고시하여야 한다.\", \"국토의 계획 및 이용에 관한 법률 (법령의 위임) 도시·군계획시설의 결정·변경은 관련 법령의 위임에 따라야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1803,
+      "completion_tokens": 241,
+      "total_tokens": 2044,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 2345.3860000008717,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_357aa47fc1ca4c1ca0778e5ec3eb5fe7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1803,
+      "output_tokens": 241,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0069175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19793,
+      "known_cost_usd": 8.147994222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.147994222,
+      "remaining_usd": 91.852005778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.3919925,
+          "accounted_with_reservations_usd": 7.3919925,
+          "remaining_usd": 29.6080075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91lBI9QzzyO4D7lKrgMkqxbflMe",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

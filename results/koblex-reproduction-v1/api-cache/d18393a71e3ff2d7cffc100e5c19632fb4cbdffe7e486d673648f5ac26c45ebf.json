@@ -1,0 +1,52 @@
+{
+  "key": "d18393a71e3ff2d7cffc100e5c19632fb4cbdffe7e486d673648f5ac26c45ebf",
+  "text": "갑은 을에 대한 채무의 소멸시효를 중단하기 위해 가압류를 신청할 수 있습니다. 가압류는 소멸시효의 중단사유에 해당하며, 이를 위해 청구채권과 가압류의 이유를 소명하여야 합니다.",
+  "trace": {
+    "latency_ms": 872.2594169958029,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f0902224cab0483988ac6e6246f60807"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2127,
+      "output_tokens": 64,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0035575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59492,
+      "known_cost_usd": 13.55819315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.92360315,
+      "remaining_usd": 85.07639685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.060785,
+          "accounted_with_reservations_usd": 13.426195,
+          "remaining_usd": 23.573805
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9oKdeFo7mODs4jZx3iTcDsVrbQX",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

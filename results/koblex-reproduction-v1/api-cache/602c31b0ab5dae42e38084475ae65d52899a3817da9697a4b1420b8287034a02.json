@@ -1,0 +1,52 @@
+{
+  "key": "602c31b0ab5dae42e38084475ae65d52899a3817da9697a4b1420b8287034a02",
+  "text": "[\"형사소송법 (관할위반의 판결) 법원은 사건이 자기의 관할에 속하지 아니한 때에는 관할위반의 판결로써 사건을 관할권 있는 법원에 이송하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1120.0272499991115,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_813266c474c549e7ab08430a42a165bd"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1634,
+      "output_tokens": 56,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004645,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19765,
+      "known_cost_usd": 8.001014222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.001014222,
+      "remaining_usd": 91.998985778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.2450125,
+          "accounted_with_reservations_usd": 7.2450125,
+          "remaining_usd": 29.7549875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei911MepU9QzZPDXJvJL29bx9Npxg",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

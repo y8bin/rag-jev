@@ -1,0 +1,87 @@
+{
+  "key": "6c9126603096ac4df6bc601e4aeeba562e9841d5c124e1f2042736eb93a4de26",
+  "response": {
+    "id": "chatcmpl-Ei927GZxEMctyaTEwqlngSnQmpzb1",
+    "object": "chat.completion",
+    "created": 1794189863,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"건축사법 (건축사 자격시험) 건축사가 되려는 사람은 국토교통부장관이 시행하는 건축사 자격시험에 합격하여야 한다.\", \"건축사법 (건축사의 업무) 건축사는 건축물의 설계 및 공사감리, 건축물의 유지관리, 건축물의 안전진단 및 평가, 그 밖에 건축물과 관련된 업무를 수행할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1675,
+      "completion_tokens": 104,
+      "total_tokens": 1779,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1421.454374998575,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f8ceb2abd13c466ab0d8f918c1532443"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1675,
+      "output_tokens": 104,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0052275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19807,
+      "known_cost_usd": 8.216011722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.216011722,
+      "remaining_usd": 91.783988278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.46001,
+          "accounted_with_reservations_usd": 7.46001,
+          "remaining_usd": 29.53999
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei927GZxEMctyaTEwqlngSnQmpzb1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

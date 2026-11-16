@@ -1,0 +1,52 @@
+{
+  "key": "b4e4ca0e3799d805172dc57f7fd7f8f3f990e3b97fe532733045ebc59f7f6f45",
+  "text": "갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기에 대한 정보는 제공된 Context에 포함되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 1073.3913750009378,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_035b7835b9ba403781b19777f8c8f003"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2288,
+      "output_tokens": 51,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00623,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59584,
+      "known_cost_usd": 14.444620650000001,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.79859815,
+      "remaining_usd": 84.20140185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.9472125,
+          "accounted_with_reservations_usd": 14.30119,
+          "remaining_usd": 22.69881
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9r5aVE1nx3mCSl02TNiiMTQI1lX",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

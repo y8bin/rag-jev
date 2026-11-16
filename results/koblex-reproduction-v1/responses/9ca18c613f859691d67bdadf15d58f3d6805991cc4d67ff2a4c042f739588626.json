@@ -1,0 +1,87 @@
+{
+  "key": "9ca18c613f859691d67bdadf15d58f3d6805991cc4d67ff2a4c042f739588626",
+  "response": {
+    "id": "chatcmpl-Ei8zEsSEFtPeDenuI7KXGcyfkpx14",
+    "object": "chat.completion",
+    "created": 1794189684,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"경비업법 (무허가 경비업 운영의 처벌) 경비업의 허가를 받지 아니하고 경비업을 한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1659,
+      "completion_tokens": 57,
+      "total_tokens": 1716,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1173.4199159982381,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_372862c2e7be46d59e17c4b3613fd4e8"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1659,
+      "output_tokens": 57,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0029575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19689,
+      "known_cost_usd": 7.629796722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.629796722,
+      "remaining_usd": 92.370203278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.873795,
+          "accounted_with_reservations_usd": 6.873795,
+          "remaining_usd": 30.126205
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zEsSEFtPeDenuI7KXGcyfkpx14",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "35e32afe70ae5ae4318c493fe67ab5cbfc64f977ea01ffcf5f48482c80392bed",
+  "text": "[\"행정소송법 (취소소송의 원고적격) 행정처분의 취소를 구할 법률상 이익이 있는 자는 그 처분의 취소를 구할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 983.0052089964738,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e04c8e83114149ee8d381c81b242c39b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1667,
+      "output_tokens": 49,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0046575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19709,
+      "known_cost_usd": 7.730444222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.730444222,
+      "remaining_usd": 92.269555778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.9744425,
+          "accounted_with_reservations_usd": 6.9744425,
+          "remaining_usd": 30.025557499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zkmInQx2YfujtzNriERPcTRRvs",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "0648ae354571e441fea4ebcaed9cd3cbdffd511983432ccf9821c30fdd298614",
+  "text": "을은 신주 발행의 무효를 신주를 발행한 날로부터 6개월 내에 소를 제기함으로써 주장할 수 있으며, 을은 자신이 가진 주식 수에 따라 신주의 배정을 받을 권리가 있다.",
+  "trace": {
+    "latency_ms": 964.1114590049256,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_aed19940280c49b5b45ad55b16fe3444"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2231,
+      "output_tokens": 55,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0035675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59258,
+      "known_cost_usd": 11.33075315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.63625315,
+      "remaining_usd": 87.36374685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.833345,
+          "accounted_with_reservations_usd": 11.138845,
+          "remaining_usd": 25.861155
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9jMaL0QllF2be0Xm1n5DwOO3ZPx",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

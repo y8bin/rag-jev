@@ -1,0 +1,52 @@
+{
+  "key": "90bddd872a59ddcf0f6d7baa11dd46d8d1efc5d20c12f33273dfe2834f3bdf99",
+  "text": "국방부장관은 사형집행의 명령을 판결이 확정된 날부터 6개월 이내에 내려야 한다.",
+  "trace": {
+    "latency_ms": 900.6675420096144,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c3eb1f83bca54ed1810feea533d594e7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2182,
+      "output_tokens": 32,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59803,
+      "known_cost_usd": 16.55126315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.85619815,
+      "remaining_usd": 82.14380185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.053855,
+          "accounted_with_reservations_usd": 16.35879,
+          "remaining_usd": 20.64121
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9vz31ooB4jX5ZWHeB2hu4b9HwYB",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

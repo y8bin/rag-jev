@@ -1,0 +1,8 @@
+{
+  "questions": 226,
+  "parametric_provisions": 478,
+  "bm25_row_pairs": 47800,
+  "unique_query_passage_pairs": 39177,
+  "candidate_recall": 0.7721238938053098,
+  "candidate_gold_set_coverage": 0.6106194690265486
+}

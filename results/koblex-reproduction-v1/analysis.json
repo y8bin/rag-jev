@@ -1,0 +1,447 @@
+{
+  "status": "POST_AUDIT_REPLICATION_NOT_UNTOUCHED_TEST",
+  "summaries": {
+    "parser_ce_raw": {
+      "questions": 226,
+      "prediction_sha256": "fc2821e5c20ce06d0d6d625e63f154f54db67f6fe47cf467932c2d0333eb47d7",
+      "gold_sha256": "d0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b",
+      "compatibility_answer_clip_chars": 800,
+      "retrieval": {
+        "precision": 0.5722713864306785,
+        "recall": 0.45353982300884954,
+        "f1": 0.4871681415929203,
+        "em": 0.17699115044247787,
+        "gold_set_coverage": 0.2079646017699115
+      },
+      "token_f1": 0.4070314159292035,
+      "full_answer_token_f1": 0.4070314159292035,
+      "lf_eval": 0.5830392799177871,
+      "lf_eval_status": "COMPLETE",
+      "diagnostics": {
+        "fully_mapped": {
+          "questions": 197,
+          "retrieval": {
+            "precision": 0.6184433164128595,
+            "recall": 0.49830795262267347,
+            "f1": 0.531979695431472,
+            "em": 0.20304568527918782,
+            "gold_set_coverage": 0.23857868020304568
+          },
+          "token_f1": 0.4180736040609137
+        },
+        "unavailable_gold_affected": {
+          "questions": 29,
+          "retrieval": {
+            "precision": 0.25862068965517243,
+            "recall": 0.14942528735632182,
+            "f1": 0.18275862068965518,
+            "em": 0.0,
+            "gold_set_coverage": 0.0
+          },
+          "token_f1": 0.33202068965517245
+        },
+        "by_hop": {
+          "1": {
+            "questions": 57,
+            "retrieval": {
+              "precision": 0.7456140350877193,
+              "recall": 0.7982456140350878,
+              "f1": 0.760233918128655,
+              "em": 0.6666666666666666,
+              "gold_set_coverage": 0.7894736842105263
+            },
+            "token_f1": 0.4249929824561403
+          },
+          "2": {
+            "questions": 127,
+            "retrieval": {
+              "precision": 0.5406824146981628,
+              "recall": 0.36220472440944884,
+              "f1": 0.4204724409448819,
+              "em": 0.015748031496062992,
+              "gold_set_coverage": 0.015748031496062992
+            },
+            "token_f1": 0.42851889763779527
+          },
+          "3": {
+            "questions": 42,
+            "retrieval": {
+              "precision": 0.43253968253968256,
+              "recall": 0.2619047619047619,
+              "f1": 0.3182539682539683,
+              "em": 0.0,
+              "gold_set_coverage": 0.0
+            },
+            "token_f1": 0.3176809523809524
+          }
+        }
+      }
+    },
+    "parser_ce_fixed": {
+      "questions": 226,
+      "prediction_sha256": "e4981ae96b4cfbfae75e02f06d8225607faa477b7d3fb4d825ddf48a4a018e63",
+      "gold_sha256": "d0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b",
+      "compatibility_answer_clip_chars": 800,
+      "retrieval": {
+        "precision": 0.6345870206489675,
+        "recall": 0.577433628318584,
+        "f1": 0.5856510745891277,
+        "em": 0.27876106194690264,
+        "gold_set_coverage": 0.3407079646017699
+      },
+      "token_f1": 0.46195398230088497,
+      "full_answer_token_f1": 0.46195398230088497,
+      "lf_eval": 0.6757119296079768,
+      "lf_eval_status": "COMPLETE",
+      "diagnostics": {
+        "fully_mapped": {
+          "questions": 197,
+          "retrieval": {
+            "precision": 0.6941624365482234,
+            "recall": 0.6336717428087987,
+            "f1": 0.6412376117959874,
+            "em": 0.3197969543147208,
+            "gold_set_coverage": 0.39086294416243655
+          },
+          "token_f1": 0.47408934010152287
+        },
+        "unavailable_gold_affected": {
+          "questions": 29,
+          "retrieval": {
+            "precision": 0.22988505747126436,
+            "recall": 0.19540229885057472,
+            "f1": 0.20804597701149424,
+            "em": 0.0,
+            "gold_set_coverage": 0.0
+          },
+          "token_f1": 0.37951724137931037
+        },
+        "by_hop": {
+          "1": {
+            "questions": 57,
+            "retrieval": {
+              "precision": 0.7514619883040936,
+              "recall": 0.8508771929824561,
+              "f1": 0.7807017543859649,
+              "em": 0.631578947368421,
+              "gold_set_coverage": 0.8421052631578947
+            },
+            "token_f1": 0.4412280701754386
+          },
+          "2": {
+            "questions": 127,
+            "retrieval": {
+              "precision": 0.6115485564304463,
+              "recall": 0.49868766404199477,
+              "f1": 0.5333333333333333,
+              "em": 0.2047244094488189,
+              "gold_set_coverage": 0.2204724409448819
+            },
+            "token_f1": 0.5019708661417323
+          },
+          "3": {
+            "questions": 42,
+            "retrieval": {
+              "precision": 0.5456349206349207,
+              "recall": 0.44444444444444436,
+              "f1": 0.47913832199546486,
+              "em": 0.023809523809523808,
+              "gold_set_coverage": 0.023809523809523808
+            },
+            "token_f1": 0.3690785714285714
+          }
+        }
+      }
+    },
+    "parser_jev_fixed": {
+      "questions": 226,
+      "prediction_sha256": "91753fd5a3ecbf0864d162a2c0db18aedac2e81c0f6e54c4eab7eea9d2c28db2",
+      "gold_sha256": "d0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b",
+      "compatibility_answer_clip_chars": 800,
+      "retrieval": {
+        "precision": 0.6685103244837759,
+        "recall": 0.6069321533923303,
+        "f1": 0.6175305520438265,
+        "em": 0.29646017699115046,
+        "gold_set_coverage": 0.3495575221238938
+      },
+      "token_f1": 0.47313008849557525,
+      "full_answer_token_f1": 0.47313008849557525,
+      "lf_eval": 0.7015260795444038,
+      "lf_eval_status": "COMPLETE",
+      "diagnostics": {
+        "fully_mapped": {
+          "questions": 197,
+          "retrieval": {
+            "precision": 0.7271573604060914,
+            "recall": 0.661590524534687,
+            "f1": 0.6720570461687212,
+            "em": 0.3401015228426396,
+            "gold_set_coverage": 0.4010152284263959
+          },
+          "token_f1": 0.48313299492385786
+        },
+        "unavailable_gold_affected": {
+          "questions": 29,
+          "retrieval": {
+            "precision": 0.27011494252873564,
+            "recall": 0.23563218390804597,
+            "f1": 0.2471264367816092,
+            "em": 0.0,
+            "gold_set_coverage": 0.0
+          },
+          "token_f1": 0.40517931034482757
+        },
+        "by_hop": {
+          "1": {
+            "questions": 57,
+            "retrieval": {
+              "precision": 0.7426900584795322,
+              "recall": 0.8333333333333334,
+              "f1": 0.7690058479532165,
+              "em": 0.631578947368421,
+              "gold_set_coverage": 0.8245614035087719
+            },
+            "token_f1": 0.4485017543859649
+          },
+          "2": {
+            "questions": 127,
+            "retrieval": {
+              "precision": 0.6496062992125984,
+              "recall": 0.5380577427821522,
+              "f1": 0.5724409448818898,
+              "em": 0.23622047244094488,
+              "gold_set_coverage": 0.2440944881889764
+            },
+            "token_f1": 0.5099236220472441
+          },
+          "3": {
+            "questions": 42,
+            "retrieval": {
+              "precision": 0.625,
+              "recall": 0.5079365079365079,
+              "f1": 0.5482993197278911,
+              "em": 0.023809523809523808,
+              "gold_set_coverage": 0.023809523809523808
+            },
+            "token_f1": 0.395297619047619
+          }
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "mean_difference": 0.03187947745469869,
+      "ci95": [
+        0.007468999659813845,
+        0.056762380952380946
+      ],
+      "p_centered_bootstrap_two_sided": 0.012398760123987601,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "f1",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.029498525073746312,
+      "ci95": [
+        0.003911906015532446,
+        0.055067115484818324
+      ],
+      "p_centered_bootstrap_two_sided": 0.024797520247975203,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "recall",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.017699115044247787,
+      "ci95": [
+        -0.017699115044247787,
+        0.05188679245283019
+      ],
+      "p_centered_bootstrap_two_sided": 0.3481651834816518,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "em",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.008849557522123894,
+      "ci95": [
+        -0.028985507246376812,
+        0.04526748971193416
+      ],
+      "p_centered_bootstrap_two_sided": 0.6777322267773223,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "gold_set_coverage",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.011176106194690267,
+      "ci95": [
+        0.0001788458869082441,
+        0.022736642223011357
+      ],
+      "p_centered_bootstrap_two_sided": 0.0524947505249475,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "token_f1",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.025814149936426917,
+      "ci95": [
+        0.003745512942064026,
+        0.04791551001249569
+      ],
+      "p_centered_bootstrap_two_sided": 0.0225977402259774,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_jev_fixed",
+      "control": "parser_ce_fixed",
+      "metric": "lf_eval",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.09848293299620733,
+      "ci95": [
+        0.06853496340478983,
+        0.13021149229401305
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "f1",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.1238938053097345,
+      "ci95": [
+        0.09277484741456767,
+        0.15825688073394495
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "recall",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.10176991150442478,
+      "ci95": [
+        0.04700854700854701,
+        0.15859030837004406
+      ],
+      "p_centered_bootstrap_two_sided": 0.00039996000399960006,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "em",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.13274336283185842,
+      "ci95": [
+        0.08620689655172414,
+        0.18340611353711792
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "gold_set_coverage",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.05492256637168141,
+      "ci95": [
+        0.03779788930020171,
+        0.07304744602818702
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "token_f1",
+      "confirmatory": false
+    },
+    {
+      "mean_difference": 0.09267264969018968,
+      "ci95": [
+        0.062036674380875,
+        0.12300305396053125
+      ],
+      "p_centered_bootstrap_two_sided": 9.999000099990002e-05,
+      "questions": 226,
+      "clusters": 151,
+      "repetitions": 10000,
+      "seed": 20261108,
+      "estimand": "unweighted question mean",
+      "treatment": "parser_ce_fixed",
+      "control": "parser_ce_raw",
+      "metric": "lf_eval",
+      "confirmatory": false
+    }
+  ],
+  "legacy_test_exposure": true,
+  "human_review": "PENDING",
+  "timing": "QUALITY_TIMES_NOT_UNCACHED_BENCHMARK",
+  "notes": [
+    "Original model snapshots/package/hardware not fully reproducible; differences in protocol-lock.json.",
+    "Raw CE preserves upstream selection-index bug. Fixed CE and fixed Jev change only scoring.",
+    "No result-based tuning; missing gold remains in denominator."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "key": "4a4d7c3465924ff33b102230f643c251b8c5ddcd37f61519853081b98bf0537c",
+  "text": "송파구에서 대기오염경보가 발령될 경우, 갑이 운영하는 자동차 정비소는 경보 단계에 따라 자동차 사용의 제한 및 사업장의 연료사용량 감축 권고를 따르고, 중대경보 발령 시에는 조업시간 단축명령을 따라야 한다. 대기오염경보의 대상 오염물질은 미세먼지(PM-10), 초미세먼지(PM-2.5), 오존(O3)이다.",
+  "trace": {
+    "latency_ms": 1287.7635410113726,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_cd9ee83fd9ec46a4a10932f3122a6b44"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2460,
+      "output_tokens": 110,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00501,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60277,
+      "known_cost_usd": 21.05221065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 22.35039315,
+      "remaining_usd": 77.64960685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.5548025,
+          "accounted_with_reservations_usd": 20.852985,
+          "remaining_usd": 16.147015
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA6jljcvsUucnmXNEqLLg50MKncG",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

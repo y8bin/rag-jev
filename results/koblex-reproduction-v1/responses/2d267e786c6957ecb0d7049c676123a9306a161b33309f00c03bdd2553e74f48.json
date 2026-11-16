@@ -1,0 +1,87 @@
+{
+  "key": "2d267e786c6957ecb0d7049c676123a9306a161b33309f00c03bdd2553e74f48",
+  "response": {
+    "id": "chatcmpl-Ei9t6W4VIrWJujDEbHjBo283iqFKI",
+    "object": "chat.completion",
+    "created": 1794193148,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑의 을에 대한 상사채권과 이자채권의 소멸시효는 각각 5년이다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2268,
+      "completion_tokens": 27,
+      "total_tokens": 2295,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 776.2775840092218,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_30a16fbdbc4d49a28508cd8a089548e6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2268,
+      "output_tokens": 27,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00594,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59680,
+      "known_cost_usd": 15.39326565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 16.59472065,
+      "remaining_usd": 83.40527935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.8958575,
+          "accounted_with_reservations_usd": 15.0973125,
+          "remaining_usd": 21.9026875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9t6W4VIrWJujDEbHjBo283iqFKI",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

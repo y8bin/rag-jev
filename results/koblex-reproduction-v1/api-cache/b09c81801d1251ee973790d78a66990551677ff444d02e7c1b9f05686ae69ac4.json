@@ -1,0 +1,52 @@
+{
+  "key": "b09c81801d1251ee973790d78a66990551677ff444d02e7c1b9f05686ae69ac4",
+  "text": "을은 공중위생영업자의 지위를 승계할 수 있다. 다만, 이용업 또는 미용업의 경우에는 제6조의 규정에 의한 면허를 소지한 자에 한하여 승계할 수 있다.",
+  "trace": {
+    "latency_ms": 872.1219579892932,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_64dfdb7075c24850b53b1420d5d0fc1a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2281,
+      "output_tokens": 54,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0038425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60228,
+      "known_cost_usd": 20.59046565,
+      "unsettled_attempts": 11,
+      "accounted_with_reservations_usd": 21.68583565,
+      "remaining_usd": 78.31416435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.0930575,
+          "accounted_with_reservations_usd": 20.1884275,
+          "remaining_usd": 16.8115725
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA5jK6tKK6ic9Lsw0Li9TUkqBf7N",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

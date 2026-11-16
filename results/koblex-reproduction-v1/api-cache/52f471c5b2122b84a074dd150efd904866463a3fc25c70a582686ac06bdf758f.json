@@ -1,0 +1,52 @@
+{
+  "key": "52f471c5b2122b84a074dd150efd904866463a3fc25c70a582686ac06bdf758f",
+  "text": "소송무능력자인 갑에게 소송 문서를 송달할 때, 공동 법정대리인 중 한 명인 을이 군사용 청사에 소속되어 근무 중인 경우, 송달은 공동대리인 중 한 사람에게 하면 되므로, 병에게 송달할 수 있다.",
+  "trace": {
+    "latency_ms": 997.9787080083042,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e15b926e68b04bb9abdf9cc6d8038629"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2302,
+      "output_tokens": 66,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003855,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59830,
+      "known_cost_usd": 16.80269565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 18.00352315,
+      "remaining_usd": 81.99647685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.3052875,
+          "accounted_with_reservations_usd": 16.506115,
+          "remaining_usd": 20.493885
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9w8iY2HH1Bzm5VHNsCZCowOYAZy",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "15b8c2643f65e759063c8ccff66e6e41e8406eaaefbd8c49529598ff521a6267",
+  "text": "갑이 전세사기피해주택을 보유하고 있는 경우, 전용면적이 60제곱미터 이하이므로 재산세의 50%를 경감받을 수 있습니다. 취득세 감면에 대한 정보는 제공된 문맥에 없으므로 언급할 수 없습니다. 임차권등기명령에 따른 등록면허세 면제에 대한 정보도 제공된 문맥에 없으므로 언급할 수 없습니다.",
+  "trace": {
+    "latency_ms": 1342.4310830014292,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_13fd2a28942145c4a091ab0ea5c75023"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2454,
+      "output_tokens": 103,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004765,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60433,
+      "known_cost_usd": 22.53916065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.84454315,
+      "remaining_usd": 76.15545685000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 21.0417525,
+          "accounted_with_reservations_usd": 22.347135,
+          "remaining_usd": 14.652864999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiAAWMULSh2JZVqPSW2vMNnaSj2Dt",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS_AUTOMATED_ARTIFACT_INTEGRITY",
+  "audited_at_utc": "2026-11-09T03:32:04.107652+00:00",
+  "legacy_files_unchanged": 32,
+  "questions": 226,
+  "corpus_rows": 233544,
+  "parametric_provisions": 478,
+  "candidate_row_pairs_per_ranker": 47800,
+  "CE_maximum_input_tokens": 1420,
+  "CE_truncated_pairs": 0,
+  "CE_raw_fixed_different_provision_lists": 154,
+  "CE_raw_fixed_different_provision_sets": 153,
+  "CE_raw_fixed_different_answers": 147,
+  "invalid_LLM_choice_fallbacks_fixed_arms": 0,
+  "generated_answers": 678,
+  "LF_evaluations": 678,
+  "empty_generated_answers": 0,
+  "human_review_answers_prepared": 180,
+  "human_judgments_completed": 0,
+  "audit_script_sha256": "caa839dc295e27b5286ce966f299dacffec2e82d2af824aee1ed721a9d191729"
+}

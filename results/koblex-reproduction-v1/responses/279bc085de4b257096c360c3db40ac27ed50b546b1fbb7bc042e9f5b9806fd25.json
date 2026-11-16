@@ -1,0 +1,87 @@
+{
+  "key": "279bc085de4b257096c360c3db40ac27ed50b546b1fbb7bc042e9f5b9806fd25",
+  "response": {
+    "id": "chatcmpl-Ei9tBRkKJMFVFritLsMtSKr1orrZn",
+    "object": "chat.completion",
+    "created": 1794193153,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "관할 경찰서장은 통보받은 날부터 14일 이내에 현장을 방문하여 무기와 탄약의 지급 제한 또는 회수의 적정성을 판단하기 위해 해당 청원경찰의 의견을 청취하고 필요한 조치를 할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2326,
+      "completion_tokens": 57,
+      "total_tokens": 2383,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 954.4445420033298,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_efabe130c4b44ea5b6222ae341d33ec7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2326,
+      "output_tokens": 57,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006385,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59699,
+      "known_cost_usd": 15.55684815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.90762565,
+      "remaining_usd": 83.09237435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.05944,
+          "accounted_with_reservations_usd": 15.4102175,
+          "remaining_usd": 21.5897825
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9tBRkKJMFVFritLsMtSKr1orrZn",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "bfa22c25a5859c3066cce7fbf4885020e5a54bdc1096e4c10affbcc8d5a1d02c",
+  "response": {
+    "id": "chatcmpl-Ei9nG8j5UyIC5Ph1kdv9llaGnwtRb",
+    "object": "chat.completion",
+    "created": 1794192786,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "판결서에는 당사자와 법정대리인, 주문, 청구의 취지 및 상소의 취지, 이유, 변론을 종결한 날짜 또는 판결을 선고하는 날짜, 법원이 포함되어야 한다. 판결의 이유가 누락되거나 모순이 있는 경우, 이는 상고에 정당한 이유가 있는 것으로 간주된다. 을은 판결의 이유가 누락되거나 모순이 있는 것을 근거로 상고할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2494,
+      "completion_tokens": 108,
+      "total_tokens": 2602,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1383.8412909972249,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3d993fe1973d4a9997e7db5b8eb297d6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2494,
+      "output_tokens": 108,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004915,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59429,
+      "known_cost_usd": 12.94896315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.29936815,
+      "remaining_usd": 85.70063185000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 11.451555,
+          "accounted_with_reservations_usd": 12.80196,
+          "remaining_usd": 24.19804
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9nG8j5UyIC5Ph1kdv9llaGnwtRb",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

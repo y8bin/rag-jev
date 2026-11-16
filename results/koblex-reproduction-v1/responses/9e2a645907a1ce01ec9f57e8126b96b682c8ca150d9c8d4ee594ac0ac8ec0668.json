@@ -1,0 +1,87 @@
+{
+  "key": "9e2a645907a1ce01ec9f57e8126b96b682c8ca150d9c8d4ee594ac0ac8ec0668",
+  "response": {
+    "id": "chatcmpl-Ei91wT42t1QH8hiQ0gdH3Nl48mDBc",
+    "object": "chat.completion",
+    "created": 1794189852,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형사소송법 (공소사실의 특정) 공소장에는 범죄의 일시, 장소, 방법, 범죄의 대상 및 결과 등을 명확히 기재하여야 한다.\", \"형사소송법 (공소기각의 사유) 동일한 사건에 대하여 이미 판결이 확정된 경우에는 공소를 기각하여야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1668,
+      "completion_tokens": 84,
+      "total_tokens": 1752,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1314.5475839992287,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8574b4e703104c6f987ce2181c35ef51"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1668,
+      "output_tokens": 84,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00325,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19800,
+      "known_cost_usd": 8.178076722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.178076722,
+      "remaining_usd": 91.821923278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.422075,
+          "accounted_with_reservations_usd": 7.422075,
+          "remaining_usd": 29.577925
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91wT42t1QH8hiQ0gdH3Nl48mDBc",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

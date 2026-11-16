@@ -1,0 +1,52 @@
+{
+  "key": "95710bd2a0b54562a2a4f4b52246e9045e0c44232ebf732ec5f93606ab1f7302",
+  "text": "갑의 보험사는 을에 대한 병의 손해배상 청구권을, 지급한 보험금의 한도 내에서 취득한다. 병은 보험사가 지급한 보험금 외의 나머지 손해에 대해 을에게 손해배상을 청구할 수 있다.",
+  "trace": {
+    "latency_ms": 1115.85983299301,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_338aba2259b14fea9b66359e41621425"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2282,
+      "output_tokens": 60,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006305,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59327,
+      "known_cost_usd": 11.96735565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.32624815,
+      "remaining_usd": 86.67375185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.4699475,
+          "accounted_with_reservations_usd": 11.82884,
+          "remaining_usd": 25.17116
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9kRL5zaut2WPsgpr4GGYPwS10qI",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "59b6209471617d3a0aec353acdb47378e3fdfc2d35121d11c67a1f52b289bb70",
+  "response": {
+    "id": "chatcmpl-Ei91QWZ1LilXBZLA9QRqLlETsulNe",
+    "object": "chat.completion",
+    "created": 1794189820,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"민법 (채무불이행으로 인한 계약해제) 채무자가 이행을 거절한 때에는 채권자는 계약을 해제할 수 있다.\", \"민법 (계약해제의 요건) 채무자가 이행기 전에 이행하지 아니할 의사를 명백히 표시한 때에는 채권자는 이행기를 기다리지 아니하고 계약을 해제할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1688,
+      "completion_tokens": 90,
+      "total_tokens": 1778,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1523.520709000877,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d2da18ee31b6499ebd1c5bd4d7905175"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1688,
+      "output_tokens": 90,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00512,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19780,
+      "known_cost_usd": 8.078926722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.078926722,
+      "remaining_usd": 91.921073278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.322925,
+          "accounted_with_reservations_usd": 7.322925,
+          "remaining_usd": 29.677075000000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91QWZ1LilXBZLA9QRqLlETsulNe",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

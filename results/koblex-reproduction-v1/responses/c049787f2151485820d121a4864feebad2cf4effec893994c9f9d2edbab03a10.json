@@ -1,0 +1,87 @@
+{
+  "key": "c049787f2151485820d121a4864feebad2cf4effec893994c9f9d2edbab03a10",
+  "response": {
+    "id": "chatcmpl-Ei9iNTEk3gemiH6KPMrWfImY4sF5l",
+    "object": "chat.completion",
+    "created": 1794192483,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 을시에 공장을 설립하고자 할 때, 그 공장에서 배출되는 오염물질에 대한 규제는 환경부장관 또는 시ㆍ도지사가 특정대기유해물질이나 특별대책지역의 배출시설로부터 나오는 대기오염물질로 인해 환경기준의 유지가 곤란하거나 주민의 건강, 재산, 동식물의 생육에 심각한 위해를 끼칠 우려가 있다고 인정되면, 대통령령으로 정하는 바에 따라 배출시설의 설치를 제한할 수 있습니다. 공장 설치를 위해서는 환경영향평가법 시행령에 따른 환경영향평가를 받아야 하며, 산업집적활성화 및 공장설립에 관한 법률에 따라 공장설립 등의 승인을 받아야 합니다. 특정대기유해물질을 배출하는 경우, 이러한 제한이 적용될 수 있습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2527,
+      "completion_tokens": 201,
+      "total_tokens": 2728,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1776.0967920039548,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ec208b0ea2bd4a4d8ae908029393f766"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2527,
+      "output_tokens": 201,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0059275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59212,
+      "known_cost_usd": 10.89779565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.24971315,
+      "remaining_usd": 87.75028685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.4003875,
+          "accounted_with_reservations_usd": 10.752305,
+          "remaining_usd": 26.247695
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9iNTEk3gemiH6KPMrWfImY4sF5l",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "ee98b789baa1243ec5ed34acc89c4a27bffbe5b06a6c67b19a8c7a6b7be98a81",
+  "text": "갑은 대통령 선거의 경우 후보자 등록 마감일의 다음 날부터 선거일까지 선거운동을 할 수 있으며, 을은 국회의원 선거의 경우 후보자 등록 마감일 후 6일부터 선거일까지 선거운동을 할 수 있다. 기탁금의 액수에 대한 정보는 제공된 문맥에 포함되어 있지 않다.",
+  "trace": {
+    "latency_ms": 1789.2637919867411,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4d85ddf332df40c6878c64da9e3fd260"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2289,
+      "output_tokens": 82,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0065425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73627,
+      "known_cost_usd": 24.81549531,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.95245531,
+      "remaining_usd": 74.04754469,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.700415,
+          "accounted_with_reservations_usd": 23.837375,
+          "remaining_usd": 13.162624999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7kALA8Dudorz24ThyHJ2Hy6rUF",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "df1c78cd56f981dc3742a431d67811a2c14c05c95d1fa37be28cec8d191786bc",
+  "text": "[\"형사소송법 (상고이유서 제출기한) 상고인은 상고장을 제출한 날부터 20일 이내에 상고이유서를 상고법원에 제출하여야 한다.\", \"형사소송법 (상고이유서 제출기한 연장) 천재지변, 그 밖에 불가항력으로 인하여 상고이유서를 제출할 수 없는 때에는 그 사유가 종료한 날부터 7일 이내에 제출할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1990.122250004788,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d4ae7a34125c46dd928c021200f77cd3"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1682,
+      "output_tokens": 111,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003555,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19677,
+      "known_cost_usd": 7.572006722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.572006722,
+      "remaining_usd": 92.427993278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.816005,
+          "accounted_with_reservations_usd": 6.816005,
+          "remaining_usd": 30.183995
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8yvuh7BaN7DMF4CizQeSL6bzape",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

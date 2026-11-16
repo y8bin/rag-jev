@@ -1,0 +1,52 @@
+{
+  "key": "901ad6725fa872b7d5f72d1122c1c254d060428f1645aa4466a38faac456e732",
+  "text": "[\"대기환경보전법 (냉매회수업 등록 기준) 냉매회수업을 등록하려는 자는 대통령령으로 정하는 시설, 장비 및 기술인력을 갖추어야 한다.\", \"대기환경보전법 (등록 신청 시 포함 사항) 등록 신청 시 사업장의 위치, 시설 및 장비의 명세, 기술인력의 자격을 포함하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1523.2892079948215,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5d1df52c77ba418ca097ab1dc2ad613d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1657,
+      "output_tokens": 90,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0032825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19744,
+      "known_cost_usd": 7.895041722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.895041722,
+      "remaining_usd": 92.104958278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.13904,
+          "accounted_with_reservations_usd": 7.13904,
+          "remaining_usd": 29.86096
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90WMuW4ZkIH0qMRZhJEK0vHcTyo",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

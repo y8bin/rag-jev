@@ -1,0 +1,52 @@
+{
+  "key": "9ad8a83c560cd9eaeddb43b8a516cfe47c1b5515f2fb773205eb6990edab3cf3",
+  "text": "을은 행사할 목적으로 공문서를 위조하였으므로 10년 이하의 징역에 처할 수 있으며, 갑은 위조된 공문서를 행사하였으므로 같은 처벌을 받을 수 있다.",
+  "trace": {
+    "latency_ms": 1120.880209011375,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_a73eb7359e6744ec8fb5903d1bad97d2"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2192,
+      "output_tokens": 50,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00598,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59569,
+      "known_cost_usd": 14.30781815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.65909815,
+      "remaining_usd": 84.34090185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.81041,
+          "accounted_with_reservations_usd": 14.16169,
+          "remaining_usd": 22.83831
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9qFEBB3vYdw4EajOKXkB1hVYSNi",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

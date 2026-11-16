@@ -1,0 +1,52 @@
+{
+  "key": "0201a724532dd40c7e13f6b7533863212946b6dc7ebbe0d8227c009fb360f1ab",
+  "text": "갑이 품질관리인을 두지 않고 스스로 품질관리 업무를 수행할 수 있는 경우는, 갑이 개인인 먹는샘물 제조업자로서 품질관리인의 자격을 갖추고 해당 업무를 직접 수행하는 경우입니다. 이 경우, 갑은 제2항에 따른 품질관리 업무를 수행해야 합니다.",
+  "trace": {
+    "latency_ms": 1036.1156670114724,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ebe8b2915ca54715a54a0c0b824cad97"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2352,
+      "output_tokens": 74,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00662,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60369,
+      "known_cost_usd": 21.92688315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.27770565,
+      "remaining_usd": 76.72229435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.429475,
+          "accounted_with_reservations_usd": 21.7802975,
+          "remaining_usd": 15.2197025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA8hzSxpIL5HLjV2YpFuv2j0U5Ps",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "e1ce46449b5678747f9736fa179fd1d6d996bf5304c125580e5f02d73ba72755",
+  "response": {
+    "id": "chatcmpl-Ei8xT2ByYtxnaDnQBO5qYlcegVeh3",
+    "object": "chat.completion",
+    "created": 1794189575,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"선원법 (징계 절차) 선장은 선내 질서를 유지하기 위하여 필요한 경우 해원에게 징계를 내릴 수 있으며, 징계의 종류와 절차는 대통령령으로 정한다.\", \"선원법 (징계의 종류) 해원에 대한 징계는 견책, 감봉, 정직, 해고 등의 방법으로 할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1671,
+      "completion_tokens": 85,
+      "total_tokens": 1756,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1181.9062089925865,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2ccb3a7dd9df47f59709faec34ba8fd6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1671,
+      "output_tokens": 85,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0050275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19619,
+      "known_cost_usd": 7.280926722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.280926722,
+      "remaining_usd": 92.719073278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.524925,
+          "accounted_with_reservations_usd": 6.524925,
+          "remaining_usd": 30.475075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xT2ByYtxnaDnQBO5qYlcegVeh3",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

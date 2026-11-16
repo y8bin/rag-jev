@@ -1,0 +1,87 @@
+{
+  "key": "ee269a4156b374b74af1ff98846e3dd63f6b1f0e12e431e5534abd6a4bf9a0c6",
+  "response": {
+    "id": "chatcmpl-EiA9iuLo5ywiAbv1RPU9B64Qh2bgU",
+    "object": "chat.completion",
+    "created": 1794194178,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 주택담보노후연금이자비용 공제를 받기 위해 필요한 증명서류는 국세청장에게 제출해야 하며, 이는 정보통신망의 활용 등 대통령령으로 정하는 바에 따라 제출해야 합니다. 갑의 아파트가 공제를 받기 위한 주택 요건에 부합하는지 확인하기 위해서는 해당 아파트의 가격이 「부동산 가격공시에 관한 법률」에 따라 공시 또는 고시되는 가격이 대통령령으로 정하는 가격을 초과하지 않는지 확인해야 합니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2649,
+      "completion_tokens": 121,
+      "total_tokens": 2770,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 2175.350833000266,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9990f56794d645728a29c147e74785e7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2649,
+      "output_tokens": 121,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0055925,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60414,
+      "known_cost_usd": 22.35711815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.61881815,
+      "remaining_usd": 76.38118185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.85971,
+          "accounted_with_reservations_usd": 22.12141,
+          "remaining_usd": 14.878589999999999
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA9iuLo5ywiAbv1RPU9B64Qh2bgU",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

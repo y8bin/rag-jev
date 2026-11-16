@@ -1,0 +1,87 @@
+{
+  "key": "02756b7ef2f3b5c0da8185922aeb583378a86f1a24f6b1723ef84a88d06c5b35",
+  "response": {
+    "id": "chatcmpl-Ei9xtGULMwixL3rxYmurQLftAWCoS",
+    "object": "chat.completion",
+    "created": 1794193445,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "병에게 대항하기 위한 요건은 을이 병에게 질권 설정 사실을 통지하거나 병이 이를 승낙하는 것이다. 을은 갑의 동의 없이 질권의 목적된 권리를 소멸하게 하거나 질권자의 이익을 해하는 변경을 할 수 없다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2264,
+      "completion_tokens": 64,
+      "total_tokens": 2328,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1099.5348330034176,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c520058e325a46a3ac0c27c48c0e941c"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2264,
+      "output_tokens": 64,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00374,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59882,
+      "known_cost_usd": 17.26005315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.65288815,
+      "remaining_usd": 81.34711185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.762645,
+          "accounted_with_reservations_usd": 17.15548,
+          "remaining_usd": 19.84452
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9xtGULMwixL3rxYmurQLftAWCoS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

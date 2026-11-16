@@ -1,0 +1,52 @@
+{
+  "key": "fdfe9c4ddeb5267d5cd8769a6a22ac0ebb5c58ac87410cf753f2f9123a5c23df",
+  "text": "을 회사는 대표자가 변경된 후, 변경 사유가 발생한 날부터 30일 이내에 변경신청서를 제출해야 하며, 품질심사에 관한 기록은 5년 동안 보존해야 한다.",
+  "trace": {
+    "latency_ms": 1120.7553330023075,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1b3e8783ba57406f971ca22b8d5f27bc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2531,
+      "output_tokens": 49,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0068175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59913,
+      "known_cost_usd": 17.55742315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.811128150000002,
+      "remaining_usd": 81.18887185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.060015,
+          "accounted_with_reservations_usd": 17.31372,
+          "remaining_usd": 19.68628
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9y4yTyyWU1o4KExPRFLXzeRuQfC",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

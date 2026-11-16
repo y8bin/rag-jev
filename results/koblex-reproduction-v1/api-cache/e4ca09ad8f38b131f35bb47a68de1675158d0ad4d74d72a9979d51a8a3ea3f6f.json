@@ -1,0 +1,52 @@
+{
+  "key": "e4ca09ad8f38b131f35bb47a68de1675158d0ad4d74d72a9979d51a8a3ea3f6f",
+  "text": "갑이 운영하는 폐기물처리업의 적합성 확인을 받기 위해서는 업종별 적합성확인 유효기간이 만료되기 3개월 전까지 환경부령으로 정하는 바에 따라 필요한 자료를 첨부하여 환경부장관 또는 시ㆍ도지사에게 신청해야 합니다. 신청을 받은 환경부장관 또는 시ㆍ도지사는 특별한 사정이 없으면 유효기간 만료일 이전에 적합성 여부를 확인하여 통보해야 하며, 시ㆍ도지사 또는 지방환경관서의 장은 적합성 여부를 확인한 후 허가증에 그 결과를 적어 신청인에게 돌려줘야 합니다.",
+  "trace": {
+    "latency_ms": 1628.9753339951858,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1a9bbd3c9464419b9449d7201bc28693"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2376,
+      "output_tokens": 152,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00746,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59367,
+      "known_cost_usd": 12.35602065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.70494065,
+      "remaining_usd": 86.29505935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.8586125,
+          "accounted_with_reservations_usd": 12.2075325,
+          "remaining_usd": 24.7924675
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9lPOC4fjuezeMXW5PiW5uxeRPLx",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

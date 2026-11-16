@@ -1,0 +1,87 @@
+{
+  "key": "0ea38915f2f61298f100c4df6a6b7b2bd8421b9c6340ea34de76466dc956b959",
+  "response": {
+    "id": "chatcmpl-Ei91ZGAGrO6A6g0it0EX89rU3MZ72",
+    "object": "chat.completion",
+    "created": 1794189829,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"민법 (질권의 효력 발생) 질권은 질권설정자가 질권자에게 목적물을 인도함으로써 그 효력이 생긴다.\", \"민법 (주권의 인도) 주권을 질권의 목적으로 하는 경우에는 주권의 인도가 있어야 한다.\", \"민법 (질권의 목적) 질권은 재산권을 목적으로 할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1689,
+      "completion_tokens": 90,
+      "total_tokens": 1779,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 2445.694709007512,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d7a12b14cb11409bae70325819591fee"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1689,
+      "output_tokens": 90,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0051225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19786,
+      "known_cost_usd": 8.108339222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.108339222,
+      "remaining_usd": 91.891660778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.3523375,
+          "accounted_with_reservations_usd": 7.3523375,
+          "remaining_usd": 29.6476625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91ZGAGrO6A6g0it0EX89rU3MZ72",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

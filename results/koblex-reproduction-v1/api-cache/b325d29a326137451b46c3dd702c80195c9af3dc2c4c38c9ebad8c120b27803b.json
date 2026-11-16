@@ -1,0 +1,52 @@
+{
+  "key": "b325d29a326137451b46c3dd702c80195c9af3dc2c4c38c9ebad8c120b27803b",
+  "text": "갑과 을이 공동으로 강도죄를 저지른 경우, 각각 3년 이상의 유기징역에 처한다.",
+  "trace": {
+    "latency_ms": 1068.4712499933084,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b719dc5100d84d3c9d2e2bb8da6a0ccd"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2174,
+      "output_tokens": 28,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005715,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59037,
+      "known_cost_usd": 9.40937315,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.616825650000001,
+      "remaining_usd": 90.38317435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.911965,
+          "accounted_with_reservations_usd": 8.1194175,
+          "remaining_usd": 28.8805825
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eXNEuPxTTRCS3YpVHqgGZDnysk",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

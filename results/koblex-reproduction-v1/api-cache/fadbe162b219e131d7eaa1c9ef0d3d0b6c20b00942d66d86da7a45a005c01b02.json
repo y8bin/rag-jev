@@ -1,0 +1,52 @@
+{
+  "key": "fadbe162b219e131d7eaa1c9ef0d3d0b6c20b00942d66d86da7a45a005c01b02",
+  "text": "을이 교도소 소장의 허가 없이 무인비행장치를 소지한 경우 2년 이하의 징역 또는 2천만원 이하의 벌금에 처하고, 주류와 담배를 소지한 경우 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+  "trace": {
+    "latency_ms": 1376.532041002065,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e44800a391de4fc281ea402bb3c4fa4f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2302,
+      "output_tokens": 72,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003915,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59711,
+      "known_cost_usd": 15.67229065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.02469065,
+      "remaining_usd": 82.97530935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.1748825,
+          "accounted_with_reservations_usd": 15.5272825,
+          "remaining_usd": 21.4727175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9u0XSFMP0BhzSikiHdyb9SzJH76",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

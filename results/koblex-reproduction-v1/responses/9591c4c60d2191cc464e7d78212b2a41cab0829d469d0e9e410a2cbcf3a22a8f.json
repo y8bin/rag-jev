@@ -1,0 +1,87 @@
+{
+  "key": "9591c4c60d2191cc464e7d78212b2a41cab0829d469d0e9e410a2cbcf3a22a8f",
+  "response": {
+    "id": "chatcmpl-Ei9jRg2ZpODIVGLUJEoxdedqKVlqM",
+    "object": "chat.completion",
+    "created": 1794192549,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 자사가 생산한 식품 및 식품첨가물의 생산 실적을 식품의약품안전처장 또는 시ㆍ도지사에게 보고해야 하며, 위해식품의 회수계획을 사전에 관련 기관에 보고해야 하는 경우에도 식품의약품안전처장 또는 시ㆍ도지사에게 보고해야 한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2239,
+      "completion_tokens": 79,
+      "total_tokens": 2318,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1304.7490830067545,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_a530c274a08d441abe9ec54dcbd452bc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2239,
+      "output_tokens": 79,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0063875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59280,
+      "known_cost_usd": 11.52535565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.88842315,
+      "remaining_usd": 87.11157685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.0279475,
+          "accounted_with_reservations_usd": 11.391015,
+          "remaining_usd": 25.608985
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9jRg2ZpODIVGLUJEoxdedqKVlqM",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

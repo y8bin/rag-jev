@@ -1,0 +1,87 @@
+{
+  "key": "00af38a8da176fd57648efe7e6d53283a5ebe5473430b5f4770fc4bd9944ffea",
+  "response": {
+    "id": "chatcmpl-Ei90OtaMoViXVor00QcgA9AE6x7rI",
+    "object": "chat.completion",
+    "created": 1794189756,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형사소송법 (위법수집증거의 배제) 적법한 절차에 따르지 아니하고 수집한 증거는 증거로 할 수 없다.\", \"형사소송법 (증거능력의 예외) 사망, 질병, 외국거주 등으로 인하여 진술할 수 없는 경우에 한하여, 그 진술이 신빙할 수 있는 상태에서 행해졌다고 인정되는 때에는 예외적으로 증거로 할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1729,
+      "completion_tokens": 110,
+      "total_tokens": 1839,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1327.5537500012433,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d1c2239adda54948be43412594112b48"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1729,
+      "output_tokens": 110,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0036625,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19738,
+      "known_cost_usd": 7.866976722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.866976722,
+      "remaining_usd": 92.133023278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.110975,
+          "accounted_with_reservations_usd": 7.110975,
+          "remaining_usd": 29.889025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90OtaMoViXVor00QcgA9AE6x7rI",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

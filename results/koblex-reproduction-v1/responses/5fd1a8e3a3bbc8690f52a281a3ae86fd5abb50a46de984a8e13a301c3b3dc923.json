@@ -1,0 +1,87 @@
+{
+  "key": "5fd1a8e3a3bbc8690f52a281a3ae86fd5abb50a46de984a8e13a301c3b3dc923",
+  "response": {
+    "id": "chatcmpl-Ei903qpCDSqwbfhPudmMvFsHE6VJt",
+    "object": "chat.completion",
+    "created": 1794189735,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"성폭력범죄의 처벌 등에 관한 특례법 (등록대상자의 출국 신고) 등록대상자가 6개월 이상 국외에 체류할 목적으로 출국하려는 경우에는 대통령령으로 정하는 바에 따라 미리 법무부장관에게 신고하여야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1657,
+      "completion_tokens": 67,
+      "total_tokens": 1724,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1013.2999589986866,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_cf3995858cbc414c95f86e6da53cb75f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1657,
+      "output_tokens": 67,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0030525,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19722,
+      "known_cost_usd": 7.796694222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.796694222,
+      "remaining_usd": 92.203305778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.0406925,
+          "accounted_with_reservations_usd": 7.0406925,
+          "remaining_usd": 29.9593075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei903qpCDSqwbfhPudmMvFsHE6VJt",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

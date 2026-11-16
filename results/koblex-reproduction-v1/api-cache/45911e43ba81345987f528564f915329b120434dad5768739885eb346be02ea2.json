@@ -1,0 +1,52 @@
+{
+  "key": "45911e43ba81345987f528564f915329b120434dad5768739885eb346be02ea2",
+  "text": "을 선거관리위원회는 사전투표소를 설치할 때, 선거일 전 9일까지 그 명칭, 소재지 및 설치·운영기간을 공고하고, 선거사무장 또는 선거연락소장에게 이를 통지해야 하며, 관할구역 안의 투표구마다 5개소에 공고문을 첩부해야 합니다.",
+  "trace": {
+    "latency_ms": 1280.6467499904102,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4f79b18d092b4933989c069228d0c4c4"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2361,
+      "output_tokens": 86,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0067625,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60253,
+      "known_cost_usd": 20.82676565,
+      "unsettled_attempts": 11,
+      "accounted_with_reservations_usd": 21.92213565,
+      "remaining_usd": 78.07786435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.3293575,
+          "accounted_with_reservations_usd": 20.4247275,
+          "remaining_usd": 16.5752725
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA5q5qvqc9rPeXhO0HjWt9QmvCv3",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

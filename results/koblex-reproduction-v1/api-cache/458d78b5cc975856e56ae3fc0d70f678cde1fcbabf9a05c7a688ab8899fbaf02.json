@@ -1,0 +1,52 @@
+{
+  "key": "458d78b5cc975856e56ae3fc0d70f678cde1fcbabf9a05c7a688ab8899fbaf02",
+  "text": "[\"형법 (횡령) 타인의 재물을 보관하는 자가 그 재물을 횡령하거나 그 반환을 거부한 때에는 5년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다.\"]",
+  "trace": {
+    "latency_ms": 1121.5248329972383,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3764627ccd5946f9972fa03e528611a1"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1640,
+      "output_tokens": 55,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00465,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19721,
+      "known_cost_usd": 7.793641722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.793641722,
+      "remaining_usd": 92.206358278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.03764,
+          "accounted_with_reservations_usd": 7.03764,
+          "remaining_usd": 29.96236
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei902ANGknWyVboBaklKdohIxeJU1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

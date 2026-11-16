@@ -1,0 +1,52 @@
+{
+  "key": "802c942398c87971efe95b5ba4ddee9730562218bb0e3506692ab67427bca2e6",
+  "text": "갑은 을과 병의 동의 없이 토지 전체를 매각하거나 변경할 수 없으나, 자신의 지분은 처분할 수 있다.",
+  "trace": {
+    "latency_ms": 819.8959580040537,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9bc2fe926fef41e0a699ba92d4e42ea5"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2185,
+      "output_tokens": 33,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0033925,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59156,
+      "known_cost_usd": 10.38503315,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 11.58140315,
+      "remaining_usd": 88.41859685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.887625,
+          "accounted_with_reservations_usd": 10.083995,
+          "remaining_usd": 26.916005
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9gXqN1XhEm9Z9IhYSveNYlXN9hs",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

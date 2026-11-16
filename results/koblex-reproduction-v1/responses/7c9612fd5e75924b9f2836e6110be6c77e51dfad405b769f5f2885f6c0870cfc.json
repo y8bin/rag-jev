@@ -1,0 +1,87 @@
+{
+  "key": "7c9612fd5e75924b9f2836e6110be6c77e51dfad405b769f5f2885f6c0870cfc",
+  "response": {
+    "id": "chatcmpl-Ei9hSTagSZzesR1YIbWv4nEAnC7yu",
+    "object": "chat.completion",
+    "created": 1794192426,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑과 을은 선거기간개시일부터 선거일 전일까지 선거운동을 할 수 있다. 갑이 대통령 선거에 출마할 경우 후보자 등록 시 납부해야 하는 기탁금은 3억 원이며, 을이 지역구 국회의원 선거에 출마할 경우 납부해야 하는 기탁금은 1,500만 원이다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2996,
+      "completion_tokens": 84,
+      "total_tokens": 3080,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1104.7730830032378,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_20f1712e6e99487cb31f30cde2c0e6f6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2996,
+      "output_tokens": 84,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00593,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59187,
+      "known_cost_usd": 10.66594565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 11.95664315,
+      "remaining_usd": 88.04335685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.1685375,
+          "accounted_with_reservations_usd": 10.459235,
+          "remaining_usd": 26.540765
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9hSTagSZzesR1YIbWv4nEAnC7yu",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

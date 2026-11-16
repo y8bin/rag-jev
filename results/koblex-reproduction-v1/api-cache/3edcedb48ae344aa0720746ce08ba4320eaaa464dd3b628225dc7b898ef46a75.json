@@ -1,0 +1,52 @@
+{
+  "key": "3edcedb48ae344aa0720746ce08ba4320eaaa464dd3b628225dc7b898ef46a75",
+  "text": "[\"형법 (강도) 사람의 재물을 강취하기 위하여 폭행 또는 협박을 가한 자는 3년 이상의 유기징역에 처한다.\", \"형법 (공동정범) 2인 이상이 공동하여 죄를 범한 때에는 각자를 그 죄의 정범으로 처벌한다.\"]",
+  "trace": {
+    "latency_ms": 1086.109416995896,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6d1b5315dc0c49f5855fb3ac32127dc6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1627,
+      "output_tokens": 75,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0048175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19596,
+      "known_cost_usd": 7.171371722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.171371722,
+      "remaining_usd": 92.828628278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.41537,
+          "accounted_with_reservations_usd": 6.41537,
+          "remaining_usd": 30.58463
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8wzmDSy4JtwJMBCArbAJacN89es",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

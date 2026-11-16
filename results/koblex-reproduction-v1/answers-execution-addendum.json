@@ -1,0 +1,8 @@
+{
+  "parent_lock_sha256": "99d5c5cc29b33168a5c855d5e3dd0a3d324c8106077691cf1ef34299c1c87bc1",
+  "runner_sha256": "b448a16744b8f1cf18245ff47d869e1fd4ed309241ad23a71325ec6bd586be27",
+  "question_concurrency": 4,
+  "http_concurrency": 4,
+  "change": "Scheduling only. Same frozen prompt, parser, model, candidate lists, budget and output schema.",
+  "answer_results_observed_before_addendum": false
+}

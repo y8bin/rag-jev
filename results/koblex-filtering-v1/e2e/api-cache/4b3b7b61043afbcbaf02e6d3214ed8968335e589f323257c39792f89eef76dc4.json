@@ -1,0 +1,52 @@
+{
+  "key": "4b3b7b61043afbcbaf02e6d3214ed8968335e589f323257c39792f89eef76dc4",
+  "text": "갑이 화물자동차 운송사업의 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관의 변경허가를 받아야 한다. 다만, 경미한 사항을 변경하려면 국토교통부장관에게 신고하여야 한다. 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체에 대한 정보는 제공된 문맥에 포함되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 1789.0985420090146,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b2a3658665d44f40b1ee688ad55fffb0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2229,
+      "output_tokens": 102,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0065925,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73630,
+      "known_cost_usd": 24.83524781,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.97220781,
+      "remaining_usd": 74.02779219,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.7201675,
+          "accounted_with_reservations_usd": 23.8571275,
+          "remaining_usd": 13.1428725
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7qhF6yjwQ9cQLY1SuvisrEMGVO",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

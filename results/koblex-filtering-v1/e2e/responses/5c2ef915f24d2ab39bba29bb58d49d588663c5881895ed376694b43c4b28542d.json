@@ -1,0 +1,87 @@
+{
+  "key": "5c2ef915f24d2ab39bba29bb58d49d588663c5881895ed376694b43c4b28542d",
+  "response": {
+    "id": "chatcmpl-EiK8byME2GkhE6goWS1rJ9UOyX1c4",
+    "object": "chat.completion",
+    "created": 1794232549,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 형법 제299조에 따라 준강제추행에 해당하며, 이는 제297조, 제297조의2 및 제298조의 예에 따른 처벌을 받을 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2147,
+      "completion_tokens": 64,
+      "total_tokens": 2211,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e665f1271d"
+  },
+  "trace": {
+    "latency_ms": 1476.5241249988321,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_739eb35a4c8246b4a9fab997aa352372"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2147,
+      "output_tokens": 64,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0060075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73651,
+      "known_cost_usd": 24.96922031,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 26.10618031,
+      "remaining_usd": 73.89381969,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.85414,
+          "accounted_with_reservations_usd": 23.9911,
+          "remaining_usd": 13.0089
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK8byME2GkhE6goWS1rJ9UOyX1c4",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

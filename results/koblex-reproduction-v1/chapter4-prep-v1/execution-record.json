@@ -1,0 +1,52 @@
+{
+  "completed_at_utc": "2026-11-09T05:48:29.580331+00:00",
+  "preflight_verify": {
+    "command": ".venv/bin/python scripts/koblex.py verify",
+    "exit_code": 0,
+    "status": "VERIFIED_CURRENT_STUDY"
+  },
+  "existing_artifact_audit": {
+    "source": "scripts/audit_koblex_reproduction.py",
+    "status": "PASS_AUTOMATED_ARTIFACT_INTEGRITY",
+    "output_redirect_only": "chapter4-prep-v1/verification-audit.json",
+    "original_output_preserved": true
+  },
+  "aggregation": {
+    "command": ".venv/bin/python scripts/prepare_chapter4.py",
+    "exit_code": 0,
+    "stdout": [
+      "A1 complete",
+      "A2 complete",
+      "A3 complete",
+      "A4 complete",
+      "A5 complete",
+      "A6 complete"
+    ]
+  },
+  "prep_validation": {
+    "command": ".venv/bin/python scripts/validate_chapter4_prep.py",
+    "exit_code": 0,
+    "status": "PASS_PREP_AND_ORIGINAL_PRESERVATION"
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q",
+    "exit_code": 0,
+    "passed": 25,
+    "failed": 0,
+    "scope": "22 existing tests plus 3 new pool-feasibility tests; exhaustive 3-pool small graph comparison"
+  },
+  "final_current_study_verify": {
+    "exit_code": 0,
+    "status": "VERIFIED_CURRENT_STUDY"
+  },
+  "original_results_and_lock_modified": false,
+  "new_paid_experiments": 0,
+  "human_judgments_created": 0,
+  "manuscript_written": false,
+  "figures_rendered": false,
+  "code": {
+    "scripts/prepare_chapter4.py": "82f5a53e8525252a211d7ee16b34d1ede5e8830d20edf6d5da048d4332d9ca45",
+    "scripts/validate_chapter4_prep.py": "a831254243427869149f614d1699f67bc30c7798b681ff5ee03be7233dcd65cb",
+    "tests/test_chapter4_preparation.py": "306d33b97baf9ba0ccce1a5364c02737bc1e9e8695481e25fdd841a6c4f9cdfe"
+  }
+}

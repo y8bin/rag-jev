@@ -1,0 +1,87 @@
+{
+  "key": "214b3dbceb5381be54309d6953e473c704eaf55f1b185e0205a74030a8a19da8",
+  "response": {
+    "id": "chatcmpl-Ei9eYXgyjDa5lVLiJOZrmlwYfEEbZ",
+    "object": "chat.completion",
+    "created": 1794192246,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을은 갑의 도박 중독 문제로 인해 혼인을 계속하기 어려운 중대한 사유가 있다고 판단했다면 재판상 이혼을 청구할 수 있다. 이 청구권은 을이 그 사유를 안 날로부터 6개월, 그 사유가 있은 날로부터 2년을 경과하면 소멸한다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2219,
+      "completion_tokens": 78,
+      "total_tokens": 2297,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1150.2470419945894,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_0946cdb9725348bfb143440fc757d755"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2219,
+      "output_tokens": 78,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0039275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59039,
+      "known_cost_usd": 9.42509065,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.631018150000001,
+      "remaining_usd": 90.36898185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.9276825,
+          "accounted_with_reservations_usd": 8.13361,
+          "remaining_usd": 28.866390000000003
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eYXgyjDa5lVLiJOZrmlwYfEEbZ",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

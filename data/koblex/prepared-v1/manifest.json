@@ -1,0 +1,11 @@
+{
+  "purpose": "Current ParSeR evaluation inputs; vector-only prepared files removed",
+  "questions": 226,
+  "affected_questions": 29,
+  "source_revision": "1a2d225be33a70ebf91e2b6369acf27551dcfbb4",
+  "files": {
+    "data/koblex/prepared-v1/gold.jsonl": "d0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b",
+    "data/koblex/prepared-v1/queries.jsonl": "2144be61214cab88097b7ef43427923a2f7b334fe578a4ae2a15965f449344c4",
+    "data/koblex/prepared-v1/questions.jsonl": "7f5aded84c967fb071d6245199c3aa8cc331226f947badc1dff37daa285e6d29"
+  }
+}

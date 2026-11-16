@@ -1,0 +1,52 @@
+{
+  "key": "b4869cad0021d7aca48272ba7c5b77f09b9996101f63acea9a46a565a6c92d38",
+  "text": "갑이 기본공제대상자가 아닌 아들 을을 위해 지급한 교육비에 대해서는 세액공제를 받을 수 없습니다. 소득세법에 따르면, 교육비 세액공제는 기본공제대상자인 직계비속 등을 위해 지급한 교육비에 대해서만 적용되며, 초등학교 취학 전 아동과 초ㆍ중ㆍ고등학생인 경우에는 1명당 연 300만원을 한도로 합니다. 을이 과세기간 종료일 이전에 기본공제대상자에서 제외된 경우, 해당 교육비에 대한 세액공제는 적용되지 않습니다.",
+  "trace": {
+    "latency_ms": 1255.6114590115612,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9cc4f22b088b4eb9b0c32eeb4c8592e6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 3348,
+      "output_tokens": 132,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00969,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59994,
+      "known_cost_usd": 18.35122315,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 19.55385065,
+      "remaining_usd": 80.44614935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.853815,
+          "accounted_with_reservations_usd": 18.0564425,
+          "remaining_usd": 18.9435575
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9zzRU3cQktS3n1WURaPzoelZpEL",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "8fae8e1c243f3daf49dfb65572f2fa179970c4d537b61637dcc7a63f9b1f49c7",
+  "text": "을은 갑에 대한 손해배상청구권을 상품이 인도된 날로부터 2년간 행사하지 않으면 소멸시효가 완성된다.",
+  "trace": {
+    "latency_ms": 939.1026249941206,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_93081610fec74c548651e7f5b0fb2234"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2199,
+      "output_tokens": 39,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0058875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 58998,
+      "known_cost_usd": 9.05242565,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.25581315,
+      "remaining_usd": 90.74418685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.5550175,
+          "accounted_with_reservations_usd": 7.758405,
+          "remaining_usd": 29.241595
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9ePzZpwa84eIyWxaIJ31MhKr1E1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

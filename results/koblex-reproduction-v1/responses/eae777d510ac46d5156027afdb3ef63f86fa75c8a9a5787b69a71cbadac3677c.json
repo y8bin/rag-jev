@@ -1,0 +1,87 @@
+{
+  "key": "eae777d510ac46d5156027afdb3ef63f86fa75c8a9a5787b69a71cbadac3677c",
+  "response": {
+    "id": "chatcmpl-EiA5hklucT9f6R2ByoRdb7GIMVQcw",
+    "object": "chat.completion",
+    "created": 1794193929,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을은 갑이 운영하던 이발소를 양도받았으므로, 공중위생영업자의 지위를 승계할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2308,
+      "completion_tokens": 33,
+      "total_tokens": 2341,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 880.3949580033077,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b8bd0ed323b64ba7bc61b47c7aaa8a4a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2308,
+      "output_tokens": 33,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0061,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60227,
+      "known_cost_usd": 20.55832815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.90672815,
+      "remaining_usd": 78.09327185000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.06092,
+          "accounted_with_reservations_usd": 20.40932,
+          "remaining_usd": 16.59068
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA5hklucT9f6R2ByoRdb7GIMVQcw",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

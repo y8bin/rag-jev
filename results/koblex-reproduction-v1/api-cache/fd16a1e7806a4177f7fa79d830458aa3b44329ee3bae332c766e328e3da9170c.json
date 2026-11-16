@@ -1,0 +1,52 @@
+{
+  "key": "fd16a1e7806a4177f7fa79d830458aa3b44329ee3bae332c766e328e3da9170c",
+  "text": "갑의 행위에 대한 범죄의 성립과 처벌은 행위 시의 법률에 따른다. 검사가 공소장을 변경하려면 해당 조건에 대한 정보가 제공되지 않았습니다.",
+  "trace": {
+    "latency_ms": 1244.8295409994898,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c7ea633b50e0457b92fff3911b19e6fb"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2175,
+      "output_tokens": 44,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0058775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59871,
+      "known_cost_usd": 17.16722065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.51929315,
+      "remaining_usd": 81.48070685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.6698125,
+          "accounted_with_reservations_usd": 17.021885,
+          "remaining_usd": 19.978115
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9x5T9SFgMkbU9nL74sAHrAvdTJe",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

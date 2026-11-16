@@ -1,0 +1,73 @@
+{
+  "status": "POST_RESULT_EXPLORATORY_DESCRIPTIVE_PREPARATION",
+  "order": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6"
+  ],
+  "scientific_inputs": "existing files only",
+  "paid_calls": 0,
+  "human_judgments_created": 0,
+  "primary_comparison": [
+    "parser_jev_fixed",
+    "parser_ce_fixed"
+  ],
+  "reference_arm": "parser_ce_raw",
+  "metric_scale": "retain 0..1 raw values; display x100; difference from unrounded raw values",
+  "estimand": "unweighted question mean; question denominator 226; retain all unavailable-gold questions",
+  "new_inference": "none; copy existing exploratory percentile CI; no new subgroup CI, tests, or interaction claims",
+  "A3": {
+    "tie_absolute_tolerance": 1e-12,
+    "differences": "Jev minus fixed CE",
+    "discordance": "strict opposite signs of F1 and LF or Token F1; directional mismatch with ties also retained"
+  },
+  "A4": {
+    "canonical": "literal hierarchy + content; no whitespace/Unicode/date normalization",
+    "gold_unit": "unique canonical gold within each question; query-gold occurrence denominator; not unique corpus-wide gold",
+    "row_ids": "zero-based original corpus rows; JSONL lines are row_id + 1",
+    "duplicates": "original rows preserved; evaluation sets deduplicated by exact canonical string",
+    "scope": "fixed CE and Jev; raw index-error reference is excluded from pool-correct stage attribution",
+    "exclusive_first_loss": [
+      "corpus_absent",
+      "bm25_absent",
+      "shortlist_absent",
+      "shortlist_present_unselected",
+      "selected"
+    ],
+    "pool_constraint": "one final selection per generated-provision pool; exact bipartite maximum matching is a structural bound, never a new prediction"
+  },
+  "A5": {
+    "tokenizer": "tiktoken o200k_base; encode(disallowed_special=())",
+    "context": "newline join of actual provision list, including duplicates",
+    "prompt": "exact upstream SYSTEM_PROMPT + two newlines + INSTRUCTION_PROMPT substitution; user message only; verify original API cache digest",
+    "input": "stored generation_trace.usage.input_tokens is full API input; tokenizer text count separately excludes chat framing",
+    "output": "stored successful API response output_tokens, including original response framing; answer text token count separately",
+    "cache": "execution cached flag differs from provider cached_input_tokens; cached usage describes demand, not new billing",
+    "statistics": "mean, median, Q1/Q3/IQR; numpy quantile method=linear; paired Jev-minus-CE differences",
+    "cost": "no online cost/latency superiority estimate; uncached successful generation usage is not whole-experiment billing"
+  },
+  "A6": {
+    "labels": "multi-label question observations; counts may exceed 226; no legal error or support verdict",
+    "low_auto_answer_threshold": {
+      "lf_eval": "<0.5",
+      "token_f1": "<0.5",
+      "interpretation": "arbitrary descriptive screening threshold, not validated correctness boundary"
+    },
+    "buckets": {
+      "Jev_improvement": "F1 delta > tolerance",
+      "CE_advantage": "F1 delta < -tolerance",
+      "common_low_F1": "both F1 < 0.5",
+      "metric_discordance": "strict opposite F1 vs LF/Token F1 signs"
+    },
+    "selection": "nearest to within-bucket median of primary key; ties lexicographic query_id; win/loss/discordance key=abs(F1 delta); common-low key=mean F1; repeat within hop x mapping strata for alternatives",
+    "main_candidates": "one improvement, one CE advantage, one discordance (fallback common-low); candidates only; pending legal review",
+    "human_sample": "existing 60-question sample is preserved and never replaced"
+  },
+  "script": {
+    "path": "scripts/prepare_chapter4.py",
+    "sha256": "82f5a53e8525252a211d7ee16b34d1ede5e8830d20edf6d5da048d4332d9ca45"
+  }
+}

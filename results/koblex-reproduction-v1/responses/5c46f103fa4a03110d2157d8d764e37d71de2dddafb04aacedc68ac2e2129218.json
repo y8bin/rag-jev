@@ -1,0 +1,87 @@
+{
+  "key": "5c46f103fa4a03110d2157d8d764e37d71de2dddafb04aacedc68ac2e2129218",
+  "response": {
+    "id": "chatcmpl-Ei9iPhLfE2NMvgxjZkpfvUfmi2vDV",
+    "object": "chat.completion",
+    "created": 1794192485,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "병은 제3자로서 변제를 할 수 있으며, 변제기 이전에도 변제가 가능합니다. 민법 469조 1항에 따르면, 채무의 변제는 제삼자도 할 수 있습니다. 변제기 이전에도 변제가 가능하다는 점은 상법 259조 1항에서 청산인이 변제기에 이르지 아니한 채무에 대해서도 변제할 수 있다고 명시되어 있습니다. 따라서 을이 이를 거절할 경우, 병은 변제의 의사를 명확히 하고 변제금을 준비하여 다시 변제를 시도할 수 있습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2282,
+      "completion_tokens": 127,
+      "total_tokens": 2409,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1513.345790997846,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_0816fb6154c840e48f6e4ddabf0d91f0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2282,
+      "output_tokens": 127,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006975,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59220,
+      "known_cost_usd": 10.97532815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 12.38186565,
+      "remaining_usd": 87.61813435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.47792,
+          "accounted_with_reservations_usd": 10.8844575,
+          "remaining_usd": 26.1155425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9iPhLfE2NMvgxjZkpfvUfmi2vDV",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

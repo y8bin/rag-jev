@@ -1,0 +1,52 @@
+{
+  "key": "7d0c5f8f4447e29e8eeb237b6cb2d029d466b579bedbfec5bc2d2b6f551e4361",
+  "text": "소장은 갑이 외부의료시설에서 진료받은 사실을 갑의 가족에게 지체 없이 알려야 한다. 다만, 갑이 알리는 것을 원하지 않으면 그러하지 않아도 된다.",
+  "trace": {
+    "latency_ms": 908.8599999959115,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_af5bb2840bc147f191d6e0c1ce5bef3b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2317,
+      "output_tokens": 45,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59611,
+      "known_cost_usd": 14.69946315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.11778065,
+      "remaining_usd": 83.88221935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.202055,
+          "accounted_with_reservations_usd": 14.6203725,
+          "remaining_usd": 22.379627499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9rDM0eZgw6CjWrP5HiHI47ywlhC",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

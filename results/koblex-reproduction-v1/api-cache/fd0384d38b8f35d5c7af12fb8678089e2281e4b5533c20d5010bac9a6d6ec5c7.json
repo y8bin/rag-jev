@@ -1,0 +1,52 @@
+{
+  "key": "fd0384d38b8f35d5c7af12fb8678089e2281e4b5533c20d5010bac9a6d6ec5c7",
+  "text": "을이 공중위생영업자의 지위를 승계하기 위해서는 제6조의 규정에 의한 면허를 소지해야 한다.",
+  "trace": {
+    "latency_ms": 1047.8747919987654,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b016c2237ae94591acf9be1cb021ce01"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2254,
+      "output_tokens": 33,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003565,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60243,
+      "known_cost_usd": 20.72797565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 21.97847065,
+      "remaining_usd": 78.02152935000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.2305675,
+          "accounted_with_reservations_usd": 20.4810625,
+          "remaining_usd": 16.5189375
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA5nEiGV33Mmj2TIxJoeMUitVZnJ",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

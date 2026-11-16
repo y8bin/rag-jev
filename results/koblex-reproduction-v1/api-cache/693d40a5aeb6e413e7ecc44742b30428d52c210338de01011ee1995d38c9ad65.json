@@ -1,0 +1,52 @@
+{
+  "key": "693d40a5aeb6e413e7ecc44742b30428d52c210338de01011ee1995d38c9ad65",
+  "text": "갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 금융위원회의 인가를 받아야 합니다. 내부 업무에 관한 규정을 변경한 경우에는 별도의 절차에 대한 언급이 없으므로, 일반적인 내부 절차에 따라 변경할 수 있습니다.",
+  "trace": {
+    "latency_ms": 1078.5192920011468,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_437ebe472b5c45ff9db6573fd3ef8f15"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2541,
+      "output_tokens": 63,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0045825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59900,
+      "known_cost_usd": 17.44019065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 18.73624065,
+      "remaining_usd": 81.26375935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.9427825,
+          "accounted_with_reservations_usd": 17.2388325,
+          "remaining_usd": 19.7611675
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9y0TQHmthuRNTpLEQjptGaQFc13",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

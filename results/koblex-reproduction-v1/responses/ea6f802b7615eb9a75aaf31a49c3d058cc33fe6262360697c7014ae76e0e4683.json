@@ -1,0 +1,87 @@
+{
+  "key": "ea6f802b7615eb9a75aaf31a49c3d058cc33fe6262360697c7014ae76e0e4683",
+  "response": {
+    "id": "chatcmpl-Ei91tOOQ0UFhwBcGtS7nvhGLlGRjI",
+    "object": "chat.completion",
+    "created": 1794189849,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"행정소송법 (재량처분의 취소) 행정청의 재량에 속하는 처분이라도 재량권의 한계를 넘거나 그 남용이 있는 때에는 법원은 이를 취소할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1667,
+      "completion_tokens": 54,
+      "total_tokens": 1721,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 909.6357920061564,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c7390281c97b443ba7713f2f9a3c16a2"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1667,
+      "output_tokens": 54,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0029475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19798,
+      "known_cost_usd": 8.170011722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.170011722,
+      "remaining_usd": 91.829988278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.41401,
+          "accounted_with_reservations_usd": 7.41401,
+          "remaining_usd": 29.58599
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91tOOQ0UFhwBcGtS7nvhGLlGRjI",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "1c19b008f56d9c0b86f3d6eff8bec56a9cfa50675ff4e190a9ee6d89eb582f45",
+  "text": "갑은 확정된 심결이 각하심결인 경우에는 같은 사실 및 같은 증거에 의하여 다시 심판을 청구할 수 있습니다. 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은, 상표가 국가의 국기, 국제기구의 기장 등과 관련되거나, 타인의 상품을 표시하는 것으로 널리 인식되어 있는 경우 등 다양한 경우가 있으며, 이러한 경우 상표등록을 받을 수 없습니다.",
+  "trace": {
+    "latency_ms": 1613.283083002898,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f616dc8f48cd4751a74dd67bc1a9e7c0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 3814,
+      "output_tokens": 102,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.008155,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59499,
+      "known_cost_usd": 13.63374315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 14.98303315,
+      "remaining_usd": 85.01696685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.136335,
+          "accounted_with_reservations_usd": 13.485625,
+          "remaining_usd": 23.514375
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9p74kAspXEXRCti4oB97w2gxGYF",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

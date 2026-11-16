@@ -1,0 +1,52 @@
+{
+  "key": "30c6422fc2211ffe7d213cb3d0294e5db74445e2a84172be326d5b2a34269ff6",
+  "text": "[\"도시 및 주거환경정비법 (토지등소유자 전체회의 의결사항) 사업시행자는 다음 각 호의 사항에 대하여 토지등소유자 전체회의의 의결을 받아야 한다: 1. 사업시행계획의 수립 및 변경, 2. 사업비 및 비용의 부담, 3. 그 밖에 대통령령으로 정하는 사항.\", \"도시 및 주거환경정비법 (정비구역 지정 변경 절차) 정비구역의 지정을 변경하려는 경우에는 시장ㆍ군수 또는 구청장이 주민의견을 청취하고, 지방의회의 의견을 들어야 하며, 관계 행정기관의 장과 협의하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1625.6267090066103,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_71e4717fbd2d459fb4f8cbee253b04da"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1707,
+      "output_tokens": 160,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0058675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19770,
+      "known_cost_usd": 8.024926722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.024926722,
+      "remaining_usd": 91.975073278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.268925,
+          "accounted_with_reservations_usd": 7.268925,
+          "remaining_usd": 29.731075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei918ZHSN3gKNwnMyTd7Zv7ymnZSj",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

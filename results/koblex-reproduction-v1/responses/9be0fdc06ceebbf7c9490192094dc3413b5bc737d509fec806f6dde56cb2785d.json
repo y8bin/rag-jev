@@ -1,0 +1,87 @@
+{
+  "key": "9be0fdc06ceebbf7c9490192094dc3413b5bc737d509fec806f6dde56cb2785d",
+  "response": {
+    "id": "chatcmpl-Ei9p9zOJ8r6FZFLHYUMvMa0skxsqf",
+    "object": "chat.completion",
+    "created": 1794192903,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 없다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2256,
+      "completion_tokens": 37,
+      "total_tokens": 2293,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 951.0332089994336,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4b7df7d105e14ae2999a4fd659617a8b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2256,
+      "output_tokens": 37,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00601,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59501,
+      "known_cost_usd": 13.67395065,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 14.82441065,
+      "remaining_usd": 85.17558935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.1765425,
+          "accounted_with_reservations_usd": 13.3270025,
+          "remaining_usd": 23.6729975
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9p9zOJ8r6FZFLHYUMvMa0skxsqf",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

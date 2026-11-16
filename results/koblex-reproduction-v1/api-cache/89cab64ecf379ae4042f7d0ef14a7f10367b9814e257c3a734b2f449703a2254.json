@@ -1,0 +1,52 @@
+{
+  "key": "89cab64ecf379ae4042f7d0ef14a7f10367b9814e257c3a734b2f449703a2254",
+  "text": "법원은 제척신청이 있는 경우 그 재판이 확정될 때까지 소송절차를 정지하여야 한다. 다만, 제척신청이 각하된 경우 또는 종국판결을 선고하거나 긴급을 요하는 행위를 하는 경우에는 소송절차를 정지하지 않아도 된다.",
+  "trace": {
+    "latency_ms": 1174.5408330025384,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6c8ca1a1cfaf4587ba82b743eb98019d"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2234,
+      "output_tokens": 73,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006315,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59667,
+      "known_cost_usd": 15.27589815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.62926065,
+      "remaining_usd": 83.37073935000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.77849,
+          "accounted_with_reservations_usd": 15.1318525,
+          "remaining_usd": 21.8681475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9t1BNaYoCog6ULTOnDKujLuFZaT",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

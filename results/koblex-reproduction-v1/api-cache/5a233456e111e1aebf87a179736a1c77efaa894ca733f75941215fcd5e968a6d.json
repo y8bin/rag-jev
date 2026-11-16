@@ -1,0 +1,52 @@
+{
+  "key": "5a233456e111e1aebf87a179736a1c77efaa894ca733f75941215fcd5e968a6d",
+  "text": "[\"군사법원법 (군사법경찰관의 복종의무) 군사법경찰관은 그 직무를 수행함에 있어 직무상 상관의 명령에 복종하여야 한다.\", \"국방부장관의 지휘감독권 (국방부장관의 지휘감독) 국방부장관은 군사법경찰관의 직무 수행에 관하여 지휘ㆍ감독할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1239.460583004984,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c18069ebb17e4582b3ee56d93ebe3df7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1730,
+      "output_tokens": 102,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005345,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19759,
+      "known_cost_usd": 7.968394222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.968394222,
+      "remaining_usd": 92.031605778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.2123925,
+          "accounted_with_reservations_usd": 7.2123925,
+          "remaining_usd": 29.7876075
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90rmfL9XbftSiuJRzY1EyIPMEVq",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

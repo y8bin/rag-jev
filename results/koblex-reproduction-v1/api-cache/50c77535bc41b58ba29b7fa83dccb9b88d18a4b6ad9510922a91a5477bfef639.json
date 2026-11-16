@@ -1,0 +1,52 @@
+{
+  "key": "50c77535bc41b58ba29b7fa83dccb9b88d18a4b6ad9510922a91a5477bfef639",
+  "text": "[\"형사소송법 (변론의 분리 및 병합) 법원은 필요하다고 인정할 때에는 직권으로 또는 피고인의 신청에 의하여 변론을 분리하거나 병합할 수 있다.\", \"형사소송법 (공범의 항소) 공범 중 1인이 항소한 경우에 그 항소 이유가 다른 공범에게도 공통되는 때에는 법원은 다른 공범에 대하여도 원심판결을 파기할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1526.9230409903685,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_20c04f2ec171464186af6f28697f4516"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1740,
+      "output_tokens": 110,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00545,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19719,
+      "known_cost_usd": 7.784089222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.784089222,
+      "remaining_usd": 92.215910778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.0280875,
+          "accounted_with_reservations_usd": 7.0280875,
+          "remaining_usd": 29.971912500000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zzxy3ykcEQG6Hal9xThq7NxpAS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "6468c232fa11131c5410f125e689d25782886bd82de72ccdf78bf0a2bfe22cae",
+  "text": "을의 변호인은 공소사실이 범죄의 시일과 장소를 정확히 기재하지 않아 특정되지 않았기 때문에 공소제기의 절차가 법률의 규정을 위반하여 무효라는 이유로 공소기각을 주장할 수 있다.",
+  "trace": {
+    "latency_ms": 979.968582993024,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b05fb117258248a1b719dad333c305d7"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2175,
+      "output_tokens": 59,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0036275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60360,
+      "known_cost_usd": 21.83768315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.19161315,
+      "remaining_usd": 76.80838685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.340275,
+          "accounted_with_reservations_usd": 21.694205,
+          "remaining_usd": 15.305795
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA8fsZC6TNh1GFNH5Bi8ZoqgdXPI",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

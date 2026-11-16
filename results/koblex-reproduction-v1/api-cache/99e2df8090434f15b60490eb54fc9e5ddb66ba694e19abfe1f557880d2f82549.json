@@ -1,0 +1,52 @@
+{
+  "key": "99e2df8090434f15b60490eb54fc9e5ddb66ba694e19abfe1f557880d2f82549",
+  "text": "갑 자산운용회사가 A신탁과 B신탁을 합병하고자 할 때, 합병 계획서에는 다음 사항들이 포함되어야 합니다: 1) 존속하는 투자신탁의 증가하는 신탁원본의 가액 및 수익증권의 좌수, 2) 소멸하는 투자신탁의 수익자에게 발행하는 수익증권의 배정에 관한 사항, 3) 소멸하는 투자신탁의 수익자에게 현금을 지급하는 경우 그 내용, 4) 각 투자신탁의 수익자총회의 회일, 5) 합병을 할 날, 6) 존속하는 투자신탁의 신탁계약을 변경하는 경우 그 내용, 7) 그 밖에 대통령령으로 정하는 사항. 합병의 효력은 존속하는 투자신탁의 집합투자업자가 금융위원회에 보고를 한 때에 발생합니다.",
+  "trace": {
+    "latency_ms": 1746.7933329899097,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b78bd67bd5e546f38dcb2026dfc50874"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2522,
+      "output_tokens": 205,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005955,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59605,
+      "known_cost_usd": 14.65410815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 15.90643315,
+      "remaining_usd": 84.09356685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.1567,
+          "accounted_with_reservations_usd": 14.409025,
+          "remaining_usd": 22.590975
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9rBpsEk4i0N2RrAdhbNaG80VIqr",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

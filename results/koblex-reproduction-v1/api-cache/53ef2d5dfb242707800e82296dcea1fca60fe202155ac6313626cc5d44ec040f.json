@@ -1,0 +1,52 @@
+{
+  "key": "53ef2d5dfb242707800e82296dcea1fca60fe202155ac6313626cc5d44ec040f",
+  "text": "갑이 을의 중요한 계약 문서를 고의로 손괴한 경우, 형법 제366조에 따라 3년 이하의 징역 또는 700만원 이하의 벌금에 처한다.",
+  "trace": {
+    "latency_ms": 838.089916986064,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_1c1e8acd3e8f405f8fe804f3f9c64997"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2244,
+      "output_tokens": 43,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00604,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59557,
+      "known_cost_usd": 14.20011815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.50183315,
+      "remaining_usd": 84.49816685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.70271,
+          "accounted_with_reservations_usd": 14.004425,
+          "remaining_usd": 22.995575000000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9qBpkg1xXkNZy2bWSYa95XvD5wS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "0d61b2b39477806a6e0da9dca3ef547d9196a9f02c7fd61acf74714dfbbc5a0c",
+  "response": {
+    "id": "chatcmpl-Ei9qDr07qE2IbqYRWWjswiwR8d8oA",
+    "object": "chat.completion",
+    "created": 1794192969,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 시청의 지시를 어기고 안전 규정을 소홀히 하여 병에게 부상을 입힌 경우, 공동의 불법행위로 인한 손해에 대해 연대하여 배상할 책임이 있다. 을은 자신의 부주의로 신호를 위반하여 정에게 피해를 입힌 경우, 역시 공동의 불법행위로 인한 손해에 대해 연대하여 배상할 책임이 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2175,
+      "completion_tokens": 94,
+      "total_tokens": 2269,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1018.9502499997616,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_068f7b339a0247e7aabff3a8f44b25fe"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2175,
+      "output_tokens": 94,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0039775,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59561,
+      "known_cost_usd": 14.23266565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 15.53202065,
+      "remaining_usd": 84.46797935000001,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.7352575,
+          "accounted_with_reservations_usd": 14.0346125,
+          "remaining_usd": 22.9653875
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9qDr07qE2IbqYRWWjswiwR8d8oA",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

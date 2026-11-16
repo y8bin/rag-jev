@@ -1,0 +1,87 @@
+{
+  "key": "a0c8683b822085eb387185c95c1e57d0281a04fd50768a95ede06c48f72dca02",
+  "response": {
+    "id": "chatcmpl-Ei913SZlq3Evc0hGZdEVhSH9VMgaS",
+    "object": "chat.completion",
+    "created": 1794189797,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형사소송법 (배상명령의 신청) 피해자는 피고사건의 범죄행위로 인하여 발생한 손해에 관하여 민사소송이 법원에 계속 중인 경우에도 배상명령을 신청할 수 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1678,
+      "completion_tokens": 59,
+      "total_tokens": 1737,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1106.444000004558,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_a94418ae21d4435fabb553d1ed79337b"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1678,
+      "output_tokens": 59,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004785,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19767,
+      "known_cost_usd": 8.009006722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.009006722,
+      "remaining_usd": 91.990993278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.253005,
+          "accounted_with_reservations_usd": 7.253005,
+          "remaining_usd": 29.746995
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei913SZlq3Evc0hGZdEVhSH9VMgaS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

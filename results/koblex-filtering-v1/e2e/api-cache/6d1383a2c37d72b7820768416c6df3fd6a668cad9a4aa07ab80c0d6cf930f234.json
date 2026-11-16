@@ -1,0 +1,52 @@
+{
+  "key": "6d1383a2c37d72b7820768416c6df3fd6a668cad9a4aa07ab80c0d6cf930f234",
+  "text": "갑이 2023년 6월 1일에 천연가스 버스를 구매하는 경우에는 취득세가 부과되지만, 전기버스 또는 수소전기버스를 구매하는 경우에는 2027년 12월 31일까지 취득세가 면제된다.",
+  "trace": {
+    "latency_ms": 1955.0402089953423,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_de364780e0144ce3bfe70b3931733fdf"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2292,
+      "output_tokens": 65,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00638,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73612,
+      "known_cost_usd": 24.72590531,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.86286531,
+      "remaining_usd": 74.13713469,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.610825,
+          "accounted_with_reservations_usd": 23.747785,
+          "remaining_usd": 13.252215
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7Gzv8cmCjFgWc3rHZWdJzUaGum",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

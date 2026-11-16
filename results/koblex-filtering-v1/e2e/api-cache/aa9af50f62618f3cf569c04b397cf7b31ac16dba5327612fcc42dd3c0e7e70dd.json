@@ -1,0 +1,52 @@
+{
+  "key": "aa9af50f62618f3cf569c04b397cf7b31ac16dba5327612fcc42dd3c0e7e70dd",
+  "text": "은행이 공탁금을 수령하는 을에게 청구할 수 있는 보관료는 일반적으로 같은 종류의 물건에 청구하는 보관료에 따라 정해집니다. 갑이 변제의무를 완전히 면제받을 수 있는 방법에 대한 정보는 제공된 문맥에 포함되어 있지 않습니다.",
+  "trace": {
+    "latency_ms": 1473.0435829842463,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9b47edbaef8c403b8d7c5ca0e502c23a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2235,
+      "output_tokens": 71,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062975,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73616,
+      "known_cost_usd": 24.75283781,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 25.88979781,
+      "remaining_usd": 74.11020219,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.6377575,
+          "accounted_with_reservations_usd": 23.7747175,
+          "remaining_usd": 13.225282499999999
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK7PDQa0RDxizGEmAmggBqvA5np0",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "key": "fa1a2c72a20b9813217bd38f650dc79b19204d0f45216cd3466cc04fa4c8451b",
+  "response": {
+    "id": "chatcmpl-Ei9eS6jiIG21IngcvRgvwA77BSdWf",
+    "object": "chat.completion",
+    "created": 1794192240,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을 보험회사는 손해보험계약에 따라 보험사고로 인하여 생길 피보험자 갑의 재산상의 손해를 보상할 책임이 있다. 이 계약에서 정할 수 있는 보험의 목적은 피보험자의 재산상의 손해에 한정된다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2171,
+      "completion_tokens": 61,
+      "total_tokens": 2232,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1117.7457080048043,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b6ece258634a4f799bc502b646c29167"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2171,
+      "output_tokens": 61,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0060375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59015,
+      "known_cost_usd": 9.21018565,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.46602315,
+      "remaining_usd": 90.53397685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.7127775,
+          "accounted_with_reservations_usd": 7.968615,
+          "remaining_usd": 29.031385
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eS6jiIG21IngcvRgvwA77BSdWf",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

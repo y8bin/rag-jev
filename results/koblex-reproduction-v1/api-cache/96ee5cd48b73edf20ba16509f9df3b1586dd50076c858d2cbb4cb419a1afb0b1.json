@@ -1,0 +1,52 @@
+{
+  "key": "96ee5cd48b73edf20ba16509f9df3b1586dd50076c858d2cbb4cb419a1afb0b1",
+  "text": "위원회가 갑의 소속 기관에 대해 직권으로 조사를 시작한 조건은 인권침해나 차별행위가 있다고 믿을 만한 상당한 근거가 있고 그 내용이 중대하다고 인정될 때입니다. 만약 위원회의 권고가 이행되지 않을 경우, 갑의 소속 기관의 장은 그 이유를 위원회에 통지하여야 합니다.",
+  "trace": {
+    "latency_ms": 1308.2235000038054,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_997511fd071d4608a93866d011e0a1a3"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2319,
+      "output_tokens": 87,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0042675,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59808,
+      "known_cost_usd": 16.61095565,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 17.76119815,
+      "remaining_usd": 82.23880185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.1135475,
+          "accounted_with_reservations_usd": 16.26379,
+          "remaining_usd": 20.73621
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9w1YBvvc08sOvKXbD3cGRcdD1xe",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

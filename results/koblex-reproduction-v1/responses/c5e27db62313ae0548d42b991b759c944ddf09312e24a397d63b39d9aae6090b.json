@@ -1,0 +1,87 @@
+{
+  "key": "c5e27db62313ae0548d42b991b759c944ddf09312e24a397d63b39d9aae6090b",
+  "response": {
+    "id": "chatcmpl-Ei9t6Y7EOTNfbn70zWCkMWIMyFoDG",
+    "object": "chat.completion",
+    "created": 1794193148,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 원심판결에 대한 항소이유로 판결문에서 발견된 명백한 이유 모순을 들 수 있다. 항소기간의 마지막 날이 토요일인 경우, 그 날은 기간에 산입되지 않는다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2212,
+      "completion_tokens": 52,
+      "total_tokens": 2264,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 959.3492909916677,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_2dff539db21741458e93d3934eb2f8e3"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2212,
+      "output_tokens": 52,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00605,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59682,
+      "known_cost_usd": 15.39931565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.74548315,
+      "remaining_usd": 83.25451685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.9019075,
+          "accounted_with_reservations_usd": 15.248075,
+          "remaining_usd": 21.751925
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9t6Y7EOTNfbn70zWCkMWIMyFoDG",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

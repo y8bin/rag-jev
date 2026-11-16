@@ -1,0 +1,52 @@
+{
+  "key": "c51709267675f512640deaffa7094acf0216bb88c5d8967e0ffd1e0ef83fdebf",
+  "text": "검사가 갑의 횡령죄와 확정된 사기죄를 경합범으로 처리하고자 할 때, 공소장을 변경할 수 있는 경우는 법원의 허가를 얻어 공소사실의 동일성을 해하지 아니하는 한도에서 공소장에 기재한 공소사실 또는 적용법조의 추가, 철회 또는 변경을 할 수 있는 경우입니다.",
+  "trace": {
+    "latency_ms": 1845.181209006114,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_a39b4476294945d2b49f1e27ecd91a10"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2210,
+      "output_tokens": 85,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 73636,
+      "known_cost_usd": 24.87365281,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 26.01061281,
+      "remaining_usd": 73.98938719,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 22.7585725,
+          "accounted_with_reservations_usd": 23.8955325,
+          "remaining_usd": 13.104467499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiK86ILmNpkACyF0oqtbWUDKNlfbJ",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

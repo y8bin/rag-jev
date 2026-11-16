@@ -1,0 +1,52 @@
+{
+  "key": "78e31a1b616b521d4e252a77d536e27212afde94f7f47e20915986213c1140b8",
+  "text": "법원은 범죄사실의 증명이 없는 때에는 형사소송법 제325조에 따라 무죄를 선고하여야 한다. 위법한 절차에 따라 수집된 증거는 형사소송법 제308조의2에 따라 증거로 할 수 없으므로, 남은 증거만으로 범죄사실을 입증할 수 없는 경우 무죄 판결이 내려진다.",
+  "trace": {
+    "latency_ms": 1169.4312089966843,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4e34d88217da42b1881476461416a57a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2378,
+      "output_tokens": 92,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004465,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59828,
+      "known_cost_usd": 16.78452815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.03824065,
+      "remaining_usd": 81.96175935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.28712,
+          "accounted_with_reservations_usd": 16.5408325,
+          "remaining_usd": 20.4591675
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9w7h53h38JLh61pzTOtCDgRMo7Q",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

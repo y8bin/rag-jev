@@ -1,0 +1,52 @@
+{
+  "key": "791d46a9aece7726e2a5c6a837df702e952cc0405f63de06af78da716ab38e28",
+  "text": "갑이 집행유예 기간 중 고의로 상해죄를 저질러 금고 1년의 실형을 선고받고 그 판결이 확정된 경우, 집행유예의 선고는 효력을 잃는다.",
+  "trace": {
+    "latency_ms": 1166.0105420014588,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_89f0cf993eb74623b64a5414b0e9bdd6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2178,
+      "output_tokens": 54,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.003745,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59124,
+      "known_cost_usd": 10.08710315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 11.43714565,
+      "remaining_usd": 88.56285435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.589695,
+          "accounted_with_reservations_usd": 9.9397375,
+          "remaining_usd": 27.0602625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9gQjZcNrI4B1tJBq14tuAD4qYLb",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

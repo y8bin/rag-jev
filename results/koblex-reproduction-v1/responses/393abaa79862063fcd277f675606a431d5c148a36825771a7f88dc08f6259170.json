@@ -1,0 +1,87 @@
+{
+  "key": "393abaa79862063fcd277f675606a431d5c148a36825771a7f88dc08f6259170",
+  "response": {
+    "id": "chatcmpl-Ei90mla1682tbrh2h9rAs4NfHdWYt",
+    "object": "chat.completion",
+    "created": 1794189780,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형법 (준강간) 사람의 심신상실 또는 항거불능의 상태를 이용하여 간음한 자는 3년 이상의 유기징역에 처한다.\", \"형법 (강제추행) 폭행 또는 협박으로 사람을 추행한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1651,
+      "completion_tokens": 86,
+      "total_tokens": 1737,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1203.4202919894597,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6d53a8c821aa4442a0351c91bbe0bad4"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1651,
+      "output_tokens": 86,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0049875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19755,
+      "known_cost_usd": 7.948071722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.948071722,
+      "remaining_usd": 92.051928278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.19207,
+          "accounted_with_reservations_usd": 7.19207,
+          "remaining_usd": 29.80793
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90mla1682tbrh2h9rAs4NfHdWYt",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

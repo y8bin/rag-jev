@@ -1,0 +1,87 @@
+{
+  "key": "c775ff10bc0fa3c191a61d538d1c124a7d041562441c6608144f7f69701dc677",
+  "response": {
+    "id": "chatcmpl-Ei9hQY8hj99pSv3NENYAETmJkkEEp",
+    "object": "chat.completion",
+    "created": 1794192424,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을시는 대기오염경보를 발령할 때 미세먼지(PM-10), 초미세먼지(PM-2.5), 오존(O3)을 대상으로 하며, 미세먼지와 초미세먼지는 주의보와 경보 단계로, 오존은 주의보, 경보, 중대경보 단계로 구분된다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2461,
+      "completion_tokens": 82,
+      "total_tokens": 2543,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 993.2972089882242,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_bf6c19c84aae41fb8ef1929e2c420a12"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2461,
+      "output_tokens": 82,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0069725,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59176,
+      "known_cost_usd": 10.55001315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 11.90830315,
+      "remaining_usd": 88.09169685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.052605,
+          "accounted_with_reservations_usd": 10.410895,
+          "remaining_usd": 26.589105
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9hQY8hj99pSv3NENYAETmJkkEEp",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

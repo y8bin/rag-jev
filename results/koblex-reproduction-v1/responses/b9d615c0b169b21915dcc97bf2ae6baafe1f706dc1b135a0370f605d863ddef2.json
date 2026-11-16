@@ -1,0 +1,87 @@
+{
+  "key": "b9d615c0b169b21915dcc97bf2ae6baafe1f706dc1b135a0370f605d863ddef2",
+  "response": {
+    "id": "chatcmpl-Ei9kS2rdvJtyByhc9CVJgmMV3M5DG",
+    "object": "chat.completion",
+    "created": 1794192612,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 국민주택을 분양받을 때 한부모가족으로서 일정 비율이 우선 분양될 수 있도록 국가나 지방자치단체의 노력을 받을 수 있습니다. 갑의 자녀가 공공의 아동 편의시설 등을 이용할 때, 한부모가족의 아동으로서 우선적으로 이용할 수 있도록 국가나 지방자치단체의 노력을 받을 수 있습니다. 또한, 갑이 공공시설 내 매점을 설치하고자 할 경우, 공유 재산의 임대료 감면 혜택을 받을 수 있습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2365,
+      "completion_tokens": 125,
+      "total_tokens": 2490,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1247.7555829973426,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_6fdf512234c34399ace23a4ceca9c0ac"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2365,
+      "output_tokens": 125,
+      "cached_input_tokens": 2176,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0044425,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59327,
+      "known_cost_usd": 11.98478065,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 13.18300315,
+      "remaining_usd": 86.81699685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.4873725,
+          "accounted_with_reservations_usd": 11.685595,
+          "remaining_usd": 25.314405
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9kS2rdvJtyByhc9CVJgmMV3M5DG",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

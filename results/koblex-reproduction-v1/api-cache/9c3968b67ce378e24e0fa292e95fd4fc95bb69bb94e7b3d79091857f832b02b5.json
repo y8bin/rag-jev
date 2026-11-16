@@ -1,0 +1,52 @@
+{
+  "key": "9c3968b67ce378e24e0fa292e95fd4fc95bb69bb94e7b3d79091857f832b02b5",
+  "text": "갑이 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 제1심 판결법원에 청구에 관한 이의의 소를 제기하여야 한다.",
+  "trace": {
+    "latency_ms": 912.8397080057766,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_9966d7d21e53494181a74a9840abd696"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2267,
+      "output_tokens": 44,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0035475,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59782,
+      "known_cost_usd": 16.35719315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.61034565,
+      "remaining_usd": 82.38965435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.859785,
+          "accounted_with_reservations_usd": 16.1129375,
+          "remaining_usd": 20.8870625
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9v8n38XIGFuX55pYocOE7PPztw8",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

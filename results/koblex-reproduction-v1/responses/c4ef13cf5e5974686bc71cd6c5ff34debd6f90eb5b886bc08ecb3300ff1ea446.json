@@ -1,0 +1,87 @@
+{
+  "key": "c4ef13cf5e5974686bc71cd6c5ff34debd6f90eb5b886bc08ecb3300ff1ea446",
+  "response": {
+    "id": "chatcmpl-EiA4fJpgFgKzHD7qhT2VGQiI4SKOS",
+    "object": "chat.completion",
+    "created": 1794193865,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "후보자 갑이 사망했음에도 불구하고 투표용지에서 갑의 정보가 말소되지 않는 이유는 후보자등록기간이 지난 후에 후보자가 사퇴, 사망하거나 등록이 무효로 된 때라도 투표용지에 해당 후보자의 성명을 그대로 두기 때문이다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2216,
+      "completion_tokens": 67,
+      "total_tokens": 2283,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1286.992207998992,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c2be39ac0c6b46768e107a8b4def1253"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2216,
+      "output_tokens": 67,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00621,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60176,
+      "known_cost_usd": 20.06918065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 21.37216565,
+      "remaining_usd": 78.62783435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.5717725,
+          "accounted_with_reservations_usd": 19.8747575,
+          "remaining_usd": 17.1252425
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA4fJpgFgKzHD7qhT2VGQiI4SKOS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

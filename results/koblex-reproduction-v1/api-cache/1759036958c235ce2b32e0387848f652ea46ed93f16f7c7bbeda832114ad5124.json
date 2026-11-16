@@ -1,0 +1,52 @@
+{
+  "key": "1759036958c235ce2b32e0387848f652ea46ed93f16f7c7bbeda832114ad5124",
+  "text": "[\"청원경찰법 (무기 및 탄약의 관리) 청원경찰에게 지급된 무기 및 탄약의 수량을 줄이거나 회수하려는 경우, 관할 경찰서장은 청원경찰의 의견을 들을 기회를 제공하여야 한다.\", \"청원경찰법 (무기 및 탄약의 출납) 청원경찰에게 무기 및 탄약을 출납할 때에는 관할 경찰서장의 승인을 받아야 하며, 출납에 관한 기록을 유지하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1934.9672090029344,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_4c8ec689c89e45ec84ef204937385e15"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1716,
+      "output_tokens": 117,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00546,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19697,
+      "known_cost_usd": 7.668749222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.668749222,
+      "remaining_usd": 92.331250778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.9127475,
+          "accounted_with_reservations_usd": 6.9127475,
+          "remaining_usd": 30.087252499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8zRUe8tPlaJ7zdIDSKplwEsmLiS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

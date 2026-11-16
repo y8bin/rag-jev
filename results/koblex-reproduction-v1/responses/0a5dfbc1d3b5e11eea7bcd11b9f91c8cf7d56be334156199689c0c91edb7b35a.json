@@ -1,0 +1,87 @@
+{
+  "key": "0a5dfbc1d3b5e11eea7bcd11b9f91c8cf7d56be334156199689c0c91edb7b35a",
+  "response": {
+    "id": "chatcmpl-EiA0o3aicT1BWgx3AF8aNyMMUDAZM",
+    "object": "chat.completion",
+    "created": 1794193626,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "을이 퇴직금 제도를 설정하려면, 계속근로기간 1년에 대하여 30일분 이상의 평균임금을 퇴직금으로 지급할 수 있는 제도를 설정해야 합니다. \"평균임금\"은 이를 산정하여야 할 사유가 발생한 날 이전 3개월 동안에 그 근로자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액으로 정의됩니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2661,
+      "completion_tokens": 97,
+      "total_tokens": 2758,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1346.1412500037113,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8f62a3d6dd4a4f149834b61622f26077"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2661,
+      "output_tokens": 97,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0052225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60010,
+      "known_cost_usd": 18.50220315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 19.75935315,
+      "remaining_usd": 80.24064685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.004795,
+          "accounted_with_reservations_usd": 18.261945,
+          "remaining_usd": 18.738055
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA0o3aicT1BWgx3AF8aNyMMUDAZM",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "1fd45fbb909397a65da83a8cbbda2e9093a0232286ee8b42d9d88b261a2f05ee",
+  "text": "[\"도로교통법 (과태료 납부기한) 과태료는 납부고지서를 받은 날부터 60일 이내에 납부하여야 한다.\", \"도로교통법 (과태료 미납 시 조치) 과태료를 납부기한 내에 납부하지 아니한 경우에는 가산금이 부과되며, 계속하여 납부하지 아니할 때에는 체납처분을 할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1628.8203340081964,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f465d6cbb9b04842a064c02cd6042949"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1690,
+      "output_tokens": 104,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.005265,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19681,
+      "known_cost_usd": 7.593484222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.593484222,
+      "remaining_usd": 92.406515778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.8374825,
+          "accounted_with_reservations_usd": 6.8374825,
+          "remaining_usd": 30.1625175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8z2QdTs0aXgEqykUOQHxmCvWtVS",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

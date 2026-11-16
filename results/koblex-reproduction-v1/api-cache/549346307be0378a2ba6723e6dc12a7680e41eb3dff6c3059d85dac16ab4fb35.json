@@ -1,0 +1,52 @@
+{
+  "key": "549346307be0378a2ba6723e6dc12a7680e41eb3dff6c3059d85dac16ab4fb35",
+  "text": "갑은 귀속재산을 정부의 승인 없이 이동, 전대 또는 처분할 수 없다.",
+  "trace": {
+    "latency_ms": 821.8706250045216,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8b7b4d91bbdd489789fbdfa2123c3ef8"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2225,
+      "output_tokens": 22,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0057825,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59578,
+      "known_cost_usd": 14.38842315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 15.79337815,
+      "remaining_usd": 84.20662185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 12.891015,
+          "accounted_with_reservations_usd": 14.29597,
+          "remaining_usd": 22.70403
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9qIPW0288LjYBtaOIHBzAlgaOg2",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

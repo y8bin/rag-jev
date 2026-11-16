@@ -1,0 +1,52 @@
+{
+  "key": "3ee8d052e0b0bc42b0d3e2f44d3cded7187582058b4844b0a8abcee3e82da2f4",
+  "text": "갑은 전자금융거래법 제6조 제3항 제2호를 위반하여 접근매체를 대여한 행위로 인해 5년 이하의 징역 또는 3천만원 이하의 벌금에 처할 수 있다.",
+  "trace": {
+    "latency_ms": 1294.1987910016906,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_33aa64e40fc94fe9b8ca507b739a8457"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2642,
+      "output_tokens": 56,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004765,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60128,
+      "known_cost_usd": 19.61911565,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 20.86745065,
+      "remaining_usd": 79.13254935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.1217075,
+          "accounted_with_reservations_usd": 19.3700425,
+          "remaining_usd": 17.6299575
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA3fL2xKhlbL8ZqET4u44A1BnSfP",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

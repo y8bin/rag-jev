@@ -1,0 +1,87 @@
+{
+  "key": "2416ee56b6a9df6d548d17c98528d498842d8969fe80db2b85dbc346c8772a7b",
+  "response": {
+    "id": "chatcmpl-EiA8aHSM10a1SppZMZgfqDt0bEqlt",
+    "object": "chat.completion",
+    "created": 1794194108,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "행정소송법의 목적은 행정소송절차를 통해 행정청의 위법한 처분 및 공권력의 행사ㆍ불행사로 인한 국민의 권리 또는 이익의 침해를 구제하고, 공법상의 권리관계 또는 법적용에 관한 다툼을 적정하게 해결하는 데 있다. 행정심판법에 따라, 행정심판위원회는 필요하면 관련되는 심판청구를 병합하여 심리하거나 병합된 관련 청구를 분리하여 심리할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2296,
+      "completion_tokens": 124,
+      "total_tokens": 2420,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1251.389333003317,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_05460f87716441b0b505147e75405441"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2296,
+      "output_tokens": 124,
+      "cached_input_tokens": 2048,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00442,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60348,
+      "known_cost_usd": 21.73534315,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 22.93137815,
+      "remaining_usd": 77.06862185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.237935,
+          "accounted_with_reservations_usd": 21.43397,
+          "remaining_usd": 15.566030000000001
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA8aHSM10a1SppZMZgfqDt0bEqlt",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

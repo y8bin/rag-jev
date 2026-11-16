@@ -1,0 +1,52 @@
+{
+  "key": "1a436c7481aadffeceef4584be30d0cdae76f016cd8fef74619abdfba9888246",
+  "text": "갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 수취한 과실을 반환하고, 소비하였거나 훼손 또는 수취하지 못한 과실의 대가를 보상하여야 한다. 또한, 받은 이익에 이자를 붙여 반환하고 손해가 있으면 이를 배상하여야 하며, 이자율은 연 5%이다.",
+  "trace": {
+    "latency_ms": 1360.37337500602,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_619b89a53e9f41118cf695e614d18795"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2273,
+      "output_tokens": 92,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0066025,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60213,
+      "known_cost_usd": 20.44607065,
+      "unsettled_attempts": 11,
+      "accounted_with_reservations_usd": 21.54144065,
+      "remaining_usd": 78.45855935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 18.9486625,
+          "accounted_with_reservations_usd": 20.0440325,
+          "remaining_usd": 16.9559675
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA5bMVpWYpXRc5pTkMkppKH3L0bC",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

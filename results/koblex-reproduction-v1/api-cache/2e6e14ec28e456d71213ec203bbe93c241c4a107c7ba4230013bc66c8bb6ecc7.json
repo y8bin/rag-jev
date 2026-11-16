@@ -1,0 +1,52 @@
+{
+  "key": "2e6e14ec28e456d71213ec203bbe93c241c4a107c7ba4230013bc66c8bb6ecc7",
+  "text": "갑은 사모간접투자기구의 경우 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득할 수 있으며, 이와 관련하여 투자자 보호를 위한 필요한 사항은 대통령령으로 정한다. 갑이 간접투자자산 운용업법을 위반했을 때는 5년 이하의 징역 또는 3천만원 이하의 벌금에 처할 수 있다.",
+  "trace": {
+    "latency_ms": 1133.8299159979215,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_b85e244dbe874c448ca1a26b8e0e07a8"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2326,
+      "output_tokens": 98,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006795,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59963,
+      "known_cost_usd": 18.03630065,
+      "unsettled_attempts": 12,
+      "accounted_with_reservations_usd": 19.23338065,
+      "remaining_usd": 80.76661935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.5388925,
+          "accounted_with_reservations_usd": 17.7359725,
+          "remaining_usd": 19.2640275
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9zoHjonLo6dz41Rzle5694MuFKO",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

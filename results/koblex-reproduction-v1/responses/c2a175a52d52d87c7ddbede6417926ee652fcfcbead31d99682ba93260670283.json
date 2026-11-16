@@ -1,0 +1,87 @@
+{
+  "key": "c2a175a52d52d87c7ddbede6417926ee652fcfcbead31d99682ba93260670283",
+  "response": {
+    "id": "chatcmpl-Ei921z5HXDvvCLTNFasjE1UeCV9w2",
+    "object": "chat.completion",
+    "created": 1794189857,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"민법 (부동산 부합) 부동산에 부합된 물건은 그 부동산의 소유자의 소유로 한다.\", \"민법 (부당이득) 타인의 재산으로 인하여 이익을 얻고 그로 인하여 타인에게 손해를 가한 자는 그 이익을 반환하여야 한다.\", \"민법 (손해배상청구) 고의 또는 과실로 인한 불법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1683,
+      "completion_tokens": 123,
+      "total_tokens": 1806,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1496.6152499982854,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_70fe41cf9b4a44c69f90c4445063e2c6"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1683,
+      "output_tokens": 123,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0054375,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19803,
+      "known_cost_usd": 8.194601722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.194601722,
+      "remaining_usd": 91.805398278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.4386,
+          "accounted_with_reservations_usd": 7.4386,
+          "remaining_usd": 29.5614
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei921z5HXDvvCLTNFasjE1UeCV9w2",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

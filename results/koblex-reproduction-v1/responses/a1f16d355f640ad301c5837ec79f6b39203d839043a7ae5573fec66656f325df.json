@@ -1,0 +1,87 @@
+{
+  "key": "a1f16d355f640ad301c5837ec79f6b39203d839043a7ae5573fec66656f325df",
+  "response": {
+    "id": "chatcmpl-Ei90xKZS7aGM4J0EPWzhDghGIKj0g",
+    "object": "chat.completion",
+    "created": 1794189791,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"민법 (대리권의 남용) 대리인이 본인을 위하여 하지 아니하고 자기 또는 제3자의 이익을 위하여 대리행위를 한 경우에는 본인은 그 행위에 대하여 책임을 지지 아니한다.\", \"민법 (표현대리) 대리권이 없는 자가 본인을 위한 것임을 표시하고 계약을 체결한 경우, 상대방이 대리권이 있다고 믿을 만한 정당한 사유가 있는 때에는 본인은 그 행위에 대하여 책임을 진다.\", \"어음법 (어음의 변조) 어음이 변조된 경우, 변조 후에 서명한 자는 변조된 내용에 따라 책임을 지며, 변조 전에 서명한 자는 변조 전의 내용에 따라 책임을 진다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1774,
+      "completion_tokens": 178,
+      "total_tokens": 1952,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 2138.9491250010906,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_da5620490c6843898831c99f9c4e2b88"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1774,
+      "output_tokens": 178,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006215,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19763,
+      "known_cost_usd": 7.991521722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.991521722,
+      "remaining_usd": 92.008478278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.23552,
+          "accounted_with_reservations_usd": 7.23552,
+          "remaining_usd": 29.76448
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei90xKZS7aGM4J0EPWzhDghGIKj0g",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

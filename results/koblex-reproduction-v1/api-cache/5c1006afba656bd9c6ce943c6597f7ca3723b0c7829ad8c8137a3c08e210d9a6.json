@@ -1,0 +1,52 @@
+{
+  "key": "5c1006afba656bd9c6ce943c6597f7ca3723b0c7829ad8c8137a3c08e210d9a6",
+  "text": "질권의 효력이 발생하기 위해서는 을이 주식의 주권을 갑에게 교부하여야 합니다. 질권의 목적으로 할 수 있는 재산권의 범위는 주식입니다.",
+  "trace": {
+    "latency_ms": 898.377707999316,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_71bdbf694cca4846a60622f1fd5d7679"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2248,
+      "output_tokens": 44,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00366,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60253,
+      "known_cost_usd": 20.80033065,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 22.10730565,
+      "remaining_usd": 77.89269435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.3029225,
+          "accounted_with_reservations_usd": 20.6098975,
+          "remaining_usd": 16.3901025
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA5qyhKk1ErjYP7onsotLRuCXASz",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

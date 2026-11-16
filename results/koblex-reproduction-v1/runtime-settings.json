@@ -1,0 +1,48 @@
+{
+  "recording_time": "during scoring, before answer generation",
+  "settings": {
+    "concurrency": 4,
+    "timeout_seconds": 60,
+    "max_retries": 1,
+    "max_output_tokens": 2000,
+    "temperature": 0.01,
+    "generation_top_p": 0.9,
+    "budget_limit_usd": 100.0,
+    "budget_openai_limit_usd": 37.0
+  },
+  "source_sha256": {
+    "src/legal_rag_jev/koblex_lf_eval.py": "cbf55bb330060f5b3fa6773d8ca7338afbbfc731f383dae87ccaefffe16eca8c",
+    "src/legal_rag_jev/annotation.py": "b30ddfc9d6b6146526f315559319682c571e16339da3e31221ee3bbfcfdb7306",
+    "src/legal_rag_jev/viewer.py": "e88e40d55d4da3261a94f5ce618eb2f39b01822c450e512111c240cdd01b5dc9",
+    "src/legal_rag_jev/config.py": "cf3acbb741448968ee74a2cfa614c28fd3334cbd5d29b7375e1b545e7f8c798e",
+    "src/legal_rag_jev/index.py": "dd862b325ecacbb593fad426610dc691c3635977df9accde205d5a99ba681df1",
+    "src/legal_rag_jev/openai_responses.py": "a81de1bcd945cdb9b8e0f8b406b1d0c2aace15cfa050d686c360e8b1e59f15ba",
+    "src/legal_rag_jev/budget.py": "23bc816135d5e2fbc00e82ade025fc7ba27266f1a7fa3550f9d4198e3460449a",
+    "src/legal_rag_jev/retrievers.py": "3685929a26ba5d93f58d256ffe5615a4332f180468e4c29f3d2f06672fbcebdb",
+    "src/legal_rag_jev/evaluation.py": "e8a5ee35f8622ed8379411a263f3a3ba7d752d7d4613afdd811e8bb59ebdc6a7",
+    "src/legal_rag_jev/io.py": "0fd478e66ebe114a3498ff2a3cf4506e3c74c6406d04a4e91641b50ca174aeed",
+    "src/legal_rag_jev/cache.py": "0fd3a3e0d4cc0fa7b1a5c75208ec778e6b1a6fb0e689918d5faad7eb78ef98cd",
+    "src/legal_rag_jev/__init__.py": "2a2891c52ea4ab6d27592ba0c12a3c4d924d0702c681a0c53b535b2084eb09df",
+    "src/legal_rag_jev/prompts.py": "c41d62a3ab978e97365e00fcf50162dc7b59f6b7d6ddf6ab484d1547f38394e2",
+    "src/legal_rag_jev/existing_index.py": "f063f610a9dd192f1044b8e28529bab9c27f3b0b8830e03c8a3a7bf9f5743671",
+    "src/legal_rag_jev/providers.py": "82b07002fa8dedde13b14882d3a897fa4f6e04b0771865dcb047bc5440d378da",
+    "src/legal_rag_jev/cli.py": "fc22dc61a1dfb9cca9db7d2ec137360d7311cb79a36c1b65ddbff1fadda6acba",
+    "src/legal_rag_jev/pipeline.py": "d92deb9e3216279b9c6a0614cdd2a15d0d50f1c7cef48ef9dd8303c8ccc21c80",
+    "src/legal_rag_jev/koblex_analysis.py": "3ca91d099a7c40f876fd0d2703cb05ab4439bde79b27f4831336a50fca4f2823",
+    "src/legal_rag_jev/mcq.py": "c0a6dbfc226e801f0ad4dbce6ae95ddf028dc2e485d4399cda88f6cb8865b6eb",
+    "src/legal_rag_jev/reports.py": "27402040f280814cc52b020b988ed0a0922bfe6edeab5dc1c3283c166e0a7f2d",
+    "src/legal_rag_jev/lexical.py": "bf27c12e48d0fa1d3a0d95f1428658c01d6c08043c3b82da3b0cb4b8dd003019",
+    "src/legal_rag_jev/koblex.py": "073851b0e9fc6f8e8c5f68e7e1d69e59f813c6d7e47f819c6e13ee102facabc8",
+    "src/legal_rag_jev/readiness.py": "4a658f6782afcf1a422b8ad8694d062eedf6999752ce14841076ea675ffc2afc",
+    "src/legal_rag_jev/koblex_timing.py": "661c137f576e40b3e24acc407793502ffdfdcda35f4ad70816ea86214ed747b3",
+    "src/legal_rag_jev/kbl.py": "4ef69897df3cf757604bf42af9e5d280b77888f9889a65c41aa6184cbeb479ed",
+    "src/legal_rag_jev/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "src/legal_rag_jev/corpus.py": "57a387582be390670bcb73cdf447716263d0379d6d025eb074ccd0465d90012d",
+    "src/legal_rag_jev/schema.py": "77c3855f53ff605ae7effa605bac4057f7fb4836f3e4b3df1d8fd77a169a9035"
+  },
+  "config_sha256": "de544a1c99aac21061eb10066e46b3ed5d748d8136f78e4bc7d4a0bcf0494aff",
+  "notes": [
+    "Retries/timeouts and budget wrapper differ from original aiohttp utility; requests and raw outputs are retained.",
+    "No credentials recorded."
+  ]
+}

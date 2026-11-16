@@ -1,0 +1,52 @@
+{
+  "key": "dc798b1d56ff29651cb1c565c38edc15eea9b6717f9fa3769c13ddc589e69113",
+  "text": "[\"민법 (소유물방해제거청구권) 소유자는 소유물을 방해하는 자에 대하여 그 방해의 제거를 청구할 수 있다.\", \"민법 (권리남용금지) 권리는 남용하지 못한다.\"]",
+  "trace": {
+    "latency_ms": 1105.7591669959947,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8945b91bb5234cbab74f6a2b27b4cfbf"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1721,
+      "output_tokens": 60,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0049025,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19629,
+      "known_cost_usd": 7.332911722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.332911722,
+      "remaining_usd": 92.667088278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.57691,
+          "accounted_with_reservations_usd": 6.57691,
+          "remaining_usd": 30.423090000000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xiosncloYoJJ9Eev4HYlXwKJts",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

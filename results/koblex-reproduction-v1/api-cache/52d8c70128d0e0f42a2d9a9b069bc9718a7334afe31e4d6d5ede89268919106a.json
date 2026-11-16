@@ -1,0 +1,52 @@
+{
+  "key": "52d8c70128d0e0f42a2d9a9b069bc9718a7334afe31e4d6d5ede89268919106a",
+  "text": "[\"형법 (집행유예의 실효) 집행유예의 선고를 받은 자가 그 유예기간 중 고의로 범한 죄로 금고 이상의 형의 선고를 받아 그 판결이 확정된 때에는 집행유예의 선고는 효력을 잃는다.\"]",
+  "trace": {
+    "latency_ms": 1094.1494169965154,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_deecc3a8e2b84a1db6e0d994af362c73"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1674,
+      "output_tokens": 69,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.004875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19609,
+      "known_cost_usd": 7.234354222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.234354222,
+      "remaining_usd": 92.76564577799999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.4783525,
+          "accounted_with_reservations_usd": 6.4783525,
+          "remaining_usd": 30.5216475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xHbrqfMg9OsTEtWQq5HNOFr3Eb",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

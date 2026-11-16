@@ -1,0 +1,52 @@
+{
+  "key": "b3453cb05a8c5fbbf18a411dc7232143581f9a38a5ed25da9a3edf20d5e421d5",
+  "text": "[\"공직선거법 (여론조사기관의 등록 요건) 선거에 관한 여론조사를 공표하거나 보도할 목적으로 실시하려는 자는 중앙선거관리위원회규칙으로 정하는 요건을 갖추어 관할 선거여론조사심의위원회에 등록하여야 한다.\", \"공직선거법 (등록 신청 처리 절차) 관할 선거여론조사심의위원회는 등록 신청을 받은 날부터 10일 이내에 등록 여부를 결정하고 신청인에게 통지하여야 한다.\", \"공직선거법 (등록증 교부 후 정보 공개) 등록증이 교부된 여론조사기관에 관한 정보는 일반 국민이 열람할 수 있도록 공개하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 2242.5978329993086,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_ed93eb7f0bcf42d394719432c6b90aa9"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1775,
+      "output_tokens": 169,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0061275,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19685,
+      "known_cost_usd": 7.613091722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.613091722,
+      "remaining_usd": 92.38690827799999,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.85709,
+          "accounted_with_reservations_usd": 6.85709,
+          "remaining_usd": 30.14291
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8z8R2l3aEhVgkgGYRMzG6xkQ7Oy",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "9b01a6aee8aea4ccaaf11a66c180ad7243527dae2e085ac13bda1b6d0e564077",
+  "text": "The provided Context does not specify the exact number of times 갑 and 을 can conduct broadcasting speeches and newspaper advertisements during the presidential election campaign.",
+  "trace": {
+    "latency_ms": 822.6444579922827,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_d054e23f120a4a0687133007803821b8"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2156,
+      "output_tokens": 27,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00326,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59185,
+      "known_cost_usd": 10.63670565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 11.98812565,
+      "remaining_usd": 88.01187435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 9.1392975,
+          "accounted_with_reservations_usd": 10.4907175,
+          "remaining_usd": 26.509282499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9hS37XrcYRUVkYT1S6CK3mIdJqF",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

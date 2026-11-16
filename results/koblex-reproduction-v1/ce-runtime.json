@@ -1,0 +1,6 @@
+{
+  "device": "mps:0",
+  "dtype": "torch.float32",
+  "max_length": 8192,
+  "tokenizer_max_length": 8192
+}

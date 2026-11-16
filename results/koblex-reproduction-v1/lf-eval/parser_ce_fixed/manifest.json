@@ -1,0 +1,17 @@
+{
+  "signature": {
+    "prediction_sha256": "e4981ae96b4cfbfae75e02f06d8225607faa477b7d3fb4d825ddf48a4a018e63",
+    "gold_sha256": "d0f7214a9d2e33c7367d687003d68a3f360b094a035b70ffcfb41254d4ece12b",
+    "questions_sha256": "2144be61214cab88097b7ef43427923a2f7b334fe578a4ae2a15965f449344c4",
+    "rubric_sha256": "95bf7c61c635079c766a3bbdfc383e4adb40e3661c0df2e706b15a164c9da86a",
+    "model": "gpt-4o-2024-08-06",
+    "deepeval": "4.3.3",
+    "openai": "3.46.0",
+    "top_logprobs": 20,
+    "max_output_tokens": 2000,
+    "temperature": 0,
+    "score_scale": "framework 0..1, paper table multiplies by 100",
+    "answer_clip_chars": 800
+  },
+  "completed": true
+}

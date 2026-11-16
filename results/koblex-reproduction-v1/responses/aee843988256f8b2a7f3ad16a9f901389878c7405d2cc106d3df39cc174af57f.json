@@ -1,0 +1,87 @@
+{
+  "key": "aee843988256f8b2a7f3ad16a9f901389878c7405d2cc106d3df39cc174af57f",
+  "response": {
+    "id": "chatcmpl-Ei9w7jPhzJvWZdDVJ49fAvz5MetLO",
+    "object": "chat.completion",
+    "created": 1794193335,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "소송무능력자인 갑에게 소송 문서를 송달할 때는 그의 법정대리인에게 송달해야 한다. 을이 군사용 청사에 소속되어 근무 중이라면, 병에게 송달하는 것이 적절하다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2269,
+      "completion_tokens": 55,
+      "total_tokens": 2324,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1046.923332993174,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e7b3914c88bc49dbb497630ff5414abd"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2269,
+      "output_tokens": 55,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59826,
+      "known_cost_usd": 16.77356565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 18.02802315,
+      "remaining_usd": 81.97197685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.2761575,
+          "accounted_with_reservations_usd": 16.530615,
+          "remaining_usd": 20.469385
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9w7jPhzJvWZdDVJ49fAvz5MetLO",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

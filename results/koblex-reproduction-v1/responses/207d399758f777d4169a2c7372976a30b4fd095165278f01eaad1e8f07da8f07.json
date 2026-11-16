@@ -1,0 +1,87 @@
+{
+  "key": "207d399758f777d4169a2c7372976a30b4fd095165278f01eaad1e8f07da8f07",
+  "response": {
+    "id": "chatcmpl-EiA6jNMVXxVPVIoqTakJgNYtnH5uH",
+    "object": "chat.completion",
+    "created": 1794193993,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우, 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2387,
+      "completion_tokens": 62,
+      "total_tokens": 2449,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 886.0985420033103,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_929fbde5cf3c44f1911b4dc1a25baf79"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2387,
+      "output_tokens": 62,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0065875,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60276,
+      "known_cost_usd": 21.04720065,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 22.29665065,
+      "remaining_usd": 77.70334935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 19.5497925,
+          "accounted_with_reservations_usd": 20.7992425,
+          "remaining_usd": 16.2007575
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA6jNMVXxVPVIoqTakJgNYtnH5uH",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

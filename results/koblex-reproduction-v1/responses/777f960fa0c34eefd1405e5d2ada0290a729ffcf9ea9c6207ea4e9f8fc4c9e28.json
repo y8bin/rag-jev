@@ -1,0 +1,87 @@
+{
+  "key": "777f960fa0c34eefd1405e5d2ada0290a729ffcf9ea9c6207ea4e9f8fc4c9e28",
+  "response": {
+    "id": "chatcmpl-Ei91htlQEj7WVP8Mz0v4PjmFuNRBK",
+    "object": "chat.completion",
+    "created": 1794189837,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"하천법 (하천공사시행계획의 수립 및 변경) 하천관리청은 하천공사시행계획을 수립하거나 변경한 경우에는 그 계획의 목적, 범위, 내용 및 시행기간 등을 포함하여야 한다.\", \"하천법 (고시의무) 하천관리청은 하천공사시행계획을 수립하거나 변경한 경우에는 그 주요 내용을 관보 또는 공보에 고시하여야 한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1660,
+      "completion_tokens": 105,
+      "total_tokens": 1765,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 1421.0557090118527,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_5de06ac2c20846358350dafed9fa4d6a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1660,
+      "output_tokens": 105,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0052,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19791,
+      "known_cost_usd": 8.135171722,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 8.135171722,
+      "remaining_usd": 91.864828278,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.37917,
+          "accounted_with_reservations_usd": 7.37917,
+          "remaining_usd": 29.620829999999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei91htlQEj7WVP8Mz0v4PjmFuNRBK",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

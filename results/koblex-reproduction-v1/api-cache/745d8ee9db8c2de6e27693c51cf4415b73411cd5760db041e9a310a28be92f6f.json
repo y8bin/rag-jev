@@ -1,0 +1,52 @@
+{
+  "key": "745d8ee9db8c2de6e27693c51cf4415b73411cd5760db041e9a310a28be92f6f",
+  "text": "[\"형사소송법 (영장청구의 거부) 검사가 영장청구를 거부한 경우, 사법경찰관은 그 사유를 기록하여 상급기관에 보고할 수 있다.\", \"형사소송법 (정신적 장애인의 보호) 정신적 장애가 있는 피의자에 대해서는 특별한 보호조치를 취하여야 하며, 필요한 경우 보호관찰소에 보호를 요청할 수 있다.\"]",
+  "trace": {
+    "latency_ms": 1422.061749995919,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8e6319ad5ef04214baac2ab9e86ca73e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1675,
+      "output_tokens": 99,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0034175,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19661,
+      "known_cost_usd": 7.497104222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.497104222,
+      "remaining_usd": 92.502895778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.7411025,
+          "accounted_with_reservations_usd": 6.7411025,
+          "remaining_usd": 30.2588975
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8yV3JJR7YWdudmiF4BLA8E0cHDC",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

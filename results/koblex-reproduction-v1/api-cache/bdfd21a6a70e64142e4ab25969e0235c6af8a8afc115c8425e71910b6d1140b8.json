@@ -1,0 +1,52 @@
+{
+  "key": "bdfd21a6a70e64142e4ab25969e0235c6af8a8afc115c8425e71910b6d1140b8",
+  "text": "[\"농촌개발법 (분쟁조정위원회 구성) 농촌개발사업 시행자는 환지에 따른 분쟁을 조정하기 위하여 분쟁조정위원회를 구성하여야 한다.\", \"농촌개발법 (환지처분에 따른 등기) 환지처분에 따른 토지 및 건물의 등기는 환지처분 공고일로부터 60일 이내에 이루어져야 한다.\"]",
+  "trace": {
+    "latency_ms": 1276.5859580104006,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_3b166dcedfdb43ce9d9a3974d29ec0c0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1695,
+      "output_tokens": 97,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0052075,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19680,
+      "known_cost_usd": 7.588219222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.588219222,
+      "remaining_usd": 92.411780778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.8322175,
+          "accounted_with_reservations_usd": 6.8322175,
+          "remaining_usd": 30.1677825
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8z1lcwNlZWBV57NAbrMSrUFAvfp",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

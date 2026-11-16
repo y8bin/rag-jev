@@ -1,0 +1,52 @@
+{
+  "key": "916d1f6780633c7318d2bb07a0f291c0352038daa76173e18fd92ca3f65154fc",
+  "text": "검사는 법원의 허가를 얻어 공소사실의 동일성을 해하지 아니하는 한도에서 공소장을 변경할 수 있다. 갑의 횡령죄와 확정된 사기죄는 판결확정 전에 범한 죄로 경합범으로 처리될 수 있다.",
+  "trace": {
+    "latency_ms": 1648.9330409967806,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8b5476dc2a3b476cad34dcf973f8effc"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2284,
+      "output_tokens": 64,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00635,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59375,
+      "known_cost_usd": 12.41659815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 13.77556315,
+      "remaining_usd": 86.22443685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 10.91919,
+          "accounted_with_reservations_usd": 12.278155,
+          "remaining_usd": 24.721845000000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9mDFdly4uA14387dMHWyMPSZ0dJ",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

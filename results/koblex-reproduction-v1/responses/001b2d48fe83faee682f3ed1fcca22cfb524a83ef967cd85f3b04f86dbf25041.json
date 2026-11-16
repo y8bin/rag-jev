@@ -1,0 +1,87 @@
+{
+  "key": "001b2d48fe83faee682f3ed1fcca22cfb524a83ef967cd85f3b04f86dbf25041",
+  "response": {
+    "id": "chatcmpl-EiA9igqoprcqI4w9vDEoaTxrC4ANd",
+    "object": "chat.completion",
+    "created": 1794194178,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "전세사기피해자인 갑이 임차권등기명령을 신청하여 임차권등기를 한 경우, 등록면허세는 2026년 12월 31일까지 면제된다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2445,
+      "completion_tokens": 46,
+      "total_tokens": 2491,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1851.301707996754,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_128b2a5a60744c34a40013f0fa025bda"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2445,
+      "output_tokens": 46,
+      "cached_input_tokens": 1792,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0043325,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60413,
+      "known_cost_usd": 22.35152565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 23.61399065,
+      "remaining_usd": 76.38600935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 20.8541175,
+          "accounted_with_reservations_usd": 22.1165825,
+          "remaining_usd": 14.8834175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA9igqoprcqI4w9vDEoaTxrC4ANd",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

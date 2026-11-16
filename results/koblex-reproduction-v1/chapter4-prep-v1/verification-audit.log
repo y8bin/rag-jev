@@ -1,0 +1,22 @@
+{
+  "status": "PASS_AUTOMATED_ARTIFACT_INTEGRITY",
+  "audited_at_utc": "2026-11-09T05:38:41.590007+00:00",
+  "cleanup_scientific_results_unchanged": true,
+  "questions": 226,
+  "corpus_rows": 233544,
+  "parametric_provisions": 478,
+  "candidate_row_pairs_per_ranker": 47800,
+  "CE_maximum_input_tokens": 1420,
+  "CE_truncated_pairs": 0,
+  "CE_raw_fixed_different_provision_lists": 154,
+  "CE_raw_fixed_different_provision_sets": 153,
+  "CE_raw_fixed_different_answers": 147,
+  "invalid_LLM_choice_fallbacks_fixed_arms": 0,
+  "generated_answers": 678,
+  "LF_evaluations": 678,
+  "empty_generated_answers": 0,
+  "human_review_answers_prepared": 180,
+  "human_judgments_completed": 0,
+  "audit_script_sha256": "df06660dff4ac04f129d707dbac7539c851e2bbb8374fdc4d6a96a68b912a896",
+  "cleanup_manifest_sha256": "36c4afe827a1ea6221446dc251e613c9760f71abbf0c48d02ba1f28d4c9f1fea"
+}

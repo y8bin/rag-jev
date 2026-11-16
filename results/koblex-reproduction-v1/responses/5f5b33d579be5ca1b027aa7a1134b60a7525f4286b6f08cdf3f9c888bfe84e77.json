@@ -1,0 +1,87 @@
+{
+  "key": "5f5b33d579be5ca1b027aa7a1134b60a7525f4286b6f08cdf3f9c888bfe84e77",
+  "response": {
+    "id": "chatcmpl-EiA00w8m4rETh0kvC7dST00Qiedq1",
+    "object": "chat.completion",
+    "created": 1794193576,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "갑은 공공주택사업자로서 사업계획의 승인을 받기 위해 국토교통부장관에게 주택과 그 부대시설 및 복리시설의 배치도, 대지조성공사 설계도서 등 대통령령으로 정하는 서류를 제출해야 합니다. 준공검사를 받기 위해 제출해야 하는 서류에 대한 구체적인 내용은 제공된 문맥에 포함되어 있지 않습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2403,
+      "completion_tokens": 95,
+      "total_tokens": 2498,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1160.8590830001049,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_65fbc16713bb4ebab66d7b1ee2676f6e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2403,
+      "output_tokens": 95,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0045575,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59997,
+      "known_cost_usd": 18.36831815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 19.72808565,
+      "remaining_usd": 80.27191435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 16.87091,
+          "accounted_with_reservations_usd": 18.2306775,
+          "remaining_usd": 18.7693225
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA00w8m4rETh0kvC7dST00Qiedq1",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

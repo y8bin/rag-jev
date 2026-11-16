@@ -1,0 +1,87 @@
+{
+  "key": "557dac3bb0d586cdb7b4bb5dae26b6347bef8f76bd2e877f160b2e911849dcc2",
+  "response": {
+    "id": "chatcmpl-Ei8wqEgZWqiAyd0dQkG9RXqA1G2Vr",
+    "object": "chat.completion",
+    "created": 1794189536,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[\"형법 (야간주거침입절도) 야간에 사람의 주거, 관리하는 건조물, 선박 또는 항공기에 침입하여 절도한 자는 5년 이하의 징역에 처한다.\"]",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1620,
+      "completion_tokens": 54,
+      "total_tokens": 1674,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_e85bcce457"
+  },
+  "trace": {
+    "latency_ms": 2004.5032089983579,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_60fcbc9358bd434bb2cef48cde24da0e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1620,
+      "output_tokens": 54,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00459,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19589,
+      "known_cost_usd": 7.140284222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.140284222,
+      "remaining_usd": 92.859715778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.3842825,
+          "accounted_with_reservations_usd": 6.3842825,
+          "remaining_usd": 30.6157175
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8wqEgZWqiAyd0dQkG9RXqA1G2Vr",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

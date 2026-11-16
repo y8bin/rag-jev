@@ -1,0 +1,52 @@
+{
+  "key": "da3f181dbd5eaaae5f5465474d97f670ae3467a8ba1a5dabd7b93e1ef6684760",
+  "text": "갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 형법 제20조에 따라 법령에 의한 행위로 인정되어 벌하지 아니하는 절차를 통해 무죄 판결을 받게 된다.",
+  "trace": {
+    "latency_ms": 1571.2483749957755,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e5beb83aa65b4f269604ef81cb0283b3"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2241,
+      "output_tokens": 72,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0063225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59624,
+      "known_cost_usd": 14.83773565,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.26226065,
+      "remaining_usd": 83.73773935,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.3403275,
+          "accounted_with_reservations_usd": 14.7648525,
+          "remaining_usd": 22.2351475
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9s2RA3AgrxtGvwxVCwmy33aeDIH",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

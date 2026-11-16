@@ -1,0 +1,52 @@
+{
+  "key": "ce1e0cf5463049df17a0eca96acc8bda6fcb09de1a5d7d9c42e18e9e27c49ebc",
+  "text": "을(국토교통부장관)은 갑의 도로관리 협회 설립을 인가한 후 그 사실을 공고하여야 하며, 협회에 대한 감독은 필요 시 업무에 관한 사항을 보고하게 하거나 자료 제출 등 필요한 사항을 명할 수 있다.",
+  "trace": {
+    "latency_ms": 1179.4645829941146,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_8e127ac5eea346829b7a4e0f14ef6127"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2201,
+      "output_tokens": 62,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0037225,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59050,
+      "known_cost_usd": 9.52271815,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.68113565,
+      "remaining_usd": 90.31886435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.02531,
+          "accounted_with_reservations_usd": 8.1837275,
+          "remaining_usd": 28.8162725
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eblJ2RINt3duFMR3jXgvpnZamD",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "1e6466d46b1185d06479b86b7744eb45618cb31bdb9b12915c73bbd82a97bac6",
+  "text": "갑이 컴퓨터 입력 행위로 실제로 자금을 송금하여 이익을 취득했을 경우, 10년 이하의 징역 또는 2천만원 이하의 벌금에 처할 수 있다. 갑이 이익을 실제로 취득하지 못한 경우에도 처벌이 가능하며, 시효는 범죄행위가 종료한 때로부터 진행된다.",
+  "trace": {
+    "latency_ms": 1380.2510000095936,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_49f2bdb31d6442c79e9df8e622409a1f"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2329,
+      "output_tokens": 83,
+      "cached_input_tokens": 1920,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0042525,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 60031,
+      "known_cost_usd": 18.69194815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 20.09137565,
+      "remaining_usd": 79.90862435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 17.19454,
+          "accounted_with_reservations_usd": 18.5939675,
+          "remaining_usd": 18.4060325
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-EiA0vLIeHZMj7OwLlc25tz9nKwVx2",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

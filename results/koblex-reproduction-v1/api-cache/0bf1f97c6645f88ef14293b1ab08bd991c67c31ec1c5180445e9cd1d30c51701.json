@@ -1,0 +1,52 @@
+{
+  "key": "0bf1f97c6645f88ef14293b1ab08bd991c67c31ec1c5180445e9cd1d30c51701",
+  "text": "[\"농지법 (농지전용허가) 농지를 다른 용도로 전용하려는 자는 농림축산식품부장관의 허가를 받아야 한다.\", \"농지법 (농지보전부담금) 농지를 전용하려는 자는 농지보전부담금을 납부하여야 한다.\"]",
+  "trace": {
+    "latency_ms": 1006.4093330001924,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_c475290523374a5fbbe8fd9221dfeec0"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1696,
+      "output_tokens": 76,
+      "cached_input_tokens": 1408,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00324,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19724,
+      "known_cost_usd": 7.803174222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.803174222,
+      "remaining_usd": 92.196825778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 7.0471725,
+          "accounted_with_reservations_usd": 7.0471725,
+          "remaining_usd": 29.952827499999998
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei905EsqgOruECjffEjxgMja8vifm",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

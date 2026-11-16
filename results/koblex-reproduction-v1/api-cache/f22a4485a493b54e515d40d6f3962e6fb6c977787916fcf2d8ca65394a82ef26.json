@@ -1,0 +1,52 @@
+{
+  "key": "f22a4485a493b54e515d40d6f3962e6fb6c977787916fcf2d8ca65394a82ef26",
+  "text": "[\"상법 (신주발행무효의 소) 신주발행의 무효는 신주의 납입기일로부터 6월 내에 소만으로 이를 주장할 수 있다.\", \"상법 (신주인수권) 주주는 그가 가진 주식 수에 따라 신주를 배정받을 권리가 있다. 다만, 정관에 다른 정함이 있는 경우에는 그러하지 아니하다.\"]",
+  "trace": {
+    "latency_ms": 1215.0249580008676,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_f8b4f6042d914169b3ae5c4eba7036ae"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 1684,
+      "output_tokens": 94,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00515,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 19628,
+      "known_cost_usd": 7.328009222,
+      "unsettled_attempts": 0,
+      "accounted_with_reservations_usd": 7.328009222,
+      "remaining_usd": 92.671990778,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 6.5720075,
+          "accounted_with_reservations_usd": 6.5720075,
+          "remaining_usd": 30.427992500000002
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei8xgvrp7V1S8d24GYxAhzylbutGg",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

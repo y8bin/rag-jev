@@ -1,0 +1,87 @@
+{
+  "key": "7f94b4872183ddfaa81470ad1087a51017832ecd22fb89d94072852db3234084",
+  "response": {
+    "id": "chatcmpl-Ei9s7n1fKk9HBw2GE4iqIBNLOOb8u",
+    "object": "chat.completion",
+    "created": 1794193087,
+    "model": "gpt-4o-2024-08-06",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "법원이 을시의 부동산 개발 허가 거부를 취소할 수 있는 법적 근거는 재량권의 한계를 넘거나 그 남용이 있는 경우입니다. 갑이 제기한 소송의 대상은 을시의 부동산 개발 허가 거부 처분입니다. 법원은 재판 과정에서 재량권의 한계를 넘거나 남용이 있는지에 대해 직권으로 판단할 수 있습니다.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2342,
+      "completion_tokens": 95,
+      "total_tokens": 2437,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_55e838642c"
+  },
+  "trace": {
+    "latency_ms": 1112.4870000057854,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_0953c7b46d43434caa21def76529855e"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2342,
+      "output_tokens": 95,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.006805,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59640,
+      "known_cost_usd": 15.01440815,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 16.27203315,
+      "remaining_usd": 83.72796685,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 13.517,
+          "accounted_with_reservations_usd": 14.774625,
+          "remaining_usd": 22.225375
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9s7n1fKk9HBw2GE4iqIBNLOOb8u",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

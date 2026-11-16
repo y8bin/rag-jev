@@ -1,0 +1,52 @@
+{
+  "key": "afd2c082eff081a1bc0f2f5652ee6b3c8c2e4cf8ea3804b40a5f0e5593bc7eb2",
+  "text": "갑과 병 중 누가 포상금을 받을 수 있는지는 명시되어 있지 않으나, 현금영수증 발급의무를 위반한 자를 신고한 경우 포상금을 받을 수 있습니다. 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금의 한도는 20억원입니다.",
+  "trace": {
+    "latency_ms": 1184.383625004557,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_e3523f499f3b4ba3910b6479e52b61ad"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2904,
+      "output_tokens": 77,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.00803,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59065,
+      "known_cost_usd": 9.66477065,
+      "unsettled_attempts": 3,
+      "accounted_with_reservations_usd": 9.82501815,
+      "remaining_usd": 90.17498185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 8.1673625,
+          "accounted_with_reservations_usd": 8.32761,
+          "remaining_usd": 28.67239
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9eewJ9GNEobOkmz7lDjenmTk5nh",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

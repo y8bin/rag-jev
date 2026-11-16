@@ -1,0 +1,52 @@
+{
+  "key": "926cba498d797ec8163c915bcc60bd58b60bfe11132ceee31cb52eb2a7366b0b",
+  "text": "갑이 14세인 아들 을을 피보험자로 하여 을의 사망을 보험사고로 한 생명보험에 가입하려는 경우, 그 계약은 무효이다. 질병보험 가입 시 생명보험 및 상해보험에 관한 규정이 그 성질에 반하지 않는 범위에서 준용된다. 보험회사는 기초서류 작성 시 보험계약자에게 불리한 내용을 포함하지 않아야 하며, 정당한 사유 없이 보험계약자의 권리를 축소하거나 의무를 확대하는 내용을 포함할 수 없다.",
+  "trace": {
+    "latency_ms": 1725.0371250120224,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_519fb822b30a4936bd6a1cb2d6b2860a"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2475,
+      "output_tokens": 123,
+      "cached_input_tokens": 2176,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0046975,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59758,
+      "known_cost_usd": 16.11781315,
+      "unsettled_attempts": 14,
+      "accounted_with_reservations_usd": 17.52273815,
+      "remaining_usd": 82.47726185,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 14.620405,
+          "accounted_with_reservations_usd": 16.02533,
+          "remaining_usd": 20.97467
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9uzif8uZctXBoqos3zNMeUJnxRP",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "b8cb688683c7bb8e1608401eb1e07a35cfa6e9bb393e99b091c15ab9a0be4395",
+  "text": "갑이 을로부터 구입한 농지를 공장 부지로 전환하기 위해 필요한 법적 허가는 농지전용허가이며, 이 허가를 받기 전까지 농지보전부담금을 전부 또는 일부 납부하여야 한다.",
+  "trace": {
+    "latency_ms": 1064.0466660115635,
+    "attempts": [
+      {
+        "status": 200,
+        "request_id": "req_daf50cd0ab0f45978aefa67b7be558f4"
+      }
+    ],
+    "request_count": 1,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 2253,
+      "output_tokens": 58,
+      "cached_input_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    "cost_usd": 0.0062125,
+    "cost_complete": true,
+    "budget": {
+      "limit_usd": 100.0,
+      "attempts": 59856,
+      "known_cost_usd": 17.03764815,
+      "unsettled_attempts": 13,
+      "accounted_with_reservations_usd": 18.28482565,
+      "remaining_usd": 81.71517435,
+      "service_limits": {
+        "openai": {
+          "limit_usd": 37.0,
+          "known_cost_usd": 15.54024,
+          "accounted_with_reservations_usd": 16.7874175,
+          "remaining_usd": 20.2125825
+        }
+      }
+    },
+    "returned_model": "gpt-4o-2024-08-06",
+    "identity": {
+      "backend": "openai",
+      "api": "responses",
+      "model": "gpt-4o-2024-08-06",
+      "base_url": "https://api.openai.com/v1",
+      "organization": null,
+      "project": null
+    },
+    "cached": false,
+    "response_id": "chatcmpl-Ei9x1JmHc52Ibqn6isukiM6eY1o2k",
+    "response_status": null,
+    "service_tier": "default"
+  }
+}

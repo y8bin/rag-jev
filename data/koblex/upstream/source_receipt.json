@@ -1,0 +1,96 @@
+{
+  "repository": "https://github.com/daehuikim/KoBLEX",
+  "revision": "1a2d225be33a70ebf91e2b6369acf27551dcfbb4",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/LICENSE",
+      "bytes": 19345,
+      "sha256": "db2e35513dbadcdc67f5819a3bfee2777786538dd3531620cd5fbd4b6ed6e538"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/README.md",
+      "bytes": 6557,
+      "sha256": "9713e98feb4d654a92aace4c554087d1d5f83bcdb03b2a3842530106750d3b1c"
+    },
+    {
+      "path": "experiments/README.md",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/README.md",
+      "bytes": 9326,
+      "sha256": "f0c07137f00e187d37e6900afe8c56e975eec757bf0f5351d34d6d912927f660"
+    },
+    {
+      "path": "experiments/lf-eval/README.md",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/lf-eval/README.md",
+      "bytes": 6919,
+      "sha256": "fbdc02076aa5711a6879ce0cdbc961bbaa695724ded48b1298b448845fa81a7b"
+    },
+    {
+      "path": "experiments/lf-eval/eval_pipeline.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/lf-eval/eval_pipeline.py",
+      "bytes": 12319,
+      "sha256": "89b20578abd491273b7b14d33a4e52c1b401eb3399d074743536e1406b270fa7"
+    },
+    {
+      "path": "experiments/parser/openai/README.md",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/openai/README.md",
+      "bytes": 2347,
+      "sha256": "d1a167eff2722a1cd4ede265a47c670640de235704a46249f498820b72b895cf"
+    },
+    {
+      "path": "experiments/parser/openai/run_pipeline.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/openai/run_pipeline.py",
+      "bytes": 3448,
+      "sha256": "ab6f9d4b0514d084af45d4cfd191fc338e7fb8d31e35a934ceebc95d98eb1dc0"
+    },
+    {
+      "path": "experiments/parser/openai/question_answering.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/openai/question_answering.py",
+      "bytes": 3528,
+      "sha256": "ce93af6f528a48c10ab64197ab28e91654ca30cafd9d6551d1366531f04fc6b5"
+    },
+    {
+      "path": "experiments/parser/openai/parametric_provision.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/openai/parametric_provision.py",
+      "bytes": 3500,
+      "sha256": "953eac92fc75afaaae6880ec336ce1ddff1fe78a0d157a4fe90ad163c6e071cb"
+    },
+    {
+      "path": "experiments/parser/openai/selection_retrieval.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/openai/selection_retrieval.py",
+      "bytes": 6829,
+      "sha256": "88ac483f611126ae9efdaf417080f309057e3ae61978019cfe34a96c7ac1c3c9"
+    },
+    {
+      "path": "experiments/parser/openai/utils.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/openai/utils.py",
+      "bytes": 6335,
+      "sha256": "8d8e22a5adee8854cf48ed4fd9c2522e28350136a588dbe65f7b2ab5a4a286b2"
+    },
+    {
+      "path": "experiments/parser/prompts/question_answering.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/prompts/question_answering.py",
+      "bytes": 7847,
+      "sha256": "98df7f48e5b7ba11871419b5ecaf2213c9d997df397c32c50c3e938a81510069"
+    },
+    {
+      "path": "experiments/parser/prompts/parametric_provision.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/prompts/parametric_provision.py",
+      "bytes": 6583,
+      "sha256": "11e845471e8c68d49b635865786183372acbeef9b2929f1ba3b1241b171391fd"
+    },
+    {
+      "path": "experiments/parser/prompts/selection_retrieval.py",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/parser/prompts/selection_retrieval.py",
+      "bytes": 25320,
+      "sha256": "bd0089aff6ee63669e5ff01e86d8c4b2d99aa66fb1713878eb245be8a9a115bb"
+    },
+    {
+      "path": "experiments/source/koblex.jsonl",
+      "url": "https://raw.githubusercontent.com/daehuikim/KoBLEX/1a2d225be33a70ebf91e2b6369acf27551dcfbb4/experiments/source/koblex.jsonl",
+      "bytes": 1009245,
+      "sha256": "d02133763ef76dc1cb30ffb27e2489220439a28ee1435b3be16a780535380d8e"
+    }
+  ]
+}
